@@ -1,0 +1,658 @@
+Estrategia de Implementación y 
+Valorización de Datos en Salud: Real 
+World Evidence, Ciclos de Gestión en IPS 
+y el Potencial del Uso Secundario 
+La transformación de los sistemas de salud contemporáneos ha dejado de ser una transición 
+puramente tecnológica para convertirse en una reforma epistemológica profunda sobre cómo 
+se genera, valida y aplica el conocimiento médico. En el centro de esta revolución se 
+encuentran los conceptos de Datos del Mundo Real (Real World Data, RWD) y Evidencia del 
+Mundo Real (Real World Evidence, RWE), los cuales representan un cambio de paradigma 
+frente a la dependencia exclusiva de los ensayos clínicos aleatorizados (RCT). Para una 
+Institución Prestadora de Servicios (IPS) en Colombia, comprender la transición del dato 
+asistencial hacia la evidencia científica no es solo un requisito regulatorio bajo los nuevos 
+marcos de interoperabilidad, sino una oportunidad estratégica para liderar la medicina de 
+precisión y la eficiencia operativa. El presente reporte detalla la estructura técnica y científica 
+necesaria para articular una presentación de alto nivel que aborde la dicotomía RWD/RWE, el 
+ciclo de vida del dato en el entorno hospitalario y la movilización del valor secundario de la 
+información clínica para la sostenibilidad del sistema. 
+El Paradigma de la Evidencia en la Era Digital: RWD vs. 
+RWE 
+La distinción entre el dato crudo y la evidencia procesada constituye la piedra angular de la 
+informática médica moderna. Mientras que la investigación tradicional se ha basado en 
+entornos experimentales rígidamente controlados, la práctica clínica cotidiana genera un 
+volumen masivo de información que, hasta hace poco, permanecía inexplorado o infrautilizado. 
+La emergencia de los Datos del Mundo Real (RWD) responde a la necesidad de capturar la 
+complejidad biológica, social y conductual de los pacientes en condiciones reales de vida.1 
+Definición y Ontología de los Datos del Mundo Real (RWD) 
+Los RWD se definen como datos relacionados con el estado de salud del paciente y/o la 
+prestación de servicios de salud recopilados rutinariamente de diversas fuentes que no son 
+ensayos clínicos convencionales.1 Esta definición es deliberadamente amplia para abarcar la 
+naturaleza multimodal de la salud digital. Las fuentes primarias incluyen las historias clínicas 
+electrónicas (HCE), los registros de facturación y reclamaciones (claims), los registros de 
+enfermedades específicos, los datos de farmacia y, de manera creciente, la información 
+
+
+--- PAGE BREAK ---
+
+generada por el paciente a través de dispositivos portátiles o wearables.4 
+La relevancia del RWD radica en su capacidad para representar poblaciones que 
+sistemáticamente son excluidas de los ensayos clínicos tradicionales, como mujeres 
+embarazadas, pacientes pediátricos, ancianos con múltiples comorbilidades y minorías 
+étnicas.4 Mientras que un RCT busca la "eficacia" en un entorno ideal, el RWD permite observar 
+la "efectividad" en el mundo real, donde la adherencia al tratamiento es variable y las 
+interacciones medicamentosas son la norma y no la excepción.6 
+Evolución hacia la Evidencia del Mundo Real (RWE) 
+La RWE no es simplemente un sinónimo de RWD; es el resultado de un proceso de análisis 
+clínico y estadístico riguroso aplicado a esos datos para generar conclusiones sobre el uso, los 
+beneficios y los riesgos de un producto médico.1 Para que el RWD se transforme en RWE, debe 
+someterse a diseños de estudio robustos que mitiguen los sesgos inherentes a la observación 
+no aleatorizada. Estos diseños incluyen estudios de cohortes retrospectivos, análisis de casos y 
+controles, y ensayos clínicos pragmáticos que integran la aleatorización dentro de la práctica 
+clínica habitual.3 
+El valor de la RWE ha sido reconocido por agencias reguladoras globales como la FDA en los 
+Estados Unidos y la EMA en Europa. La Ley de Curas del Siglo XXI de 2016 marcó un hito al 
+exigir que la FDA creara un marco para el uso de RWE en la aprobación de nuevas indicaciones 
+de medicamentos ya comercializados o para satisfacer requerimientos de estudios 
+posautorización.1 Este cambio regulatorio reconoce que la información recolectada durante el 
+uso rutinario de una tecnología puede ser tan valiosa como la obtenida en fases 
+experimentales previas. 
+Tabla 1: Comparativa Metodológica entre Datos de Ensayos Clínicos y 
+RWD/RWE 
+ 
+Atributo 
+Ensayos Clínicos 
+Aleatorizados (RCT) 
+Real World Data / 
+Evidence (RWD/RWE) 
+Población 
+Homogénea, con estrictos 
+criterios de inclusión. 
+Heterogénea, refleja la 
+diversidad poblacional.4 
+Entorno 
+Controlado, centros de 
+investigación 
+especializados. 
+Práctica clínica rutinaria en 
+IPS y hospitales.4 
+
+
+--- PAGE BREAK ---
+
+Validez 
+Alta validez interna 
+(causalidad directa). 
+Alta validez externa 
+(generalizabilidad).4 
+Costo/Tiempo 
+Elevado, años de 
+seguimiento y altos gastos 
+operativos. 
+Potencialmente menor, 
+aprovecha datos 
+preexistentes.8 
+Resultados 
+Eficacia en condiciones 
+ideales. 
+Efectividad y seguridad en 
+condiciones reales.9 
+Arquitectura de la RWE y Marcos Regulatorios 
+La implementación de la RWE requiere un entendimiento profundo de los marcos normativos 
+que rigen su validez. La FDA ha enfatizado que la utilidad de la RWE depende de dos pilares: la 
+relevancia y la confiabilidad del RWD subyacente.3 La relevancia se refiere a si los datos 
+contienen suficiente información para responder a la pregunta de investigación (por ejemplo, si 
+incluyen diagnósticos, tratamientos y resultados clínicos adecuados), mientras que la 
+confiabilidad evalúa la integridad, exactitud y consistencia de la captura de los datos.3 
+En Europa, el enfoque de la EMA se ha centrado en la creación de redes de datos como 
+DARWIN EU, que busca integrar bases de datos de salud de múltiples países para proporcionar 
+evidencia rápida sobre la seguridad de los medicamentos.10 En América Latina, aunque el 
+desarrollo de guías locales específicas está en proceso, existe un interés creciente por parte de 
+agencias de evaluación de tecnologías en salud (HTA) para incorporar RWE en los procesos de 
+decisión de precio y reembolso, especialmente para enfermedades huérfanas o tratamientos 
+oncológicos donde los datos de RCT pueden ser limitados por el tamaño de la muestra.6 
+Tabla 2: Fuentes Principales de Real World Data (RWD) y sus 
+Aplicaciones 
+ 
+Fuente de Datos 
+Descripción Técnica 
+Aplicación Primaria en 
+RWE 
+HCE (EHR) 
+Registros clínicos digitales 
+de atención directa. 
+Estudios de efectividad 
+clínica y seguridad.1 
+Claims (Reclamaciones) 
+Datos administrativos de 
+facturación y seguros. 
+Análisis de costos y 
+patrones de uso de 
+recursos.1 
+
+
+--- PAGE BREAK ---
+
+Registros de Pacientes 
+Bases de datos sobre 
+patologías específicas (ej. 
+cáncer). 
+Historia natural de la 
+enfermedad y resultados a 
+largo plazo.1 
+Wearables/Sensores 
+Datos generados por 
+dispositivos móviles y 
+sensores. 
+Monitoreo continuo de 
+signos vitales y calidad de 
+vida.1 
+Farmacovigilancia 
+Reportes de eventos 
+adversos 
+poscomercialización. 
+Identificación de señales de 
+seguridad raras.4 
+Ciclo de Vida del Dato en una IPS: De la Captura a la 
+Sabiduría Institucional 
+El ciclo de vida del dato clínico en una Institución Prestadora de Servicios (IPS) no es un 
+proceso lineal, sino un ecosistema circular de retroalimentación donde cada etapa añade una 
+capa de valor a la información original. Para las instituciones colombianas, este ciclo está 
+intrínsecamente ligado a la calidad de la atención y a la sostenibilidad financiera, especialmente 
+bajo los nuevos mandatos de interoperabilidad de la historia clínica.16 
+Etapas del Ciclo de Vida del Dato Asistencial 
+El proceso comienza con la Planificación, donde se definen los objetivos de la captura de 
+información, los estándares terminológicos que se utilizarán (como CIE-10, SNOMED-CT o 
+LOINC) y los protocolos de gobernanza.17 Una planificación deficiente resulta en datos 
+fragmentados o inconsistentes que no pueden ser utilizados posteriormente para fines 
+analíticos o de investigación. 
+La segunda etapa es la Captura o Recopilación, que ocurre durante el encuentro clínico. Aquí, 
+la IPS tiene la responsabilidad legal y ética de generar información confiable.16 En Colombia, 
+este proceso ha estado tradicionalmente dominado por los Registros Individuales de 
+Prestación de Servicios (RIPS), que aunque son fundamentales para la facturación, a menudo 
+carecen de la profundidad clínica necesaria para la generación de RWE.16 La transición hacia 
+Historias Clínicas Electrónicas (HCE) más robustas permite capturar no solo diagnósticos, sino 
+también notas de evolución, resultados de laboratorio detallados y preferencias del paciente. 
+Posteriormente, el dato entra en la fase de Almacenamiento y Conservación, donde se 
+deben aplicar medidas estrictas de seguridad digital para proteger la privacidad del paciente, 
+cumpliendo con la Ley 1581 de 2012 sobre protección de datos personales.18 Esta etapa incluye 
+la implementación de copias de seguridad, cifrado de datos y control de accesos basados en 
+
+
+--- PAGE BREAK ---
+
+roles para evitar filtraciones o usos no autorizados.20 
+Procesamiento, Análisis e Interoperabilidad 
+La etapa de Procesamiento es donde ocurre la magia técnica de la normalización. Dado que 
+los datos de salud suelen ser heterogéneos y estar almacenados en diferentes formatos (PDF, 
+texto libre, tablas relacionales), es necesario aplicar procesos de extracción, transformación y 
+carga (ETL) para limpiar, eliminar duplicados y estructurar la información.17 En esta fase se 
+asegura la calidad del dato, verificando su integridad y coherencia interna. 
+El Análisis transforma el dato procesado en conocimiento. Mediante el uso de bioestadística 
+avanzada y, cada vez más, inteligencia artificial, las IPS pueden identificar patrones de 
+enfermedad, predecir reingresos hospitalarios o evaluar la efectividad de protocolos 
+institucionales.16 Finalmente, la etapa de Publicación o Reuso permite que la información sea 
+compartida con el sistema nacional de salud o utilizada para fines de investigación académica, 
+cerrando el ciclo y permitiendo que la "sabiduría" derivada de los datos informe nuevas 
+políticas y guías de práctica clínica.17 
+Tabla 3: El Ciclo del Dato según el Esquema de Ackoff aplicado a la IPS 
+ 
+Nivel de Evolución 
+Definición en Salud 
+Ejemplo Práctico en la IPS 
+Dato 
+Representación simbólica 
+de una acción. 
+Valor de creatinina: 2.1 
+mg/dL.17 
+Información 
+Datos procesados con un 
+propósito. 
+Tendencia al alza de 
+creatinina en paciente 
+diabético.17 
+Conocimiento 
+Aplicación mental de la 
+información. 
+Diagnóstico de Insuficiencia 
+Renal Aguda estadio 2.17 
+Sabiduría 
+Evaluación e internalización 
+del saber. 
+Ajuste del protocolo 
+institucional de 
+nefroprotección.17 
+Interoperabilidad y la Resolución 1888 de 2025: El 
+Nuevo Escenario Colombiano 
+El ciclo de vida del dato en Colombia ha recibido un impulso definitivo con la Resolución 1888 
+de 2025, la cual adopta el Resumen Digital de Atención en Salud (RDA) como el mecanismo 
+
+
+--- PAGE BREAK ---
+
+estándar para la interoperabilidad de la historia clínica electrónica (IHCE).24 Este marco 
+normativo establece que la información clínica no puede quedar "encerrada" en los sistemas 
+locales de cada IPS, sino que debe ser capaz de viajar con el paciente a lo largo de todo el 
+sistema de salud.22 
+La implementación del RDA requiere una arquitectura técnica específica que garantice la 
+seguridad y la fidelidad de la información. El mecanismo nacional de interoperabilidad utiliza un 
+validador denominado VIDA (Validador Individual de Atención), el cual emite un certificado de 
+recepción una vez que el registro clínico cumple con todos los requisitos semánticos y 
+sintácticos definidos por el Ministerio de Salud.22 Para las IPS, esto implica el reto de mapear 
+sus datos locales frente a estándares internacionales y nacionales, asegurando que cada envío 
+de información sea íntegro y confidencial.22 
+Arquitectura Técnica de la Interoperabilidad en IPS 
+Para cumplir con la Resolución 1888, las instituciones deben adecuar sus sistemas HIS (Hospital 
+Information Systems) para que puedan generar archivos en formato JSON estandarizado.22 La 
+arquitectura de seguridad es crítica, utilizando protocolos como TLS (Transport Layer Security) 
+para el cifrado de las comunicaciones y firmas digitales para garantizar la autenticidad y el no 
+repudio de la información generada por los profesionales de la salud.25 
+Este sistema de interoperabilidad no solo beneficia la continuidad asistencial al permitir que un 
+médico en urgencias consulte el historial de un paciente atendido en otra ciudad, sino que 
+también crea un lago de datos nacional de una riqueza sin precedentes para la vigilancia 
+epidemiológica y la planeación de políticas sanitarias basadas en evidencia real.22 La transición 
+hacia este modelo digital reduce significativamente la fragmentación del sistema y minimiza 
+riesgos como la duplicación de exámenes diagnósticos o errores de medicación por falta de 
+información crítica.22 
+Tabla 4: Componentes Técnicos de la Interoperabilidad (Resolución 
+1888/2025) 
+ 
+Componente 
+Función en la IPS / 
+Sistema Nacional 
+Requisito de Seguridad 
+RDA 
+Resumen Digital de 
+Atención con datos clínicos 
+clave. 
+Formato JSON 
+estandarizado.25 
+VIDA 
+Código único de validación 
+Encriptación 
+alfanumérica.22 
+
+
+--- PAGE BREAK ---
+
+de la transacción. 
+API Gateway 
+Intermediario que gestiona 
+el tráfico de datos. 
+Control de accesos y 
+enrutamiento seguro.25 
+Servidor Terminológico 
+Garantiza que los códigos 
+médicos sean uniformes. 
+Coherencia semántica (CIE, 
+CUPS).22 
+ETL Institucional 
+Extrae y prepara los datos 
+desde el HIS local. 
+Validación de calidad previa 
+al envío.22 
+Valor Secundario de los Datos Clínicos: 
+Desbloqueando la Innovación 
+El valor primario de la historia clínica es facilitar la atención directa del paciente; sin embargo, el 
+valor secundario —el uso de esos datos para fines distintos a la prestación asistencial 
+inmediata— es lo que está redefiniendo la economía de la salud y la investigación científica. 
+Una vez que los datos han sido anonimizados o seudonimizados, se convierten en un activo 
+estratégico para el desarrollo de políticas públicas, la investigación académica y la innovación 
+tecnológica.10 
+Investigación Clínica y Epidemiología con RWE 
+El reuso de datos clínicos permite realizar estudios de gran escala a una fracción del costo y 
+tiempo requeridos por la investigación primaria. En Colombia, el uso de fuentes secundarias 
+como bases de datos de dispensación de medicamentos y registros de enfermedades ha 
+permitido identificar barreras de acceso en oncología y evaluar patrones de uso de antibióticos 
+en la población general.12 
+La investigación basada en RWE es particularmente útil en el campo de la farmacovigilancia. 
+Mientras que los ensayos clínicos son limitados para detectar efectos adversos muy raros o 
+que aparecen tras años de tratamiento, el análisis longitudinal de millones de historias clínicas 
+puede identificar señales de seguridad de manera temprana, protegiendo así a la población.4 
+Además, permite realizar estudios de eficacia comparativa, donde se evalúa qué tratamiento 
+funciona mejor para qué subgrupo específico de pacientes en la práctica diaria, informando la 
+actualización de las Guías de Práctica Clínica (GPC) nacionales.11 
+Gestión de Salud Poblacional (PHM) y Determinantes Sociales 
+El valor secundario de los datos clínicos se potencia cuando se cruza con información no 
+clínica, como determinantes sociales de la salud (ingresos, educación, acceso a servicios 
+básicos). La gestión de salud poblacional (Population Health Management, PHM) utiliza la 
+
+
+--- PAGE BREAK ---
+
+agregación de datos para segmentar a la población según su perfil de riesgo y desarrollar 
+intervenciones proactivas.27 
+Por ejemplo, una IPS puede utilizar sus datos históricos para identificar geográficamente áreas 
+con alta incidencia de complicaciones por hipertensión. Al integrar estos datos con 
+información socioeconómica, la institución puede diseñar programas de atención domiciliaria o 
+telemedicina dirigidos específicamente a esas zonas, mejorando los resultados de salud y 
+reduciendo la carga sobre los servicios de urgencias y hospitalización.23 Este enfoque centrado 
+en el valor permite una asignación más eficiente de los recursos financieros y humanos, 
+pasando de un modelo de "pago por servicio" a uno de "pago por resultados".27 
+Inteligencia Artificial y el Futuro de la Gestión de 
+Datos en IPS 
+La irrupción de la Inteligencia Artificial (IA) y el Aprendizaje Automático (Machine Learning) ha 
+llevado la valorización del dato clínico a una nueva dimensión. La IA permite procesar 
+volúmenes de datos que serían inmanejables para el análisis humano, identificando patrones 
+sutiles y señales tempranas de enfermedad en imágenes médicas, señales 
+electrocardiográficas y notas de texto libre.23 
+Aplicaciones de la IA en el Entorno Hospitalario 
+En Colombia, se han documentado aplicaciones innovadoras de IA para la detección de 
+anomalías en citologías cervicouterinas utilizando modelos de aprendizaje profundo como 
+DenseNet y VGG19, logrando una alta sensibilidad y especificidad que podría fortalecer los 
+programas de tamizaje en salud pública.29 Asimismo, el uso de modelos de lenguaje de gran 
+escala (LLM) potenciados con técnicas de Generación Aumentada por Recuperación (RAG) 
+permite a los profesionales de la salud consultar guías clínicas adaptadas al contexto local de 
+manera ágil durante la consulta, reduciendo la variabilidad clínica y los errores médicos.29 
+El futuro se encamina hacia la implementación de "Agentes de IA" y la "Web Agéntica". Estos 
+sistemas inteligentes, con autonomía y memoria, podrán coordinar de manera proactiva los 
+datos entre diferentes actores del sistema (IPS, EPS, laboratorios), aprendiendo de los 
+resultados clínicos para recomendar tratamientos personalizados basados en evidencia local, 
+en lugar de depender únicamente de guías internacionales que pueden no estar 
+contextualizadas a la realidad genética o social del país.30 
+Tabla 5: Modelos de IA y sus Aplicaciones en el Uso Secundario de 
+Datos en Colombia 
+ 
+
+
+--- PAGE BREAK ---
+
+Modelo de IA 
+Aplicación Clínica / 
+Administrativa 
+Beneficio Identificado 
+Aprendizaje Profundo 
+(CNN) 
+Diagnóstico en citologías y 
+patología digital. 
+Mayor precisión y 
+reducción de carga laboral 
+para patólogos.29 
+LLM + RAG 
+Soporte a la decisión clínica 
+basado en guías GPC. 
+Recomendaciones 
+personalizadas y basadas 
+en evidencia local.29 
+RNN / LSTM 
+Análisis de secuencias 
+moleculares y piRNA. 
+Avances en oncología y 
+enfermedades 
+infecciosas.29 
+Gemelos Digitales 
+Simulación de procesos 
+clínicos y flujos de 
+pacientes. 
+Optimización de recursos y 
+reducción de 
+incertidumbre.30 
+Agentes Autónomos 
+Coordinación de datos 
+entre IPS y aseguradores. 
+Reducción de burocracia y 
+agilización de la atención.30 
+Impacto Económico y Sostenibilidad: El Caso de la 
+Investigación Clínica en Oncología 
+La movilización del valor secundario de los datos no es solo un imperativo científico, sino 
+también una estrategia de sostenibilidad financiera para el sistema de salud. Un estudio 
+realizado en una institución oncológica de cuarto nivel en la Región Caribe de Colombia 
+demostró que la participación de pacientes en estudios clínicos financiados por la industria 
+generó ahorros significativos para el sistema de salud nacional.31 
+Los ahorros provienen principalmente de la asunción de los costos de los medicamentos 
+(especialmente quimioterapias de alto costo), insumos y procedimientos por parte de los 
+patrocinadores del estudio, en lugar de ser cargados al Sistema General de Seguridad Social en 
+Salud (SGSSS). Se identificó que el ahorro es mayor en pacientes con cáncer de mama y en 
+aquellos diagnosticados en estadios avanzados (Estadio IV), donde los costos de atención 
+convencional son más elevados.31 Este hallazgo subraya que fortalecer la capacidad de 
+investigación de las IPS no solo mejora el acceso de los pacientes a terapias de vanguardia, 
+sino que también contribuye al uso eficiente de los recursos públicos.31 
+Desafíos para la Implementación Exitosa 
+
+
+--- PAGE BREAK ---
+
+A pesar del enorme potencial, existen desafíos sistémicos que las IPS deben superar. La falta de 
+interoperabilidad real entre las "islas" de servicio asistencial sigue siendo una barrera 
+importante, junto con la limitada capacitación del talento humano en temas de salud digital y 
+gobernanza de datos.30 Además, persisten barreras éticas y de privacidad; el uso secundario 
+de datos requiere un marco de consentimiento informado transparente y mecanismos técnicos 
+de anonimización que aseguren que el beneficio de la investigación no comprometa los 
+derechos individuales de los pacientes.33 
+La gobernanza en muchas IPS todavía se percibe como vertical y centrada en liderazgos 
+personalistas, lo que puede ralentizar la adopción de proyectos innovadores basados en datos. 
+Para que las instituciones colombianas sean parte activa de este ecosistema de valor, deben 
+redefinir su misión para incorporar la investigación aplicada y la gestión de datos como ejes 
+estratégicos, creando unidades de innovación que no existan solo "en el papel".30 
+Marco Ético y Legal: La Protección del Dato Sensible 
+en Colombia 
+El ciclo de vida del dato y su valor secundario están indisolublemente ligados al marco ético y 
+legal de protección de datos personales. En Colombia, la Ley 1581 de 2012 y su Decreto 
+Reglamentario 1377 de 2013 establecen que los datos de salud son sensibles y requieren una 
+protección reforzada.18 
+Consentimiento y Excepciones para la Investigación 
+El principio general es que el tratamiento de datos personales requiere la autorización previa, 
+expresa e informada del titular.20 Sin embargo, la ley contempla excepciones críticas que 
+facilitan la investigación científica y la salud pública. La autorización del titular no es necesaria 
+cuando la información es requerida por una entidad pública en ejercicio de sus funciones 
+legales, en casos de urgencia médica o sanitaria, o cuando el tratamiento tenga una finalidad 
+histórica, estadística o científica.19 
+Incluso bajo estas excepciones, las IPS y los investigadores tienen el deber de adoptar medidas 
+de seguridad técnica para evitar el acceso no autorizado y garantizar la supresión de la 
+identidad de los titulares cuando se realicen análisis agregados.21 La transparencia es 
+fundamental: el responsable del tratamiento debe informar claramente sobre la finalidad del 
+uso de los datos y los derechos que le asisten al paciente, incluyendo el acceso, la rectificación 
+y la supresión de su información.18 
+Comités de Ética y Regulación de Investigaciones 
+Cualquier estudio que pretenda hacer uso secundario de datos clínicos debe ser supervisado 
+por un Comité de Ética en Investigación (CEI) independiente, el cual evalúa que los beneficios 
+previstos justifiquen los riesgos y que se respeten los principios de beneficencia, no 
+
+
+--- PAGE BREAK ---
+
+maleficencia y justicia.33 Las nuevas propuestas normativas en Colombia buscan fortalecer 
+estos comités, exigiendo perfiles multidisciplinarios que incluyan no solo científicos y médicos, 
+sino también abogados y representantes de la comunidad, asegurando un enfoque 
+democrático y ético en el manejo de la información de salud.33 
+Tabla 6: Principios del Tratamiento de Datos Personales (Ley 1581 de 
+2012) 
+ 
+Principio 
+Implicación para la IPS 
+Mecanismo de Garantía 
+Finalidad 
+El uso del dato debe 
+obedecer a un fin legítimo e 
+informado. 
+Política de tratamiento de 
+datos visible.21 
+Libertad 
+El tratamiento requiere el 
+consentimiento previo y 
+expreso. 
+Formatos de autorización 
+en el ingreso.21 
+Seguridad 
+Manejo de datos con 
+medidas técnicas que 
+eviten adulteración. 
+Cifrado, firewalls y 
+backups.21 
+Confidencialidad 
+Reserva de la información 
+incluso tras terminar la 
+relación. 
+Acuerdos de 
+confidencialidad con el 
+personal.21 
+Acceso Restringido 
+Solo personas autorizadas 
+pueden tratar los datos. 
+Perfiles de acceso en el 
+sistema HIS.21 
+Conclusiones y Recomendaciones Estratégicas para la 
+Presentación 
+La estructuración de una presentación sobre RWD/RWE, el ciclo del dato en la IPS y su valor 
+secundario debe transmitir la idea de que la salud digital no es el futuro, sino el presente 
+operativo que define la competitividad y la ética de las instituciones prestadoras. La transición 
+del dato como una carga administrativa hacia el dato como un activo de conocimiento requiere 
+un cambio cultural profundo, soportado por una arquitectura técnica robusta y un marco legal 
+riguroso. 
+
+
+--- PAGE BREAK ---
+
+Puntos Clave para la Acción Institucional: 
+1.​ Integridad desde el Origen: La IPS debe garantizar que la captura del dato en el 
+encuentro clínico sea de la más alta calidad, utilizando estándares terminológicos que 
+faciliten la interoperabilidad y el análisis posterior. Sin un dato primario sólido, el ciclo de 
+vida se interrumpe y el valor secundario se diluye.16 
+2.​ Alineación con la Resolución 1888/2025: Las instituciones deben acelerar sus planes de 
+implementación tecnológica para cumplir con el Resumen Digital de Atención (RDA). Esto 
+no solo es una obligación legal, sino el boleto de entrada a un ecosistema de salud 
+conectada que mejora la seguridad del paciente y la eficiencia del sistema.22 
+3.​ Monetización Indirecta y Sostenibilidad: Se debe presentar la investigación clínica y el 
+análisis de datos masivos no como un gasto, sino como una inversión que genera ahorros 
+tangibles al sistema de salud y posiciona a la IPS como un centro de excelencia científica a 
+nivel regional y global.28 
+4.​ IA con Propósito Ético: La adopción de herramientas de inteligencia artificial debe estar 
+guiada por la transparencia y la mitigación de sesgos. El uso de IA para el soporte a la 
+decisión clínica y la gestión poblacional debe ser validado localmente para asegurar que 
+responda a las necesidades reales de los pacientes colombianos.29 
+5.​ Gobernanza de Datos: Es fundamental establecer estructuras claras de gobernanza, 
+lideradas por perfiles estratégicos como el CDO, que aseguren que la política de datos 
+permee todas las capas de la organización, desde el personal asistencial hasta la alta 
+gerencia.17 
+La evidencia del mundo real (RWE) se consolida como el complemento indispensable de los 
+ensayos clínicos, ofreciendo una visión pragmática y representativa de la salud pública. Para 
+Colombia, el camino trazado por la interoperabilidad y la valorización de los datos clínicos abre 
+una puerta histórica para cerrar las brechas de equidad y avanzar hacia un sistema de salud 
+basado verdaderamente en el valor y el bienestar de las personas. La IPS que logre dominar 
+este ciclo —desde la captura ética del dato hasta su transformación en sabiduría predictiva— 
+será la que lidere el sector en la era de la inteligencia híbrida y la medicina personalizada. 
+Works cited 
+1.​ Real-World Evidence - FDA, accessed March 10, 2026, 
+https://www.fda.gov/science-research/science-and-research-special-topics/real-
+world-evidence 
+2.​ Integrating Real-World Evidence in the Regulatory Decision-Making Process: A 
+Systematic Analysis of Experiences in the US, EU, and China Using a Logic Model - 
+PMC, accessed March 10, 2026, 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8200400/ 
+3.​ Framework for FDA's Real-World Evidence Program, accessed March 10, 2026, 
+https://www.fda.gov/media/120060/download 
+4.​ Real-World Evidence: A Primer - PMC, accessed March 10, 2026, 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9815890/ 
+
+
+--- PAGE BREAK ---
+
+5.​ Real World Data y Real World Evidence: un nuevo paradigma » CAEME, accessed 
+March 10, 2026, 
+https://www.caeme.org.ar/real-world-data-y-real-world-evidence-un-nuevo-par
+adigma/ 
+6.​ Real World Evidence in healthcare decision making: Global trends and case 
+studies from Latin America - ResearchGate, accessed March 10, 2026, 
+https://www.researchgate.net/publication/325343320_Real_World_Evidence_in_h
+ealthcare_decision_making_Global_trends_and_case_studies_from_Latin_Americ
+a 
+7.​ Considerations for the Use of Real-World Data and Real-World Evidence to 
+Support Regulatory Decision-Making for Drug and Biologi - FDA, accessed March 
+10, 2026, https://www.fda.gov/media/171667/download 
+8.​ Impact of AI on Clinical Data Management in the US | IntuitionLabs, accessed 
+March 10, 2026, 
+https://intuitionlabs.ai/articles/ai-clinical-data-management-us-healthcare 
+9.​ RWE & Big Data en salud - Sanofi campus, accessed March 10, 2026, 
+https://pro.campus.sanofi/dam/Portal/Spain/formacion/ehealth/curso-real-world-
+evidence-big-data/rwe-modulo-3_compressed.pdf 
+10.​Secondary use of health data: a strategic lever for Europe, accessed March 10, 
+2026, https://www.alcimed.com/en/insights/secondary-use-health-data/ 
+11.​Estudios Comparativos en Evidencia del Mundo Real (RWE) - Pro Pharma 
+Research Organization, accessed March 10, 2026, 
+https://propharmaresearch.com/recursos/difusion/estudios-comparativos-eviden
+cia-mundo-real-rwe 
+12.​Availability of secondary healthcare data for conducting pharmacoepidemiology 
+studies in Colombia: A systematic review - PMC, accessed March 10, 2026, 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7510335/ 
+13.​Availability of secondary healthcare data for conducting pharmacoepidemiology 
+studies in Colombia: A systematic review - PubMed, accessed March 10, 2026, 
+https://pubmed.ncbi.nlm.nih.gov/32965783/ 
+14.​National Cancer Information System Within the Framework of Health Insurance in 
+Colombia: A Real-World Data Approach to Evaluate Access to Cancer Care - 
+PubMed, accessed March 10, 2026, https://pubmed.ncbi.nlm.nih.gov/34473526/ 
+15.​Real-World Evidence: Pharmacoepidemiology for Daily Clinical Practice—An 
+Experience from Colombia - ResearchGate, accessed March 10, 2026, 
+https://www.researchgate.net/publication/343446645_Real-World_Evidence_Phar
+macoepidemiology_for_Daily_Clinical_Practice-An_Experience_from_Colombia 
+16.​Cifras e indicadores del Sistema de Salud - Ministerio de Salud y ..., accessed 
+March 10, 2026, 
+https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/INEC/salude_en
+_cifras-2013.pdf 
+17.​El ciclo de vida del dato en los sistemas de salud - Cegid Iberia, accessed March 
+10, 2026, https://www.cegid.com/ib/es/blog/ciclo-vida-etapas-dato/ 
+18.​LEY ESTATUTARIA 1581 DE 2012 (Octubre 17) Reglamentada parcialmente por el 
+Decreto Nacional 1377 de 2013. Por la cual se dictan - ESDEG, accessed March 10, 
+
+
+--- PAGE BREAK ---
+
+2026, 
+https://esdegue.edu.co/sites/default/files/Normatividad/LEY%20TRATAMIENTO%2
+0DE%20DATOS%20-%20LEY%201581%20DE%202012.pdf 
+19.​LEY 1581 DE 2012 - SUIN-Juriscol, accessed March 10, 2026, 
+https://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Leyes/1684507 
+20.​ABC Ley 1581 de 2012 Protección de Datos Personales - IMSALUD, accessed 
+March 10, 2026, 
+https://www.imsalud.gov.co/web/sin-categoria/abc-ley-1581-de-2012-proteccion
+-de-datos-personales/ 
+21.​Ley 1581 de 2012 Congreso de la República de Colombia, accessed March 10, 
+2026, https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=49981 
+22.​Colombia adopta el Resumen Digital de Atención en Salud: un paso decisivo hacia 
+la interoperabilidad clínica - Resolución 1888 de 2025 - consultorsalud, accessed 
+March 10, 2026, 
+https://consultorsalud.com/colombia-resumen-digital-de-atencion-en-salud/ 
+23.​Benefits and challenges of artificial intelligence in the Colombian health system - 
+Dialnet, accessed March 10, 2026, 
+https://dialnet.unirioja.es/descarga/articulo/9873181.pdf 
+24.​Resolución 1888 de 2025 Ministerio de Salud y Protección Social - Secretaría 
+General de la Alcaldía Mayor de Bogotá, accessed March 10, 2026, 
+https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=190733&dt=S 
+25.​15 SEP 2025 - MinSalud, accessed March 10, 2026, 
+https://www.minsalud.gov.co/Normatividad_Nuevo/Resolucion%20No%201888%
+20de%202025.pdf 
+26.​Historia clínica electrónica interoperable en Colombia - Portal de revistas UFPS, 
+accessed March 10, 2026, 
+https://revistas.ufps.edu.co/index.php/ingenio/article/download/5116/6180/46960 
+27.​Population Health Management with AI-Driven Data Insights - Wipro, accessed 
+March 10, 2026, 
+https://www.wipro.com/healthcare/articles/building-a-data-foundation-for-popul
+ation-health-management/ 
+28.​Evidencia en vida real (RWE): la nueva era de datos sanitarios que revolucionará la 
+vida de los pacientes - FarmaIndustria, accessed March 10, 2026, 
+https://www.farmaindustria.es/web/reportaje/evidencia-en-vida-real-rwe-la-nuev
+a-era-de-datos-sanitarios-que-revolucionara-la-vida-de-los-pacientes/ 
+29.​Inteligencia artificial y salud digital en Colombia: panorama de los avances más 
+recientes y retos futuros - PMC, accessed March 10, 2026, 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12890302/ 
+30.​El futuro científico de las IPS en Colombia en la era de la IA, nuevos retos que 
+exigen soluciones disruptivas - aipocrates.blog, accessed March 10, 2026, 
+https://aipocrates.blog/2025/11/30/el-futuro-cientifico-de-las-ips-en-colombia-e
+n-la-era-de-la-ia-nuevos-retos-que-exigen-soluciones-disruptivas/ 
+31.​Savings to the Colombian health system with the implementation of externally 
+funded oncology clinical trials - PMC, accessed March 10, 2026, 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12147872/ 
+
+
+--- PAGE BREAK ---
+
+32.​Vista de Historia clínica electrónica interoperable en Colombia | Revista Ingenio, 
+accessed March 10, 2026, 
+https://revistas.ufps.edu.co/index.php/ingenio/article/view/5116/6176 
+33.​Minsalud actualiza reglas para la investigación en salud con seres ..., accessed 
+March 10, 2026, 
+https://consultorsalud.com/minsalud-investigacion-salud-seres-humanos-ips/ 
+34.​Ley 1581 de 2012 - Gestor Normativo - Función Pública, accessed March 10, 2026, 
+https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981 
+
+
+--- PAGE BREAK ---
+

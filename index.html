@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diplomado Neurum | Directorio de Presentaciones</title>
+    <!-- Relative path to global styles -->
+    <link rel="stylesheet" href="shared/styles.css">
+    <style>
+        /* Specific adjustments for the directory view */
+        .directory-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .presentation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-2xl);
+        }
+
+        .presentation-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .presentation-number {
+            font-size: 2.5rem;
+            font-family: 'Exo', sans-serif;
+            font-weight: 700;
+            color: var(--color-cta);
+            opacity: 0.2;
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            transition: opacity 200ms ease;
+        }
+
+        .presentation-card:hover .presentation-number {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+        .coming-soon {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .coming-soon:hover {
+            transform: none;
+            box-shadow: var(--shadow-md);
+            border-color: #E2E8F0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+
+        .badge-ready {
+            background: #E0E7FF;
+            color: var(--color-cta);
+        }
+
+        .badge-pending {
+            background: #F4F4F5;
+            color: var(--color-secondary);
+        }
+    </style>
+</head>
+
+<body style="min-height: 100vh; height: auto; overflow-y: auto;">
+
+    <div class="directory-container">
+
+        <header style="text-align: center; margin-bottom: var(--space-3xl);">
+            <img src="images/logo_neurum.png" alt="Logo Neurum" style="max-height: 100px; margin-bottom: var(--space-xl);">
+            <p style="margin-bottom: var(--space-sm); font-weight: 700; font-size: 1.1rem; color: var(--color-primary); text-transform: uppercase;">DIPLOMADO EN INTELIGENCIA ARTIFICIAL Y ANALÍTICA DE DATOS APLICADA A LA SALUD</p>
+            <p class="text-muted" style="margin-bottom: var(--space-md);">D I R E C T O R I O  G L O B A L</p>
+            <h1>Presentaciones Interactivas</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: var(--color-secondary);">
+                Colección de recursos para el desarrollo del diplomado.
+            </p>
+            
+            <div class="teacher-avatar-container" id="openTeacherModal" style="margin-top: var(--space-xl); display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.2s; padding: var(--space-sm); border-radius: 12px; border: 1px solid transparent;" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#f1f5f9';" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='transparent';">
+                <img src="images/EverTorres_Avatar.png" alt="Docente Ever Torres" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-cta); box-shadow: var(--shadow-md); margin-bottom: 8px;">
+                <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-primary);">Conoce al Docente</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="presentation-grid">
+
+                <!-- Day 1 (Ready) -->
+                <a href="01_datos_vida_real/index.html" class="card presentation-card"
+                    style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">01</span>
+                    <div>
+                        <span class="badge badge-ready">Completado</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Datos de la vida real para la evaluación de resultados</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Entender el valor de los datos RWD/RWE en la toma de decisiones clínicas.
+                    </p>
+                </a>
+
+                <!-- Day 2 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">02</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Datos y tipos de datos en el sector salud</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Clasificar la naturaleza de la información manejada en la institución.
+                    </p>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">03</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Sistemas de información en Salud (SIS + SISPRO)</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Conocer el ecosistema de información en salud colombiano.
+                    </p>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">04</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Generalidades de la interoperabilidad</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Introducir los conceptos técnicos de comunicación entre sistemas.
+                    </p>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">05</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Vocabularios y Terminologías I</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Estandarizar problemas, observaciones, procedimientos y medicamentos.
+                    </p>
+                </div>
+
+                <!-- Day 6 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">06</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Vocabularios y Terminologías II</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Profundizar en terminología clínica avanzada y laboratorios.
+                    </p>
+                </div>
+
+                <!-- Day 7 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">07</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Modelo de datos común OMOP CDM</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Aprender a estandarizar bases de datos para investigación.
+                    </p>
+                </div>
+
+                <!-- Day 8 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">08</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">FHIR I</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Conocer el estándar moderno de intercambio de datos.
+                    </p>
+                </div>
+
+                <!-- Day 9 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">09</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">FHIR II</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Estructurar información clínica compleja.
+                    </p>
+                </div>
+
+                <!-- Day 10 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">10</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">FHIR III</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Implementar intercambio de datos.
+                    </p>
+                </div>
+
+                <!-- Day 11 -->
+                <div class="card presentation-card coming-soon" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">11</span>
+                    <div>
+                        <span class="badge badge-pending">Próximamente</span>
+                        <span class="badge" style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo 1</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Taller Integrador M1</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Aplicar estándares a un caso real de la IPS.
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Teacher Modal Overlay -->
+    <div id="teacherModal" style="display: none; position: fixed; inset: 0; background-color: rgba(15, 23, 42, 0.75); z-index: 2000; backdrop-filter: blur(4px); align-items: center; justify-content: center;">
+        <div style="background: white; border-radius: 16px; width: 90%; max-width: 500px; padding: var(--space-2xl); position: relative; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); transform: translateY(-20px); opacity: 0; transition: all 0.3s ease-out;" id="teacherModalContent">
+            <!-- Close Button -->
+            <button id="closeTeacherModal" style="position: absolute; top: 16px; right: 16px; background: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--color-secondary); transition: all 0.2s;" onmouseover="this.style.backgroundColor='#e2e8f0'; this.style.color='#0f172a';" onmouseout="this.style.backgroundColor='#f1f5f9'; this.style.color='var(--color-secondary)';">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div style="text-align: center; margin-bottom: var(--space-xl);">
+                <img src="images/EverTorres_Avatar.png" alt="Docente Ever Torres" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--color-cta); box-shadow: var(--shadow-md); margin-bottom: 16px;">
+                <h3 style="margin: 0; color: var(--color-primary); font-size: 1.5rem;">Ever Torres</h3>
+                <p style="color: var(--color-secondary); font-size: 0.95rem; margin-top: 4px;">Docente del Diplomado</p>
+            </div>
+
+            <div style="background: #f8fafc; border-radius: 12px; padding: var(--space-lg); border-left: 4px solid var(--color-primary);">
+                <ul style="margin: 0; padding-left: 20px; color: var(--color-text); line-height: 1.6; font-size: 0.95rem; list-style-type: square;">
+                    <li>Ingeniero Biomédico (2004-2010)</li>
+                    <li>Magíster en Gestión Tecnológica (2011-2016)</li>
+                    <li>Estudiante PhD en Ingeniería (2020 - ?)</li>
+                    <li style="margin-top: 12px;">Docente e Investigador</li>
+                    <li>Coordinador de proyectos de Innovación en Netux</li>
+                    <li>CEO 2EVS SAS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const teacherModal = document.getElementById('teacherModal');
+            const openTeacherModalBtn = document.getElementById('openTeacherModal');
+            const closeTeacherModalBtn = document.getElementById('closeTeacherModal');
+            const teacherModalContent = document.getElementById('teacherModalContent');
+
+            function openTeacherModal() {
+                teacherModal.style.display = 'flex';
+                setTimeout(() => {
+                    teacherModalContent.style.transform = 'translateY(0)';
+                    teacherModalContent.style.opacity = '1';
+                }, 10);
+            }
+
+            function closeTeacherModal() {
+                teacherModalContent.style.transform = 'translateY(-20px)';
+                teacherModalContent.style.opacity = '0';
+                setTimeout(() => {
+                    teacherModal.style.display = 'none';
+                }, 300);
+            }
+
+            if (openTeacherModalBtn && closeTeacherModalBtn) {
+                openTeacherModalBtn.addEventListener('click', openTeacherModal);
+                closeTeacherModalBtn.addEventListener('click', closeTeacherModal);
+                
+                teacherModal.addEventListener('click', (e) => {
+                    if (e.target === teacherModal) {
+                        closeTeacherModal();
+                    }
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && teacherModal.style.display === 'flex') {
+                        closeTeacherModal();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
