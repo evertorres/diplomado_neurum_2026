@@ -1,24 +1,25 @@
 <section class="slide" id="slide16">
     <div class="slide-content" style="max-width: 1400px; width: 100%; display: flex; flex-direction: column; justify-content: center; height: 100%;">
         
-        <h2 style="text-align: center; margin-bottom: var(--space-xl);">¿Por qué es necesario un modelo de datos?</h2>
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">El Ecosistema Fragmentado de la Salud</h2>
 
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex-grow: 1; gap: var(--space-xl);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); align-items: center; flex-grow: 1;">
 
-            <!-- Componente de Texto Dinámico Grande -->
-            <div class="card" style="padding: var(--space-lg) var(--space-2xl); text-align: center; background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%); color: white; border: none; box-shadow: var(--shadow-lg); width: 100%; max-width: 900px; border-radius: 12px;">
-                <p style="font-size: 1.8rem; font-weight: 700; margin: 0; line-height: 1.5; font-family: 'Exo', sans-serif; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px;">
-                    <span>Modelos de datos común</span>
-                    <svg width="24" height="24" fill="none" stroke="#FBBF24" stroke-width="3" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    <span>Consultas comunes</span>
-                    <svg width="24" height="24" fill="none" stroke="#FBBF24" stroke-width="3" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    <span class="accent" style="color: #FBBF24;">Resultados comunes</span>
-                </p>
+            <!-- Columna Izquierda: Texto Metáfora -->
+            <div style="display: flex; flex-direction: column; justify-content: center; gap: var(--space-lg);">
+                <div class="card" style="padding: var(--space-xl) var(--space-lg); border-left: 6px solid var(--color-cta); box-shadow: var(--shadow-md); background: linear-gradient(to right, #ffffff, #F8FAFC);">
+                    <p style="font-size: 1.3rem; color: var(--color-primary); margin: 0; line-height: 1.6; font-family: 'Exo', sans-serif;">
+                        Los <strong>Sistemas de Información (IS)</strong> en el sector salud operan frecuentemente como <span class="accent">islas aisladas</span> dentro de un mismo territorio clínico.
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.5;">
+                        A pesar de coexistir en la misma infraestructura humana y física, carecen de puentes estandarizados (interoperabilidad) que permitan el flujo eficiente de la historia clínica, fragmentando así el cuidado del paciente.
+                    </p>
+                </div>
             </div>
 
-            <!-- Imagen Central -->
-            <div style="display: flex; align-items: center; justify-content: center; background: white; border-radius: 12px; padding: var(--space-md); box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; width: 100%; max-width: 900px;">
-                <img src="images/slide16_commondatamodel.png" alt="Common Data Model" class="zoomable-image" style="max-width: 100%; height: auto; max-height: 45vh; object-fit: contain; border-radius: 8px;">
+            <!-- Columna Derecha: Imagen -->
+            <div style="display: flex; align-items: center; justify-content: center; background: white; border-radius: 12px; padding: var(--space-md); box-shadow: var(--shadow-md); border: 1px solid #E2E8F0;">
+                <img src="images/slide15_IS_hospitals..png" alt="Sistemas de Información como islas" class="zoomable-image" style="max-width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
             </div>
 
         </div>
