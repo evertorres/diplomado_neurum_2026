@@ -393,3 +393,15 @@ a:hover {
   font-size: 1.5rem;
   line-height: 1;
 }
+
+/* Animations for progressive reveal (fragments) */
+.fragment {
+  opacity: 0;
+  transition: opacity 400ms ease, transform 400ms ease;
+  transform: translateY(15px);
+}
+
+.fragment.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

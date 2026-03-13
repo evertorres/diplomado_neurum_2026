@@ -43,14 +43,37 @@ window.initApp = function () {
     // Use a named function to prevent duplicate listeners
     function handleKeyDown(e) {
         if (e.key === 'ArrowRight' || e.key === 'Space' || e.key === 'Enter') {
-            if (currentSlide < totalSlides - 1) {
+            const currentSlideEl = slides[currentSlide];
+            const fragments = currentSlideEl.querySelectorAll('.fragment:not(.visible)');
+            
+            if (fragments.length > 0) {
+                // Reveal the next fragment
+                fragments[0].classList.add('visible');
+            } else if (currentSlide < totalSlides - 1) {
+                // No more fragments, go to next slide
                 currentSlide++;
                 updateSlides();
             }
         } else if (e.key === 'ArrowLeft') {
-            if (currentSlide > 0) {
+            const currentSlideEl = slides[currentSlide];
+            const visibleFragments = currentSlideEl.querySelectorAll('.fragment.visible');
+            
+            if (visibleFragments.length > 0) {
+                // Hide the last revealed fragment
+                visibleFragments[visibleFragments.length - 1].classList.remove('visible');
+            } else if (currentSlide > 0) {
+                // No more visible fragments, go to prev slide
                 currentSlide--;
                 updateSlides();
+                
+                // When going backwards to a slide, we might want all its fragments to be pre-revealed, 
+                // but for simplicity matching standard presentation tools, we leave them in their last state.
+                // Usually it's better to reset them or show all. Let's show all for better UX when going back.
+                setTimeout(() => {
+                    const prevSlideEl = slides[currentSlide];
+                    const allFragments = prevSlideEl.querySelectorAll('.fragment');
+                    allFragments.forEach(f => f.classList.add('visible'));
+                }, 10);
             }
         }
     }
@@ -64,17 +87,59 @@ window.initApp = function () {
     document.removeEventListener('click', window._handleNavClick || (() => { }));
 
     window._handleNavClick = function (e) {
-        const targetBtn = e.target.closest('button.control-btn');
-        if (!targetBtn) return;
+        // Fix for SVG child clicks - use closest properly for the buttons
+        const targetBtn = e.target.closest('.control-btn');
+        
+        if (!targetBtn) {
+            // Check if clicking on the slide container to advance presentation
+            const slideContainer = e.target.closest('.presentation-container');
+            // Don't advance if clicking on interactive elements
+            const isInteractive = e.target.closest('button, a, input, .modal, .zoomable-image, [data-modal-target], .slide-controls');
+            
+            if (slideContainer && !isInteractive) {
+                const currentSlideEl = slides[currentSlide];
+                if (!currentSlideEl) return;
+                
+                const fragments = currentSlideEl.querySelectorAll('.fragment:not(.visible)');
+                
+                if (fragments.length > 0) {
+                    fragments[0].classList.add('visible');
+                } else if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlides();
+                }
+            }
+            return;
+        }
 
         if (targetBtn.id === 'prevSlide') {
-            if (currentSlide > 0) {
+            const currentSlideEl = slides[currentSlide];
+            if (!currentSlideEl) return;
+            
+            const visibleFragments = currentSlideEl.querySelectorAll('.fragment.visible');
+            
+            if (visibleFragments.length > 0) {
+                visibleFragments[visibleFragments.length - 1].classList.remove('visible');
+            } else if (currentSlide > 0) {
                 currentSlide--;
                 updateSlides();
+                setTimeout(() => {
+                    const newSlideEl = slides[currentSlide];
+                    if (newSlideEl) {
+                        newSlideEl.querySelectorAll('.fragment').forEach(f => f.classList.add('visible'));
+                    }
+                }, 10);
             }
         }
         else if (targetBtn.id === 'nextSlide') {
-            if (currentSlide < totalSlides - 1) {
+            const currentSlideEl = slides[currentSlide];
+            if (!currentSlideEl) return;
+            
+            const fragments = currentSlideEl.querySelectorAll('.fragment:not(.visible)');
+            
+            if (fragments.length > 0) {
+                fragments[0].classList.add('visible');
+            } else if (currentSlide < totalSlides - 1) {
                 currentSlide++;
                 updateSlides();
             }
@@ -85,6 +150,9 @@ window.initApp = function () {
 
     // Initialize display
     updateSlides();
+    
+    // Reset fragments on the first slide if any
+    slides[currentSlide].querySelectorAll('.fragment').forEach(f => f.classList.remove('visible'));
 
 
     // --- Modal Logic ---
@@ -165,6 +233,45 @@ window.initApp = function () {
                 globalImageContent.src = newImg.src;
                 openModal('global-image-modal');
             });
+        });
+    }
+    // --- Interactive Sliders ---
+    const dikwSlider = document.getElementById('dikw-slider');
+    if (dikwSlider) {
+        const img0 = document.getElementById('slide5-img0');
+        const img1 = document.getElementById('slide5-img1');
+        const img2 = document.getElementById('slide5-img2');
+        const img3 = document.getElementById('slide5-img3');
+        const img4 = document.getElementById('slide5-img4');
+        const img5 = document.getElementById('slide5-img5');
+
+        // Prevent slide navigation when using the slider range
+        dikwSlider.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'Space') {
+                e.stopPropagation();
+            }
+        });
+
+        dikwSlider.addEventListener('input', function() {
+            const val = parseFloat(this.value);
+            
+            // Image 0 fades in between 0.0 and 1.0
+            if (img0) img0.style.opacity = Math.max(0, Math.min(1, val));
+            
+            // Image 1 fades in between 1.0 and 2.0
+            if (img1) img1.style.opacity = Math.max(0, Math.min(1, val - 1));
+            
+            // Image 2 fades in between 2.0 and 3.0
+            if (img2) img2.style.opacity = Math.max(0, Math.min(1, val - 2));
+            
+            // Image 3 fades in between 3.0 and 4.0
+            if (img3) img3.style.opacity = Math.max(0, Math.min(1, val - 3));
+            
+            // Image 4 fades in between 4.0 and 5.0
+            if (img4) img4.style.opacity = Math.max(0, Math.min(1, val - 4));
+            
+            // Image 5 fades in between 5.0 and 6.0
+            if (img5) img5.style.opacity = Math.max(0, Math.min(1, val - 5));
         });
     }
 };
