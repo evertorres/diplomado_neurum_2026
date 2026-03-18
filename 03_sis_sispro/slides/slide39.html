@@ -1,0 +1,137 @@
+<section class="slide" id="slide39">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            SISPRO
+        </div>
+        <h2 style="text-align: center; margin-bottom: 30px;">Modelo conceptual de salud y protección social</h2>
+        
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; position: relative; perspective: 1000px; min-height: 600px;">
+            
+            <!-- Contenedor del Diagrama SVG -->
+            <svg viewBox="0 0 800 600" style="width: 100%; max-width: 850px; height: auto; display: block; overflow: visible;">
+                <!-- Definiciones de Sombras y Gradientes -->
+                <defs>
+                    <filter id="dropshadow" height="130%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                        <feOffset dx="2" dy="2" result="offsetblur"/>
+                        <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+                        <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                    
+                    <linearGradient id="grad-aseguramiento" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#fca5a5"/><stop offset="100%" style="stop-color:#f87171"/></linearGradient>
+                    <linearGradient id="grad-financiamiento" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#d8b4fe"/><stop offset="100%" style="stop-color:#a855f7"/></linearGradient>
+                    <linearGradient id="grad-demanda" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#93c5fd"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+                    <linearGradient id="grad-oferta" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#fdba74"/><stop offset="100%" style="stop-color:#f97316"/></linearGradient>
+                    
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#334155" />
+                    </marker>
+
+                    <!-- Rutas para texto curvo -->
+                    <path id="path-inner-top" d="M 280,300 A 120,120 0 0,1 520,300" />
+                    <path id="path-inner-bottom" d="M 260,300 A 140,140 0 0,0 540,300" />
+                    
+                    <!-- Rutas para etiquetas de cuadrantes -->
+                    <path id="path-label-aseguramiento" d="M 200,280 A 210,210 0 0,1 380,100" />
+                    <path id="path-label-financiamiento" d="M 420,100 A 210,210 0 0,1 600,280" />
+                    <path id="path-label-demanda" d="M 170,320 A 230,230 0 0,0 380,530" />
+                    <path id="path-label-oferta" d="M 630,320 A 230,230 0 0,1 420,530" />
+                </defs>
+
+                <!-- 1. Núcleo: Ciudadano -->
+                <g class="fragment" data-fragment-index="1">
+                    <circle cx="400" cy="300" r="80" fill="#1e3a8a" filter="url(#dropshadow)" />
+                    <text x="400" y="305" text-anchor="middle" fill="white" font-weight="900" font-size="16" font-family="sans-serif">CIUDADANO</text>
+                    
+                    <!-- Flechas de Doble Lado Centrales -->
+                    <g stroke="#334155" stroke-width="3" marker-end="url(#arrowhead)" marker-start="url(#arrowhead)">
+                        <line x1="400" y1="215" x2="400" y2="175" />
+                        <line x1="400" y1="385" x2="400" y2="425" />
+                        <line x1="485" y1="300" x2="525" y2="300" />
+                        <line x1="315" y1="300" x2="275" y2="300" />
+                    </g>
+                </g>
+
+                <!-- 2. Anillos de Políticas y Estándares -->
+                <g class="fragment" data-fragment-index="2">
+                    <!-- Banda Superior -->
+                    <path d="M 240,300 A 160,160 0 0,1 560,300" fill="none" stroke="#94a3b8" stroke-width="40" opacity="0.6" />
+                    <text font-size="13" font-weight="700" fill="#1e293b">
+                        <textPath href="#path-inner-top" startOffset="50%" text-anchor="middle">Políticas y regulaciones</textPath>
+                    </text>
+
+                    <!-- Banda Inferior -->
+                    <path d="M 240,300 A 160,160 0 0,0 560,300" fill="none" stroke="#cbd5e1" stroke-width="40" opacity="0.6" />
+                    <text font-size="11" font-weight="700" fill="#1e293b">
+                        <textPath href="#path-inner-bottom" startOffset="50%" text-anchor="middle">Estandarización, integración y confidencialidad</textPath>
+                    </text>
+                </g>
+
+                <!-- 3. Cuadrantes Exteriores -->
+                <!-- Aseguramiento -->
+                <g class="fragment" data-fragment-index="3">
+                    <path d="M 400,100 A 200,200 0 0,0 200,300 L 250,300 A 150,150 0 0,1 400,150 Z" fill="url(#grad-aseguramiento)" filter="url(#dropshadow)" />
+                    <text font-size="16" font-weight="900" fill="#1e293b">
+                        <textPath href="#path-label-aseguramiento" startOffset="50%" text-anchor="middle">Aseguramiento</textPath>
+                    </text>
+                </g>
+
+                <!-- Financiamiento -->
+                <g class="fragment" data-fragment-index="4">
+                    <path d="M 400,100 A 200,200 0 0,1 600,300 L 550,300 A 150,150 0 0,0 400,150 Z" fill="url(#grad-financiamiento)" filter="url(#dropshadow)" />
+                    <text font-size="16" font-weight="900" fill="#1e293b">
+                        <textPath href="#path-label-financiamiento" startOffset="50%" text-anchor="middle">Financiamiento</textPath>
+                    </text>
+                </g>
+
+                <!-- Demanda y uso -->
+                <g class="fragment" data-fragment-index="5">
+                    <path d="M 200,300 A 200,200 0 0,0 400,500 L 400,450 A 150,150 0 0,1 250,300 Z" fill="url(#grad-demanda)" filter="url(#dropshadow)" />
+                    <text font-size="16" font-weight="900" fill="#1e293b">
+                        <textPath href="#path-label-demanda" startOffset="50%" text-anchor="middle">Demanda y uso</textPath>
+                    </text>
+                </g>
+
+                <!-- Oferta -->
+                <g class="fragment" data-fragment-index="6">
+                    <path d="M 600,300 A 200,200 0 0,1 400,500 L 400,450 A 150,150 0 0,0 550,300 Z" fill="url(#grad-oferta)" filter="url(#dropshadow)" />
+                    <text font-size="16" font-weight="900" fill="#1e293b">
+                        <textPath href="#path-label-oferta" startOffset="50%" text-anchor="middle">Oferta</textPath>
+                    </text>
+                </g>
+            </svg>
+
+            <!-- Cuadros de Detalle Externos -->
+            <!-- Top Left: Aseguramiento -->
+            <div class="card fragment" data-fragment-index="3" style="position: absolute; top: 0; left: 0; padding: 15px; border: 2px solid #ef4444; background: white; width: 200px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                <ul style="margin: 0; padding-left: 15px; font-size: 0.95rem; font-weight: 700; color: #1e293b;">
+                    <li>Registro de Afiliados</li>
+                </ul>
+            </div>
+
+            <!-- Top Right: Financiamiento -->
+            <div class="card fragment" data-fragment-index="4" style="position: absolute; top: 0; right: 0; padding: 15px; border: 2px solid #a855f7; background: white; width: 220px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                <ul style="margin: 0; padding-left: 15px; font-size: 0.95rem; font-weight: 700; color: #1e293b;">
+                    <li>Ingresos al sistema</li>
+                    <li>Gastos del sistema</li>
+                </ul>
+            </div>
+
+            <!-- Bottom Left: Demanda -->
+            <div class="card fragment" data-fragment-index="5" style="position: absolute; bottom: 0; left: 0; padding: 15px; border: 2px solid #3b82f6; background: white; width: 200px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                <ul style="margin: 0; padding-left: 15px; font-size: 0.95rem; font-weight: 700; color: #1e293b;">
+                    <li>Atenciones en salud</li>
+                </ul>
+            </div>
+
+            <!-- Bottom Right: Oferta -->
+            <div class="card fragment" data-fragment-index="6" style="position: absolute; bottom: 0; right: 0; padding: 15px; border: 2px solid #f97316; background: white; width: 220px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                <ul style="margin: 0; padding-left: 15px; font-size: 0.95rem; font-weight: 700; color: #1e293b;">
+                    <li>Recursos institucionales</li>
+                    <li>Infraestructura física</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>

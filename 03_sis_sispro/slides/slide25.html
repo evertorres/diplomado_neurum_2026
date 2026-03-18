@@ -1,0 +1,68 @@
+<section class="slide" id="slide25">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            Modelos de datos clínicos
+        </div>
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">OpenEHR Modelo de 2 capas</h2>
+        <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: var(--space-xl); width: 100%;">
+            <div style="flex-grow: 1;">
+                <h2 style="margin: 0; text-align: left;">Modelo de 2 capas</h2>
+            </div>
+            <img src="images/slide25_openEHR.svg" alt="openEHR Logo" style="height: 80px; width: auto;">
+        </div>
+
+        <div style="display: flex; flex-direction: column-reverse; align-items: flex-start; gap: 0; width: 100%;">
+            
+            <!-- Row 1 (Bottom): Reference Model - Appears First (Visual Bottom) -->
+            <div class="fragment" data-fragment-index="1" style="display: grid; grid-template-columns: 250px 1fr 1fr; gap: 15px; width: 100%;">
+                <div style="background: #C084FC; color: white; padding: 25px; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 700; font-size: 1.2rem; box-shadow: var(--shadow-md);">
+                    Modelo de Referencia<br>(Información)
+                </div>
+                <div style="background: #C084FC; color: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow-md);">
+                    <ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 1rem; line-height: 1.6;">
+                        <li><strong>Modelo de información:</strong> Orientado a objetos</li>
+                        <li><strong>Estable:</strong>
+                            <ul style="list-style-type: circle; padding-left: 20px; margin-top: 5px;">
+                                <li>Elementos reusables por el modelo de arquetipos</li>
+                                <li>No se modifican en el tiempo</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="background: #C084FC; color: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow-md);">
+                    <ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 1rem; line-height: 1.6;">
+                        <li>Fechas, textos, listas, etc.</li>
+                        <li>Unidades, cantidades, descripciones, etc.</li>
+                        <li>Rol, entidad, observación, acción, etc.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Arrow Row - Appears with Top Row (Visual Middle) -->
+            <div class="fragment" data-fragment-index="2" style="padding-left: 110px; margin: 10px 0;">
+                <div style="width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 30px solid #1B6685;"></div>
+                <div style="width: 20px; height: 15px; background: #1B6685; margin: -2px 0 0 10px;"></div>
+            </div>
+
+            <!-- Row 2 (Top): Archetype Model - Appears Second (Visual Top) -->
+            <div class="fragment" data-fragment-index="2" style="display: grid; grid-template-columns: 250px 1fr 1fr; gap: 15px; width: 100%;">
+                <div style="background: #1B6685; color: white; padding: 25px; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 700; font-size: 1.2rem; box-shadow: var(--shadow-md);">
+                    Modelo de Arquetipos<br>(Conocimiento)
+                </div>
+                <div style="background: #1B6685; color: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow-md);">
+                    <ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 1rem; line-height: 1.6;">
+                        <li><strong>Modelo de conocimiento:</strong> Representa conceptos</li>
+                        <li><strong>Dinámicos:</strong> Evoluciona según los conceptos del dominio</li>
+                    </ul>
+                </div>
+                <div style="background: #1B6685; color: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow-md);">
+                    <ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 1rem; line-height: 1.6;">
+                        <li>Presión arterial, APGAR, temperatura, laboratorios, medicación</li>
+                        <li>Médico, paciente.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

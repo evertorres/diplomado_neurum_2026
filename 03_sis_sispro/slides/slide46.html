@@ -1,0 +1,64 @@
+<section class="slide" id="slide46">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            SISPRO
+        </div>
+        <h2 style="text-align: center; margin-bottom: 30px;">Conceptos Clave para el Análisis en el SGD</h2>
+        
+        <!-- Sección 1: Medidas vs Dimensiones -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; width: 100%; margin-bottom: 35px;">
+            
+            <div class="card fragment" style="border-top: 5px solid #10b981; padding: 20px; background: white; border-radius: 12px; box-shadow: var(--shadow-md);">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                    <span style="font-size: 1.5rem;">🔢</span>
+                    <h3 style="margin: 0; color: #065f46; font-size: 1.2rem;">Medidas <span style="font-weight: 500; font-size: 0.9rem; color: #64748b;">(Cuantitativas)</span></h3>
+                </div>
+                <p style="font-size: 0.9rem; line-height: 1.5; color: #334155; margin-bottom: 10px;">
+                    Hechos numéricos que se desean sumar o promediar. Es la base de los cálculos.
+                </p>
+                <div style="background: #f0fdf4; padding: 10px; border-radius: 6px; font-size: 0.85rem; color: #166534;">
+                    <strong>Ejemplos:</strong> Número de Personas Atendidas, Valor de Facturación, Días de Estancia.
+                </div>
+            </div>
+
+            <div class="card fragment" style="border-top: 5px solid #3b82f6; padding: 20px; background: white; border-radius: 12px; box-shadow: var(--shadow-md);">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                    <span style="font-size: 1.5rem;">🌍</span>
+                    <h3 style="margin: 0; color: #1e3a8a; font-size: 1.2rem;">Dimensiones <span style="font-weight: 500; font-size: 0.9rem; color: #64748b;">(Cualitativas)</span></h3>
+                </div>
+                <p style="font-size: 0.9rem; line-height: 1.5; color: #334155; margin-bottom: 10px;">
+                    Perspectivas desde las cuales se analiza la información. Actúan como calificadores.
+                </p>
+                <div style="background: #eff6ff; padding: 10px; border-radius: 6px; font-size: 0.85rem; color: #1e40af;">
+                    <strong>Ejemplos:</strong> Tiempo (Año/Mes), Geografía, Perfil Demográfico, Diagnóstico (CIE-10).
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sección 2: Operaciones OLAP -->
+        <h3 class="fragment" style="text-align: center; color: var(--color-primary); margin-bottom: 20px; font-size: 1.3rem;">Operaciones Dinámicas (Tecnología OLAP)</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%;">
+            
+            <div class="card fragment" style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; background: #f8fafc; border-radius: 10px;">
+                <div style="font-size: 1.8rem; margin-bottom: 10px;">🔍</div>
+                <h4 style="margin: 0 0 5px 0; color: #1e293b; font-size: 1rem;">Drill-down</h4>
+                <p style="font-size: 0.75rem; color: #64748b; margin: 0;">Desglosar a niveles más detallados (ej. de Nación a Municipio).</p>
+            </div>
+
+            <div class="card fragment" style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; background: #f8fafc; border-radius: 10px;">
+                <div style="font-size: 1.8rem; margin-bottom: 10px;">⬆️</div>
+                <h4 style="margin: 0 0 5px 0; color: #1e293b; font-size: 1rem;">Roll-up</h4>
+                <p style="font-size: 0.75rem; color: #64748b; margin: 0;">Agregar datos para ver tendencias generales (ej. de Meses a Trimestres).</p>
+            </div>
+
+            <div class="card fragment" style="padding: 15px; text-align: center; border: 1px solid #e2e8f0; background: #f8fafc; border-radius: 10px;">
+                <div style="font-size: 1.8rem; margin-bottom: 10px;">🔄</div>
+                <h4 style="margin: 0 0 5px 0; color: #1e293b; font-size: 1rem;">Pivoteo</h4>
+                <p style="font-size: 0.75rem; color: #64748b; margin: 0;">Rotar la vista de los datos para encontrar nuevas correlaciones.</p>
+            </div>
+
+        </div>
+    </div>
+</section>

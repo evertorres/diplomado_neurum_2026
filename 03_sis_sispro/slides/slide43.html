@@ -1,0 +1,86 @@
+<section class="slide" id="slide43">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            SISPRO
+        </div>
+        <h2 style="text-align: center; margin-bottom: 30px;">Fuentes e integración de datos en el SISPRO</h2>
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; height: 500px; position: relative; gap: 20px;">
+            
+            <!-- 1. Fuentes de Datos (Izquierda) -->
+            <div class="fragment" data-fragment-index="1" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 280px; z-index: 2;">
+                <!-- Fila 1 -->
+                <div class="card" style="padding: 10px; background: #22c55e; color: white; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">REPS</div>
+                <div class="card" style="padding: 10px; background: #f97316; color: white; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">PILA</div>
+                <div class="card" style="padding: 10px; background: #93c5fd; color: #1e3a8a; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">BDUA</div>
+                <!-- Fila 2 -->
+                <div class="card" style="padding: 10px; background: #16a34a; color: white; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">RIPS</div>
+                <div class="card" style="padding: 10px; background: #475569; color: white; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">SIVIGILA</div>
+                <div class="card" style="padding: 10px; background: #3b82f6; color: white; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">SISBEN</div>
+                <!-- Fila 3 -->
+                <div class="card" style="padding: 10px; background: #15803d; color: white; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">RUAF-ND</div>
+                <div class="card" style="padding: 10px; background: #64748b; color: white; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">EEVV</div>
+                <div class="card" style="padding: 10px; background: #1d4ed8; color: white; text-align: center; font-weight: 900; border-radius: 8px; font-size: 0.8rem; box-shadow: var(--shadow-sm);">Otras...</div>
+            </div>
+
+            <!-- 2. Integración (Centro) -->
+            <div class="fragment" data-fragment-index="2" style="display: flex; align-items: center; gap: 15px; height: 100%; z-index: 1;">
+                <!-- Barra de Integración -->
+                <div style="width: 45px; height: 350px; background: linear-gradient(to bottom, #1e40af, #3b82f6); color: white; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 900; font-size: 1.2rem; border-radius: 8px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">
+                    INTEGRACIÓN
+                </div>
+                
+                <!-- Flecha de Flujo SVG Animada -->
+                <svg width="40" height="20" viewBox="0 0 40 20" style="overflow: visible;">
+                    <path d="M 0 10 L 35 10" stroke="#3b82f6" stroke-width="4" fill="none" class="fragment" data-fragment-index="2" />
+                    <polygon points="32,4 40,10 32,16" fill="#3b82f6" class="fragment" data-fragment-index="2" />
+                </svg>
+            </div>
+
+            <!-- 3. Salidas / Resultados (Centro-Derecha) -->
+            <div style="display: flex; flex-direction: column; gap: 30px; width: 320px; z-index: 1;">
+                
+                <!-- Flecha Consultas -->
+                <div class="fragment" data-fragment-index="3" style="position: relative; height: 60px; background: #3b82f6; border-radius: 4px; display: flex; align-items: center; padding-left: 20px; box-shadow: var(--shadow-sm);">
+                    <span style="color: white; font-weight: 800; font-size: 0.9rem;">CONSULTAS Y REPORTES</span>
+                    <div style="position: absolute; right: -25px; top: -5px; width: 0; height: 0; border-top: 35px solid transparent; border-bottom: 35px solid transparent; border-left: 30px solid #3b82f6;"></div>
+                </div>
+
+                <!-- Flecha Análisis -->
+                <div class="fragment" data-fragment-index="4" style="position: relative; height: 60px; background: #2563eb; border-radius: 4px; display: flex; align-items: center; padding-left: 20px; box-shadow: var(--shadow-sm);">
+                    <span style="color: white; font-weight: 800; font-size: 0.9rem; text-align: center; width: 100%;">ANÁLISIS MULTIDIMENSIONAL</span>
+                    <div style="position: absolute; right: -25px; top: -5px; width: 0; height: 0; border-top: 35px solid transparent; border-bottom: 35px solid transparent; border-left: 30px solid #2563eb;"></div>
+                </div>
+
+                <!-- Flecha Tableros -->
+                <div class="fragment" data-fragment-index="5" style="position: relative; height: 60px; background: #1d4ed8; border-radius: 4px; display: flex; align-items: center; padding-left: 20px; box-shadow: var(--shadow-sm);">
+                    <span style="color: white; font-weight: 800; font-size: 0.9rem;">TABLEROS DE CONTROL</span>
+                    <div style="position: absolute; right: -25px; top: -5px; width: 0; height: 0; border-top: 35px solid transparent; border-bottom: 35px solid transparent; border-left: 30px solid #1d4ed8;"></div>
+                </div>
+
+            </div>
+
+            <!-- 4. Plataformas Finales (Extremo Derecho) -->
+            <div style="display: flex; flex-direction: column; gap: 15px; width: 220px; z-index: 2;">
+                
+                <div class="card fragment" data-fragment-index="3" style="padding: 15px; background: #1e3a8a; color: white; text-align: center; border-radius: 12px; box-shadow: var(--shadow-md); transition: transform 0.3s;">
+                    <div style="font-weight: 900; font-size: 1rem;">CUBOS SISPRO</div>
+                </div>
+
+                <div class="card fragment" data-fragment-index="3" style="padding: 15px; background: #1e40af; color: white; text-align: center; border-radius: 12px; box-shadow: var(--shadow-md); transition: transform 0.3s;">
+                    <div style="font-weight: 900; font-size: 1rem;">PORTAL WEB</div>
+                </div>
+
+                <div class="card fragment" data-fragment-index="4" style="padding: 15px; background: #2563eb; color: white; text-align: center; border-radius: 12px; box-shadow: var(--shadow-md); transition: transform 0.3s;">
+                    <div style="font-weight: 900; font-size: 1rem;">MÓDULO GEOGRÁFICO</div>
+                </div>
+
+                <div class="card fragment" data-fragment-index="5" style="padding: 15px; background: #3b82f6; color: white; text-align: center; border-radius: 12px; box-shadow: var(--shadow-md); transition: transform 0.3s;">
+                    <div style="font-weight: 900; font-size: 1rem;">OBSERVATORIOS</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

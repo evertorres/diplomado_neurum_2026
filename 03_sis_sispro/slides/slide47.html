@@ -1,0 +1,53 @@
+<section class="slide" id="slide47">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            SISPRO
+        </div>
+        <h2 style="text-align: center; margin-bottom: 25px;">Buenas Prácticas: Consultas Eficientes</h2>
+        
+        <!-- Alerta de Desempeño -->
+        <div class="card fragment" style="border: 2px solid #f59e0b; background: #fffbeb; padding: 15px 25px; border-radius: 12px; margin-bottom: 30px; display: flex; align-items: center; gap: 20px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 2rem;">⚠️</div>
+            <p style="margin: 0; color: #92400e; font-weight: 600; line-height: 1.4;">
+                Los cubos del SISPRO contienen <strong>millones de registros</strong>. Una consulta mal estructurada puede demorar significativamente el sistema.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
+            
+            <!-- Regla 1: Orden -->
+            <div class="card fragment" style="border-top: 5px solid #2563eb; padding: 20px; background: white; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+                <div style="font-weight: 900; color: #1e40af; margin-bottom: 10px; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
+                    <span style="background: #1e40af; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">1</span>
+                    Orden de Variables
+                </div>
+                <p style="font-size: 0.85rem; line-height: 1.5; color: #334155; margin: 0;">
+                    Coloque primero las variables <strong>cualitativas</strong> (Filtros, Filas, Columnas) y solo al final la <strong>cuantitativa</strong> (Medida) en Valores.
+                </p>
+            </div>
+
+            <!-- Regla 2: Filtro Temporal -->
+            <div class="card fragment" style="border-top: 5px solid #3b82f6; padding: 20px; background: white; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+                <div style="font-weight: 900; color: #1e3a8a; margin-bottom: 10px; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
+                    <span style="background: #1e3a8a; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">2</span>
+                    Filtrado Temporal
+                </div>
+                <p style="font-size: 0.85rem; line-height: 1.5; color: #334155; margin: 0;">
+                    Inicie <strong>SIEMPRE</strong> su consulta filtrando por un periodo específico (Año o Semestre) para reducir el volumen de procesamiento.
+                </p>
+            </div>
+
+            <!-- Regla 3: Conexiones -->
+            <div class="card fragment" style="border-top: 5px solid #60a5fa; padding: 20px; background: white; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+                <div style="font-weight: 900; color: #1d4ed8; margin-bottom: 10px; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
+                    <span style="background: #1d4ed8; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">3</span>
+                    Guardar Conexión
+                </div>
+                <p style="font-size: 0.85rem; line-height: 1.5; color: #334155; margin: 0;">
+                    Use la opción <strong>"Conexiones existentes"</strong> para guardar los parámetros del servidor y evitar digitarlos en cada ingreso.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>

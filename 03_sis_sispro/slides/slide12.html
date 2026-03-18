@@ -1,0 +1,117 @@
+<section class="slide" id="slide12">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            Ecosistema de los SIS
+        </div>
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">Sistema de Información Hospitalario - HIS</h2>
+        <div style="width: 100%; max-width: 1200px; margin: 0 auto; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+            <style>
+                .his-table {
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid #ddd;
+                    background: white;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: var(--shadow-lg);
+                }
+                .his-header-container {
+                    display: grid;
+                    grid-template-columns: 250px 1fr;
+                    background: var(--color-secondary);
+                    border-bottom: 2px solid #444;
+                }
+                .his-header {
+                    color: white;
+                    padding: var(--space-md);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 0.85rem;
+                }
+                .his-row {
+                    display: grid;
+                    grid-template-columns: 250px 1fr;
+                }
+                .his-cell {
+                    padding: var(--space-md);
+                    border-bottom: 1px solid #eee;
+                    font-size: 0.95rem;
+                    line-height: 1.5;
+                }
+                .his-domain {
+                    background: #F8FAFC;
+                    font-weight: 600;
+                    color: var(--color-cta);
+                    display: flex;
+                    align-items: center;
+                    border-right: 1px solid #eee;
+                }
+                .his-processes {
+                    text-align: left;
+                }
+                .his-row:last-child .his-cell {
+                    border-bottom: none;
+                }
+                .his-row:hover .his-cell {
+                    background-color: rgba(37, 99, 235, 0.05);
+                    cursor: help;
+                }
+            </style>
+
+            <div class="his-table">
+                <div class="his-header-container">
+                    <div class="his-header">Dominio de Negocio</div>
+                    <div class="his-header">Procesos de Negocio</div>
+                </div>
+
+                <!-- row 1 -->
+                <div class="his-row fragment">
+                    <div class="his-cell his-domain">Servicios de salud</div>
+                    <div class="his-cell his-processes">
+                        Registro de paciente, Historia clínica, Registro de decesos, Registro de nacimientos, Clasificación de enfermedades, Clasificación de síntomas, Clasificación de procedimientos, Reporte de enfermedades
+                    </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="his-row fragment">
+                    <div class="his-cell his-domain">Laboratorio</div>
+                    <div class="his-cell his-processes">
+                        Colección y registro de especímenes, Reporte de resultados, Asociación de resultados a pacientes, Reporte de enfermedades, Clasificación de enfermedades
+                    </div>
+                </div>
+
+                <!-- row 3 -->
+                <div class="his-row fragment">
+                    <div class="his-cell his-domain">Farmacia</div>
+                    <div class="his-cell his-processes">
+                        Registro en inventario central, Facilitar registro de inventario, Cadena de suministros y distribución, Registro de pacientes, Clasificación de enfermedades, Tratamiento plan y descripción
+                    </div>
+                </div>
+
+                <!-- row 4 -->
+                <div class="his-row fragment">
+                    <div class="his-cell his-domain">Recursos humanos</div>
+                    <div class="his-cell his-processes">
+                        Clasificación de la fuerza de trabajo, Reclutamiento, acreditación y contratación, Monitoreo y despliegue, Informe de prioridades en contratación y formación
+                    </div>
+                </div>
+
+                <!-- row 5 -->
+                <div class="his-row fragment">
+                    <div class="his-cell his-domain">Soporte a decisiones</div>
+                    <div class="his-cell his-processes">
+                        Clasificaciones internacionales, Acceso a protocolos e investigación, Recolección de datos de rutina, Relación con datos de población, Presupuestos, Análisis y representación de datos, Monitoreo de eventos urgentes
+                    </div>
+                </div>
+
+                <!-- row 6 -->
+                <div class="his-row fragment">
+                    <div class="his-cell his-domain">Financieros</div>
+                    <div class="his-cell his-processes">
+                        Tarifas por servicios, Facturación, Nómina
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

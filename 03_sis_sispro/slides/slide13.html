@@ -1,0 +1,140 @@
+<section class="slide" id="slide13">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            Ecosistema de los SIS
+        </div>
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">Adopción HCE - (EMRAM – Electronic Medical Record Adoption Model)</h2>
+        <div style="width: 100%; max-width: 1200px; margin: 0 auto; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+            <style>
+                .emram-table {
+                    display: flex;
+                    flex-direction: column;
+                    background: white;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: var(--shadow-xl);
+                    border: 1px solid #E2E8F0;
+                }
+                .emram-header-container {
+                    display: grid;
+                    grid-template-columns: 100px 1.5fr 1fr;
+                    background: #1E293B;
+                }
+                .emram-header {
+                    color: white;
+                    padding: var(--space-md);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    letter-spacing: 0.05em;
+                    text-align: center;
+                }
+                .emram-row {
+                    display: grid;
+                    grid-template-columns: 100px 1.5fr 1fr;
+                }
+                .emram-cell {
+                    padding: var(--space-md);
+                    border-bottom: 1px solid #F1F5F9;
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .emram-stage {
+                    font-weight: 800;
+                    color: white;
+                    font-size: 1.1rem;
+                }
+                /* Staging Colors (Dark to Light) */
+                .stage-7 { background-color: #0F172A; }
+                .stage-6 { background-color: #1E293B; }
+                .stage-5 { background-color: #334155; }
+                .stage-4 { background-color: #475569; }
+                .stage-3 { background-color: #64748B; }
+                .stage-2 { background-color: #94A3B8; }
+                .stage-1 { background-color: #CBD5E1; }
+                .stage-0 { background-color: #E2E8F0; color: #64748B; }
+                
+                .emram-row:hover .emram-cell:not(.emram-stage) {
+                    background-color: #F8FAFC;
+                }
+            </style>
+
+            <div class="emram-table">
+                <div class="emram-header-container">
+                    <div class="emram-header">Stage</div>
+                    <div class="emram-header">Capacidades Clínicas</div>
+                    <div class="emram-header">Seguridad e Infraestructura</div>
+                </div>
+
+                <div class="emram-body" style="display: flex; flex-direction: column;">
+                    <!-- DOM Order: Stage 0 to 7 to match reveal order -->
+                    <!-- Visual Order: Stage 7 (order 0) to Stage 0 (order 7) -->
+                    
+                    <!-- Stage 0 -->
+                    <div class="emram-row fragment" style="order: 7;">
+                        <div class="emram-cell emram-stage stage-0">0</div>
+                        <div class="emram-cell">Sin unidades de sistemas de información instalados.</div>
+                        <div class="emram-cell">-</div>
+                    </div>
+
+                    <!-- Stage 1 -->
+                    <div class="emram-row fragment" style="order: 6;">
+                        <div class="emram-cell emram-stage stage-1">1</div>
+                        <div class="emram-cell">Instalación de Laboratorio, Radiología y Farmacia (Sistemas separados)</div>
+                        <div class="emram-cell">Sistemas independientes</div>
+                    </div>
+
+                    <!-- Stage 2 -->
+                    <div class="emram-row fragment" style="order: 5;">
+                        <div class="emram-cell emram-stage stage-2">2</div>
+                        <div class="emram-cell">Repositorio de datos clínicos e interoperabilidad interna básica</div>
+                        <div class="emram-cell">Seguridad básica</div>
+                    </div>
+
+                    <!-- Stage 3 -->
+                    <div class="emram-row fragment" style="order: 4;">
+                        <div class="emram-cell emram-stage stage-3">3</div>
+                        <div class="emram-cell">Documentación de Enfermería (Flujos), CDSS para errores, PACS no integrado</div>
+                        <div class="emram-cell">Seguridad basada en roles</div>
+                    </div>
+
+                    <!-- Stage 4 -->
+                    <div class="emram-row fragment" style="order: 3;">
+                        <div class="emram-cell emram-stage stage-4">4</div>
+                        <div class="emram-cell">CPOE (Órdenes Médicas) + CDSS Implementados</div>
+                        <div class="emram-cell">Continuidad de Negocio básica</div>
+                    </div>
+
+                    <!-- Stage 5 -->
+                    <div class="emram-row fragment" style="order: 2;">
+                        <div class="emram-cell emram-stage stage-5">5</div>
+                        <div class="emram-cell">Documentación médica con plantillas estructuradas</div>
+                        <div class="emram-cell">Protección de dispositivos e intrusión</div>
+                    </div>
+
+                    <!-- Stage 6 -->
+                    <div class="emram-row fragment" style="order: 1;">
+                        <div class="emram-cell emram-stage stage-6">6</div>
+                        <div class="emram-cell">Ciclo cerrado de medicación, CDSS completo, RIS/PACS integrados</div>
+                        <div class="emram-cell">Reporte de riesgos</div>
+                    </div>
+
+                    <!-- Stage 7 -->
+                    <div class="emram-row fragment" style="order: 0;">
+                        <div class="emram-cell emram-stage stage-7">7</div>
+                        <div class="emram-cell">HCE completa, Intercambio externo, Analítica avanzada y Gobernanza</div>
+                        <div class="emram-cell">Recuperación de desasteres, privacidad y seguridad</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: var(--space-md); font-size: 0.75rem; color: #64748B; font-style: italic; text-align: left;">
+                Fuente: Data from HIMSS Analytics® Database ©2021
+            </div>
+        </div>
+    </div>
+</section>

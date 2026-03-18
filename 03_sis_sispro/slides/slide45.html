@@ -1,0 +1,50 @@
+<section class="slide" id="slide45">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            SISPRO
+        </div>
+        <h2 style="text-align: center; margin-bottom: 30px;">Análisis Multidimensional: Tecnología OLAP</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; width: 100%; align-items: center;">
+            
+            <!-- Texto Explicativo -->
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="card fragment" style="border-left: 5px solid #2563eb; padding: 25px; background: white; border-radius: 12px; box-shadow: var(--shadow-md);">
+                    <p style="font-size: 1.15rem; line-height: 1.6; color: #1e293b; margin: 0;">
+                        El mayor valor agregado de <strong>SISPRO</strong> es la posibilidad de realizar consultas dinámicas mediante cubos de información basados en tecnología <strong>OLAP</strong> <em>(On-Line Analytical Processing)</em>.
+                    </p>
+                </div>
+
+                <div class="card fragment" style="border-left: 5px solid #3b82f6; padding: 25px; background: #f8fafc; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: #334155; margin: 0;">
+                        Esta tecnología supera las limitaciones de las bases de datos relacionales tradicionales al organizar los datos en estructuras multidimensionales o <strong>"Hipercubos"</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Ilustración 3D CSS (Hipercubo) -->
+            <div class="fragment" style="display: flex; justify-content: center; perspective: 1000px; height: 300px;">
+                <div style="width: 150px; height: 150px; position: relative; transform-style: preserve-3d; animation: rotateCube 15s infinite linear; margin-top: 50px;">
+                    <!-- Caras del Cubo -->
+                    <div style="position: absolute; width: 150px; height: 150px; background: rgba(37, 99, 235, 0.1); border: 2px solid rgba(59, 130, 246, 0.6); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px); transform: translateZ(75px);"></div>
+                    <div style="position: absolute; width: 150px; height: 150px; background: rgba(37, 99, 235, 0.1); border: 2px solid rgba(59, 130, 246, 0.6); transform: rotateY(180deg) translateZ(75px);"></div>
+                    <div style="position: absolute; width: 150px; height: 150px; background: rgba(37, 99, 235, 0.1); border: 2px solid rgba(59, 130, 246, 0.6); transform: rotateY(90deg) translateZ(75px);"></div>
+                    <div style="position: absolute; width: 150px; height: 150px; background: rgba(37, 99, 235, 0.1); border: 2px solid rgba(59, 130, 246, 0.6); transform: rotateY(-90deg) translateZ(75px);"></div>
+                    <div style="position: absolute; width: 150px; height: 150px; background: rgba(37, 99, 235, 0.1); border: 2px solid rgba(59, 130, 246, 0.6); transform: rotateX(90deg) translateZ(75px);"></div>
+                    <div style="position: absolute; width: 150px; height: 150px; background: rgba(37, 99, 235, 0.1); border: 2px solid rgba(59, 130, 246, 0.6); transform: rotateX(-90deg) translateZ(75px);"></div>
+                    
+                    <!-- Brillo Interno -->
+                    <div style="position: absolute; width: 20px; height: 20px; background: #3b82f6; border-radius: 50%; filter: blur(15px); top: 65px; left: 65px; box-shadow: 0 0 40px 20px rgba(59, 130, 246, 0.4);"></div>
+                </div>
+
+                <style>
+                    @keyframes rotateCube {
+                        from { transform: rotateX(0deg) rotateY(0deg); }
+                        to { transform: rotateX(360deg) rotateY(360deg); }
+                    }
+                </style>
+            </div>
+
+        </div>
+    </div>
+</section>

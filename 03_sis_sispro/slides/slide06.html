@@ -1,0 +1,57 @@
+<section class="slide" id="slide6">
+    <div class="slide-content left" style="max-width: 1000px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-primary); margin-bottom: var(--space-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            Ecosistema de los SIS
+        </div>
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">Ecosistema de SIS en Salud</h2>
+        <div class="ecosystem-wrapper" style="width: 100%; display: flex; justify-content: center; padding: var(--space-xl) 0; flex-grow: 1;">
+            <style>
+                .ecosystem-grid {
+                    display: grid;
+                    grid-template-columns: 180px 1fr 180px;
+                    grid-template-rows: repeat(6, 100px);
+                    gap: 6px;
+                    background-color: #E5E7EB;
+                    padding: var(--space-md);
+                    border-radius: 12px;
+                    box-shadow: var(--shadow-xl);
+                    width: 100%;
+                    max-width: 1100px;
+                }
+                .eco-block {
+                    background-color: #7E9BA9;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    font-family: 'Exo', sans-serif;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+                    transition: all 400ms ease;
+                }
+            </style>
+
+            <div class="ecosystem-grid">
+                <!-- Fragments ordered by appearance: -->
+                <!-- 1. RIS/PACS -->
+                <div class="fragment eco-block" style="grid-row: 6; grid-column: 2;">RIS / PACS</div>
+                <!-- 2. SIAP -->
+                <div class="fragment eco-block" style="grid-row: 5; grid-column: 2;">SIAP</div>
+                <!-- 3. LIS -->
+                <div class="fragment eco-block" style="grid-row: 4; grid-column: 2;">LIS</div>
+                <!-- 4. CPOE -->
+                <div class="fragment eco-block" style="grid-row: 3; grid-column: 2;">CPOE</div>
+                <!-- 5. HCE -->
+                <div class="fragment eco-block" style="grid-row: 2; grid-column: 2;">HCE</div>
+                <!-- 6. HCP -->
+                <div class="fragment eco-block" style="grid-row: 1; grid-column: 2;">HCP</div>
+                <!-- 7. HIS (Left) -->
+                <div class="fragment eco-block" style="grid-row: 1 / span 6; grid-column: 1; padding: 10px;">HIS</div>
+                <!-- 8. HCE-u (Right) -->
+                <div class="fragment eco-block" style="grid-row: 1 / span 6; grid-column: 3; padding: 10px;">HCE-u</div>
+            </div>
+        </div>
+    </div>
+</section>
