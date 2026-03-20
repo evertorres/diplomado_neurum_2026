@@ -1,0 +1,130 @@
+<section class="slide" id="slide3">
+    <style>
+        .system-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .system-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .system-label {
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .system-desc {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        .spaghetti-box {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            background: rgba(239, 68, 68, 0.05);
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .diagram-container {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+        }
+    </style>
+
+    <div class="slide-content">
+        <h2 class="slide-title">Fragmentación de los Sistemas</h2>
+        <p style="margin-bottom: var(--space-xl); color: #94a3b8;">La realidad de los "Silos de Información" en entornos clínicos complejos.</p>
+        
+        <div class="grid-2" style="align-items: center; gap: 40px; width: 100%;">
+            <!-- Cards Column -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                
+                <!-- Card 1: EHR -->
+                <div class="system-card fragment" data-fragment-index="1" style="border-left: 4px solid #3b82f6;">
+                    <div class="system-label" style="color: #60a5fa;">EHR</div>
+                    <div class="system-desc">Electronic Health Record: El núcleo de la historia clínica digital.</div>
+                </div>
+
+                <!-- Card 2: RIS/PACS -->
+                <div class="system-card fragment" data-fragment-index="2" style="border-left: 4px solid #a855f7;">
+                    <div class="system-label" style="color: #c084fc;">RIS / PACS</div>
+                    <div class="system-desc">Imagenología: RX, TAC, RM y visualización DICOM.</div>
+                </div>
+
+                <!-- Card 3: LIS -->
+                <div class="system-card fragment" data-fragment-index="3" style="border-left: 4px solid #10b981;">
+                    <div class="system-label" style="color: #34d399;">LIS</div>
+                    <div class="system-desc">Laboratorio: Resultados, órdenes y trazabilidad de muestras.</div>
+                </div>
+
+                <!-- Card 4: PIS -->
+                <div class="system-card fragment" data-fragment-index="4" style="border-left: 4px solid #f59e0b;">
+                    <div class="system-label" style="color: #fbbf24;">PIS</div>
+                    <div class="system-desc">Farmacia: Inventarios, dispensación y seguridad de dosis.</div>
+                </div>
+
+                <!-- Card 5: OIS -->
+                <div class="system-card fragment" data-fragment-index="5" style="border-left: 4px solid #ec4899;">
+                    <div class="system-label" style="color: #f472b6;">OIS</div>
+                    <div class="system-desc">Oncología: Ciclos de quimioterapia y seguimiento oncológico.</div>
+                </div>
+
+                <!-- Card 6: Devices -->
+                <div class="system-card fragment" data-fragment-index="6" style="border-left: 4px solid #64748b;">
+                    <div class="system-label" style="color: #94a3b8;">DISPOSITIVOS</div>
+                    <div class="system-desc">Monitores de signos vitales, bombas y wearables.</div>
+                </div>
+
+                <!-- Desafío Message -->
+                <div class="fragment" data-fragment-index="7" style="grid-column: 1 / -1;">
+                    <div class="spaghetti-box">
+                        <p style="margin: 0; color: #fca5a5; font-size: 0.85rem; line-height: 1.5;">
+                            <strong style="color: #ef4444;">⚠️ El Desafío:</strong> Las conexiones punto a punto ("espagueti de integraciones") son costosas, frágiles y riesgosas para la seguridad clínica.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagram Column -->
+            <div class="diagram-container fragment" data-fragment-index="8">
+                <h4 style="font-size: 1rem; color: #60a5fa; margin-bottom: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Ecosistema Fragmentado</h4>
+                <div class="mermaid">
+                    graph TD;
+                        EHR((EHR)) <--> LIS((LIS))
+                        EHR <--> RIS((RIS))
+                        EHR <--> Devices((Devices))
+                        EHR <--> PIS((PIS))
+                        EHR <--> OIS((OIS))
+                        RIS <--> LIS
+                        LIS <--> OIS
+                        
+                        style EHR fill:#1e40af,stroke:#60a5fa,stroke-width:2px,color:#fff
+                        style LIS fill:#064e3b,stroke:#34d399,stroke-width:1px,color:#fff
+                        style RIS fill:#4c1d95,stroke:#c084fc,stroke-width:1px,color:#fff
+                        style Devices fill:#334155,stroke:#94a3b8,stroke-width:1px,color:#fff
+                        style PIS fill:#78350f,stroke:#fbbf24,stroke-width:1px,color:#fff
+                        style OIS fill:#831843,stroke:#f472b6,stroke-width:1px,color:#fff
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,118 @@
+<section class="slide" id="slide19">
+    <style>
+        .standard-table-container {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            margin-top: 20px;
+        }
+
+        .standard-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            color: #334155;
+        }
+
+        .standard-table th {
+            background: #1e293b;
+            padding: 18px 20px;
+            color: #ffffff;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .standard-table td {
+            padding: 24px 20px;
+            border-bottom: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            vertical-align: top;
+        }
+
+        .standard-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .standard-table tr:hover td {
+            background: #f8fafc;
+        }
+
+        .standard-acronym-arch {
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: #d97706;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .standard-def {
+            font-size: 0.8rem;
+            color: #92400e;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .standard-app-title-arch {
+            color: #1e293b;
+            font-weight: 800;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .standard-app-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        .accent-cda { border-left: 6px solid #f59e0b; }
+        .accent-ccd { border-left: 6px solid #fbbf24; }
+    </style>
+
+    <div class="slide-content">
+        <h2 class="slide-title">Catálogo de Estándares</h2>
+        <h3 style="color: #f59e0b; text-align: center; margin-bottom: 20px; font-weight: 400;">4. Documentos Clínicos y Arquitectura</h3>
+        
+        <div class="standard-table-container">
+            <table class="standard-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Estándar</th>
+                        <th style="width: 70%;">Propósito y Aplicabilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- CDA -->
+                    <tr class="fragment accent-cda" data-fragment-index="1">
+                        <td>
+                            <span class="standard-def">HL7 v3 (XML)</span>
+                            <span class="standard-acronym-arch">HL7 CDA</span>
+                        </td>
+                        <td>
+                            <span class="standard-app-title-arch">Clinical Document Architecture</span>
+                            <span class="standard-app-text">Estandariza la estructura semántica de cualquier informe clínico (Egresos, Cirugías). Datos legibles por máquina con narrativa humana.</span>
+                        </td>
+                    </tr>
+                    <!-- CCR / CCD -->
+                    <tr class="fragment accent-ccd" data-fragment-index="2">
+                        <td>
+                            <span class="standard-def">ASTM / Derivado CDA</span>
+                            <span class="standard-acronym-arch">CCR / CCD</span>
+                        </td>
+                        <td>
+                            <span class="standard-app-title-arch">Continuity of Care Document</span>
+                            <span class="standard-app-text">Resume clínico clave para el tránsito de pacientes. Incluye problemas activos, alergias y medicación actual.</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

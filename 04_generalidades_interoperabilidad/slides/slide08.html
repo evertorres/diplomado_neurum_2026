@@ -1,0 +1,194 @@
+<section class="slide" id="slide8">
+    <style>
+        .hub-perfection-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            height: 580px;
+        }
+
+        .hub-visual-frame {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .hub-svg-master {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Override global fragment transform to prevent desalignment in SVG */
+        .hub-svg-master .fragment {
+            transform: none !important;
+            transition: opacity 0.6s ease-out !important;
+        }
+
+        .hub-svg-master .fragment.visible {
+            transform: none !important;
+        }
+
+        /* Tag Styles */
+        .tag-node-bg {
+            fill: #ffffff;
+            stroke: #cbd5e1;
+            stroke-width: 1.5;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+        }
+
+        .tag-text-main {
+            font-family: 'Outfit', 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 19px;
+            fill: #1e293b;
+        }
+
+        .tag-text-sub {
+            font-family: 'Outfit', 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 9px;
+            fill: var(--color-cta);
+            text-transform: uppercase;
+        }
+
+        .hub-core-gradient {
+            stop-color: #ff6b6b;
+        }
+
+        .hub-pill-counter {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--color-cta);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 10;
+        }
+    </style>
+
+    <div class="slide-content">
+        <h2 class="slide-title">¿Cómo resolver el problema? Topología en Estrella</h2>
+        
+        <div class="hub-perfection-layout">
+            <div class="theory-side">
+                <p>Cambiando hacia una <strong>arquitectura centralizada</strong> (Motor de Interoperabilidad):</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px; margin: 30px 0;">
+                    <div class="card fragment" data-fragment-index="1" style="border-left: 5px solid var(--color-cta); padding: 18px;">
+                        <h4 style="margin:0; color: var(--color-cta); font-size: 1.1rem;">Estándares de Intercambio</h4>
+                        <p style="margin:0; font-size: 0.9rem; color: var(--color-secondary);">Sintaxis (HL7) y Semántica (SNOMED-CT) compartidas.</p>
+                    </div>
+                </div>
+
+                <div class="callout callout-primary fragment" data-fragment-index="2" style="font-size: 1rem; border-radius: 12px; border-left-width: 8px;">
+                    <strong>Regla de Oro:</strong> Cada sistema se conecta <strong>una sola vez</strong> al nodo central.
+                </div>
+                
+                <div class="info-box fragment" data-fragment-index="10" style="margin-top: 30px; border-left: 5px solid #10b981; background: #f0fdf4; padding: 20px;">
+                    <p style="margin:0; color: #166534; font-weight: 900; font-size: 1.4rem;">Escalabilidad Lineal: I = N</p>
+                </div>
+            </div>
+
+            <div class="hub-visual-frame fragment" data-fragment-index="3">
+                <!-- Counter Badges (Standard HTML) -->
+                <div class="counter-pill-container">
+                    <div class="hub-pill-counter">N=2 | I=2</div>
+                    <div class="hub-pill-counter fragment" data-fragment-index="4">N=3 | I=3</div>
+                    <div class="hub-pill-counter fragment" data-fragment-index="5">N=4 | I=4</div>
+                    <div class="hub-pill-counter fragment" data-fragment-index="6">N=5 | I=5</div>
+                    <div class="hub-pill-counter fragment" data-fragment-index="7">N=6 | I=6</div>
+                    <div class="hub-pill-counter fragment" data-fragment-index="8">N=7 | I=7</div>
+                </div>
+
+                <svg class="hub-svg-master" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="hubCoreInner" cx="30%" cy="30%" r="70%">
+                            <stop offset="0%" stop-color="#ff7f7f" />
+                            <stop offset="100%" stop-color="#cc0000" />
+                        </radialGradient>
+                        <filter id="hubGlowEffect">
+                            <feGaussianBlur stdDeviation="6" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+
+                    <!-- Connection Lines - MATHEMATICAL ORIGIN (250, 250) -->
+                    <!-- Absolute Coordinates Only to prevent CSS transform conflicts -->
+                    <g stroke="#94a3b8" stroke-width="5" stroke-linecap="round">
+                        <!-- Line A --> <line x1="250" y1="250" x2="250" y2="90" />
+                        <!-- Line B --> <line x1="250" y1="250" x2="380" y2="380" />
+                        <!-- Line C --> <line x1="250" y1="250" x2="120" y2="180" class="fragment" data-fragment-index="4" />
+                        <!-- Line D --> <line x1="250" y1="250" x2="380" y2="180" class="fragment" data-fragment-index="5" />
+                        <!-- Line E --> <line x1="250" y1="250" x2="120" y2="380" class="fragment" data-fragment-index="6" />
+                        <!-- Line F --> <line x1="250" y1="250" x2="250" y2="440" class="fragment" data-fragment-index="7" />
+                        <!-- Line G --> <line x1="250" y1="250" x2="430" y2="280" class="fragment" data-fragment-index="8" />
+                    </g>
+
+                    <!-- Central Hub Core (The absolute anchor) -->
+                    <g filter="url(#hubGlowEffect)">
+                        <circle cx="250" cy="250" r="48" fill="url(#hubCoreInner)" stroke="#8b0000" stroke-width="2" />
+                        <text x="250" y="246" text-anchor="middle" fill="white" font-weight="900" font-size="14" font-family="Outfit">ESB</text>
+                        <text x="250" y="265" text-anchor="middle" fill="white" font-weight="900" font-size="14" font-family="Outfit">HUB</text>
+                    </g>
+
+                    <!-- System Tags - NO TRANSFORMS ON FRAGMENTS to avoid CSS conflicts -->
+                    <!-- Coordinates are directly on the children or static groups -->
+                    
+                    <!-- A -->
+                    <g>
+                        <rect x="205" y="60" width="90" height="60" rx="12" class="tag-node-bg" />
+                        <text x="250" y="92" text-anchor="middle" class="tag-text-main">A</text>
+                        <text x="250" y="112" text-anchor="middle" class="tag-text-sub">EMR</text>
+                    </g>
+                    <!-- B -->
+                    <g>
+                        <rect x="335" y="350" width="90" height="60" rx="12" class="tag-node-bg" />
+                        <text x="380" y="382" text-anchor="middle" class="tag-text-main">B</text>
+                        <text x="380" y="402" text-anchor="middle" class="tag-text-sub">LIS</text>
+                    </g>
+                    <!-- C -->
+                    <g class="fragment" data-fragment-index="4">
+                        <rect x="75" y="150" width="90" height="60" rx="12" class="tag-node-bg" />
+                        <text x="120" y="182" text-anchor="middle" class="tag-text-main">C</text>
+                        <text x="120" y="202" text-anchor="middle" class="tag-text-sub">RIS</text>
+                    </g>
+                    <!-- D -->
+                    <g class="fragment" data-fragment-index="5">
+                        <rect x="335" y="150" width="90" height="60" rx="12" class="tag-node-bg" />
+                        <text x="380" y="182" text-anchor="middle" class="tag-text-main">D</text>
+                        <text x="380" y="202" text-anchor="middle" class="tag-text-sub">PHR</text>
+                    </g>
+                    <!-- E -->
+                    <g class="fragment" data-fragment-index="6">
+                        <rect x="75" y="350" width="90" height="60" rx="12" class="tag-node-bg" />
+                        <text x="120" y="382" text-anchor="middle" class="tag-text-main">E</text>
+                        <text x="120" y="402" text-anchor="middle" class="tag-text-sub">LAB</text>
+                    </g>
+                    <!-- F -->
+                    <g class="fragment" data-fragment-index="7">
+                        <rect x="205" y="410" width="90" height="60" rx="12" class="tag-node-bg" />
+                        <text x="250" y="442" text-anchor="middle" class="tag-text-main">F</text>
+                        <text x="250" y="462" text-anchor="middle" class="tag-text-sub">PACS</text>
+                    </g>
+                    <!-- G -->
+                    <g class="fragment" data-fragment-index="8">
+                        <rect x="385" y="250" width="90" height="60" rx="12" class="tag-node-bg" />
+                        <text x="430" y="282" text-anchor="middle" class="tag-text-main">G</text>
+                        <text x="430" y="302" text-anchor="middle" class="tag-text-sub">APP</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

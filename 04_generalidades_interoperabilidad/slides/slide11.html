@@ -1,0 +1,45 @@
+<section class="slide" id="slide11">
+    <div class="slide-content">
+        <h2 class="slide-title">El Desafío de los Datos Clínicos</h2>
+        
+        <p style="text-align: center; font-size: 1.1rem; color: var(--color-primary); margin-bottom: var(--space-xl);">
+            A diferencia de los bancos, que procesan números exactos, la medicina se ha documentado históricamente usando texto libre e imágenes.
+        </p>
+
+        <div class="grid-2">
+            <!-- Sopa de letras -->
+            <div class="fragment" data-fragment-index="1" style="background: white; border-radius: 12px; border: 1px dashed #94a3b8; padding: var(--space-lg); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-shadow: var(--shadow-md);">
+                <h3 style="color: #64748b; margin-bottom: var(--space-md); border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; width: 100%;">La "Sopa de Letras"</h3>
+                <p style="font-family: 'Courier New', Courier, monospace; font-size: 1.3rem; color: #1e293b; line-height: 1.6; background: #f1f5f9; padding: var(--space-md); border-radius: 8px; width: 100%;">
+                    <span style="color: #ef4444;">"Pte refiere dolor de cabeza"</span><br>
+                    <span style="color: #eab308;">"Cefalea frontal irradiada"</span><br>
+                    <span style="color: #3b82f6;">"Migraña con aura"</span><br>
+                    <span style="color: #8b5cf6;">"Dx: Hemicránea severa"</span>
+                </p>
+                <div class="callout" style="margin-top: var(--space-md); width: 100%; border-left-color: #ef4444; font-size: 0.9rem;">
+                    Para una máquina, sin estandarización, estos son cuatro eventos completamente distintos y no relacionables.
+                </div>
+            </div>
+
+            <!-- Datos Estandarizados -->
+            <div class="fragment" data-fragment-index="2" style="background: white; border-radius: 12px; border: 1px solid #86efac; padding: var(--space-lg); display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: var(--shadow-md);">
+                <h3 style="color: #15803d; margin-bottom: var(--space-md); border-bottom: 2px solid #bbf7d0; padding-bottom: 5px; width: 100%; text-align: center;">Datos Estandarizados</h3>
+                
+                <div style="width: 100%; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: var(--space-md); font-family: 'Courier New', Courier, monospace;">
+                    <div style="color: #15803d; font-weight: bold; margin-bottom: 10px;">{</div>
+                    <div style="padding-left: 20px;">
+                        <span style="color: #0369a1;">"ConceptId"</span>: <span style="color: #c2410c;">"25064002"</span>,<br>
+                        <span style="color: #0369a1;">"Description"</span>: <span style="color: #c2410c;">"Headache (finding)"</span>,<br>
+                        <span style="color: #0369a1;">"System"</span>: <span style="color: #c2410c;">"http://snomed.info/sct"</span>
+                    </div>
+                    <div style="color: #15803d; font-weight: bold; margin-top: 10px;">}</div>
+                </div>
+
+                <div class="callout callout-primary" style="margin-top: var(--space-md); width: 100%; background: #eff6ff; font-size: 0.9rem;">
+                    Vocabulario controlado que permite indexación algorítmica y soporte de decisiones clínicas automático.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

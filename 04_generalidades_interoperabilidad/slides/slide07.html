@@ -1,0 +1,56 @@
+<section class="slide" id="slide7">
+    <div class="slide-content" style="text-align: center;">
+        <h2 class="slide-title">Escalabilidad de interfaces</h2>
+        
+        <p style="text-align: center; color: #64748b; margin-bottom: var(--space-xl); max-width: 800px; margin-left: auto; margin-right: auto;">
+            El crecimiento cuadrático en cifras reales: Por qué la integración tradicional colapsa rápidamente.
+        </p>
+
+        <div style="display: flex; justify-content: center; margin-top: var(--space-xl); width: 100%;">
+            <table style="width: 80%; max-width: 600px; border-collapse: separate; border-spacing: 0; background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-2xl); border: 1px solid #e2e8f0;">
+                <thead style="background: #1e293b; color: white;">
+                    <tr>
+                        <th style="padding: 1.2rem; text-align: center; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;">N (Sistemas)</th>
+                        <th style="padding: 1.2rem; text-align: center; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; border-left: 1px solid rgba(255,255,255,0.1);">I (Interfaces)</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size: 1.4rem; color: #1e293b;">
+                    <!-- Row 1 -->
+                    <tr class="fragment" data-fragment-index="1">
+                        <td style="padding: 1.2rem; border-bottom: 1px solid #f1f5f9; font-weight: 800; color: #1e293b;">6</td>
+                        <td style="padding: 1.2rem; border-bottom: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; color: #ef4444; font-weight: 800;">15</td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr class="fragment" data-fragment-index="2" style="background-color: #f8fafc;">
+                        <td style="padding: 1.2rem; border-bottom: 1px solid #f1f5f9; font-weight: 800; color: #1e293b;">10</td>
+                        <td style="padding: 1.2rem; border-bottom: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; color: #ef4444; font-weight: 800;">45</td>
+                    </tr>
+                    <!-- Row 3 -->
+                    <tr class="fragment" data-fragment-index="3">
+                        <td style="padding: 1.2rem; border-bottom: 1px solid #f1f5f9; font-weight: 800; color: #1e293b;">20</td>
+                        <td style="padding: 1.2rem; border-bottom: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; color: #ef4444; font-weight: 800;">190</td>
+                    </tr>
+                    <!-- Row 4 -->
+                    <tr class="fragment" data-fragment-index="4" style="background-color: #f8fafc;">
+                        <td style="padding: 1.2rem; border-bottom: 1px solid #f1f5f9; font-weight: 800; color: #1e293b;">50</td>
+                        <td style="padding: 1.2rem; border-bottom: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; color: #ef4444; font-weight: 800;">1,225</td>
+                    </tr>
+                    <!-- Row 5 (The K.O. Row) -->
+                    <tr class="fragment" data-fragment-index="5" style="background-color: #fee2e2;">
+                        <td style="padding: 1.2rem; font-weight: 900; color: #991b1b; font-size: 1.6rem;">100</td>
+                        <td style="padding: 1.2rem; border-left: 1px solid #fecaca; color: #dc2626; font-weight: 900; font-size: 1.8rem; text-shadow: 0 0 10px rgba(220, 38, 38, 0.2);">4,950</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="fragment" data-fragment-index="6" style="margin-top: 40px; text-align: center; width: 100%;">
+            <div style="display: inline-block; background: #fff; border: 2px solid #ef4444; border-radius: 12px; padding: 15px 30px; box-shadow: var(--shadow-md);">
+                <p style="margin: 0; color: #991b1b; font-style: italic; font-weight: 600; font-size: 1rem;">
+                    "En una red de 100 sistemas, el mantenimiento es operativamente <span style="color: #dc2626; font-weight: 800; text-decoration: underline;">imposible</span>."
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>

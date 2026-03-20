@@ -1,0 +1,159 @@
+<section class="slide" id="slide20">
+    <style>
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .phase-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .phase-header {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .phase-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 900;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .checklist-container {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .checklist-item {
+            margin-bottom: 12px;
+            padding-left: 35px;
+            position: relative;
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .checklist-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 24px;
+            height: 24px;
+            background: #f8fafc;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 900;
+            border: 1px solid #e2e8f0;
+        }
+
+        .p1-accent { color: #1e293b; border-top: 6px solid #2563eb; }
+        .p1-bg { background: #2563eb; }
+        .p1-check::before { color: #2563eb; background: #eff6ff; border-color: #bfdbfe; }
+
+        .p2-accent { color: #1e293b; border-top: 6px solid #059669; }
+        .p2-bg { background: #059669; }
+        .p2-check::before { color: #059669; background: #ecfdf5; border-color: #bbf7d0; }
+
+        .conclusion-banner {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 20px 30px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: var(--shadow-2xl);
+            width: 100%;
+        }
+        
+        .conclusion-text {
+            color: #fde68a;
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        .final-btn-container {
+            margin-top: 35px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+
+    <div class="slide-content" style="padding: 20px;">
+        <h2 class="slide-title" style="font-size: 2.2rem; margin-bottom: 5px;">Lista de Chequeo para Implementación</h2>
+        <p style="text-align: center; color: #64748b; font-size: 1rem; margin-bottom: 10px;">Metodología estratégica antes de codificar la primera línea.</p>
+
+        <div class="workflow-grid">
+            <!-- Phase 1: Card is now a fragment (index 1) -->
+            <div class="phase-card p1-accent fragment" data-fragment-index="1">
+                <div class="phase-header">
+                    <div class="phase-number p1-bg">1</div>
+                    <span style="color: #2563eb;">Diseño y Acuerdos</span>
+                </div>
+                <ul class="checklist-container">
+                    <li class="checklist-item p1-check fragment" data-fragment-index="2"><strong>Requerimiento clínico:</strong> Entender el problema real a resolver.</li>
+                    <li class="checklist-item p1-check fragment" data-fragment-index="3"><strong>Definir estándar:</strong> Escoger protocolos y perfiles IHE/HL7.</li>
+                    <li class="checklist-item p1-check fragment" data-fragment-index="4"><strong>Gobernanza Semántica:</strong> Acordar terminologías maestras.</li>
+                    <li class="checklist-item p1-check fragment" data-fragment-index="5"><strong>Seguridad:</strong> Configurar VPNs, Certificados y OAuth2.</li>
+                </ul>
+            </div>
+
+            <!-- Phase 2: Card is now a fragment (index 6) -->
+            <div class="phase-card p2-accent fragment" data-fragment-index="6">
+                <div class="phase-header">
+                    <div class="phase-number p2-bg">2</div>
+                    <span style="color: #059669;">Ejecución Técnica</span>
+                </div>
+                <ul class="checklist-container">
+                    <li class="checklist-item p2-check fragment" data-fragment-index="7"><strong>Mapeo (Mapping):</strong> Lógica de campo original vs estándar.</li>
+                    <li class="checklist-item p2-check fragment" data-fragment-index="8"><strong>Construcción:</strong> Desarrollo de scripts y transformaciones.</li>
+                    <li class="checklist-item p2-check fragment" data-fragment-index="9"><strong>QA Clínico:</strong> Validación rigurosa de datos en Staging.</li>
+                    <li class="checklist-item p2-check fragment" data-fragment-index="10"><strong>Ciclo de Soporte:</strong> Documentación y manuales técnicos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="conclusion-banner fragment" data-fragment-index="11">
+            <span style="color: #fbbf24; font-weight: 800; font-size: 1.25rem; margin-right: 10px;">MENSAJE FINAL:</span> 
+            <span class="conclusion-text">La interoperabilidad es <strong>80% negociación estratégica</strong> y <strong>20% programación técnica</strong>.</span>
+        </div>
+
+        <!-- Botón de finalización High Contrast -->
+        <div class="final-btn-container fragment" data-fragment-index="12">
+            <a href="../index.html" class="btn-primary" style="font-size: 1.1rem; padding: 18px 40px; border-radius: 50px; background: #2563eb; color: white; display: inline-flex; align-items: center; gap: 12px; text-decoration: none; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                Finalizar y Volver al Directorio
+            </a>
+        </div>
+    </div>
+</section>

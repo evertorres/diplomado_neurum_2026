@@ -1,0 +1,63 @@
+<section class="slide" id="slide5">
+    <div class="slide-content">
+        <h2 class="slide-title">El Problema de las Interfaces</h2>
+        
+        <p style="font-size: 1.15rem; color: #475569; margin-bottom: var(--space-xl); max-width: 900px; margin-left: auto; margin-right: auto; text-align: center;">
+            La conexión <strong>punto a punto</strong> mediante interfaces personalizadas es el mayor obstáculo para el crecimiento de una red de salud.
+        </p>
+
+        <!-- Step 1: Reveal Formula Box (Light Premium) -->
+        <div class="fragment" data-fragment-index="1" style="text-align: center; width: 100%;">
+            <div style="background: #ffffff; border-radius: 24px; padding: 40px; display: inline-block; box-shadow: var(--shadow-xl); border: 2px solid #e2e8f0; margin-bottom: 30px;">
+                <div style="font-size: 5rem; font-family: 'Exo', sans-serif; font-weight: 800; color: #1e293b; display: flex; align-items: center; justify-content: center; gap: 20px;">
+                    <span style="color: #ef4444;">I</span>
+                    <span style="color: #94a3b8; font-weight: 300;">=</span>
+                    <span style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; vertical-align: middle;">
+                        <span style="border-bottom: 4px solid #3b82f6; padding: 0 20px; color: #2563eb; font-size: 0.8em;">N × (N - 1)</span>
+                        <span style="padding-top: 5px; color: #64748b; font-size: 0.8em;">2</span>
+                    </span>
+                </div>
+                
+                <!-- Step 2: Parameters -->
+                <div style="display: flex; justify-content: center; gap: 40px; margin-top: 25px;" class="fragment" data-fragment-index="2">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="background: #dbeafe; color: #2563eb; padding: 4px 12px; border-radius: 6px; font-weight: 800;">N</div>
+                        <span style="font-size: 0.95rem; color: #475569;">Número de Sistemas</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="background: #fee2e2; color: #ef4444; padding: 4px 12px; border-radius: 6px; font-weight: 800;">I</div>
+                        <span style="font-size: 0.95rem; color: #475569;">Interfaces Requeridas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Reveal Comparison Grid -->
+        <div class="grid-2" style="max-width: 900px; margin-left: auto; margin-right: auto; gap: var(--space-xl); width: 100%;">
+            <div class="card fragment" data-fragment-index="3" style="border-top: 6px solid #3b82f6; background: #fff; padding: var(--space-lg); text-align: center; box-shadow: var(--shadow-lg);">
+                <div style="color: #2563eb; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px;">Escenario A</div>
+                <div style="font-size: 2.2rem; font-weight: 900; color: #1e293b;">N = 10</div>
+                <div style="background: rgba(59, 130, 246, 0.1); color: #2563eb; padding: 10px; border-radius: 8px; margin: 15px 0; font-weight: 800; font-size: 1.4rem;">
+                    45 Interfaces
+                </div>
+                <p style="font-size: 0.85rem; color: #64748b;">Manejable con esfuerzo técnico considerable.</p>
+            </div>
+            
+            <div class="card fragment" data-fragment-index="4" style="border-top: 6px solid #ef4444; background: #fff; padding: var(--space-lg); text-align: center; box-shadow: var(--shadow-lg);">
+                <div style="color: #ef4444; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px;">Escenario B</div>
+                <div style="font-size: 2.2rem; font-weight: 900; color: #1e293b;">N = 25</div>
+                <div style="background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 10px; border-radius: 8px; margin: 15px 0; font-weight: 800; font-size: 1.4rem;">
+                    300 Interfaces
+                </div>
+                <p style="font-size: 0.85rem; color: #64748b;"><strong>Inviable:</strong> Mantenimiento y costos prohibitivos.</p>
+            </div>
+        </div>
+
+        <!-- Step 5: Final Impact -->
+        <div class="fragment" data-fragment-index="5" style="margin-top: 40px; text-align: center; width: 100%;">
+            <div style="display: inline-block; background: #1e293b; color: #fbbf24; padding: 12px 30px; border-radius: 50px; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: var(--shadow-md);">
+                "La complejidad crece de forma cuadrática"
+            </div>
+        </div>
+    </div>
+</section>

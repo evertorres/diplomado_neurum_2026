@@ -39,36 +39,60 @@ window.initApp = function () {
         history.replaceState(null, null, `#${currentSlide + 1}`);
     }
 
+    // Helper function to handle forward progression of fragments
+    function advanceFragments(currentSlideEl) {
+        const nonVisibleFragments = currentSlideEl.querySelectorAll('.fragment:not(.visible)');
+        if (nonVisibleFragments.length > 0) {
+            let minIndex = Infinity;
+            nonVisibleFragments.forEach(f => {
+                const idx = parseInt(f.getAttribute('data-fragment-index') || Number.MAX_SAFE_INTEGER);
+                if (idx < minIndex) minIndex = idx;
+            });
+            nonVisibleFragments.forEach(f => {
+                const idx = parseInt(f.getAttribute('data-fragment-index') || Number.MAX_SAFE_INTEGER);
+                if (idx === minIndex) f.classList.add('visible');
+            });
+            return true; // Advanced a fragment
+        }
+        return false; // No more fragments to advance
+    }
+
+    // Helper function to handle backward progression of fragments
+    function retreatFragments(currentSlideEl) {
+        const visibleFragments = currentSlideEl.querySelectorAll('.fragment.visible');
+        if (visibleFragments.length > 0) {
+            let maxIndex = -Infinity;
+            visibleFragments.forEach(f => {
+                const idx = parseInt(f.getAttribute('data-fragment-index') || -1);
+                if (idx > maxIndex) maxIndex = idx;
+            });
+            visibleFragments.forEach(f => {
+                const idx = parseInt(f.getAttribute('data-fragment-index') || -1);
+                if (idx === maxIndex) f.classList.remove('visible');
+            });
+            return true; // Retreated a fragment
+        }
+        return false; // No more fragments to retreat
+    }
+
     // Keyboard navigation
     // Use a named function to prevent duplicate listeners
     function handleKeyDown(e) {
         if (e.key === 'ArrowRight' || e.key === 'Space' || e.key === 'Enter') {
             const currentSlideEl = slides[currentSlide];
-            const fragments = currentSlideEl.querySelectorAll('.fragment:not(.visible)');
-            
-            if (fragments.length > 0) {
-                // Reveal the next fragment
-                fragments[0].classList.add('visible');
-            } else if (currentSlide < totalSlides - 1) {
+            if (!advanceFragments(currentSlideEl) && currentSlide < totalSlides - 1) {
                 // No more fragments, go to next slide
                 currentSlide++;
                 updateSlides();
             }
         } else if (e.key === 'ArrowLeft') {
             const currentSlideEl = slides[currentSlide];
-            const visibleFragments = currentSlideEl.querySelectorAll('.fragment.visible');
-            
-            if (visibleFragments.length > 0) {
-                // Hide the last revealed fragment
-                visibleFragments[visibleFragments.length - 1].classList.remove('visible');
-            } else if (currentSlide > 0) {
+            if (!retreatFragments(currentSlideEl) && currentSlide > 0) {
                 // No more visible fragments, go to prev slide
                 currentSlide--;
                 updateSlides();
                 
-                // When going backwards to a slide, we might want all its fragments to be pre-revealed, 
-                // but for simplicity matching standard presentation tools, we leave them in their last state.
-                // Usually it's better to reset them or show all. Let's show all for better UX when going back.
+                // When going backwards to a slide, show all its fragments
                 setTimeout(() => {
                     const prevSlideEl = slides[currentSlide];
                     const allFragments = prevSlideEl.querySelectorAll('.fragment');
@@ -87,8 +111,8 @@ window.initApp = function () {
     document.removeEventListener('click', window._handleNavClick || (() => { }));
 
     window._handleNavClick = function (e) {
-        // Fix for SVG child clicks - use closest properly for the buttons
         const targetBtn = e.target.closest('.control-btn');
+        const currentSlideEl = slides[currentSlide];
         
         if (!targetBtn) {
             // Check if clicking on the slide container to advance presentation
@@ -96,15 +120,8 @@ window.initApp = function () {
             // Don't advance if clicking on interactive elements
             const isInteractive = e.target.closest('button, a, input, .modal, .zoomable-image, [data-modal-target], .slide-controls');
             
-            if (slideContainer && !isInteractive) {
-                const currentSlideEl = slides[currentSlide];
-                if (!currentSlideEl) return;
-                
-                const fragments = currentSlideEl.querySelectorAll('.fragment:not(.visible)');
-                
-                if (fragments.length > 0) {
-                    fragments[0].classList.add('visible');
-                } else if (currentSlide < totalSlides - 1) {
+            if (slideContainer && !isInteractive && currentSlideEl) {
+                if (!advanceFragments(currentSlideEl) && currentSlide < totalSlides - 1) {
                     currentSlide++;
                     updateSlides();
                 }
@@ -112,15 +129,8 @@ window.initApp = function () {
             return;
         }
 
-        if (targetBtn.id === 'prevSlide') {
-            const currentSlideEl = slides[currentSlide];
-            if (!currentSlideEl) return;
-            
-            const visibleFragments = currentSlideEl.querySelectorAll('.fragment.visible');
-            
-            if (visibleFragments.length > 0) {
-                visibleFragments[visibleFragments.length - 1].classList.remove('visible');
-            } else if (currentSlide > 0) {
+        if (targetBtn.id === 'prevSlide' && currentSlideEl) {
+            if (!retreatFragments(currentSlideEl) && currentSlide > 0) {
                 currentSlide--;
                 updateSlides();
                 setTimeout(() => {
@@ -131,15 +141,8 @@ window.initApp = function () {
                 }, 10);
             }
         }
-        else if (targetBtn.id === 'nextSlide') {
-            const currentSlideEl = slides[currentSlide];
-            if (!currentSlideEl) return;
-            
-            const fragments = currentSlideEl.querySelectorAll('.fragment:not(.visible)');
-            
-            if (fragments.length > 0) {
-                fragments[0].classList.add('visible');
-            } else if (currentSlide < totalSlides - 1) {
+        else if (targetBtn.id === 'nextSlide' && currentSlideEl) {
+            if (!advanceFragments(currentSlideEl) && currentSlide < totalSlides - 1) {
                 currentSlide++;
                 updateSlides();
             }
@@ -273,6 +276,41 @@ window.initApp = function () {
             // Image 5 fades in between 5.0 and 6.0
             if (img5) img5.style.opacity = Math.max(0, Math.min(1, val - 5));
         });
+    }
+
+    // --- Interoperability Slider (Slide 02) ---
+    const interopSlider = document.getElementById('interop-slider');
+    if (interopSlider) {
+        const img1 = document.getElementById('slide2-img1');
+        const img2 = document.getElementById('slide2-img2');
+
+        interopSlider.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                e.stopPropagation();
+            }
+        });
+
+        interopSlider.addEventListener('input', function() {
+            const val = parseFloat(this.value);
+            // img1 (Sistemas) fades in between 0.0 and 1.0
+            if (img1) img1.style.opacity = Math.max(0, Math.min(1, val));
+            // img2 (Conectividad) fades in between 1.0 and 2.0
+            if (img2) img2.style.opacity = Math.max(0, Math.min(1, val - 1));
+        });
+
+        // Scroll (wheel) to change slider value for "scroll-to-swap" effect
+        const slideArea = interopSlider.closest('.slide');
+        if (slideArea) {
+            slideArea.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                const delta = e.deltaY;
+                const factor = 0.002; // Sensibilidad del scroll
+                let newVal = parseFloat(interopSlider.value) + (delta * factor);
+                newVal = Math.max(0, Math.min(2, newVal));
+                interopSlider.value = newVal;
+                interopSlider.dispatchEvent(new Event('input'));
+            }, { passive: false });
+        }
     }
 };
 

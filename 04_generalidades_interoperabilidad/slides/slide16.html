@@ -1,0 +1,128 @@
+<section class="slide" id="slide16">
+    <style>
+        .standard-table-container {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            margin-top: 20px;
+        }
+
+        .standard-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            color: #334155;
+        }
+
+        .standard-table th {
+            background: #1e293b;
+            padding: 18px 20px;
+            color: #ffffff;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .standard-table td {
+            padding: 20px;
+            border-bottom: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            vertical-align: top;
+        }
+
+        .standard-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .standard-table tr:hover td {
+            background: #f8fafc;
+        }
+
+        .standard-acronym {
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: #2563eb;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .standard-def {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .standard-app-title {
+            color: #1e293b;
+            font-weight: 800;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .standard-app-text {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #475569;
+        }
+
+        .accent-hl7 { border-left: 5px solid #2563eb; }
+        .accent-dicom { border-left: 5px solid #7c3aed; }
+        .accent-cdisc { border-left: 5px solid #059669; }
+    </style>
+
+    <div class="slide-content">
+        <h2 class="slide-title">Catálogo de Estándares</h2>
+        <h3 style="color: #2563eb; text-align: center; margin-bottom: 20px; font-weight: 400;">1. Mensajería / Intercambio de Datos</h3>
+        
+        <div class="standard-table-container">
+            <table class="standard-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Estándar</th>
+                        <th style="width: 70%;">Dominios de Aplicación Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- HL7 -->
+                    <tr class="fragment accent-hl7" data-fragment-index="1">
+                        <td>
+                            <span class="standard-acronym">HL7 (V2, V3, FHIR)</span>
+                            <span class="standard-def">Health Level Seven International</span>
+                        </td>
+                        <td>
+                            <span class="standard-app-title">Protocolo Universal de Intercambio Clínico</span>
+                            <span class="standard-app-text">Regula eventos de Admisión/Alta/Transferencia (ADT), resultados de laboratorio, órdenes clínicas (ORU, OML) y APIs REST modernas.</span>
+                        </td>
+                    </tr>
+                    <!-- DICOM -->
+                    <tr class="fragment accent-dicom" data-fragment-index="2">
+                        <td>
+                            <span class="standard-acronym">DICOM</span>
+                            <span class="standard-def">Digital Imaging & Comms in Medicine</span>
+                        </td>
+                        <td>
+                            <span class="standard-app-title">Imágenes Médicas Diagnósticas</span>
+                            <span class="standard-app-text">Formato y protocolo absoluto para almacenar y transmitir rayos X, TACs y resonancias magnéticas hacia el PACS.</span>
+                        </td>
+                    </tr>
+                    <!-- CDISC -->
+                    <tr class="fragment accent-cdisc" data-fragment-index="3">
+                        <td>
+                            <span class="standard-acronym">CDISC</span>
+                            <span class="standard-def">Clinical Data Interchange Consortium</span>
+                        </td>
+                        <td>
+                            <span class="standard-app-title">Investigación y Ensayos Clínicos</span>
+                            <span class="standard-app-text">Estandarización de expedientes médicos y observaciones durante ensayos farmacológicos para entes regulatorios (FDA).</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

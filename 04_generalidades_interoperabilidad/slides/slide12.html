@@ -1,0 +1,42 @@
+<section class="slide" id="slide12">
+    <div class="slide-content">
+        <h2 class="slide-title">Sintaxis vs. Semántica: Ejemplos en el Mundo Real</h2>
+        
+        <p style="text-align: center; margin-bottom: var(--space-xl);">Los protagonistas de la industria que resuelven las dos caras de la moneda.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            <!-- Sintaxis (Estructura) -->
+            <div class="fragment" data-fragment-index="1" style="background: white; padding: var(--space-xl); border-radius: 12px; box-shadow: var(--shadow-md); border-top: 6px solid #3b82f6; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--space-sm);">Sintaxis (Estructura)</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: var(--space-lg);"><em>"La Tubería y el Sobre"</em> - Reglas de ortografía y formato gramatical para transmitir un paquete de datos por la red.</p>
+                
+                <div style="background: #eff6ff; padding: var(--space-lg); border-radius: 8px; width: 100%; display: flex; align-items: center; justify-content: center; min-height: 120px;">
+                    <img src="images/slide12_hl7_logo.png" alt="HL7 Logo" style="max-height: 80px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                </div>
+                <p style="margin-top: var(--space-md); font-size: 0.9rem; color: var(--color-primary);">
+                    Asegura que el mensaje MSH o el Payload de FHIR llegue al destino con los campos mapeados correctamente.
+                </p>
+            </div>
+
+            <!-- Semantica (Significado) -->
+            <div class="fragment" data-fragment-index="2" style="background: white; padding: var(--space-xl); border-radius: 12px; box-shadow: var(--shadow-md); border-top: 6px solid #10b981; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--space-sm);">Semántica (Significado)</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: var(--space-lg);"><em>"El Diccionario y Tesauro"</em> - Reglas que garantizan la comprensión unívoca del contenido médico de ese paquete.</p>
+                
+                <div style="background: #ecfdf5; padding: var(--space-md); border-radius: 8px; width: 100%; display: flex; justify-content: space-around; align-items: center; min-height: 120px; gap: 20px;">
+                    <div style="text-align: center; flex: 1;">
+                        <img src="images/slide12_snomedctlogo.png" alt="SNOMED CT Logo" style="max-height: 60px; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div style="width: 2px; height: 60px; background: #a7f3d0; flex-shrink: 0;"></div>
+                    <div style="text-align: center; flex: 1;">
+                        <img src="images/slide12_loinclogo.png" alt="LOINC Logo" style="max-height: 60px; max-width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <p style="margin-top: var(--space-md); font-size: 0.9rem; color: var(--color-primary);">
+                    Garantiza que el valor "Glucosa" en el campo transmitido sea procesable clínicamente por algoritmos de ambas partes.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
