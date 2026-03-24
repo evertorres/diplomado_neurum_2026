@@ -1,0 +1,51 @@
+<div class="slide slide-hidden" id="slide08">
+    <div class="header-banner">
+        <h2>La importancia del contexto en datos</h2>
+    </div>
+
+    <div class="content-block two-columns" style="align-items: stretch;">
+
+        <!-- Dato sin contexto -->
+        <div class="card fade-in" style="background: rgba(243, 244, 246, 0.5); flex: 1; border: 2px dashed #9CA3AF;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 4rem; font-weight: 900; color: #4B5563; font-family: monospace;">120/80</div>
+            </div>
+            
+            <p style="color: var(--color-text); text-align: center; font-weight: 600;">Dato en Texto Libre</p>
+            <ul style="color: #6B7280; font-size: 0.9rem; margin-top: 1rem;">
+                <li>Para un médico: "Presión Arterial Normal".</li>
+                <li>Para una computadora: "String (1, 2, 0, /, 8, 0)"</li>
+                <li>¿Fuerza en unidad? Desconocida.</li>
+                <li>¿Paciente? Desconocido.</li>
+            </ul>
+        </div>
+
+        <!-- Flecha central -->
+        <div class="fragment fade-in" data-fragment-index="1" style="display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: 3rem;">👉</span>
+        </div>
+
+        <!-- Dato Estandarizado -->
+        <div class="card fragment fade-in" data-fragment-index="2" style="background: white; flex: 1.5; border: 2px solid var(--color-primary); box-shadow: var(--shadow-lg);">
+            <p style="color: var(--color-primary); text-align: center; font-weight: 800; text-transform: uppercase;">Dato Codificado y Contextualizado</p>
+            
+            <div style="background: #F8FAFC; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.85rem; color: #1E293B; border-left: 4px solid var(--color-primary); margin-top: 1rem;">
+                <div style="margin-bottom: 0.5rem;"><span style="color: #3B82F6;">{</span></div>
+                <div style="margin-left: 1rem;">"Paciente": <span style="color: #10B981;">"ID_8471"</span>,</div>
+                <div style="margin-left: 1rem;">"Fecha": <span style="color: #10B981;">"2026-03-24T10:00:00"</span>,</div>
+                <div style="margin-left: 1rem;">"Observación": <span style="color: #8B5CF6;">"Presión Arterial"</span> <span style="color: #9CA3AF;">/* LOINC: 85354-9 */</span>,</div>
+                <div style="margin-left: 1rem;">"Sistólica": <span style="color: #F59E0B;">120</span>,</div>
+                <div style="margin-left: 1rem;">"Diastólica": <span style="color: #F59E0B;">80</span>,</div>
+                <div style="margin-left: 1rem;">"Unidad": <span style="color: #10B981;">"mmHg"</span>,</div>
+                <div style="margin-left: 1rem;">"Posición": <span style="color: #8B5CF6;">"Sentado"</span> <span style="color: #9CA3AF;">/* SNOMED: 33586001 */</span></div>
+                <div><span style="color: #3B82F6;">}</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Notas Profesor -->
+    <div class="teacher-notes" style="display: none;">
+        "Para un médico, '120/80' claramente es presión arterial. Para una computadora, son solo 6 caracteres. Necesitamos especificar unidad, técnica, y variables asociadas para hacer la información útil computacionalmente."
+    </div>
+</div>

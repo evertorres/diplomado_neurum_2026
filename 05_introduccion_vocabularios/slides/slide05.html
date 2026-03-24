@@ -1,0 +1,96 @@
+<div class="slide slide-hidden" id="slide05">
+    <style>
+        .system-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 18px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .system-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary);
+        }
+
+        .system-label {
+            font-weight: 800;
+            font-size: 1.2rem;
+            font-family: 'Exo', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .system-desc {
+            font-size: 0.9rem;
+            color: var(--color-secondary);
+            line-height: 1.4;
+        }
+    </style>
+
+    <div class="header-banner">
+        <h2>Definiciones Fundamentales</h2>
+    </div>
+
+    <div class="content-block">
+        <p style="text-align: center; color: var(--color-secondary); margin-bottom: 2rem;">Elementos constitutivos de la interoperabilidad semántica.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto;">
+            
+            <!-- Palabra -->
+            <div class="system-card fragment" data-fragment-index="1" style="border-left: 5px solid #3b82f6;">
+                <div class="system-label" style="color: #2563eb;">Palabra</div>
+                <div class="system-desc">Un set de caracteres, incluídos signos de puntuación, delimitados por un espacio y que pueden ser encontrados en un diccionario.</div>
+            </div>
+
+            <!-- Lexicón -->
+            <div class="system-card fragment" data-fragment-index="2" style="border-left: 5px solid #a855f7;">
+                <div class="system-label" style="color: #9333ea;">Lexicón</div>
+                <div class="system-desc">Colección o lista de palabras con información sobre ellas.</div>
+            </div>
+
+            <!-- Término -->
+            <div class="system-card fragment" data-fragment-index="3" style="border-left: 5px solid #10b981;">
+                <div class="system-label" style="color: #059669;">Término</div>
+                <div class="system-desc">Uno o más palabras usadas como una unidad.</div>
+            </div>
+
+            <!-- Concepto -->
+            <div class="system-card fragment" data-fragment-index="4" style="border-left: 5px solid #f59e0b;">
+                <div class="system-label" style="color: #d97706;">Concepto</div>
+                <div class="system-desc">Una idea, acción o cosa con un único significado.</div>
+            </div>
+
+            <!-- Sinónimo -->
+            <div class="system-card fragment" data-fragment-index="5" style="border-left: 5px solid #ec4899;">
+                <div class="system-label" style="color: #db2777;">Sinónimo</div>
+                <div class="system-desc">Dos términos para un mismo concepto.</div>
+            </div>
+
+            <!-- Homónimos -->
+            <div class="system-card fragment" data-fragment-index="6" style="border-left: 5px solid #64748b;">
+                <div class="system-label" style="color: #475569;">Homónimos</div>
+                <div class="system-desc">Palabras o términos que tienen la misma grafía (se escriben igual) pero poseen un significado distinto.</div>
+            </div>
+
+            <!-- Código -->
+            <div class="system-card fragment" data-fragment-index="7" style="border-left: 5px solid #2563eb; grid-column: 1 / -1; max-width: 500px; margin: 0 auto; width: 100%;">
+                <div class="system-label" style="color: #1d4ed8;">Código</div>
+                <div class="system-desc">Una expresión en una notación formal o clasificación para un término o concepto.</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Notas Profesor -->
+    <div class="teacher-notes" style="display: none;">
+        "Estas definiciones son la base de la lingüística en informática médica. Entender la sutil diferencia entre una palabra, un término y un concepto es vital para comprender cómo los estándares como SNOMED CT logran la precisión necesaria."
+    </div>
+</div>
