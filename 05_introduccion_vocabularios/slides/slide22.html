@@ -1,15 +1,15 @@
 <div class="slide slide-hidden" id="slide22">
     <div class="slide-content" style="padding-top: var(--space-xl); height: 100%; position: relative; display: flex; flex-direction: column; justify-content: center;">
-        <h2 class="slide-title">Ejemplo Clínico: Transición Semántica</h2>
+        <h2 class="slide-title">Modelo de Relación entre Vocabularios</h2>
         
         <p style="text-align: center; color: var(--color-secondary); margin-bottom: 0.5rem;">
-            Cómo fluye un diagnóstico real (FAARV) por la pirámide de vocabularios.
+            La pirámide de la orquestación semántica.
         </p>
 
-        <!-- Contenedor del Diagrama 3D -->
-        <div style="position: relative; width: 100%; max-width: 950px; height: 620px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+        <!-- Contenedor del Diagrama -->
+        <div style="position: relative; width: 100%; max-width: 900px; height: 620px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
 
-            <svg viewBox="0 20 750 620" style="width: 100%; height: 100%; overflow: visible; font-family: 'Exo', sans-serif;">
+            <svg viewBox="0 20 700 620" style="width: 100%; height: 100%; overflow: visible; font-family: 'Exo', sans-serif;">
                 <defs>
                     <style>
                         /* Estilos de Texto Integrados para Máximo Contraste */
@@ -18,26 +18,23 @@
                             paint-order: stroke fill; stroke: rgba(46, 16, 101, 0.7); stroke-width: 4px; 
                             stroke-linejoin: round; stroke-linecap: round;
                         }
-                        .label-example { 
-                            font-size: 16px; font-weight: 700; fill: #fde047; text-anchor: middle; 
-                            paint-order: stroke fill; stroke: rgba(46, 16, 101, 0.9); stroke-width: 3px; 
+                        .label-in-gap { 
+                            font-size: 16px; font-weight: 800; fill: #3730a3; text-anchor: middle; font-style: italic; 
+                            paint-order: stroke fill; stroke: rgba(255, 255, 255, 0.95); stroke-width: 5px; 
+                            stroke-linejoin: round; stroke-linecap: round;
                         }
-                        .label-out-box { 
-                            font-size: 14px; font-weight: 800; fill: #1e1b4b; text-anchor: start;
-                        }
-                        .out-rect { fill: white; stroke: #8b5cf6; stroke-width: 2; rx: 8; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
                         
                         /* Animación de fragmentos */
                         svg .fragment { transform: none !important; transition: opacity 0.5s ease-in-out !important; }
                         svg .fragment.visible { transform: none !important; opacity: 1; }
 
-                        /* Colores 3D Purple Originales */
+                        /* Colores 3D Purple Originales que funcionaban (Reflejados) */
                         .face-left { fill: #4c1d95; }
                         .face-right { fill: #7c3aed; }
                         .face-top { fill: #ddd6fe; }
-                        .connector-line { stroke: #cbd5e1; stroke-width: 1.5; fill: none; stroke-dasharray: 4 2; }
                     </style>
 
+                    <!-- Shadow for depth -->
                     <filter id="pyramid-shadow" x="-20%" y="-20%" width="140%" height="140%">
                         <feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#4c1d95" flood-opacity="0.2" />
                     </filter>
@@ -48,74 +45,77 @@
                 =========================================== -->
                 <g class="fragment fade-in" data-fragment-index="1">
                     <g filter="url(#pyramid-shadow)">
-                        <path d="M 375 457 L 116 368 L 375 279 L 634 368 Z" class="face-top" />
-                        <path d="M 375 457 L 116 368 L 46 454 L 375 567 Z" class="face-left" />
-                        <path d="M 375 457 L 634 368 L 704 454 L 375 567 Z" class="face-right" />
+                        <!-- Coordenadas perfectas restauradas -->
+                        <path d="M 350 457 L 91 368 L 350 279 L 609 368 Z" class="face-top" />
+                        <path d="M 350 457 L 91 368 L 21 454 L 350 567 Z" class="face-left" />
+                        <path d="M 350 457 L 609 368 L 679 454 L 350 567 Z" class="face-right" />
                     </g>
-                    <text x="375" y="500" class="label-on-face">Lenguaje Natural</text>
-                    <text x="375" y="530" class="label-example">"Este paciente tiene una FAARV"</text>
+                    <text x="350" y="520" class="label-on-face">Lenguaje Natural</text>
                 </g>
 
-                <!-- ==========================================
-                     NIVEL 2: Vocabulario Interfase
-                =========================================== -->
+                <!-- GAP 1: LEXICON -->
                 <g class="fragment fade-in" data-fragment-index="2">
-                    <g filter="url(#pyramid-shadow)">
-                        <path d="M 375 325 L 200 265 L 375 205 L 550 265 Z" class="face-top" />
-                        <path d="M 375 325 L 200 265 L 130 351 L 375 435 Z" class="face-left" />
-                        <path d="M 375 325 L 550 265 L 620 351 L 375 435 Z" class="face-right" />
-                    </g>
-                    <text x="375" y="355" class="label-on-face">Vocabulario de Interfase</text>
-                    <text x="375" y="380" class="label-example">"FAARV" • "Fib. Auricular rápida"</text>
-                    <text x="375" y="405" class="label-example" style="font-size: 14px;">"Fibrilación Auricular de Alta Respuesta Ventricular"</text>
+                    <text x="350" y="448" class="label-in-gap">Lexicon</text>
                 </g>
 
                 <!-- ==========================================
-                     NIVEL 3: Vocabulario Referencia
+                     NIVEL 2: MID-LOW - Vocabulario Interfase
                 =========================================== -->
                 <g class="fragment fade-in" data-fragment-index="3">
                     <g filter="url(#pyramid-shadow)">
-                        <path d="M 375 193 L 284 162 L 375 131 L 466 162 Z" class="face-top" />
-                        <path d="M 375 193 L 284 162 L 214 248 L 375 303 Z" class="face-left" />
-                        <path d="M 375 193 L 466 162 L 536 248 L 375 303 Z" class="face-right" />
+                        <path d="M 350 325 L 175 265 L 350 205 L 525 265 Z" class="face-top" />
+                        <path d="M 350 325 L 175 265 L 105 351 L 350 435 Z" class="face-left" />
+                        <path d="M 350 325 L 525 265 L 595 351 L 350 435 Z" class="face-right" />
                     </g>
-                    <text x="375" y="240" class="label-on-face">Vocabulario de Referencia</text>
-                    <text x="375" y="270" class="label-example">"fibrilación auricular rápida"</text>
-                    <text x="375" y="288" class="label-example" style="fill: #bae6fd;">(Snomed CT ID 314208002)</text>
+                    <text x="350" y="388" class="label-on-face">Vocabulario de Interfase</text>
+                </g>
+
+                <!-- GAP 2: REPRESENTACIÓN COMPOSICIONAL -->
+                <g class="fragment fade-in" data-fragment-index="4">
+                    <text x="350" y="318" class="label-in-gap">Representación Composicional</text>
                 </g>
 
                 <!-- ==========================================
-                     NIVEL 4: Salida (Tip + Expandable Labels)
+                     NIVEL 3: MID-HIGH - Vocabulario Referencia
                 =========================================== -->
-                <g class="fragment fade-in" data-fragment-index="4">
-                    <g filter="url(#shadow-light)">
-                        <path d="M 375 50 L 298 145 L 375 171 Z" class="face-left" />
-                        <path d="M 375 50 L 452 145 L 375 171 Z" class="face-right" />
+                <g class="fragment fade-in" data-fragment-index="5">
+                    <g filter="url(#pyramid-shadow)">
+                        <path d="M 350 193 L 259 162 L 350 131 L 441 162 Z" class="face-top" />
+                        <path d="M 350 193 L 259 162 L 189 248 L 350 303 Z" class="face-left" />
+                        <path d="M 350 193 L 441 162 L 511 248 L 350 303 Z" class="face-right" />
                     </g>
-                    <text x="375" y="145" class="label-on-face" style="font-size: 18px;">Salida</text>
+                    <text x="350" y="255" class="label-on-face">Vocabulario de Referencia</text>
+                </g>
 
-                    <!-- CAJA CIAP-2e (Izquierda) -->
-                    <line x1="180" y1="100" x2="330" y2="100" class="connector-line" />
-                    <rect x="20" y="55" width="220" height="90" class="out-rect" />
-                    <text x="35" y="80" class="label-out-box" style="fill: #4c1d95;">Vocabulario de Salida (CIAP-2e)</text>
-                    <text x="35" y="105" class="label-out-box" style="font-weight: 600;">"Fibrilacion auricular/aleteo"</text>
-                    <text x="35" y="125" class="label-out-box" style="font-weight: 600;">auricular" <tspan style="fill: #3b82f6; font-weight: 900;">(Cod K78)</tspan></text>
+                <!-- GAP 3: DEFINICIÓN DE MAPEOS -->
+                <g class="fragment fade-in" data-fragment-index="6">
+                    <text x="350" y="186" class="label-in-gap">Definición de Mapeos</text>
+                </g>
 
-                    <!-- CAJA CIE-10 (Derecha) -->
-                    <line x1="570" y1="100" x2="420" y2="100" class="connector-line" />
-                    <rect x="510" y="55" width="220" height="90" class="out-rect" />
-                    <text x="525" y="80" class="label-out-box" style="fill: #4c1d95;">Vocabulario de Salida (CIE-10)</text>
-                    <text x="525" y="105" class="label-out-box" style="font-weight: 600;">"Fibrilacion y aleteo"</text>
-                    <text x="525" y="125" class="label-out-box" style="font-weight: 600;">auricular" <tspan style="fill: #3b82f6; font-weight: 900;">(Cod I48)</tspan></text>
+                <!-- ==========================================
+                     NIVEL 4: TOP - Salida (Tip)
+                =========================================== -->
+                <g class="fragment fade-in" data-fragment-index="7">
+                    <g filter="url(#pyramid-shadow)">
+                        <path d="M 350 50 L 273 145 L 350 171 Z" class="face-left" />
+                        <path d="M 350 50 L 427 145 L 350 171 Z" class="face-right" />
+                    </g>
+                    <text x="350" y="140" class="label-on-face">Vocabularios de Salida</text>
                 </g>
 
             </svg>
 
         </div>
+
+        <!-- Bibliografía -->
+        <div class="fragment" data-fragment-index="8" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 900px; font-size: 0.8rem; color: #64748b; padding: 0.8rem; border: 1px solid #e2e8f0; text-align: center; line-height: 1.5; background: #f8fafc; border-radius: 8px; box-shadow: var(--shadow-sm); z-index: 10;">
+            <strong style="color: var(--color-primary);">Bibliografía:</strong> Osornio, L., Gambarte, M. L., Otero, C., Gomez, A., Martinez, M., Soriano, E., ... &amp; Gonzalez, B. (2005). <em>Desarrollo de un servidor de terminología clínico</em>.
+        </div>
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "En esta versión detallada vemos cómo las puntas de salida se ramifican hacia el sistema de salud primaria (CIAP-2e) y el sistema hospitalario/epidemiológico (CIE-10)."
+        "Este modelo piramidal permite visualizar la transición de datos clínicos: la base semántica ancha del lenguaje natural se refina sucesivamente a través de interfaces técnicas hasta llegar a la información estructurada."
     </div>
 </div>
+

@@ -1,51 +1,49 @@
 <div class="slide slide-hidden" id="slide18">
     <div class="header-banner">
-        <h2>Nomenclaturas y Clasificaciones</h2>
+        <h2>Tipos de Vocabularios</h2>
     </div>
 
-    <div class="content-block two-columns" style="align-items: stretch; margin-top: 1rem;">
-        
-        <!-- Nomenclaturas -->
-        <div class="card fragment fade-in" data-fragment-index="1" style="flex: 1; background: white; border: 2px solid #10B981; border-radius: 12px; box-shadow: var(--shadow-sm);">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 50px; height: 50px; background: #D1FAE5; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🔍</div>
-                <h3 style="margin: 0; color: #059669;">Nomenclatura / Terminología</h3>
+    <div class="content-block">
+        <div style="display: flex; gap: 1rem; align-items: stretch; max-width: 900px; margin: 0 auto; margin-top: 2rem;">
+
+            <!-- Vocabulario Controlado -->
+            <div class="card fragment fade-in" data-fragment-index="1" style="flex: 1; text-align: left; background: var(--bg-card); border-top: 4px solid var(--color-primary);">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+                <h3 style="color: var(--color-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">Vocabulario Controlado</h3>
+                <p style="font-size: 0.85rem; color: var(--color-text-light);">Cualquier lista exhaustiva pre-consensuada. Define qué palabras están autorizadas a usarse en el sistema.</p>
+                <div style="margin-top: 1rem; padding: 0.5rem; background: #F8FAFC; border-radius: 4px; font-family: monospace; font-size: 0.75rem;">
+                    [ "Ibuprofeno", "Aspirina" ]
+                </div>
             </div>
-            
-            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 1.5rem;">Herramientas <strong>clínicas</strong> para describir la historia del paciente con el mayor detalle y profundidad (granularidad). Buscan representar TODO evento de forma exacta.</p>
-            
-            <div style="background: #F1F5F9; padding: 1rem; border-radius: 6px; border-left: 4px solid #10B981;">
-                <strong style="color: #334155; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Ejemplo (SNOMED CT):</strong>
-                <span style="font-family: monospace; color: #10B981; font-size: 0.85rem;">#423238006</span>
-                <span style="display: block; font-size: 0.9rem; margin-top: 0.2rem;">"Fractura conminuta cerrada cruzando el tercio distal de la diáfisis del fémur derecho"</span>
+
+            <!-- Terminología / Tesauro -->
+            <div class="card fragment fade-in" data-fragment-index="2" style="flex: 1.2; text-align: left; background: var(--bg-card); border-top: 4px solid var(--color-secondary);">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🕸️</div>
+                <h3 style="color: var(--color-secondary); font-size: 1.2rem; margin-bottom: 0.5rem;">Terminología & Tesauro</h3>
+                <p style="font-size: 0.85rem; color: var(--color-text-light);">Un vocabulario que agrupa asociaciones. Permite conectar los Sinónimos a un único Concepto central (el Tesauro).</p>
+                <div style="margin-top: 1rem; padding: 0.5rem; background: #F8FAFC; border-radius: 4px; font-family: monospace; font-size: 0.75rem;">
+                    Concepto(C001) ← [ "Cefalea", "Dolor de cabeza" ]
+                </div>
             </div>
-            
-            <div style="text-align: right; margin-top: 1rem; font-size: 0.8rem; font-weight: bold; color: #059669;">Nivel Micro 🔎</div>
+
+            <!-- Taxonomía -->
+            <div class="card fragment fade-in" data-fragment-index="3" style="flex: 1.2; text-align: left; background: var(--bg-card); border-top: 4px solid var(--color-accent);">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌳</div>
+                <h3 style="color: var(--color-accent); font-size: 1.2rem; margin-bottom: 0.5rem;">Taxonomía</h3>
+                <p style="font-size: 0.85rem; color: var(--color-text-light);">Estructura que ordena esos conceptos en familias o árboles estrictos. Usualmente mono-jerárquica.</p>
+                <div style="margin-top: 1rem; padding: 0.5rem; background: #F8FAFC; border-radius: 4px; font-family: monospace; font-size: 0.75rem;">
+                    Infección Respiratoria<br/>
+                    ↳ Neumonía<br/>
+                    &nbsp;&nbsp;&nbsp;↳ Neumonía Viral
+                </div>
+            </div>
+
         </div>
-
-        <!-- Clasificaciones -->
-        <div class="card fragment fade-in" data-fragment-index="2" style="flex: 1; background: white; border: 2px solid #F59E0B; border-radius: 12px; box-shadow: var(--shadow-sm);">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 50px; height: 50px; background: #FEF3C7; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🗂️</div>
-                <h3 style="margin: 0; color: #D97706;">Sistemas de Clasificación</h3>
-            </div>
-            
-            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 1.5rem;">Herramientas <strong>administrativas y reportables</strong>. Sacrifican detalle para empujar/agrupar (englobar) casos similares en categorías rígidas, ideal para facturación.</p>
-            
-            <div style="background: #F1F5F9; padding: 1rem; border-radius: 6px; border-left: 4px solid #F59E0B;">
-                <strong style="color: #334155; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Ejemplo equivalente (CIE-10):</strong>
-                <span style="font-family: monospace; color: #F59E0B; font-size: 0.85rem;">#S72.3</span>
-                <span style="display: block; font-size: 0.9rem; margin-top: 0.2rem;">"Fractura de la diáfisis del fémur" </span>
-                <span style="display: inline-block; background: #FEF2F2; color: #B91C1C; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; margin-top: 0.3rem;">(Omite la lateralidad o la condición conminuta)</span>
-            </div>
-
-            <div style="text-align: right; margin-top: 1rem; font-size: 0.8rem; font-weight: bold; color: #D97706;">Nivel Macro 🔭</div>
-        </div>
-
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "Las nomenclaturas persiguen designar exhaustivamente cada hallazgo clínico con alta micro-resolución para el experto, pero las clasificaciones engloban hallazgos en grandes 'cajones' genéricos diseñados primordialmente para estudios epidemiológicos."
+        "Un vocabulario riguroso restringe términos. Un tesauro añade relaciones de sinónimos. Una taxonomía construye un árbol estricto organizando elementos mayores a menores."
     </div>
 </div>
+

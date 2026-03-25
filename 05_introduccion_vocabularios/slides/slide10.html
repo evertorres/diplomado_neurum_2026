@@ -1,37 +1,54 @@
 <div class="slide slide-hidden" id="slide10">
     <div class="header-banner">
-        <h2>Ejemplo: Fiebre en el ámbito clínico</h2>
+        <h2>Retos semánticos: Ambigüedad</h2>
     </div>
 
     <div class="content-block">
         <p style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);">
-            El motor de analítica intenta buscar cuántos casos de <strong style="color: #EF4444;">FIEBRE</strong> hubo este mes en urgencias...
+            El lenguaje humano está plagado de trampas cognitivas que destruyen el análisis de datos.
         </p>
 
-        <!-- Nube de palabras o variaciones -->
-        <div style="position: relative; width: 100%; height: 350px; background: var(--bg-card); border-radius: 12px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #E5E7EB; overflow: hidden;">
-            
-            <div class="fragment fade-in" data-fragment-index="1" style="position: absolute; top: 20%; left: 10%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); font-weight: bold; border-left: 3px solid #EF4444;">"Paciente febril"</div>
-            
-            <div class="fragment fade-in" data-fragment-index="2" style="position: absolute; top: 10%; left: 45%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); font-family: monospace; color: #374151;">"T 39.2 C"</div>
+        <div style="display: flex; gap: 1.5rem; justify-content: space-between; align-items: stretch;">
 
-            <div class="fragment fade-in" data-fragment-index="3" style="position: absolute; top: 40%; left: 70%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); border-bottom: 3px solid #F59E0B;">"Hipertermia"</div>
+            <!-- Sinonimia -->
+            <div class="card fragment fade-in" data-fragment-index="1" style="flex: 1; text-align: center; background: #EEF2FF; border: 1px solid #C7D2FE;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">👥</div>
+                <h3 style="color: #4338CA; margin-bottom: 1rem;">Sinonimia</h3>
+                <p style="font-size: 0.9rem; color: var(--color-text);">Diferentes palabras que significan exactamente la misma condición médica.</p>
+                <div style="margin-top: 1.5rem; font-family: monospace; font-weight: bold; color: #3730A3;">
+                    Fiebre <br/><span style="color: #6B7280; font-weight: normal;">=</span><br/> Pirexia
+                </div>
+            </div>
 
-            <div class="fragment fade-in" data-fragment-index="4" style="position: absolute; top: 60%; left: 15%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); font-style: italic;">"Calentura"</div>
+            <!-- Polisemia -->
+            <div class="card fragment fade-in" data-fragment-index="2" style="flex: 1; text-align: center; background: #FEF2F2; border: 1px solid #FECACA;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎭</div>
+                <h3 style="color: #B91C1C; margin-bottom: 1rem;">Polisemia</h3>
+                <p style="font-size: 0.9rem; color: var(--color-text);">Una misma palabra o frase con múltiples significados (dependiendo de la especialidad).</p>
+                <div style="margin-top: 1.5rem; font-family: monospace; font-weight: bold; color: #991B1B;">
+                    Enfermedad de Paget <br/>
+                    <span style="font-size: 0.75rem; color: #EF4444; font-weight: normal;">(¿Ósea o de Mama?)</span>
+                </div>
+            </div>
 
-            <div class="fragment fade-in" data-fragment-index="5" style="position: absolute; top: 75%; left: 50%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); border-right: 3px solid #8B5CF6;">"Síndrome febril agudo"</div>
+            <!-- Homonimia -->
+            <div class="card fragment fade-in" data-fragment-index="3" style="flex: 1; text-align: center; background: #FFFBEB; border: 1px solid #FDE68A;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔤</div>
+                <h3 style="color: #D97706; margin-bottom: 1rem;">Homonimia</h3>
+                <p style="font-size: 0.9rem; color: var(--color-text);">Palabras que se escriben igual pero significan cosas totalmente dispares.</p>
+                <div style="margin-top: 1.5rem; font-family: monospace; font-weight: bold; color: #B45309;">
+                    Banco <span style="font-size: 0.75rem; color: #F59E0B; font-weight: normal;">(de Sangre)</span><br/>
+                    <span style="color: #6B7280; font-weight: normal;">vs</span><br/> 
+                    Banco <span style="font-size: 0.75rem; color: #F59E0B; font-weight: normal;">(Financiero)</span>
+                </div>
+            </div>
 
-            <div class="fragment fade-in" data-fragment-index="6" style="position: absolute; top: 40%; left: 35%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); color: #DC2626;">"Pirexia"</div>
-
-        </div>
-
-        <div class="fragment fade-up" data-fragment-index="7" style="text-align: center; margin-top: 1.5rem; font-weight: 600; color: #DC2626; padding: 1rem; border: 2px dashed #DC2626; border-radius: 8px;">
-            ⚠️ Literalmente: "0 coincidencias exactas con la palabra 'Fiebre'".
         </div>
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "Veamos el ejemplo de la fiebre. Todas estas frases describen el mismo evento clínico, pero textualmente son cadenas de caracteres totalmente diferentes para una base de datos de un hospital. El buscador estadístico no cruzará los datos."
+        "El lenguaje humano está lleno de ambigüedades. Tenemos sinónimos donde distintas palabras significan lo mismo, y polisemia u homonimia donde una palabra idéntica significa varias cosas según el caso."
     </div>
 </div>
+

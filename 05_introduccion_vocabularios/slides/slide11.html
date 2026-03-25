@@ -1,46 +1,38 @@
 <div class="slide slide-hidden" id="slide11">
     <div class="header-banner">
-        <h2>Ambigüedad - Ejemplo</h2>
+        <h2>Ejemplo: Fiebre en el ámbito clínico</h2>
     </div>
 
-    <div class="content-block" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
-        <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem; font-size: 1.1rem; max-width: 800px;">
-            Veamos varios ejemplos de posibles mensajes <strong>HL7 V2.x</strong> para transmitir el grupo sanguíneo de un paciente:
+    <div class="content-block">
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);">
+            El motor de analítica intenta buscar cuántos casos de <strong style="color: #EF4444;">FIEBRE</strong> hubo este mes en urgencias...
         </p>
 
-        <div style="display: flex; flex-direction: column; gap: 0.75rem; max-width: 900px; width: 100%;">
+        <!-- Nube de palabras o variaciones -->
+        <div style="position: relative; width: 100%; height: 350px; background: var(--bg-card); border-radius: 12px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #E5E7EB; overflow: hidden;">
             
-            <!-- Ejemplo 1 -->
-            <div class="fragment" data-fragment-index="1" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 0.75rem; box-shadow: var(--shadow-sm);">
-                <div style="font-family: monospace; color: #475569; background: white; padding: 0.75rem; border-left: 4px solid #3B82F6; font-size: 1rem;">OBX|1|CE|ABO^ABO GROUP||O^Type O|</div>
-            </div>
+            <div class="fragment fade-in" data-fragment-index="1" style="position: absolute; top: 20%; left: 10%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); font-weight: bold; border-left: 3px solid #EF4444;">"Paciente febril"</div>
+            
+            <div class="fragment fade-in" data-fragment-index="2" style="position: absolute; top: 10%; left: 45%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); font-family: monospace; color: #374151;">"T 39.2 C"</div>
 
-            <!-- Ejemplo 2 -->
-            <div class="fragment" data-fragment-index="2" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 0.75rem; box-shadow: var(--shadow-sm);">
-                <div style="font-family: monospace; color: #475569; background: white; padding: 0.75rem; border-left: 4px solid #10B981; font-size: 1rem;">OBX|1|CE|BLDTYP^ABO GROUP||TYPEO^Type O|</div>
-            </div>
+            <div class="fragment fade-in" data-fragment-index="3" style="position: absolute; top: 40%; left: 70%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); border-bottom: 3px solid #F59E0B;">"Hipertermia"</div>
 
-            <!-- Ejemplo 3 -->
-            <div class="fragment" data-fragment-index="3" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 0.75rem; box-shadow: var(--shadow-sm);">
-                <div style="font-family: monospace; color: #475569; background: white; padding: 0.75rem; border-left: 4px solid #F59E0B; font-size: 1rem;">OBX|1|CE|ABOTYPE^ABO GROUP||OPOS^Type O|</div>
-            </div>
+            <div class="fragment fade-in" data-fragment-index="4" style="position: absolute; top: 60%; left: 15%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); font-style: italic;">"Calentura"</div>
 
-            <!-- Pregunta -->
-            <div class="fragment" data-fragment-index="4" style="margin-top: 1.5rem; text-align: center;">
-                <h3 style="color: var(--color-cta); font-size: 1.8rem; font-weight: 800;">¿Qué tipo sanguíneo es el paciente?</h3>
-            </div>
+            <div class="fragment fade-in" data-fragment-index="5" style="position: absolute; top: 75%; left: 50%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); border-right: 3px solid #8B5CF6;">"Síndrome febril agudo"</div>
 
-            <!-- Solución -->
-            <div class="fragment" data-fragment-index="5" style="position: relative; padding: 1.5rem; border-radius: 12px; color: white; background: linear-gradient(135deg, #1e293b, #334155); box-shadow: var(--shadow-md); text-align: center; margin-top: 1rem;">
-                <div style="font-size: 1.4rem; margin-bottom: 0.5rem; font-weight: bold; color: #fbbf24;">LA SOLUCIÓN</div>
-                <p style="margin: 0; font-size: 1.15rem; line-height: 1.5;">Para que las computadoras entiendan el lenguaje la clave es la <strong style="color: #fbbf24; text-transform: uppercase; font-size: 1.3rem;">CODIFICACIÓN</strong>.</p>
-            </div>
+            <div class="fragment fade-in" data-fragment-index="6" style="position: absolute; top: 40%; left: 35%; background: white; padding: 0.5rem 1rem; border-radius: 20px; box-shadow: var(--shadow-sm); color: #DC2626;">"Pirexia"</div>
 
+        </div>
+
+        <div class="fragment fade-up" data-fragment-index="7" style="text-align: center; margin-top: 1.5rem; font-weight: 600; color: #DC2626; padding: 1rem; border: 2px dashed #DC2626; border-radius: 8px;">
+            ⚠️ Literalmente: "0 coincidencias exactas con la palabra 'Fiebre'".
         </div>
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "Aún usando el mismo estándar de mensajería (HL7), la variabilidad en los identificadores de campo y en los valores libres genera un caos semántico. La única forma de que un algoritmo entienda que todos estos mensajes significan lo mismo es mediante el uso de códigos internacionales compartidos."
+        "Veamos el ejemplo de la fiebre. Todas estas frases describen el mismo evento clínico, pero textualmente son cadenas de caracteres totalmente diferentes para una base de datos de un hospital. El buscador estadístico no cruzará los datos."
     </div>
 </div>
+

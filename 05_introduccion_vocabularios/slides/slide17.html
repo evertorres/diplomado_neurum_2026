@@ -1,48 +1,104 @@
 <div class="slide slide-hidden" id="slide17">
-    <div class="header-banner">
-        <h2>Tipos de Vocabularios</h2>
-    </div>
+    <div class="slide-content" style="padding-top: var(--space-xl);">
+        <h2 class="slide-title">Jerarquía del Control de Vocabulario</h2>
+        
+        <p style="text-align: center; color: var(--color-secondary); margin-bottom: 2rem;">
+            A medida que agregamos rigidez, perdemos expresividad literaria pero ganamos poder computacional.
+        </p>
 
-    <div class="content-block">
-        <div style="display: flex; gap: 1rem; align-items: stretch; max-width: 900px; margin: 0 auto; margin-top: 2rem;">
+        <!-- Contenedor del Diagrama -->
+        <div style="position: relative; width: 850px; height: 500px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
 
-            <!-- Vocabulario Controlado -->
-            <div class="card fragment fade-in" data-fragment-index="1" style="flex: 1; text-align: left; background: var(--bg-card); border-top: 4px solid var(--color-primary);">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
-                <h3 style="color: var(--color-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">Vocabulario Controlado</h3>
-                <p style="font-size: 0.85rem; color: var(--color-text-light);">Cualquier lista exhaustiva pre-consensuada. Define qué palabras están autorizadas a usarse en el sistema.</p>
-                <div style="margin-top: 1rem; padding: 0.5rem; background: #F8FAFC; border-radius: 4px; font-family: monospace; font-size: 0.75rem;">
-                    [ "Ibuprofeno", "Aspirina" ]
-                </div>
-            </div>
+            <!-- SVG UI Layer -->
+            <svg viewBox="0 0 850 500" style="width: 100%; height: 100%; overflow: visible; font-family: 'Exo', sans-serif;">
+                <defs>
+                    <style>
+                        /* Bloquear animaciones CSS de fragments en SVG */
+                        svg .fragment { transform: none !important; transition: opacity 0.5s ease-in-out !important; }
+                        svg .fragment.visible { transform: none !important; }
 
-            <!-- Terminología / Tesauro -->
-            <div class="card fragment fade-in" data-fragment-index="2" style="flex: 1.2; text-align: left; background: var(--bg-card); border-top: 4px solid var(--color-secondary);">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🕸️</div>
-                <h3 style="color: var(--color-secondary); font-size: 1.2rem; margin-bottom: 0.5rem;">Terminología & Tesauro</h3>
-                <p style="font-size: 0.85rem; color: var(--color-text-light);">Un vocabulario que agrupa asociaciones. Permite conectar los Sinónimos a un único Concepto central (el Tesauro).</p>
-                <div style="margin-top: 1rem; padding: 0.5rem; background: #F8FAFC; border-radius: 4px; font-family: monospace; font-size: 0.75rem;">
-                    Concepto(C001) ← [ "Cefalea", "Dolor de cabeza" ]
-                </div>
-            </div>
+                        .text-vertical { font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; }
+                        .text-pill { font-size: 20px; font-weight: 700; fill: #1e293b; text-anchor: middle; }
+                        
+                        /* Premium drop shadows */
+                        .pill-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
+                        .glow-shadow { filter: drop-shadow(0 8px 15px rgba(16,185,129,0.25)); }
+                    </style>
 
-            <!-- Taxonomía -->
-            <div class="card fragment fade-in" data-fragment-index="3" style="flex: 1.2; text-align: left; background: var(--bg-card); border-top: 4px solid var(--color-accent);">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌳</div>
-                <h3 style="color: var(--color-accent); font-size: 1.2rem; margin-bottom: 0.5rem;">Taxonomía</h3>
-                <p style="font-size: 0.85rem; color: var(--color-text-light);">Estructura que ordena esos conceptos en familias o árboles estrictos. Usualmente mono-jerárquica.</p>
-                <div style="margin-top: 1rem; padding: 0.5rem; background: #F8FAFC; border-radius: 4px; font-family: monospace; font-size: 0.75rem;">
-                    Infección Respiratoria<br/>
-                    ↳ Neumonía<br/>
-                    &nbsp;&nbsp;&nbsp;↳ Neumonía Viral
-                </div>
-            </div>
+                    <!-- Gradient for Vertical Pill -->
+                    <linearGradient id="grad-vert" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#10b981" />
+                        <stop offset="100%" stop-color="#059669" />
+                    </linearGradient>
+
+                    <!-- Gradient for Horizontal Pills -->
+                    <linearGradient id="grad-horiz" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="100%" stop-color="#f8fafc" />
+                    </linearGradient>
+
+                    <!-- Arrow Marker -->
+                    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981" />
+                    </marker>
+                </defs>
+
+                <!-- EJE VERTICAL PRINCIPAL -->
+                <g class="fragment" data-fragment-index="1">
+                    <rect x="30" y="40" width="80" height="420" rx="40" fill="url(#grad-vert)" class="glow-shadow" />
+                    <text transform="translate(75, 250) rotate(-90)" fill="white" class="text-vertical" text-anchor="middle">Control del vocabulario en medicina</text>
+                </g>
+
+                <!-- NIVEL 1: Lenguaje Natural -->
+                <g class="fragment" data-fragment-index="2">
+                    <path d="M 110 75 L 180 75" stroke="#10b981" stroke-width="3" marker-end="url(#arrow-green)" />
+                    <rect x="200" y="50" width="480" height="50" rx="25" fill="url(#grad-horiz)" stroke="#cbd5e1" stroke-width="2" class="pill-shadow" />
+                    <text x="440" y="82" class="text-pill">Lenguaje Natural</text>
+                </g>
+
+                <!-- NIVEL 2: Vocabularios -->
+                <g class="fragment" data-fragment-index="3">
+                    <path d="M 110 145 L 180 145" stroke="#10b981" stroke-width="3" marker-end="url(#arrow-green)" />
+                    <rect x="200" y="120" width="480" height="50" rx="25" fill="url(#grad-horiz)" stroke="#94a3b8" stroke-width="2" class="pill-shadow" />
+                    <text x="440" y="152" class="text-pill">Vocabularios</text>
+                </g>
+
+                <!-- NIVEL 3: Terminologías -->
+                <g class="fragment" data-fragment-index="4">
+                    <path d="M 110 215 L 180 215" stroke="#10b981" stroke-width="3" marker-end="url(#arrow-green)" />
+                    <rect x="200" y="190" width="480" height="50" rx="25" fill="url(#grad-horiz)" stroke="#64748b" stroke-width="2" class="pill-shadow" />
+                    <text x="440" y="222" class="text-pill">Terminologías</text>
+                </g>
+
+                <!-- NIVEL 4: Nomenclaturas -->
+                <g class="fragment" data-fragment-index="5">
+                    <path d="M 110 285 L 180 285" stroke="#10b981" stroke-width="3" marker-end="url(#arrow-green)" />
+                    <rect x="200" y="260" width="480" height="50" rx="25" fill="url(#grad-horiz)" stroke="#475569" stroke-width="2" class="pill-shadow" />
+                    <text x="440" y="292" class="text-pill">Nomenclaturas</text>
+                </g>
+
+                <!-- NIVEL 5: Clasificaciones -->
+                <g class="fragment" data-fragment-index="6">
+                    <path d="M 110 355 L 180 355" stroke="#10b981" stroke-width="3" marker-end="url(#arrow-green)" />
+                    <rect x="200" y="330" width="480" height="50" rx="25" fill="url(#grad-horiz)" stroke="#3b82f6" stroke-width="2" class="pill-shadow" />
+                    <text x="440" y="362" class="text-pill">Clasificaciones</text>
+                </g>
+
+                <!-- NIVEL 6: Agrupamientos -->
+                <g class="fragment" data-fragment-index="7">
+                    <path d="M 110 425 L 180 425" stroke="#10b981" stroke-width="3" marker-end="url(#arrow-green)" />
+                    <rect x="200" y="400" width="480" height="50" rx="25" fill="url(#grad-horiz)" stroke="#2563eb" stroke-width="2" class="pill-shadow" />
+                    <text x="440" y="432" class="text-pill">Agrupamientos</text>
+                </g>
+
+            </svg>
 
         </div>
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "Un vocabulario riguroso restringe términos. Un tesauro añade relaciones de sinónimos. Una taxonomía construye un árbol estricto organizando elementos mayores a menores."
+        "Este diagrama muestra la estructura del dominio biomédico para el control de vocabulario. A medida que bajamos en la jerarquía, los términos ganan estructura formal."
     </div>
 </div>
+

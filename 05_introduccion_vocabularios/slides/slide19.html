@@ -1,51 +1,52 @@
 <div class="slide slide-hidden" id="slide19">
-    <div class="header-banner" style="background: linear-gradient(135deg, var(--color-primary) 0%, #6366F1 100%);">
-        <h2 style="color: white;">Ontologías: Formulación Lógica Superior</h2>
+    <div class="header-banner">
+        <h2>Nomenclaturas y Clasificaciones</h2>
     </div>
 
-    <div class="content-block">
-        <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">
-            El mayor grado evolutivo tecnológico en la representación paramétrica en salud.
-        </p>
-
-        <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: stretch; max-width: 900px; margin: 0 auto;">
+    <div class="content-block two-columns" style="align-items: stretch; margin-top: 1rem;">
+        
+        <!-- Nomenclaturas -->
+        <div class="card fragment fade-in" data-fragment-index="1" style="flex: 1; background: white; border: 2px solid #10B981; border-radius: 12px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <div style="width: 50px; height: 50px; background: #D1FAE5; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🔍</div>
+                <h3 style="margin: 0; color: #059669;">Nomenclatura / Terminología</h3>
+            </div>
             
-            <div class="card" style="flex: 1; background: #F8FAFC;">
-                <div style="color: #64748B; font-weight: bold; margin-bottom: 0.5rem;">Capa Previa</div>
-                <h3 style="font-size: 1.2rem; color: var(--color-text);">Terminología Regular</h3>
-                <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: #475569; margin-top: 1rem;">
-                    <li>Listas inmensas conectadas.</li>
-                    <li>Dice "Neumonía es una Infección".</li>
-                    <li>Es declarativa (pasiva).</li>
-                </ul>
+            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 1.5rem;">Herramientas <strong>clínicas</strong> para describir la historia del paciente con el mayor detalle y profundidad (granularidad). Buscan representar TODO evento de forma exacta.</p>
+            
+            <div style="background: #F1F5F9; padding: 1rem; border-radius: 6px; border-left: 4px solid #10B981;">
+                <strong style="color: #334155; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Ejemplo (SNOMED CT):</strong>
+                <span style="font-family: monospace; color: #10B981; font-size: 0.85rem;">#423238006</span>
+                <span style="display: block; font-size: 0.9rem; margin-top: 0.2rem;">"Fractura conminuta cerrada cruzando el tercio distal de la diáfisis del fémur derecho"</span>
             </div>
-
-            <div class="fragment fade-in" data-fragment-index="1" style="display: flex; align-items: center; color: #CBD5E1; font-size: 2rem;">
-                +
-            </div>
-
-            <div class="card fragment fade-in" data-fragment-index="1" style="flex: 1; background: #EEF2FF; border: 2px solid #6366F1;">
-                <div style="color: #6366F1; font-weight: bold; margin-bottom: 0.5rem;">Evolución Lógica</div>
-                <h3 style="font-size: 1.2rem; color: #4338CA;">La Ontología</h3>
-                <ul style="padding-left: 1.2rem; font-size: 0.85rem; color: #475569; margin-top: 1rem;">
-                    <li>Agrega <strong><span style="color: #6366F1;">Reglas y Axiomas</span> lógicos o matemáticos</strong>.</li>
-                    <li>Sabe que "La neumonía OCURRE EN los pulmones Y ES CAUSADA POR un microorganismo".</li>
-                </ul>
-            </div>
-
+            
+            <div style="text-align: right; margin-top: 1rem; font-size: 0.8rem; font-weight: bold; color: #059669;">Nivel Micro 🔎</div>
         </div>
 
-        <!-- Beneficio Inferencial -->
-        <div class="fragment slide-up" data-fragment-index="2" style="background: white; border-radius: 8px; border-left: 5px solid #6366F1; padding: 1.5rem; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; box-shadow: var(--shadow-sm);">
-            <p style="margin: 0; color: #1E293B;">
-                <strong>Propósito de las Ontologías:</strong> Permiten que los Sistemas de IA y Motores Lógicos realicen <strong style="color: #6366F1;">Razonamiento Inferencial Automático</strong>. Sin intervención humana, el ordenador "deduce" asociaciones clínicas complejas a partir de sus reglas escritas en lógica descriptiva. 
-            </p>
+        <!-- Clasificaciones -->
+        <div class="card fragment fade-in" data-fragment-index="2" style="flex: 1; background: white; border: 2px solid #F59E0B; border-radius: 12px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <div style="width: 50px; height: 50px; background: #FEF3C7; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🗂️</div>
+                <h3 style="margin: 0; color: #D97706;">Sistemas de Clasificación</h3>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 1.5rem;">Herramientas <strong>administrativas y reportables</strong>. Sacrifican detalle para empujar/agrupar (englobar) casos similares en categorías rígidas, ideal para facturación.</p>
+            
+            <div style="background: #F1F5F9; padding: 1rem; border-radius: 6px; border-left: 4px solid #F59E0B;">
+                <strong style="color: #334155; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Ejemplo equivalente (CIE-10):</strong>
+                <span style="font-family: monospace; color: #F59E0B; font-size: 0.85rem;">#S72.3</span>
+                <span style="display: block; font-size: 0.9rem; margin-top: 0.2rem;">"Fractura de la diáfisis del fémur" </span>
+                <span style="display: inline-block; background: #FEF2F2; color: #B91C1C; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; margin-top: 0.3rem;">(Omite la lateralidad o la condición conminuta)</span>
+            </div>
+
+            <div style="text-align: right; margin-top: 1rem; font-size: 0.8rem; font-weight: bold; color: #D97706;">Nivel Macro 🔭</div>
         </div>
 
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "Como complemento, existe un peldaño superior: las Ontologías. Estas no solo catalogan, sino que le enseñan a la computadora las 'leyes lógicas' de los conceptos, permitiendo inferencias que los otros modelos no logran."
+        "Las nomenclaturas persiguen designar exhaustivamente cada hallazgo clínico con alta micro-resolución para el experto, pero las clasificaciones engloban hallazgos en grandes 'cajones' genéricos diseñados primordialmente para estudios epidemiológicos."
     </div>
 </div>
+

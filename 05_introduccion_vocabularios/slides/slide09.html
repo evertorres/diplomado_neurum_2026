@@ -1,53 +1,52 @@
 <div class="slide slide-hidden" id="slide09">
     <div class="header-banner">
-        <h2>Retos semánticos: Ambigüedad</h2>
+        <h2>La importancia del contexto en datos</h2>
     </div>
 
-    <div class="content-block">
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);">
-            El lenguaje humano está plagado de trampas cognitivas que destruyen el análisis de datos.
-        </p>
+    <div class="content-block two-columns" style="align-items: stretch;">
 
-        <div style="display: flex; gap: 1.5rem; justify-content: space-between; align-items: stretch;">
-
-            <!-- Sinonimia -->
-            <div class="card fragment fade-in" data-fragment-index="1" style="flex: 1; text-align: center; background: #EEF2FF; border: 1px solid #C7D2FE;">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">👥</div>
-                <h3 style="color: #4338CA; margin-bottom: 1rem;">Sinonimia</h3>
-                <p style="font-size: 0.9rem; color: var(--color-text);">Diferentes palabras que significan exactamente la misma condición médica.</p>
-                <div style="margin-top: 1.5rem; font-family: monospace; font-weight: bold; color: #3730A3;">
-                    Fiebre <br/><span style="color: #6B7280; font-weight: normal;">=</span><br/> Pirexia
-                </div>
+        <!-- Dato sin contexto -->
+        <div class="card fade-in" style="background: rgba(243, 244, 246, 0.5); flex: 1; border: 2px dashed #9CA3AF;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 4rem; font-weight: 900; color: #4B5563; font-family: monospace;">120/80</div>
             </div>
-
-            <!-- Polisemia -->
-            <div class="card fragment fade-in" data-fragment-index="2" style="flex: 1; text-align: center; background: #FEF2F2; border: 1px solid #FECACA;">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎭</div>
-                <h3 style="color: #B91C1C; margin-bottom: 1rem;">Polisemia</h3>
-                <p style="font-size: 0.9rem; color: var(--color-text);">Una misma palabra o frase con múltiples significados (dependiendo de la especialidad).</p>
-                <div style="margin-top: 1.5rem; font-family: monospace; font-weight: bold; color: #991B1B;">
-                    Enfermedad de Paget <br/>
-                    <span style="font-size: 0.75rem; color: #EF4444; font-weight: normal;">(¿Ósea o de Mama?)</span>
-                </div>
-            </div>
-
-            <!-- Homonimia -->
-            <div class="card fragment fade-in" data-fragment-index="3" style="flex: 1; text-align: center; background: #FFFBEB; border: 1px solid #FDE68A;">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔤</div>
-                <h3 style="color: #D97706; margin-bottom: 1rem;">Homonimia</h3>
-                <p style="font-size: 0.9rem; color: var(--color-text);">Palabras que se escriben igual pero significan cosas totalmente dispares.</p>
-                <div style="margin-top: 1.5rem; font-family: monospace; font-weight: bold; color: #B45309;">
-                    Banco <span style="font-size: 0.75rem; color: #F59E0B; font-weight: normal;">(de Sangre)</span><br/>
-                    <span style="color: #6B7280; font-weight: normal;">vs</span><br/> 
-                    Banco <span style="font-size: 0.75rem; color: #F59E0B; font-weight: normal;">(Financiero)</span>
-                </div>
-            </div>
-
+            
+            <p style="color: var(--color-text); text-align: center; font-weight: 600;">Dato en Texto Libre</p>
+            <ul style="color: #6B7280; font-size: 0.9rem; margin-top: 1rem;">
+                <li>Para un médico: "Presión Arterial Normal".</li>
+                <li>Para una computadora: "String (1, 2, 0, /, 8, 0)"</li>
+                <li>¿Fuerza en unidad? Desconocida.</li>
+                <li>¿Paciente? Desconocido.</li>
+            </ul>
         </div>
+
+        <!-- Flecha central -->
+        <div class="fragment fade-in" data-fragment-index="1" style="display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: 3rem;">👉</span>
+        </div>
+
+        <!-- Dato Estandarizado -->
+        <div class="card fragment fade-in" data-fragment-index="2" style="background: white; flex: 1.5; border: 2px solid var(--color-primary); box-shadow: var(--shadow-lg);">
+            <p style="color: var(--color-primary); text-align: center; font-weight: 800; text-transform: uppercase;">Dato Codificado y Contextualizado</p>
+            
+            <div style="background: #F8FAFC; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.85rem; color: #1E293B; border-left: 4px solid var(--color-primary); margin-top: 1rem;">
+                <div style="margin-bottom: 0.5rem;"><span style="color: #3B82F6;">{</span></div>
+                <div style="margin-left: 1rem;">"Paciente": <span style="color: #10B981;">"ID_8471"</span>,</div>
+                <div style="margin-left: 1rem;">"Fecha": <span style="color: #10B981;">"2026-03-24T10:00:00"</span>,</div>
+                <div style="margin-left: 1rem;">"Observación": <span style="color: #8B5CF6;">"Presión Arterial"</span> <span style="color: #9CA3AF;">/* LOINC: 85354-9 */</span>,</div>
+                <div style="margin-left: 1rem;">"Sistólica": <span style="color: #F59E0B;">120</span>,</div>
+                <div style="margin-left: 1rem;">"Diastólica": <span style="color: #F59E0B;">80</span>,</div>
+                <div style="margin-left: 1rem;">"Unidad": <span style="color: #10B981;">"mmHg"</span>,</div>
+                <div style="margin-left: 1rem;">"Posición": <span style="color: #8B5CF6;">"Sentado"</span> <span style="color: #9CA3AF;">/* SNOMED: 33586001 */</span></div>
+                <div><span style="color: #3B82F6;">}</span></div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "El lenguaje humano está lleno de ambigüedades. Tenemos sinónimos donde distintas palabras significan lo mismo, y polisemia u homonimia donde una palabra idéntica significa varias cosas según el caso."
+        "Para un médico, '120/80' claramente es presión arterial. Para una computadora, son solo 6 caracteres. Necesitamos especificar unidad, técnica, y variables asociadas para hacer la información útil computacionalmente."
     </div>
 </div>
+

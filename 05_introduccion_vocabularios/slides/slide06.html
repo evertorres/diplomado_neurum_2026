@@ -1,42 +1,40 @@
 <div class="slide slide-hidden" id="slide06">
     <div class="header-banner">
-        <h2>El reto de las interfaces libres</h2>
+        <h2>La problemática del lenguaje natural</h2>
     </div>
 
-    <div class="content-block">
-        <p style="text-align: center; font-size: 1.2rem; color: var(--color-text-light); margin-bottom: 2rem;">
-            Ejemplos de cómo 3 profesionales registran la <strong>misma idea médica</strong> en texto libre:
+    <div class="content-block" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 75vh;">
+        <p style="color: var(--color-secondary); margin-bottom: 2rem; text-align: center; font-size: 1.2rem; font-weight: 500;">
+            Diferentes dispositivos, diferentes formatos... un mismo desafío comunicacional.
         </p>
-
-        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 0 auto;">
+        
+        <!-- Contenedor relativo para posicionar imágenes como collage (masonry simulado) -->
+        <div style="position: relative; width: 100%; max-width: 900px; height: 500px; margin: 0 auto;">
             
-            <!-- Ejemplo 1 -->
-            <div class="fragment" data-fragment-index="1" style="background: white; border: 1px solid #E5E7EB; border-left: 5px solid #3B82F6; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); transform: translateX(-20px);">
-                <div style="font-size: 0.8rem; color: #6B7280; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Médico Asistente 1</div>
-                <div style="font-family: monospace; font-size: 1.1rem; color: #1F2937;">"Paciente presenta cuadro de <strong>infarto agudo de miocardio</strong> en pared anterior..."</div>
-            </div>
-
-            <!-- Ejemplo 2 -->
-            <div class="fragment" data-fragment-index="2" style="background: white; border: 1px solid #E5E7EB; border-left: 5px solid #10B981; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); transform: translateX(20px);">
-                <div style="font-size: 0.8rem; color: #6B7280; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Residente Urgencias (Nota rápida)</div>
-                <div style="font-family: monospace; font-size: 1.1rem; color: #1F2937;">"Px con <strong>IAM</strong> ant. Se inicia protocolo diferencial."</div>
-            </div>
-
-            <!-- Ejemplo 3 -->
-            <div class="fragment" data-fragment-index="3" style="background: white; border: 1px solid #E5E7EB; border-left: 5px solid #EC4899; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); transform: translateX(-10px);">
-                <div style="font-size: 0.8rem; color: #6B7280; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Enfermero Jefe</div>
-                <div style="font-family: monospace; font-size: 1.1rem; color: #1F2937;">"Ingresa por dolor torácico asociado a <strong>ataque al corazón</strong>..."</div>
-            </div>
-
-            <div class="fragment" data-fragment-index="4" style="text-align: center; margin-top: 2rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-radius: 8px; color: #DC2626; font-weight: 600;">
-                ❌ El servidor de salud no sabe que todos tienen la misma enfermedad.
-            </div>
-
+            <!-- Monitor -->
+            <img src="images/desktop_monitor.png" class="fragment zoom-in slide-image" data-fragment-index="1" 
+                 style="position: absolute; top: 10%; left: 5%; height: 200px; box-shadow: var(--shadow-xl); border-radius: 8px; transform: rotate(-3deg); transition: transform 0.3s ease;">
+            
+            <!-- Laptop -->
+            <img src="images/laptop_screen.png" class="fragment zoom-in slide-image" data-fragment-index="2" 
+                 style="position: absolute; bottom: 5%; left: 20%; height: 180px; box-shadow: var(--shadow-xl); border-radius: 8px; transform: rotate(2deg); transition: transform 0.3s ease;">
+            
+            <!-- Smartphone -->
+            <img src="images/smartphone_screen.png" class="fragment zoom-in slide-image" data-fragment-index="3" 
+                 style="position: absolute; top: 40%; left: 45%; height: 140px; box-shadow: var(--shadow-md); border-radius: 12px; transform: rotate(5deg); transition: transform 0.3s ease; z-index: 10;">
+            
+            <!-- Cine/Proyector -->
+            <img src="images/cinema_screen.png" class="fragment zoom-in slide-image" data-fragment-index="4" 
+                 style="position: absolute; top: 15%; right: 5%; height: 220px; box-shadow: var(--shadow-2xl); border-radius: 4px; transform: rotate(1deg); transition: transform 0.3s ease;">
+                 
+            <!-- Tablet/PDA -->
+            <img src="images/tablet_screen.png" class="fragment zoom-in slide-image" data-fragment-index="5" 
+                 style="position: absolute; bottom: 10%; right: 25%; height: 160px; box-shadow: var(--shadow-lg); border-radius: 8px; transform: rotate(-4deg); transition: transform 0.3s ease;">
         </div>
     </div>
-
+    
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "Si dejamos que cada profesional describa un evento en texto libre, la computadora no sabrá que están hablando de lo mismo. Esta es la principal falla de las historias clínicas no estructuradas."
+        "Imaginen un hospital moderno. La historia clínica de un paciente ya no vive en papel, vive en pantallas. Pero la leemos en ecosistemas radicalmente diferentes: en enormes monitores en recepción (clic), en las computadoras portátiles de los médicos de planta (clic), en los smartphones de los especialistas de guardia (clic), se proyecta en juntas médicas (clic), y los enfermeros la actualizan en tabletas al pie de cama (clic). Mostrar lo mismo en tantos lugares exige que debajo, el nivel semántico comunique verdades irrefutables. Si usamos lenguaje natural sin estándares en tantas ventanas distintas, el desorden se multiplica."
     </div>
 </div>

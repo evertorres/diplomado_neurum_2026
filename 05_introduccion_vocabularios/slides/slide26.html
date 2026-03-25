@@ -1,49 +1,39 @@
 <div class="slide slide-hidden" id="slide26">
-    <div class="header-banner">
-        <h2>Panorama de Sistemas de Codificación</h2>
-    </div>
-
-    <div class="content-block">
-        <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">
-            Ejemplos representativos por el mundo (Los estudiaremos luego).
+    <div class="slide-content" style="padding-top: var(--space-xl); height: 100%; display: flex; flex-direction: column; justify-content: center;">
+        <h2 class="slide-title">Desafíos en Implementación y Gobernanza</h2>
+        
+        <p style="text-align: center; color: var(--color-secondary); margin-bottom: 3rem; font-weight: 500;">
+            El reto no es la tecnología, sino el Cambio Organizacional y Humano.
         </p>
 
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 800px; margin: 0 auto;">
+        <!-- Contenedor Grid 3 Columns -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1000px; margin: 0 auto; align-items: stretch;">
             
-            <!-- SNOMED -->
-            <div class="fragment fade-in" data-fragment-index="1" style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border-left: 5px solid #0284C7;">
-                <div style="font-size: 2rem;">🌐</div>
-                <div>
-                    <h3 style="margin: 0; color: #0284C7; font-size: 1.1rem;">SNOMED CT</h3>
-                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-light);">El gigante referencial ontológico de alcance global. Alta resolución clínica multi-jerárquica asistencial.</p>
-                </div>
+            <!-- Desafío 1: Mapeo Local -->
+            <div class="card fragment fade-up" data-fragment-index="1" style="background: white; border-radius: 12px; padding: 2rem 1.5rem; box-shadow: var(--shadow-md); border-top: 5px solid #2563EB; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(37,99,235,0.2));">🗺️</div>
+                <h3 style="color: #1e1b4b; font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem;">El Mapeo Local</h3>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: #475569; margin: 0;">
+                    Asignar "uno a uno" la historia local legada hacia un estándar internacional puede llevar meses, encontrándose conflictos de equivalencia que diluyen el histórico.
+                </p>
             </div>
 
-            <!-- LOINC -->
-            <div class="fragment fade-in" data-fragment-index="2" style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border-left: 5px solid #4F46E5;">
-                <div style="font-size: 2rem;">🧪</div>
-                <div>
-                    <h3 style="margin: 0; color: #4F46E5; font-size: 1.1rem;">LOINC</h3>
-                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-light);">El amo indiscutible y estándar universal para exámenes de laboratorio clínicos estandarizando "la pregunta y métrica" reactiva.</p>
-                </div>
+            <!-- Desafío 2: Gobernanza Nacional -->
+            <div class="card fragment fade-up" data-fragment-index="2" style="background: white; border-radius: 12px; padding: 2rem 1.5rem; box-shadow: var(--shadow-md); border-top: 5px solid #4F46E5; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(79,70,229,0.2));">⚖️</div>
+                <h3 style="color: #1e1b4b; font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem;">Gobernanza Nacional</h3>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: #475569; margin: 0;">
+                    Requiere que el Ministerio (NRC) publique de forma rígida los conjuntos y diccionarios legalmente obligatorios para todo desarrollador local.
+                </p>
             </div>
 
-            <!-- CIE -->
-            <div class="fragment fade-in" data-fragment-index="3" style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border-left: 5px solid #EA580C;">
-                <div style="font-size: 2rem;">📊</div>
-                <div>
-                    <h3 style="margin: 0; color: #EA580C; font-size: 1.1rem;">CIE-10 / CIE-11 (OMS)</h3>
-                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-light);">El mayor agrupador clasificatorio mundialmente mandado para estadística de morbimortalidad general poblacional global.</p>
-                </div>
-            </div>
-
-            <!-- Locales / CUPS / ATC -->
-            <div class="fragment fade-in" data-fragment-index="4" style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border-left: 5px solid #10B981;">
-                <div style="font-size: 2rem;">📜</div>
-                <div>
-                    <h3 style="margin: 0; color: #10B981; font-size: 1.1rem;">CUPS, RxNorm, ATC</h3>
-                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-light);">Familia de catálogos satelitales (Procedimientos regionales colombianos, catálogo de farmáceuticas gringas, y codificadores mundiales farma).</p>
-                </div>
+            <!-- Desafío 3: Fatiga Clínica -->
+            <div class="card fragment fade-up" data-fragment-index="3" style="background: white; border-radius: 12px; padding: 2rem 1.5rem; box-shadow: var(--shadow-md); border-top: 5px solid #EF4444; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(239,68,68,0.2));">😫</div>
+                <h3 style="color: #b91c1c; font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem;">Fatiga Clínica (UX)</h3>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: #475569; margin: 0;">
+                    Obligar a los médicos a memorizar o desplegar eternos catálogos (CIE-10 o SNOMED) rompe el hilo clínico, saturándolos de interacciones y boicoteando la adopción.
+                </p>
             </div>
 
         </div>
@@ -51,6 +41,7 @@
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "Para cerrar a modo de mención introductoria de lo que será profundo en siguientes sesiones, hoy disponemos de estándares para dominios: SNOMED CT como diccionario maestro y de referencia clínica de diagnósticos en piso, LOINC liderando en pruebas de laboratorio de química, y por contraparte el mundo las clasificaciones macro poblacionales históricas como la famosa CIE del estado o acompañadas de los códigos locales de procedimientos administrativos como los CUPS para colombia."
+        "Implementar esto es un enorme reto organizacional. Implica mapeos minuciosos de catálogos locales antiguos, requiere gobernanza gubernamental activa para el mantenimiento de versiones, y especial cuidado del diseño UX en las pantallas para no fatigar la adopción de los médicos forzándolos a codificar en bruto."
     </div>
 </div>
+

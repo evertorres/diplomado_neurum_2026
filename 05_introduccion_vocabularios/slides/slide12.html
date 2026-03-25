@@ -1,99 +1,47 @@
 <div class="slide slide-hidden" id="slide12">
-    <div class="slide-content" style="padding-top: var(--space-xl); height: 100%; display: flex; flex-direction: column; justify-content: center; position: relative;">
-        <!-- Cabecera -->
-        <div style="margin-top: -80px;">
-            <h2 class="slide-title">Representación del Conocimiento</h2>
-            <p style="text-align: center; color: var(--color-secondary); margin-bottom: 0;">
-                El famoso <strong style="color: var(--color-primary);">Triángulo Semántico de Ogden-Richards</strong>
-            </p>
-        </div>
+    <div class="header-banner">
+        <h2>Ambigüedad - Ejemplo</h2>
+    </div>
 
-        <!-- Contenedor del Triángulo -->
-        <div style="position: relative; width: 660px; height: 440px; margin: 2rem auto 0; display: flex; align-items: center; justify-content: center;">
+    <div class="content-block" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
+        <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem; font-size: 1.1rem; max-width: 800px;">
+            Veamos varios ejemplos de posibles mensajes <strong>HL7 V2.x</strong> para transmitir el grupo sanguíneo de un paciente:
+        </p>
 
-            <!-- SVG UI Layer -->
-            <svg viewBox="0 0 660 440" style="width: 100%; height: 100%; overflow: visible; font-family: 'Exo', sans-serif;">
-                <defs>
-                    <style>
-                        /* Evita que Reveal.js desplace los SVG con sus animaciones CSS */
-                        svg .fragment { transform: none !important; transition: opacity 0.6s ease-in-out !important; }
-                        svg .fragment.visible { transform: none !important; }
-                        
-                        /* Clases del diagrama */
-                        .line-style { stroke-width: 4; fill: none; stroke-linecap: round; }
-                        .text-label { font-size: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
-                        .node-label-icon { font-size: 1.8rem; text-anchor: middle; }
-                        .node-label-main { font-size: 1.35rem; font-weight: 800; text-anchor: middle; }
-                        .node-label-sub { font-size: 0.85rem; font-weight: 600; fill: #64748b; text-anchor: middle; }
-                        .glow-circle { filter: drop-shadow(0 6px 12px rgba(0,0,0,0.12)); }
-                        .t-bg-halo { stroke: white; stroke-width: 8px; paint-order: stroke; }
-                    </style>
-                </defs>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; max-width: 900px; width: 100%;">
+            
+            <!-- Ejemplo 1 -->
+            <div class="fragment" data-fragment-index="1" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 0.75rem; box-shadow: var(--shadow-sm);">
+                <div style="font-family: monospace; color: #475569; background: white; padding: 0.75rem; border-left: 4px solid #3B82F6; font-size: 1rem;">OBX|1|CE|ABO^ABO GROUP||O^Type O|</div>
+            </div>
 
-                <!-- 1: ARISTAS Y RELACIONES -->
-                <!-- Se dibujan primero para que queden cubiertas por el fondo blanco de los círculos -->
+            <!-- Ejemplo 2 -->
+            <div class="fragment" data-fragment-index="2" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 0.75rem; box-shadow: var(--shadow-sm);">
+                <div style="font-family: monospace; color: #475569; background: white; padding: 0.75rem; border-left: 4px solid #10B981; font-size: 1rem;">OBX|1|CE|BLDTYP^ABO GROUP||TYPEO^Type O|</div>
+            </div>
 
-                <!-- Line Designa (Left) -->
-                <g class="fragment" data-fragment-index="4">
-                    <path d="M 170 340 L 330 90" stroke="#3b82f6" class="line-style" stroke-dasharray="8 6" />
-                    <!-- offset from exact center (250, 215) -->
-                    <text transform="translate(230, 215) rotate(-57.5)" class="text-label t-bg-halo" fill="#3b82f6" text-anchor="middle">DESIGNA</text>
-                </g>
+            <!-- Ejemplo 3 -->
+            <div class="fragment" data-fragment-index="3" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 0.75rem; box-shadow: var(--shadow-sm);">
+                <div style="font-family: monospace; color: #475569; background: white; padding: 0.75rem; border-left: 4px solid #F59E0B; font-size: 1rem;">OBX|1|CE|ABOTYPE^ABO GROUP||OPOS^Type O|</div>
+            </div>
 
-                <!-- Line Describe (Right) -->
-                <g class="fragment" data-fragment-index="5">
-                    <path d="M 330 90 L 490 340" stroke="#10b981" class="line-style" stroke-dasharray="8 6" />
-                    <!-- offset from exact center (410, 215) -->
-                    <text transform="translate(430, 215) rotate(57.5)" class="text-label t-bg-halo" fill="#10b981" text-anchor="middle">DESCRIBE</text>
-                </g>
+            <!-- Pregunta -->
+            <div class="fragment" data-fragment-index="4" style="margin-top: 1.5rem; text-align: center;">
+                <h3 style="color: var(--color-cta); font-size: 1.8rem; font-weight: 800;">¿Qué tipo sanguíneo es el paciente?</h3>
+            </div>
 
-                <!-- Line Denota (Bottom) -->
-                <g class="fragment" data-fragment-index="6">
-                    <path d="M 170 340 L 490 340" stroke="#ef4444" class="line-style" stroke-dasharray="10 8" />
-                    <text x="330" y="368" class="text-label t-bg-halo" fill="#ef4444" text-anchor="middle">DENOTA</text>
-                </g>
+            <!-- Solución -->
+            <div class="fragment" data-fragment-index="5" style="position: relative; padding: 1.5rem; border-radius: 12px; color: white; background: linear-gradient(135deg, #1e293b, #334155); box-shadow: var(--shadow-md); text-align: center; margin-top: 1rem;">
+                <div style="font-size: 1.4rem; margin-bottom: 0.5rem; font-weight: bold; color: #fbbf24;">LA SOLUCIÓN</div>
+                <p style="margin: 0; font-size: 1.15rem; line-height: 1.5;">Para que las computadoras entiendan el lenguaje la clave es la <strong style="color: #fbbf24; text-transform: uppercase; font-size: 1.3rem;">CODIFICACIÓN</strong>.</p>
+            </div>
 
-                <!-- 2: NODOS FRONTALES -->
-                <!-- Se dibujan después para que su fill blanco oculte las líneas debajo -->
-
-                <!-- Top: Concepto -->
-                <g class="fragment" data-fragment-index="1">
-                    <circle cx="330" cy="90" r="75" fill="white" stroke="#10b981" stroke-width="4" class="glow-circle" />
-                    <text x="330" y="70" class="node-label-icon">🧠</text> 
-                    <text x="330" y="105" class="node-label-main" fill="#10b981">Concepto</text>
-                    <text x="330" y="125" class="node-label-sub">Unidad de</text>
-                    <text x="330" y="145" class="node-label-sub">pensamiento</text>
-                </g>
-
-                <!-- Left: Símbolo -->
-                <g class="fragment" data-fragment-index="2">
-                    <circle cx="170" cy="340" r="75" fill="white" stroke="#3b82f6" stroke-width="4" class="glow-circle" />
-                    <text x="170" y="315" class="node-label-icon">✍️</text>
-                    <text x="170" y="350" class="node-label-main" fill="#3b82f6">Símbolo</text>
-                    <text x="170" y="370" class="node-label-sub">Palabra /</text>
-                    <text x="170" y="390" class="node-label-sub">Código</text>
-                </g>
-
-                <!-- Right: Objeto -->
-                <g class="fragment" data-fragment-index="3">
-                    <circle cx="490" cy="340" r="75" fill="white" stroke="#f59e0b" stroke-width="4" class="glow-circle" />
-                    <text x="490" y="315" class="node-label-icon">🫀</text>
-                    <text x="490" y="350" class="node-label-main" fill="#f59e0b">Objeto</text>
-                    <text x="490" y="370" class="node-label-sub">Entidad</text>
-                    <text x="490" y="390" class="node-label-sub">Real</text>
-                </g>
-            </svg>
-
-        </div>
-
-        <!-- Bibliografía Reforzada al inferior -->
-        <div class="fragment" data-fragment-index="7" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 900px; font-size: 0.8rem; color: #64748b; padding: 1rem; border: 1px solid #e2e8f0; text-align: center; line-height: 1.5; background: #f8fafc; border-radius: 12px; box-shadow: var(--shadow-sm);">
-            <strong style="color: var(--color-primary);">Bibliografía:</strong> Campbell, K. E., Oliver, D. E., Spackman, K. A., & Shortliffe, E. H. (1998). Representing Thoughts, Words, and Things in the UMLS. <em>Journal of the American Medical Informatics Association</em>, 5(5), 421–431.
         </div>
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "Triángulo semántico con terminología ajustada: Designa, Describe y Denota (Relación Indirecta)."
+        "Aún usando el mismo estándar de mensajería (HL7), la variabilidad en los identificadores de campo y en los valores libres genera un caos semántico. La única forma de que un algoritmo entienda que todos estos mensajes significan lo mismo es mediante el uso de códigos internacionales compartidos."
     </div>
 </div>
+

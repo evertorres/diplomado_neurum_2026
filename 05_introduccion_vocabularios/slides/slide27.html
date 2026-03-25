@@ -1,61 +1,57 @@
 <div class="slide slide-hidden" id="slide27">
-    <div class="slide-content" style="padding-top: var(--space-xl); height: 100%; display: flex; flex-direction: column; justify-content: center;">
-        <h2 class="slide-title">Sinergia con Procesamiento de Lenguaje Natural</h2>
-        
-        <p style="text-align: center; color: var(--color-secondary); margin-bottom: 2rem; font-weight: 500;">
-            Uniendo el texto libre del médico con el mundo estructurado de las ontologías.
+    <div class="header-banner">
+        <h2>Panorama de Sistemas de Codificación</h2>
+    </div>
+
+    <div class="content-block">
+        <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">
+            Ejemplos representativos por el mundo (Los estudiaremos luego).
         </p>
 
-        <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 800px; margin: 0 auto;">
             
-            <!-- Col 1: Médico -->
-            <div class="card fragment fade-right" data-fragment-index="1" style="background: white; border-radius: 12px; padding: 1.5rem; flex: 1; box-shadow: var(--shadow-md); border-top: 5px solid #64748B;">
-                <div style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">👨‍⚕️✏️</div>
-                <h4 style="text-align: center; margin: 0 0 1rem 0; color: #1e1b4b; font-weight: 800;">Expresión Natural</h4>
-                <div style="font-family: 'Roboto Mono', monospace; font-size: 0.85rem; background: #f8fafc; padding: 1rem; border-radius: 8px; border: 1px dashed #cbd5e1; color: #475569; min-height: 100px;">
-                    "Paciente con historia de taquicardia paroxística presenta inflamación aguda y evidente calentura."
+            <!-- SNOMED -->
+            <div class="fragment fade-in" data-fragment-index="1" style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border-left: 5px solid #0284C7;">
+                <div style="font-size: 2rem;">🌐</div>
+                <div>
+                    <h3 style="margin: 0; color: #0284C7; font-size: 1.1rem;">SNOMED CT</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-light);">El gigante referencial ontológico de alcance global. Alta resolución clínica multi-jerárquica asistencial.</p>
                 </div>
             </div>
 
-            <!-- Flecha 1 -->
-            <div class="fragment fade-in" data-fragment-index="2" style="font-size: 2rem; color: #4F46E5;">➔</div>
-
-            <!-- Col 2: IA -->
-            <div class="card fragment zoom-in" data-fragment-index="2" style="background: #1e1b4b; border-radius: 16px; padding: 2rem 1.5rem; flex: 1.2; box-shadow: var(--shadow-lg); text-align: center; color: white;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">🤖</div>
-                <h4 style="margin: 0 0 0.5rem 0; color: #818cf8; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">PLN / LLMs</h4>
-                <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; margin: 0;">
-                    Extrae entidades clincas, infiere significados y mapea automáticamente hacia estándares internacionales en milisegundos.
-                </p>
+            <!-- LOINC -->
+            <div class="fragment fade-in" data-fragment-index="2" style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border-left: 5px solid #4F46E5;">
+                <div style="font-size: 2rem;">🧪</div>
+                <div>
+                    <h3 style="margin: 0; color: #4F46E5; font-size: 1.1rem;">LOINC</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-light);">El amo indiscutible y estándar universal para exámenes de laboratorio clínicos estandarizando "la pregunta y métrica" reactiva.</p>
+                </div>
             </div>
 
-            <!-- Flecha 2 -->
-            <div class="fragment fade-in" data-fragment-index="3" style="font-size: 2rem; color: #4F46E5;">➔</div>
+            <!-- CIE -->
+            <div class="fragment fade-in" data-fragment-index="3" style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border-left: 5px solid #EA580C;">
+                <div style="font-size: 2rem;">📊</div>
+                <div>
+                    <h3 style="margin: 0; color: #EA580C; font-size: 1.1rem;">CIE-10 / CIE-11 (OMS)</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-light);">El mayor agrupador clasificatorio mundialmente mandado para estadística de morbimortalidad general poblacional global.</p>
+                </div>
+            </div>
 
-            <!-- Col 3: Resultado -->
-            <div class="card fragment fade-left" data-fragment-index="3" style="background: white; border-radius: 12px; padding: 1.5rem; flex: 1; box-shadow: var(--shadow-md); border-top: 5px solid #2563EB;">
-                <div style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">✅ 💾</div>
-                <h4 style="text-align: center; margin: 0 0 1rem 0; color: #1e1b4b; font-weight: 800;">Codificación</h4>
-                <div style="font-family: 'Roboto Mono', monospace; font-size: 0.85rem; background: #eff6ff; padding: 1rem; border-radius: 8px; border: 1px dashed #6366f1; color: #1e40af; min-height: 100px;">
-                    <span style="font-weight: 700;">Sugerido:</span><br/>
-                    • T.P.S.V - SCT:164889003<br/>
-                    • Inflamación - SCT:65124004<br/>
-                    • Pirexia - SCT:386661006
+            <!-- Locales / CUPS / ATC -->
+            <div class="fragment fade-in" data-fragment-index="4" style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border-left: 5px solid #10B981;">
+                <div style="font-size: 2rem;">📜</div>
+                <div>
+                    <h3 style="margin: 0; color: #10B981; font-size: 1.1rem;">CUPS, RxNorm, ATC</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-light);">Familia de catálogos satelitales (Procedimientos regionales colombianos, catálogo de farmáceuticas gringas, y codificadores mundiales farma).</p>
                 </div>
             </div>
 
         </div>
-
-        <div class="fragment fade-up" data-fragment-index="4" style="text-align: center; margin-top: 3rem;">
-            <span style="background: #e0e7ff; color: #3730a3; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 800; font-size: 0.9rem; border: 1px solid #c7d2fe;">
-                Objetivo: Mantener la libertad del clínico delegando el esfuerzo a la "AI".
-            </span>
-        </div>
-
     </div>
 
     <!-- Notas Profesor -->
     <div class="teacher-notes" style="display: none;">
-        "La tendencia más fuerte es converger terminologías rígidas con el Procesamiento de Lenguaje Natural (PLN). Esto permite que el médico se exprese libremente mientras la IA extrae y automatiza la codificación técnica."
+        "Para cerrar a modo de mención introductoria de lo que será profundo en siguientes sesiones, hoy disponemos de estándares para dominios: SNOMED CT como diccionario maestro y de referencia clínica de diagnósticos en piso, LOINC liderando en pruebas de laboratorio de química, y por contraparte el mundo las clasificaciones macro poblacionales históricas como la famosa CIE del estado o acompañadas de los códigos locales de procedimientos administrativos como los CUPS para colombia."
     </div>
 </div>
+
