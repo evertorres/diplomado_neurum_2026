@@ -1,0 +1,81 @@
+<section class="slide" id="slide14">
+    <div class="slide-content left" style="max-width: 1300px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl); width: 100%;">Ejemplo Jerárquico: Paracetamol (ATC/DDD)</h2>
+        
+        <div class="slide-body" style="width: 100%; display: flex; flex-direction: column; gap: var(--space-xl);">
+            
+            <!-- Jerarquía Breadcrumbs -->
+            <div style="display: flex; flex-direction: column; gap: 8px; background: #FFF7ED; padding: 25px; border-radius: 12px; border: 1px solid #FFEDD5;">
+                <div class="fragment" data-fragment-index="1" style="font-size: 1.2rem;">
+                    <strong style="color: var(--color-primary); font-family: monospace;">N</strong> 
+                    <span style="color: #D97706; font-weight: 800; border-bottom: 2px solid #D97706;">NERVOUS SYSTEM</span>
+                </div>
+                <div class="fragment" data-fragment-index="2" style="font-size: 1.2rem; margin-left: 20px;">
+                    <strong style="color: var(--color-primary); font-family: monospace;">N02</strong> 
+                    <span style="color: #D97706; font-weight: 800; border-bottom: 2px solid #D97706;">ANALGESICS</span>
+                </div>
+                <div class="fragment" data-fragment-index="3" style="font-size: 1.2rem; margin-left: 40px;">
+                    <strong style="color: var(--color-primary); font-family: monospace;">N02B</strong> 
+                    <span style="color: #D97706; font-weight: 800; border-bottom: 2px solid #D97706;">OTHER ANALGESICS AND ANTIPYRETICS</span>
+                </div>
+                <div class="fragment" data-fragment-index="4" style="font-size: 1.2rem; margin-left: 60px;">
+                    <strong style="color: var(--color-primary); font-family: monospace;">N02BE</strong> 
+                    <span style="color: #D97706; font-weight: 800; border-bottom: 2px solid #D97706;">Anilides</span>
+                </div>
+            </div>
+
+            <!-- Tabla DDD -->
+            <div class="fragment" data-fragment-index="5" style="background: white; border-radius: 16px; box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid #E2E8F0;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 1rem;">
+                    <thead>
+                        <tr style="background: var(--color-primary); color: white;">
+                            <th style="padding: 15px; text-align: left;">ATC code</th>
+                            <th style="padding: 15px; text-align: left;">Name</th>
+                            <th style="padding: 15px; text-align: center;">DDD</th>
+                            <th style="padding: 15px; text-align: center;">U</th>
+                            <th style="padding: 15px; text-align: center;">Adm.R</th>
+                            <th style="padding: 15px; text-align: left;">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row Oral -->
+                        <tr class="fragment" data-fragment-index="6" style="border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 12px 15px; font-weight: 800; color: var(--color-cta);">N02BE01</td>
+                            <td style="padding: 12px 15px; color: #D97706; font-weight: 800; border-bottom: 1px solid #D97706; display: inline-block; margin-top: 10px;">paracetamol</td>
+                            <td style="padding: 12px 15px; text-align: center; font-weight: 700;">3</td>
+                            <td style="padding: 12px 15px; text-align: center; color: var(--color-secondary);">g</td>
+                            <td style="padding: 12px 15px; text-align: center; font-weight: 800;">O</td>
+                            <td style="padding: 12px 15px;"></td>
+                        </tr>
+                        <!-- Row Parenteral -->
+                        <tr class="fragment" data-fragment-index="7" style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                            <td style="padding: 12px 15px; font-weight: 800; color: var(--color-cta);">N02BE01</td>
+                            <td style="padding: 12px 15px; color: #D97706; font-weight: 800;">paracetamol</td>
+                            <td style="padding: 12px 15px; text-align: center; font-weight: 700;">3</td>
+                            <td style="padding: 12px 15px; text-align: center; color: var(--color-secondary);">g</td>
+                            <td style="padding: 12px 15px; text-align: center; font-weight: 800;">P</td>
+                            <td style="padding: 12px 15px;"></td>
+                        </tr>
+                        <!-- Row Rectal -->
+                        <tr class="fragment" data-fragment-index="8">
+                            <td style="padding: 12px 15px; font-weight: 800; color: var(--color-cta);">N02BE01</td>
+                            <td style="padding: 12px 15px; color: #D97706; font-weight: 800;">paracetamol</td>
+                            <td style="padding: 12px 15px; text-align: center; font-weight: 700;">3</td>
+                            <td style="padding: 12px 15px; text-align: center; color: var(--color-secondary);">g</td>
+                            <td style="padding: 12px 15px; text-align: center; font-weight: 800;">R</td>
+                            <td style="padding: 12px 15px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Botón Enlace -->
+            <div class="fragment" data-fragment-index="9" style="text-align: center;">
+                <a href="https://atcddd.fhi.no/atc_ddd_index/?code=N02BE&showdescription=no" target="_blank" style="background: var(--color-cta); color: white; padding: 15px 30px; border-radius: 40px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 15px; box-shadow: var(--shadow-lg); transition: transform 0.2s;">
+                    <i class="fas fa-search"></i> Ver en el Índice Internacional ATC/DDD <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>

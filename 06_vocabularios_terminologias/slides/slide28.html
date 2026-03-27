@@ -1,0 +1,97 @@
+<section class="slide" id="slide28">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl); width: 100%;">Atributos y Relaciones Transversales en SNOMED CT</h2>
+        
+        <div style="display: flex; align-items: center; justify-content: center; gap: 30px; width: 100%; margin-top: 20px;">
+            
+            <!-- Left Side: Hierarchy Stack (Source Concept) -->
+            <div class="fragment" data-fragment-index="1" style="display: flex; flex-direction: column; align-items: flex-start; width: 500px;">
+                
+                <!-- Grandparent (Simplified) -->
+                <div style="background: #3b82f6; color: white; padding: 8px 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 80%; display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 16px; height: 16px; background: #fef08a; border-radius: 50%;"></div>
+                    <span style="font-size: 0.9rem; font-weight: 500;">diabetes mellitus durante el embarazo, el parto y el puerperio (trastorno)</span>
+                </div>
+                
+                <!-- Arrow Up 1 -->
+                <div style="margin-left: 40px; height: 40px; display: flex; justify-content: center; align-items: center;">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                         <polygon points="20,0 40,25 30,25 30,40 10,40 10,25 0,25" fill="#f97316"/>
+                         <text x="20" y="22" fill="white" font-size="8" font-weight="bold" text-anchor="middle">Es un</text>
+                    </svg>
+                </div>
+                
+                <!-- Parent (Simplified) -->
+                <div style="background: #3b82f6; color: white; padding: 8px 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 90%; display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 16px; height: 16px; background: #fef08a; border-radius: 50%;"></div>
+                    <span style="font-size: 0.9rem; font-weight: 500;">complicación producida durante el embarazo (trastorno)</span>
+                </div>
+
+                <!-- Arrow Up 2 -->
+                <div style="margin-left: 40px; height: 40px; display: flex; justify-content: center; align-items: center;">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                         <polygon points="20,0 40,25 30,25 30,40 10,40 10,25 0,25" fill="#f97316"/>
+                         <text x="20" y="22" fill="white" font-size="8" font-weight="bold" text-anchor="middle">Es un</text>
+                    </svg>
+                </div>
+
+                <!-- Child Detail Card -->
+                <div style="background: #3b82f6; color: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow-lg); width: 100%; position: relative;">
+                    <div style="position: absolute; top: 15px; right: 15px; font-size: 1.2rem;">⭐ ↗</div>
+                    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+                        <div style="width: 20px; height: 20px; background: #fef08a; border-radius: 50%; flex-shrink: 0; margin-top: 2px;"></div>
+                        <h4 style="margin: 0; font-size: 1.15rem; color: white !important; font-weight: 500;">diabetes mellitus gestacional (trastorno)</h4>
+                    </div>
+                    <p style="font-size: 0.85rem; padding-left: 32px; margin: 0 0 15px 0; opacity: 0.9;">SCTID: 11687002</p>
+                    
+                    <div style="padding-left: 32px; font-size: 0.85rem; line-height: 1.5;">
+                        <p style="margin: 0; font-weight: 600;">11687002 | diabetes mellitus gestacional (trastorno) |</p>
+                        <div style="margin-top: 5px;">
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>DMG - diabetes mellitus gestacional</span></div>
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>diabetes mellitus gestacional (trastorno)</span></div>
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>diabetes mellitus del embarazo</span></div>
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>diabetes mellitus gestacional</span></div>
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>diabetes gestacional</span></div>
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>diabetes mellitus de comienzo en el embarazo</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center: Big Arrow "Sitio del hallazgo" -->
+            <div class="fragment" data-fragment-index="2" style="display: flex; align-items: center; justify-content: center; width: 280px; align-self: flex-end; margin-bottom: 70px;">
+                <svg width="100%" height="80" viewBox="0 0 280 80">
+                    <!-- Drop shadow for arrow -->
+                    <filter id="shadow">
+                      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.2"/>
+                    </filter>
+                    <polygon points="0,20 180,20 180,0 280,40 180,80 180,60 0,60" fill="#ea580c" filter="url(#shadow)"/>
+                    <text x="100" y="45" fill="white" font-weight="600" font-size="16" text-anchor="middle">Sitio del hallazgo</text>
+                </svg>
+            </div>
+
+            <!-- Right Side: Target Attribute (Anatomy) -->
+            <div class="fragment" data-fragment-index="3" style="width: 500px; align-self: flex-end; margin-bottom: 25px;">
+                <div style="background: #3b82f6; color: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow-xl); width: 100%; position: relative;">
+                    <div style="position: absolute; top: 15px; right: 15px; font-size: 1.2rem;">⭐ ↗</div>
+                    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+                        <div style="width: 20px; height: 20px; background: #fef08a; border-radius: 50%; flex-shrink: 0; margin-top: 2px;"></div>
+                        <h4 style="margin: 0; font-size: 1.15rem; color: white !important; font-weight: 500;">estructura del sistema endocrino<br>(estructura corporal)</h4>
+                    </div>
+                    <p style="font-size: 0.85rem; padding-left: 32px; margin: 0 0 15px 0; opacity: 0.9;">SCTID: 113331007</p>
+                    
+                    <div style="padding-left: 32px; font-size: 0.85rem; line-height: 1.5;">
+                        <p style="margin: 0; font-weight: 600;">113331007 | estructura del sistema endocrino (estructura corporal) |</p>
+                        <div style="margin-top: 5px;">
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>estructura del sistema endocrino (estructura corporal)</span></div>
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>estructura del sistema endocrino</span></div>
+                            <div style="display: flex; gap: 8px;"><span style="opacity: 0.7; font-style: italic;">es</span> <span>sistema endocrino</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</section>

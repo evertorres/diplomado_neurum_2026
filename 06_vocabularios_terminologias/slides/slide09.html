@@ -1,0 +1,85 @@
+<section class="slide" id="slide9">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl); width: 100%;">Estructura del Código CUPS</h2>
+        
+        <div class="grid-2" style="gap: var(--space-2xl); align-items: flex-start;">
+            <!-- Lado Izquierdo: Modelo en Escalera -->
+            <div style="position: relative; padding-top: 20px;">
+                <h3 style="text-align: center; color: var(--color-secondary); font-size: 1.1rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px;">Jerarquía de Codificación</h3>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px; position: relative;">
+                    <!-- Step 1 -->
+                    <div class="fragment" data-fragment-index="1" style="width: 200px; background: white; padding: 15px; border-radius: 12px; border: 2px solid var(--color-cta); position: relative; z-index: 4; box-shadow: var(--shadow-md);">
+                        <span style="display: block; font-weight: 800; color: var(--color-cta); font-size: 1.2rem; margin-bottom: 5px;">1-2</span>
+                        <p style="margin: 0; font-weight: 700; color: var(--color-primary);">Grupo</p>
+                        <p style="margin: 0; font-size: 0.85rem; color: var(--color-cta);">Zona anatómica</p>
+                    </div>
+
+                    <div class="fragment" data-fragment-index="1" style="position: absolute; left: 100px; top: 60px; width: 2px; height: 50px; background: #94A3B8; z-index: 1;"></div>
+                    <div class="fragment" data-fragment-index="1" style="position: absolute; left: 100px; top: 110px; width: 30px; height: 2px; background: #94A3B8; z-index: 1;"></div>
+
+                    <!-- Step 2 -->
+                    <div class="fragment" data-fragment-index="2" style="width: 200px; background: white; padding: 15px; border-radius: 12px; border: 2px solid var(--color-secondary); margin-left: 100px; position: relative; z-index: 3; box-shadow: var(--shadow-md);">
+                        <span style="display: block; font-weight: 800; color: var(--color-secondary); font-size: 1.2rem; margin-bottom: 5px;">3</span>
+                        <p style="margin: 0; font-weight: 700; color: var(--color-primary);">Subgrupo</p>
+                        <p style="margin: 0; font-size: 0.85rem; color: var(--color-secondary);">Tipo de procedimiento</p>
+                    </div>
+
+                    <div class="fragment" data-fragment-index="2" style="position: absolute; left: 200px; top: 160px; width: 2px; height: 50px; background: #94A3B8; z-index: 1;"></div>
+                    <div class="fragment" data-fragment-index="2" style="position: absolute; left: 200px; top: 210px; width: 30px; height: 2px; background: #94A3B8; z-index: 1;"></div>
+
+                    <!-- Step 3 -->
+                    <div class="fragment" data-fragment-index="3" style="width: 200px; background: #FEF3C7; padding: 15px; border-radius: 12px; border: 2px solid #D97706; margin-left: 200px; position: relative; z-index: 2; box-shadow: var(--shadow-md);">
+                        <span style="display: block; font-weight: 800; color: #D97706; font-size: 1.2rem; margin-bottom: 5px;">4</span>
+                        <p style="margin: 0; font-weight: 700; color: var(--color-primary);">Categoría</p>
+                        <p style="margin: 0; font-size: 0.85rem; color: #D97706;">Descripción genérica</p>
+                    </div>
+
+                    <div class="fragment" data-fragment-index="3" style="position: absolute; left: 300px; top: 260px; width: 2px; height: 50px; background: #94A3B8; z-index: 1;"></div>
+                    <div class="fragment" data-fragment-index="3" style="position: absolute; left: 300px; top: 310px; width: 30px; height: 2px; background: #94A3B8; z-index: 1;"></div>
+
+                    <!-- Step 4 -->
+                    <div class="fragment" data-fragment-index="4" style="width: 180px; background: #F1F5F9; padding: 15px; border-radius: 12px; border: 1px solid #CBD5E1; margin-left: 300px; position: relative; z-index: 1; box-shadow: var(--shadow-sm);">
+                        <span style="display: block; font-weight: 800; color: #64748B; font-size: 1.2rem; margin-bottom: 5px;">5-6</span>
+                        <p style="margin: 0; font-weight: 700; color: var(--color-primary);">Subcategoría</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lado Derecho: Tabla Lista Tabular -->
+            <div class="fragment" data-fragment-index="5" style="background: white; border-radius: 16px; box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid #E2E8F0;">
+                <div style="background: var(--color-primary); color: white; padding: 20px; text-align: center;">
+                    <p style="margin: 0; font-weight: 800; font-size: 0.75rem; letter-spacing: 1px;">RESOLUCIÓN 2706 DE 2025</p>
+                    <p style="margin: 0; font-weight: 700; font-size: 1.1rem;">ANEXO TÉCNICO 2 "LISTA TABULAR"</p>
+                </div>
+                
+                <table style="width: 100%; border-collapse: collapse; font-size: 1rem;">
+                    <thead>
+                        <tr style="background: #18181B; color: rgba(255,255,255,0.7); font-size: 0.8rem; text-transform: uppercase;">
+                            <th style="padding: 12px 20px; text-align: left; width: 35%;">Código</th>
+                            <th style="padding: 12px 20px; text-align: left;">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fragment" data-fragment-index="6" style="border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 15px 20px; font-weight: 800; color: var(--color-primary);">47.1.</td>
+                            <td style="padding: 15px 20px; color: var(--color-secondary);">RESECCIÓN DE APÉNDICE</td>
+                        </tr>
+                        <tr class="fragment" data-fragment-index="7" style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                            <td style="padding: 15px 20px; font-weight: 800; color: var(--color-primary);">47.1.1.</td>
+                            <td style="padding: 15px 20px; color: var(--color-secondary);">APENDICECTOMÍA</td>
+                        </tr>
+                        <tr class="fragment" data-fragment-index="8" style="border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 15px 20px; font-weight: 800; color: var(--color-primary);">47.1.1.02</td>
+                            <td style="padding: 15px 20px; color: var(--color-secondary);">APENDICECTOMÍA VÍA ABIERTA</td>
+                        </tr>
+                        <tr class="fragment" data-fragment-index="9" style="background: #FAFAFA;">
+                            <td style="padding: 15px 20px; font-weight: 800; color: var(--color-primary);">47.1.1.10</td>
+                            <td style="padding: 15px 20px; color: var(--color-secondary);">APENDICECTOMÍA VÍA LAPAROSCÓPICA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

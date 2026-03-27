@@ -1,0 +1,89 @@
+<section class="slide" id="slide27">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-2xl); width: 100%;">Ejemplo de Polijerarquía en SNOMED CT</h2>
+        
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 5px; padding-top: 20px;">
+            
+            <!-- Row 1: Parents -->
+            <div style="display: flex; gap: 80px; justify-content: center; width: 100%; z-index: 2;">
+                
+                <!-- Parent Card A -->
+                <div class="fragment" data-fragment-index="1" style="background: white; width: 400px; border-radius: 12px; box-shadow: var(--shadow-xl); border: 1px solid #e2e8f0; overflow: hidden;">
+                    <div style="background: #2fb9e8; padding: 12px; text-align: center; color: white;">
+                        <h4 style="margin: 0; font-size: 0.8rem; letter-spacing: 1px; color: white !important;">CONCEPTO PADRE A</h4>
+                    </div>
+                    <div style="padding: 20px;">
+                        <p style="margin: 0; font-size: 1.05rem; font-weight: 700; color: #1e40af;">Complicación producida durante el embarazo (trastorno)</p>
+                        <p style="margin-top: 10px; font-size: 0.8rem; font-family: monospace; background: #f8fafc; padding: 4px 10px; border-radius: 4px; display: inline-block;">SCTID: 609496007</p>
+                    </div>
+                </div>
+
+                <!-- Parent Card B -->
+                <div class="fragment" data-fragment-index="2" style="background: white; width: 400px; border-radius: 12px; box-shadow: var(--shadow-xl); border: 1px solid #e2e8f0; overflow: hidden;">
+                    <div style="background: #2fb9e8; padding: 12px; text-align: center; color: white;">
+                        <h4 style="margin: 0; font-size: 0.8rem; letter-spacing: 1px; color: white !important;">CONCEPTO PADRE B</h4>
+                    </div>
+                    <div style="padding: 20px;">
+                        <p style="margin: 0; font-size: 1.05rem; font-weight: 700; color: #1e40af;">Diabetes mellitus durante embarazo, parto y puerperio (trastorno)</p>
+                        <p style="margin-top: 10px; font-size: 0.8rem; font-family: monospace; background: #f8fafc; padding: 4px 10px; border-radius: 4px; display: inline-block;">SCTID: 199223000</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SVG Arrows Layer (Inline flow) -->
+            <div class="fragment" data-fragment-index="3" style="width: 100%; display: flex; justify-content: center; z-index: 1;">
+                 <svg width="600" height="100" viewBox="0 0 600 100" style="overflow: visible;">
+                    <defs>
+                        <marker id="arrowhead-premium" markerWidth="10" markerHeight="7" refX="7" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#f97316" />
+                        </marker>
+                    </defs>
+                    <!-- Arrow 1: From Child to Parent A -->
+                    <path d="M 280 100 L 120 15" stroke="#f97316" stroke-width="6" fill="none" marker-end="url(#arrowhead-premium)" stroke-dasharray="10,5" />
+                    <!-- Arrow 2: From Child to Parent B -->
+                    <path d="M 320 100 L 480 15" stroke="#f97316" stroke-width="6" fill="none" marker-end="url(#arrowhead-premium)" stroke-dasharray="10,5" />
+                    
+                    <!-- Labels -->
+                    <text x="190" y="45" fill="#f97316" font-weight="900" font-size="18" text-anchor="middle" transform="rotate(28, 190, 45)">| es un |</text>
+                    <text x="410" y="45" fill="#f97316" font-weight="900" font-size="18" text-anchor="middle" transform="rotate(-28, 410, 45)">| es un |</text>
+                 </svg>
+            </div>
+
+            <!-- Row 2: Child -->
+            <div class="fragment" data-fragment-index="3" style="background: #fff; width: 650px; border-radius: 12px; box-shadow: 0 20px 50px rgba(249, 115, 22, 0.2); border: 2px solid #f97316; overflow: hidden; z-index: 2;">
+                <div style="background: #f97316; padding: 12px; text-align: center; color: white;">
+                    <h4 style="margin: 0; font-size: 0.85rem; letter-spacing: 1px; color: white !important;">CONCEPTO HIJO (POLIJERARQUÍA)</h4>
+                </div>
+                <div style="padding: 25px;">
+                    <p style="margin: 0; font-size: 1.4rem; font-weight: 800; color: #c2410c; text-align: center;">Diabetes mellitus gestacional (trastorno)</p>
+                    <div style="text-align: center; margin-top: 10px;">
+                        <p style="font-size: 0.9rem; font-family: monospace; background: #fff7ed; padding: 5px 15px; border-radius: 4px; display: inline-block; border: 1px solid #fed7aa; color: #c2410c;">SCTID: 11687002</p>
+                    </div>
+                    
+                    <div style="margin-top: 25px; border-top: 1px dashed #fed7aa; padding-top: 20px;">
+                        <p style="font-size: 0.85rem; color: #9a3412; font-weight: 800; text-transform: uppercase; margin-bottom: 12px;">Sinónimos / Descripciones vinculadas:</p>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 0.95rem; color: #444; line-height: 1.6;">
+                            <li>• DMG - diabetes mellitus gestacional</li>
+                            <li>• diabetes mellitus gestacional (trastorno)</li>
+                            <li>• diabetes mellitus del embarazo</li>
+                            <li>• diabetes mellitus gestacional</li>
+                            <li>• diabetes gestacional</li>
+                            <li>• diabetes mellitus de comienzo en el embarazo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Summary Badge -->
+        <div class="fragment" data-fragment-index="4" style="margin-top: 60px; text-align: center; width: 100%;">
+            <div style="display: inline-block; background: #fff7ed; border: 2px solid #f97316; padding: 15px 40px; border-radius: 50px; box-shadow: var(--shadow-lg);">
+                <p style="margin: 0; font-size: 1.3rem; color: #c2410c; font-weight: 800;">
+                    | es un | Las relaciones forman un subtipo <span style="background: #ffedd5; padding: 2px 10px; border-radius: 5px;">"Polijerarquía"</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
