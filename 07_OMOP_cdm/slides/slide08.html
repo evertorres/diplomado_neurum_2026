@@ -1,0 +1,56 @@
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">CDM Características de Dominios</h2>
+        
+        <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid #e2e8f0;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: left;">
+                <thead style="background: linear-gradient(90deg, var(--color-primary), #2fb9e8); color: white;">
+                    <tr>
+                        <th style="padding: 20px; font-weight: 700; width: 20%;">Característica</th>
+                        <th style="padding: 20px; font-weight: 700; width: 35%;">Descripción y propósito</th>
+                        <th style="padding: 20px; font-weight: 700; width: 20%;">Convención</th>
+                        <th style="padding: 20px; font-weight: 700; width: 25%;">Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody style="color: var(--color-gray-700);">
+                    <tr class="fragment" data-fragment-index="1" style="border-bottom: 1px solid #f1f5f9;">
+                        <td style="padding: 15px 20px; font-weight: bold; color: var(--color-primary);">Centrado en el paciente</td>
+                        <td style="padding: 15px 20px;">Cada dominio tiene un identificador de paciente.</td>
+                        <td style="padding: 15px 20px;"><code style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">person_id</code></td>
+                        <td style="padding: 15px 20px; font-family: monospace; font-size: 0.85rem;">person_id: 123</td>
+                    </tr>
+                    <tr class="fragment" data-fragment-index="2" style="border-bottom: 1px solid #f1f5f9;">
+                        <td style="padding: 15px 20px; font-weight: bold; color: var(--color-primary);">Identificado único de dominio</td>
+                        <td style="padding: 15px 20px;">Cada dominio en la tabla tiene una llave primaria para identificar las entidades del dominio.</td>
+                        <td style="padding: 15px 20px;"><code style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">&lt;entity&gt;_id</code></td>
+                        <td style="padding: 15px 20px; font-family: monospace; font-size: 0.85rem;">condition_occurrence_id: 55844</td>
+                    </tr>
+                    <tr class="fragment" data-fragment-index="3" style="border-bottom: 1px solid #f1f5f9;">
+                        <td style="padding: 15px 20px; font-weight: bold; color: var(--color-primary);">Concepto estándar alineado</td>
+                        <td style="padding: 15px 20px;">Integración con el vocabulario usando llave foránea en el vocabulario estándar para el concepto estándar.</td>
+                        <td style="padding: 15px 20px;"><code style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">&lt;entity&gt;_concept_id</code></td>
+                        <td style="padding: 15px 20px; font-family: monospace; font-size: 0.85rem;">condition_concept_id: 313217 (SNOMED: Atrial Fibrillation)</td>
+                    </tr>
+                    <tr class="fragment" data-fragment-index="4" style="border-bottom: 1px solid #f1f5f9;">
+                        <td style="padding: 15px 20px; font-weight: bold; color: var(--color-primary);">Conceptos de origen</td>
+                        <td style="padding: 15px 20px;">Procedencia. Llave foránea en vocabulario estándar para el vocabulario fuente original.</td>
+                        <td style="padding: 15px 20px;"><code style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">&lt;entity&gt;_source_concept_id</code></td>
+                        <td style="padding: 15px 20px; font-family: monospace; font-size: 0.85rem;">condition_source_concept_id: 313217 (ICD9CM)</td>
+                    </tr>
+                    <tr class="fragment" data-fragment-index="5" style="border-bottom: 1px solid #f1f5f9;">
+                        <td style="padding: 15px 20px; font-weight: bold; color: var(--color-primary);">Valor de Origen</td>
+                        <td style="padding: 15px 20px;">Procedencia. Información textual de la fuente original. No para ser usada en analítica.</td>
+                        <td style="padding: 15px 20px;"><code style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">&lt;entity&gt;_source_value</code></td>
+                        <td style="padding: 15px 20px; font-family: monospace; font-size: 0.85rem;">condition_source_value: 427.31</td>
+                    </tr>
+                    <tr class="fragment" data-fragment-index="6">
+                        <td style="padding: 15px 20px; font-weight: bold; color: var(--color-primary);">Tipo fuente</td>
+                        <td style="padding: 15px 20px;">Delinea el origen de la información fuente, estandarizada dentro de los Vocabularios Estandarizados.</td>
+                        <td style="padding: 15px 20px;"><code style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">&lt;entity&gt;_type_concept_id</code></td>
+                        <td style="padding: 15px 20px; font-family: monospace; font-size: 0.85rem;">condition_type_concept_id: 42898140</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

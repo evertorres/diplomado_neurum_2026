@@ -1,0 +1,56 @@
+<section class="slide" id="slide10">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">¿Qué es un concepto? y ATHENA</h2>
+        
+        <div style="display: flex; gap: 40px; align-items: stretch;">
+            <div class="fragment" data-fragment-index="1" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
+                <div style="background: white; border-radius: 12px; padding: 25px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--color-primary);">
+                    <h3 style="color: var(--color-primary); margin: 0 0 10px 0;">Concepto Clínico</h3>
+                    <p style="margin: 0; color: var(--color-gray-700);">Un evento, entidad o característica específica del ámbito clínico (ej. un diagnóstico, un medicamento, un procedimiento). Todo es un concepto en OMOP.</p>
+                </div>
+                <div style="background: white; border-radius: 12px; padding: 25px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--color-secondary);">
+                    <h3 style="color: var(--color-secondary); margin: 0 0 10px 0;">Concept ID</h3>
+                    <p style="margin: 0; color: var(--color-gray-700);">Identificador entero único que OMOP asigna internamente, independiente del sistema original (como CIEX, SNOMED, LOINC).</p>
+                </div>
+                <div style="background: white; border-radius: 12px; padding: 25px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--color-accent);">
+                    <h3 style="color: var(--color-accent); margin: 0 0 10px 0;">ATHENA</h3>
+                    <p style="margin: 0; color: var(--color-gray-700);">Es la interfaz web de OHDSI (athena.ohdsi.org) que permite explorar y buscar vocabularios, conceptos y descargar las tablas de terminología estandarizada.</p>
+                </div>
+            </div>
+
+            <div class="fragment" data-fragment-index="2" style="flex: 1.5; background: #1e293b; border-radius: 12px; padding: 15px; box-shadow: var(--shadow-lg); display: flex; flex-direction: column;">
+                <div style="display: flex; gap: 8px; margin-bottom: 15px;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #eab308;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
+                    <span style="color: white; font-size: 0.8rem; margin-left: 10px; opacity: 0.7;">athena.ohdsi.org/search-terms/terms</span>
+                </div>
+                <div style="flex: 1; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                     <!-- Simulating Athena search result -->
+                     <div style="width: 100%; padding: 20px;">
+                        <input type="text" value="Atrial Fibrillation" style="width: 100%; padding: 12px; font-size: 1.2rem; border: 2px solid var(--color-primary); border-radius: 8px; margin-bottom: 20px;" disabled>
+                        
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                            <tr style="background: var(--color-gray-100); text-align: left;">
+                                <th style="padding: 10px;">Concept ID</th>
+                                <th style="padding: 10px;">Concept Name</th>
+                                <th style="padding: 10px;">Domain</th>
+                                <th style="padding: 10px;">Vocabulary</th>
+                                <th style="padding: 10px;">Concept Class</th>
+                                <th style="padding: 10px;">Standard</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px; color: var(--color-primary); font-weight: bold;">313217</td>
+                                <td style="padding: 10px;">Atrial fibrillation</td>
+                                <td style="padding: 10px;">Condition</td>
+                                <td style="padding: 10px;">SNOMED</td>
+                                <td style="padding: 10px;">Clinical Finding</td>
+                                <td style="padding: 10px; color: green; font-weight: bold;">S</td>
+                            </tr>
+                        </table>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

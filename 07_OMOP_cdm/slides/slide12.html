@@ -1,0 +1,21 @@
+<section class="slide" id="slide12">
+    <div class="slide-content left" style="max-width: 1300px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">Jerarquía en OMOP</h2>
+        
+        <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: var(--shadow-lg); border: 1px solid #e2e8f0;">
+            <p style="text-align: center; color: var(--color-gray-600); margin-bottom: 30px; font-size: 1.1rem;">
+                La tabla <strong>CONCEPT_ANCESTOR</strong> permite resolver la relación desde conceptos muy generales hasta específicos en múltiples niveles.
+            </p>
+            
+            <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 30px;">
+                <img src="images/slide12_jerarquia_conceptos.png" alt="Jerarquía de Conceptos" class="slide-image" style="max-height: 55vh; width: auto; box-shadow: var(--shadow-sm); border: 1px solid #f1f5f9; border-radius: 8px;">
+            </div>
+            
+            <div class="fragment" style="padding: 20px; background: #f0f9ff; border-left: 5px solid var(--color-primary); border-radius: 4px;">
+                <p style="margin: 0; color: #0369a1; font-size: 1.1rem; line-height: 1.5;">
+                    💡 <strong>Ejemplo práctico:</strong> Al registrar un concepto específico como <strong>"Atrial fibrillation"</strong>, el sistema reconoce mediante esta tabla que su ancestro superior es <strong>"Heart disease"</strong>. Esto permite que, si realizamos una consulta general buscando pacientes con enfermedades del corazón, el paciente con fibrilación auricular sea incluido automáticamente sin tener que listar cada código por separado.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
