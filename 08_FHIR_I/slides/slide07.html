@@ -1,0 +1,50 @@
+<section class="slide" id="slide06">
+    <div class="slide-content" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">Herramientas Orientadas a Desarrolladores</h2>
+        
+        <div style="display: grid; grid-template-columns: 2fr 3fr; gap: 40px; align-items: center;">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <p class="fragment" data-fragment-index="1" style="font-size: 1.2rem; color: var(--color-gray-700);">A diferencia de versiones anteriores, FHIR tiene un claro enfoque hacia la implementación y facilita herramientas comunes en la industria del software:</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div class="fragment" data-fragment-index="2" style="background: white; border-radius: 12px; padding: 15px 20px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 15px; border-left: 5px solid var(--color-primary); transition: transform 0.3s ease;">
+                        <div style="font-size: 2rem; flex-shrink: 0;">💻</div>
+                        <div>
+                            <h4 style="margin: 0; color: var(--color-primary); font-size: 1.1rem; margin-bottom: 4px;">Editores de Código</h4>
+                            <p style="margin: 0; color: var(--color-gray-700); font-size: 0.95rem; line-height: 1.4;">Integración directa con IDEs (como VS Code).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fragment" data-fragment-index="3" style="background: white; border-radius: 12px; padding: 15px 20px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 15px; border-left: 5px solid var(--color-secondary); transition: transform 0.3s ease;">
+                        <div style="font-size: 2rem; flex-shrink: 0;">🔌</div>
+                        <div>
+                            <h4 style="margin: 0; color: var(--color-secondary); font-size: 1.1rem; margin-bottom: 4px;">Clientes API REST</h4>
+                            <p style="margin: 0; color: var(--color-gray-700); font-size: 0.95rem; line-height: 1.4;">Interacción sencilla mediante Postman, Insomnia, etc.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fragment" data-fragment-index="4" style="background: white; border-radius: 12px; padding: 15px 20px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 15px; border-left: 5px solid var(--color-accent); transition: transform 0.3s ease;">
+                        <div style="font-size: 2rem; flex-shrink: 0;">📊</div>
+                        <div>
+                            <h4 style="margin: 0; color: var(--color-accent); font-size: 1.1rem; margin-bottom: 4px;">Tableros y Dashboards</h4>
+                            <p style="margin: 0; color: var(--color-gray-700); font-size: 0.95rem; line-height: 1.4;">Análisis y monitorización en tiempo real.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fragment" data-fragment-index="5" style="background: white; border-radius: 12px; padding: 15px 20px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 15px; border-left: 5px solid #10B981; transition: transform 0.3s ease;">
+                        <div style="font-size: 2rem; flex-shrink: 0;">📚</div>
+                        <div>
+                            <h4 style="margin: 0; color: #10B981; font-size: 1.1rem; margin-bottom: 4px;">Librerías de Cliente</h4>
+                            <p style="margin: 0; color: var(--color-gray-700); font-size: 0.95rem; line-height: 1.4;">SDKs en Python, Java, C#, JS (HAPI FHIR, Firely, etc).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fragment" data-fragment-index="6" style="text-align: center;">
+                <img src="images/slide03_vscode.png" alt="Herramientas FHIR VS Code" class="slide-image" style="cursor: pointer;" onclick="document.dispatchEvent(new CustomEvent('openModal', {detail: {src: this.src}}))">
+                <p style="font-size: 0.9rem; color: var(--color-gray-500); margin-top: 10px;">Entorno de desarrollo interpretando recursos FHIR mediante extensiones</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+<section class="slide" id="slide21">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: var(--space-xl);">
+            <div
+                style="background: var(--color-primary); color: white; border-radius: 12px; padding: 15px 30px; font-size: 2.5rem; box-shadow: var(--shadow-md);">
+                🔎</div>
+            <h2 style="margin: 0; color: var(--color-primary);">Ejemplo de Paciente</h2>
+        </div>
+
+        <p class="fragment" data-fragment-index="1"
+            style="font-size: 1.4rem; color: var(--color-gray-700); margin-bottom: 20px;">
+            A través de una URL endpoint (API REST), estructuramos la petición para consultar un recurso en particular.
+        </p>
+
+        <div class="fragment" data-fragment-index="2"
+            style="background: #1e1e1e; color: #d4d4d4; font-family: monospace; font-size: 1.8rem; padding: 30px; border-radius: 12px; box-shadow: var(--shadow-lg); text-align: center; margin-bottom: 40px; border: 1px solid #333; word-break: break-all;">
+            <span style="color: #4fc1ff;">{{fhirurl}}</span>/<span style="color: #ce9178;">Patient</span>/<span
+                style="color: #b5cea8;">mr-neurum</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1.3rem;">
+            <div class="fragment" data-fragment-index="3" style="display: flex; align-items: center; gap: 15px;">
+                <span
+                    style="display: inline-block; width: 250px; font-weight: bold; color: var(--color-gray-800); text-align: right;">{{fhirurl}}
+                    :</span>
+                <span
+                    style="color: var(--color-gray-600); background: #f1f5f9; padding: 5px 15px; border-radius: 6px;">https://hapi.fhir.org/baseR4</span>
+            </div>
+            <div class="fragment" data-fragment-index="4" style="display: flex; align-items: center; gap: 15px;">
+                <span
+                    style="display: inline-block; width: 250px; font-weight: bold; color: var(--color-gray-800); text-align: right;">[Colección
+                    de recursos] :</span>
+                <span
+                    style="color: var(--color-primary); font-weight: bold; background: #e0e7ff; padding: 5px 15px; border-radius: 6px;">Patient</span>
+            </div>
+            <div class="fragment" data-fragment-index="5" style="display: flex; align-items: center; gap: 15px;">
+                <span
+                    style="display: inline-block; width: 250px; font-weight: bold; color: var(--color-gray-800); text-align: right;">[ID
+                    de recurso] :</span>
+                <span
+                    style="color: var(--color-secondary); font-weight: bold; background: #dbeafe; padding: 5px 15px; border-radius: 6px;">mr-neurum</span>
+            </div>
+        </div>
+    </div>
+</section>

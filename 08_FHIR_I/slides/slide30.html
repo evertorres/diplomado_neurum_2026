@@ -1,0 +1,18 @@
+<section class="slide" id="slide25">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="fragment" data-fragment-index="1" style="background: #fef2f2; padding: 25px; border-radius: 12px; border-left: 5px solid #ef4444; margin-bottom: 30px; max-width: 1000px; box-shadow: var(--shadow-sm);">
+                <h3 style="color: #ef4444; margin: 0 0 10px 0; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.5rem;">⚠️</span> Desventajas del Patrón Sincrónico / Fachada Directa
+                </h3>
+                <p style="font-size: 1.2rem; color: var(--color-gray-700); margin: 0;">
+                    En una implementación temprana puede servir dado que las peticiones son pocas. Pero, <strong>¿qué sucede cuando hay muchos clientes externos simultáneos?</strong> (Ej: por algún motivo se consulta 10 mil veces un mismo recurso en tiempo real). El sistema origen (HIS) puede colapsar.
+                </p>
+            </div>
+            
+            <div class="fragment" data-fragment-index="2" style="width: 100%; text-align: center;">
+                <img src="images/slide25_middleware.png" alt="Desventajas sincrónico" class="slide-image" style="cursor: pointer; max-height: 50vh;" onclick="document.dispatchEvent(new CustomEvent('openModal', {detail: {src: this.src}}))">
+            </div>
+        </div>
+    </div>
+</section>

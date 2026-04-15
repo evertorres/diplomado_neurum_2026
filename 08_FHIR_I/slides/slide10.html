@@ -1,0 +1,59 @@
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">Diferencias con OMOP CDM</h2>
+        
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <p class="fragment" data-fragment-index="1" style="font-size: 1.2rem; color: var(--color-gray-700); text-align: center; max-width: 900px; margin-bottom: 30px;">
+                Mientras que OMOP CDM está optimizado para <strong>analítica e investigación prospectiva/retrospectiva</strong> sobre datos masivos, FHIR está optimizado para <strong>interoperabilidad clínica, intercambio transaccional y aplicaciones en tiempo real</strong>.
+            </p>
+            
+            <div style="width: 100%; max-width: 1200px; margin: 0 auto; overflow: hidden; padding: 10px;">
+                <table style="width: 100%; border-collapse: separate; border-spacing: 0; box-shadow: var(--shadow-md); background: white; border-radius: 12px; font-size: 1.1rem; line-height: 1.5; margin-bottom: 20px;">
+                    <thead style="background-color: #F8FAFC;">
+                        <tr>
+                            <th style="padding: 20px; border-bottom: 2px solid #E2E8F0; text-align: center; width: 20%; color: var(--color-primary); font-size: 1.2rem; border-top-left-radius: 12px;">Característica</th>
+                            <th style="padding: 20px; border-bottom: 2px solid #E2E8F0; text-align: center; width: 40%; border-left: 1px solid #E2E8F0; background: white;">
+                                <img src="images/HL7_FHIR_logo.webp" alt="HL7 FHIR" style="max-height: 50px; display: inline-block;">
+                            </th>
+                            <th style="padding: 20px; border-bottom: 2px solid #E2E8F0; text-align: center; width: 40%; border-left: 1px solid #E2E8F0; background: white; border-top-right-radius: 12px;">
+                                <img src="images/OHDSI-logo-with-text-horizontal-colored-web-header.png" alt="OHDSI" style="max-height: 50px; display: inline-block;">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila 1 -->
+                        <tr class="fragment fade-left" data-fragment-index="2" style="background: white;">
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; font-weight: 600; color: var(--color-primary); vertical-align: middle;">🎯 Propósito Principal</td>
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Intercambio transaccional granular y soporte a flujos de trabajo clínicos interactivos.</td>
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Análisis observacional a gran escala, investigación epidemiológica y poblacional de Big Data.</td>
+                        </tr>
+                        <!-- Fila 2 -->
+                        <tr class="fragment fade-left" data-fragment-index="3" style="background: #F8FAFC;">
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; font-weight: 600; color: var(--color-primary); vertical-align: middle;">🏗️ Arquitectura</td>
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Grafo de recursos conectados y ligeros (RESTful, API moderna, JSON/XML).</td>
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Estructura de Base de Datos relacional estandarizada (Tablas SQL estrictas).</td>
+                        </tr>
+                        <!-- Fila 3 -->
+                        <tr class="fragment fade-left" data-fragment-index="4" style="background: white;">
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; font-weight: 600; color: var(--color-primary); vertical-align: middle;">⏱️ Enfoque Temporal</td>
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Orientado al tiempo real o cuasi-real (punto de atención y respuesta instantánea del paciente).</td>
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Histórico, longitudinal y retrospectivo (Análisis unificado de cargas de extracción ETL).</td>
+                        </tr>
+                        <!-- Fila 4 -->
+                        <tr class="fragment fade-left" data-fragment-index="5" style="background: #F8FAFC;">
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; font-weight: 600; color: var(--color-primary); vertical-align: middle;">📚 Vocabularios</td>
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Flexible: Adopta el vocabulario de la implementación y permite mapeos variables localizados.</td>
+                            <td style="padding: 15px 25px; border-bottom: 1px solid #F1F5F9; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Estricto: Modelo atado a un vocabulario estándar normalizado obligando a mapeo.</td>
+                        </tr>
+                        <!-- Fila 5 -->
+                        <tr class="fragment fade-left" data-fragment-index="6" style="background: white;">
+                            <td style="padding: 15px 25px; font-weight: 600; color: var(--color-primary); vertical-align: middle; border-bottom-left-radius: 12px;">🎯 Casos de Uso</td>
+                            <td style="padding: 15px 25px; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle;">Registro Clínico Digital, Aplicaciones Móviles de Pacientes, Prescripción interconectada.</td>
+                            <td style="padding: 15px 25px; border-left: 1px solid #F1F5F9; color: var(--color-gray-700); vertical-align: middle; border-bottom-right-radius: 12px;">Estudios clínicos mundiales, Farmacovigilancia, Fenotipificación global.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

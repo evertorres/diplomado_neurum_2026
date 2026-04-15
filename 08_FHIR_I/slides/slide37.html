@@ -1,0 +1,122 @@
+<section class="slide" id="slide37">
+    <div class="slide-content" style="max-width: 1400px; width: 100%; padding: 20px;">
+        <h2 style="text-align: center; margin-bottom: 30px; color: var(--color-primary);">Ecosistema de Sistemas Interconectados</h2>
+        
+        <div style="position: relative; width: 100%; height: 650px;">
+            
+            <!-- CENTRAL NODE -->
+            <div class="fragment" data-fragment-index="1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <div style="font-weight: bold; font-size: 1.5rem; color: #475569; margin-bottom: 5px;">CDR FHIR<br>SYSTEM</div>
+                <img src="images/slide37_icon_fhircloud.png" alt="FHIR Cloud" style="height: 120px; margin-bottom: 15px;">
+                <div style="display: flex; align-items: center; justify-content: center; height: 30px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="4" style="width: 30px;"><path d="M12 2v20M8 6l4-4 4 4M8 18l4 4 4-4"/></svg>
+                </div>
+                <!-- ESB Server is a second DB icon? the image shows two DB stacks -->
+                <img src="images/slide36_icon_database.png" alt="Servidor ESB" style="height: 60px; clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%); margin-top: -15px;">
+                <div style="font-weight: bold; font-size: 1.5rem; color: #475569; margin-top: 5px;">ESB</div>
+            </div>
+
+            <!-- DYNAMIC CONNECTORS & FORMATS -->
+            <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
+                <defs>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#E60000" />
+                    </marker>
+                </defs>
+                
+                <!-- Lines to HIS (Top Left) -->
+                <line class="fragment" data-fragment-index="3" x1="420" y1="180" x2="620" y2="350" stroke="#E60000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+                
+                <!-- Lines to LIS (Mid Left) -->
+                <line class="fragment" data-fragment-index="4" x1="400" y1="400" x2="570" y2="400" stroke="#E60000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+                <!-- Lines to PAC/RIS (Bottom Left) -->
+                <line class="fragment" data-fragment-index="5" x1="420" y1="580" x2="590" y2="470" stroke="#E60000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+                <!-- Lines to WebServer (Top Right) -->
+                <line class="fragment" data-fragment-index="6" x1="900" y1="180" x2="720" y2="330" stroke="#E60000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+                <!-- Lines to IoT/Mobile (Bottom Right) -->
+                <line class="fragment" data-fragment-index="7" x1="900" y1="560" x2="750" y2="450" stroke="#E60000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+            </svg>
+
+            <!-- JSON Icon -->
+            <img class="fragment" data-fragment-index="2" src="images/slide36_icon_json.png" alt="JSON" style="position: absolute; top: 400px; left: 540px; height: 50px; z-index: 5;">
+            <!-- XML Icon -->
+            <img class="fragment" data-fragment-index="2" src="images/slide36_icon_xml.png" alt="XML" style="position: absolute; top: 400px; right: 540px; height: 50px; z-index: 5;">
+
+            <!-- HIS (Top Left) -->
+            <div class="fragment" data-fragment-index="3" style="position: absolute; top: 30px; left: 15%; display: flex; align-items: center; gap: 15px;">
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
+                    <div style="display: flex; align-items: flex-end; position: relative;">
+                        <img src="images/slide36_icon_doctor_male.png" alt="Doctor" style="height: 60px; z-index: 1;">
+                        <img src="images/slide36_icon_nurse.png" alt="Enfermera" style="height: 55px; margin-left: -15px; margin-bottom: -10px; z-index: 2;">
+                        <img src="images/slide36_icon_doctor_female.png" alt="Doctora" style="height: 60px; margin-left: -10px; z-index: 1;">
+                    </div>
+                    <img src="images/slide36_icon_monitor.png" alt="Monitor vitales" style="height: 60px; margin-right: 20px;">
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.6rem; font-weight: bold; color: #475569; margin-bottom: 5px;">HIS</div>
+                    <img src="images/slide36_icon_database.png" alt="Base de datos HIS" style="height: 100px;">
+                </div>
+            </div>
+
+            <!-- LIS (Mid Left) -->
+            <div class="fragment" data-fragment-index="4" style="position: absolute; top: 280px; left: 5%; display: flex; align-items: center; gap: 15px;">
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
+                    <img src="images/slide36_icon_bacteriologist.png" alt="Bacterióloga" style="height: 60px;">
+                    <img src="images/slide36_icon_centrifugator.png" alt="Centrifugadora LIS" style="height: 60px;">
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.6rem; font-weight: bold; color: #475569; margin-bottom: 5px;">LIS</div>
+                    <img src="images/slide36_icon_database.png" alt="Base de datos LIS" style="height: 100px;">
+                </div>
+            </div>
+
+            <!-- PAC/RIS (Bottom Left) -->
+            <div class="fragment" data-fragment-index="5" style="position: absolute; bottom: 10px; left: 15%; display: flex; align-items: center; gap: 15px;">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                    <img src="images/slide36_icon_resonator.png" alt="Resonador" style="height: 60px;">
+                    <div style="display: flex; gap: 10px;">
+                        <img src="images/slide36_icon_radiologytechnician.png" alt="Técnico" style="height: 50px;">
+                        <img src="images/slide36_icon_radiologist.png" alt="Radiólogo" style="height: 50px;">
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.6rem; font-weight: bold; color: #475569; margin-bottom: 5px;">PAC/RIS</div>
+                    <img src="images/slide36_icon_database.png" alt="Base de datos PACS" style="height: 100px;">
+                </div>
+            </div>
+
+            <!-- WebServer (Top Right) -->
+            <div class="fragment" data-fragment-index="6" style="position: absolute; top: 30px; right: 20%; display: flex; align-items: center; gap: 15px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.6rem; font-weight: bold; color: #475569; margin-bottom: 5px;">WebServer</div>
+                    <img src="images/slide36_icon_database.png" alt="WebServer DB" style="height: 100px;">
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+                    <img src="images/slide36_icon_ambulance.png" alt="Ambulancia" style="height: 60px;">
+                    <img src="images/slide36_icon_firefighter.png" alt="Paramédico" style="height: 60px; margin-left: 20px;">
+                </div>
+            </div>
+
+            <!-- IoT/Mobile App (Bottom Right) -->
+            <div class="fragment" data-fragment-index="7" style="position: absolute; bottom: 30px; right: 10%; display: flex; align-items: center; gap: 15px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.6rem; font-weight: bold; color: transparent; margin-bottom: 5px;">IoT</div>
+                    <img src="images/slide36_icon_database.png" alt="IoT DB" style="height: 100px;">
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px; background: white; padding: 10px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="display: flex; flex-wrap: wrap; width: 100px; gap: 5px; justify-content: center;">
+                        <img src="images/slide36_icon_smartwtach.png" alt="Reloj" style="height: 50px;">
+                        <img src="images/slide36_icon_glucometer.png" alt="Glucómetro" style="height: 45px;">
+                        <img src="images/slide36_icon_smartphone.png" alt="Smartphone" style="height: 45px;">
+                        <img src="images/slide36_icon_bpmonitor.png" alt="Tensión" style="height: 40px;">
+                    </div>
+                    <img src="images/slide36_icon_person.png" alt="Paciente IoT" style="height: 80px;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

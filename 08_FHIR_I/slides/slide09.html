@@ -1,0 +1,45 @@
+<section class="slide" id="slide08">
+    <div class="slide-content" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl); display: flex; align-items: center; justify-content: center; gap: 15px;">
+            <img src="images/HL7_FHIR_logo.webp" alt="FHIR" style="height: 50px;"> 
+            <span style="color: var(--color-primary);">¿Qué son los Recursos?</span>
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 5fr 4fr; gap: 40px; align-items: center;">
+            
+            <!-- Izquierda: Fichas -->
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="fragment" data-fragment-index="1" style="background: white; border-radius: 10px; padding: 18px 25px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--color-primary); display: flex; align-items: center; gap: 15px; font-size: 1.25rem; color: var(--color-gray-800); transition: transform 0.3s ease;">
+                    <span style="font-size: 1.8rem;">📦</span>
+                    Unidades de intercambio discretas pequeñas
+                </div>
+                
+                <div class="fragment" data-fragment-index="2" style="background: white; border-radius: 10px; padding: 18px 25px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--color-secondary); display: flex; align-items: center; gap: 15px; font-size: 1.25rem; color: var(--color-gray-800); transition: transform 0.3s ease;">
+                    <span style="font-size: 1.8rem;">⚙️</span>
+                    Conducta y significado definidos
+                </div>
+                
+                <div class="fragment" data-fragment-index="3" style="background: white; border-radius: 10px; padding: 18px 25px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--color-accent); display: flex; align-items: center; gap: 15px; font-size: 1.25rem; color: var(--color-gray-800); transition: transform 0.3s ease;">
+                    <span style="font-size: 1.8rem;">📍</span>
+                    Identidad y ubicación definidas
+                </div>
+
+                <div class="fragment" data-fragment-index="4" style="background: white; border-radius: 10px; padding: 18px 25px; box-shadow: var(--shadow-sm); border-left: 5px solid #10B981; display: flex; align-items: center; gap: 15px; font-size: 1.25rem; color: var(--color-gray-800); transition: transform 0.3s ease;">
+                    <span style="font-size: 1.8rem;">🏥</span>
+                    La unidad más pequeña de transacción que le 'interesa' a la salud
+                </div>
+
+                <div class="fragment" data-fragment-index="5" style="background: white; border-radius: 10px; padding: 18px 25px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--color-gray-500); display: flex; flex-direction: column; gap: 5px; font-size: 1.15rem; color: var(--color-gray-700); transition: transform 0.3s ease;">
+                    <div><strong>V2:</strong> Parecido a los segmentos</div>
+                    <div><strong>V3:</strong> Parecido a los CMETs</div>
+                </div>
+            </div>
+
+            <!-- Derecha: Imagen Lego -->
+            <div class="fragment" data-fragment-index="6" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: white; padding: 20px; border-radius: 15px; box-shadow: var(--shadow-md); text-align: center; height: 100%;">
+                <img src="images/medical_lego_blocks.png" alt="Analogía de piezas Lego en salud" style="max-height: 450px; max-width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #E2E8F0;" class="slide-image hover-lift" onclick="document.dispatchEvent(new CustomEvent('openModal', {detail: {src: this.src}}))">
+            </div>
+
+        </div>
+    </div>
+</section>
