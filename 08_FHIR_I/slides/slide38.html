@@ -1,11 +1,26 @@
-<section class="slide" id="slide32">
-    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
-        <h2 style="text-align: center; margin-bottom: var(--space-xl);">Integración: CDR FHIR System</h2>
-        
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="fragment" data-fragment-index="1" style="width: 100%; text-align: center;">
-                <img src="images/slide32_CDR_FHIR.png" alt="Integración CDR FHIR System" class="slide-image" style="cursor: pointer; max-height: 70vh;" onclick="document.dispatchEvent(new CustomEvent('openModal', {detail: {src: this.src}}))">
+<section class="slide" id="slide38">
+    <div class="slide-content center" style="max-width: 1400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">Estructura General de un Recurso FHIR</h2>
+        <h3 style="text-align: center; color: var(--color-secondary); margin-top: -15px; margin-bottom: var(--space-xl); font-weight: 500;">2.26 Base resource definitions</h3>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: stretch;">
+            
+            <!-- Elementos Comunes -->
+            <div class="fragment" data-fragment-index="1" style="background: white; border-radius: 16px; padding: var(--space-lg); box-shadow: var(--shadow-lg); border-top: 4px solid var(--color-primary); display: flex; flex-direction: column;">
+                <h4 style="color: var(--color-primary); margin-bottom: var(--space-md); text-align: center; font-size: 1.5rem;">Elementos Comunes</h4>
+                <div style="flex-grow: 1; display: flex; justify-content: center; align-items: center; background: var(--color-surface); border-radius: 8px; padding: var(--space-sm);">
+                    <img src="images/slide38_comonelements.png" alt="Elementos comunes de FHIR" class="slide-image zoomable-image" style="cursor: zoom-in; max-height: 45vh; margin: 0; box-shadow: none;">
+                </div>
             </div>
+
+            <!-- Segmento Narrativo -->
+            <div class="fragment" data-fragment-index="2" style="background: white; border-radius: 16px; padding: var(--space-lg); box-shadow: var(--shadow-lg); border-top: 4px solid var(--color-secondary); display: flex; flex-direction: column;">
+                <h4 style="color: var(--color-secondary); margin-bottom: var(--space-md); text-align: center; font-size: 1.5rem;">Segmento Narrativo</h4>
+                <div style="flex-grow: 1; display: flex; justify-content: center; align-items: center; background: var(--color-surface); border-radius: 8px; padding: var(--space-sm);">
+                    <img src="images/slide38_narrative.png" alt="Segmento narrativo de FHIR" class="slide-image zoomable-image" style="cursor: zoom-in; max-height: 45vh; margin: 0; box-shadow: none;">
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
