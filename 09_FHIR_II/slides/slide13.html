@@ -1,0 +1,131 @@
+<section class="slide" id="slide13">
+    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: center; height: 100%; max-width: 1300px; margin: 0 auto;">
+        
+        <div style="margin-bottom: 30px; text-align: left;">
+            <h2 style="color: var(--color-primary); margin-bottom: 5px; font-size: 3.5rem;">Bundle</h2>
+            <h3 style="color: var(--color-secondary); font-size: 2rem; font-weight: 500;">
+                <a href="https://hl7.org/fhir/R4/bundle.html" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 4px; transition: opacity 0.2s;">2.36 Resource Bundle</a>
+            </h3>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 5fr 6fr; gap: 60px; align-items: center;">
+            
+            <!-- Left Column: The diagram -->
+            <div class="fragment" data-fragment-index="1" style="background-color: #FF9900; border: 4px solid #E11921; border-radius: 4px; padding: 20px 25px; width: 100%; position: relative; text-align: center; box-shadow: var(--shadow-xl);">
+                <!-- Top section -->
+                <div style="margin-bottom: 15px;">
+                    <p style="color: white; font-size: 1rem; margin: 0; font-style: italic; font-family: serif;">&laquo;A container for a collection of resources&raquo;</p>
+                    <h3 style="color: white; font-size: 2.5rem; margin: 0; font-weight: 900; letter-spacing: 1px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">BUNDLE</h3>
+                    <svg style="position: absolute; top: 10px; right: 10px; color: white;" width="24" height="24" viewBox="0 0 32 32">
+                        <rect x="8" y="4" width="20" height="24" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <rect x="4" y="8" width="8" height="4" fill="#FF9900" stroke="currentColor" stroke-width="2"/>
+                        <rect x="4" y="16" width="8" height="4" fill="#FF9900" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <!-- List of entries -->
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    
+                    <!-- Entry 1 -->
+                    <div class="fragment" data-fragment-index="2" style="display: flex; align-items: stretch;">
+                        <div style="color: white; font-size: 1.4rem; font-weight: bold; width: 80px; text-align: right; padding-right: 10px; padding-top: 10px; font-family: monospace;">
+                            + entry:
+                        </div>
+                        <div style="background-color: white; border: 3px solid #E11921; flex-grow: 1; text-align: left; position: relative;">
+                            <div style="border-bottom: 1px solid #E11921; padding: 5px; text-align: center; font-weight: 900; color: #E11921; font-size: 1.2rem;">
+                                PATIENT 1
+                                <svg style="position: absolute; top: 5px; right: 5px; color: #E11921;" width="18" height="18" viewBox="0 0 32 32">
+                                    <rect x="8" y="4" width="20" height="24" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="4" y="8" width="8" height="4" fill="white" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="4" y="16" width="8" height="4" fill="white" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div style="padding: 10px; color: #D32F2F; font-family: monospace; font-size: 0.95rem; line-height: 1.3; font-weight: 500;">
+                                + id: Id<br>
+                                + identifier: Identifier<br>
+                                + name: HumanName<br>
+                                + gender: code<br>
+                                + birthDate: date<br>
+                                + ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entry 2 -->
+                    <div class="fragment" data-fragment-index="3" style="display: flex; align-items: stretch;">
+                        <div style="color: white; font-size: 1.4rem; font-weight: bold; width: 80px; text-align: right; padding-right: 10px; padding-top: 10px; font-family: monospace;">
+                            + entry:
+                        </div>
+                        <div style="background-color: white; border: 3px solid #E11921; flex-grow: 1; text-align: left; position: relative;">
+                            <div style="border-bottom: 1px solid #E11921; padding: 5px; text-align: center; font-weight: 900; color: #E11921; font-size: 1.2rem;">
+                                PATIENT 2
+                                <svg style="position: absolute; top: 5px; right: 5px; color: #E11921;" width="18" height="18" viewBox="0 0 32 32">
+                                    <rect x="8" y="4" width="20" height="24" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="4" y="8" width="8" height="4" fill="white" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="4" y="16" width="8" height="4" fill="white" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div style="padding: 10px; color: #D32F2F; font-family: monospace; font-size: 0.95rem; line-height: 1.3; font-weight: 500;">
+                                + id: Id<br>
+                                + identifier: Identifier<br>
+                                + name: HumanName<br>
+                                + gender: code<br>
+                                + birthDate: date<br>
+                                + ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entry n -->
+                    <div class="fragment" data-fragment-index="4" style="display: flex; align-items: stretch;">
+                        <div style="color: white; font-size: 1.4rem; font-weight: bold; width: 80px; text-align: right; padding-right: 10px; padding-top: 10px; font-family: monospace;">
+                            + entry:
+                        </div>
+                        <div style="background-color: white; border: 3px solid #E11921; flex-grow: 1; text-align: left; position: relative;">
+                            <div style="border-bottom: 1px solid #E11921; padding: 5px; text-align: center; font-weight: 900; color: #E11921; font-size: 1.2rem;">
+                                PATIENT n
+                                <svg style="position: absolute; top: 5px; right: 5px; color: #E11921;" width="18" height="18" viewBox="0 0 32 32">
+                                    <rect x="8" y="4" width="20" height="24" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="4" y="8" width="8" height="4" fill="white" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="4" y="16" width="8" height="4" fill="white" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div style="padding: 10px; color: #D32F2F; font-family: monospace; font-size: 0.95rem; line-height: 1.3; font-weight: 500;">
+                                + id: Id<br>
+                                + identifier: Identifier<br>
+                                + name: HumanName<br>
+                                + gender: code<br>
+                                + birthDate: date<br>
+                                + ...
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column: Text List -->
+            <div style="font-size: 2.2rem; line-height: 1.5; text-align: left;">
+                <p class="fragment" data-fragment-index="5" style="margin-bottom: 35px; color: var(--color-gray-800);">
+                    <span style="color: var(--color-primary); margin-right: 10px; font-size: 0.8em;">▶</span>
+                    Un contenedor para una colección de recursos.
+                </p>
+                <div class="fragment" data-fragment-index="6">
+                    <p style="color: var(--color-primary); margin-bottom: 20px;">
+                        <span style="margin-right: 10px; font-size: 0.8em;">▶</span> Tipos de bundle:
+                    </p>
+                    <ul style="list-style-type: none; padding-left: 40px; margin: 0; color: var(--color-gray-800);">
+                        <li class="fragment" data-fragment-index="7" style="margin-bottom: 12px;"><span style="color: var(--color-primary); margin-right: 10px; font-size: 0.7em;">▶</span> Resultados de búsqueda</li>
+                        <li class="fragment" data-fragment-index="8" style="margin-bottom: 12px;"><span style="color: var(--color-primary); margin-right: 10px; font-size: 0.7em;">▶</span> Transacciones</li>
+                        <li class="fragment" data-fragment-index="9" style="margin-bottom: 12px;"><span style="color: var(--color-primary); margin-right: 10px; font-size: 0.7em;">▶</span> Batch</li>
+                        <li class="fragment" data-fragment-index="10" style="margin-bottom: 12px;"><span style="color: var(--color-primary); margin-right: 10px; font-size: 0.7em;">▶</span> Colecciones</li>
+                        <li class="fragment" data-fragment-index="11" style="margin-bottom: 12px;"><span style="color: var(--color-primary); margin-right: 10px; font-size: 0.7em;">▶</span> Documentos</li>
+                        <li class="fragment" data-fragment-index="12" style="margin-bottom: 12px;"><span style="color: var(--color-primary); margin-right: 10px; font-size: 0.7em;">▶</span> Mensajes</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
