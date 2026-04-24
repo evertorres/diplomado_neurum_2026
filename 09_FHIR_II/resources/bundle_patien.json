@@ -1,0 +1,98 @@
+{
+  "resourceType" : "Bundle",
+  "type" : "transaction",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "Patient",
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "family" : "Agudelo Vergara",
+        "given" : ["Jairo", "Alberto"]
+      }],
+      "gender" : "male",
+      "birthDate" : "1974-12-25"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient/"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Patient",
+      "identifier" : [{
+        "system" : "http:/example.org/fhir/ids",
+        "value" : "234234"
+      }],
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "family" : "Petro",
+        "given" : ["Gustavo"]
+      }],
+      "gender" : "male",
+      "birthDate" : "1974-12-25"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Patient",
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "family" : "De la Esperiella",
+        "given" : ["Abelardo", "James"]
+      }],
+      "gender" : "male",
+      "birthDate" : "1974-12-25"
+    },
+      "request" : {
+      "method" : "POST",
+      "url" : "Patient/"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Patient",
+      "identifier" : [{
+        "system" : "http:/example.org/fhir/ids",
+        "value" : "456456"
+      }],
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "family" : "Valencia",
+        "given" : ["Paloma", "Maria"]
+      }],
+      "gender" : "female",
+      "birthDate" : "1974-12-25"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient/"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Patient",
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "family" : "Fajardo Valderrama",
+        "given" : ["Sergio"]
+      }],
+      "gender" : "male",
+      "birthDate" : "1974-12-25"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  }
+  ]
+}
