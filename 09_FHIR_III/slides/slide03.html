@@ -1,0 +1,48 @@
+<section class="slide" id="slide03">
+    <div class="slide-content center" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: #DC2626; font-size: 3.5rem; margin-bottom: 8px; text-align: center; font-weight: 800;">
+            Condición o problema de salud
+        </h2>
+        <h3 style="color: #DC2626; font-size: 2rem; margin-bottom: var(--space-lg); text-align: center; font-weight: 700;">
+            <a href="https://hl7.org/fhir/R4/condition.html#9.2" target="_blank" style="color: inherit; text-decoration: none;">9.2 Resource Condition</a>
+        </h3>
+        
+        <p style="font-size: 1.6rem; color: var(--color-gray-800); text-align: center; margin-bottom: var(--space-xl); max-width: 1000px; margin-left: auto; margin-right: auto; line-height: 1.5;">
+            Este recurso se utiliza para registrar información detallada sobre una condición, problema, diagnóstico u otro evento, situación, problema o concepto clínico que afecta el estado de salud de un paciente.
+        </p>
+
+        <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+            
+            <div class="fragment" data-fragment-index="1" style="background: white; border-radius: 12px; padding: var(--space-lg); box-shadow: var(--shadow-md); width: 300px; border-top: 4px solid #F59E0B;">
+                <h4 style="color: #F59E0B; margin-bottom: 12px; font-size: 1.2rem;">clinicalStatus</h4>
+                <p style="color: var(--color-gray-600); font-size: 1rem; margin: 0;">
+                    El estado clínico de la condición. <br>Ej: active, recurrence, relapse, inactive, remission, resolved.
+                </p>
+            </div>
+
+            <div class="fragment" data-fragment-index="2" style="background: white; border-radius: 12px; padding: var(--space-lg); box-shadow: var(--shadow-md); width: 300px; border-top: 4px solid #EF4444;">
+                <h4 style="color: #EF4444; margin-bottom: 12px; font-size: 1.2rem;">code</h4>
+                <p style="color: var(--color-gray-600); font-size: 1rem; margin: 0;">
+                    Identificación de la condición, problema o diagnóstico usando una terminología (SNOMED CT, CIE-10).
+                </p>
+            </div>
+
+            <div class="fragment" data-fragment-index="3" style="background: white; border-radius: 12px; padding: var(--space-lg); box-shadow: var(--shadow-md); width: 300px; border-top: 4px solid #3B82F6;">
+                <h4 style="color: #3B82F6; margin-bottom: 12px; font-size: 1.2rem;">subject</h4>
+                <p style="color: var(--color-gray-600); font-size: 1rem; margin: 0;">
+                    Referencia al paciente que tiene la condición descrita en el recurso.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="fragment" data-fragment-index="4" style="margin-top: var(--space-xl); text-align: center;">
+            <a href="http://hl7.org/fhir/R4/condition.html" target="_blank" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 8px;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+                Ver especificación oficial en HL7 FHIR R4
+            </a>
+        </div>
+    </div>
+</section>

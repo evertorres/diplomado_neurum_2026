@@ -1,0 +1,48 @@
+<section class="slide" id="slide04">
+    <div class="slide-content center" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: #DC2626; font-size: 3.5rem; margin-bottom: 8px; font-weight: 800;">
+            Referencias entre recursos
+        </h2>
+        <h3 style="color: #DC2626; font-size: 2rem; margin-bottom: var(--space-lg); text-align: center; font-weight: 700;">
+            <a href="https://hl7.org/fhir/R4/references.html#2.3.0" target="_blank" style="color: inherit; text-decoration: none;">2.3.0 Resource References</a>
+        </h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            
+            <div style="font-size: 1.2rem; color: var(--color-gray-700); line-height: 1.6; text-align: left;">
+                <p class="fragment" data-fragment-index="1" style="margin-bottom: var(--space-md);">
+                    En FHIR, la información clínica no suele estar en un único recurso, sino que los recursos se <strong>vinculan entre sí</strong> formando una red de datos.
+                </p>
+                <p class="fragment" data-fragment-index="2" style="margin-bottom: var(--space-md);">
+                    Una Referencia (<code>Reference</code>) es un tipo de dato en FHIR utilizado para enlazar un recurso con otro.
+                </p>
+                <div class="fragment" data-fragment-index="3" style="background: #FEF2F2; padding: var(--space-md); border-radius: 8px; border-left: 4px solid #DC2626;">
+                    <strong style="color: #B91C1C;">Tipos de Referencias:</strong>
+                    <ul style="margin-top: 8px; margin-bottom: 0;">
+                        <li><strong>Relativa:</strong> <code style="color: #DC2626;">Patient/123</code></li>
+                        <li><strong>Absoluta:</strong> <code style="color: #DC2626;">http://servidor-fhir.com/Patient/123</code></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fragment" data-fragment-index="4" style="background: white; border-radius: 12px; padding: var(--space-lg); box-shadow: var(--shadow-xl); border: 1px solid #FECACA; border-top: 4px solid #DC2626;">
+                <h4 style="color: #DC2626; margin-bottom: 16px; text-align: center; font-size: 1.5rem; font-weight: 700;">Ejemplo Visual de Conexión</h4>
+                <svg width="100%" height="200" viewBox="0 0 400 200" style="display: block; margin: 0 auto;">
+                    <rect x="50" y="70" width="100" height="60" rx="8" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+                    <text x="100" y="105" text-anchor="middle" font-weight="bold" fill="#B91C1C">Condition</text>
+                    
+                    <rect x="250" y="70" width="100" height="60" rx="8" fill="#F0FFF4" stroke="#38A169" stroke-width="2"/>
+                    <text x="300" y="105" text-anchor="middle" font-weight="bold" fill="#2F855A">Patient</text>
+                    
+                    <path d="M150 100 L240 100" stroke="#EF4444" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                    <polygon points="240,100 230,95 230,105" fill="#EF4444"/>
+                    <text x="195" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#DC2626">subject</text>
+                </svg>
+                <p style="text-align: center; font-size: 0.9rem; color: var(--color-gray-600); margin-top: 16px;">
+                    El recurso <strong style="color: #DC2626;">Condition</strong> hace referencia al Patient mediante el elemento 'subject'.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>

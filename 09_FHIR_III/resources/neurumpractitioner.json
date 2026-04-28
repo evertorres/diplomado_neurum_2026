@@ -1,0 +1,115 @@
+{
+    "resourceType": "Practitioner",
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PN",
+                        "display": "Person number"
+                    }, 
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical record number"
+                    }, 
+                    {
+                        "system": "http://terminology.hl7co.org/CodeSystem/identifiers",
+                        "code": "CC",
+                        "display": "Cédula de ciudadanía"
+                    }
+                ]
+
+            },
+            "system": "http://minsalud.gov.co/NamingSystem/patient-identifier",
+            "value": "1018144524",
+            "period": {
+                "start": "1976-06-21"
+            }
+        }
+    ], 
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "text": "Dr. Juana Carolina Londoño Suarez", 
+            "family": "Londoño Suarez", 
+            "given": ["Juana", "Carolina"],
+            "prefix": ["Dra"],
+            "suffix": ["Ginecóloga"]
+
+        }
+    ], 
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "31871734545",
+            "use": "mobile",
+            "rank": 1
+        }, 
+        {
+            "system": "email", 
+            "value": "juana@netuxtecnologia.com", 
+            "use": "work",
+            "rank": 2
+        }
+    ], 
+    "address": [
+        {
+            "use": "home",
+            "type": "physical",
+            "text": "Carrera 28 # 3 -54, Medellin, Antioquia",
+            "line": ["Carrera 28 # 3-54", "Barrio Antioquia", "Torre 3 Apto 521"],
+            "city": "Medellín",
+            "state": "Antioquia", 
+            "country": "Colombia"
+
+        }
+    ], 
+    "birthDate": "1968-06-24",
+    "photo": [
+        {
+            "url": "http://juanacarolina.com/photo.jpg"
+        }
+    ],
+    "qualification": [
+        {
+            "identifier": [
+                {
+                    "use": "official",
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MD",
+                                "display": "Medical License number"
+                            },
+                            {
+                                "system": "http://minsalud.gov.co/RetHUS",
+                                "code": "UNV",
+                                "display": "MEDICINA"
+                            }
+                        ]
+                    },
+                    "system": "http://minsalud.gov.co/RetHUS", 
+                    "value": "1018144524"
+
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0360|2.7",
+                        "code": "MD",
+                        "display": "Doctor of Medicine"
+                    }
+                ]
+            },
+            "period": {
+                "start": "1992-06-23"
+            }
+        }
+    ]
+}

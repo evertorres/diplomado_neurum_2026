@@ -1,0 +1,66 @@
+{
+    "resourceType": "Organization",
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PRN",
+                        "display": "Provider Number"
+                    }, 
+                    {
+                        "system": "http://dian.gov.co/RUT",
+                        "code": "NIT",
+                        "display": "Registro Único Tributario"
+                    }
+                ] 
+                
+
+            },
+            "system": "https://prestadores.minsalud.gov.co/habilitacion/", 
+            "value": "890905843-6",
+            "period": {
+                "start": "1950-02-23"
+            }
+
+        }
+    ],
+    "active": true,
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                    "code": "prov",
+                    "display": "Healthcare Provider"
+                }
+            ]
+        }
+    ],
+    "name": "COMUNIDAD DE HERMANAS DOMINICAS DE LA PRESENTACION DE LA SANTISIMA VIRGEN DE TOURS PROVINCIA DE MEDELLIN",
+    "alias": ["CLINICA EL ROSARIO SEDE TESORO"],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "5743269100",
+            "use": "work",
+            "rank": 1
+        },
+        {
+            "system": "email",
+            "value": "clinicaelrosario@clinicaelrosario.com", 
+            "use": "work",
+            "rank": 2
+        }
+    ],
+    "address": [
+        {
+            "use": "work",
+            "type": "physical",
+            "text": "KR 20 # 2 SUR 185"
+        }
+    ]
+
+}
