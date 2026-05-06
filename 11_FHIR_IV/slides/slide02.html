@@ -1,0 +1,67 @@
+<section class="slide" id="slide02">
+    <div class="slide-content" style="max-width: 1200px; width: 100%; margin: 0 auto; height: 100%; overflow-y: auto; padding: 20px;">
+        
+        <h2 style="color: var(--color-primary); font-size: 2rem; margin-bottom: var(--space-md); text-align: center;">Taller de FHIR R4: Trazabilidad Institucional y Datos Objetivos</h2>
+        
+        <!-- Full-width instruction -->
+        <div class="fragment" style="background: var(--color-surface); padding: var(--space-lg); border-radius: 8px; border-left: 4px solid var(--color-cta); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm);">
+            <h3 style="color: var(--color-secondary); margin-bottom: var(--space-sm);">Instrucción para el estudiante</h3>
+            <p style="font-size: 1rem; line-height: 1.5; margin: 0; text-align: justify;">Como analista de datos de salud, tu tarea es transformar el siguiente caso clínico en un conjunto de recursos FHIR R4 interconectados. Debes asegurar que cada acción clínica esté vinculada no solo al profesional que la realizó, sino también a la institución responsable.</p>
+        </div>
+
+        <!-- 2 Columns Container -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: start;">
+            
+            <!-- Left Column: Caso Clinico -->
+            <div class="fragment" style="background: #F8FAFC; padding: var(--space-md) var(--space-lg); border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                <h3 style="color: var(--color-primary); margin-bottom: var(--space-sm); font-size: 1.2rem;">Caso Clínico: Control Metabólico en IPS Neurum</h3>
+                <p style="font-size: 0.95rem; margin-bottom: var(--space-sm); text-align: justify;"><strong>Fecha:</strong> 12 de agosto de 2026.<br>
+                <strong>Institución:</strong> IPS Neurum (NIT: 900.123.456-7).</p>
+                
+                <p style="font-size: 0.95rem; margin-bottom: var(--space-sm); text-align: justify;">El paciente Ricardo José Bernal (ID: 102030) acude a las instalaciones de IPS Neurum para un chequeo prioritario.</p>
+                
+                <ul style="font-size: 0.95rem; margin-top: var(--space-sm); padding-left: var(--space-xl); line-height: 1.5; text-align: justify;">
+                    <li class="fragment" style="margin-bottom: var(--space-sm);"><strong>En el área de enfermería:</strong> Es recibido por la auxiliar Sandra López (Registro: AUX-7788), quien forma parte del equipo asistencial de la IPS. Sandra realiza una glucometría capilar que arroja un resultado de 245 mg/dL. Este dato queda registrado como un hallazgo objetivo dentro del encuentro actual.</li>
+                    <li class="fragment" style="margin-bottom: var(--space-sm);"><strong>En el consultorio médico:</strong> El Dr. Fabio Castro (Registro: RM-5566), evalúa al paciente. Al contrastar el valor de la glucometría con el estado físico de Ricardo, el Dr. Castro confirma el diagnóstico de Hiperglucemia (CIE-10: R73.9).</li>
+                    <li class="fragment">El médico formaliza el diagnóstico en el sistema de la institución, asegurando que la condición quede vinculada a la evidencia encontrada por el equipo de enfermería.</li>
+                </ul>
+            </div>
+
+            <!-- Right Column: Questionnaire -->
+            <div class="fragment" style="background: #FFFFFF; padding: var(--space-lg); border-radius: 8px; border: 1px solid var(--color-primary); box-shadow: var(--shadow-md);">
+                <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: var(--space-md); border-bottom: 2px solid var(--color-surface); padding-bottom: 8px;">Cuestionario de Análisis Pre-Desarrollo</h3>
+                <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-lg); text-align: justify;">Antes de codificar, analiza la narrativa del caso y responde:</p>
+                
+                <div class="fragment" style="margin-bottom: var(--space-md);">
+                    <h4 style="color: var(--color-text); font-size: 1.05rem; margin-bottom: 4px; text-align: left;">1. Identificación de Entidades</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-600); margin: 0; text-align: justify;">¿Cuáles considera que son los recursos FHIR asociados a este caso y por qué?</p>
+                </div>
+                
+                <div class="fragment" style="margin-bottom: var(--space-md);">
+                    <h4 style="color: var(--color-text); font-size: 1.05rem; margin-bottom: 4px; text-align: left;">2. Jerarquía y Trazabilidad</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-600); margin: 0; text-align: justify;">Si el enfermero toma el signo vital y el médico da el diagnóstico, ¿cómo se refleja esta diferencia de responsabilidad en los recursos correspondientes?</p>
+                </div>
+
+                <div class="fragment" style="margin-bottom: var(--space-md);">
+                    <h4 style="color: var(--color-text); font-size: 1.05rem; margin-bottom: 4px; text-align: left;">3. Integridad Referencial</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-600); margin: 0; text-align: justify;">¿Cuál es el recurso que actúa como "nodo central" o pegamento para vincular a los profesionales, el paciente y la institución en este evento específico?</p>
+                </div>
+
+                <div class="fragment" style="margin-bottom: var(--space-lg);">
+                    <h4 style="color: var(--color-text); font-size: 1.05rem; margin-bottom: 4px; text-align: left;">4. Estructura de Datos (ValueQuantity)</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-600); margin: 0; text-align: justify;">Para el reporte de la glucometría, ¿qué elementos son indispensables dentro del campo <code>valueQuantity</code> para que el dato sea interoperable internacionalmente?</p>
+                </div>
+
+                <div class="fragment" style="background: var(--color-surface); padding: var(--space-sm) var(--space-md); border-radius: 6px; border-left: 4px solid var(--color-cta);">
+                    <h4 style="color: var(--color-cta); font-size: 1.05rem; margin-bottom: 6px; text-align: left;">Instrucciones Finales</h4>
+                    <ol style="font-size: 0.95rem; color: var(--color-text); margin: 0; padding-left: 20px; text-align: justify;">
+                        <li>Genera todos los recursos requeridos.</li>
+                        <li>Enviar los recursos al servidor FHIR de prueba y garantizar respuesta positiva.</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div> <!-- End of 2 Columns Container -->
+        
+    </div>
+</section>

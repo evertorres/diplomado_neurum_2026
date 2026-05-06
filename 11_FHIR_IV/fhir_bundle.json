@@ -1,0 +1,223 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:1",
+      "resource": {
+        "resourceType": "Organization",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.16.1",
+            "value": "900123456-7"
+          }
+        ],
+        "name": "IPS Neurum"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2",
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "http://ipsneurum.com/patients",
+            "value": "102030"
+          }
+        ],
+        "name": [
+          {
+            "family": "Bernal",
+            "given": [
+              "Ricardo",
+              "José"
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3",
+      "resource": {
+        "resourceType": "Practitioner",
+        "identifier": [
+          {
+            "system": "http://ipsneurum.com/practitioners",
+            "value": "AUX-7788"
+          }
+        ],
+        "name": [
+          {
+            "family": "López",
+            "given": [
+              "Sandra"
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4",
+      "resource": {
+        "resourceType": "Practitioner",
+        "identifier": [
+          {
+            "system": "http://ipsneurum.com/practitioners",
+            "value": "RM-5566"
+          }
+        ],
+        "name": [
+          {
+            "family": "Castro",
+            "given": [
+              "Fabio"
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5",
+      "resource": {
+        "resourceType": "Encounter",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:2"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:1"
+        },
+        "period": {
+          "start": "2026-08-12T08:00:00Z"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "15074-8",
+              "display": "Glucose [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:2"
+        },
+        "encounter": {
+          "reference": "urn:uuid:5"
+        },
+        "effectiveDateTime": "2026-08-12T08:15:00Z",
+        "performer": [
+          {
+            "reference": "urn:uuid:3"
+          }
+        ],
+        "valueQuantity": {
+          "value": 245,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "R73.9",
+              "display": "Hiperglucemia, no especificada"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:2"
+        },
+        "encounter": {
+          "reference": "urn:uuid:5"
+        },
+        "recordedDate": "2026-08-12T08:30:00Z",
+        "asserter": {
+          "reference": "urn:uuid:4"
+        },
+        "evidence": [
+          {
+            "detail": [
+              {
+                "reference": "urn:uuid:6"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    }
+  ]
+}
