@@ -1,0 +1,173 @@
+<section class="slide" id="slide13">
+    <div class="slide-content" style="max-width: 1250px; width: 100%; margin: 0 auto; padding: 20px;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; margin-bottom: var(--space-md); text-align: center;">Estadísticas del Lenguaje: Legibilidad y Comprensibilidad</h2>
+        <p class="fragment text-muted" data-fragment-index="1" style="font-size: 1.15rem; text-align: center; max-width: 950px; margin: 0 auto var(--space-md) auto; line-height: 1.5;">
+            Fórmulas estadísticas y métricas para evaluar la complejidad textual en español de manera automatizada.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; margin-top: 10px;">
+            
+            <!-- Card 1: Legibilidad -->
+            <div class="fragment card" data-fragment-index="2" style="background: white; padding: 24px; border-radius: 12px; border-top: 6px solid #E06927; box-shadow: var(--shadow-md); display: flex; flex-direction: column; height: 100%; border-left: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+                <h3 style="font-family: 'Exo', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--color-primary); margin-bottom: 12px; text-align: center;">Legibilidad (Flesch-Szigriszt)</h3>
+                
+                <!-- Formula -->
+                <div style="background: #FFF7ED; border: 1px solid #FFEDD5; border-radius: 8px; padding: 12px; margin-bottom: 14px; text-align: center; font-family: 'Roboto Mono', monospace; font-size: 0.95rem; font-weight: 700; color: #C2410C;">
+                    L = 206.84 - 0.60P - 1.02F
+                </div>
+                
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: 12px;">
+                    Mide la facilidad de lectura de un texto en español. Muy utilizado para evaluar el material dirigido a pacientes.
+                </p>
+                
+                <div style="background: #F8FAFC; border-radius: 8px; padding: 10px; font-size: 0.85rem; color: var(--color-secondary); margin-bottom: 12px; border: 1px solid #F1F5F9;">
+                    <div><strong>P:</strong> Promedio de sílabas por palabra.</div>
+                    <div><strong>F:</strong> Promedio de palabras por frase.</div>
+                </div>
+                
+                <!-- Table Scale -->
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: auto; border-radius: 6px; overflow: hidden; border: 1px solid #E2E8F0; text-align: center;">
+                    <thead>
+                        <tr style="background: #E06927; color: white;">
+                            <th style="padding: 4px; font-weight: 600;">L</th>
+                            <th style="padding: 4px; font-weight: 600;">Nivel</th>
+                            <th style="padding: 4px; font-weight: 600;">Grado Escolar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #F8FAFC; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #E06927;">90-100</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Muy fácil</td>
+                            <td style="padding: 3px; color: var(--color-secondary);">4º grado</td>
+                        </tr>
+                        <tr style="background: white; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #E06927;">80-90</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Fácil</td>
+                            <td style="padding: 3px; color: var(--color-secondary);">5º grado</td>
+                        </tr>
+                        <tr style="background: #F8FAFC; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #E06927;">70-80</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Algo fácil</td>
+                            <td style="padding: 3px; color: var(--color-secondary);">6º grado</td>
+                        </tr>
+                        <tr style="background: white; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #E06927;">60-70</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Normal</td>
+                            <td style="padding: 3px; color: var(--color-secondary);">7º u 8º grado</td>
+                        </tr>
+                        <tr style="background: #F8FAFC; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #E06927;">50-60</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Algo difícil</td>
+                            <td style="padding: 3px; color: var(--color-secondary);">Preuniversitario</td>
+                        </tr>
+                        <tr style="background: white; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #E06927;">30-50</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Difícil</td>
+                            <td style="padding: 3px; color: var(--color-secondary);">Cursos selectivos</td>
+                        </tr>
+                        <tr style="background: #F8FAFC;">
+                            <td style="padding: 3px; font-weight: 700; color: #E06927;">0-30</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Muy difícil</td>
+                            <td style="padding: 3px; color: var(--color-secondary);">Universitario</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Card 2: Comprensibilidad -->
+            <div class="fragment card" data-fragment-index="3" style="background: white; padding: 24px; border-radius: 12px; border-top: 6px solid #7CBA21; box-shadow: var(--shadow-md); display: flex; flex-direction: column; height: 100%; border-left: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+                <h3 style="font-family: 'Exo', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--color-primary); margin-bottom: 12px; text-align: center;">Comprensibilidad (Crawford)</h3>
+                
+                <!-- Formula -->
+                <div style="background: #F0FDF4; border: 1px solid #DCFCE7; border-radius: 8px; padding: 12px; margin-bottom: 14px; text-align: center; font-family: 'Roboto Mono', monospace; font-size: 0.95rem; font-weight: 700; color: #15803D;">
+                    A = -0.205·OP + 0.049·SP - 3.407
+                </div>
+                
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: 12px;">
+                    Determina la comprensibilidad basándose en la dificultad conceptual y estructural del texto para estimar el nivel académico requerido.
+                </p>
+                
+                <div style="background: #F8FAFC; border-radius: 8px; padding: 12px; font-size: 0.85rem; color: var(--color-secondary); display: flex; flex-direction: column; gap: 6px; border: 1px solid #F1F5F9; margin-bottom: 12px;">
+                    <div><strong>A:</strong> Nivel estimado de escolarización (años de estudio requeridos).</div>
+                    <div><strong>OP:</strong> Número de oraciones por cada 100 palabras.</div>
+                    <div><strong>SP:</strong> Número de sílabas por cada 100 palabras.</div>
+                </div>
+
+                <div style="background: #ECFDF5; border: 1px solid #D1FAE5; border-radius: 8px; padding: 14px; margin-top: auto; text-align: center; color: #065F46; font-size: 0.88rem; font-weight: 500;">
+                    💡 El resultado representa directamente el grado de escolaridad (años de estudio) y se redondea al décimo más cercano.
+                </div>
+            </div>
+
+            <!-- Card 3: Legibilidad µ -->
+            <div class="fragment card" data-fragment-index="4" style="background: white; padding: 24px; border-radius: 12px; border-top: 6px solid #1A6321; box-shadow: var(--shadow-md); display: flex; flex-direction: column; height: 100%; border-left: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+                <h3 style="font-family: 'Exo', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--color-primary); margin-bottom: 12px; text-align: center;">Legibilidad Mu (μ)</h3>
+                
+                <!-- Formula -->
+                <div style="background: #F0FDF4; border: 1px solid #DCFCE7; border-radius: 8px; padding: 8px 12px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; gap: 4px; height: 45px;">
+                    <span style="font-family: 'Roboto Mono', monospace; font-size: 0.95rem; font-weight: 700; color: #166534;">μ = </span>
+                    <div style="display: flex; flex-direction: column; align-items: center; font-family: 'Roboto Mono', monospace; font-size: 0.85rem; font-weight: 700; color: #166534; line-height: 1;">
+                        <span style="border-bottom: 1.5px solid #166534; padding: 0 4px; padding-bottom: 1px;">n</span>
+                        <span style="padding-top: 1px;">n - 1</span>
+                    </div>
+                    <span style="font-size: 1.5rem; line-height: 0; color: #166534; font-family: 'Roboto Mono', monospace; font-weight: 300;">(</span>
+                    <div style="display: flex; flex-direction: column; align-items: center; font-family: 'Roboto Mono', monospace; font-size: 0.85rem; font-weight: 700; color: #166534; line-height: 1;">
+                        <span style="border-bottom: 1.5px solid #166534; padding: 0 4px; padding-bottom: 1px;">x̄</span>
+                        <span style="padding-top: 1px;">σ²</span>
+                    </div>
+                    <span style="font-size: 1.5rem; line-height: 0; color: #166534; font-family: 'Roboto Mono', monospace; font-weight: 300;">)</span>
+                    <span style="font-family: 'Roboto Mono', monospace; font-size: 0.95rem; font-weight: 700; color: #166534;">× 100</span>
+                </div>
+                
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: 12px;">
+                    Alternativa ideal en español porque no requiere contar sílabas. Mide la complejidad de caracteres por palabra y su variabilidad.
+                </p>
+                
+                <div style="background: #F8FAFC; border-radius: 8px; padding: 10px; font-size: 0.85rem; color: var(--color-secondary); margin-bottom: 12px; border: 1px solid #F1F5F9;">
+                    <div><strong>n:</strong> Número de palabras; <strong>x̄:</strong> Letras por palabra.</div>
+                    <div><strong>σ²:</strong> Varianza de la longitud de las palabras.</div>
+                </div>
+                
+                <!-- Table Scale -->
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: auto; border-radius: 6px; overflow: hidden; border: 1px solid #E2E8F0; text-align: center;">
+                    <thead>
+                        <tr style="background: #1A6321; color: white;">
+                            <th style="padding: 4px; font-weight: 600;">μ</th>
+                            <th style="padding: 4px; font-weight: 600;">Facilidad de lectura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #F8FAFC; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #1A6321;">91-100</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Muy fácil</td>
+                        </tr>
+                        <tr style="background: white; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #1A6321;">81-90</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Fácil</td>
+                        </tr>
+                        <tr style="background: #F8FAFC; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #1A6321;">71-80</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Un poco fácil</td>
+                        </tr>
+                        <tr style="background: white; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #1A6321;">61-70</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Adecuado</td>
+                        </tr>
+                        <tr style="background: #F8FAFC; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #1A6321;">51-60</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Un poco difícil</td>
+                        </tr>
+                        <tr style="background: white; border-bottom: 1px solid #F1F5F9;">
+                            <td style="padding: 3px; font-weight: 700; color: #1A6321;">31-50</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Difícil</td>
+                        </tr>
+                        <tr style="background: #F8FAFC;">
+                            <td style="padding: 3px; font-weight: 700; color: #1A6321;">0-30</td>
+                            <td style="padding: 3px; color: var(--color-primary);">Muy difícil</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>

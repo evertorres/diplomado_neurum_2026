@@ -1,0 +1,36 @@
+<section class="slide" id="slide18">
+    <div class="slide-content" style="max-width: 1250px; width: 100%; margin: 0 auto; padding: 20px;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; margin-bottom: var(--space-xl); text-align: center;">Word Embeddings: Word2Vec</h2>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-2xl); align-items: center;">
+            
+            <!-- Left Column: Text -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg); text-align: left;">
+                <div class="fragment" data-fragment-index="1" style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; color: var(--color-primary);">¿Qué son los Word Embeddings?</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.5; color: var(--color-secondary);">
+                        Representaciones vectoriales densas y de baja dimensión (habitualmente 100 a 300 dimensiones) que capturan la semántica de las palabras. Palabras con significados similares tienen vectores geométricamente cercanos.
+                    </p>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; color: var(--color-primary);">Word2Vec (Mikolov et al., 2013)</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.5; color: var(--color-secondary); margin-bottom: 8px;">
+                        Modelo pionero basado en redes neuronales simples para aprender vectores a partir de grandes corpus. Posee dos arquitecturas:
+                    </p>
+                    <ul style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); padding-left: 20px; list-style-type: square;">
+                        <li style="margin-bottom: 4px;"><strong>CBOW:</strong> Predice una palabra a partir de las palabras de contexto vecinas.</li>
+                        <li><strong>Skip-gram:</strong> Predice las palabras de contexto vecinas a partir de una única palabra.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="fragment text-center" data-fragment-index="2" style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-secondary); display: block; margin-bottom: 8px;">Arquitecturas CBOW y Skip-gram de Word2Vec</span>
+                <img src="images/nlp2_image6.png" alt="Word2Vec CBOW vs Skip-gram" class="zoomable-image" style="max-height: 45vh; border-radius: 8px; object-fit: contain; width: 100%;">
+            </div>
+
+        </div>
+    </div>
+</section>

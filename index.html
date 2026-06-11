@@ -75,6 +75,42 @@
             background: #F4F4F5;
             color: var(--color-secondary);
         }
+
+        /* Module filtering tabs styling */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-sm);
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid #E2E8F0;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-family: 'Exo', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-secondary);
+            cursor: pointer;
+            transition: all 200ms ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--color-cta);
+            color: var(--color-cta);
+            transform: translateY(-1px);
+        }
+
+        .filter-btn.active {
+            background: var(--color-cta);
+            color: white;
+            border-color: var(--color-cta);
+            box-shadow: var(--shadow-md);
+        }
     </style>
 </head>
 
@@ -102,13 +138,19 @@
                     style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-cta); box-shadow: var(--shadow-md); margin-bottom: 8px;">
                 <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-primary);">Conoce al Docente</span>
             </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="1">Módulo 1</button>
+                <button class="filter-btn" data-filter="2">Módulo 2</button>
+            </div>
         </header>
 
         <main>
             <div class="presentation-grid">
 
                 <!-- Day 1 (Ready) -->
-                <a href="01_datos_vida_real/index.html" class="card presentation-card"
+                <a href="01_datos_vida_real/index.html" class="card presentation-card" data-module="1"
                     style="position: relative; overflow: hidden;">
                     <span class="presentation-number">01</span>
                     <div>
@@ -126,7 +168,7 @@
                 </a>
 
                 <!-- Day 2 (Ready) -->
-                <a href="02_datos_tipos/index.html" class="card presentation-card" style="position: relative; overflow: hidden;">
+                <a href="02_datos_tipos/index.html" class="card presentation-card" data-module="1" style="position: relative; overflow: hidden;">
                     <span class="presentation-number">02</span>
                     <div>
                         <span class="badge badge-ready">Completado</span>
@@ -139,7 +181,7 @@
                 </a>
 
                 <!-- Day 3 (Ready) -->
-                <a href="03_sis_sispro/index.html" class="card presentation-card" style="position: relative; overflow: hidden;">
+                <a href="03_sis_sispro/index.html" class="card presentation-card" data-module="1" style="position: relative; overflow: hidden;">
                     <span class="presentation-number">03</span>
                     <div>
                         <span class="badge badge-ready">Completado</span>
@@ -155,7 +197,7 @@
                 </a>
 
                 <!-- Day 4 (Ready) -->
-                <a href="04_generalidades_interoperabilidad/index.html" class="card presentation-card"
+                <a href="04_generalidades_interoperabilidad/index.html" class="card presentation-card" data-module="1"
                     style="position: relative; overflow: hidden;">
                     <span class="presentation-number">04</span>
                     <div>
@@ -171,7 +213,7 @@
                 </a>
 
                 <!-- Day 5 (Ready) -->
-                <a href="05_introduccion_vocabularios/index.html" class="card presentation-card"
+                <a href="05_introduccion_vocabularios/index.html" class="card presentation-card" data-module="1"
                     style="position: relative; overflow: hidden;">
                     <span class="presentation-number">05</span>
                     <div>
@@ -188,7 +230,7 @@
                 </a>
 
                 <!-- Day 6 (Ready) -->
-                <a href="06_vocabularios_terminologias/index.html" class="card presentation-card"
+                <a href="06_vocabularios_terminologias/index.html" class="card presentation-card" data-module="1"
                     style="position: relative; overflow: hidden;">
                     <span class="presentation-number">06</span>
                     <div>
@@ -205,7 +247,7 @@
                 </a>
 
                 <!-- Day 7 -->
-                <a href="07_OMOP_cdm/index.html" class="card presentation-card" style="position: relative; overflow: hidden;">
+                <a href="07_OMOP_cdm/index.html" class="card presentation-card" data-module="1" style="position: relative; overflow: hidden;">
                     <span class="presentation-number">07</span>
                     <div>
                         <span class="badge badge-ready">Completado</span>
@@ -221,7 +263,7 @@
                 </a>
 
                 <!-- Day 8 (Ready) -->
-                <a href="08_FHIR_I/index.html" class="card presentation-card"
+                <a href="08_FHIR_I/index.html" class="card presentation-card" data-module="1"
                     style="position: relative; overflow: hidden;">
                     <span class="presentation-number">08</span>
                     <div>
@@ -237,7 +279,7 @@
                 </a>
 
                 <!-- Day 9 -->
-                <a href="09_FHIR_II/index.html" class="card presentation-card" style="position: relative; overflow: hidden;">
+                <a href="09_FHIR_II/index.html" class="card presentation-card" data-module="1" style="position: relative; overflow: hidden;">
                     <span class="presentation-number">09</span>
                     <div>
                         <span class="badge badge-ready">Completado</span>
@@ -252,7 +294,7 @@
                 </a>
 
                 <!-- Day 10 -->
-                <a href="10_FHIR_III/index.html" class="card presentation-card" style="position: relative; overflow: hidden;">
+                <a href="10_FHIR_III/index.html" class="card presentation-card" data-module="1" style="position: relative; overflow: hidden;">
                     <span class="presentation-number">10</span>
                     <div>
                         <span class="badge badge-ready">Completado</span>
@@ -267,7 +309,7 @@
                 </a>
 
                 <!-- Day 11 -->
-                <a href="11_FHIR_IV/index.html" class="card presentation-card" style="position: relative; overflow: hidden;">
+                <a href="11_FHIR_IV/index.html" class="card presentation-card" data-module="1" style="position: relative; overflow: hidden;">
                     <span class="presentation-number">11</span>
                     <div>
                         <span class="badge badge-ready">Completado</span>
@@ -278,6 +320,21 @@
                     <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Taller Integrador M1</h3>
                     <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
                         <strong>Objetivo:</strong> Aplicar estándares a un caso real de la IPS.
+                    </p>
+                </a>
+
+                <!-- Day 12 (Ready) -->
+                <a href="12_NLP_I/index.html" class="card presentation-card" data-module="2" style="position: relative; overflow: hidden;">
+                    <span class="presentation-number">12</span>
+                    <div>
+                        <span class="badge badge-ready">Completado</span>
+                        <span class="badge"
+                            style="background: var(--color-surface); border: 1px solid #E2E8F0; color: var(--color-secondary); margin-left: 4px;">Módulo
+                            2</span>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; margin-top: 8px; line-height: 1.3;">Procesamiento de Lenguaje Natural</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: auto; padding-top: var(--space-sm);">
+                        <strong>Objetivo:</strong> Introducción al Procesamiento del Lenguaje Natural y la representación del texto.
                     </p>
                 </a>
 
@@ -326,6 +383,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Teacher Modal ---
             const teacherModal = document.getElementById('teacherModal');
             const openTeacherModalBtn = document.getElementById('openTeacherModal');
             const closeTeacherModalBtn = document.getElementById('closeTeacherModal');
@@ -363,6 +421,28 @@
                     }
                 });
             }
+
+            // --- Module Filtering ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.presentation-card');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    cards.forEach(card => {
+                        const moduleVal = card.getAttribute('data-module');
+                        if (filterValue === 'all' || moduleVal === filterValue) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
         });
     </script>
 </body>

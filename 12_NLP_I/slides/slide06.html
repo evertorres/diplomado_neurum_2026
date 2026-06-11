@@ -1,0 +1,277 @@
+<section class="slide" id="slide06">
+    <!-- Dummy fragments for linear presentation progression -->
+    <div class="fragment timeline-step" data-fragment-index="1" data-id="m1954" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="2" data-id="m1956" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="3" data-id="m1980s" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="4" data-id="m1990s" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="5" data-id="m2000s" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="6" data-id="m2003" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="7" data-id="m2006" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="8" data-id="m2015" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="9" data-id="m2017" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+    <div class="fragment timeline-step" data-fragment-index="10" data-id="m2020" style="position: absolute; width:0; height:0; opacity:0; pointer-events:none;"></div>
+
+    <div class="slide-content" style="max-width: 1250px; width: 100%; margin: 0 auto; padding: 20px;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; margin-bottom: var(--space-md); text-align: center;">Evolución Histórica del NLP</h2>
+        <p style="font-size: 1.15rem; text-align: center; max-width: 950px; margin: 0 auto var(--space-lg) auto; line-height: 1.5; color: var(--color-secondary);">
+            Hitos clave en la historia de la inteligencia artificial y el procesamiento de lenguajes naturales.
+        </p>
+
+        <!-- Dynamic detail card -->
+        <div id="timeline-detail-card" style="background: white; border-radius: 12px; border-top: 6px solid #E06927; padding: var(--space-xl); box-shadow: var(--shadow-lg); margin-bottom: 30px; text-align: left; min-height: 220px; display: flex; flex-direction: column; justify-content: center; transition: all 0.3s ease; border-left: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+            <div style="display: flex; align-items: baseline; gap: var(--space-md);">
+                <span id="detail-year" style="font-family: 'Exo', sans-serif; font-size: 3.5rem; font-weight: 800; color: #E06927; line-height: 1;">1950</span>
+                <h3 id="detail-title" style="font-size: 1.8rem; font-weight: 700; margin: 0; color: var(--color-primary);">Test de Turing</h3>
+            </div>
+            <p id="detail-desc" style="font-size: 1.15rem; line-height: 1.7; color: var(--color-secondary); margin-top: 14px; margin-bottom: 0; font-family: 'Roboto Mono', monospace;">
+                Alan Turing propone el "Juego de la Imitación" en su artículo seminal, definiendo la base teórica de la evaluación de la inteligencia artificial.
+            </p>
+        </div>
+
+        <!-- Tabs -->
+        <div style="display: flex; gap: var(--space-md); margin-bottom: 24px; justify-content: center;">
+            <button id="tab-classic" class="timeline-tab" style="font-family: 'Exo', sans-serif; font-weight: 600; font-size: 1rem; padding: 10px 24px; border-radius: 24px; border: 1px solid #E2E8F0; background: white; cursor: pointer; transition: all 0.2s;">Era Clásica (1950 - 1990s)</button>
+            <button id="tab-modern" class="timeline-tab" style="font-family: 'Exo', sans-serif; font-weight: 600; font-size: 1rem; padding: 10px 24px; border-radius: 24px; border: 1px solid #E2E8F0; background: white; cursor: pointer; transition: all 0.2s;">Era Moderna (2000s - 2020)</button>
+        </div>
+
+        <!-- Tracks -->
+        <div style="width: 100%; position: relative;">
+            
+            <!-- Classic Track -->
+            <div id="track-classic" class="timeline-track" style="display: flex; width: 100%; height: 74px; align-items: center; background: #F8FAFC; padding: 10px; border-radius: 12px; border: 1px solid #E2E8F0; gap: 4px; box-shadow: var(--shadow-sm);">
+                <div class="chevron active" data-id="m1950" style="background-color: #E06927;">1950</div>
+                <div class="chevron" data-id="m1954" style="background-color: #D3A11C;">1954</div>
+                <div class="chevron" data-id="m1956" style="background-color: #7CBA21;">1956</div>
+                <div class="chevron" data-id="m1980s" style="background-color: #368727;">1980s</div>
+                <div class="chevron" data-id="m1990s" style="background-color: #1A6321;">1990s</div>
+            </div>
+
+            <!-- Modern Track -->
+            <div id="track-modern" class="timeline-track" style="display: none; width: 100%; height: 74px; align-items: center; background: #F8FAFC; padding: 10px; border-radius: 12px; border: 1px solid #E2E8F0; gap: 4px; box-shadow: var(--shadow-sm);">
+                <div class="chevron" data-id="m2000s" style="background-color: #E06927;">2000s</div>
+                <div class="chevron" data-id="m2003" style="background-color: #D3A11C;">2003</div>
+                <div class="chevron" data-id="m2006" style="background-color: #7CBA21;">2006</div>
+                <div class="chevron" data-id="m2015" style="background-color: #368727;">2015-2016</div>
+                <div class="chevron" data-id="m2017" style="background-color: #1A6321;">2017</div>
+                <div class="chevron" data-id="m2020" style="background-color: #12541C;">2020</div>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        .chevron {
+            flex: 1;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Exo', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            opacity: 0.35;
+        }
+        .chevron:hover {
+            opacity: 0.8 !important;
+            transform: scale(1.02);
+        }
+        .chevron.active {
+            opacity: 1 !important;
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+            z-index: 10;
+        }
+        #track-classic .chevron:first-child, #track-modern .chevron:first-child {
+            clip-path: polygon(0% 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 0% 100%);
+            border-radius: 6px 0 0 6px;
+            padding-right: 10px;
+        }
+        #track-classic .chevron:not(:first-child), #track-modern .chevron:not(:first-child) {
+            clip-path: polygon(0% 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 0% 100%, 15px 50%);
+            padding-left: 15px;
+            padding-right: 10px;
+        }
+        .timeline-tab:hover {
+            border-color: var(--color-primary) !important;
+            color: var(--color-primary) !important;
+            transform: translateY(-1px);
+        }
+    </style>
+
+    <script>
+        // Self-contained code for Slide 6 timeline
+        (function() {
+            const slide = document.getElementById('slide06');
+            if (!slide) return;
+
+            const detailCard = document.getElementById('timeline-detail-card');
+            const detailYear = document.getElementById('detail-year');
+            const detailTitle = document.getElementById('detail-title');
+            const detailDesc = document.getElementById('detail-desc');
+            const tabClassic = document.getElementById('tab-classic');
+            const tabModern = document.getElementById('tab-modern');
+            const trackClassic = document.getElementById('track-classic');
+            const trackModern = document.getElementById('track-modern');
+
+            const milestones = {
+                m1950: { year: '1950', tab: 'classic', title: 'Test de Turing', color: '#E06927', desc: 'Alan Turing propone el "Juego de la Imitación" en su artículo seminal, definiendo la base teórica de la evaluación de la inteligencia artificial.' },
+                m1954: { year: '1954', tab: 'classic', title: 'Experimento de Traducción de Georgetown', color: '#D3A11C', desc: 'Primera demostración de traducción automática (del ruso al inglés) de 60 oraciones, generando gran expectativa y financiamiento.' },
+                m1956: { year: '1956', tab: 'classic', title: 'Concepto de Inteligencia Artificial', color: '#7CBA21', desc: 'Se acuña formalmente el término "Inteligencia Artificial" durante la histórica Conferencia de Dartmouth, naciendo el campo oficialmente.' },
+                m1980s: { year: '1980s', tab: 'classic', title: 'Algoritmos de Aprendizaje de Máquinas', color: '#368727', desc: 'Aparecen los primeros métodos estadísticos y algoritmos de Machine Learning. El enfoque cambia de reglas rígidas a aprender de datos.' },
+                m1990s: { year: '1990s', tab: 'classic', title: 'Reconocimiento de texto y Topic Modelling', color: '#1A6321', desc: 'Uso de modelos estadísticos para reconocimiento automático de caracteres y primeros desarrollos en minería de textos e identificación de temas.' },
+                m2000s: { year: '2000s', tab: 'modern', title: 'Mejores Modelos Estadísticos', color: '#E06927', desc: 'Se consolida el uso de corpus a gran escala y se optimizan modelos probabilísticos de lenguaje basados en N-gramas.' },
+                m2003: { year: '2003', tab: 'modern', title: 'LDA Topic Modeling', color: '#D3A11C', desc: 'David Blei, Andrew Ng y Michael Jordan introducen el modelado de temas con "Latent Dirichlet Allocation", revolucionando la clasificación de textos.' },
+                m2006: { year: '2006', tab: 'modern', title: 'Concepto de Deep Learning', color: '#7CBA21', desc: 'Geoffrey Hinton introduce el entrenamiento de redes neuronales profundas, permitiendo modelar estructuras complejas a partir de datos masivos.' },
+                m2015: { year: '2015-2016', tab: 'modern', title: 'Traducción por Redes Neuronales', color: '#368727', desc: 'Los sistemas de traducción automática (NMT) basados en redes recurrentes (LSTM) superan a los métodos estadísticos anteriores.' },
+                m2017: { year: '2017', tab: 'modern', title: 'Agentes Conversacionales', color: '#1A6321', desc: 'Surgimiento de arquitecturas de atención ("Transformers" en "Attention Is All You Need"), revolucionando los chatbots y agentes inteligentes.' },
+                m2020: { year: '2020', tab: 'modern', title: 'Grandes Modelos de Lenguaje', color: '#12541C', desc: 'Explosión de modelos de lenguaje pre-entrenados masivos (como GPT-3), capaces de entender y generar texto con mínima supervisión.' }
+            };
+
+            function selectMilestone(id, autoSwitchTab = true) {
+                const m = milestones[id];
+                if (!m) return;
+
+                detailYear.textContent = m.year;
+                detailYear.style.color = m.color;
+                detailTitle.textContent = m.title;
+                detailDesc.textContent = m.desc;
+                detailCard.style.borderTopColor = m.color;
+
+                slide.querySelectorAll('.chevron').forEach(c => {
+                    if (c.getAttribute('data-id') === id) {
+                        c.classList.add('active');
+                    } else {
+                        c.classList.remove('active');
+                    }
+                });
+
+                if (autoSwitchTab) {
+                    setTab(m.tab);
+                }
+            }
+
+            function setTab(tab) {
+                if (tab === 'classic') {
+                    tabClassic.classList.add('active-tab');
+                    tabClassic.style.background = 'var(--color-primary)';
+                    tabClassic.style.color = 'white';
+                    tabClassic.style.borderColor = 'var(--color-primary)';
+                    tabModern.classList.remove('active-tab');
+                    tabModern.style.background = 'white';
+                    tabModern.style.color = 'var(--color-secondary)';
+                    tabModern.style.borderColor = '#E2E8F0';
+                    trackClassic.style.display = 'flex';
+                    trackModern.style.display = 'none';
+                } else {
+                    tabModern.classList.add('active-tab');
+                    tabModern.style.background = 'var(--color-primary)';
+                    tabModern.style.color = 'white';
+                    tabModern.style.borderColor = 'var(--color-primary)';
+                    tabClassic.classList.remove('active-tab');
+                    tabClassic.style.background = 'white';
+                    tabClassic.style.color = 'var(--color-secondary)';
+                    tabClassic.style.borderColor = '#E2E8F0';
+                    trackClassic.style.display = 'none';
+                    trackModern.style.display = 'flex';
+                }
+            }
+
+            // Define observer first so it can be used in syncFragmentsToMilestone
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        const target = mutation.target;
+                        
+                        if (target.classList.contains('timeline-step')) {
+                            syncFromVisibleFragments();
+                        }
+                        
+                        if (target.classList.contains('slide') && target.classList.contains('active')) {
+                            syncFromVisibleFragments();
+                        }
+                    }
+                });
+            });
+
+            slide.querySelectorAll('.timeline-step').forEach(c => {
+                observer.observe(c, { attributes: true });
+            });
+
+            observer.observe(slide, { attributes: true });
+
+            function syncFragmentsToMilestone(id) {
+                const milestoneOrder = [
+                    'm1950', 'm1954', 'm1956', 'm1980s', 'm1990s',
+                    'm2000s', 'm2003', 'm2006', 'm2015', 'm2017', 'm2020'
+                ];
+                const targetIndex = milestoneOrder.indexOf(id);
+                if (targetIndex === -1) return;
+
+                // Temporarily disconnect observer to avoid triggering it while programmatically updating class lists
+                observer.disconnect();
+
+                slide.querySelectorAll('.timeline-step').forEach(step => {
+                    const idx = parseInt(step.getAttribute('data-fragment-index'));
+                    if (idx <= targetIndex) {
+                        step.classList.add('visible');
+                    } else {
+                        step.classList.remove('visible');
+                    }
+                });
+
+                // Re-observe
+                slide.querySelectorAll('.timeline-step').forEach(c => {
+                    observer.observe(c, { attributes: true });
+                });
+                observer.observe(slide, { attributes: true });
+            }
+
+            tabClassic.addEventListener('click', () => {
+                setTab('classic');
+                syncFragmentsToMilestone('m1950');
+                selectMilestone('m1950', false);
+            });
+
+            tabModern.addEventListener('click', () => {
+                setTab('modern');
+                syncFragmentsToMilestone('m2000s');
+                selectMilestone('m2000s', false);
+            });
+
+            slide.querySelectorAll('.chevron').forEach(c => {
+                c.addEventListener('click', () => {
+                    const id = c.getAttribute('data-id');
+                    syncFragmentsToMilestone(id);
+                    selectMilestone(id);
+                });
+            });
+
+            function syncFromVisibleFragments() {
+                const visibleSteps = Array.from(slide.querySelectorAll('.timeline-step.visible'));
+                if (visibleSteps.length > 0) {
+                    let lastStep = visibleSteps[0];
+                    let maxIdx = -1;
+                    visibleSteps.forEach(s => {
+                        const idx = parseInt(s.getAttribute('data-fragment-index'));
+                        if (idx > maxIdx) {
+                            maxIdx = idx;
+                            lastStep = s;
+                        }
+                    });
+                    const id = lastStep.getAttribute('data-id');
+                    selectMilestone(id);
+                } else {
+                    selectMilestone('m1950');
+                }
+            }
+
+            // Init state
+            setTab('classic');
+            selectMilestone('m1950');
+        })();
+    </script>
+</section>

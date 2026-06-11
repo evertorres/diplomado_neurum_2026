@@ -1,0 +1,36 @@
+<section class="slide" id="slide19">
+    <div class="slide-content" style="max-width: 1250px; width: 100%; margin: 0 auto; padding: 20px;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; margin-bottom: var(--space-xl); text-align: center;">Pipeline de Procesamiento y Limpieza Usual</h2>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-2xl); align-items: center;">
+            
+            <!-- Left Column: Content list -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg); text-align: left;">
+                <div class="fragment" data-fragment-index="1" style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; color: var(--color-primary);">1. Limpieza Inicial</h3>
+                    <ul style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); padding-left: 20px; list-style-type: disc;">
+                        <li style="margin-bottom: 6px;">Convertir todo el texto a <strong>minúsculas</strong> para evitar duplicados semánticos.</li>
+                        <li style="margin-bottom: 6px;">Eliminar <strong>números e hipervínculos</strong> si no aportan valor clínico.</li>
+                        <li>Remover <strong>caracteres especiales</strong> y signos de puntuación innecesarios.</li>
+                    </ul>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; color: var(--color-primary);">2. Segmentación y Reducción</h3>
+                    <ul style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); padding-left: 20px; list-style-type: disc;">
+                        <li style="margin-bottom: 6px;"><strong>Tokenizar:</strong> Segmentar el texto limpio en palabras individuales.</li>
+                        <li style="margin-bottom: 6px;"><strong>Filtrar Stopwords:</strong> Eliminar las palabras vacías de alta frecuencia.</li>
+                        <li><strong>Reducir:</strong> Reducir palabras a raíces (Stemming) o lemas base (Lemmatization).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="fragment text-center" data-fragment-index="2" style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-secondary); display: block; margin-bottom: 8px;">Diagrama de Lematización y Reducción</span>
+                <img src="images/nlp2_image8.png" alt="Stemming and Lemmatization Diagram" class="zoomable-image" style="max-height: 45vh; border-radius: 8px; object-fit: contain; width: 100%;">
+            </div>
+
+        </div>
+    </div>
+</section>
