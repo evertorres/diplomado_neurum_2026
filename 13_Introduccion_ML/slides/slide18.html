@@ -1,0 +1,51 @@
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Aprendizaje Supervisado: Modelos</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: var(--space-xl); align-items: stretch; gap: var(--space-2xl); width: 100%;">
+            
+            <!-- Classifiers Card -->
+            <div class="fragment" style="background: #EFF6FF; padding: var(--space-xl); border-radius: 16px; border-top: 5px solid var(--color-cta); box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: var(--space-md);">
+                <h3 style="color: var(--color-cta); font-size: calc(1.2rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif; margin-bottom: 0;">Modelos Clasificadores</h3>
+                <ul style="font-size: calc(0.85rem + 0.15vw); line-height: 1.8; color: var(--color-secondary); padding-left: 20px; font-family: 'Roboto Mono', monospace; display: flex; flex-direction: column; gap: 4px;">
+                    <li>Regresión Logística (Logistic Regression)</li>
+                    <li>Árboles de Decisión (Decision Trees)</li>
+                    <li>Bosques Aleatorios (Random Forest)</li>
+                    <li>Máquinas de Soporte Vectorial (SVM)</li>
+                    <li>K-Vecinos más cercanos (KNN)</li>
+                </ul>
+            </div>
+ 
+            <!-- Regressors Card -->
+            <div class="fragment" style="background: #F7FEE7; padding: var(--space-xl); border-radius: 16px; border-top: 5px solid #84CC16; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: var(--space-md);">
+                <h3 style="color: #65A30D; font-size: calc(1.2rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif; margin-bottom: 0;">Modelos Regresores</h3>
+                <ul style="font-size: calc(0.85rem + 0.15vw); line-height: 1.8; color: var(--color-secondary); padding-left: 20px; font-family: 'Roboto Mono', monospace; display: flex; flex-direction: column; gap: 4px;">
+                    <li>Regresión Lineal Simple / Múltiple</li>
+                    <li>Regresión de Cresta y Lazo (Ridge/Lasso)</li>
+                    <li>SVR (Support Vector Regressor)</li>
+                    <li>Árboles de Regresión y XGBoost Regressor</li>
+                </ul>
+            </div>
+ 
+        </div>
+        
+        <!-- Scikit-Learn Logo & Link -->
+        <div class="fragment" style="margin-top: var(--space-2xl); display: flex; justify-content: center; width: 100%;">
+            <a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" class="scikit-link" style="display: inline-flex; align-items: center; gap: var(--space-md); text-decoration: none; transition: all 200ms ease; padding: 12px 28px; background: white; border-radius: 12px; border: 1.5px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                <img src="images/slide18_scikit-learn-logo-without-subtitle.svg" alt="Scikit-Learn Logo" style="height: 32px; width: auto; display: block; object-fit: contain;">
+                <span style="font-size: calc(0.8rem + 0.1vw); color: var(--color-cta); font-weight: 700; font-family: 'Exo', sans-serif; letter-spacing: 0.5px;">📖 Explorar Guía de Modelos de Scikit-Learn</span>
+            </a>
+        </div>
+        
+        <style>
+            .scikit-link {
+                transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease !important;
+            }
+            .scikit-link:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-md) !important;
+                border-color: var(--color-cta) !important;
+            }
+        </style>
+    </div>
+</section>

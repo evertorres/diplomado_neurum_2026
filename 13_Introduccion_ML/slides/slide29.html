@@ -1,0 +1,30 @@
+<section class="slide" id="slide29">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; margin-bottom: var(--space-md);">Normalización de Datos</h2>
+        <p style="font-size: 1.15rem; color: var(--color-secondary); line-height: 1.6; max-width: 900px; margin-bottom: var(--space-xl);">
+            Los algoritmos de ML basados en distancias (como KNN o SVM) o optimización (descenso de gradiente) sufren sesgo si las variables tienen escalas muy diferentes (ej. Edad [0-100] vs Salario [Millones]).
+        </p>
+
+        <div class="grid-2" style="gap: var(--space-xl); width: 100%;">
+            <div class="fragment" style="background: white; padding: 25px; border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                <h3 style="color: var(--color-cta); font-size: 1.5rem; margin-bottom: 10px;">Min-Max Normalization</h3>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary); margin-bottom: 12px;">
+                    Escala todas las características al rango estricto entre <strong>0 y 1</strong> (o -1 a 1).
+                </p>
+                <div style="background: #F8FAFC; padding: 10px; border-radius: 6px; font-family: monospace; font-size: 1rem; text-align: center; color: var(--color-primary);">
+                    x_norm = (x - x_min) / (x_max - x_min)
+                </div>
+            </div>
+            
+            <div class="fragment" style="background: white; padding: 25px; border-radius: 12px; border-left: 5px solid #22C55E; box-shadow: var(--shadow-md);">
+                <h3 style="color: #16A34A; font-size: 1.5rem; margin-bottom: 10px;">Estandarización (Z-Score)</h3>
+                <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary); margin-bottom: 12px;">
+                    Escala para centrar en <strong>media 0 y desviación estándar 1</strong>. Más robusto a outliers.
+                </p>
+                <div style="background: #F8FAFC; padding: 10px; border-radius: 6px; font-family: monospace; font-size: 1rem; text-align: center; color: var(--color-primary);">
+                    x_std = (x - μ) / σ
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

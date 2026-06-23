@@ -1,0 +1,97 @@
+<section class="slide" id="slide24">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">El Pipeline de Machine Learning</h2>
+        <p style="font-size: calc(0.95rem + 0.15vw); color: var(--color-secondary); margin-bottom: var(--space-xl); width: 100%;">Un flujo estructurado paso a paso desde la formulación del problema hasta la realización de predicciones en producción.</p>
+        
+        <!-- 8-Step Pipeline Diagram -->
+        <div class="fragment" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: white; padding: var(--space-lg); border-radius: 16px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; margin-top: var(--space-lg);">
+            <svg viewBox="0 0 950 240" width="100%" style="overflow: visible; display: block;">
+                <!-- Markers for Arrows -->
+                <defs>
+                    <marker id="pipeline-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0F766E" />
+                    </marker>
+                </defs>
+                
+                <!-- Connections: Row 1 -->
+                <line x1="195" y1="50" x2="252" y2="50" stroke="#0F766E" stroke-width="2.5" marker-end="url(#pipeline-arrow)" />
+                <line x1="445" y1="50" x2="502" y2="50" stroke="#0F766E" stroke-width="2.5" marker-end="url(#pipeline-arrow)" />
+                <line x1="695" y1="50" x2="752" y2="50" stroke="#0F766E" stroke-width="2.5" marker-end="url(#pipeline-arrow)" />
+                
+                <!-- Diagonal Connection: Row 1 to Row 2 -->
+                <line x1="850" y1="90" x2="100" y2="135" stroke="#0F766E" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#pipeline-arrow)" />
+                
+                <!-- Connections: Row 2 -->
+                <line x1="195" y1="180" x2="252" y2="180" stroke="#0F766E" stroke-width="2.5" marker-end="url(#pipeline-arrow)" />
+                <line x1="445" y1="180" x2="502" y2="180" stroke="#0F766E" stroke-width="2.5" marker-end="url(#pipeline-arrow)" />
+                <line x1="695" y1="180" x2="752" y2="180" stroke="#0F766E" stroke-width="2.5" marker-end="url(#pipeline-arrow)" />
+
+                <!-- Row 1 Nodes -->
+                <!-- Step 1 -->
+                <foreignObject x="10" y="10" width="180" height="80">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="background: #0f4c5c; color: white; padding: 10px; border-radius: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow-sm); font-family: 'Exo', sans-serif;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin-bottom: 4px;">Paso 1</span>
+                        <strong style="font-size: 0.85rem; line-height: 1.2;">Formulación del Problema</strong>
+                    </div>
+                </foreignObject>
+
+                <!-- Step 2 -->
+                <foreignObject x="260" y="10" width="180" height="80">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="background: #145a6c; color: white; padding: 10px; border-radius: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow-sm); font-family: 'Exo', sans-serif;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin-bottom: 4px;">Paso 2</span>
+                        <strong style="font-size: 0.85rem; line-height: 1.2;">Preparación de Datos</strong>
+                    </div>
+                </foreignObject>
+
+                <!-- Step 3 -->
+                <foreignObject x="510" y="10" width="180" height="80">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="background: #19697c; color: white; padding: 10px; border-radius: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow-sm); font-family: 'Exo', sans-serif;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin-bottom: 4px;">Paso 3</span>
+                        <strong style="font-size: 0.82rem; line-height: 1.2;">Recolección e Integración de Datos</strong>
+                    </div>
+                </foreignObject>
+
+                <!-- Step 4 -->
+                <foreignObject x="760" y="10" width="180" height="80">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="background: #1f798b; color: white; padding: 10px; border-radius: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow-sm); font-family: 'Exo', sans-serif;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin-bottom: 4px;">Paso 4</span>
+                        <strong style="font-size: 0.82rem; line-height: 1.2;">Visualización y Análisis de Datos</strong>
+                    </div>
+                </foreignObject>
+
+                <!-- Row 2 Nodes -->
+                <!-- Step 5 -->
+                <foreignObject x="10" y="140" width="180" height="80">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="background: #24889b; color: white; padding: 10px; border-radius: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow-sm); font-family: 'Exo', sans-serif;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin-bottom: 4px;">Paso 5</span>
+                        <strong style="font-size: 0.82rem; line-height: 1.2;">Ingeniería de Características</strong>
+                    </div>
+                </foreignObject>
+
+                <!-- Step 6 -->
+                <foreignObject x="260" y="140" width="180" height="80">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="background: #2998ab; color: white; padding: 10px; border-radius: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow-sm); font-family: 'Exo', sans-serif;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin-bottom: 4px;">Paso 6</span>
+                        <strong style="font-size: 0.85rem; line-height: 1.2;">Entrenamiento del Modelo</strong>
+                    </div>
+                </foreignObject>
+
+                <!-- Step 7 -->
+                <foreignObject x="510" y="140" width="180" height="80">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="background: #3bc1bd; color: #0f4c5c; padding: 10px; border-radius: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow-sm); font-family: 'Exo', sans-serif;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin-bottom: 4px;">Paso 7</span>
+                        <strong style="font-size: 0.85rem; line-height: 1.2;">Evaluación del Modelo</strong>
+                    </div>
+                </foreignObject>
+
+                <!-- Step 8 -->
+                <foreignObject x="760" y="140" width="180" height="80">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="background: #50dcd7; color: #0f4c5c; padding: 10px; border-radius: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow-sm); font-family: 'Exo', sans-serif;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin-bottom: 4px;">Paso 8</span>
+                        <strong style="font-size: 0.76rem; line-height: 1.2;">Preparación para Producción: Predicciones</strong>
+                    </div>
+                </foreignObject>
+            </svg>
+        </div>
+    </div>
+</section>

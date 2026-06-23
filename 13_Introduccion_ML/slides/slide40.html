@@ -1,0 +1,40 @@
+<section class="slide" id="slide40">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Caso de Estudio: Predicción de Mortalidad en Urgencias</h2>
+        <p style="font-size: calc(0.85rem + 0.1vw); color: var(--color-secondary); line-height: 1.5; font-style: italic; margin-bottom: var(--space-lg);">
+            Referencia: Li, C., Zhang, Z. et al. (2021). "Machine learning based early mortality prediction in the emergency department". International journal of medical informatics, 155, 104570.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            <!-- Left Column: Study Cards -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                    <h3 style="color: var(--color-cta); font-size: 1.35rem; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">Dataset del Estudio</h3>
+                    <ul style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); padding-left: 20px; margin: 0;">
+                        <li><strong>Origen:</strong> Historia Clínica Electrónica (HCE) del departamento de urgencias del periodo 2016-2019.</li>
+                        <li><strong>Muestra:</strong> 1114 registros clínicos de pacientes de urgencias críticas.</li>
+                        <li><strong>Gobernanza:</strong> Datos completamente anonimizados cumpliendo normativas éticas.</li>
+                    </ul>
+                </div>
+                
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 5px solid #10B981; box-shadow: var(--shadow-md);">
+                    <h3 style="color: #059669; font-size: 1.35rem; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">Variables e Inputs</h3>
+                    <ul style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); padding-left: 20px; margin: 0;">
+                        <li><strong>Predictores Generales:</strong> 2 variables sociodemográficas (edad y género).</li>
+                        <li><strong>Fisiológicas:</strong> 6 series de tiempo fisiológicas basales (signos vitales).</li>
+                        <li><strong>Laboratorios:</strong> 68 resultados químicos y hematológicos detallados.</li>
+                        <li><strong>Outcome (Target):</strong> Mortalidad hospitalaria temprana (Sí / No).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Paper Screenshot Image Card -->
+            <div class="fragment" style="text-align: center; background: white; padding: 16px; border-radius: 16px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <img src="images/slide40_paper.png" alt="Publicación Científica del Caso de Estudio" class="slide-image zoomable-image" style="max-height: 48vh; max-width: 100%; border-radius: 8px; box-shadow: var(--shadow-sm); cursor: zoom-in; object-fit: contain; display: block; margin: 0;">
+                <div style="margin-top: 12px; font-size: calc(0.75rem + 0.1vw); color: var(--color-cta); font-weight: bold; font-family: 'Exo', sans-serif;">
+                    🔍 Clic para ver detalles del artículo científico
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

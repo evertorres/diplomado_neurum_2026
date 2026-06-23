@@ -1,0 +1,67 @@
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Terminologías para Ciencia de Datos y ML</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; margin-top: var(--space-xl); align-items: stretch; gap: var(--space-2xl); width: 100%;">
+            
+            <!-- Left Column: Terminology Cards -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); justify-content: center; width: 100%;">
+                <div class="fragment" data-fragment-index="1" style="background: #EFF6FF; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #DBEAFE; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: calc(1.1rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif;">Datos (Data)</h3>
+                    <p style="font-size: calc(0.9rem + 0.15vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">"Hechos" extraídos de observaciones. Es la unidad básica de análisis en cualquier proyecto.</p>
+                </div>
+                <div class="fragment" data-fragment-index="2" style="background: #F8FAFC; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #E2E8F0; border-left: 5px solid var(--color-primary); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: calc(1.1rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif;">Características (Features)</h3>
+                    <p style="font-size: calc(0.9rem + 0.15vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">Tipos de información o atributos que describen a cada dato (las variables explicativas de entrada).</p>
+                </div>
+                <div class="fragment" data-fragment-index="3" style="background: #F0FDF4; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #DCFCE7; border-left: 5px solid #10B981; box-shadow: var(--shadow-sm);">
+                    <h3 style="margin: 0 0 6px 0; color: #15803D; font-size: calc(1.1rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif;">Objetivo (Target / Label)</h3>
+                    <p style="font-size: calc(0.9rem + 0.15vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">La variable o valor de salida que el modelo busca predecir o clasificar a partir de las características.</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Table -->
+            <div class="fragment" data-fragment-index="4" style="background: #F8FAFC; padding: var(--space-lg) var(--space-xl); border-radius: 16px; border: 1px solid #E2E8F0; display: flex; flex-direction: column; justify-content: center; box-shadow: var(--shadow-md); width: 100%;">
+                <h3 style="font-size: calc(1.2rem + 0.3vw); color: var(--color-primary); text-align: center; margin-bottom: var(--space-md); font-weight: 700; font-family: 'Exo', sans-serif; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px;">Dataset Tabular Representativo</h3>
+                
+                <div style="overflow-x: auto; width: 100%;">
+                    <table style="width: 100%; border-collapse: separate; border-spacing: 0; background: white; font-size: calc(0.8rem + 0.15vw); text-align: left; border-radius: 8px; overflow: hidden; border: 1px solid #E2E8F0;">
+                        <thead>
+                            <tr style="background: #F1F5F9;">
+                                <th style="padding: 12px 14px; border-bottom: 2px solid #CBD5E1; color: var(--color-primary); font-weight: 700; font-family: 'Exo', sans-serif;">ID Paciente</th>
+                                <th style="padding: 12px 14px; border-bottom: 2px solid #CBD5E1; color: var(--color-cta); font-weight: 700; font-family: 'Exo', sans-serif;">Edad (Feature)</th>
+                                <th style="padding: 12px 14px; border-bottom: 2px solid #CBD5E1; color: var(--color-cta); font-weight: 700; font-family: 'Exo', sans-serif;">Presión (Feature)</th>
+                                <th style="padding: 12px 14px; border-bottom: 2px solid #CBD5E1; color: #10B981; font-weight: 700; font-family: 'Exo', sans-serif;">Diabetes (Target)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #E2E8F0;">
+                                <td style="padding: 12px 14px; border-bottom: 1px solid #E2E8F0; font-family: monospace; font-weight: bold; color: #64748B;">#001</td>
+                                <td style="padding: 12px 14px; border-bottom: 1px solid #E2E8F0; color: var(--color-secondary);">45 años</td>
+                                <td style="padding: 12px 14px; border-bottom: 1px solid #E2E8F0; color: var(--color-secondary);">120/80</td>
+                                <td style="padding: 12px 14px; border-bottom: 1px solid #E2E8F0; font-weight: bold; color: #EF4444; background: #FEF2F2;">Sí</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #E2E8F0;">
+                                <td style="padding: 12px 14px; border-bottom: 1px solid #E2E8F0; font-family: monospace; font-weight: bold; color: #64748B;">#002</td>
+                                <td style="padding: 12px 14px; border-bottom: 1px solid #E2E8F0; color: var(--color-secondary);">32 años</td>
+                                <td style="padding: 12px 14px; border-bottom: 1px solid #E2E8F0; color: var(--color-secondary);">115/75</td>
+                                <td style="padding: 12px 14px; border-bottom: 1px solid #E2E8F0; font-weight: bold; color: #10B981; background: #F0FDF4;">No</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 14px; font-family: monospace; font-weight: bold; color: #64748B;">#003</td>
+                                <td style="padding: 12px 14px; color: var(--color-secondary);">61 años</td>
+                                <td style="padding: 12px 14px; color: var(--color-secondary);">140/90</td>
+                                <td style="padding: 12px 14px; font-weight: bold; color: #EF4444; background: #FEF2F2;">Sí</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: var(--space-md); font-size: calc(0.7rem + 0.1vw); color: var(--color-secondary); line-height: 1.5; text-align: left; padding: 10px 14px; background: #EFF6FF; border-left: 4px solid var(--color-cta); border-radius: 4px;">
+                    <strong>💡 Relación en el dataset:</strong> Cada fila representa un <strong>dato</strong> (paciente), las columnas Edad y Presión son las <strong>características</strong> de entrada (features), y Diabetes es el valor <strong>objetivo</strong> a clasificar (target).
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

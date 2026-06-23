@@ -1,0 +1,36 @@
+<section class="slide" id="slide35">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Evaluación de Modelos No Supervisados</h2>
+        <p style="font-size: calc(0.95rem + 0.15vw); color: var(--color-secondary); line-height: 1.6; max-width: 1000px; margin-bottom: var(--space-lg);">
+            Evaluar modelos no supervisados es inherentemente más complejo al no contar con una "verdad absoluta" (target) con la cual comparar las predicciones.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            <!-- Left Side: Concepts Stacked Vertically -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                    <h3 style="color: var(--color-cta); font-size: 1.4rem; margin: 0 0 8px 0; font-family: 'Exo', sans-serif;">Silhouette Score (Coeficiente de Silueta)</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.55; color: var(--color-secondary); margin: 0;">
+                        Mide qué tan similar es un objeto a su propio cluster en comparación con otros clusters. Oscila entre -1 y 1. Un valor cercano a 1 indica que el objeto está muy bien agrupado.
+                    </p>
+                </div>
+                
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 5px solid #10B981; box-shadow: var(--shadow-md);">
+                    <h3 style="color: #059669; font-size: 1.4rem; margin: 0 0 8px 0; font-family: 'Exo', sans-serif;">Davies-Bouldin & Dunn Index</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.55; color: var(--color-secondary); margin: 0;">
+                        <strong>Davies-Bouldin Index:</strong> Evalúa la similitud promedio entre cada cluster y su cluster más similar (menor valor = mejor clustering).<br>
+                        <strong>Dunn's Index:</strong> Relación entre la distancia mínima entre elementos de distintos clusters y el diámetro máximo intra-cluster (mayor valor = mejor).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: Clustering Image Card -->
+            <div class="fragment" style="text-align: center; background: white; padding: 16px; border-radius: 16px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <img src="images/slide35_clustering.png" alt="Visualización de Agrupamientos y Silueta" class="slide-image zoomable-image" style="max-height: 48vh; max-width: 100%; border-radius: 8px; box-shadow: var(--shadow-sm); cursor: zoom-in; object-fit: contain; display: block; margin: 0;">
+                <div style="margin-top: 12px; font-size: calc(0.75rem + 0.1vw); color: var(--color-cta); font-weight: bold; font-family: 'Exo', sans-serif;">
+                    🔍 Clic para expandir gráfico de clusters y siluetas
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

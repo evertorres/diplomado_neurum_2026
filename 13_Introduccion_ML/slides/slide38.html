@@ -1,0 +1,63 @@
+<section class="slide" id="slide38">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Ciclo del Aprendizaje por Refuerzo (RL)</h2>
+        
+        <p style="font-size: calc(0.9rem + 0.1vw); color: var(--color-secondary); line-height: 1.6; margin-bottom: var(--space-lg); max-width: 1000px;">
+            A diferencia de los enfoques supervisados y no supervisados, el Aprendizaje por Refuerzo se basa en la interacción dinámica de un sistema con su entorno a través de la retroalimentación.
+        </p>
+
+        <div class="fragment" style="display: flex; justify-content: center; width: 100%; margin-top: var(--space-md); background: white; padding: 25px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+            <svg viewBox="0 0 800 400" style="width: 100%; max-width: 800px; height: auto; display: block;">
+                <!-- Definitions for markers or shadows -->
+                <defs>
+                    <filter id="box-shadow" x="-10%" y="-10%" width="120%" height="120%">
+                        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0284C7" flood-opacity="0.15" />
+                    </filter>
+                </defs>
+                
+                <!-- Left Side: Inputs -->
+                <text x="90" y="195" text-anchor="middle" font-family="'Exo', sans-serif" font-size="16" fill="var(--color-primary)" font-weight="bold">
+                    <tspan x="90" dy="0">Entradas</tspan>
+                    <tspan x="90" dy="20" font-size="14" font-weight="normal" fill="var(--color-secondary)">(Inputs)</tspan>
+                </text>
+                
+                <!-- Arrow Left to Center -->
+                <path d="M 160,190 L 250,190 L 250,175 L 275,200 L 250,225 L 250,210 L 160,210 Z" fill="#1E293B" />
+                
+                <!-- Center Box: RL System -->
+                <rect x="280" y="150" width="240" height="100" rx="10" ry="10" stroke="#0284C7" stroke-width="3" fill="#E0F2FE" filter="url(#box-shadow)" />
+                <text x="400" y="200" text-anchor="middle" font-family="'Exo', sans-serif" font-size="18" fill="#0369A1" font-weight="bold">
+                    <tspan x="400" dy="-2">Sistema de RL</tspan>
+                    <tspan x="400" dy="22" font-size="14" font-weight="normal" fill="#0284C7">(RL System)</tspan>
+                </text>
+                
+                <!-- Top Side: Training Info -->
+                <text x="400" y="35" text-anchor="middle" font-family="'Exo', sans-serif" font-size="16" fill="var(--color-primary)" font-weight="bold">
+                    <tspan x="400" dy="0">Info. de Entrenamiento</tspan>
+                    <tspan x="400" dy="20" font-size="13" font-weight="normal" fill="var(--color-secondary)">evaluaciones («recompensas» / «penalizaciones»)</tspan>
+                </text>
+                
+                <!-- Arrow Top to Center -->
+                <path d="M 390,75 L 390,115 L 375,115 L 400,142 L 425,115 L 410,115 L 410,75 Z" fill="#1E293B" />
+                
+                <!-- Arrow Center to Right -->
+                <path d="M 525,190 L 615,190 L 615,175 L 640,200 L 615,225 L 615,210 L 525,210 Z" fill="#1E293B" />
+                
+                <!-- Right Side: Outputs -->
+                <text x="705" y="195" text-anchor="middle" font-family="'Exo', sans-serif" font-size="16" fill="var(--color-primary)" font-weight="bold">
+                    <tspan x="705" dy="0">Salidas</tspan>
+                    <tspan x="705" dy="20" font-size="14" font-weight="normal" fill="var(--color-secondary)">(«acciones» / Outputs)</tspan>
+                </text>
+                
+                <!-- Bottom Side: Objective -->
+                <rect x="150" y="305" width="500" height="2" fill="#E2E8F0" />
+                <text x="400" y="340" text-anchor="middle" font-family="'Exo', sans-serif" font-size="19" fill="var(--color-cta)" font-weight="bold">
+                    Objetivo: obtener la mayor recompensa posible
+                </text>
+                <text x="400" y="365" text-anchor="middle" font-family="'Exo', sans-serif" font-size="14" fill="var(--color-secondary)" font-style="italic">
+                    (Objective: get as much reward as possible)
+                </text>
+            </svg>
+        </div>
+    </div>
+</section>

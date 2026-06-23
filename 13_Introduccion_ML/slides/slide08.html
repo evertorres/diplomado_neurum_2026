@@ -1,0 +1,60 @@
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Tipos de Datos Avanzados</h2>
+        <p style="font-size: calc(0.95rem + 0.15vw); color: var(--color-secondary); margin-bottom: var(--space-xl); width: 100%;">Ejemplos de formatos complejos y casos de ausencia de registros en conjuntos de datos de salud.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); align-items: stretch; width: 100%;">
+            
+            <!-- Images Card -->
+            <div class="fragment" style="background: white; padding: 24px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-md);">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 8px;">🖼️</div>
+                    <h4 style="color: var(--color-primary); font-size: calc(1.1rem + 0.2vw); font-weight: 700; font-family: 'Exo', sans-serif; margin-bottom: 8px;">Imágenes</h4>
+                    <p style="font-size: calc(0.85rem + 0.1vw); line-height: 1.5; color: var(--color-secondary); margin-bottom: 0;">Las características representan píxeles de una matriz de intensidades (ej. radiografías, resonancias, tomografías).</p>
+                </div>
+                
+                <!-- Zoomable Image Component -->
+                <div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden; background: #F8FAFC; box-shadow: inset var(--shadow-sm);">
+                        <img src="images/slide08_Channels-and-colors-in-a-RGB-image-Adapted-from-27_W640.webp" 
+                             alt="Canales y colores en una imagen RGB digital" 
+                             class="zoomable-image" 
+                             style="width: 100%; height: 110px; object-fit: cover; display: block; transition: all 200ms ease; cursor: zoom-in;"
+                             title="Haga clic para expandir">
+                    </div>
+                    <span style="font-size: 0.75rem; color: var(--color-cta); text-align: center; font-weight: bold; font-family: 'Exo', sans-serif;">🔍 Clic para expandir canales RGB</span>
+                </div>
+            </div>
+            
+            <!-- Text Card -->
+            <div class="fragment" style="background: white; padding: 24px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-md);">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 8px;">📝</div>
+                    <h4 style="color: var(--color-primary); font-size: calc(1.1rem + 0.2vw); font-weight: 700; font-family: 'Exo', sans-serif; margin-bottom: 8px;">Texto Libre</h4>
+                    <p style="font-size: calc(0.85rem + 0.1vw); line-height: 1.5; color: var(--color-secondary); margin-bottom: 0;">Características no estructuradas en forma de texto libre (ej. notas de evolución clínica, descripciones subjetivas).</p>
+                </div>
+                
+                <div style="margin-top: auto; padding: 12px; background: #F8FAFC; border-radius: 8px; border: 1px dashed #CBD5E1; font-family: monospace; font-size: 0.75rem; color: #475569; text-align: left; line-height: 1.4;">
+                    <strong>Ficha Clínica (Ejemplo):</strong><br>
+                    <span style="color: #64748B;">"Paciente de 45 años con disnea progresiva y tos no productiva de 3 días..."</span>
+                </div>
+            </div>
+
+            <!-- Missing Values Card -->
+            <div class="fragment" style="background: white; padding: 24px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-md);">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 8px;">⚠️</div>
+                    <h4 style="color: #D97706; font-size: calc(1.1rem + 0.2vw); font-weight: 700; font-family: 'Exo', sans-serif; margin-bottom: 8px;">Ausencia de Datos</h4>
+                    <p style="font-size: calc(0.85rem + 0.1vw); line-height: 1.5; color: var(--color-secondary); margin-bottom: 0;">Not a Number (NaN), Not a Date (NaT) o NULL. Representan registros no recolectados o vacíos en el dataset.</p>
+                </div>
+                
+                <div style="margin-top: auto; display: flex; gap: 8px; justify-content: center; font-family: 'Roboto Mono', monospace; font-size: 0.8rem;">
+                    <span style="background: #FEF2F2; color: #EF4444; border: 1px solid #FCA5A5; padding: 6px 12px; border-radius: 6px; font-weight: bold; box-shadow: var(--shadow-sm);">NaN</span>
+                    <span style="background: #FEF2F2; color: #EF4444; border: 1px solid #FCA5A5; padding: 6px 12px; border-radius: 6px; font-weight: bold; box-shadow: var(--shadow-sm);">NaT</span>
+                    <span style="background: #FEF2F2; color: #EF4444; border: 1px solid #FCA5A5; padding: 6px 12px; border-radius: 6px; font-weight: bold; box-shadow: var(--shadow-sm);">NULL</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>

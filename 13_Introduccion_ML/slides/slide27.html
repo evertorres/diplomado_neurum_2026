@@ -1,0 +1,31 @@
+<section class="slide" id="slide27">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Transformación Logarítmica</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: var(--space-xl); align-items: center; gap: var(--space-2xl); width: 100%;">
+            
+            <!-- Left Side: Concept -->
+            <div class="fragment" style="display: flex; flex-direction: column; gap: var(--space-md); align-items: flex-start;">
+                <h3 style="color: var(--color-cta); font-size: calc(1.3rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif; margin-bottom: 8px;">¿Por qué transformar?</h3>
+                <p style="font-size: calc(0.95rem + 0.15vw); line-height: 1.6; color: var(--color-secondary); margin-bottom: 12px;">
+                    Muchos algoritmos de Machine Learning (como regresión lineal y redes neuronales) asumen que las variables de entrada siguen una distribución normal o gaussiana. 
+                </p>
+                <p style="font-size: calc(0.95rem + 0.15vw); line-height: 1.6; color: var(--color-secondary); margin-bottom: 12px;">
+                    La transformación logarítmica convierte una distribución con sesgo positivo (cola larga hacia valores altos a la derecha, como ingresos o dosis farmacéuticas) en una distribución simétrica y normalizada.
+                </p>
+                <div style="background: #EFF6FF; padding: 12px 20px; border-radius: 8px; font-family: 'Roboto Mono', monospace; font-size: calc(0.9rem + 0.15vw); color: var(--color-cta); display: inline-block; border: 1px solid #DBEAFE; font-weight: 700;">
+                    y = log(x) &nbsp;o&nbsp; y = log(x + 1)
+                </div>
+            </div>
+
+            <!-- Right Side: Log Transformation Comparison Image Card -->
+            <div class="fragment" style="text-align: center; background: white; padding: 16px; border-radius: 16px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <img src="images/slide27_log_transformation.png" alt="Comparativa de datos transformados por logaritmo" class="slide-image zoomable-image" style="max-height: 48vh; max-width: 100%; border-radius: 8px; box-shadow: var(--shadow-sm); cursor: zoom-in; object-fit: contain; display: block; margin: 0;">
+                <div style="margin-top: 12px; font-size: calc(0.75rem + 0.1vw); color: var(--color-cta); font-weight: bold; font-family: 'Exo', sans-serif;">
+                    🔍 Clic para expandir histogramas de transformación
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

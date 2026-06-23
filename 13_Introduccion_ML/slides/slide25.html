@@ -1,0 +1,33 @@
+<section class="slide" id="slide25">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; margin-bottom: var(--space-md);">Preparar los Datos: Imputación</h2>
+        <p style="font-size: 1.15rem; color: var(--color-secondary); line-height: 1.6; max-width: 900px; margin-bottom: var(--space-xl);">
+            El manejo de valores faltantes (NaN) es uno de los problemas más comunes al preparar datos clínicos para Machine Learning. Un modelo matemático no puede procesar valores nulos de forma nativa.
+        </p>
+
+        <div class="grid-2" style="gap: var(--space-xl); width: 100%;">
+            <div class="fragment" style="background: white; padding: 25px; border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                <h3 style="color: var(--color-cta); font-size: 1.5rem; margin-bottom: 12px;">Imputación Numérica</h3>
+                <p style="font-size: 1rem; line-height: 1.6; color: var(--color-secondary);">
+                    Reemplazar el nulo por un estadístico calculado sobre la columna:
+                </p>
+                <ul style="padding-left: 20px; font-size: 0.95rem; color: var(--color-secondary); margin-top: 8px;">
+                    <li><strong>Media:</strong> Si la distribución es normal.</li>
+                    <li><strong>Mediana:</strong> Si hay sesgo o outliers (medida robusta).</li>
+                    <li><strong>Constante:</strong> ej. Reemplazar por 0.</li>
+                </ul>
+            </div>
+            
+            <div class="fragment" style="background: white; padding: 25px; border-radius: 12px; border-left: 5px solid #22C55E; box-shadow: var(--shadow-md);">
+                <h3 style="color: #16A34A; font-size: 1.5rem; margin-bottom: 12px;">Imputación Categórica</h3>
+                <p style="font-size: 1rem; line-height: 1.6; color: var(--color-secondary);">
+                    Reemplazar valores faltantes en columnas cualitativas:
+                </p>
+                <ul style="padding-left: 20px; font-size: 0.95rem; color: var(--color-secondary); margin-top: 8px;">
+                    <li><strong>Moda:</strong> Reemplazar por la categoría más común.</li>
+                    <li><strong>Nueva Categoría:</strong> ej. Crear la etiqueta "Faltante" o "Desconocido".</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

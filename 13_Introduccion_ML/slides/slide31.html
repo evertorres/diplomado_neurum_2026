@@ -1,0 +1,45 @@
+<section class="slide" id="slide31">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Escoger el Estimador Adecuado</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; margin-top: var(--space-xl); align-items: center; gap: var(--space-2xl); width: 100%;">
+            
+            <!-- Left Column: Selection Guidelines -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <!-- Card 1 -->
+                <div class="fragment" style="background: white; padding: 12px 18px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); border-left: 5px solid var(--color-cta);">
+                    <h4 style="margin: 0 0 4px 0; color: var(--color-cta); font-size: 1.15rem; font-family: 'Exo', sans-serif;">1. ¿Hay etiquetas en la variable de salida (y)?</h4>
+                    <p style="margin: 0; font-size: 0.82rem; color: var(--color-secondary); line-height: 1.45;">
+                        <strong>Sí:</strong> Utilizar Aprendizaje Supervisado (Clasificación para variables categóricas, Regresión para continuas).<br>
+                        <strong>No:</strong> Utilizar Aprendizaje No Supervisado (Agrupamiento / Clustering).
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="fragment" style="background: white; padding: 12px 18px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); border-left: 5px solid #10B981;">
+                    <h4 style="margin: 0 0 4px 0; color: #047857; font-size: 1.15rem; font-family: 'Exo', sans-serif;">2. Tamaño del Dataset</h4>
+                    <p style="margin: 0; font-size: 0.82rem; color: var(--color-secondary); line-height: 1.45;">
+                        Para conjuntos de datos pequeños (menos de 100 mil registros), algoritmos lineales o basados en árboles son ideales.<br>
+                        Para conjuntos masivos, métodos de ensamble (XGBoost/LightGBM) o redes neuronales son preferibles.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="fragment" style="background: white; padding: 12px 18px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); border-left: 5px solid #F59E0B;">
+                    <h4 style="margin: 0 0 4px 0; color: #D97706; font-size: 1.15rem; font-family: 'Exo', sans-serif;">3. Requisito de Interpretabilidad</h4>
+                    <p style="margin: 0; font-size: 0.82rem; color: var(--color-secondary); line-height: 1.45;">
+                        Si es crítico explicar la razón de una decisión clínica (ej. Árboles, Regresión Logística).<br>
+                        Si se busca máxima precisión absoluta, se aceptan modelos de caja negra (Redes Profundas).
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right Column: Scikit-Learn Estimator Cheat Sheet Card -->
+            <div class="fragment" style="text-align: center; background: white; padding: 16px; border-radius: 16px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <img src="images/slide31_best_estimator.svg" alt="Guía de selección de estimadores de Scikit-Learn" class="slide-image zoomable-image" style="max-height: 48vh; max-width: 100%; border-radius: 8px; box-shadow: var(--shadow-sm); cursor: zoom-in; object-fit: contain; display: block; margin: 0;">
+                <div style="margin-top: 12px; font-size: calc(0.75rem + 0.1vw); color: var(--color-cta); font-weight: bold; font-family: 'Exo', sans-serif;">
+                    🔍 Clic para expandir Cheat Sheet de Scikit-Learn
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>

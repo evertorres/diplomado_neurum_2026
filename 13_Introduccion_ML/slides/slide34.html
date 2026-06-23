@@ -1,0 +1,285 @@
+<section class="slide" id="slide34">
+    <div class="slide-content left" style="max-width: 1300px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Métricas de Evaluación: Matriz de Confusión</h2>
+        
+        <p style="font-size: calc(0.9rem + 0.1vw); color: var(--color-secondary); line-height: 1.6; margin-bottom: var(--space-lg); max-width: 1000px;">
+            La matriz de confusión contrasta las predicciones del modelo con la realidad. Selecciona una métrica a la derecha para resaltar de forma interactiva las celdas utilizadas en su cálculo.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; margin-top: var(--space-md); align-items: start; gap: var(--space-2xl); width: 100%;">
+            
+            <!-- Left Side: Interactive Confusion Matrix -->
+            <div class="fragment" style="background: white; padding: 25px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md); width: 100%;">
+                <h3 style="font-size: 1.35rem; color: var(--color-primary); text-align: center; margin-bottom: 20px; font-family: 'Exo', sans-serif;">Matriz de Confusión</h3>
+                
+                <!-- Layout container for Matrix labels -->
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 15px; align-items: center; justify-items: center;">
+                    <!-- Real Label vertical -->
+                    <div style="writing-mode: vertical-lr; transform: rotate(180deg); font-weight: bold; color: var(--color-secondary); font-family: 'Exo', sans-serif; font-size: 0.95rem; grid-row: 2 / span 2; letter-spacing: 1px; text-transform: uppercase;">
+                        VALOR REAL
+                    </div>
+                    
+                    <!-- Main table container -->
+                    <div style="width: 100%;">
+                        <!-- Predicho label horizontal -->
+                        <div style="text-align: center; font-weight: bold; color: var(--color-secondary); font-family: 'Exo', sans-serif; font-size: 0.95rem; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase;">
+                            VALOR PREDICHO
+                        </div>
+                        
+                        <table style="width: 100%; border-collapse: separate; border-spacing: 8px; text-align: center; font-size: 0.9rem; font-family: 'Exo', sans-serif;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 10px; width: 20%;"></th>
+                                    <th style="padding: 12px; background: #F8FAFC; border-radius: 8px; color: var(--color-cta); font-weight: bold; width: 40%; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                                        Positivo (+)
+                                    </th>
+                                    <th style="padding: 12px; background: #F8FAFC; border-radius: 8px; color: var(--color-cta); font-weight: bold; width: 40%; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                                        Negativo (-)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; background: #F8FAFC; font-weight: bold; text-align: left; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                                        Positivo (+)
+                                    </td>
+                                    <!-- VP -->
+                                    <td id="cell-vp" class="matrix-cell" style="padding: 20px; background: #F0FDF4; font-weight: bold; border-radius: 8px; border: 2px solid #16A34A; color: #15803D; transition: all 0.3s ease;">
+                                        <div style="font-size: 1.25rem;">VP</div>
+                                        <div style="font-size: 0.78rem; font-weight: normal; margin-top: 4px; color: #166534;">Verdadero Positivo</div>
+                                        <div style="font-size: 0.72rem; font-weight: normal; font-style: italic; color: #15803D; margin-top: 2px;">(Enfermo clasificado como enfermo)</div>
+                                    </td>
+                                    <!-- FN -->
+                                    <td id="cell-fn" class="matrix-cell" style="padding: 20px; background: #FEF2F2; font-weight: bold; border-radius: 8px; border: 2px solid #DC2626; color: #991B1B; transition: all 0.3s ease;">
+                                        <div style="font-size: 1.25rem;">FN</div>
+                                        <div style="font-size: 0.78rem; font-weight: normal; margin-top: 4px; color: #7F1D1D;">Falso Negativo (Error Tipo II)</div>
+                                        <div style="font-size: 0.72rem; font-weight: normal; font-style: italic; color: #991B1B; margin-top: 2px;">(Enfermo clasificado como sano)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; background: #F8FAFC; font-weight: bold; text-align: left; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                                        Negativo (-)
+                                    </td>
+                                    <!-- FP -->
+                                    <td id="cell-fp" class="matrix-cell" style="padding: 20px; background: #FFFBEB; font-weight: bold; border-radius: 8px; border: 2px solid #D97706; color: #92400E; transition: all 0.3s ease;">
+                                        <div style="font-size: 1.25rem;">FP</div>
+                                        <div style="font-size: 0.78rem; font-weight: normal; margin-top: 4px; color: #78350F;">Falso Positivo (Error Tipo I)</div>
+                                        <div style="font-size: 0.72rem; font-weight: normal; font-style: italic; color: #92400E; margin-top: 2px;">(Sano clasificado como enfermo)</div>
+                                    </td>
+                                    <!-- VN -->
+                                    <td id="cell-vn" class="matrix-cell" style="padding: 20px; background: #F0FDF4; font-weight: bold; border-radius: 8px; border: 2px solid #16A34A; color: #15803D; transition: all 0.3s ease;">
+                                        <div style="font-size: 1.25rem;">VN</div>
+                                        <div style="font-size: 0.78rem; font-weight: normal; margin-top: 4px; color: #166534;">Verdadero Negativo</div>
+                                        <div style="font-size: 0.72rem; font-weight: normal; font-style: italic; color: #15803D; margin-top: 2px;">(Sano clasificado como sano)</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Interactive Formula Selectors -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                
+                <!-- Accuracy Card -->
+                <div class="metric-card fragment" data-metric="exactitud" style="background: white; padding: 16px 20px; border-radius: 12px; border: 2px solid #E2E8F0; box-shadow: var(--shadow-sm); cursor: pointer; transition: all 0.3s ease;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <h4 style="margin: 0; color: var(--color-primary); font-size: 1.15rem; font-family: 'Exo', sans-serif; font-weight: 700;">Exactitud (Accuracy)</h4>
+                        <span class="metric-badge" style="background: #E2E8F0; color: #475569; font-size: 0.75rem; padding: 3px 8px; border-radius: 12px; font-weight: bold; font-family: 'Exo', sans-serif; transition: all 0.3s;">Acierto Global</span>
+                    </div>
+                    <p style="margin: 0 0 10px 0; font-size: 0.85rem; color: var(--color-secondary); line-height: 1.4;">
+                        Proporción de predicciones correctas (tanto positivas como negativas) sobre el total de casos evaluados.
+                    </p>
+                    <div style="font-family: monospace; font-size: 0.95rem; color: var(--color-primary); background: #F8FAFC; padding: 8px 12px; border-radius: 6px; border: 1px solid #E2E8F0; display: inline-block;">
+                        Exactitud = <span class="num" style="font-weight: bold; transition: color 0.3s;">(VP + VN)</span> / <span class="den" style="font-weight: bold; color: #475569; transition: color 0.3s;">(VP + VN + FP + FN)</span>
+                    </div>
+                </div>
+
+                <!-- Precision Card -->
+                <div class="metric-card fragment" data-metric="precision" style="background: white; padding: 16px 20px; border-radius: 12px; border: 2px solid #E2E8F0; box-shadow: var(--shadow-sm); cursor: pointer; transition: all 0.3s ease;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <h4 style="margin: 0; color: var(--color-primary); font-size: 1.15rem; font-family: 'Exo', sans-serif; font-weight: 700;">Precisión (Precision)</h4>
+                        <span class="metric-badge" style="background: #E2E8F0; color: #475569; font-size: 0.75rem; padding: 3px 8px; border-radius: 12px; font-weight: bold; font-family: 'Exo', sans-serif; transition: all 0.3s;">Calidad de Alerta</span>
+                    </div>
+                    <p style="margin: 0 0 10px 0; font-size: 0.85rem; color: var(--color-secondary); line-height: 1.4;">
+                        De todos los clasificados como positivos, ¿cuántos eran reales? Importante cuando el costo de un falso positivo es alto.
+                    </p>
+                    <div style="font-family: monospace; font-size: 0.95rem; color: var(--color-primary); background: #F8FAFC; padding: 8px 12px; border-radius: 6px; border: 1px solid #E2E8F0; display: inline-block;">
+                        Precisión = <span class="num" style="font-weight: bold; transition: color 0.3s;">VP</span> / <span class="den" style="font-weight: bold; color: #475569; transition: color 0.3s;">(VP + FP)</span>
+                    </div>
+                </div>
+
+                <!-- Recall Card -->
+                <div class="metric-card fragment" data-metric="sensibilidad" style="background: white; padding: 16px 20px; border-radius: 12px; border: 2px solid #E2E8F0; box-shadow: var(--shadow-sm); cursor: pointer; transition: all 0.3s ease;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <h4 style="margin: 0; color: var(--color-primary); font-size: 1.15rem; font-family: 'Exo', sans-serif; font-weight: 700;">Sensibilidad (Recall)</h4>
+                        <span class="metric-badge" style="background: #E2E8F0; color: #475569; font-size: 0.75rem; padding: 3px 8px; border-radius: 12px; font-weight: bold; font-family: 'Exo', sans-serif; transition: all 0.3s;">Sensibilidad Clínica</span>
+                    </div>
+                    <p style="margin: 0 0 10px 0; font-size: 0.85rem; color: var(--color-secondary); line-height: 1.4;">
+                        De todos los casos reales positivos, ¿cuántos capturó el modelo? Vital cuando omitir un caso positivo (como una enfermedad) es crítico.
+                    </p>
+                    <div style="font-family: monospace; font-size: 0.95rem; color: var(--color-primary); background: #F8FAFC; padding: 8px 12px; border-radius: 6px; border: 1px solid #E2E8F0; display: inline-block;">
+                        Sensibilidad = <span class="num" style="font-weight: bold; transition: color 0.3s;">VP</span> / <span class="den" style="font-weight: bold; color: #475569; transition: color 0.3s;">(VP + FN)</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Styles and Script for Interactivity -->
+    <style>
+        #slide34 .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-cta);
+        }
+        
+        #slide34 .metric-card.active {
+            border-color: var(--color-cta);
+            background: #F8FAFC;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+        }
+        
+        #slide34 .metric-card.active .metric-badge {
+            background: var(--color-cta);
+            color: white;
+        }
+        
+        #slide34 .metric-card.active .num {
+            color: #16A34A !important;
+        }
+
+        #slide34 .metric-card.active .den {
+            color: var(--color-cta) !important;
+        }
+
+        /* Classes for highlighting matrix elements */
+        #slide34 .matrix-cell.highlight-numerator {
+            box-shadow: 0 0 15px rgba(22, 163, 74, 0.6) !important;
+            transform: scale(1.03);
+            filter: brightness(1.05);
+            z-index: 2;
+        }
+        
+        #slide34 .matrix-cell.highlight-denominator {
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.4) !important;
+            filter: brightness(1.02);
+            z-index: 1;
+            border-color: var(--color-cta) !important;
+        }
+        
+        #slide34 .matrix-cell.fade-out {
+            opacity: 0.25;
+            filter: grayscale(80%) blur(0.5px);
+        }
+    </style>
+    
+    <script>
+        (() => {
+            const slide = document.getElementById('slide34');
+            if (!slide) return;
+            
+            const cards = slide.querySelectorAll('.metric-card');
+            const cells = {
+                vp: slide.querySelector('#cell-vp'),
+                vn: slide.querySelector('#cell-vn'),
+                fp: slide.querySelector('#cell-fp'),
+                fn: slide.querySelector('#cell-fn')
+            };
+
+            function resetHighlights() {
+                Object.values(cells).forEach(cell => {
+                    if (cell) {
+                        cell.classList.remove('highlight-numerator', 'highlight-denominator', 'fade-out');
+                    }
+                });
+            }
+
+            function applyHighlight(metric) {
+                resetHighlights();
+                
+                if (metric === 'exactitud') {
+                    // Numerador: VP, VN (green glow)
+                    // Denominador: todos (no fade out, highlight denominator on all)
+                    if (cells.vp) cells.vp.classList.add('highlight-numerator');
+                    if (cells.vn) cells.vn.classList.add('highlight-numerator');
+                    if (cells.fp) cells.fp.classList.add('highlight-denominator');
+                    if (cells.fn) cells.fn.classList.add('highlight-denominator');
+                } else if (metric === 'precision') {
+                    // Numerador: VP
+                    // Denominador: VP, FP
+                    // Fade out: VN, FN
+                    if (cells.vp) cells.vp.classList.add('highlight-numerator');
+                    if (cells.fp) cells.fp.classList.add('highlight-denominator');
+                    if (cells.vn) cells.vn.classList.add('fade-out');
+                    if (cells.fn) cells.fn.classList.add('fade-out');
+                } else if (metric === 'sensibilidad') {
+                    // Numerador: VP
+                    // Denominador: VP, FN
+                    // Fade out: VN, FP
+                    if (cells.vp) cells.vp.classList.add('highlight-numerator');
+                    if (cells.fn) cells.fn.classList.add('highlight-denominator');
+                    if (cells.vn) cells.vn.classList.add('fade-out');
+                    if (cells.fp) cells.fp.classList.add('fade-out');
+                }
+            }
+
+            function syncActiveFragment() {
+                const visibleCards = Array.from(cards).filter(c => c.classList.contains('visible'));
+                
+                cards.forEach(c => c.classList.remove('active'));
+                
+                if (visibleCards.length > 0) {
+                    const latestCard = visibleCards[visibleCards.length - 1];
+                    latestCard.classList.add('active');
+                    const metric = latestCard.getAttribute('data-metric');
+                    applyHighlight(metric);
+                } else {
+                    resetHighlights();
+                }
+            }
+
+            function handlePresentationProgress() {
+                if (slide.classList.contains('active')) {
+                    setTimeout(syncActiveFragment, 50);
+                }
+            }
+
+            cards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Evita avanzar a la siguiente diapositiva al interactuar con las fichas
+                    const isActive = card.classList.contains('active');
+                    
+                    cards.forEach(c => c.classList.remove('active'));
+                    
+                    if (isActive) {
+                        resetHighlights();
+                    } else {
+                        card.classList.add('active');
+                        const metric = card.getAttribute('data-metric');
+                        applyHighlight(metric);
+                    }
+                });
+            });
+
+            // Registrar escuchadores globales para la progresión de la presentación
+            if (window._cleanupSlide34) {
+                window._cleanupSlide34();
+            }
+
+            document.addEventListener('keydown', handlePresentationProgress);
+            document.addEventListener('click', handlePresentationProgress);
+
+            window._cleanupSlide34 = () => {
+                document.removeEventListener('keydown', handlePresentationProgress);
+                document.removeEventListener('click', handlePresentationProgress);
+            };
+
+            // Ejecutar sincronización inicial
+            setTimeout(syncActiveFragment, 50);
+        })();
+    </script>
+</section>

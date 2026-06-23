@@ -1,0 +1,37 @@
+<section class="slide" id="slide43">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Caso de Estudio: Evaluaciones y Conclusión</h2>
+        <p style="font-size: calc(0.85rem + 0.1vw); color: var(--color-secondary); line-height: 1.5; font-style: italic; margin-bottom: var(--space-lg);">
+            Referencia: Li, C., Zhang, Z. et al. (2021). "Machine learning based early mortality prediction in the emergency department".
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            <!-- Left Column: Evaluation Stacked Cards -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                    <h3 style="color: var(--color-cta); font-size: 1.35rem; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">Métricas Seleccionadas</h3>
+                    <ul style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); padding-left: 20px; margin: 0;">
+                        <li><strong>Exactitud (Accuracy):</strong> Proporción general de aciertos diagnósticos del modelo.</li>
+                        <li><strong>Sensibilidad (Recall):</strong> Métrica vital para minimizar falsos negativos (evitar no priorizar a un paciente en riesgo).</li>
+                        <li><strong>AUC-ROC:</strong> Área bajo la curva para evaluar la discriminación del modelo entre supervivientes y fallecidos.</li>
+                    </ul>
+                </div>
+                
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 5px solid #22C55E; box-shadow: var(--shadow-md);">
+                    <h3 style="color: #16A34A; font-size: 1.35rem; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">Conclusiones Clínicas</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin: 0;">
+                        Los modelos de Machine Learning demuestran una capacidad predictiva superior en el departamento de urgencias comparado con los scores tradicionales (como qSOFA o NEWS), ofreciendo una herramienta objetiva de soporte a la decisión clínica en tiempo real.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Results Image Card -->
+            <div class="fragment" style="text-align: center; background: white; padding: 16px; border-radius: 16px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <img src="images/slide43_results.jpg" alt="Métricas y resultados del modelo de Machine Learning" class="slide-image zoomable-image" style="max-height: 48vh; max-width: 100%; border-radius: 8px; box-shadow: var(--shadow-sm); cursor: zoom-in; object-fit: contain; display: block; margin: 0;">
+                <div style="margin-top: 12px; font-size: calc(0.75rem + 0.1vw); color: var(--color-cta); font-weight: bold; font-family: 'Exo', sans-serif;">
+                    🔍 Clic para expandir gráfico de resultados (Curva ROC y curvas PR)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

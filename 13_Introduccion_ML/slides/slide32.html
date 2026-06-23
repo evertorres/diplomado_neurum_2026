@@ -1,0 +1,38 @@
+<section class="slide" id="slide32">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; margin-bottom: var(--space-md);">Dividir el Dataset</h2>
+        <p style="font-size: 1.15rem; color: var(--color-secondary); line-height: 1.6; max-width: 900px; margin-bottom: var(--space-xl);">
+            Para evaluar de forma honesta el rendimiento de un modelo, debemos simular cómo se comportará ante datos nuevos (desconocidos). Dividimos las observaciones del dataset en tres subconjuntos excluyentes:
+        </p>
+
+        <!-- Visual splitter bar -->
+        <div class="fragment" style="width: 100%; display: flex; height: 50px; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid #CBD5E1; margin-bottom: var(--space-xl);">
+            <div style="width: 70%; background: var(--color-cta); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-family: 'Exo', sans-serif;">
+                Entrenamiento / Training (60% - 80%)
+            </div>
+            <div style="width: 15%; background: #F59E0B; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-family: 'Exo', sans-serif;">
+                Val (10% - 20%)
+            </div>
+            <div style="width: 15%; background: #10B981; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-family: 'Exo', sans-serif;">
+                Test (10% - 20%)
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
+            <div class="fragment" style="background: white; padding: 20px; border-radius: 8px; border-top: 4px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                <strong style="color: var(--color-cta); font-size: 1.1rem; display: block; margin-bottom: 8px;">1. Entrenamiento</strong>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.4;">El subconjunto principal sobre el cual el modelo aprenderá las relaciones y patrones.</p>
+            </div>
+            
+            <div class="fragment" style="background: white; padding: 20px; border-radius: 8px; border-top: 4px solid #F59E0B; box-shadow: var(--shadow-sm);">
+                <strong style="color: #D97706; font-size: 1.1rem; display: block; margin-bottom: 8px;">2. Validación</strong>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.4;">Se utiliza para evaluar métricas durante el ajuste fino de hiperparámetros (evita sobreajuste).</p>
+            </div>
+
+            <div class="fragment" style="background: white; padding: 20px; border-radius: 8px; border-top: 4px solid #10B981; box-shadow: var(--shadow-sm);">
+                <strong style="color: #059669; font-size: 1.1rem; display: block; margin-bottom: 8px;">3. Prueba / Testing</strong>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.4;">Datos completamente ocultos para evaluar la capacidad real de generalización del modelo.</p>
+            </div>
+        </div>
+    </div>
+</section>
