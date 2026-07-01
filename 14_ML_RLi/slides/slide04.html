@@ -1,0 +1,80 @@
+<section class="slide" id="slide04">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Notación en Machine Learning</h2>
+        
+        <p style="font-size: 1.15rem; color: var(--color-secondary); margin-top: var(--space-md); margin-bottom: var(--space-lg);">
+            En ciencia de datos, estructuramos la información en una matriz de características (features) $X$ y un vector de etiquetas (target) $y$.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: var(--space-xl); margin-top: var(--space-lg); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Table & Footnote -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="width: 100%; overflow-x: auto; background: white; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-family: 'Roboto Mono', monospace; font-size: 0.95rem;">
+                        <thead>
+                            <tr style="background: #F1F5F9; border-bottom: 2px solid #E2E8F0; color: var(--color-primary);">
+                                <th style="padding: 12px 15px;">Ejemplo ($i$)</th>
+                                <th style="padding: 12px 15px; color: var(--color-cta);">Edad ($x_1$)</th>
+                                <th style="padding: 12px 15px; color: var(--color-cta);">Altura ($x_2$)</th>
+                                <th style="padding: 12px 15px; color: var(--color-cta);">IMC ($x_3$)</th>
+                                <th style="padding: 12px 15px; color: #10B981; font-weight: bold;">Salida Real ($y$)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #F1F5F9;">
+                                <td style="padding: 10px 15px; font-weight: bold; color: var(--color-secondary);">Ejemplo 1</td>
+                                <td style="padding: 10px 15px;">35</td>
+                                <td style="padding: 10px 15px;">1.75 m</td>
+                                <td style="padding: 10px 15px;">22.9</td>
+                                <td style="padding: 10px 15px; font-weight: bold; color: #047857;">Normal</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #F1F5F9; background: #F8FAFC;">
+                                <td style="padding: 10px 15px; font-weight: bold; color: var(--color-secondary);">Ejemplo 2</td>
+                                <td style="padding: 10px 15px;">29</td>
+                                <td style="padding: 10px 15px;">1.68 m</td>
+                                <td style="padding: 10px 15px;">21.2</td>
+                                <td style="padding: 10px 15px; font-weight: bold; color: #047857;">Normal</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #F1F5F9;">
+                                <td style="padding: 10px 15px; font-weight: bold; color: var(--color-secondary);">Ejemplo 3</td>
+                                <td style="padding: 10px 15px;">42</td>
+                                <td style="padding: 10px 15px;">1.80 m</td>
+                                <td style="padding: 10px 15px;">26.2</td>
+                                <td style="padding: 10px 15px; font-weight: bold; color: #B45309;">Sobrepeso</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #E2E8F0; background: #F8FAFC;">
+                                <td style="padding: 10px 15px; font-weight: bold; color: var(--color-secondary);">Ejemplo 4</td>
+                                <td style="padding: 10px 15px;">38</td>
+                                <td style="padding: 10px 15px;">1.82 m</td>
+                                <td style="padding: 10px 15px;">27.2</td>
+                                <td style="padding: 10px 15px; font-weight: bold; color: #B45309;">Sobrepeso</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="fragment" style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 10px;">
+                    <div style="background: white; padding: 8px 15px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 0.85rem; font-weight: bold; color: var(--color-secondary); font-family: 'Exo', sans-serif;">Matriz $X$:</span>
+                        <img src="images/slide04_img05.png" style="height: 24px; vertical-align: middle;" alt="X en R^(m x n)">
+                    </div>
+                    <div style="background: white; padding: 8px 15px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 0.85rem; font-weight: bold; color: var(--color-secondary); font-family: 'Exo', sans-serif;">Vector $y$:</span>
+                        <img src="images/slide04_img06.png" style="height: 24px; vertical-align: middle;" alt="y en R^m">
+                    </div>
+                </div>
+
+                <div class="fragment" style="font-family: 'Roboto Mono', monospace; font-size: 0.85rem; color: var(--color-secondary); margin-top: 5px;">
+                    * Cada fila representa una observación o muestra $x^{(i)}$, y cada columna una característica independiente.
+                </div>
+            </div>
+
+            <!-- Right Column: Notation Legend Image -->
+            <div class="fragment" style="text-align: center; width: 100%;">
+                <img src="images/slide04_img01.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 42vh; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-lg); display: block; margin: 0 auto; background: white; padding: 15px;" alt="Leyenda de Notación">
+            </div>
+
+        </div>
+    </div>
+</section>

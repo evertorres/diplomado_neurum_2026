@@ -1,0 +1,306 @@
+============================================================
+Slide 1: Machine Learning
+============================================================
+[Slide Text Content]
+Machine Learning
+Ever Augusto Torres Silva
+Regresión Lineal (RLi)
+
+
+============================================================
+Slide 2: Regresión Lineal: Bases
+============================================================
+[Slide Text Content]
+Regresión Lineal: Bases
+
+[Speaker Notes]
+Predecir cantidades numéricas con features del tdataset.
+Output target:
+1. Decision process: ¿Cuáles son los parámetros y que significan en el modelo de regresión lineal?
+2. Error function. ¿Cómo saber si lo está haciendo bien?
+3. Update rule
+
+
+============================================================
+Slide 3: ¿Cuándo utilizar un modelo de regresión lineal?
+============================================================
+[Slide Text Content]
+¿Cuándo utilizar un modelo de regresión lineal?
+¿La variable que tengo que predecir es numérica?
+
+¿Las variables independientes son primordialmente numéricas?
+
+¿Las variables categóricas tienen muchos niveles?
+
+[Speaker Notes]
+Recomendaciones:
+Si tienes que predecir variables numéricas empieza por regresión lineal, sino otros modelos
+Cuidado con la multicolinealidad
+Reduce las variables lo mas que puedas
+No predigas fuera del dominio de la variable independiente. No se sabe si fuera de ese rango el modelo sea lineal
+la razón por la que no es recomendable que usemos la regression linear cuando hay muchas categorías es la paradoja de simsom. les recomiendo este video pa https://www.youtube.com/watch?v=ebEkn-BiW5k&tra que lo vean
+
+
+============================================================
+Slide 4: Notación
+============================================================
+[Slide Text Content]
+Notación
+Edad
+…
+Altura
+IMC
+35
+…
+1.75
+22.9
+29
+…
+1.68
+21.2
+42
+…
+1.80
+26.2
+…
+…
+…
+...
+38
+…
+1.82
+27.2
+
+
+============================================================
+Slide 5: Regresión Lineal
+============================================================
+[Slide Text Content]
+Regresión Lineal
+Linear Regression in Machine Learning
+
+
+============================================================
+Slide 6: [Untitled Slide]
+============================================================
+[Slide Text Content]
+Edad
+Peso
+Altura
+Horas Actividad
+Predicción del IMC
+
+
+============================================================
+Slide 7: [Untitled Slide]
+============================================================
+[Slide Text Content]
+Si una característica tiene un peso positivo, entonces al aumentar el valor de esa característica aumenta el valor de nuestra predicción
+Si la ponderación de una característica es negativa, su valor disminuye. 
+Si la ponderación de una característica es grande, tiene un gran efecto en la predicción.
+Si el peso de una característica es cero, no tiene ningún efecto en la predicción.
+Característica
+E1
+E2
+…
+Edad
+35
+29
+…
+Peso
+70
+60
+…
+Altura
+1,75
+1,68
+…
+Horas Actividad
+5
+3
+…
+Predicción del IMC
+
+
+============================================================
+Slide 8: Regresión Lineal
+============================================================
+[Slide Text Content]
+Regresión Lineal
+1
+La predicción es la suma ponderada de las características por sus pesos (θ)
+
+
+============================================================
+Slide 9: Bias term
+============================================================
+[Slide Text Content]
+Bias term
+El intercepto o es llamado el término Bias
+• La salida está sesgada hacia b en ausencia de cualquier entrada
+
+De forma práctica
+• En lugar de añadir el parámetro de sesgo
+• Seguir utilizando el modelo sólo con ponderaciones
+• Aumentar con una entrada extra que siempre se establece en
+undefined
+
+
+============================================================
+Slide 10: [Untitled Slide]
+============================================================
+[Speaker Notes]
+2. Error function: Cómo decimos que nuestro modelo está haciendo buenas predicciones?
+Introducción a la Función de Costo en Regresión Lineal:
+Definición: La función de costo, también conocida como función de pérdida, es una medida que indica qué tan lejos están las predicciones del modelo respecto a los valores reales. El objetivo del modelo es minimizar esta función para mejorar la precisión.
+Uso en Machine Learning: En regresión lineal, la función de costo es fundamental para entrenar el modelo, ya que guía el proceso de ajuste para encontrar la mejor línea de regresión.
+Tipos Comunes de Funciones de Costo:
+Error Cuadrático Medio (MSE): Esta función de costo calcula el promedio de los errores al cuadrado entre las predicciones y los valores reales. La fórmula es MSE = 1/n * sum_{i=1}^n (y_i - \hat{y}_i)^2, donde y_i son los valores reales y \hat{y}_i las predicciones.
+Error Absoluto Medio (MAE): Mide el promedio de las diferencias absolutas entre las predicciones y los valores reales. Menos sensible a outliers, pero puede ser menos precisa en general.
+Otras Funciones de Costo: Existen funciones más complejas, pero MSE es la más común en regresión lineal debido a su sencillez y eficiencia.
+Importancia de la Función de Costo:
+Optimización del Modelo: El proceso de entrenamiento busca minimizar la función de costo para encontrar los mejores valores para la pendiente y el término de sesgo.
+Retroalimentación para el Modelo: La función de costo proporciona retroalimentación durante el entrenamiento, permitiendo ajustar parámetros para mejorar el rendimiento del modelo.
+Relación con el Gradiente: En modelos de regresión lineal, la función de costo se usa para calcular el gradiente, que indica la dirección y magnitud de los cambios necesarios para minimizar el error.
+
+
+============================================================
+Slide 11: Error Cuadrático Medio (MSE)
+============================================================
+[Slide Text Content]
+Error Cuadrático Medio (MSE)
+Es equivalente a la distancia Euclidiana entre las predicciones y los objetivos
+Se requiere de un algoritmo que mejore los pesos de forma que disminuya el MSE
+Quadratics: Graphing Parabolas | SparkNotes
+
+[Speaker Notes]
+Definición de MSE: El Error Cuadrático Medio (Mean Squared Error, MSE) es una función de costo que mide el promedio de los errores al cuadrado entre las predicciones de un modelo y los valores reales. Se usa comúnmente en regresión lineal para cuantificar el error total del modelo.
+Características del MSE:
+Sensibilidad a Outliers: Al elevar al cuadrado los errores, el MSE es sensible a valores atípicos. Los errores grandes tienen un impacto desproporcionado en el MSE.
+Uso en Optimización: El MSE se utiliza para optimizar modelos de regresión lineal, buscando minimizar el error total. Este proceso se lleva a cabo con técnicas como el descenso de gradiente.
+Importancia del Cuadrado: Al cuadrar las diferencias, el MSE elimina signos negativos y enfatiza errores más grandes, ayudando a identificar problemas significativos en el modelo.
+Aplicación del MSE en Regresión Lineal:
+Evaluación del Modelo: El MSE se usa para medir el rendimiento del modelo durante el entrenamiento y la validación. Un MSE más bajo indica un modelo más preciso.
+Ajuste del Modelo: Al minimizar el MSE, se ajustan parámetros como la pendiente y el término de sesgo para reducir el error entre predicciones y valores reales.
+Comparación de Modelos: El MSE puede ser utilizado para comparar diferentes modelos o enfoques, eligiendo el que tenga el menor error cuadrático medio.
+
+
+============================================================
+Slide 12: ¿Cómo encontrar el mínimo de la función de costo?
+============================================================
+[Slide Text Content]
+¿Cómo encontrar el mínimo de la función de costo?
+Gráfico
+Descripción generada automáticamente
+
+
+============================================================
+Slide 13: Derivada del costo
+============================================================
+[Slide Text Content]
+Derivada del costo
+Derivada es la pendiente de la recta tangente a la curva
+¿Cuál es el valor de la derivada de la función de costo en el mínimo absoluto?
+
+[Speaker Notes]
+¿Cuál es el valor de la derivada del la función de costo en el mínimo absoluto?
+
+
+============================================================
+Slide 14: Gradiente Descendiente
+============================================================
+[Slide Text Content]
+Gradiente Descendiente
+
+[Speaker Notes]
+3. Regla de actualización
+
+
+============================================================
+Slide 15: Regresión Lineal
+============================================================
+[Slide Text Content]
+Regresión Lineal
+Para minimizar MSE se resuelve donde su gradiente es 0
+Soluciones:
+1. Analítica: Normal equations
+2. Iterativa: Gradiente
+Gráfico
+Descripción generada automáticamente
+
+
+============================================================
+Slide 16: Normal Equation
+============================================================
+[Slide Text Content]
+Normal Equation
+Mínimo local es cuando la gradiente de MSE = 0
+…
+
+
+============================================================
+Slide 17: Gradiente Descendiente
+============================================================
+[Slide Text Content]
+Gradiente Descendiente
+Gráfico
+Descripción generada automáticamente
+
+
+============================================================
+Slide 18: Gradiente Descendiente
+============================================================
+[Slide Text Content]
+Gradiente Descendiente
+
+
+============================================================
+Slide 19: Gradiente Descendiente
+============================================================
+[Slide Text Content]
+Gradiente Descendiente
+Optimizamos funciones que pueden tener muchos mínimos locales que no son óptimos
+
+Todo esto hace que la optimización sea difícil, especialmente cuando la entrada de la función es multidimensional.
+
+Normalmente nos conformamos con encontrar un valor que sea muy bajo, No necesariamente mínimo absoluto
+
+
+============================================================
+Slide 20: Gradiente Descendiente: Implementación
+============================================================
+[Slide Text Content]
+Gradiente Descendiente: Implementación
+Algoritmo:
+1. Inicializar en valores aleatorios cercanos al 0*
+2. Repetir hasta converger
+
+
+============================================================
+Slide 21: [Untitled Slide]
+============================================================
+(Image Only Slide)
+
+
+============================================================
+Slide 22: [Untitled Slide]
+============================================================
+(Image Only Slide)
+
+
+============================================================
+Slide 23: Gradiente Descendiente: Implementación
+============================================================
+[Slide Text Content]
+Gradiente Descendiente: Implementación
+Derivadas parciales
+Donde:
+….
+
+
+============================================================
+Slide 24: Regresión Lineal: Bases
+============================================================
+[Slide Text Content]
+Regresión Lineal: Bases
+MSE y R2 ayudan a identificar la fortaleza de la relación entre features de entrada y de salida

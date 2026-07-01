@@ -1,0 +1,32 @@
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Conceptos de Regresión Lineal</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xl); margin-top: var(--space-lg); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Bullet List using native HTML + LaTeX -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <ul style="font-size: 1.1rem; line-height: 1.8; color: var(--color-secondary); padding-left: 20px; display: flex; flex-direction: column; gap: 15px;">
+                    <li class="fragment">Es un <strong>algoritmo sencillo</strong> de aprendizaje automático.</li>
+                    <li class="fragment">La salida de la regresión lineal es una <strong>función lineal</strong> de las características de entrada.</li>
+                    <li class="fragment">Toma un vector de entrada $x \in \mathbb{R}^m$ y predice un valor escalar $y \in \mathbb{R}$.</li>
+                    
+                    <li class="fragment" style="list-style: none; margin-left: -20px; padding: 15px; background: #EFF6FF; border-left: 5px solid var(--color-cta); border-radius: 8px; box-shadow: var(--shadow-sm);">
+                        <strong>Definición del modelo:</strong>
+                        <div style="margin-top: 5px; font-size: 1.15rem;">
+                            $$y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \dots + \theta_n x_n$$
+                        </div>
+                    </li>
+                    
+                    <li class="fragment">Donde $\theta \in \mathbb{R}^m$ es el <strong>vector de parámetros</strong> o coeficientes de peso.</li>
+                </ul>
+            </div>
+
+            <!-- Right Column: Regression Plot Graphic -->
+            <div class="fragment" style="text-align: center; width: 100%;">
+                <img src="images/slide05_img02.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 50vh; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-lg); display: block; margin: 0 auto; background: white;" alt="Gráfico de línea de regresión">
+            </div>
+
+        </div>
+    </div>
+</section>

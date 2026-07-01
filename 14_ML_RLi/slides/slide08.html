@@ -1,0 +1,32 @@
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">La Ecuación del Modelo Lineal</h2>
+        
+        <p style="font-size: 1.25rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            La predicción del modelo es la suma ponderada de las características de entrada multiplicadas por sus respectivos pesos ($\theta$).
+        </p>
+
+        <div class="fragment formula-box" style="margin-top: var(--space-xl); padding: 30px; font-size: 1.5rem; letter-spacing: 1px;">
+            $$h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \dots + \theta_n x_n$$
+        </div>
+
+        <p style="font-size: 1.15rem; color: var(--color-secondary); margin-top: var(--space-lg); line-height: 1.6;">
+            De forma compacta y utilizando álgebra lineal, podemos representarlo como el producto punto de dos vectores:
+        </p>
+
+        <div class="fragment formula-box" style="border-left-color: #10B981; background: #ECFDF5; padding: 20px; font-size: 1.4rem;">
+            $$h_\theta(x) = \theta^T x$$
+        </div>
+
+        <div class="fragment" style="margin-top: var(--space-xl); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); font-size: 1rem; color: var(--color-secondary);">
+            <div style="background: white; border: 1px solid #E2E8F0; padding: 15px; border-radius: 8px;">
+                <strong>Vector de parámetros ($\theta$):</strong><br>
+                Contiene todos los pesos aprendidos más el término de sesgo (bias): $[\theta_0, \theta_1, \dots, \theta_n]$
+            </div>
+            <div style="background: white; border: 1px solid #E2E8F0; padding: 15px; border-radius: 8px;">
+                <strong>Vector de características ($x$):</strong><br>
+                Las variables de entrada correspondientes a una muestra o paciente: $[1, x_1, x_2, \dots, x_n]$
+            </div>
+        </div>
+    </div>
+</section>

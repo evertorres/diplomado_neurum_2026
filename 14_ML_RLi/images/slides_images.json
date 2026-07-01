@@ -1,0 +1,224 @@
+[
+  {
+    "slideIndex": 0,
+    "slideId": "p2",
+    "title": "Machine Learning",
+    "urls": []
+  },
+  {
+    "slideIndex": 1,
+    "slideId": "p3",
+    "title": "Regresion Lineal: Bases",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ilogHTYeOYCqm9owGHduhR96ANf2BrzSGFMWAV4f_dlrj6MP-QJ-dKTv9Rx7JBjETbaQl8iOhZ18TM2RkK4QrgOtuvgQaJPj5SIjw-bm810tAdKACSd7toob9Qs1O43gB_YemTOYXNkG9XvKxpGCmMKblZ7qbyRcopX=s2048"
+    ]
+  },
+  {
+    "slideIndex": 2,
+    "slideId": "p4",
+    "title": "¿Cuando utilizar un modelo de regresion lineal?",
+    "urls": []
+  },
+  {
+    "slideIndex": 3,
+    "slideId": "p5",
+    "title": "Notacion",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-inBbz-sdiVyMeVmznlCPZBE6aTJGDkQp2rh9fkESlWrGPgSNXxPrri6b80VA0mPF2Sj8RdygvjcO0ubwu5rAchlky4SbIhd2eeLl4HXQRYgUmQgdxTozy8dMwF7aL1ssJlIMcGjF8ceeSdvEm8BvVDaOftT88G1JkOy=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilnrjisR594A3v07UltDUhNqtdOrNTHEW6v2_t2SQKn1YnhnM0fcQQ8DyOyS5v_OZnSmwRZSoCpJRN8kuwlFKiVHqvamoa51UpaddE3xrNHXQGUz92b2845ryqashKv6rJ-6IF6I6pfqC80_2UvCQHfqwzOlgz9kk8p=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-il-Y6LNHUtVro933kuSs3sh8peJ95eoUuRxlA3lMMjaHiXq-FViH1UJihVjNoRQ1v9BQmMdKan3T6b8pmnW2inyxPO4i0ujuxDCmbD855BhXvGZxUwiXTwE5Jxiwd-qFLsaM8YByWI-CvSBappRyfBi5Ke8sSOXGo4E=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-inJhrCaQG6y7DtqnObHz13SnybXpQtiJcsqoTxjeGHJrqjAqunQHugvMagqkES4Tpm-Ef1wvlXbHhsMgvu3a5z0TerLPvyvpL-3s-H94E2TKKnXrhM92j--68LfG9J4kl-MAO_P58ghCAaN2PJis6Hr8na_QKBi4A=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilr7Mf5erftcmMeb3BlvZ2SHGxbQs2zHl9pykOw_uz2_a1USzRSyx7IWVzNJI1WVhqehrNGWmolFXE-1SNaPjwwl6CTbfJmpb7HIFzc0xfuU-JC4nm0bKffc23ZgzUJKPkteP5HAsPGekoGLDdPfzNeC9ZN8DoxTl4H=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ikpRU5IZAlvcbos_NlkUBkB_Ma5hGOryhdoIZL5m1S0F3Am3_JaEUCqxn0Vu2rt3v6za0iLjh3jJk0WY7WAPmEgw-5wn8RuWGFUlgw3QlHyH48yHExdsJxrg8D_Jr2Oz-fIRTeDHsLxgPDfejEzPutHnOC_zW6qKwSb=s2048"
+    ]
+  },
+  {
+    "slideIndex": 4,
+    "slideId": "p6",
+    "title": "Regresion Lineal",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-im0josEiIledc_yTGNzqaaFv6nR5_n0d60AW3v1Wb3PxF6mu6DyzzAAsO_8kJVFIqF0xthj8CW6spGtQFdEwjoT3aQGhaeUUm3thiy1KuhAPaN2KmjrowqX72bO6QJPpAXSlp6QYKzbw0BMF8N0E1wPzq0qx-4_zw=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ikRXd1STxsSL3PA6AIMSd46R44bIajFMLI_I2CNLxQVaD09GsUqqzQSw2G3X8u4mwrPBePxRDhVcJIUAC8Zv2oyUZZOa8aSV8_gRvrerWUUxmmA_64Cgtg1zXcqLrvGWhfCodAuI5M9PEXlJFLRdObHBL8ybjCRAABo=s2048"
+    ]
+  },
+  {
+    "slideIndex": 5,
+    "slideId": "p7",
+    "title": " ",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ik-CPvNUyHhJM37-iDoafiXxUavDrz-U2_C0RB4eVm-7wEUoXSDJTCum974BwpsRkzConfn5KjjpUwrELmfei72E4RwC9_l5YW3-k5lLZSOvENJaSDs__iImJKvN3mCHSw52PUWg8PkhlAMhafxfg8-dos-egAO2ugu=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilbuPFvMNV_jgsNnqKK-rKMWOwHcWKgOI9lCsoJ-f5w-_Frb7SKjE84t2_xzD4tudN8jxCcd5FSDGxkS-wF-AHIvLiIM3OXAkjGfic6EXfRXCQithQg8JnWX91KZYvEwt_kE-KFd2_x3txuJ2ekJ-xXL-LGcVCRbHi8=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-imaTFEzDJG5z8oyC_8InDPSEemVQCS_vwl09ILTX_Sa2tgnvT63Hbuw8AjCwPucfUQYaX8SI5_aJGI_fW57SGmoCnazFUtuIfgrDIKroYAedxKHNVOoh8ds3DeNfAqfr5S_T45PyZHmeXAjPBVV8-vTbNqaHCYo3w=s2048"
+    ]
+  },
+  {
+    "slideIndex": 6,
+    "slideId": "p8",
+    "title": " ",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ik-CPvNUyHhJM37-iDoafiXxUavDrz-U2_C0RB4eVm-7wEUoXSDJTCum974BwpsRkzConfn5KjjpUwrELmfei72E4RwC9_l5YW3-k5lLZSOvENJaSDs__iImJKvN3mCHSw52PUWg8PkhlAMhafxfg8-dos-egAO2ugu=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ik7LwH3n-ZcH6ONuhsQEZa7y6v-5wThmx0eL2JBG_EVW9frF_mkucdhJypRTNYRVDyIi6Mb1znSpuJklDfiZFp-w0KVOF_EPkZndlfFHYBSnBwClrZbbqdHZMlh8q8-mP8cbss7dP_4EkhColjWouYoFqMqN6MW_77c=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-im0kDbMFqCRUXSaIu-LarCkKBhlruRd7JU5TeCDjztAMrOM3gDfZAyyGg8mgcFwlc6OuRQQIcrdXs2wlHo_jE6nCvjZkLH0e-bUerirFT0eeCYcplLfJlD_lOs1U-SnsZI0DeOwAGQCGs5DA0_jooSPT67NuDc_lJJe=s2048"
+    ]
+  },
+  {
+    "slideIndex": 7,
+    "slideId": "p9",
+    "title": "Regresion Lineal",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-imsrcRARsn-iF-F2sxc3vZUdzlh8CWUukb2KKQnxq_4PbF13JHNg5ueDT70aR0SASCNK0Qs2M9AVTvFH78KJHj2VRB-_AA4QJfMLk5d-6fHWq8a-jIe_Rpcncd5L_NMd14KVxJBSCAlU4ssC4Mqrny4C5JJo4wMfIf0=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-im5VCwwrsjnnZSgp2EYj-df0R3roFbRELrkLj6LryN7gjpnBBMCe6AsH8U9DxwJJKWY0n56dBrNvJHlO9u781qs5sltBtR1HbnRaro6hgn2sereSJEy2kiYtXTj7NuZkY5u2BPMn8AyCvmm6R2ICYH0MJfO4-cQuEdv=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-im5blmjMPYBeCzlMBjyser8fWhBrxbLA4Awh6WdktUn7g-UwClFCtZAa26O7TRW9gq1G4pnt3LZK_ABsiaez-8-vmtR9IL92HF8Xjh7YjjN9Qg5rJyEITXxgrgfXDaF6AoRPDxynb4opbXftVLcijUpXrLrDqkDys4k=s2048"
+    ]
+  },
+  {
+    "slideIndex": 8,
+    "slideId": "p10",
+    "title": "Bias term",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-inBsoQvwlTILTJwB26krm87xvg4Xe0DQDB2u59jJg9LCeQrg1xRWHYzWyNV1T5Dbc_k01y0d1euOuLTo9vMDYSwyF6Dsm1YMaZOvLKMbKoo7_YzlrSHZRpiEiv3iPVwySro9R-1CQKzpEUQeLaQV6ccj9w9zaMOv9O6=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-imbgeqkH6GiQ18X3lTBkf-gEXY9wVnJ6sTbUIya4eOqoRknY0oSpMNMGVLVtJAkupegbe0ggXftEj7SJBBOWOsS4Y-AOC05FL1o_CcC16DB_5-5mSTkPKE8BO5mkyRL0sR6AlmsCl_GoDlJl5MnLUlOXGotrtrn9s0S=s2048"
+    ]
+  },
+  {
+    "slideIndex": 9,
+    "slideId": "p11",
+    "title": " ",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-inipmwDJ2ZC4QyQ3hyBt2AIrrovtSP0SqjCbOL8Dm5e7UKvs72rIY7U7VdI6ESb6ykz68gBoDwWdxeIlPgxqpDvC03-iltDEcNN7eGewFIp_3CvybrBHwKUuTSCKXnpce74jt2y-XWANK0lsNpOp1W9a_nc3T2H9w=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-il14yGVxw9rQ-zTQHscUtIFEeeVuPARw9V4zCTt28DypR4VKCeJAEsCG2Z7VxecISmDWZCVa5GyzCIzTsh1cjQEE5oucFNAgpA-kVfcLwkwFhUZBdL4Sza9NUWbNh2FFfgjWo3JdWj_5qsC3ULCJyWVM1e5VRgyVYE_=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilZqf3jfobDwllOTN9qv4mEbF9e9IjF7trPgHvhgolQEgK5FiDPURrzpVhR5pv11wYH6lABFEZkNKywoPktNoCsxtCK3cl0LsV7P1zcpnMVFo8_vFE5mdIfz3lMY6767CaXvWIdibfsHl6YNA9JRFhdXwzyjVdcHlNI=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-il2pSff4Tx7f_HnX-hREw9XP_ypKlsmXSMTH-NjTzBiWeb4Wb-7JlDhLefk-CSsFHK2DIkzEOUd2Yqhd_5fCyA0De82O1uR5K9Vsg0zKmsSzoYgy6EhwUubKzi7ox6NuC512Y2uHcjCGpR_DUdAhZPtAF5pUDCinqZN=s2048"
+    ]
+  },
+  {
+    "slideIndex": 10,
+    "slideId": "p12",
+    "title": "Error Cuadratico Medio (MSE)",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ik7QMIMmzCoSLCIKNyk3Yq0sED0YkBJhDsGThF_QJcvBGFmCgwe_khouiADKvNCpWkx816HIGEEJpzmeJLszlNTxEfNdVHCHpQILDl4wQ5VlVf091N-CrwMl9RiSD3Jh_B5FW46MD4tueavmUjGLaQOKRk3q_xuWmSK=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ikGus-nBv5Pagf1Qgr9TaXoYZmHXydbjnof31Lv8PaGKNqsM0quNWNWjXwEbGyc2RBs3aOArRd5v89aQ6QQPhkOZlWT9jBf-DV3j0G7N4Ehl8EFpl1nGH2VNIOwAqviHkXompI4AZXgTIxnZvW7WHbVjxqVn0-jhjn8=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ikIXWtAUV4cZOdqAqGtQn4HqBiL5lHJXu4LvVxb8rI7clWYVgeUIuLprKfTCx0riEr91XNEE8TL2UyB-j1fJHZlDuQ7r60dZnlFihcxCvuf0qbmHDFD6FySObRL6ZHNZMjJGl5T9lW0bGDplJbz7ZB40mB8rEV9Jg=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-im16koUvDtaBRyY20rpDE23eYFmLSK1cPyMMh2WRGwJ8C_P5fy9qwGpow9DbnTzi91DxwijP5ine1Fk_mTbP8pR17b2zRxqFQ3pBb3FDVEZJgBiYVKKt2y390Nz2sPGPbhijfQfGeJ_gtSwHXLYEZg7lbEObWkMFK0n=s2048"
+    ]
+  },
+  {
+    "slideIndex": 11,
+    "slideId": "p13",
+    "title": "¿Como encontrar el minimo de la funcion de costo?",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ilLXXL6kOyvHad_n-lEAUqEi75POeTqQ_hxt_gb4AoWSZZNhQA9SamYLJSjQbB0ZnZGfv37gr0soc__B3PFCwpD8zx9MHZ95h5y4FsdxT0keaxiglXc1P6RTRS--mX6Yc2gJhzAsfi33mYtIw8Ex3C82ltXV3dKHX2H=s2048"
+    ]
+  },
+  {
+    "slideIndex": 12,
+    "slideId": "p14",
+    "title": "Derivada del costo",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-imtd3GbnqaN_v1Vi6gDCOJfTv8L-HI9s-mdUISdGruBuG-SKftqs9x3NYxYxHfCIlrrNMlRg1__QB3DVccGkXzSTC3GKq0c6K791yaJqc8gQq8D54xL1pVFCDJKWrpNwqAi08cGIdFtDBdsgy8M-cp9VJaHtm71h-Bv=s2048"
+    ]
+  },
+  {
+    "slideIndex": 13,
+    "slideId": "p15",
+    "title": "Gradiente Descendiente",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-inLmhsB0JOyrBQc1YKf2UMTqq1nGRtv9zyUEsLMsfarZ9yOctuMSL6ip2EfcOzawd8mRhG0tKQsq6z6beFcIjMyfp5_ahTztOANcjZcgYxd-yPCBE_1S2lk8TYW8wYuyaZIe4GoUGS38voWX-fBI0LuMm3uLgPj7F--=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ik9Ef3A-DBPELcNaAtAeFp533Rk4_OmPF0JG77dZFjOF9tnlotqqsYcbefCbH3puU3KwCCN9fHC7Op08ywBKO6cyYE0g1i_JIG8pklr0i6QyK2tV6gFcWK0If3VmPBz-I2A4nmfiSFSzwS3VXN0MMa3qanViBEFxABO=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilUGF2Vkfk26xtbrm24-ONip1XWzWIpZdJWf9TskzpOHAED5NydxNBzM8iA0xbVk4njCCikWLaNdKqFiOqlOaVORbLrWnJIl4uIfnluNjUjZjbCdt_iJF5C4l9GAgRba1pigrBo98VGB-5PqwNNBA6-QSmhySFiY9r6=s2048"
+    ]
+  },
+  {
+    "slideIndex": 14,
+    "slideId": "p16",
+    "title": "Regresion Lineal",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-inLuNPeg0GoY8WXtQ_lPZpmdWWP8WLDuVoS97wZNg_XDxdP2Q90pgKYFIlUKGcGSI4wVlhJIh0HJwXJMAv_93dORur15DaROjYS6ZzxCbHuEm37WOm7IdCIAsrXNMbZ3n8e9NL7r9TRRH5v1jpzbCqWCNrzbfG_Swi0=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilLXXL6kOyvHad_n-lEAUqEi75POeTqQ_hxt_gb4AoWSZZNhQA9SamYLJSjQbB0ZnZGfv37gr0soc__B3PFCwpD8zx9MHZ95h5y4FsdxT0keaxiglXc1P6RTRS--mX6Yc2gJhzAsfi33mYtIw8Ex3C82ltXV3dKHX2H=s2048"
+    ]
+  },
+  {
+    "slideIndex": 15,
+    "slideId": "p17",
+    "title": "Normal Equation",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-iki_adDgSLHMouqtmNYdLPost6MMsMR_4msOWmYDfywN3yBFkDql12MpHzIFf7EDUfy_cXKb-chr1GpMb23PGPd_UAgxG8nkGbcySOtb13GSRnR8XnSM_xY4JMqYIuL3T2WmYHZ6ClCFM-HJSIsytcC9YqGc-JEtKFN=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-imFyMYpbBOBtZjDrEHZpgzYhWJm2iVrRH2o5IpCsAGlX_4TVdXOqNjLVqOJNQt-u1L902atzGYOVgQO-e9eAl-CLmCkqEjwZlWQrbRIhZ_acp4wkUDdmIysH-v8ETJI5_A0EGDSSK3xMHprOlqEjm_7BPNYxEcIUA=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ildMXj_uMqg-yfshHx0M9BSWx5BnD6szfl8eOmleBFEoZXyK8pFaUEFhNs-4S-FGiI1Sj07Sl0QKVajFIgEne7tvbtzwNvWnfGocA7E-oJBWselBtdKLvoK2xdxMFt9_veYrcywOqLU4bV68BGhHK5BllMuWV6ul10E=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-imAmwYNr_Ufga9AcVyYsACPnmda3CgcDmPpwzw5NFxrbMbroSXfJF8OuhT_kPO1hqt6Ngz2E3HokO4359iD-EKc4EN6ezEdiQclxw0W6QOpuix_r45xF98SlyFL3PCS5sx6bWo_EliEOIAo1p0jWFnGczvdTl0AydCl=s2048"
+    ]
+  },
+  {
+    "slideIndex": 16,
+    "slideId": "p18",
+    "title": "Gradiente Descendiente",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-imbarz-nc_5LLhd-4IFszj74g6kxYeQeYlvI8aQ70DRowLbHKP70qH4StTHZJhpQkSW0T-f9S72MlBJUB5gHRH6klZbyt-2uQQDBNUFGo_Be0TnuktVU3-ZY3mSGvpIl1MBqzDoz9FtueaaXeMpTiFM7xjgDpQ5V8n1=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilLXXL6kOyvHad_n-lEAUqEi75POeTqQ_hxt_gb4AoWSZZNhQA9SamYLJSjQbB0ZnZGfv37gr0soc__B3PFCwpD8zx9MHZ95h5y4FsdxT0keaxiglXc1P6RTRS--mX6Yc2gJhzAsfi33mYtIw8Ex3C82ltXV3dKHX2H=s2048"
+    ]
+  },
+  {
+    "slideIndex": 17,
+    "slideId": "p19",
+    "title": "Gradiente Descendiente",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-inhgZEYHEVUxSuwQSV5pzfsI1iwjE8xidw_LWFKzUuDWpZGem-ITUyzN_3M1RPB1zMOWQPASqqmthRsdgm7R4EyRbJvNazgcpJPv4yeM5Oix65pOUatCThoKF0F9rSFpPFrFybZbRNv7x5iGzrVqrs6GsPVsnklXw=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-inKHriAPC7ZcPN_hST_7mtXoQqQdMsLJ5WAUnUCXLlfzM8ER-oHCiBbZLF-vSmJq2povlae4v30CqnhPenJJei3HkElf__vwsvA9SqPHOcYeNjPPgRzSt14S0_J5U5fE4dg9PMltVuNjXf918OsTVq2wLIVw5jfcw=s2048"
+    ]
+  },
+  {
+    "slideIndex": 18,
+    "slideId": "p20",
+    "title": "Gradiente Descendiente",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-inCG9TIzEuJNfRSGDavsK8TwOky7gmOCNNnW147uGxGy3_ReFD5mnswRxyeQQUJFxwYskimzWJjjurcHH5gVS6ZmgD3BlO2oslV48POMgzEmV3JuOrnj8Kry5dIBfmnTOftSDLlwghF7Z0eZT1L4opxi9xeVcUq-EqV=s2048"
+    ]
+  },
+  {
+    "slideIndex": 19,
+    "slideId": "p21",
+    "title": "Gradiente Descendiente: Implementacion",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ilGptby3Igx6CiuNVBFohnnSebz2LCarfiqC8IVbo5Sd-EEcIQ-qbZEEr7sOHEA6Pu47wPCYErOf5aaZdjSg6NZipB7f2RLEC3ZalqS-jDnRDdT5NlWFqtUYdpfFm4AiThTf3AnyB2VEfV0LBjcDynavBu859MUvw=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-inF4OY-xdDUfdDC35cZtpIbUfb1HiKrzTDWVYwtDFYrIveXX_uvpXankxV7az1SycMhW-Cpn7LzJ5vrqsuBcUDXGtZU2zRcP_laLAqv_MKXSsXmR0qqT374ve0kWJ3kyOVGXZ2jJHNKuL64D7UDUmInxhXtJ0HGgNzy=s2048"
+    ]
+  },
+  {
+    "slideIndex": 20,
+    "slideId": "p22",
+    "title": " ",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ikkoMZR1rHRep08bzW7oRS7lCBgKSFRtsKW_lj09OCTgz4TBjRgCQQhzGp26Xt5pt_UqqHIsWTXSkWIKB5VeGYRDu0pu7CbFzE0jOSmLY_N4EnKDaJIDwmQT9jkNyshyc4pahAV-NoYtfPBgXBmHEr73_3f5XppwR9r=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-imsPdUHlC6KOyWmgkngKgBh7lOgMuxTpwgAuuTt7lTN6irYSx6tneAgaQcUw6xvs_qF5-A2EFsIPBNJk3gV-q2hrTIpHBj2MC9ASXM2szIf2kdBuIbqzwDAILuJeWXBDMrQRP4hSawioTgd-HMlQkmoNH5mvsFpkSuJ=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-inF4OY-xdDUfdDC35cZtpIbUfb1HiKrzTDWVYwtDFYrIveXX_uvpXankxV7az1SycMhW-Cpn7LzJ5vrqsuBcUDXGtZU2zRcP_laLAqv_MKXSsXmR0qqT374ve0kWJ3kyOVGXZ2jJHNKuL64D7UDUmInxhXtJ0HGgNzy=s2048"
+    ]
+  },
+  {
+    "slideIndex": 21,
+    "slideId": "p23",
+    "title": " ",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ikkoMZR1rHRep08bzW7oRS7lCBgKSFRtsKW_lj09OCTgz4TBjRgCQQhzGp26Xt5pt_UqqHIsWTXSkWIKB5VeGYRDu0pu7CbFzE0jOSmLY_N4EnKDaJIDwmQT9jkNyshyc4pahAV-NoYtfPBgXBmHEr73_3f5XppwR9r=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ikPrjnZIEK2_1AqijI_9VjYWdfmr7_maiO1u2Q8AjLdlsQTuwmrLccvfw-r2a9Hw1zcguTNrleiUDEMJNMkiXhzaFjz_aCx8teAZAxT1Z8ms-aFZLPKlkxgrxIzlVa7bgfrv29FOmwvaPjMmXawuQjCr210JjNiBVtG=s2048"
+    ]
+  },
+  {
+    "slideIndex": 22,
+    "slideId": "p24",
+    "title": "Gradiente Descendiente: Implementacion",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-il_qRYOUymBiG_Be0wER77HuK1psHd3ZIQMnEY6QCWgvwSImfZ9jsJcP39bmig0SXRSrQ2BWu4XNoAItsPzGh3Bj5XIAZy6HkWwXGpbikAos9XTx0womECJoyV2dBzMcnbEs83ZCtn74jWN2NwH5u-KTdSR2fpXoA=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilH2JMJIHfNxX7CHN-7Jog1z1BQyVMpSeFj_FddNJ_KHleDeX6Q72GH3_fU1bIDXrb6vA6UinugoX1RTNxzjXO0SGYMGGexm6ULSE6wqXHpZbEUZNzmzrgAd1XEwbzBFzCtEVEw8FM08xg_XXCNx4qzlY8cOL8zUQ=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-inF5gygU4qGV-1LCQ1FBUrHJkZXSaTEMsFTCx0dGTmMc10OXoB6E-M7B-B712YEzT5SB2NPmvqUrg9ppf_UUy6of7fl2N_9nj0al9q6LgsxxEN8b3GzUAn6IyfQ2l1RXtildmjLDqz_9JVpc3ih6Sq4IsX_7RIRrtcG=s2048",
+      "https://docs.google.com/slides-images-rt/AOd6-ilfnD5Hia7LCpuutqnpnowjOUW7aQnqXgBapxn1wCC-0CHgwJiY4v2p0Gx8fFPjtVeJwxngij5nXlRyJm1vOYiI4RbYKOvSA1e7RrW-ztm633KpVL6wgIYSu4DcoLyv5tItIqPVBlPcIQpx-1Mmx-ev90uTVLdMhg=s2048"
+    ]
+  },
+  {
+    "slideIndex": 23,
+    "slideId": "p25",
+    "title": "Regresion Lineal: Bases",
+    "urls": [
+      "https://docs.google.com/slides-images-rt/AOd6-ilogHTYeOYCqm9owGHduhR96ANf2BrzSGFMWAV4f_dlrj6MP-QJ-dKTv9Rx7JBjETbaQl8iOhZ18TM2RkK4QrgOtuvgQaJPj5SIjw-bm810tAdKACSd7toob9Qs1O43gB_YemTOYXNkG9XvKxpGCmMKblZ7qbyRcopX=s2048"
+    ]
+  }
+]

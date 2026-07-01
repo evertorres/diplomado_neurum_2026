@@ -1,0 +1,33 @@
+<section class="slide" id="slide21">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Efecto de la Tasa de Aprendizaje ($\alpha$)</h2>
+        
+        <p style="font-size: 1.2rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            La elección de la tasa de aprendizaje ($\alpha$) determina la estabilidad y rapidez de la convergencia de nuestro optimizador.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Tasa Pequeña -->
+            <div class="fragment highlight-card" style="border-top: 5px solid var(--color-cta); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="font-size: 1.3rem; font-weight: bold; color: var(--color-cta); margin-bottom: 8px;">Tasa muy Pequeña (ej. &alpha; = 0.0001)</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: 15px;">
+                        Los pasos hacia abajo son diminutos. El modelo eventualmente alcanzará el mínimo, pero requerirá miles de iteraciones adicionales, consumiendo mucho tiempo y cómputo.
+                    </p>
+                </div>
+                <img src="images/slide21_img02.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 100px; border-radius: 6px; border: 1px solid #E2E8F0; display: block;" alt="Convergencia lenta por tasa de aprendizaje pequeña">
+            </div>
+
+            <!-- Tasa Grande -->
+            <div class="fragment highlight-card" style="border-top: 5px solid #EF4444; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="font-size: 1.3rem; font-weight: bold; color: #EF4444; margin-bottom: 8px;">Tasa muy Grande (ej. &alpha; = 1.5)</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: 15px;">
+                        Los pasos son gigantescos y sobrepasan el valle. En lugar de descender, rebota de un lado a otro alejándose cada vez más del mínimo, lo que provoca la divergencia del algoritmo.
+                    </p>
+                </div>
+                <img src="images/slide21_img03.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 100px; border-radius: 6px; border: 1px solid #E2E8F0; display: block;" alt="Divergencia por tasa de aprendizaje grande">
+            </div>
+        </div>
+    </div>
+</section>

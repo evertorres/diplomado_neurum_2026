@@ -1,0 +1,86 @@
+<section class="slide" id="slide07">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Interpretación de Ponderaciones (Pesos $\theta$)</h2>
+        
+        <p style="font-size: 1.15rem; color: var(--color-secondary); margin-top: var(--space-md); margin-bottom: var(--space-lg);">
+            Los coeficientes de peso determinan el impacto de cada característica independiente en la predicción final.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); width: 100%;">
+            <!-- Reglas conceptuales -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+                <div class="fragment highlight-card" style="padding: 15px 20px; display: flex; gap: 15px; align-items: start;">
+                    <div style="font-size: 1.5rem;">📈</div>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1.1rem; color: #10B981; font-weight: 700;">Peso Positivo ($\theta > 0$)</h4>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9rem; color: var(--color-secondary);">Al aumentar la característica, la predicción también aumenta (ej. Peso $\rightarrow$ IMC).</p>
+                    </div>
+                </div>
+
+                <div class="fragment highlight-card" style="padding: 15px 20px; display: flex; gap: 15px; align-items: start;">
+                    <div style="font-size: 1.5rem;">📉</div>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1.1rem; color: #EF4444; font-weight: 700;">Peso Negativo ($\theta < 0$)</h4>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9rem; color: var(--color-secondary);">Al aumentar la característica, la predicción disminuye (ej. Horas Actividad $\rightarrow$ IMC).</p>
+                    </div>
+                </div>
+
+                <div class="fragment highlight-card" style="padding: 15px 20px; display: flex; gap: 15px; align-items: start;">
+                    <div style="font-size: 1.5rem;">💥</div>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1.1rem; color: var(--color-cta); font-weight: 700;">Peso Grande / Magnitud Alta</h4>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9rem; color: var(--color-secondary);">La característica tiene un impacto sumamente fuerte en la predicción final.</p>
+                    </div>
+                </div>
+
+                <div class="fragment highlight-card" style="padding: 15px 20px; display: flex; gap: 15px; align-items: start;">
+                    <div style="font-size: 1.5rem;">⚪</div>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1.1rem; color: #94A3B8; font-weight: 700;">Peso Cero ($\theta = 0$)</h4>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9rem; color: var(--color-secondary);">La característica no tiene absolutamente ningún impacto en el resultado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de ejemplo explicativo -->
+            <div class="fragment" style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: center;">
+                <h4 style="color: var(--color-primary); margin-bottom: 15px; font-weight: 700;">Ejemplo: Predicción de IMC</h4>
+                
+                <table style="width: 100%; border-collapse: collapse; font-family: 'Roboto Mono', monospace; font-size: 0.9rem;">
+                    <thead>
+                        <tr style="border-bottom: 1.5px solid #CBD5E1; text-align: left; color: var(--color-primary);">
+                            <th style="padding: 8px 10px;">Característica ($x$)</th>
+                            <th style="padding: 8px 10px;">Ejemplo E1</th>
+                            <th style="padding: 8px 10px;">Ejemplo E2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #E2E8F0;">
+                            <td style="padding: 10px; font-weight: bold;">Edad</td>
+                            <td style="padding: 10px;">35</td>
+                            <td style="padding: 10px;">29</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E2E8F0;">
+                            <td style="padding: 10px; font-weight: bold;">Peso (kg)</td>
+                            <td style="padding: 10px;">70</td>
+                            <td style="padding: 10px;">60</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E2E8F0;">
+                            <td style="padding: 10px; font-weight: bold;">Altura (m)</td>
+                            <td style="padding: 10px;">1.75</td>
+                            <td style="padding: 10px;">1.68</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E2E8F0;">
+                            <td style="padding: 10px; font-weight: bold;">Horas Actividad</td>
+                            <td style="padding: 10px;">5</td>
+                            <td style="padding: 10px;">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: var(--color-secondary); line-height: 1.4;">
+                    El modelo aprenderá una ponderación específica (peso) para cada una de estas variables numéricas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

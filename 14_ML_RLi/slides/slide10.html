@@ -1,0 +1,59 @@
+<section class="slide" id="slide10">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Introducción a la Función de Costo</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-xl); margin-top: var(--space-lg); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Concepts -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <p style="font-size: 1.15rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    La función de costo cuantifica la distancia entre las predicciones del modelo y los valores reales.
+                </p>
+
+                <!-- MSE Card -->
+                <div class="fragment highlight-card" style="border-left: 4px solid var(--color-cta); padding: 15px 20px;">
+                    <h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-cta); margin-bottom: 4px;">Error Cuadrático Medio (MSE)</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-secondary); margin-bottom: 8px;">
+                        Promedio del error al cuadrado. Penaliza fuertemente las predicciones muy desviadas (outliers).
+                    </p>
+                    <div class="formula-box" style="margin: 0; font-size: 0.95rem; padding: 6px 12px; background: #F8FAFC;">
+                        $$MSE = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - \hat{y}^{(i)})^2$$
+                    </div>
+                </div>
+
+                <!-- MAE Card -->
+                <div class="fragment highlight-card" style="border-left: 4px solid var(--color-primary); padding: 15px 20px;">
+                    <h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-primary); margin-bottom: 4px;">Error Absoluto Medio (MAE)</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-secondary); margin-bottom: 8px;">
+                        Promedio de diferencias absolutas. Menos sensible a valores atípicos, pero más compleja de optimizar.
+                    </p>
+                    <div class="formula-box" style="margin: 0; font-size: 0.95rem; padding: 6px 12px; background: #F8FAFC; border-left-color: var(--color-primary);">
+                        $$MAE = \frac{1}{n} \sum_{i=1}^{n} |y^{(i)} - \hat{y}^{(i)}|$$
+                    </div>
+                </div>
+
+                <div class="fragment" style="background: #FAF5FF; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #A855F7; font-size: 0.9rem; color: var(--color-secondary);">
+                    <strong>🎯 Meta:</strong> El entrenamiento busca encontrar parámetros $\theta$ que <strong>minimicen</strong> este costo.
+                </div>
+            </div>
+
+            <!-- Right Column: Images -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                
+                <!-- Image 1: Residuals -->
+                <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 10px; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center;">
+                    <img src="images/slide10_img03.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 22vh; border-radius: 8px; display: block; margin: 0 auto;" alt="Error de predicción (Costo)">
+                    <span style="font-size: 0.75rem; color: var(--color-secondary); display: block; margin-top: 5px; font-family: 'Roboto Mono', monospace;">Desviación de predicciones respecto a la recta</span>
+                </div>
+
+                <!-- Image 2: Cost Function J(theta) -->
+                <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 10px; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center;">
+                    <img src="images/slide10_img04.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 22vh; border-radius: 8px; display: block; margin: 0 auto;" alt="Superficie de Costo J(theta)">
+                    <span style="font-size: 0.75rem; color: var(--color-secondary); display: block; margin-top: 5px; font-family: 'Roboto Mono', monospace;">Curva de pérdida J(&theta;) en función de parámetros</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

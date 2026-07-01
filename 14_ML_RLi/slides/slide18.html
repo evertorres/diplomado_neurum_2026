@@ -1,0 +1,32 @@
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">La Regla de Actualización</h2>
+        
+        <p style="font-size: 1.2rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            Matemáticamente, actualizamos simultáneamente cada uno de los parámetros $\theta_j$ del modelo restando una fracción de la derivada parcial de la función de costo:
+        </p>
+
+        <div class="fragment formula-box" style="margin-top: var(--space-xl); padding: 25px; font-size: 1.6rem; background: #EFF6FF; border-left-color: var(--color-cta);">
+            $$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$$
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-lg); width: 100%;">
+            <!-- Términos clave -->
+            <div class="fragment highlight-card" style="border-left: 5px solid var(--color-cta); padding: 18px;">
+                <h4 style="color: var(--color-cta); font-weight: bold; margin-bottom: 6px; font-size: 1.1rem;">Tasa de Aprendizaje ($\alpha$)</h4>
+                <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-secondary);">
+                    Es un hiperparámetro crucial. Controla la longitud del paso en cada iteración. 
+                    * Si es muy pequeña, el entrenamiento será sumamente lento.<br>
+                    * Si es muy grande, el modelo puede sobrepasar el mínimo y divergir.
+                </p>
+            </div>
+            
+            <div class="fragment highlight-card" style="border-left: 5px solid var(--color-primary); padding: 18px;">
+                <h4 style="color: var(--color-primary); font-weight: bold; margin-bottom: 6px; font-size: 1.1rem;">Derivada Parcial ($\frac{\partial}{\partial \theta_j} J(\theta)$)</h4>
+                <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-secondary);">
+                    Representa la dirección y la inclinación de la pendiente para el parámetro $\theta_j$. Indica hacia dónde y con qué fuerza debemos mover el peso en cada paso.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

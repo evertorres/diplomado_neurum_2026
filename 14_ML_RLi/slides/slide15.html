@@ -1,0 +1,39 @@
+<section class="slide" id="slide15">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Dos Formas de Resolver Regresión Lineal</h2>
+        
+        <p style="font-size: 1.2rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            Para minimizar la función de costo MSE, resolvemos algebraicamente o numéricamente donde el gradiente es igual a 0. Existen dos enfoques principales:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Enfoque 1 -->
+            <div class="fragment highlight-card" style="border-top: 5px solid var(--color-cta); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="font-size: 1.35rem; font-weight: bold; color: var(--color-cta); margin-bottom: 8px;">1. Solución Analítica</h3>
+                    <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-secondary); margin-bottom: 12px; font-family: 'Roboto Mono', monospace;">Normal Equations</h4>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary);">
+                        Resuelve los pesos exactos matemáticamente en un solo paso utilizando álgebra de matrices. Es exacta y directa, pero se vuelve computacionalmente muy lenta cuando el número de variables es grande.
+                    </p>
+                </div>
+                <div class="formula-box" style="margin-top: 15px; font-size: 1.15rem; padding: 10px 15px; background: #FFF7ED; border-left: 4px solid var(--color-cta); border-radius: 6px;">
+                    $$\nabla_\theta \frac{1}{m} \|\hat{y} - y\|_2^2 = 0$$
+                </div>
+            </div>
+
+            <!-- Enfoque 2 -->
+            <div class="fragment highlight-card" style="border-top: 5px solid #10B981; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="font-size: 1.35rem; font-weight: bold; color: #047857; margin-bottom: 8px;">2. Solución Iterativa</h3>
+                    <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-secondary); margin-bottom: 12px; font-family: 'Roboto Mono', monospace;">Gradiente Descendiente</h4>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary);">
+                        Actualiza los pesos de forma gradual en pasos sucesivos. Es altamente escalable y funciona extremadamente bien con millones de variables independientes y conjuntos de datos gigantescos.
+                    </p>
+                </div>
+                <div class="formula-box" style="margin-top: 15px; font-size: 1.15rem; padding: 10px 15px; background: #ECFDF5; border-left: 4px solid #10B981; border-radius: 6px;">
+                    $$\theta := \theta - \alpha \nabla_\theta J(\theta)$$
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+<section class="slide" id="slide06">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Mapeo de Características a Predicción</h2>
+        
+        <p style="font-size: 1.15rem; color: var(--color-secondary); margin-top: var(--space-md); margin-bottom: var(--space-xl);">
+            El flujo de datos desde los features de entrada hasta el resultado predicho por el modelo lineal (IMC):
+        </p>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1000px; margin: 0 auto;">
+            
+            <!-- Features (Entradas) -->
+            <div class="fragment" style="display: flex; flex-direction: column; gap: 12px; width: 230px;">
+                <div style="background: #F1F5F9; border: 1px solid #CBD5E1; padding: 12px; border-radius: 8px; font-weight: bold; text-align: center; font-family: 'Exo', sans-serif;">📅 Edad</div>
+                <div style="background: #F1F5F9; border: 1px solid #CBD5E1; padding: 12px; border-radius: 8px; font-weight: bold; text-align: center; font-family: 'Exo', sans-serif;">⚖️ Peso</div>
+                <div style="background: #F1F5F9; border: 1px solid #CBD5E1; padding: 12px; border-radius: 8px; font-weight: bold; text-align: center; font-family: 'Exo', sans-serif;">📏 Altura</div>
+                <div style="background: #F1F5F9; border: 1px solid #CBD5E1; padding: 12px; border-radius: 8px; font-weight: bold; text-align: center; font-family: 'Exo', sans-serif;">⚡ Horas Actividad</div>
+            </div>
+
+            <!-- Flechas / Conector central -->
+            <div class="fragment" style="flex: 1; display: flex; justify-content: center; align-items: center; position: relative; min-width: 40px;">
+                <!-- Línea conectora -->
+                <div style="width: 60px; height: 4px; background: var(--color-cta); position: relative;">
+                    <div style="position: absolute; right: 0; top: -6px; width: 16px; height: 16px; border-top: 4px solid var(--color-cta); border-right: 4px solid var(--color-cta); transform: rotate(45deg);"></div>
+                </div>
+            </div>
+
+            <!-- Modelo / Suma Ponderada -->
+            <div class="fragment" style="background: #EFF6FF; border: 2px solid #3B82F6; padding: 15px; border-radius: 50%; width: 230px; height: 230px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-shadow: var(--shadow-lg); flex-shrink: 0;">
+                <div style="font-size: 1.8rem; font-weight: bold; color: var(--color-cta); font-family: 'Exo', sans-serif; margin-bottom: 8px;">Modelo</div>
+                <div style="font-size: 1.15rem; color: var(--color-secondary); white-space: nowrap;">$y = \sum (x_i \cdot \theta_i)$</div>
+                <div style="font-size: 0.8rem; color: #64748B; margin-top: 6px; font-family: 'Roboto Mono', monospace;">Suma Ponderada</div>
+            </div>
+
+            <!-- Flechas / Conector final -->
+            <div class="fragment" style="flex: 1; display: flex; justify-content: center; align-items: center; position: relative; min-width: 40px;">
+                <!-- Línea conectora -->
+                <div style="width: 60px; height: 4px; background: #10B981; position: relative;">
+                    <div style="position: absolute; right: 0; top: -6px; width: 16px; height: 16px; border-top: 4px solid #10B981; border-right: 4px solid #10B981; transform: rotate(45deg);"></div>
+                </div>
+            </div>
+
+            <!-- Predicción (Target) -->
+            <div class="fragment" style="background: #ECFDF5; border: 2px solid #10B981; padding: 25px; border-radius: 12px; width: 210px; text-align: center; box-shadow: var(--shadow-md); flex-shrink: 0;">
+                <div style="font-size: 1.15rem; font-weight: bold; color: #047857; font-family: 'Exo', sans-serif;">Predicción</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-primary); margin-top: 10px;">IMC ($y$)</div>
+            </div>
+
+        </div>
+    </div>
+</section>

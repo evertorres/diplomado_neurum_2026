@@ -1,0 +1,38 @@
+<section class="slide" id="slide11">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Error Cuadrático Medio (MSE)</h2>
+        
+        <p style="font-size: 1.2rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            El Error Cuadrático Medio (Mean Squared Error) cuantifica la diferencia total entre la predicción y el valor real elevado al cuadrado.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xl); margin-top: var(--space-lg); width: 100%;">
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment highlight-card" style="border-left: 5px solid #10B981; background: #ECFDF5;">
+                    <h4 style="margin: 0; color: #047857; font-size: 1.15rem;">Análisis Geométrico</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        Es matemáticamente equivalente al cuadrado de la <strong>distancia Euclidiana</strong> entre el vector de predicciones del modelo y el vector de objetivos reales del conjunto de entrenamiento.
+                    </p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-cta);">
+                    <h4 style="margin: 0; color: var(--color-cta); font-size: 1.15rem;">Sensibilidad a Valores Atípicos (Outliers)</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        Debido al exponente cuadrado, los errores grandes tienen un impacto desproporcionadamente mayor que los errores pequeños. Esto fuerza al modelo a evitar grandes desviaciones.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card con Parábola / Gráfico CSS -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 20px; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h4 style="color: var(--color-primary); font-weight: 700; margin-bottom: 12px; font-family: 'Exo', sans-serif;">Curva Parabólica del Error</h4>
+                
+                <img src="images/slide11_img04.gif" class="slide-image zoomable-image" style="max-width: 100%; max-height: 180px; border-radius: 8px; border: 1px solid #E2E8F0; display: block;" alt="Animación de optimización de MSE">
+                
+                <p style="margin-top: 12px; font-size: 0.8rem; color: var(--color-secondary); text-align: center; line-height: 1.4;">
+                    El costo en un modelo lineal tiene una forma convexa (parábola), lo que garantiza la existencia de un único mínimo global.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

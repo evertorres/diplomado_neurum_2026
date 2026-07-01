@@ -1,0 +1,41 @@
+<section class="slide" id="slide03">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">¿Cuándo utilizar un modelo de regresión lineal?</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Preguntas Guía -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-cta);">
+                    <h4 style="margin: 0 0 6px 0; font-size: 1.2rem; color: var(--color-cta); font-weight: 700;">1. ¿La variable a predecir es numérica?</h4>
+                    <p style="margin: 0; color: var(--color-secondary); font-size: 0.95rem; line-height: 1.5;">El objetivo (target) debe ser cuantitativo y continuo (ej. temperatura, salario, presión arterial, IMC).</p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-primary);">
+                    <h4 style="margin: 0 0 6px 0; font-size: 1.2rem; color: var(--color-primary); font-weight: 700;">2. ¿Las variables independientes son numéricas?</h4>
+                    <p style="margin: 0; color: var(--color-secondary); font-size: 0.95rem; line-height: 1.5;">Funciona mejor cuando los predictores son cuantitativos. Si hay categorías, deben ser de pocos niveles y codificadas adecuadamente.</p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid #E2E8F0;">
+                    <h4 style="margin: 0 0 6px 0; font-size: 1.2rem; color: var(--color-secondary); font-weight: 700;">3. ¿Las categóricas tienen muchos niveles?</h4>
+                    <p style="margin: 0; color: var(--color-secondary); font-size: 0.95rem; line-height: 1.5;">Evita usar variables categóricas con demasiadas clases (ej. códigos postales o diagnósticos detallados) debido al riesgo de sobreajuste y la paradoja de Simpson.</p>
+                </div>
+            </div>
+
+            <!-- Recomendaciones clave -->
+            <div class="fragment" style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--color-primary); margin-bottom: 12px; font-weight: 700; border-bottom: 1px solid #E2E8F0; padding-bottom: 6px;">💡 Recomendaciones prácticas</h4>
+                    <ul style="font-size: 0.9rem; line-height: 1.6; color: var(--color-secondary); padding-left: 15px; display: flex; flex-direction: column; gap: 8px;">
+                        <li>Comienza siempre con regresión lineal antes de ir a modelos complejos.</li>
+                        <li><strong>Cuidado con la multicolinealidad:</strong> reduce las variables independientes correlacionadas.</li>
+                        <li><strong>Evita la extrapolación:</strong> no predigas fuera del dominio de entrenamiento, pues la linealidad podría no mantenerse.</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 15px; padding-top: 12px; border-top: 1px dashed #CBD5E1; font-size: 0.85rem; color: #64748B; font-style: italic;">
+                    📌 Nota: Para más sobre por qué evitar demasiadas categorías, investiga sobre la <span class="accent">Paradoja de Simpson</span>.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

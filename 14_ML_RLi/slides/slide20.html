@@ -1,0 +1,46 @@
+<section class="slide" id="slide20">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Algoritmo del Gradiente Descendiente</h2>
+        
+        <p style="font-size: 1.25rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            El flujo para entrenar de forma iterativa y ajustar los pesos del modelo lineal:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Pasos del Algoritmo -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+                <div class="fragment highlight-card" style="padding: 15px 20px; border-left: 4px solid var(--color-primary);">
+                    <strong style="color: var(--color-primary); font-size: 1.1rem; display: block; margin-bottom: 4px;">Paso 1: Inicialización</strong>
+                    <span style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5;">
+                        Inicializamos los parámetros $\theta_0, \theta_1, ..., \theta_n$ en valores aleatorios cercanos a cero (o todos en 0).
+                    </span>
+                </div>
+
+                <div class="fragment highlight-card" style="padding: 15px 20px; border-left: 4px solid var(--color-cta);">
+                    <strong style="color: var(--color-cta); font-size: 1.1rem; display: block; margin-bottom: 4px;">Paso 2: Calcular el gradiente y actualizar</strong>
+                    <span style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5;">
+                        Calculamos las derivadas parciales de la función de costo y aplicamos la regla de actualización de forma simultánea a todos los pesos.
+                    </span>
+                </div>
+
+                <div class="fragment highlight-card" style="padding: 15px 20px; border-left: 4px solid #10B981;">
+                    <strong style="color: #10B981; font-size: 1.1rem; display: block; margin-bottom: 4px;">Paso 3: Repetir hasta converger</strong>
+                    <span style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5;">
+                        Repetimos los pasos en bucle durante un número predefinido de iteraciones (epochs) o hasta que la reducción del costo sea casi imperceptible.
+                    </span>
+                </div>
+            </div>
+
+            <!-- Caja explicativa de convergencia -->
+            <div class="fragment" style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: center;">
+                <h4 style="color: var(--color-primary); font-weight: 700; margin-bottom: 10px; border-bottom: 1px solid #E2E8F0; padding-bottom: 6px;">💡 ¿Qué es la Convergencia?</h4>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin: 0;">
+                    Es el estado en el cual dar más pasos de entrenamiento ya no reduce significativamente la pérdida (MSE). Significa que hemos alcanzado el fondo de la parábola (mínimo).
+                </p>
+                <div style="margin-top: 15px; padding: 10px; background: #ECFDF5; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 0.85rem; color: #047857; text-align: center; border: 1px solid #A7F3D0;">
+                    $$J(\theta_{t}) - J(\theta_{t-1}) < \epsilon$$
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

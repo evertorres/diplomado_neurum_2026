@@ -1,0 +1,46 @@
+<section class="slide" id="slide17">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Intención Gráfica del Gradiente Descendiente</h2>
+        
+        <p style="font-size: 1.25rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            Imagina que estás en la cima de una montaña en medio de una niebla densa y quieres llegar al fondo del valle (el mínimo del error).
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Explicación del comportamiento -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-cta); padding: 18px;">
+                    <h4 style="margin: 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700;">1. Sentir la pendiente bajo tus pies</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        Calculamos la derivada parcial (pendiente) en nuestra posición actual para saber en qué dirección la pendiente sube más rápido.
+                    </p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid #10B981; padding: 18px;">
+                    <h4 style="margin: 0; color: #047857; font-size: 1.1rem; font-weight: 700;">2. Dar un paso en dirección descendente</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        Damos un paso en la dirección contraria a la pendiente (hacia abajo). La longitud de este paso es controlada por la <strong>tasa de aprendizaje ($\alpha$)</strong>.
+                    </p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-primary); padding: 18px;">
+                    <h4 style="margin: 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700;">3. Repetir hasta que esté plano</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        Repetimos el proceso de forma iterativa. Conforme nos acercamos al fondo, la pendiente se hace más pequeña, dando pasos cada vez más cortos hasta converger (derivada cercana a 0).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gráfico conceptual del descenso -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h4 style="color: var(--color-primary); font-weight: 700; margin-bottom: 15px; font-family: 'Exo', sans-serif;">Paso a Paso hacia el Mínimo</h4>
+                
+                <img src="images/slide17_img02.gif" class="slide-image zoomable-image" style="max-width: 100%; max-height: 250px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid #E2E8F0; display: block;" alt="Descenso de gradiente paso a paso">
+                
+                <p style="margin-top: 15px; font-size: 0.8rem; color: var(--color-secondary); text-align: center; line-height: 1.4;">
+                    El tamaño del paso disminuye de forma natural a medida que la pendiente se aplana.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

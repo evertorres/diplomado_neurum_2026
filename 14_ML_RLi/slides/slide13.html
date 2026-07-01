@@ -1,0 +1,39 @@
+<section class="slide" id="slide13">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Derivada del Costo</h2>
+        
+        <p style="font-size: 1.25rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            La derivada representa matemáticamente la pendiente de la recta tangente en un punto específico de nuestra función de costo.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Explicación Conceptual -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-cta);">
+                    <h4 style="margin: 0; color: var(--color-cta); font-size: 1.15rem;">¿Qué nos dice el signo de la derivada?</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        * **Derivada Positiva:** La curva está subiendo. Para ir al mínimo, debemos restar al parámetro (movernos a la izquierda).<br>
+                        * **Derivada Negativa:** La curva está bajando. Para ir al mínimo, debemos sumar al parámetro (movernos a la derecha).
+                    </p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid #10B981; background: #ECFDF5;">
+                    <h4 style="margin: 0; color: #047857; font-size: 1.15rem;">¿Y en el Mínimo Absoluto?</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        En el punto más bajo (mínimo absoluto o relativo), la recta tangente es completamente horizontal. Por lo tanto, <strong>el valor de la derivada en el mínimo es exactamente igual a 0</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gráfico explicativo de Tangentes con CSS -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h4 style="color: var(--color-primary); font-weight: 700; margin-bottom: 12px; font-family: 'Exo', sans-serif;">Pendientes Tangenciales</h4>
+                <img src="images/slide13_img.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 250px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid #E2E8F0; display: block;" alt="Derivada y pendiente de la recta tangente">
+                
+                <p style="margin-top: 15px; font-size: 0.8rem; color: var(--color-secondary); text-align: center; line-height: 1.4;">
+                    El algoritmo de optimización utiliza el gradiente para saber hacia dónde dar el siguiente paso para llegar a cero.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

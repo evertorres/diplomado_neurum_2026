@@ -1,0 +1,39 @@
+<section class="slide" id="slide19">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Dificultades y Retos del Gradiente Descendiente</h2>
+        
+        <p style="font-size: 1.2rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            La optimización de funciones complejas de costo presenta varios retos matemáticos, especialmente en problemas reales multidimensionales:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Listado de dificultades -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment highlight-card" style="border-left: 5px solid #EF4444; padding: 18px;">
+                    <h4 style="margin: 0; color: #B91C1C; font-size: 1.15rem; font-weight: 700;">Mínimos Locales y Puntos de Silla</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        En funciones no convexas (como en Redes Neuronales), el gradiente puede llegar a cero en un mínimo local o punto de silla que no representa el mínimo óptimo global.
+                    </p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-cta); padding: 18px;">
+                    <h4 style="margin: 0; color: var(--color-cta); font-size: 1.15rem; font-weight: 700;">El objetivo práctico</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        En la práctica de Machine Learning, no siempre es necesario alcanzar el mínimo absoluto. Normalmente nos conformamos con encontrar valores lo suficientemente bajos para la función de costo que generalicen de forma óptima.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gráfico de mínimos locales con CSS -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h4 style="color: var(--color-primary); font-weight: 700; margin-bottom: 12px; font-family: 'Exo', sans-serif;">Curva No Convexa</h4>
+                
+                <img src="images/slide19_img.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 250px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid #E2E8F0; display: block;" alt="Curva No Convexa: Mínimos locales y globales">
+                
+                <p style="margin-top: 15px; font-size: 0.8rem; color: var(--color-secondary); text-align: center; line-height: 1.4;">
+                    Nota: La función de costo de la Regresión Lineal con MSE es convexa, por lo que carece de mínimos locales.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

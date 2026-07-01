@@ -1,0 +1,55 @@
+<section class="slide" id="slide09">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">El Término de Sesgo (Bias Term)</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Descripción -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.15rem; line-height: 1.6; color: var(--color-secondary);">
+                    El intercepto $\theta_0$ (o $b$) es llamado el <strong>término de sesgo (bias)</strong>. Representa la base del modelo.
+                </p>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-cta); background: #EFF6FF;">
+                    <h4 style="margin: 0; color: var(--color-cta); font-size: 1.15rem;">Definición Conceptual</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        Es la salida que predice el modelo en ausencia de cualquier entrada. Es decir, cuando todas las variables $x_1, x_2, ..., x_n$ son iguales a 0.
+                    </p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-primary);">
+                    <h4 style="margin: 0; color: var(--color-primary); font-size: 1.15rem;">Representación Práctica</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        En lugar de tratar el sesgo de manera separada, añadimos un parámetro constante extra $x_0 = 1$ en cada ejemplo del dataset. De esta forma, el modelo sigue formulándose como un producto matricial directo: $\theta^T x$.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gráfico / Placeholder visual con CSS -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h4 style="color: var(--color-primary); font-weight: 700; margin-bottom: 15px; text-align: center;">Efecto del Sesgo (&theta;_0)</h4>
+                
+                <!-- SVG Diagram representing y = mx + b -->
+                <svg width="220" height="220" viewBox="0 0 200 200" style="background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0;">
+                    <!-- Axes -->
+                    <line x1="20" y1="180" x2="180" y2="180" stroke="#94A3B8" stroke-width="2" />
+                    <line x1="20" y1="20" x2="20" y2="180" stroke="#94A3B8" stroke-width="2" />
+                    
+                    <!-- Line with intercept -->
+                    <line x1="20" y1="120" x2="160" y2="40" stroke="var(--color-cta)" stroke-width="3" />
+                    
+                    <!-- Intercept point -->
+                    <circle cx="20" cy="120" r="6" fill="#EF4444" />
+                    
+                    <!-- Annotation -->
+                    <text x="32" y="124" fill="#EF4444" font-family="'Roboto Mono', monospace" font-size="12" font-weight="bold">&theta;_0 (Intercepto)</text>
+                    <text x="130" y="195" fill="#64748B" font-family="'Roboto Mono', monospace" font-size="10">Entradas (x)</text>
+                    <text x="5" y="15" fill="#64748B" font-family="'Roboto Mono', monospace" font-size="10" transform="rotate(90 5 15)">Salida (y)</text>
+                </svg>
+                
+                <p style="margin-top: 15px; font-size: 0.85rem; color: var(--color-secondary); text-align: center; line-height: 1.4;">
+                    El sesgo desplaza la línea recta hacia arriba o abajo en el eje vertical de salidas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

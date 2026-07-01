@@ -1,0 +1,27 @@
+<section class="slide" id="slide23">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Derivadas Parciales de la Función de Costo</h2>
+        
+        <p style="font-size: 1.2rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            Para aplicar la regla de actualización, calculamos el gradiente parcial de la función de costo MSE con respecto a cada peso individual $\theta_j$:
+        </p>
+
+        <div class="fragment formula-box" style="margin-top: var(--space-lg); padding: 22px; font-size: 1.35rem; background: #F8FAFC; border-left-color: var(--color-cta);">
+            $$\frac{\partial}{\partial \theta_j} J(\theta) = \frac{2}{n} \sum_{i=1}^{n} (h_{\theta}(x^{(i)}) - y^{(i)}) x_j^{(i)}$$
+        </div>
+
+        <p style="font-size: 1.15rem; color: var(--color-secondary); margin-top: var(--space-lg); line-height: 1.6;">
+            De forma práctica en código, calculamos el gradiente para todos los parámetros de manera vectorizada y actualizamos el vector completo:
+        </p>
+
+        <div class="fragment formula-box" style="background: #ECFDF5; border-left-color: #10B981; padding: 18px; font-size: 1.25rem;">
+            $$\nabla_\theta J(\theta) = \frac{2}{n} X^T (X \theta - y)$$
+        </div>
+
+        <div class="fragment" style="margin-top: var(--space-md); font-family: 'Roboto Mono', monospace; font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5;">
+            * $X$ representa la matriz de características (features).<br>
+            * $y$ representa el vector de valores objetivos reales.<br>
+            * $\theta$ representa el vector de coeficientes de pesos del modelo lineal.
+        </div>
+    </div>
+</section>

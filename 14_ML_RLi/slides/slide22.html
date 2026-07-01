@@ -1,0 +1,39 @@
+<section class="slide" id="slide22">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Escalamiento de Características (Feature Scaling)</h2>
+        
+        <p style="font-size: 1.2rem; color: var(--color-secondary); margin-top: var(--space-md); line-height: 1.6;">
+            El escalamiento de características consiste en transformar nuestras variables de entrada para que todas tengan un rango de valores similar.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xl); margin-top: var(--space-xl); width: 100%;">
+            <!-- Justificación conceptual -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment highlight-card" style="border-left: 5px solid var(--color-cta); padding: 18px;">
+                    <h4 style="margin: 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700;">¿Por qué acelera el Gradiente Descendiente?</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        Si una variable tiene un rango muy grande (ej. salario de \$0 a \$1M) y otra un rango diminuto (ej. número de hijos de 0 a 5), la superficie del error J(&theta;) tendrá forma de eclipse extremadamente alargado. Esto obliga al optimizador a oscilar ineficientemente de un lado a otro.
+                    </p>
+                </div>
+
+                <div class="fragment highlight-card" style="border-left: 5px solid #10B981; padding: 18px;">
+                    <h4 style="margin: 0; color: #047857; font-size: 1.1rem; font-weight: 700;">Superficie Escalada (Simétrica)</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary);">
+                        Al escalar las variables (ej. normalización MinMax o estandarización Z-score), la superficie del error se vuelve circular y simétrica, permitiendo que el gradiente descienda de forma directa y rápida hacia el mínimo óptimo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gráfico circular vs elíptico -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h4 style="color: var(--color-primary); font-weight: 700; margin-bottom: 12px; font-family: 'Exo', sans-serif;">Forma de las Curvas de Contorno</h4>
+                
+                <img src="images/slide22_img02.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 180px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid #E2E8F0; display: block;" alt="Comparación de curvas de contorno con y sin escalamiento">
+                
+                <p style="margin-top: 15px; font-size: 0.8rem; color: var(--color-secondary); text-align: center; line-height: 1.4;">
+                    El escalamiento de características normaliza las dimensiones de la superficie de pérdida.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
