@@ -1,0 +1,70 @@
+<section class="slide" id="slide06">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Notación</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            Estructura básica de los datos de entrenamiento para clasificación binaria:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <!-- Left: Table of data -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <table class="class-table" style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <thead>
+                        <tr>
+                            <th>Edad ($x_1$)</th>
+                            <th>...</th>
+                            <th>Altura ($x_2$)</th>
+                            <th style="background-color: var(--color-cta);">Obesidad ($y$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>35</td>
+                            <td>...</td>
+                            <td>1.75</td>
+                            <td style="font-weight: bold; color: var(--color-cta);">1 (Positivo)</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>...</td>
+                            <td>1.68</td>
+                            <td style="font-weight: bold; color: var(--color-secondary);">0 (Negativo)</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>...</td>
+                            <td>1.80</td>
+                            <td style="font-weight: bold; color: var(--color-cta);">1 (Positivo)</td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>...</td>
+                            <td>1.82</td>
+                            <td style="font-weight: bold; color: var(--color-secondary);">0 (Negativo)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Images 05 and 06 placed below the matrix -->
+                <div class="fragment" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: var(--space-sm);">
+                    <img src="images/slide06_img05.png" class="zoomable-image" style="width: 100%; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);" alt="Crop 5">
+                    <img src="images/slide06_img06.png" class="zoomable-image" style="width: 100%; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);" alt="Crop 6">
+                </div>
+            </div>
+
+            <!-- Right: Crops images grid (Only slide06_img01.png) -->
+            <div class="fragment" style="display: flex; justify-content: center; align-items: center; width: 100%; background: #F8FAFC; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+                <img src="images/slide06_img01.png" class="zoomable-image" style="max-width: 100%; border-radius: 8px; border: 1px solid #E2E8F0;" alt="Crop 1">
+            </div>
+
+        </div>
+    </div>
+</section>

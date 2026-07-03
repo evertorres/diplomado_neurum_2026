@@ -1,0 +1,35 @@
+<section class="slide" id="slide11">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Frontera de Decisión (Decision Boundary)</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            ¿Cómo decidimos a qué clase pertenece cada muestra basándonos en la probabilidad estimada?
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md); width: 100%;">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: var(--color-primary);">Criterio de Decisión</h3>
+                    <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Establecemos un umbral en $0.5$:
+                        <ul style="margin-top: 8px; padding-left: 20px; line-height: 1.6;">
+                            <li>Predecimos $y=1$ cuando: $$h_\theta(x) \geq 0.5 \iff \theta^T x \geq 0$$</li>
+                            <li>Predecimos $y=0$ cuando: $$h_\theta(x) < 0.5 \iff \theta^T x < 0$$</li>
+                        </ul>
+                    </p>
+                </div>
+                
+                <div class="fragment" style="background: #F8FAFC; padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-secondary); font-size: 1rem; color: var(--color-secondary);">
+                    La ecuación $$\theta^T x = 0$$ define la <strong>frontera de decisión</strong>, separando el espacio de características en regiones para la clase 0 y la clase 1.
+                </div>
+            </div>
+
+            <!-- Right Column: Only Image 03 (Sigmoid Curve Plot) -->
+            <div class="fragment" style="display: flex; justify-content: center; align-items: center; width: 100%; background: #F8FAFC; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+                <img src="images/slide11_img03.png" class="slide-image zoomable-image" style="max-width: 100%; border-radius: 8px; border: 1px solid #E2E8F0;" alt="Sigmoid Curve">
+            </div>
+
+        </div>
+    </div>
+</section>

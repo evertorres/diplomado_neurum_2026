@@ -1,0 +1,56 @@
+<section class="slide" id="slide07">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Función de Activación</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: var(--space-2xl); margin-top: var(--space-xl); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Explanation -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg); width: 100%;">
+                <p style="font-size: 1.3rem; color: var(--color-primary); line-height: 1.5; margin: 0;">
+                    Podríamos usar la regresión lineal para predecir los valores:
+                </p>
+                
+                <ul style="font-size: 1.15rem; line-height: 1.8; color: var(--color-secondary); padding-left: 24px; margin-top: -10px;">
+                    <li style="margin-bottom: 12px;">Tiene bajo desempeño.</li>
+                    <li style="margin-bottom: 12px;">No tiene sentido que $h_\theta(x)$ tome valores menores que $0$ o mayores que $1$, ya que $y \in \{0, 1\}$.</li>
+                </ul>
+
+                <div class="fragment" style="background: #EFF6FF; padding: var(--space-lg); border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                    <p style="font-size: 1.15rem; line-height: 1.6; color: var(--color-primary); font-weight: bold; margin: 0;">
+                        Pasaremos el resultado de la función lineal por otra función $g(x)$ que comprima el resultado de $\theta^T x$ en un rango $[0, 1]$.
+                    </p>
+                </div>
+
+                <div class="fragment" style="margin-top: var(--space-sm);">
+                    <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 8px;">
+                        <span>🎯</span> Interpretamos como una probabilidad
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Flowchart with KaTeX math -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: var(--space-xl); border-radius: 16px; box-shadow: var(--shadow-lg); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-md);">
+                <div style="font-size: 1.4rem; padding: 12px 20px; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0; min-width: 180px; font-family: 'Roboto Mono', monospace;">
+                    $$h_\theta(x) = \theta^T x$$
+                </div>
+                
+                <div style="color: var(--color-cta); font-size: 2rem; font-weight: bold; margin: -5px 0;">
+                    $$\downarrow$$
+                </div>
+                
+                <div style="font-size: 1.4rem; padding: 12px 20px; background: #EFF6FF; border-radius: 8px; border: 1px solid #DBEAFE; border-left: 4px solid var(--color-cta); min-width: 180px; font-family: 'Roboto Mono', monospace;">
+                    $$g(\theta^T x)$$
+                </div>
+                
+                <div style="color: var(--color-cta); font-size: 2rem; font-weight: bold; margin: -5px 0;">
+                    $$\downarrow$$
+                </div>
+                
+                <div style="font-size: 1.4rem; padding: 12px 20px; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0; min-width: 180px; font-family: 'Roboto Mono', monospace;">
+                    $$\hat{y}$$
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

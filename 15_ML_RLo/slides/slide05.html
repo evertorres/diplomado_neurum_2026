@@ -1,0 +1,51 @@
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">¿Cuándo utilizar un modelo de regresión logística?</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            La Regresión Logística es el algoritmo de referencia cuando nos enfrentamos a las siguientes situaciones:
+        </p>
+
+        <div class="grid-2" style="margin-top: var(--space-xl); width: 100%;">
+            
+            <!-- Column 1 -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md); width: 100%;">
+                    <div style="font-size: 1.8rem; margin-bottom: 8px;">👥</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: var(--color-primary);">Clasificación Binaria</h3>
+                    <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Cuando la variable objetivo ($y$) tiene exactamente dos resultados posibles (0 o 1, Sí o No, Sano o Enfermo, etc.).
+                    </p>
+                </div>
+                
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-md); width: 100%;">
+                    <div style="font-size: 1.8rem; margin-bottom: 8px;">📈</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: var(--color-primary);">Modelo de Probabilidades</h3>
+                    <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Cuando no solo queremos saber la clase predicha, sino la <strong>probabilidad estimada</strong> (ej. "85% de probabilidad de tener la enfermedad").
+                    </p>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 4px solid #10B981; box-shadow: var(--shadow-md); width: 100%;">
+                    <div style="font-size: 1.8rem; margin-bottom: 8px;">🧠</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: #047857;">Interpretación de Coeficientes</h3>
+                    <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Cuando es crítico entender el impacto y dirección de cada variable independiente (ej. "fumar multiplica las probabilidades de enfermedad por 3").
+                    </p>
+                </div>
+
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 4px solid #A855F7; box-shadow: var(--shadow-md); width: 100%;">
+                    <div style="font-size: 1.8rem; margin-bottom: 8px;">🎯</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: #7E22CE;">Decisiones Basadas en Probabilidad</h3>
+                    <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Cuando podemos ajustar libremente el umbral de decisión según las consecuencias de cometer falsos positivos o falsos negativos.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

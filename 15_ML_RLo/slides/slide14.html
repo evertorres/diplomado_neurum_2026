@@ -1,0 +1,33 @@
+<section class="slide" id="slide14">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Función de Costo: Log-Loss Individual</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            Para asegurar la convexidad, definimos la función de pérdida (Log-Loss) por cada muestra individual:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md); width: 100%;">
+                    <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; color: var(--color-primary);">Definición por casos</h3>
+                    <div class="formula-box" style="font-size: 1.15rem; text-align: left; padding: 15px;">
+                        $\text{Cost}(h_\theta(x), y) = -\log(h_\theta(x))$ &nbsp;&nbsp; si $y = 1$<br>
+                        $\text{Cost}(h_\theta(x), y) = -\log(1 - h_\theta(x))$ &nbsp;&nbsp; si $y = 0$
+                    </div>
+                </div>
+                
+                <div class="fragment" style="background: #F8FAFC; padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-secondary); font-size: 1rem; color: var(--color-secondary);">
+                    <strong>Intuición:</strong> Si $y = 1$ y predecimos $h_\theta(x) \to 0$, el costo tiende a infinito ($-\log(0) \to \infty$). Penalizamos fuertemente al modelo cuando se equivoca con mucha seguridad.
+                </div>
+            </div>
+
+            <!-- Plots of curves -->
+            <div class="fragment" style="display: flex; flex-direction: column; gap: 10px; width: 100%; background: #F8FAFC; padding: 15px; border-radius: 12px; border: 1px solid #E2E8F0; text-align: center;">
+                <img src="images/slide14_img01.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 20vh; border-radius: 8px;" alt="Curva de costo y=1">
+                <img src="images/slide14_img02.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 20vh; border-radius: 8px; margin-top: 10px;" alt="Curva de costo y=0">
+            </div>
+
+        </div>
+    </div>
+</section>

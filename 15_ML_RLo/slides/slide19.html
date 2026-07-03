@@ -1,0 +1,36 @@
+<section class="slide" id="slide19">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">El Efecto del Tamaño del Lote (Batch Size)</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            El "Batch Size" es uno de los hiperparámetros de entrenamiento más influyentes en el comportamiento de la optimización:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md); width: 100%;">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; color: var(--color-primary);">¿Qué define el Batch Size?</h3>
+                    <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Indica el número de ejemplos de entrenamiento que procesa el modelo en paralelo antes de realizar una única actualización de los pesos.
+                    </p>
+                </div>
+                
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-md); width: 100%;">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; color: var(--color-primary);">Factores Afectados</h3>
+                    <ul style="font-size: 1rem; line-height: 1.6; color: var(--color-secondary); padding-left: 20px;">
+                        <li><strong>Costo computacional:</strong> Lotes más grandes aprovechan mejor el hardware en paralelo (GPUs), pero requieren más memoria.</li>
+                        <li><strong>Velocidad de entrenamiento:</strong> Lotes pequeños aceleran la frecuencia de actualización de parámetros.</li>
+                        <li><strong>Generalización:</strong> Lotes más pequeños introducen ruido "estocástico" que ayuda a saltar de mínimos locales pobres, mejorando la generalización.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Batch size impact image -->
+            <div class="fragment" style="text-align: center; width: 100%;">
+                <img src="images/slide19_img.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 48vh; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-lg); display: block; margin: 0 auto;" alt="Efecto del Batch Size">
+            </div>
+
+        </div>
+    </div>
+</section>

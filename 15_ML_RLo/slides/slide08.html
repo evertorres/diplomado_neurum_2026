@@ -1,0 +1,33 @@
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Función Sigmoide $\sigma(z)$</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-2xl); margin-top: var(--space-xl); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Equation and Properties -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg); width: 100%;">
+                
+                <!-- Equation Card -->
+                <div class="fragment formula-box" style="margin: 0; font-size: 1.6rem; padding: 20px; font-weight: bold; box-shadow: var(--shadow-sm);">
+                    $$\sigma(z) = \frac{1}{1 + e^{-z}}$$
+                </div>
+
+                <!-- Properties List -->
+                <div class="fragment" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-md); width: 100%;">
+                    <ul style="font-size: 1.1rem; line-height: 1.8; color: var(--color-secondary); padding-left: 20px; margin: 0;">
+                        <li style="margin-bottom: 8px;">Tiende a $1$ a medida que $z \to \infty$.</li>
+                        <li style="margin-bottom: 8px;">Tiende a $0$ a medida que $z \to -\infty$.</li>
+                        <li style="margin-bottom: 8px;">Siempre acotada entre $0$ y $1$.</li>
+                        <li style="margin-bottom: 0;">Se pueden utilizar otras funciones que aumentan suavemente de $[0, 1]$.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Only Image 03 (Sigmoid Curve Plot) -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 15px; border-radius: 16px; box-shadow: var(--shadow-lg); text-align: center; width: 100%;">
+                <img src="images/slide08_img03.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 48vh; border-radius: 8px; display: block; margin: 0 auto;" alt="Curva Sigmoide">
+            </div>
+
+        </div>
+    </div>
+</section>

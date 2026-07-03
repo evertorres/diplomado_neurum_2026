@@ -1,0 +1,33 @@
+<section class="slide" id="slide15">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Función de Costo Global</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            Podemos comprimir las dos condiciones individuales en una sola ecuación matemática unificada:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md); width: 100%;">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: var(--color-primary);">Entropía Cruzada Binaria</h3>
+                    
+                    <div class="formula-box" style="font-size: 1.25rem; padding: 20px; font-weight: bold;">
+                        $$J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)})) \right]$$
+                    </div>
+                    
+                    <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary); margin-top: 10px;">
+                        Esta formulación simplifica los cálculos matemáticos para el entrenamiento y garantiza que la función sea <strong>estrictamente convexa</strong>, lo que permite asegurar la convergencia al mínimo global.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mathematical graphics crops -->
+            <div class="fragment" style="display: flex; flex-direction: column; gap: 10px; width: 100%; background: #F8FAFC; padding: 15px; border-radius: 12px; border: 1px solid #E2E8F0; text-align: center;">
+                <img src="images/slide15_img01.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 20vh; border-radius: 8px;" alt="Formula component 1">
+                <img src="images/slide15_img02.jpg" class="slide-image zoomable-image" style="max-width: 100%; max-height: 20vh; border-radius: 8px; margin-top: 10px;" alt="Formula component 2">
+            </div>
+
+        </div>
+    </div>
+</section>

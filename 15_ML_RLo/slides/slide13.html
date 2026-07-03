@@ -1,0 +1,37 @@
+<section class="slide" id="slide13">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Función de Costo: El Problema de MSE</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            ¿Por qué no podemos utilizar el Error Cuadrático Medio (MSE) en Regresión Logística?
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid #EF4444; box-shadow: var(--shadow-md); width: 100%;">
+                    <div style="font-size: 1.8rem; margin-bottom: 8px;">〽️</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: #DC2626;">Función No Convexa</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Si usamos MSE combinando la sigmoide $h_\theta(x) = \frac{1}{1 + e^{-\theta^T x}}$, obtenemos una función de costo <strong>no convexa</strong> respecto a $\theta$.
+                    </p>
+                </div>
+                
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-secondary); box-shadow: var(--shadow-md); width: 100%;">
+                    <div style="font-size: 1.8rem; margin-bottom: 8px;">🔒</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: var(--color-primary);">Mínimos Locales</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Las funciones no convexas tienen múltiples colinas y valles (mínimos locales). El Descenso de Gradiente puede atascarse y no encontrar nunca los parámetros óptimos globales.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Plots of non-convex cost vs convex cost -->
+            <div class="fragment" style="display: flex; flex-direction: column; gap: 10px; width: 100%; background: #F8FAFC; padding: 15px; border-radius: 12px; border: 1px solid #E2E8F0; text-align: center;">
+                <img src="images/slide13_img01.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 20vh; border-radius: 8px;" alt="Superficie no convexa">
+                <img src="images/slide13_img02.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 20vh; border-radius: 8px; margin-top: 10px;" alt="Superficie convexa">
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<section class="slide" id="slide16">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Gradiente Descendiente: Optimización</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            Para minimizar $J(\theta)$, calculamos las derivadas parciales e incrementamos iterativamente los pesos en sentido opuesto al gradiente:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md); width: 100%;">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: var(--color-primary);">Regla de Actualización</h3>
+                    
+                    <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: 8px;">
+                        Para cada parámetro $\theta_j$:
+                    </p>
+                    <div class="formula-box" style="font-size: 1.2rem;">
+                        $$\theta_j := \theta_j - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right) x_j^{(i)}$$
+                    </div>
+                    
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); margin-top: 10px; line-height: 1.5;">
+                        <strong>¡Atención!</strong> La regla tiene la misma forma matemática que la regresión lineal, pero la hipótesis $h_\theta(x)$ es ahora una función sigmoide, no una combinación lineal directa.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Plots of math updates -->
+            <div class="fragment" style="display: flex; flex-direction: column; gap: 10px; width: 100%; background: #F8FAFC; padding: 15px; border-radius: 12px; border: 1px solid #E2E8F0; text-align: center;">
+                <img src="images/slide16_img01.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 20vh; border-radius: 8px;" alt="Gradient descent derivative">
+                <img src="images/slide16_img02.jpg" class="slide-image zoomable-image" style="max-width: 100%; max-height: 20vh; border-radius: 8px; margin-top: 10px;" alt="Gradient descent plot">
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">SGD en la Práctica</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            Flujo de trabajo para entrenar un modelo utilizando SGD por lotes (Minibatch):
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md); width: 100%;">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 12px; color: var(--color-primary);">Pasos del Algoritmo</h3>
+                    <ol style="font-size: 1.1rem; line-height: 1.8; color: var(--color-secondary); padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Reorganizar:</strong> Mezclar aleatoriamente el dataset antes de cada época (Epoch) para romper cualquier sesgo secuencial.</li>
+                        <li style="margin-bottom: 8px;"><strong>Dividir:</strong> Particionar el conjunto total en pequeños subgrupos (lotes o batches).</li>
+                        <li style="margin-bottom: 8px;"><strong>Actualizar:</strong> Pasar cada lote por el modelo y actualizar los pesos basándose únicamente en el gradiente de ese lote.</li>
+                        <li style="margin-bottom: 8px;"><strong>Repetir:</strong> Iterar el proceso a lo largo de múltiples épocas hasta converger.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- SGD flowchart/graphic -->
+            <div class="fragment" style="text-align: center; width: 100%;">
+                <img src="images/slide18_img.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 48vh; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-lg); display: block; margin: 0 auto;" alt="Flujo de SGD">
+            </div>
+
+        </div>
+    </div>
+</section>

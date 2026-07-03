@@ -1,0 +1,38 @@
+<section class="slide" id="slide09">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Modelo de Predicción de Obesidad</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            Aplicación de un modelo multivariable para estimar la probabilidad de que un paciente sufra obesidad:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md); width: 100%;">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; color: var(--color-primary);">Variables del Paciente (Features)</h3>
+                    <ul style="font-size: 1.05rem; line-height: 1.8; color: var(--color-secondary); padding-left: 20px;">
+                        <li><strong>$x_1$:</strong> Edad</li>
+                        <li><strong>$x_2$:</strong> Peso</li>
+                        <li><strong>$x_3$:</strong> Altura</li>
+                        <li><strong>$x_4$:</strong> Horas de Actividad Física</li>
+                    </ul>
+                </div>
+                
+                <div class="fragment" style="background: #F8FAFC; padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-secondary);">
+                    <strong>Predicción de la Salida ($y$):</strong> Obesidad (Clase 0 o Clase 1, con un score continuo de probabilidad intermedio).
+                </div>
+            </div>
+
+            <!-- Prediction model schema diagram crops -->
+            <div class="fragment" style="display: grid; grid-template-columns: 1fr; gap: 10px; width: 100%; background: #F8FAFC; padding: 15px; border-radius: 12px; border: 1px solid #E2E8F0; text-align: center;">
+                <img src="images/slide09_img01.png" class="zoomable-image" style="max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;" alt="Esquema Obesidad 1">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                    <img src="images/slide09_img02.png" class="zoomable-image" style="width: 100%; border-radius: 6px;" alt="Esquema Obesidad 2">
+                    <img src="images/slide09_img03.png" class="zoomable-image" style="width: 100%; border-radius: 6px;" alt="Esquema Obesidad 3">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

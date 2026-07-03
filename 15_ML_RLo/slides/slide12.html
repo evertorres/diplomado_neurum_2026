@@ -1,0 +1,46 @@
+<section class="slide" id="slide12">
+    <div class="slide-content left" style="max-width: 1100px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Frontera de Decisión Lineal</h2>
+        
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-top: var(--space-md); color: var(--color-secondary);">
+            Analicemos cómo encontrar matemáticamente la frontera de separación lineal en el plano:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-xl); margin-top: var(--space-md); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Definition & Example -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                
+                <!-- General Equation Card -->
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-md);">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; color: var(--color-primary);">Ecuación General</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        La frontera de decisión representa los puntos donde la probabilidad de clase es exactamente $0.5$. Ocurre cuando el argumento de la sigmoide es igual a cero:
+                    </p>
+                    <div class="formula-box" style="font-size: 1.2rem; margin-top: 12px; margin-bottom: 12px; padding: 12px;">
+                        $$\theta_0 + \theta_1 x_1 + \theta_2 x_2 = 0$$
+                    </div>
+                </div>
+
+                <!-- Practical Example Card -->
+                <div class="fragment" style="background: white; padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; color: var(--color-cta);">Ejemplo Práctico</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                        Supongamos los parámetros: $\theta_0 = -3, \; \theta_1 = 1, \; \theta_2 = 1$.
+                        $$\theta_1 x_1 + \theta_2 x_2 + \theta_0 = 0 \implies x_1 + x_2 = 3$$
+                    </p>
+                    <div style="background: #EFF6FF; padding: 12px; border-radius: 8px; margin-top: 12px; border-left: 3px solid var(--color-cta); font-size: 0.9rem; line-height: 1.4; color: var(--color-primary);">
+                        <strong>Regla de Decisión:</strong> Predecimos la clase positiva ($y = 1$) para todos los puntos donde $x_1 + x_2 \geq 3$.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Scatter Plot Image -->
+            <div class="fragment" style="background: white; border: 1px solid #E2E8F0; padding: 15px; border-radius: 16px; box-shadow: var(--shadow-lg); text-align: center; width: 100%;">
+                <img src="images/slide12_img01.png" class="slide-image zoomable-image" style="max-width: 100%; max-height: 48vh; border-radius: 8px; display: block; margin: 0 auto;" alt="Gráfico de dispersión de ejemplo">
+            </div>
+
+        </div>
+    </div>
+</section>
