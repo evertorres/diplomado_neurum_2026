@@ -1,0 +1,66 @@
+﻿<!-- Hiperplano y Margen - Concepto formal -->
+<section class="slide" id="slide09">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">El Hiperplano: Frontera de Decisión Óptima</h2>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; margin-top: var(--space-md); align-items: start; gap: var(--space-2xl); width: 100%;">
+
+            <!-- Left: Concept definitions -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" data-fragment-index="1" style="background: #EFF6FF; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #DBEAFE; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: calc(1.1rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif;">¿Qué es un Hiperplano?</h4>
+                    <p style="font-size: calc(0.9rem + 0.15vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">En un espacio de <em>n</em> dimensiones, un hiperplano es un subespacio de <em>n-1</em> dimensiones. En 2D es una línea, en 3D un plano, en nD un hiperplano.</p>
+                    <div style="margin-top: 10px; background: white; padding: 10px 14px; border-radius: 8px; font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-primary); border: 1px solid #DBEAFE;">
+                        <strong>w·x + b = 0</strong>
+                    </div>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: #F8FAFC; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #E2E8F0; border-left: 5px solid var(--color-primary); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: calc(1.1rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif;">El Margen (Margin)</h4>
+                    <p style="font-size: calc(0.9rem + 0.15vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">Es la distancia entre el hiperplano y los puntos de cada clase más cercanos. SVM maximiza esta distancia para lograr la <strong>mayor separación posible</strong> y mejor generalización.</p>
+                    <div style="margin-top: 10px; background: white; padding: 10px 14px; border-radius: 8px; font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: #7E22CE; border: 1px solid #E9D5FF;">
+                        <strong>Margen = 2 / ‖w‖</strong>
+                    </div>
+                </div>
+
+                <div class="fragment" data-fragment-index="3" style="background: #FEF9C3; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #FEF08A; border-left: 5px solid #EAB308; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #854D0E; font-size: calc(1rem + 0.2vw); font-weight: 700; font-family: 'Exo', sans-serif;">💡 Objetivo de optimización</h4>
+                    <p style="font-size: calc(0.85rem + 0.1vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">Maximizar el margen <strong>(2/‖w‖)</strong> equivale a minimizar <strong>‖w‖²</strong>. Esto es un problema de optimización cuadrática convexo con una solución única garantizada.</p>
+                </div>
+            </div>
+
+            <!-- Right: Visual diagram of hyperplane -->
+            <div class="fragment" data-fragment-index="4" style="background: white; border-radius: 16px; padding: 20px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; width: 100%;">
+                <h4 style="text-align: center; color: var(--color-primary); font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif; margin: 0 0 16px 0;">Anatomía del Hiperplano SVM</h4>
+
+                <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; height: auto;">
+                    <rect width="340" height="280" fill="#F8FAFC" rx="8"/>
+                    <line x1="30" y1="250" x2="320" y2="30" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4"/>
+                    <line x1="10" y1="255" x2="300" y2="35" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6,4"/>
+                    <line x1="50" y1="245" x2="340" y2="25" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6,4"/>
+                    <line x1="20" y1="252" x2="315" y2="32" stroke="#1D4ED8" stroke-width="2.5"/>
+                    <line x1="120" y1="175" x2="100" y2="195" stroke="#1D4ED8" stroke-width="1" stroke-dasharray="3,2"/>
+                    <line x1="195" y1="100" x2="215" y2="80" stroke="#1D4ED8" stroke-width="1" stroke-dasharray="3,2"/>
+                    <text x="160" y="152" fill="#1D4ED8" font-size="10" font-weight="bold" text-anchor="middle">Margen</text>
+                    <circle cx="220" cy="60" r="8" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="250" cy="90" r="8" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="270" cy="50" r="8" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="290" cy="100" r="8" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="220" cy="88" r="10" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="2.5"/>
+                    <circle cx="220" cy="88" r="4" fill="#1D4ED8"/>
+                    <rect x="50" y="160" width="16" height="16" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="2"/>
+                    <rect x="70" y="195" width="16" height="16" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="2"/>
+                    <rect x="30" y="205" width="16" height="16" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="2"/>
+                    <rect x="90" y="220" width="16" height="16" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="2"/>
+                    <rect x="108" y="178" width="18" height="18" fill="#FEE2E2" stroke="#EF4444" stroke-width="2.5" rx="2"/>
+                    <rect x="114" y="184" width="6" height="6" fill="#EF4444" rx="1"/>
+                    <text x="285" y="45" fill="#1D4ED8" font-size="11" font-weight="bold">Clase +1</text>
+                    <text x="25" y="240" fill="#EF4444" font-size="11" font-weight="bold">Clase -1</text>
+                    <text x="170" y="268" fill="#1D4ED8" font-size="10" text-anchor="middle" font-style="italic">Hiperplano: w·x + b = 0</text>
+                    <text x="235" y="82" fill="#1D4ED8" font-size="8" font-style="italic">v. soporte</text>
+                    <text x="110" y="175" fill="#EF4444" font-size="8" font-style="italic">v. soporte</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

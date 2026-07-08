@@ -1,0 +1,73 @@
+﻿<!-- Parámetros C y Gamma -->
+<section class="slide" id="slide12">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Hiperparámetros Clave: C y γ</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); margin-top: var(--space-md); align-items: start; width: 100%;">
+
+            <!-- C Parameter -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment" data-fragment-index="1" style="background: #EFF6FF; padding: var(--space-md) var(--space-lg); border-radius: 14px; border: 1px solid #DBEAFE; border-top: 4px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                    <h3 style="color: var(--color-cta); font-size: 1.5rem; font-weight: 700; margin: 0 0 8px 0; font-family: 'Exo', sans-serif;">Parámetro C — Regularización</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0 0 10px 0;">Controla el equilibrio entre maximizar el margen y minimizar las violaciones de clasificación.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div style="background: #FEF2F2; padding: 16px; border-radius: 12px; border: 1px solid #FECACA; text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: 900; color: #EF4444; font-family: 'Roboto Mono', monospace;">C pequeño</div>
+                        <div style="font-size: 0.8rem; color: #64748B; margin-top: 6px; line-height: 1.4;">Margen grande, más errores permitidos. <strong>Underfitting</strong></div>
+                    </div>
+                    <div style="background: #F0FDF4; padding: 16px; border-radius: 12px; border: 1px solid #BBF7D0; text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: 900; color: #15803D; font-family: 'Roboto Mono', monospace;">C grande</div>
+                        <div style="font-size: 0.8rem; color: #64748B; margin-top: 6px; line-height: 1.4;">Margen pequeño, pocos errores. <strong>Overfitting</strong></div>
+                    </div>
+                </div>
+
+                <div class="fragment" data-fragment-index="3" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748B; margin-bottom: 6px;">
+                        <span>C = 0.01</span><span>C = 1</span><span>C = 100</span>
+                    </div>
+                    <div style="background: linear-gradient(to right, #EFF6FF, #DBEAFE, #1D4ED8); height: 12px; border-radius: 6px;"></div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: #94A3B8; margin-top: 6px;">
+                        <span>↑ Margen grande</span><span>↑ Overfitting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gamma Parameter -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment" data-fragment-index="4" style="background: #FAF5FF; padding: var(--space-md) var(--space-lg); border-radius: 14px; border: 1px solid #F3E8FF; border-top: 4px solid #A855F7; box-shadow: var(--shadow-md);">
+                    <h3 style="color: #7E22CE; font-size: 1.5rem; font-weight: 700; margin: 0 0 8px 0; font-family: 'Exo', sans-serif;">Parámetro γ — Radio del Kernel</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0 0 10px 0;">Solo para kernels no lineales (RBF, sigmoide). Define el <strong>radio de influencia</strong> de cada punto de entrenamiento.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="5" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div style="background: #FEF9C3; padding: 16px; border-radius: 12px; border: 1px solid #FEF08A; text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: 900; color: #854D0E; font-family: 'Roboto Mono', monospace;">γ pequeño</div>
+                        <div style="font-size: 0.8rem; color: #64748B; margin-top: 6px; line-height: 1.4;">Radio de influencia grande. Frontera suave. <strong>Underfitting</strong></div>
+                    </div>
+                    <div style="background: #FAF5FF; padding: 16px; border-radius: 12px; border: 1px solid #F3E8FF; text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: 900; color: #7E22CE; font-family: 'Roboto Mono', monospace;">γ grande</div>
+                        <div style="font-size: 0.8rem; color: #64748B; margin-top: 6px; line-height: 1.4;">Radio pequeño. Frontera compleja. <strong>Overfitting</strong></div>
+                    </div>
+                </div>
+
+                <div class="fragment" data-fragment-index="6" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748B; margin-bottom: 6px;">
+                        <span>γ = 0.001</span><span>γ = 1</span><span>γ = 100</span>
+                    </div>
+                    <div style="background: linear-gradient(to right, #FAF5FF, #D8B4FE, #7E22CE); height: 12px; border-radius: 6px;"></div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: #94A3B8; margin-top: 6px;">
+                        <span>↑ Frontera suave</span><span>↑ Muy complejo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fragment" data-fragment-index="7" style="margin-top: var(--space-md); background: #F0FDF4; padding: 14px 22px; border-radius: 10px; border-left: 5px solid #22C55E; width: 100%;">
+            <p style="margin: 0; font-size: 0.92rem; color: var(--color-secondary);">
+                💡 <strong style="color: #15803D;">Búsqueda de hiperparámetros:</strong> En la práctica se usa <strong>Grid Search</strong> o <strong>Random Search</strong> con validación cruzada para encontrar la combinación óptima de C y γ.
+            </p>
+        </div>
+    </div>
+</section>

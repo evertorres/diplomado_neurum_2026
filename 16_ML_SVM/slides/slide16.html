@@ -1,0 +1,64 @@
+﻿<!-- Conclusiones y cierre -->
+<section class="slide" id="slide16">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Conclusiones del Módulo</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-lg); margin-top: var(--space-md); width: 100%;">
+
+            <div class="fragment" data-fragment-index="1" style="background: white; padding: 24px 20px; border-radius: 14px; border: 1px solid #E2E8F0; border-top: 5px solid var(--color-cta); box-shadow: var(--shadow-md); text-align: center;">
+                <div style="font-size: 2.5rem; margin-bottom: 14px;">🎯</div>
+                <h3 style="color: var(--color-cta); font-size: 1.1rem; font-weight: 700; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">El Principio Central</h3>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">SVM busca el <strong>hiperplano de margen máximo</strong> que separa las clases con la mayor distancia posible, maximizando la generalización.</p>
+            </div>
+
+            <div class="fragment" data-fragment-index="2" style="background: white; padding: 24px 20px; border-radius: 14px; border: 1px solid #E2E8F0; border-top: 5px solid #A855F7; box-shadow: var(--shadow-md); text-align: center;">
+                <div style="font-size: 2.5rem; margin-bottom: 14px;">🔧</div>
+                <h3 style="color: #7E22CE; font-size: 1.1rem; font-weight: 700; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">El Poder del Kernel</h3>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">El <strong>Kernel Trick</strong> eleva SVM a otro nivel: permite clasificar datos no lineales transformando el espacio de características sin costo computacional explícito.</p>
+            </div>
+
+            <div class="fragment" data-fragment-index="3" style="background: white; padding: 24px 20px; border-radius: 14px; border: 1px solid #E2E8F0; border-top: 5px solid #22C55E; box-shadow: var(--shadow-md); text-align: center;">
+                <div style="font-size: 2.5rem; margin-bottom: 14px;">🏥</div>
+                <h3 style="color: #15803D; font-size: 1.1rem; font-weight: 700; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">Relevancia Clínica</h3>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">SVM es especialmente valioso en datos biomédicos de <strong>alta dimensionalidad y pocas muestras</strong> (genómica, imagen médica, señales fisiológicas).</p>
+            </div>
+        </div>
+
+        <div class="fragment" data-fragment-index="4" style="margin-top: var(--space-lg); background: #F8FAFC; border-radius: 16px; padding: 20px 28px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); width: 100%;">
+            <h3 style="color: var(--color-primary); font-size: 1.1rem; font-weight: 700; margin: 0 0 12px 0; font-family: 'Exo', sans-serif;">📌 Puntos Clave para Llevar</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="color: var(--color-cta); font-size: 1.1rem; flex-shrink: 0;">→</span>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin: 0; line-height: 1.5;"><strong>Siempre escalar</strong> los datos antes de entrenar SVM.</p>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="color: var(--color-cta); font-size: 1.1rem; flex-shrink: 0;">→</span>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin: 0; line-height: 1.5;">Usar <strong>GridSearchCV</strong> para optimizar C, γ y kernel.</p>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="color: #7E22CE; font-size: 1.1rem; flex-shrink: 0;">→</span>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin: 0; line-height: 1.5;"><strong>Kernel RBF</strong> es el punto de partida recomendado para problemas no lineales.</p>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="color: #15803D; font-size: 1.1rem; flex-shrink: 0;">→</span>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin: 0; line-height: 1.5;">Considerar <strong>Random Forest o XGBoost</strong> si el dataset es muy grande (>100k muestras).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fragment" data-fragment-index="5" style="margin-top: var(--space-lg); max-width: 900px; margin-left: auto; margin-right: auto;">
+            <div class="callout" style="text-align: center;">
+                <p style="margin: 0; font-style: italic; color: var(--color-primary); font-size: 1rem;">
+                    "SVM no es solo un algoritmo, es una <strong>forma de pensar sobre la separabilidad</strong>: ¿cuánto espacio tengo entre mis clases? ¿Puedo ampliar ese espacio transformando mis datos?"
+                </p>
+            </div>
+        </div>
+
+        <div class="fragment" data-fragment-index="6" style="text-align: center; margin-top: var(--space-xl);">
+            <a href="../index.html" class="btn-secondary" style="margin-right: 12px;">Volver al Directorio</a>
+            <button class="btn-primary" onclick="document.dispatchEvent(new KeyboardEvent('keydown', {key: 'ArrowLeft'}))">
+                ← Diapositiva Anterior
+            </button>
+        </div>
+    </div>
+</section>

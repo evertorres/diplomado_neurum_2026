@@ -1,0 +1,44 @@
+<!-- Cross-Validation: Flujo General -->
+<section class="slide" id="slide03">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Validación Cruzada: ¿Por qué la necesitamos?</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+
+            <!-- Left: Image -->
+            <div style="display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, #EFF6FF 0%, #F8FAFC 60%, #EFF6FF 100%); border-radius: 16px; padding: var(--space-lg); min-height: 42vh;">
+                <img src="images/slide01_crossvalidation.png" alt="Flujo de Cross-Validation"
+                    style="max-width: 100%; max-height: 42vh; object-fit: contain;">
+            </div>
+
+            <!-- Right: Concept cards -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+
+                <div class="fragment" data-fragment-index="1" style="background: #FEF9C3; padding: var(--space-md) var(--space-lg); border-radius: 12px; border-left: 5px solid #EAB308; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #854D0E; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">⚠️ El Problema: Sobreajuste a los datos</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">Si usamos el mismo conjunto de datos para entrenar y evaluar el modelo, obtenemos una estimación <strong>demasiado optimista</strong> del rendimiento real.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: #EFF6FF; padding: var(--space-md) var(--space-lg); border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">💡 La Solución: Cross-Validation</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">Separamos el dataset en <strong>entrenamiento</strong> y <strong>test</strong>. Dentro del entrenamiento, usamos Cross-Validation para buscar los <strong>mejores hiperparámetros</strong> sin contaminar el test final.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="3" style="background: #F0FDF4; padding: var(--space-md) var(--space-lg); border-radius: 12px; border-left: 5px solid #22C55E; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #15803D; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">✅ Flujo Correcto</h4>
+                    <ol style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.7; padding-left: 20px; margin: 0;">
+                        <li>Separar <strong>Test data</strong> (nunca se toca hasta el final)</li>
+                        <li>Cross-Validation sobre <strong>Training data</strong> → mejores parámetros</li>
+                        <li>Reentrenar con todos los datos de training</li>
+                        <li>Evaluación final sobre <strong>Test data</strong></li>
+                    </ol>
+                </div>
+
+                <div class="fragment" data-fragment-index="4" style="background: #FAF5FF; padding: var(--space-md) var(--space-lg); border-radius: 12px; border-left: 5px solid #A855F7; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #7E22CE; font-size: 0.95rem; font-weight: 700; font-family: 'Exo', sans-serif;">🔑 Relevancia para SVM</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">En SVM, los hiperparámetros <strong>C</strong> y <strong>γ</strong> se deben seleccionar usando Cross-Validation — nunca mirando el test set.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

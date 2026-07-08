@@ -1,0 +1,146 @@
+<!-- Cross-Validation: Estrategias - Slider con 3 imágenes -->
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Estrategias de Cross-Validation</h2>
+
+        <div style="display: grid; grid-template-columns: 1.55fr 0.45fr; gap: var(--space-xl); width: 100%; margin-top: var(--space-sm); align-items: start;">
+
+            <!-- LEFT: Image slider -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+
+                <!-- Image stack — soft gradient background, no heavy border -->
+                <div style="position: relative; width: 100%; height: 52vh; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #EFF6FF 0%, #F8FAFC 60%, #F0FDF4 100%);">
+
+                    <!-- Base image: KFold -->
+                    <img src="images/slide03_crossvalidation_KFold.png" alt="KFold"
+                        style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:0;padding: 20px;">
+
+                    <!-- Step 1: StratifiedKFold -->
+                    <img src="images/slide03_crossvalidation_StratifiedKFold.png" id="cv-img1" alt="StratifiedKFold"
+                        style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1;opacity:0;transition:opacity 0.4s ease;padding:20px;">
+
+                    <!-- Step 2: ShuffleSplit -->
+                    <img src="images/slide03_crossvalidation_shuffleSplit.png" id="cv-img2" alt="ShuffleSplit"
+                        style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;opacity:0;transition:opacity 0.4s ease;padding:20px;">
+
+                    <!-- Dynamic label overlay -->
+                    <div id="cv-strategy-label" style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:20;background:rgba(255,255,255,0.88);backdrop-filter:blur(6px);padding:5px 20px;border-radius:20px;font-size:0.8rem;font-weight:700;color:var(--color-primary);font-family:'Exo',sans-serif;white-space:nowrap;border:1px solid rgba(29,78,216,0.15);pointer-events:none;">
+                        KFold — División estándar en K bloques
+                    </div>
+                </div>
+
+                <!-- Slider control -->
+                <div style="padding: 12px 20px; background: white; border-radius: 14px; border: 1px solid #E2E8F0;">
+                    <div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;font-family:'Exo',sans-serif;margin-bottom:6px;padding:0 2px;">
+                        <span>KFold</span>
+                        <span>StratifiedKFold</span>
+                        <span>ShuffleSplit</span>
+                    </div>
+                    <input type="range" id="cv-slider" min="0" max="2" value="0" step="0.01"
+                        style="width:100%;cursor:pointer;accent-color:var(--color-primary);">
+                    <div style="display:flex;justify-content:space-between;margin-top:4px;">
+                        <span style="font-size:0.68rem;color:#CBD5E1;">◀ Arrastra o usa scroll para cambiar estrategia</span>
+                        <span style="font-size:0.68rem;color:#CBD5E1;">▶</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Contextual cards per strategy -->
+            <div style="display:flex;flex-direction:column;gap:var(--space-md);">
+
+                <!-- KFold card -->
+                <div id="cv-card-0" style="background:#EFF6FF;padding:16px;border-radius:12px;border-left:4px solid var(--color-cta);box-shadow:0 1px 4px rgba(0,0,0,0.06);transition:opacity 0.4s ease,transform 0.4s ease;">
+                    <div style="font-size:1.3rem;margin-bottom:6px;">📊</div>
+                    <h4 style="margin:0 0 6px 0;color:var(--color-cta);font-size:0.95rem;font-weight:700;font-family:'Exo',sans-serif;">KFold</h4>
+                    <p style="font-size:0.82rem;color:var(--color-secondary);line-height:1.5;margin:0 0 8px 0;">Divide el dataset en K partes contiguas. Cada fold es validación una vez. Sin aleatorización.</p>
+                    <code style="font-size:0.75rem;color:var(--color-cta);background:#DBEAFE;padding:3px 8px;border-radius:4px;">KFold(n_splits=5)</code>
+                </div>
+
+                <!-- StratifiedKFold card -->
+                <div id="cv-card-1" style="background:#F8FAFC;padding:16px;border-radius:12px;border-left:4px solid var(--color-primary);box-shadow:0 1px 4px rgba(0,0,0,0.06);transition:opacity 0.4s ease,transform 0.4s ease;opacity:0.3;">
+                    <div style="font-size:1.3rem;margin-bottom:6px;">⚖️</div>
+                    <h4 style="margin:0 0 6px 0;color:var(--color-primary);font-size:0.95rem;font-weight:700;font-family:'Exo',sans-serif;">StratifiedKFold</h4>
+                    <p style="font-size:0.82rem;color:var(--color-secondary);line-height:1.5;margin:0 0 8px 0;">Garantiza que cada fold mantiene la <strong>proporción de clases</strong> del dataset original. Esencial con clases desbalanceadas.</p>
+                    <code style="font-size:0.75rem;color:var(--color-primary);background:#E2E8F0;padding:3px 8px;border-radius:4px;">StratifiedKFold(n_splits=5)</code>
+                </div>
+
+                <!-- ShuffleSplit card -->
+                <div id="cv-card-2" style="background:#F0FDF4;padding:16px;border-radius:12px;border-left:4px solid #22C55E;box-shadow:0 1px 4px rgba(0,0,0,0.06);transition:opacity 0.4s ease,transform 0.4s ease;opacity:0.3;">
+                    <div style="font-size:1.3rem;margin-bottom:6px;">🔀</div>
+                    <h4 style="margin:0 0 6px 0;color:#15803D;font-size:0.95rem;font-weight:700;font-family:'Exo',sans-serif;">ShuffleSplit</h4>
+                    <p style="font-size:0.82rem;color:var(--color-secondary);line-height:1.5;margin:0 0 8px 0;">Genera splits aleatorios independientes. Permite más de K iteraciones y controlar el tamaño del set de validación con <code>test_size</code>.</p>
+                    <code style="font-size:0.75rem;color:#15803D;background:#DCFCE7;padding:3px 8px;border-radius:4px;">ShuffleSplit(n_splits=10, test_size=0.2)</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function() {
+    var labels = [
+        'KFold — División estándar en K bloques',
+        'StratifiedKFold — Preserva proporción de clases',
+        'ShuffleSplit — Splits aleatorios independientes'
+    ];
+
+    function initCvSlider() {
+        var slider = document.getElementById('cv-slider');
+        if (!slider) return;
+
+        var imgs  = [document.getElementById('cv-img1'), document.getElementById('cv-img2')];
+        var cards = [
+            document.getElementById('cv-card-0'),
+            document.getElementById('cv-card-1'),
+            document.getElementById('cv-card-2')
+        ];
+        var label = document.getElementById('cv-strategy-label');
+
+        slider.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') e.stopPropagation();
+        });
+
+        slider.addEventListener('input', function() {
+            var val = parseFloat(this.value);
+
+            // Images fade in/out
+            if (imgs[0]) imgs[0].style.opacity = Math.max(0, Math.min(1, val));
+            if (imgs[1]) imgs[1].style.opacity = Math.max(0, Math.min(1, val - 1));
+
+            // Active card index
+            var idx = Math.round(val);
+            cards.forEach(function(card, i) {
+                if (!card) return;
+                if (i === idx) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1.02)';
+                } else {
+                    card.style.opacity = '0.3';
+                    card.style.transform = 'scale(1)';
+                }
+            });
+
+            // Label
+            if (label) label.textContent = labels[idx] || labels[0];
+        });
+
+        // Wheel scroll support
+        var slideArea = slider.closest('.slide');
+        if (slideArea) {
+            slideArea.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                var newVal = parseFloat(slider.value) + (e.deltaY * 0.004);
+                newVal = Math.max(0, Math.min(2, newVal));
+                slider.value = newVal;
+                slider.dispatchEvent(new Event('input'));
+            }, { passive: false });
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCvSlider);
+    } else {
+        initCvSlider();
+    }
+})();
+</script>

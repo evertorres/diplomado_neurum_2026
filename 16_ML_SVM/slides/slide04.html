@@ -1,0 +1,71 @@
+<!-- Cross-Validation: K-Fold en detalle -->
+<section class="slide" id="slide04">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Cross-Validation: El Proceso K-Fold</h2>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-2xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+
+            <!-- Left: Full image -->
+            <div style="display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, #F0FDF4 0%, #F8FAFC 60%, #EFF6FF 100%); border-radius: 16px; padding: var(--space-lg); min-height: 46vh;">
+                <img src="images/slide02_crossvalidation.png" alt="K-Fold Cross-Validation"
+                    style="max-width: 100%; max-height: 46vh; object-fit: contain;">
+            </div>
+
+            <!-- Right: Explanation -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+
+                <div class="fragment" data-fragment-index="1" style="background: #EFF6FF; padding: var(--space-md) var(--space-lg); border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">📋 ¿Cómo funciona K-Fold?</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">El training set se divide en <strong>K partes iguales (folds)</strong>. En cada iteración, un fold es el conjunto de validación y los demás son de entrenamiento. Se repite K veces.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: white; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 8px 0; color: var(--color-primary); font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🔄 Proceso con K=5</h4>
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <div style="display: flex; gap: 4px; align-items: center;">
+                            <span style="font-size: 0.75rem; color: #64748B; width: 50px; flex-shrink: 0;">Split 1</span>
+                            <div style="background:#1D4ED8;height:14px;width:14px;border-radius:3px;flex-shrink:0;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <span style="font-size:0.68rem;color:#1D4ED8;width:55px;flex-shrink:0;">← validación</span>
+                        </div>
+                        <div style="display: flex; gap: 4px; align-items: center;">
+                            <span style="font-size: 0.75rem; color: #64748B; width: 50px; flex-shrink: 0;">Split 2</span>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#1D4ED8;height:14px;width:14px;border-radius:3px;flex-shrink:0;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <span style="font-size:0.68rem;color:#1D4ED8;width:55px;flex-shrink:0;">← validación</span>
+                        </div>
+                        <div style="display: flex; gap: 4px; align-items: center;">
+                            <span style="font-size: 0.75rem; color: #64748B; width: 50px; flex-shrink: 0;">Split 3</span>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#1D4ED8;height:14px;width:14px;border-radius:3px;flex-shrink:0;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <div style="background:#DBEAFE;height:14px;flex:1;border-radius:3px;"></div>
+                            <span style="font-size:0.68rem;color:#1D4ED8;width:55px;flex-shrink:0;">← validación</span>
+                        </div>
+                        <div style="margin-top:6px;font-size:0.75rem;color:#64748B;text-align:center;">… y así hasta K=5. Resultado = promedio de 5 scores</div>
+                    </div>
+                </div>
+
+                <div class="fragment" data-fragment-index="3" style="background: #F0FDF4; padding: var(--space-md) var(--space-lg); border-radius: 12px; border-left: 5px solid #22C55E; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #15803D; font-size: 0.95rem; font-weight: 700; font-family: 'Exo', sans-serif;">📊 Ventajas sobre train/val simple</h4>
+                    <ul style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.6; padding-left: 18px; margin: 0;">
+                        <li><strong>Todos</strong> los datos son usados para validación (una vez)</li>
+                        <li>Estimación más <strong>robusta y estable</strong> del error</li>
+                        <li>Detecta mejor el <strong>overfitting</strong> a una partición específica</li>
+                    </ul>
+                </div>
+
+                <div class="fragment" data-fragment-index="4" style="background: #FEF9C3; padding: 12px var(--space-lg); border-radius: 10px; border-left: 5px solid #EAB308;">
+                    <p style="font-size: 0.82rem; color: #854D0E; margin: 0; line-height: 1.5;"><strong>Valor típico de K:</strong> 5 o 10. Con K=n se llama <em>Leave-One-Out CV</em> (LOOCV).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

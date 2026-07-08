@@ -1,0 +1,67 @@
+﻿<!-- SVM en Python con scikit-learn -->
+<section class="slide" id="slide13">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">SVM en Práctica: scikit-learn</h2>
+
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-2xl); margin-top: var(--space-md); align-items: start; width: 100%;">
+
+            <!-- Left: Code blocks -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+
+                <div class="fragment" data-fragment-index="1">
+                    <p style="font-size: 0.85rem; color: var(--color-secondary); margin: 0 0 6px 0; font-weight: 600; font-family: 'Exo', sans-serif;">1️⃣ Importar y entrenar el modelo</p>
+                    <pre style="background: #1E293B; color: #E2E8F0; padding: 16px 20px; border-radius: 10px; font-size: 0.85rem; line-height: 1.7; overflow-x: auto; margin: 0; border-left: 4px solid var(--color-cta);"><code><span style="color:#94A3B8"># Importaciones</span>
+<span style="color:#7DD3FC">from</span> sklearn.svm <span style="color:#7DD3FC">import</span> SVC
+<span style="color:#7DD3FC">from</span> sklearn.preprocessing <span style="color:#7DD3FC">import</span> StandardScaler
+<span style="color:#7DD3FC">from</span> sklearn.model_selection <span style="color:#7DD3FC">import</span> train_test_split
+
+<span style="color:#94A3B8"># Escalar características (crucial en SVM)</span>
+scaler = StandardScaler()
+X_train_sc = scaler.<span style="color:#34D399">fit_transform</span>(X_train)
+X_test_sc  = scaler.<span style="color:#34D399">transform</span>(X_test)
+
+<span style="color:#94A3B8"># Crear y entrenar el modelo SVM</span>
+svm = <span style="color:#FBBF24">SVC</span>(kernel=<span style="color:#F87171">'rbf'</span>, C=<span style="color:#C084FC">1.0</span>, gamma=<span style="color:#F87171">'scale'</span>)
+svm.<span style="color:#34D399">fit</span>(X_train_sc, y_train)</code></pre>
+                </div>
+
+                <div class="fragment" data-fragment-index="2">
+                    <p style="font-size: 0.85rem; color: var(--color-secondary); margin: 0 0 6px 0; font-weight: 600; font-family: 'Exo', sans-serif;">2️⃣ Búsqueda de hiperparámetros con GridSearch</p>
+                    <pre style="background: #1E293B; color: #E2E8F0; padding: 16px 20px; border-radius: 10px; font-size: 0.85rem; line-height: 1.7; overflow-x: auto; margin: 0; border-left: 4px solid #A855F7;"><code><span style="color:#7DD3FC">from</span> sklearn.model_selection <span style="color:#7DD3FC">import</span> GridSearchCV
+
+param_grid = {
+    <span style="color:#F87171">'C'</span>:      [<span style="color:#C084FC">0.1</span>, <span style="color:#C084FC">1</span>, <span style="color:#C084FC">10</span>, <span style="color:#C084FC">100</span>],
+    <span style="color:#F87171">'gamma'</span>: [<span style="color:#F87171">'scale'</span>, <span style="color:#F87171">'auto'</span>, <span style="color:#C084FC">0.001</span>, <span style="color:#C084FC">0.01</span>],
+    <span style="color:#F87171">'kernel'</span>:[<span style="color:#F87171">'rbf'</span>, <span style="color:#F87171">'linear'</span>]
+}
+gs = <span style="color:#FBBF24">GridSearchCV</span>(SVC(), param_grid, cv=<span style="color:#C084FC">5</span>, scoring=<span style="color:#F87171">'f1'</span>)
+gs.<span style="color:#34D399">fit</span>(X_train_sc, y_train)
+<span style="color:#34D399">print</span>(gs.best_params_)</code></pre>
+                </div>
+            </div>
+
+            <!-- Right: Key points -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="fragment" data-fragment-index="3" style="background: #FEF9C3; padding: 18px 20px; border-radius: 12px; border: 1px solid #FEF08A; border-left: 5px solid #EAB308; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 8px 0; color: #854D0E; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">⚠️ Escalar es obligatorio</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">SVM es muy sensible a la escala de las características. Siempre usa <code>StandardScaler</code> antes de entrenar.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="4" style="background: white; padding: 18px 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 8px 0; color: var(--color-primary); font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">📦 Variantes en scikit-learn</h4>
+                    <ul style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.7; padding-left: 18px; margin: 0;">
+                        <li><code style="color: var(--color-cta);">SVC</code> — Clasificación binaria / multiclase</li>
+                        <li><code style="color: #7E22CE;">SVR</code> — Regresión con SVM</li>
+                        <li><code style="color: #15803D;">LinearSVC</code> — Clasificación lineal rápida</li>
+                        <li><code style="color: #EF4444;">OneClassSVM</code> — Detección de anomalías</li>
+                    </ul>
+                </div>
+
+                <div class="fragment" data-fragment-index="5" style="background: #EFF6FF; padding: 18px 20px; border-radius: 12px; border: 1px solid #DBEAFE; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 8px 0; color: var(--color-cta); font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🚀 Multiclase</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">Por defecto usa <strong>OvO</strong> (One-vs-One). Para N clases se construyen N(N-1)/2 clasificadores binarios.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
