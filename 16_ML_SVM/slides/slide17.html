@@ -1,0 +1,44 @@
+<section class="slide" id="slide17">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Función de optimización</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-lg); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Key optimization concepts and LaTeX formulas -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                
+                <div class="fragment" data-fragment-index="1" style="background: white; padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">Optimización con Restricciones</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Podemos formular nuestra búsqueda del plano de separación de margen máximo como un problema de <strong>optimización con restricciones</strong>.
+                    </p>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: white; padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">El Objetivo</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        El objetivo es <strong>maximizar el margen</strong> bajo la restricción de que todos los puntos de datos deben encontrarse en el lado correcto del plano.
+                    </p>
+                </div>
+
+                <!-- LaTeX Formulation Card -->
+                <div class="fragment" data-fragment-index="3" style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 18px 22px; border-radius: 12px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 8px;">
+                    <span style="font-size: 0.9rem; font-weight: bold; color: var(--color-cta); font-family: 'Exo', sans-serif;">Formulación del Problema:</span>
+                    <div style="font-size: 1.2rem; color: var(--color-primary); font-family: 'Roboto Mono', monospace; text-align: center;">
+                        $$\max_{\vec{w}, b} \gamma(\vec{w}, b)$$
+                    </div>
+                    <div style="font-size: 1rem; color: var(--color-secondary); font-family: 'Roboto Mono', monospace; text-align: center; margin-top: 4px;">
+                        $$\text{tal que} \quad \forall i, \ y_i(\vec{w}^T \cdot \vec{x}_i + b) \geq 0$$
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Visual Diagram -->
+            <div class="fragment" data-fragment-index="1" style="display: flex; justify-content: center; align-items: center; width: 100%; background: #F8FAFC; padding: 15px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+                <img src="images/slide17_svmmargin.png" class="slide-image zoomable-image" style="max-width: 100%; border-radius: 8px;" alt="Función de optimización">
+            </div>
+
+        </div>
+    </div>
+</section>

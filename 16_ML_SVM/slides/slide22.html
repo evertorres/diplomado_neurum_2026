@@ -1,0 +1,69 @@
+﻿<!-- Kernel Trick - Concepto -->
+<section class="slide" id="slide22">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">El Kernel Trick: Clasificación No Lineal</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: var(--space-md); align-items: start; gap: var(--space-xl); width: 100%;">
+
+            <!-- Left Column: Concept -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                <div class="fragment" data-fragment-index="1" style="background: #FEF9C3; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #FEF08A; border-left: 5px solid #EAB308; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #854D0E; font-size: calc(1rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif;">🤔 El Problema</h4>
+                    <p style="font-size: calc(0.9rem + 0.15vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">En el espacio original, los datos <strong>no son linealmente separables</strong>. Ninguna línea recta puede dividirlos correctamente.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: #EFF6FF; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #DBEAFE; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: calc(1rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif;">💡 La Solución: Kernel Trick</h4>
+                    <p style="font-size: calc(0.9rem + 0.15vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">Se transforma implícitamente el espacio de características a una dimensión mayor donde los datos <strong>sí son separables linealmente</strong>, sin calcular explícitamente la transformación.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="3" style="background: #F8FAFC; padding: var(--space-md) var(--space-lg); border-radius: 12px; border: 1px solid #E2E8F0; border-left: 5px solid var(--color-primary); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: calc(1rem + 0.3vw); font-weight: 700; font-family: 'Exo', sans-serif;">📐 Función Kernel K(x, x')</h4>
+                    <p style="font-size: calc(0.9rem + 0.15vw); margin: 0; color: var(--color-secondary); line-height: 1.5;">Una función que calcula el <strong>producto punto en el espacio transformado</strong> sin necesidad de calcular explícitamente la transformación φ(x).</p>
+                    <div style="margin-top: 10px; background: white; padding: 10px 14px; border-radius: 8px; font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-primary); border: 1px solid #E2E8F0;">
+                        <strong>K(x, x') = φ(x)·φ(x')</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual diagram of kernel trick -->
+            <div class="fragment" data-fragment-index="4" style="background: white; border-radius: 16px; padding: 20px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <h4 style="text-align: center; color: var(--color-primary); font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif; margin: 0 0 12px 0;">Transformación de Espacio</h4>
+
+                <svg viewBox="0 0 340 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+                    <rect width="340" height="250" fill="#F8FAFC" rx="8"/>
+                    <rect x="5" y="10" width="150" height="120" fill="white" rx="8" stroke="#E2E8F0" stroke-width="1.5"/>
+                    <text x="80" y="25" text-anchor="middle" fill="#64748B" font-size="9" font-weight="bold">Espacio Original (2D)</text>
+                    <circle cx="80" cy="70" r="30" fill="#FEF2F2" stroke="#EF4444" stroke-width="1" stroke-dasharray="3,2"/>
+                    <circle cx="80" cy="70" r="8" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="80" cy="70" r="3" fill="#1D4ED8"/>
+                    <circle cx="55" cy="50" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <circle cx="105" cy="50" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <circle cx="55" cy="90" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <circle cx="105" cy="90" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <circle cx="48" cy="70" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <circle cx="112" cy="70" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <text x="80" y="118" text-anchor="middle" fill="#EF4444" font-size="8" font-style="italic">No separable</text>
+                    <text x="170" y="78" text-anchor="middle" fill="#7E22CE" font-size="22">→</text>
+                    <text x="170" y="92" text-anchor="middle" fill="#7E22CE" font-size="8" font-weight="bold">φ(x)</text>
+                    <text x="170" y="103" text-anchor="middle" fill="#7E22CE" font-size="7">Kernel</text>
+                    <rect x="185" y="10" width="150" height="120" fill="white" rx="8" stroke="#E2E8F0" stroke-width="1.5"/>
+                    <text x="260" y="25" text-anchor="middle" fill="#64748B" font-size="9" font-weight="bold">Espacio Transformado (3D)</text>
+                    <line x1="195" y1="75" x2="330" y2="75" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="220" cy="50" r="5" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="248" cy="45" r="5" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="270" cy="55" r="5" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="300" cy="48" r="5" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+                    <circle cx="215" cy="100" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <circle cx="245" cy="110" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <circle cx="275" cy="95" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <circle cx="305" cy="107" r="5" fill="#EF4444" stroke="#DC2626" stroke-width="1.5"/>
+                    <text x="260" y="118" text-anchor="middle" fill="#1D4ED8" font-size="8" font-style="italic">Separable con hiperplano</text>
+                    <text x="170" y="175" text-anchor="middle" fill="#7E22CE" font-size="10" font-weight="bold">El "truco" es que el Kernel calcula</text>
+                    <text x="170" y="190" text-anchor="middle" fill="#7E22CE" font-size="10" font-weight="bold">φ(x)·φ(x') sin computar φ</text>
+                    <text x="170" y="208" text-anchor="middle" fill="#64748B" font-size="9">= Ahorro computacional masivo</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

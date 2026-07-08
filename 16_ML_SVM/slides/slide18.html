@@ -1,0 +1,43 @@
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">Hard Margin SVM</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-lg); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Key concepts and LaTeX math -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+                
+                <div class="fragment" data-fragment-index="1" style="background: white; padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">Optimización Cuadrática</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0 0 10px 0;">
+                        La solución óptima del problema puede ser encontrada usando una <strong>optimización cuadrática</strong> en donde:
+                    </p>
+                    
+                    <!-- LaTeX formula block -->
+                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 12px 15px; border-radius: 8px; margin: 5px 0;">
+                        <div style="font-size: 1.15rem; color: var(--color-primary); font-family: 'Roboto Mono', monospace; text-align: center; font-weight: bold;">
+                            $$\min_{\vec{w}, b} (\vec{w}^T \vec{w})$$
+                        </div>
+                        <div style="font-size: 0.95rem; color: var(--color-secondary); font-family: 'Roboto Mono', monospace; text-align: center; margin-top: 4px;">
+                            $$\text{tal que} \quad \forall i, \ y_i(\vec{w}^T \cdot \vec{x}_i + b) \geq 1$$
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: #EFF6FF; padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">Existencia de Solución</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0; font-weight: 600;">
+                        Tiene una solución única siempre que exista un hiperplano de separación (datos linealmente separables).
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Visual Diagram -->
+            <div class="fragment" data-fragment-index="1" style="display: flex; justify-content: center; align-items: center; width: 100%; background: #F8FAFC; padding: 15px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+                <img src="images/slide18_svmhardmargin.png" class="slide-image zoomable-image" style="max-width: 100%; border-radius: 8px;" alt="Hard Margin SVM vs Soft Margin SVM">
+            </div>
+
+        </div>
+    </div>
+</section>

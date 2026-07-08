@@ -1,97 +1,45 @@
-﻿<!-- Caso de Estudio Clínico: SVM en diagnóstico médico -->
 <section class="slide" id="slide15">
-    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
-        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Caso de Estudio: SVM en Diagnóstico de Cáncer de Mama</h2>
-        <p style="font-size: calc(0.85rem + 0.1vw); color: var(--color-secondary); line-height: 1.5; font-style: italic; margin-bottom: var(--space-md);">
-            Referencia: Breast Cancer Wisconsin Dataset — UCI Machine Learning Repository. Clasificación de tumores (maligno / benigno).
-        </p>
-
-        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-2xl); width: 100%; align-items: start; margin-top: var(--space-sm);">
-
-            <!-- Left: Study details -->
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: 2.6rem; border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%; font-family: 'Exo', sans-serif;">SVM Margen</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-lg); width: 100%; align-items: center;">
+            
+            <!-- Left Column: Key margin concepts -->
             <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
-
-                <div class="fragment" data-fragment-index="1" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 5px solid var(--color-cta); box-shadow: var(--shadow-md);">
-                    <h3 style="color: var(--color-cta); font-size: 1.2rem; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">📋 Descripción del problema</h3>
-                    <ul style="font-size: 0.92rem; line-height: 1.7; color: var(--color-secondary); padding-left: 20px; margin: 0;">
-                        <li><strong>569 muestras</strong> de biopsias de tejido mamario</li>
-                        <li><strong>30 características</strong> numéricas (radio, textura, perímetro, área, concavidad…)</li>
-                        <li><strong>Target:</strong> Maligno (M) / Benigno (B)</li>
-                        <li>Reto: alta dimensionalidad relativa al número de muestras</li>
-                    </ul>
+                
+                <div class="fragment" data-fragment-index="1" style="background: white; padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">Búsqueda de Parámetros</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Necesitamos encontrar los parámetros $(\vec{w}, b)$ tales que el margen tenga una <strong>distancia máxima $\gamma$</strong>.
+                    </p>
                 </div>
 
-                <div class="fragment" data-fragment-index="2" style="background: white; padding: 20px 25px; border-radius: 12px; border-left: 5px solid #A855F7; box-shadow: var(--shadow-md);">
-                    <h3 style="color: #7E22CE; font-size: 1.2rem; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">🔧 Configuración del modelo</h3>
-                    <ul style="font-size: 0.92rem; line-height: 1.7; color: var(--color-secondary); padding-left: 20px; margin: 0;">
-                        <li><strong>Kernel:</strong> RBF (Gaussiano)</li>
-                        <li><strong>C = 10</strong>, <strong>γ = 0.001</strong> (GridSearchCV, 5-fold)</li>
-                        <li>Preprocesamiento: <code>StandardScaler</code></li>
-                        <li>Split: 80% entrenamiento / 20% prueba</li>
-                    </ul>
+                <div class="fragment" data-fragment-index="2" style="background: white; padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">Múltiples Hiperplanos</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Si un conjunto de datos es linealmente separable, existen <strong>infinitos hiperplanos de separación</strong> matemáticamente válidos.
+                    </p>
                 </div>
 
-                <div class="fragment" data-fragment-index="3" style="background: #F0FDF4; padding: 20px 25px; border-radius: 12px; border-left: 5px solid #22C55E; box-shadow: var(--shadow-md);">
-                    <h3 style="color: #15803D; font-size: 1.2rem; margin: 0 0 10px 0; font-family: 'Exo', sans-serif;">📊 Resultados Obtenidos</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center;">
-                        <div style="background: white; padding: 12px; border-radius: 10px; border: 1px solid #DCFCE7;">
-                            <div style="font-size: 1.6rem; font-weight: 900; color: #15803D; font-family: 'Roboto Mono', monospace;">97.4%</div>
-                            <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-top: 4px;">Accuracy</div>
-                        </div>
-                        <div style="background: white; padding: 12px; border-radius: 10px; border: 1px solid #DCFCE7;">
-                            <div style="font-size: 1.6rem; font-weight: 900; color: #22C55E; font-family: 'Roboto Mono', monospace;">96.2%</div>
-                            <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-top: 4px;">Recall (Maligno)</div>
-                        </div>
-                        <div style="background: white; padding: 12px; border-radius: 10px; border: 1px solid #DCFCE7;">
-                            <div style="font-size: 1.6rem; font-weight: 900; color: var(--color-cta); font-family: 'Roboto Mono', monospace;">0.974</div>
-                            <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-top: 4px;">AUC-ROC</div>
-                        </div>
-                    </div>
+                <div class="fragment" data-fragment-index="3" style="background: #EFF6FF; padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--color-cta); box-shadow: var(--shadow-md);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">El Criterio Óptimo</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0; font-weight: 600;">
+                        El hiperplano óptimo es el que <strong>maximiza la distancia</strong> a los puntos de datos más cercanos de ambas clases.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Visual Diagram & Subtext -->
+            <div class="fragment" data-fragment-index="1" style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                <div style="display: flex; justify-content: center; align-items: center; width: 100%; background: #F8FAFC; padding: 15px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-md);">
+                    <img src="images/slide15_svmmargen.png" class="slide-image zoomable-image" style="max-width: 100%; border-radius: 8px;" alt="SVM Margin visualization">
+                </div>
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; line-height: 1.5; color: var(--color-secondary);">
+                    <strong>Derecha:</strong> El plano de margen máximo. El margen $\gamma$ es la distancia desde el plano (línea continua) hasta los puntos más cercanos de cualquiera de las dos clases (que tocan las líneas paralelas de puntos).
                 </div>
             </div>
 
-            <!-- Right: Reflexión clínica -->
-            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
-                <div class="fragment" data-fragment-index="4" style="background: white; padding: 20px; border-radius: 16px; box-shadow: var(--shadow-md); border: 1px solid #E2E8F0;">
-                    <h4 style="color: var(--color-primary); font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif; margin: 0 0 12px 0; text-align: center;">Comparación de Algoritmos</h4>
-
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #EFF6FF; border-radius: 8px; border: 1px solid #DBEAFE;">
-                            <span style="font-weight: 700; font-size: 0.85rem; color: var(--color-cta);">SVM (RBF)</span>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <div style="background: var(--color-cta); height: 8px; width: 97px; border-radius: 4px;"></div>
-                                <span style="font-weight: 700; font-size: 0.85rem; color: var(--color-cta);">97%</span>
-                            </div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0;">
-                            <span style="font-weight: 600; font-size: 0.85rem; color: #64748B;">Random Forest</span>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <div style="background: #94A3B8; height: 8px; width: 96px; border-radius: 4px;"></div>
-                                <span style="font-weight: 600; font-size: 0.85rem; color: #64748B;">96%</span>
-                            </div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0;">
-                            <span style="font-weight: 600; font-size: 0.85rem; color: #64748B;">Reg. Logística</span>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <div style="background: #94A3B8; height: 8px; width: 94px; border-radius: 4px;"></div>
-                                <span style="font-weight: 600; font-size: 0.85rem; color: #64748B;">94%</span>
-                            </div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0;">
-                            <span style="font-weight: 600; font-size: 0.85rem; color: #64748B;">KNN (k=5)</span>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <div style="background: #94A3B8; height: 8px; width: 93px; border-radius: 4px;"></div>
-                                <span style="font-weight: 600; font-size: 0.85rem; color: #64748B;">93%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fragment" data-fragment-index="5" style="background: #FEF9C3; padding: 18px; border-radius: 12px; border: 1px solid #FEF08A; border-left: 5px solid #EAB308; box-shadow: var(--shadow-sm);">
-                    <h4 style="margin: 0 0 6px 0; color: #854D0E; font-size: 0.95rem; font-weight: 700; font-family: 'Exo', sans-serif;">⚠️ Consideración Clínica</h4>
-                    <p style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">El <strong>Recall en malignos</strong> es la métrica crítica. Un falso negativo implica no detectar un cáncer real. SVM muestra excelente balance precisión-recall.</p>
-                </div>
-            </div>
         </div>
     </div>
 </section>

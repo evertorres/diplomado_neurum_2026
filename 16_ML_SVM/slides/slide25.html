@@ -1,0 +1,63 @@
+﻿<!-- Ventajas y Desventajas de SVM -->
+<section class="slide" id="slide25">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(2rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-md); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Ventajas y Desventajas de SVM</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); margin-top: var(--space-md); width: 100%;">
+
+            <!-- Ventajas -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="background: #F0FDF4; padding: 14px 20px; border-radius: 10px; border-top: 4px solid #22C55E; border: 1px solid #DCFCE7; text-align: center;">
+                    <h3 style="color: #15803D; font-size: 1.3rem; font-weight: 700; margin: 0; font-family: 'Exo', sans-serif;">✅ Ventajas</h3>
+                </div>
+
+                <div class="fragment" data-fragment-index="1" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #DCFCE7; border-left: 4px solid #22C55E; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #15803D; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🎯 Efectivo en alta dimensionalidad</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">Funciona bien cuando el número de características supera el número de muestras. Ideal para datos genómicos o textuales.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="2" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #DCFCE7; border-left: 4px solid #22C55E; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #15803D; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">📐 Óptimo global garantizado</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">La optimización convexa garantiza encontrar siempre el mínimo global, a diferencia de redes neuronales.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="3" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #DCFCE7; border-left: 4px solid #22C55E; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #15803D; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🔧 Flexible con kernels</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">El Kernel Trick permite adaptarse a problemas lineales y no lineales con una misma base algorítmica.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="4" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #DCFCE7; border-left: 4px solid #22C55E; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #15803D; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🛡️ Robusto a overfitting</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">Al maximizar el margen, SVM tiene buena capacidad de generalización, especialmente en datos de alta dimensionalidad.</p>
+                </div>
+            </div>
+
+            <!-- Desventajas -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="background: #FEF2F2; padding: 14px 20px; border-radius: 10px; border-top: 4px solid #EF4444; border: 1px solid #FECACA; text-align: center;">
+                    <h3 style="color: #DC2626; font-size: 1.3rem; font-weight: 700; margin: 0; font-family: 'Exo', sans-serif;">❌ Desventajas</h3>
+                </div>
+
+                <div class="fragment" data-fragment-index="5" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #FECACA; border-left: 4px solid #EF4444; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #DC2626; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">⏱️ Lento en grandes datasets</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">El costo computacional es O(n² a n³). No escala bien con millones de muestras.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="6" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #FECACA; border-left: 4px solid #EF4444; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #DC2626; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🎲 Sensible a hiperparámetros</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">C, γ y el tipo de kernel deben ajustarse cuidadosamente. La elección incorrecta puede degradar el rendimiento.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="7" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #FECACA; border-left: 4px solid #EF4444; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #DC2626; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🚫 No genera probabilidades directas</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">SVC nativo no produce probabilidades. Se requiere Platt Scaling (<code>probability=True</code>), lo cual añade costo computacional.</p>
+                </div>
+
+                <div class="fragment" data-fragment-index="8" style="background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid #FECACA; border-left: 4px solid #EF4444; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 6px 0; color: #DC2626; font-size: 1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🔍 Poca interpretabilidad</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">Con kernels no lineales el modelo es difícil de interpretar, lo que puede ser un problema en entornos clínicos regulados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

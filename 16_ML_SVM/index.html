@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>16. ML Supervisado — Máquinas de Soporte Vectorial (SVM)</title>
-    <meta name="description" content="Módulo 16 del Diplomado Neurum 2026: Máquinas de Soporte Vectorial (SVM). Intuición, hiperplanos, kernel trick, parámetros y aplicaciones clínicas.">
+    <title>16. ML Supervisado — Máquinas de Vectores de Soporte (SVM)</title>
+    <meta name="description"
+        content="Módulo 16 del Diplomado Neurum 2026: Máquinas de Soporte Vectorial (SVM). Intuición, hiperplanos, kernel trick, parámetros y aplicaciones clínicas.">
     <!-- Relative path to global styles -->
     <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
     <style>
         .slide-image {
             max-width: 100%;
@@ -72,6 +76,32 @@
             max-width: 450px;
             line-height: 1.5;
         }
+
+        /* Style for classification table */
+        .class-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--space-md);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+        }
+
+        .class-table th {
+            background-color: var(--color-primary);
+            color: white;
+            text-align: left;
+            padding: 10px 15px;
+            font-family: 'Exo', sans-serif;
+        }
+
+        .class-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .class-table tr:hover {
+            background-color: #F8FAFC;
+        }
     </style>
 </head>
 
@@ -91,7 +121,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
             </button>
-            <span class="slide-counter" id="slideCounter">1 / 15</span>
+            <span class="slide-counter" id="slideCounter">1 / 27</span>
             <button class="control-btn" id="nextSlide" title="Siguiente">
                 <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -120,7 +150,7 @@
             const loader = document.getElementById('loader');
 
             try {
-                const totalSlides = 15;
+                const totalSlides = 27;
                 let slidesHtml = '';
 
                 const slidePromises = [];
@@ -156,6 +186,17 @@
 
                 if (window.initApp) {
                     window.initApp();
+                }
+
+                // Render LaTeX math using KaTeX after DOM is fully loaded and slides injected
+                if (typeof renderMathInElement === 'function') {
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            { left: '$$', right: '$$', display: true },
+                            { left: '$', right: '$', display: false }
+                        ],
+                        throwOnError: false
+                    });
                 }
             } catch (error) {
                 console.error("Error loading presentation content:", error);
