@@ -1,0 +1,42 @@
+<!-- Slide 12: Entrenamiento - Fases -->
+<section class="slide" id="slide12">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">El Ciclo de Entrenamiento: Feedforward y Backpropagation</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Phases -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    El entrenamiento consiste en un proceso iterativo optimizado para ajustar las ponderaciones y sesgos de la red para minimizar el error total. Consta de dos fases principales:
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background: #EFF6FF;">
+                    <h4 style="margin: 0 0 5px 0; color: var(--color-cta); font-size: 1.1rem; font-family: 'Exo', sans-serif;">⏩ 1. Propagación hacia Adelante (Feedforward)</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Los datos de entrada $X$ se propagan a través de las capas de la red. Cada capa computa su suma ponderada y activación, generando finalmente la predicción de salida $\hat{y}$ utilizando los parámetros ($W, b$) actuales.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid #10B981; background: #ECFDF5;">
+                    <h4 style="margin: 0 0 5px 0; color: #10B981; font-size: 1.1rem; font-family: 'Exo', sans-serif;">⏪ 2. Retropropagación (Backpropagation)</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Se calcula la desviación (error) entre la salida predicha $\hat{y}$ y el valor real $y$. El error se propaga hacia atrás, calculando las derivadas parciales de la función de coste con respecto a cada peso y sesgo para actualizarlos vía descenso de gradiente.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Flowchart Image -->
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/image18.png" alt="Ciclo de Entrenamiento" class="zoomable-image"
+                        style="max-width: 100%; max-height: 48vh; border-radius: 12px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; margin-top: 8px; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Flujo de información y corrección de parámetros.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+<!-- Slide 10: Red Neuronal multicapa -->
+<section class="slide" id="slide10">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Red Neuronal Multicapa (MLP)</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Layers and Flow -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    Para aprender fronteras no lineales complejas, organizamos las capas de neuronas artificiales en **cascada**.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div class="concept-card" style="padding: 12px 18px; border-left: 5px solid var(--color-secondary);">
+                        <h4 style="margin: 0 0 4px 0; font-size: 1rem; color: var(--color-primary); font-family: 'Exo', sans-serif;">🧱 Estructura Jerárquica de Capas</h4>
+                        <ul style="font-size: 0.85rem; color: var(--color-secondary); padding-left: 15px; margin: 0; line-height: 1.5;">
+                            <li><strong>Capa de Entrada:</strong> Recibe directamente las variables (features).</li>
+                            <li><strong>Capas Ocultas:</strong> Transforman de manera sucesiva las representaciones (las neuronas no tienen conexión directa con el exterior).</li>
+                            <li><strong>Capa de Salida:</strong> Genera las predicciones o clasificaciones del modelo.</li>
+                        </ul>
+                    </div>
+
+                    <div class="concept-card" style="padding: 12px 18px; border-left: 5px solid var(--color-cta); background-color: #EFF6FF;">
+                        <h4 style="margin: 0 0 4px 0; font-size: 1rem; color: var(--color-cta); font-family: 'Exo', sans-serif;">⏩ Arquitectura Feedforward</h4>
+                        <p style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                            Las conexiones van exclusivamente hacia adelante. Cada neurona de una capa está conectada a todas las de la capa siguiente (capas completamente conectadas o *fully connected*), sin ciclos ni bucles de realimentación interna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Image -->
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/image9.png" alt="Arquitectura Multicapa" class="zoomable-image"
+                        style="max-width: 100%; max-height: 48vh; border-radius: 12px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; margin-top: 8px; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Estructura típica de un Perceptrón Multicapa (MLP).
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

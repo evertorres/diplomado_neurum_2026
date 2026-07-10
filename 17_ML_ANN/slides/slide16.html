@@ -1,0 +1,96 @@
+<!-- Slide 16: Gradiente del costo - Introducción Vectorial -->
+<section class="slide" id="slide16">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Gradiente del Costo: Representación Vectorial</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Cost Gradient definition -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    El gradiente de la función de coste representa cómo responde el coste global $J$ ante perturbaciones en los pesos. Para optimizar, necesitamos calcular las derivadas del coste con respecto a cada parámetro de la red.
+                </p>
+
+                <!-- Cost Function Definition -->
+                <div class="concept-card" style="border-left: 5px solid var(--color-primary); background: #F8FAFC; padding: 12px 18px;">
+                    <h4 style="margin: 0 0 5px 0; color: var(--color-primary); font-size: 1.05rem; font-family: 'Exo', sans-serif;">🎯 Error en el Modelo del Costo</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin-bottom: 8px;">La función de costo $J$ (error cuadrático medio) se define como:</p>
+                    <div class="equation-block" style="text-align: center; font-size: 1.2rem; padding: 10px; margin: 0;">
+                        $$J = \frac{1}{2}(o - y)^2$$
+                    </div>
+                </div>
+
+                <!-- Gradient Vector -->
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background: #F8FAFC; padding: 12px 18px;">
+                    <h4 style="margin: 0 0 5px 0; color: var(--color-cta); font-size: 1.05rem; font-family: 'Exo', sans-serif;">📐 Vector Gradiente de Pesos</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin-bottom: 8px;">Calculamos las derivadas parciales con respecto a cada parámetro:</p>
+                    <div class="equation-block" style="text-align: center; font-size: 1.2rem; padding: 10px; margin: 0;">
+                        $$\nabla J_{w} = \begin{bmatrix}
+                        \frac{\partial J}{\partial w_{1}} \\ \frac{\partial J}{\partial w_{2}}
+                        \end{bmatrix}$$
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Neural Network & Equations -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-md);">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-lg); box-shadow: var(--shadow-md); width: 100%; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                    <!-- SVG Network Diagram -->
+                    <svg viewBox="0 0 500 160" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Exo', sans-serif;">
+                        <defs>
+                            <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                <path d="M 0 1 L 10 5 L 0 9 z" fill="#3B82F6" />
+                            </marker>
+                            <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+                                <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.1" />
+                            </filter>
+                        </defs>
+
+                        <!-- Connections -->
+                        <!-- Node x to Node a -->
+                        <line x1="105" y1="90" x2="195" y2="90" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#arrow-blue)" />
+                        <!-- Node a to Node o -->
+                        <line x1="255" y1="90" x2="345" y2="90" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#arrow-blue)" />
+
+                        <!-- Nodes -->
+                        <!-- Input Node x -->
+                        <g filter="url(#shadow)">
+                            <circle cx="80" cy="90" r="25" fill="#FFFFFF" stroke="#4B5563" stroke-width="2.5" />
+                            <text x="80" y="96" font-size="16" font-weight="700" text-anchor="middle" fill="#1F2937">x</text>
+                        </g>
+                        <!-- Bias b label above x -->
+                        <text x="80" y="45" font-size="16" font-style="italic" font-weight="600" text-anchor="middle" fill="#1F2937">b</text>
+
+                        <!-- Hidden Node a -->
+                        <g filter="url(#shadow)">
+                            <circle cx="225" cy="90" r="25" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2.5" />
+                            <text x="225" y="96" font-size="16" font-weight="700" text-anchor="middle" fill="#1F2937">a</text>
+                        </g>
+                        <!-- Bias b label above a -->
+                        <text x="225" y="45" font-size="16" font-style="italic" font-weight="600" text-anchor="middle" fill="#1F2937">b</text>
+
+                        <!-- Output Node o -->
+                        <g filter="url(#shadow)">
+                            <circle cx="375" cy="90" r="25" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2.5" />
+                            <text x="375" y="96" font-size="16" font-weight="700" text-anchor="middle" fill="#1F2937">o</text>
+                        </g>
+
+                        <!-- Connection Labels -->
+                        <text x="150" y="78" font-size="14" font-style="italic" font-weight="600" text-anchor="middle" fill="#4B5563">w₁</text>
+                        <text x="300" y="78" font-size="14" font-style="italic" font-weight="600" text-anchor="middle" fill="#4B5563">w₂</text>
+                    </svg>
+
+                    <!-- LaTeX equations under the diagram -->
+                    <div style="width: 100%; border-top: 1px solid #E2E8F0; padding-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+                        <div style="font-size: 0.95rem; text-align: center; color: var(--color-secondary);">
+                            $$z = w_1^T x + b$$
+                            $$a = \phi(z)$$
+                            $$o = \phi(w_2^T a + b)$$
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+<!-- Slide 05: Definición Redes Feedforward -->
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Redes Profundas Feedforward (MLP)</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Concepts -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary);">
+                    Las **Redes Profundas Feedforward**, también conocidas como **Perceptrones Multicapa (MLP)**, son los modelos fundacionales del Aprendizaje Profundo.
+                </p>
+
+                <ul style="font-size: 0.95rem; color: var(--color-secondary); padding-left: 20px; line-height: 1.8; display: flex; flex-direction: column; gap: 8px;">
+                    <li><strong>Aproximación de Funciones:</strong> El objetivo es aproximar una función objetivo $y = f^*(x)$ mediante una mapeada $y = f(x; \theta)$, aprendiendo los mejores parámetros $\theta$.</li>
+                    <li><strong>Ausencia de Bucles (Feedforward):</strong> La información fluye unidireccionalmente desde las entradas, a través de cálculos intermedios, hasta las salidas. No hay retroalimentación del canal (a diferencia de las RNNs).</li>
+                    <li><strong>Bases Comerciales:</strong> Son el motor principal en reconocimiento de patrones, voz, procesamiento de imágenes y predicciones complejas.</li>
+                </ul>
+            </div>
+
+            <!-- Right: Mathematical Chain of Functions -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background: #F8FAFC;">
+                    <h4 style="margin: 0 0 10px 0; color: var(--color-cta); font-size: 1.15rem; font-family: 'Exo', sans-serif;">🔗 Encadenamiento de Funciones</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.6; margin-bottom: 15px;">
+                        Se denominan "redes" debido a que están constituidas por una cadena de operaciones sucesivas representadas por funciones compuestas:
+                    </p>
+                    
+                    <div class="equation-block" style="text-align: center; margin: 0 auto; width: 100%;">
+                        $$f(x) = f^{(3)}(f^{(2)}(f^{(1)}(x)))$$
+                    </div>
+                    
+                    <p style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.6; margin-top: 15px;">
+                        Donde $f^{(1)}$ representa la primera capa (capa de entrada), $f^{(2)}$ la segunda capa (capa oculta), y $f^{(3)}$ la capa de salida.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

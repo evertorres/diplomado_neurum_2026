@@ -1,0 +1,43 @@
+<!-- Slide 06: Unidad de Red Neuronal - Introducción -->
+<section class="slide" id="slide06">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">La Unidad Procesadora: Neurona Artificial</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Description of Components -->
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <p style="font-size: 1.05rem; color: var(--color-secondary); line-height: 1.5; margin-bottom: 5px;">
+                    La neurona artificial (o perceptrón) es el bloque constructor de cualquier red neuronal. Procesa múltiples entradas para generar una única salida:
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                    <div style="background: #F8FAFC; border-left: 4px solid var(--color-cta); padding: 8px 12px; border-radius: 6px;">
+                        <strong>1. Entradas (Inputs - $x_i$):</strong> Atributos de entrada provenientes de los datos originales o activaciones de capas previas.
+                    </div>
+                    <div style="background: #F8FAFC; border-left: 4px solid var(--color-secondary); padding: 8px 12px; border-radius: 6px;">
+                        <strong>2. Pesos Sinápticos (Weights - $w_i$):</strong> Coeficientes de ponderación que modulan la fuerza y la importancia de cada entrada.
+                    </div>
+                    <div style="background: #F8FAFC; border-left: 4px solid var(--color-cta); padding: 8px 12px; border-radius: 6px;">
+                        <strong>3. Sesgo/Umbral (Bias - $b$):</strong> Un parámetro independiente que desplaza la salida de la neurona y regula su sensibilidad de disparo.
+                    </div>
+                    <div style="background: #F8FAFC; border-left: 4px solid var(--color-secondary); padding: 8px 12px; border-radius: 6px;">
+                        <strong>4. Función de Activación ($f$):</strong> Transforma la suma ponderada en la salida final introduciendo no linealidades esenciales.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Image -->
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/image8.png" alt="Esquema de una Neurona Artificial" class="zoomable-image"
+                        style="max-width: 100%; max-height: 48vh; border-radius: 12px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; margin-top: 8px; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Diagrama del flujo matemático del perceptrón simple.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

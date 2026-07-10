@@ -1,0 +1,54 @@
+<!-- Slide 08: Funciones de Activación - Comparación -->
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Funciones de Activación: Características y Selección</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Description cards -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm); max-height: 55vh; overflow-y: auto; padding-right: 10px;">
+                
+                <div class="concept-card" style="padding: 10px 15px; border-left: 4px solid var(--color-cta);">
+                    <h4 style="margin: 0 0 4px 0; font-size: 0.95rem; color: var(--color-cta); font-family: 'Exo', sans-serif;">🔘 Sigmoide & Tangente Hiperbólica (tanh)</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        La <strong>Sigmoide</strong> mapea a $(0, 1)$, ideal para estimar probabilidades en clasificación binaria. La <strong>tanh</strong> mapea a $(-1, 1)$, ofreciendo simetría respecto a cero. Ambas sufren del problema de <strong>desvanecimiento de gradiente</strong> en redes profundas.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="padding: 10px 15px; border-left: 4px solid #10B981;">
+                    <h4 style="margin: 0 0 4px 0; font-size: 0.95rem; color: #10B981; font-family: 'Exo', sans-serif;">⚡ ReLU (Rectified Linear Unit)</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        $f(z) = \max(0, z)$. Es computacionalmente eficiente (solo umbralización) y acelera la convergencia de redes profundas. Sin embargo, puede sufrir de "neuronas muertas" si el gradiente se vuelve cero permanentemente para entradas negativas.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="padding: 10px 15px; border-left: 4px solid #F59E0B;">
+                    <h4 style="margin: 0 0 4px 0; font-size: 0.95rem; color: #F59E0B; font-family: 'Exo', sans-serif;">💧 Leaky ReLU, Maxout & ELU</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        La <strong>Leaky ReLU</strong> permite una pequeña pendiente ($\alpha \cdot z$) para valores negativos para mitigar las neuronas muertas. La <strong>ELU</strong> (Exponential Linear Unit) suaviza el comportamiento para negativos, mejorando la generalización.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="padding: 10px 15px; border-left: 4px solid #EF4444; background-color: #FEF2F2;">
+                    <h4 style="margin: 0 0 4px 0; font-size: 0.95rem; color: #EF4444; font-family: 'Exo', sans-serif;">⚠️ Caso Práctico: Clasificación Binaria (ej. Gato vs No-Gato)</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        En la capa de salida de una clasificación binaria se requiere <strong>Sigmoide</strong> porque acota e interpreta la predicción como una probabilidad. La ReLU no es idónea para este fin debido a que sus salidas no están acotadas superiormente.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right: Image -->
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/image6.png" alt="Comparativa de funciones de activación" class="zoomable-image"
+                        style="max-width: 100%; max-height: 48vh; border-radius: 12px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; margin-top: 8px; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Curvas y comportamiento matemático de activaciones.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

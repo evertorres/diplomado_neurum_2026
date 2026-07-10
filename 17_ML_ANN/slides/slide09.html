@@ -1,0 +1,48 @@
+<!-- Slide 09: Red Neuronal de una capa -->
+<section class="slide" id="slide09">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Red Neuronal de Una Capa</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Text and Equations -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.1rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    Una sola neurona aislada posee una potencia de cálculo reducida (fronteras de decisión estrictamente lineales). Para resolver problemas complejos, agrupamos neuronas en **capas**.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background: #F8FAFC; width: 100%; padding: var(--space-lg);">
+                    <h4 style="margin: 0 0 10px 0; color: var(--color-cta); font-size: 1.25rem; font-family: 'Exo', sans-serif;">🧮 De Escalares a Vectores y Matrices</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); margin-bottom: 15px; line-height: 1.5;">
+                        Al agrupar neuronas, los pesos individuales pasan a ser una **Matriz de Pesos** $W$, y las salidas se representan como un **Vector de Salida** $Y$:
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-md); margin-bottom: 10px;">
+                        <div class="equation-block" style="text-align: center; margin: 0; padding: 12px; display: flex; align-items: center; justify-content: center;">
+                            $$Y = (y_{1}, y_{2}, \cdots , y_{n})^T$$
+                        </div>
+                        <div class="equation-block" style="text-align: center; margin: 0; padding: 12px; border-left-color: #10B981; display: flex; align-items: center; justify-content: center;">
+                            $$Y = F(W \cdot X + b)$$
+                        </div>
+                    </div>
+                </div>
+                
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    Donde $W$ es la matriz de pesos de la capa, $X$ es el vector de características de entrada, $b$ es el vector de sesgos (bias) y $F$ es la función de activación no lineal aplicada elemento por elemento.
+                </p>
+            </div>
+
+            <!-- Right: Image -->
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/slide09_ANN.png" alt="Red Neuronal de Una Capa" class="zoomable-image"
+                        style="max-width: 100%; max-height: 48vh; border-radius: 12px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; margin-top: 8px; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Esquema de una red neuronal artificial de una sola capa.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,54 @@
+<!-- Slide 07: Unidad de Red Neuronal - Ecuaciones -->
+<section class="slide" id="slide07">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Elementos y Ecuaciones de la Neurona</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Text and LaTeX Equations -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    La neurona combina las entradas en una suma ponderada y aplica una función no lineal para obtener la activación:
+                </p>
+
+                <!-- Elementos de la Neurona -->
+                <div class="concept-card" style="border-left: 5px solid var(--color-primary); background: #F8FAFC; padding: 12px;">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.05rem; font-family: 'Exo', sans-serif;">📋 Elementos Clave (Variables)</h4>
+                    <ul style="font-size: 0.88rem; color: var(--color-secondary); padding-left: 20px; margin: 0; line-height: 1.5;">
+                        <li><strong>Conjunto de entradas:</strong> $X_j$ (atributos o activaciones previas)</li>
+                        <li><strong>Pesos sinápticos:</strong> $w_i$ (coeficientes de ponderación)</li>
+                        <li><strong>Sesgo (Bias):</strong> $b$ (ajuste de sensibilidad)</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background: #F8FAFC;">
+                    <h4 style="margin: 0 0 5px 0; color: var(--color-cta); font-size: 1.05rem; font-family: 'Exo', sans-serif;">➕ 1. Función de Transferencia (Suma Ponderada)</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin-bottom: 8px;">Calcula el estímulo neto $a$ agregando el sesgo/bias $b$:</p>
+                    <div class="equation-block" style="text-align: center; font-size: 1.1rem; padding: 10px; margin: 0;">
+                        $$a = w_{1}\cdot x_{1} + w_{2}\cdot x_{2} + \cdots + w_{n}\cdot x_{n} + b$$
+                    </div>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid #10B981; background: #F8FAFC;">
+                    <h4 style="margin: 0 0 5px 0; color: #10B981; font-size: 1.05rem; font-family: 'Exo', sans-serif;">⚡ 2. Función de Activación (Salida)</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin-bottom: 8px;">Aplica la no linealidad $F$ sobre la suma neta para producir la respuesta $y$:</p>
+                    <div class="equation-block" style="text-align: center; font-size: 1.1rem; padding: 10px; margin: 0;">
+                        $$y = F(a) = F\left(\sum_{j=1}^{n} w_{j}\cdot x_{j} + b\right)$$
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Image -->
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/image8.png" alt="Esquema de una Neurona Artificial" class="zoomable-image"
+                        style="max-width: 100%; max-height: 48vh; border-radius: 12px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; margin-top: 8px; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Diagrama del flujo matemático del perceptrón simple.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>
