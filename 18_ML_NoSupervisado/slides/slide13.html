@@ -1,0 +1,76 @@
+<!-- Slide 13: Cardinalidad - El número de clústeres -->
+<section class="slide" id="slide13">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Cardinalidad: El número de clústeres</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Concepts -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary);">
+                    La definición del número óptimo de clústeres ($K$) es uno de los problemas fundamentales no resueltos en el aprendizaje no supervisado.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white; padding: var(--space-md);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🧩 Conocimiento de Dominio (A priori)</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Frecuentemente, la elección de $K$ es una estimación basada en la experiencia práctica o limitaciones específicas del negocio (ej. queremos segmentar los clientes en exactamente 3 perfiles: bajo, medio y alto valor).
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid #10B981; background-color: white; padding: var(--space-md);">
+                    <h4 style="margin: 0 0 6px 0; color: #10B981; font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🛠️ Métodos Heurísticos (Basados en Datos)</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Algunos algoritmos pueden beneficiarse de métricas de distorsión para guiar la selección de $K$ analizando las variaciones en las tasas de error residual.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Heuristic Graph SVG (Elbow method representation) -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-lg); box-shadow: var(--shadow-md); width: 100%; display: flex; justify-content: center;">
+                    <svg viewBox="0 0 400 240" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Roboto Mono', monospace;">
+                        <!-- Axes -->
+                        <line x1="50" y1="20" x2="50" y2="200" stroke="#475569" stroke-width="2" />
+                        <line x1="50" y1="200" x2="380" y2="200" stroke="#475569" stroke-width="2" />
+                        
+                        <!-- Axis Labels -->
+                        <text x="220" y="225" font-size="11" fill="#475569" font-weight="600" text-anchor="middle">Número de Clústeres (K)</text>
+                        <text x="30" y="15" font-size="11" fill="#475569" font-weight="600">Inercia / Costo</text>
+
+                        <!-- Elbow curve -->
+                        <!-- Points: K=1(70,180), K=2(120,110), K=3(170,60), K=4(220,45), K=5(270,35), K=6(320,28), K=7(370,23) -->
+                        <path d="M 80 40 L 130 90 L 180 150 L 230 170 L 280 180 L 330 187 L 380 192" 
+                            fill="none" stroke="#64748B" stroke-width="2" />
+
+                        <!-- Dots on curve -->
+                        <circle cx="80" cy="40" r="5" fill="#94A3B8" />
+                        <text x="80" y="30" font-size="10" fill="#64748B" text-anchor="middle">K=1</text>
+                        
+                        <circle cx="130" cy="90" r="5" fill="#94A3B8" />
+                        <text x="130" y="80" font-size="10" fill="#64748B" text-anchor="middle">K=2</text>
+                        
+                        <!-- Elbow Point (K=3) -->
+                        <circle cx="180" cy="150" r="7" fill="var(--color-cta)" />
+                        <text x="180" y="138" font-size="10" fill="var(--color-cta)" font-weight="bold" text-anchor="middle">K=3 ("Codo")</text>
+
+                        <circle cx="230" cy="170" r="5" fill="#94A3B8" />
+                        <text x="230" y="162" font-size="10" fill="#64748B" text-anchor="middle">K=4</text>
+                        
+                        <circle cx="280" cy="180" r="5" fill="#94A3B8" />
+                        <circle cx="330" cy="187" r="5" fill="#94A3B8" />
+                        <circle cx="380" cy="192" r="5" fill="#94A3B8" />
+
+                        <!-- Elbow indicator arrow -->
+                        <path d="M 140 180 Q 160 170, 172 158" fill="none" stroke="var(--color-cta)" stroke-width="1.5" marker-end="url(#arrow)" />
+                        <text x="110" y="195" font-size="10" fill="var(--color-cta)" font-weight="bold">Punto de codo sugerido</text>
+                    </svg>
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; text-align: center;">
+                    Método del codo (Elbow Method): se elige el punto donde el descenso de la inercia se suaviza notablemente.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+<!-- Slide 16: Criterios de Parada -->
+<section class="slide" id="slide16">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Criterios de parada para algoritmo K-means</h2>
+        
+        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: var(--space-xl); max-width: 1000px;">
+            El proceso iterativo del algoritmo no es infinito. Se detiene automáticamente cuando se satisface cualquiera de las siguientes condiciones de parada:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); width: 100%;">
+            
+            <!-- Criterion 1 -->
+            <div class="concept-card" style="border-top: 5px solid var(--color-cta); background: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="font-size: 2.5rem;">📍</div>
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin: 0; color: var(--color-primary); font-family: 'Exo', sans-serif;">Estabilidad de Centroides</h3>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    El algoritmo se detiene si la posición geográfica de los centroides no sufre ninguna modificación en el paso de recálculo (la variación es cero o inferior a una tolerancia $\epsilon$ muy pequeña).
+                </p>
+                <div style="margin-top: auto; font-size: 0.85rem; color: var(--color-cta); font-weight: bold; font-family: 'Roboto Mono', monospace;">
+                    $$\Delta \text{centroides} \le \epsilon$$
+                </div>
+            </div>
+
+            <!-- Criterion 2 -->
+            <div class="concept-card" style="border-top: 5px solid #10B981; background: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="font-size: 2.5rem;">🔄</div>
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin: 0; color: var(--color-primary); font-family: 'Exo', sans-serif;">Asignación Invariable</h3>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    Se detiene cuando ningún punto de datos de la muestra es reasignado a un clúster diferente en el paso de asignación. La distribución de elementos en los grupos queda completamente fija.
+                </p>
+                <div style="margin-top: auto; font-size: 0.85rem; color: #10B981; font-weight: bold; font-family: 'Roboto Mono', monospace;">
+                    $$\Delta \text{asignaciones} = 0$$
+                </div>
+            </div>
+
+            <!-- Criterion 3 -->
+            <div class="concept-card" style="border-top: 5px solid #F59E0B; background: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="font-size: 2.5rem;">⏱️</div>
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin: 0; color: var(--color-primary); font-family: 'Exo', sans-serif;">Límite de Iteraciones</h3>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    Como medida preventiva de seguridad computacional, el proceso termina de forma forzada si se alcanza el número máximo de ciclos (iteraciones) configurado por el usuario (ej. 300 iteraciones).
+                </p>
+                <div style="margin-top: auto; font-size: 0.85rem; color: #F59E0B; font-weight: bold; font-family: 'Roboto Mono', monospace;">
+                    $$\text{Iteraciones} \ge \text{max\_iter}$$
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

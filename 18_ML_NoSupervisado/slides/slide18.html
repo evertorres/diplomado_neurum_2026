@@ -1,0 +1,37 @@
+<!-- Slide 18: Topic Modeling - LDA -->
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Topic Modeling: Latent Dirichlet Allocation (LDA)</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Operational Rules -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary);">
+                    LDA es un modelo probabilístico generativo que asume que cada documento es una mezcla de temas latentes, y que cada tema es una mezcla de palabras.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white; padding: 12px 18px;">
+                    <h4 style="margin: 0 0 5px 0; color: var(--color-cta); font-size: 1.05rem; font-family: 'Exo', sans-serif;">📌 Reglas Fundamentales de LDA</h4>
+                    <ul style="font-size: 0.95rem; color: var(--color-secondary); padding-left: 20px; line-height: 1.6; margin: 0;">
+                        <li><strong>Definición de Temas:</strong> Se debe indicar la cantidad de temas (temáticas) a priori como parámetro de entrada.</li>
+                        <li><strong>Distribución de Documento:</strong> Cada documento puede tener asignados varios temas simultáneamente con diferentes proporciones (ej. 70% Medicina, 30% Computación).</li>
+                        <li><strong>Distribución de Temas:</strong> Cada tema está formado por un conjunto de palabras con diferentes pesos probabilísticos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right: LDA Plate Notation Image -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-md); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/LDA.png" alt="Modelo LDA" class="zoomable-image"
+                        style="max-width: 100%; max-height: 45vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; text-align: center; display: block; width: 100%;">
+                    Esquema del modelo probabilístico Latent Dirichlet Allocation (LDA).
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

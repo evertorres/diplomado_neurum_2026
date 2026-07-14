@@ -1,0 +1,36 @@
+<!-- Slide 04: Tipos de Clustering -->
+<section class="slide" id="slide04">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Tipos de Clustering</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: stretch; width: 100%;">
+            
+            <!-- Left Column: Clustering Plano -->
+            <div class="concept-card" style="display: flex; flex-direction: column; gap: var(--space-md); background: white; padding: var(--space-lg); border-top: 5px solid var(--color-cta);">
+                <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0; color: var(--color-cta); font-family: 'Exo', sans-serif;">📍 Clustering Plano (Flat)</h3>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Divide el conjunto de datos directamente en $K$ subgrupos disjuntos y no solapados. No existe ninguna estructura de relación o jerarquía entre los grupos resultantes.
+                </p>
+                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background: #F8FAFC; border-radius: 8px; padding: 10px; margin-top: 10px; border: 1px dashed #E2E8F0;">
+                    <img src="images/clustering_representation.png" alt="Clustering Plano" 
+                        style="max-width: 100%; max-height: 25vh; object-fit: contain; border-radius: 6px;">
+                </div>
+                <span style="font-size: 0.8rem; color: var(--color-secondary); font-style: italic; text-align: center;">Ejemplo típico: K-means.</span>
+            </div>
+
+            <!-- Right Column: Clustering Jerárquico -->
+            <div class="concept-card" style="display: flex; flex-direction: column; gap: var(--space-md); background: white; padding: var(--space-lg); border-top: 5px solid #10B981;">
+                <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0; color: #10B981; font-family: 'Exo', sans-serif;">🌳 Clustering Jerárquico</h3>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Construye una estructura en forma de árbol (dendrograma) uniendo o dividiendo clústeres de forma sucesiva. Permite explorar agrupamientos a múltiples niveles de resolución.
+                </p>
+                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background: #F8FAFC; border-radius: 8px; padding: 10px; margin-top: 10px; border: 1px dashed #E2E8F0;">
+                    <img src="images/clustering_jerarquico.png" alt="Clustering Jerárquico" 
+                        style="max-width: 100%; max-height: 25vh; object-fit: contain; border-radius: 6px;">
+                </div>
+                <span style="font-size: 0.8rem; color: var(--color-secondary); font-style: italic; text-align: center;">Dendrograma de agrupaciones de A a F (Step 5 a Step 1).</span>
+            </div>
+
+        </div>
+    </div>
+</section>

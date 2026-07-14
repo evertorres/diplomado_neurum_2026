@@ -1,0 +1,61 @@
+<!-- Slide 08: ¿Qué hace a los documentos relacionados? -->
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">¿Qué hace a los documentos "relacionados"?</h2>
+        
+        <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Para que un computador agrupe textos, debemos traducir la noción humana de "afinidad temática" en operaciones cuantitativas.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xl); align-items: center; width: 100%;">
+            
+            <!-- Left: Comparison Table -->
+            <div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Aspecto</th>
+                            <th style="background-color: #3F3F46; color: white;">Similitud Semántica (Ideal)</th>
+                            <th style="background-color: var(--color-cta); color: white;">Similitud Estadística (Práctico)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fundamento</strong></td>
+                            <td>Basado en el significado real, contexto, sinónimos y relaciones conceptuales del lenguaje humano.</td>
+                            <td>Basado en la frecuencia de co-ocurrencia de palabras clave y patrones de distribución numérica de términos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Representación</strong></td>
+                            <td>Modelos semánticos complejos, ontologías y grandes modelos de lenguaje (LLM).</td>
+                            <td>Representación de documentos como vectores en un espacio de características de alta dimensionalidad.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cómputo</strong></td>
+                            <td>Complejo, requiere gran capacidad de cómputo y conocimiento contextual del dominio.</td>
+                            <td>Sencillo y rápido mediante operaciones algebraicas lineales estándar (distancias vectoriales).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Right: Concept Card -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white;">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">💡 Enfoque Práctico</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Los algoritmos de aprendizaje automático operan de forma mucho más natural y eficiente optimizando <strong>métricas de distancia geométrica</strong> en lugar de analizar significados lingüísticos directos.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-primary); background-color: white;">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">📐 Espacio Vectorial</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Cada documento único se mapea como un vector $\vec{d}$. La cercanía geométrica entre vectores en este espacio es el indicador estadístico de afinidad del contenido.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

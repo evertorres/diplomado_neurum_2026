@@ -1,0 +1,48 @@
+<!-- Slide 26: Paso 3 - Valores y Vectores Propios -->
+<section class="slide" id="slide26">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Paso 3: Valores y vectores propios</h2>
+        
+        <div style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-xl); margin-top: var(--space-xs); align-items: center; width: 100%;">
+            
+            <!-- Left: Explanation & Numeric Values -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                    Calculamos la descomposición espectral de la matriz de covarianza para obtener sus ejes de simetría geométrica:
+                </p>
+
+                <!-- Eigenvector Rojo (PC1) -->
+                <div class="concept-card" style="border-left: 5px solid #EF4444; background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: #EF4444; font-size: 1.05rem; font-family: 'Exo', sans-serif;">🔴 Vector Propio Principal (PC1)</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin-bottom: 6px; line-height: 1.4;">
+                        Apunta en la dirección de máxima dispersión de los datos.
+                    </p>
+                    <code style="font-size: 0.85rem; font-weight: bold; color: var(--color-primary);">Vector: [-0.7071, -0.7071]</code><br>
+                    <code style="font-size: 0.85rem; font-weight: bold; color: #EF4444;">Valor Propio (Varianza): 1.9438</code>
+                </div>
+
+                <!-- Eigenvector Azul (PC2) -->
+                <div class="concept-card" style="border-left: 5px solid #2563EB; background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: #2563EB; font-size: 1.05rem; font-family: 'Exo', sans-serif;">🔵 Vector Propio Secundario (PC2)</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin-bottom: 6px; line-height: 1.4;">
+                        Apunta ortogonalmente al PC1, absorbiendo la dispersión remanente.
+                    </p>
+                    <code style="font-size: 0.85rem; font-weight: bold; color: var(--color-primary);">Vector: [-0.7071,  0.7071]</code><br>
+                    <code style="font-size: 0.85rem; font-weight: bold; color: #2563EB;">Valor Propio (Varianza): 0.1615</code>
+                </div>
+            </div>
+
+            <!-- Right: Eigenvectors Graph -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/intuicion4.png" alt="Vectores Propios en el Plano" class="zoomable-image"
+                        style="max-width: 100%; max-height: 40vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.78rem; font-family: 'Roboto Mono', monospace; text-align: center;">
+                    Visualización de los vectores propios Rojo (PC1) y Azul (PC2) superpuestos sobre los datos.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

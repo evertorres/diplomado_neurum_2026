@@ -1,0 +1,73 @@
+<!-- Slide 02: Aprendizaje No Supervisado -->
+<section class="slide" id="slide02">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Aprendizaje No Supervisado: Agrupamiento</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left Column: Context -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary);">
+                    A diferencia del aprendizaje supervisado, aquí no disponemos de etiquetas de salida ($y$). El objetivo es encontrar patrones y estructuras ocultas directamente desde los datos de entrada.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: #F8FAFC;">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🎯 Agrupamiento / Clustering</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Consiste en organizar una población de datos heterogénea en un número de grupos o "clústeres" homogéneos, donde los elementos de un mismo grupo comparten características similares.
+                    </p>
+                </div>
+
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: var(--space-md); box-shadow: var(--shadow-sm);">
+                    <h4 style="margin: 0 0 8px 0; font-size: 1rem; color: var(--color-primary); font-family: 'Exo', sans-serif;">Ejemplo: Tabla de Datos Médicos (Sin Etiquetas)</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #E2E8F0; color: var(--color-primary);">
+                                <th style="padding: 6px;">Edad</th>
+                                <th style="padding: 6px;">IMC</th>
+                                <th style="padding: 6px;">Glucosa</th>
+                                <th style="padding: 6px;">HbA1c (%)</th>
+                                <th style="padding: 6px;">Historial Fam.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #F1F5F9;">
+                                <td style="padding: 6px;">45</td>
+                                <td style="padding: 6px;">28.4</td>
+                                <td style="padding: 6px;">115</td>
+                                <td style="padding: 6px;">5.8</td>
+                                <td style="padding: 6px;">Sí</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #F1F5F9;">
+                                <td style="padding: 6px;">32</td>
+                                <td style="padding: 6px;">22.1</td>
+                                <td style="padding: 6px;">88</td>
+                                <td style="padding: 6px;">5.1</td>
+                                <td style="padding: 6px;">No</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #F1F5F9;">
+                                <td style="padding: 6px;">58</td>
+                                <td style="padding: 6px;">31.2</td>
+                                <td style="padding: 6px;">142</td>
+                                <td style="padding: 6px;">6.7</td>
+                                <td style="padding: 6px;">Sí</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Column: Visualization -->
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-md); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/clustering_representation.png" alt="Agrupamiento de Datos" class="zoomable-image"
+                        style="max-width: 100%; max-height: 45vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Visualización de datos agrupados automáticamente en tres clústeres (Amarillo, Rojo, Azul).
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+<!-- Slide 06: El problema del clustering -->
+<section class="slide" id="slide06">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">El problema del clustering</h2>
+        
+        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: var(--space-lg);">
+            Definición formal del agrupamiento de datos desde una perspectiva de particionamiento conjuntista:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: start; width: 100%;">
+            
+            <!-- Left: Inputs (Dado) -->
+            <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin: 0; color: var(--color-cta); font-family: 'Exo', sans-serif;">📥 Entrada (Datos y Parámetros)</h3>
+                <ul style="font-size: 1rem; color: var(--color-secondary); padding-left: 20px; line-height: 1.7; margin: 0;">
+                    <li><strong>Conjunto de Documentos:</strong>
+                        <div class="equation-block" style="font-size: 1.1rem; padding: 6px 12px; margin: 5px 0;">
+                            $$D = \{d_1, d_2, d_3, \dots, d_n\}$$
+                        </div>
+                    </li>
+                    <li>Una <strong>medida de distancia</strong> (o métrica de similitud) bien definida para comparar cualquier par $(d_i, d_j)$.</li>
+                    <li>Un <strong>criterio de partición</strong> que defina qué constituye un "buen" agrupamiento.</li>
+                </ul>
+            </div>
+
+            <!-- Right: Outputs (Computar) -->
+            <div class="concept-card" style="border-left: 5px solid #10B981; background-color: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin: 0; color: #10B981; font-family: 'Exo', sans-serif;">⚙️ Objetivo (Función a Computar)</h3>
+                <p style="font-size: 1rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    Encontrar una <strong>función de asignación</strong> $\gamma$ que mapee cada documento a una etiqueta de clúster:
+                </p>
+                <div class="equation-block" style="font-size: 1.25rem; text-align: center; border-left: 4px solid #10B981; padding: 8px; margin: 5px 0;">
+                    $$\gamma : D \rightarrow \{1, 2, \dots, K\}$$
+                </div>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Bajo las condiciones de que:
+                </p>
+                <ul style="font-size: 0.95rem; color: var(--color-secondary); padding-left: 20px; line-height: 1.5; margin: 0;">
+                    <li>Ningún clúster final esté vacío: $\forall k \in \{1,\dots,K\}, \exists d \in D \text{ tal que } \gamma(d) = k$.</li>
+                    <li>Se optimice el criterio de partición respecto a la similitud elegida.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>

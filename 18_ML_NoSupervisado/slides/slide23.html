@@ -1,0 +1,42 @@
+<!-- Slide 23: Intuición PCA -->
+<section class="slide" id="slide23">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">PCA: Intuición Geométrica</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Case study introduction -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary);">
+                    Supongamos un escenario clínico donde medimos dos variables fisiológicas en pacientes: <strong>Nivel de Glucosa</strong> (mg/dL) y <strong>Presión Arterial</strong> (mmHg).
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white;">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">📈 Correlación de Variables</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Los puntos exhiben una correlación positiva clara: cuando la glucosa aumenta, la presión también tiende a subir. Ambas variables contienen información parcialmente redundante.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-primary); background-color: white;">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">💡 Oportunidad de Compresión</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        ¿Podemos representar la variabilidad de este conjunto 2D usando un solo eje diagonal sin perder información valiosa? Este es el núcleo intuitivo de PCA.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Scatter Plot -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-md); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/intuicion1.png" alt="Relación Glucosa vs Presión" class="zoomable-image"
+                        style="max-width: 100%; max-height: 48vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; font-family: 'Roboto Mono', monospace; text-align: center;">
+                    Scatter plot que ilustra la correlación entre Nivel de Glucosa y Presión Arterial.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

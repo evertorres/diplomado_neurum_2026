@@ -1,0 +1,47 @@
+<!-- Slide 09: ¿Qué es un buen clusterizado? -->
+<section class="slide" id="slide09">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">¿Qué es un buen clusterizado?</h2>
+        
+        <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: var(--space-lg);">
+            La evaluación del agrupamiento es subjetiva pero se apoya en dos enfoques metodológicos estándar:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); width: 100%;">
+            
+            <!-- Internal Criteria -->
+            <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <h3 style="font-size: 1.30rem; font-weight: 700; margin: 0; color: var(--color-cta); font-family: 'Exo', sans-serif;">🛡️ Criterios Internos (Sin Etiquetas)</h3>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Evalúa la calidad del agrupamiento basándose únicamente en la geometría espacial del conjunto de datos original:
+                </p>
+                <div style="background: #F8FAFC; border-radius: 8px; padding: 12px; border: 1px solid #E2E8F0;">
+                    <ul style="font-size: 0.9rem; color: var(--color-secondary); padding-left: 20px; line-height: 1.6; margin: 0;">
+                        <li><strong>Alta Cohesión Intra-clase:</strong> La similitud de los elementos dentro del mismo clúster debe ser lo más alta posible (puntos muy juntos).</li>
+                        <li><strong>Alta Separación Inter-clase:</strong> La similitud de los elementos pertenecientes a clústeres diferentes debe ser lo más baja posible (grupos bien distanciados).</li>
+                    </ul>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--color-secondary); font-style: italic;">Ejemplos: Coeficiente de Silueta, Inercia, Índice Davies-Bouldin.</span>
+            </div>
+
+            <!-- External Criteria -->
+            <div class="concept-card" style="border-left: 5px solid #10B981; background-color: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <h3 style="font-size: 1.30rem; font-weight: 700; margin: 0; color: #10B981; font-family: 'Exo', sans-serif;">🌐 Criterios Externos (Con Etiquetas)</h3>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Evalúa la asignación del algoritmo frente a una estructura de etiquetas verdaderas conocida (Ground Truth) provista por expertos humanos:
+                </p>
+                <div style="background: #F8FAFC; border-radius: 8px; padding: 12px; border: 1px solid #E2E8F0;">
+                    <h4 style="margin: 0 0 6px 0; font-size: 0.95rem; color: var(--color-primary); font-family: 'Exo', sans-serif;">Métrica Clave: Pureza (Purity)</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Porcentaje de documentos correctamente asignados a la clase mayoritaria en cada clúster.
+                    </p>
+                    <div class="equation-block" style="font-size: 1rem; border-left: 4px solid #10B981; padding: 6px; margin: 8px 0 0 0; text-align: center;">
+                        $$\text{Purity}(C, L) = \frac{1}{N} \sum_{k} \max_{j} |c_k \cap l_j|$$
+                    </div>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--color-secondary); font-style: italic;">Donde $C$ son los clústeres calculados y $L$ son las clases reales.</span>
+            </div>
+
+        </div>
+    </div>
+</section>

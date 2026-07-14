@@ -1,0 +1,45 @@
+<!-- Slide 24: Paso 1 - Estandarización -->
+<section class="slide" id="slide24">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Paso 1: Estandarización de los datos</h2>
+        
+        <div style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-xl); margin-top: var(--space-xs); align-items: center; width: 100%;">
+            
+            <!-- Left: Estandarización explanation -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                    Las características suelen medirse en unidades totalmente distintas (ej. mg/dL de Glucosa vs. mmHg de Presión).
+                </p>
+
+                <div class="concept-card" style="border-left: 4px solid var(--color-cta); background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: var(--color-cta); font-size: 1rem; font-family: 'Exo', sans-serif;">⚠️ Sensibilidad a la Escala</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        PCA calcula las direcciones de máxima varianza basándose en magnitudes absolutas. Si no escalamos, la variable con el rango numérico mayor dominará artificialmente los componentes principales.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #10B981; background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: #10B981; font-size: 1rem; font-family: 'Exo', sans-serif;">⚙️ Normalización Z-score</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin-bottom: 6px; line-height: 1.4;">
+                        Transformamos cada característica restándole su media ($\mu$) y dividiéndola por su desviación estándar ($\sigma$):
+                    </p>
+                    <div class="equation-block" style="text-align: center; font-size: 1.15rem; padding: 6px; margin: 0;">
+                        $$z = \frac{x - \mu}{\sigma}$$
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Original vs Standardized Plot -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/intuicion2.png" alt="Estandarización de Datos" class="zoomable-image"
+                        style="max-width: 100%; max-height: 40vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.78rem; font-family: 'Roboto Mono', monospace; text-align: center;">
+                    Comparación: Datos originales (izquierda) vs. datos estandarizados centrados en (0,0) (derecha).
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

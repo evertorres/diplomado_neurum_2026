@@ -1,0 +1,42 @@
+<!-- Slide 22: Varianza y Proyección (PCA) -->
+<section class="slide" id="slide22">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Valores, vectores propios y covarianza</h2>
+        
+        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: var(--space-xl); max-width: 1000px;">
+            El Análisis de Componentes Principales (PCA) es una técnica lineal que simplifica la complejidad de los datos proyectándolos a una menor dimensión.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); width: 100%;">
+            
+            <!-- Principle 1: Varianza -->
+            <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="font-size: 1.4rem; color: var(--color-cta); font-weight: bold; font-family: 'Exo', sans-serif;">🎯 Objetivo: Maximizar la Varianza</div>
+                <p style="font-size: 1rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    PCA busca activamente una dirección o eje de proyección donde los datos muestren la <strong>mayor varianza posible</strong>.
+                </p>
+                <div style="background: #F8FAFC; border-radius: 8px; padding: 12px; border: 1px solid #E2E8F0; margin-top: 10px;">
+                    <h4 style="margin: 0 0 6px 0; font-size: 0.95rem; color: var(--color-primary); font-family: 'Exo', sans-serif;">Pregunta clave:</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); font-style: italic; margin: 0; line-height: 1.5;">
+                        ¿Dónde quedarían los puntos más dispersos al proyectarse en una línea? Quedan en el eje de <strong>mayor varianza</strong>, que es donde mejor se conserva la separación física y la información original.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Principle 2: Fórmula Varianza -->
+            <div class="concept-card" style="border-left: 5px solid #10B981; background-color: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="font-size: 1.4rem; color: #10B981; font-weight: bold; font-family: 'Exo', sans-serif;">📊 Conservación de la Información</div>
+                <p style="font-size: 1rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    La varianza es la métrica estadística directa de la dispersión de una característica:
+                </p>
+                <div class="equation-block" style="font-size: 1.3rem; text-align: center; border-left: 4px solid #10B981; padding: 12px; margin: 10px 0;">
+                    $$s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2$$
+                </div>
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Al proyectar datos correlacionados sobre los ejes principales, logramos descartar las direcciones con menor varianza (ruido o información redundante) con una pérdida mínima de información.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>

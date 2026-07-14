@@ -1,0 +1,49 @@
+<!-- Slide 05: Conceptos de Clustering -->
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Conceptos de Clustering</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left Column: Key Principles -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary);">
+                    El agrupamiento se fundamenta en la cuantificación matemática de la cercanía entre los datos.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: #F8FAFC;">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">📏 Medidas de Distancia</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Una métrica o medida de distancia determina de forma matemática qué tan "similares" o "distantes" son dos observaciones en el espacio de características. A menor distancia, mayor similitud.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid #10B981; background-color: #F8FAFC;">
+                    <h4 style="margin: 0 0 6px 0; color: #10B981; font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🎯 Relación Intra-grupo</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Los objetos asignados a un mismo grupo deben ser altamente similares o estar fuertemente relacionados entre ellos (alta cohesión interna).
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid #F59E0B; background-color: #F8FAFC;">
+                    <h4 style="margin: 0 0 6px 0; color: #F59E0B; font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">📍 Noción de Centroide</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Muchos algoritmos representan cada clúster mediante un "punto medio" o centroide que resume las características promedio del grupo completo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Visualization -->
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-md); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/clustering_representation2.png" alt="Centroides y Clústeres" class="zoomable-image"
+                        style="max-width: 100%; max-height: 45vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Ejemplo de tres grupos con sus respectivos centroides (marcados con 'X').
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

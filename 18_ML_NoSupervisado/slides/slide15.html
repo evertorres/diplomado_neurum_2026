@@ -1,0 +1,85 @@
+<!-- Slide 15: Algoritmo K-means completo (Pasos 1-5) -->
+<section class="slide" id="slide15">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">El Algoritmo K-means paso a paso</h2>
+        
+        <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Sequential step explanations -->
+            <div style="display: flex; flex-direction: column; gap: 8px; min-height: 480px; justify-content: center;">
+                
+                <!-- Paso 1 (Siempre visible) -->
+                <div class="concept-card" style="border-left: 4px solid var(--color-primary); padding: 8px 12px; background: white;">
+                    <h4 style="margin: 0 0 3px 0; color: var(--color-primary); font-size: 0.92rem; font-family: 'Exo', sans-serif;">Paso 1: Elección del número de clústeres ($k$)</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        Se define el número de grupos deseado. En este ejemplo, fijamos $k = 2$. Todos los puntos inician sin clasificar (gris).
+                    </p>
+                </div>
+
+                <!-- Paso 2 (Fragment Index 1) -->
+                <div class="concept-card fragment" data-fragment-index="1" style="border-left: 4px solid var(--color-cta); padding: 8px 12px; background: white;">
+                    <h4 style="margin: 0 0 3px 0; color: var(--color-cta); font-size: 0.92rem; font-family: 'Exo', sans-serif;">Paso 2: Inicializar coordenadas de los centroides</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        Se seleccionan aleatoriamente $k$ centroides iniciales (semillas en Rojo y Verde) que actuarán como centros de atracción.
+                    </p>
+                </div>
+
+                <!-- Paso 3 (Fragment Index 2) -->
+                <div class="concept-card fragment" data-fragment-index="2" style="border-left: 4px solid #10B981; padding: 8px 12px; background: white;">
+                    <h4 style="margin: 0 0 3px 0; color: #10B981; font-size: 0.92rem; font-family: 'Exo', sans-serif;">Paso 3: Asignar puntos al clúster más cercano</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        Cada punto de datos se asocia al centroide más cercano en base a su distancia euclidiana, tomando el color del grupo correspondiente.
+                    </p>
+                </div>
+
+                <!-- Paso 4 (Fragment Index 3) -->
+                <div class="concept-card fragment" data-fragment-index="3" style="border-left: 4px solid #F59E0B; padding: 8px 12px; background: white;">
+                    <h4 style="margin: 0 0 3px 0; color: #F59E0B; font-size: 0.92rem; font-family: 'Exo', sans-serif;">Paso 4: Recalcular centroides de los clústeres</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        Se recalcula el centro de gravedad (media) de todos los puntos asignados a cada grupo y los centroides se mueven a esa nueva posición.
+                    </p>
+                </div>
+
+                <!-- Paso 5 (Fragment Index 4) -->
+                <div class="concept-card fragment" data-fragment-index="4" style="border-left: 4px solid #8B5CF6; padding: 8px 12px; background: white;">
+                    <h4 style="margin: 0 0 3px 0; color: #8B5CF6; font-size: 0.92rem; font-family: 'Exo', sans-serif;">Paso 5: Repetición y convergencia</h4>
+                    <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        Se repiten las fases de asignación y actualización cíclicamente hasta que los centroides se vuelven estables (no hay más cambios en los grupos).
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right: Interactive transitioning images -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%;">
+                <div style="position: relative; width: 100%; height: 480px; background: white; border: 1px solid #E2E8F0; border-radius: 16px; box-shadow: var(--shadow-md); overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                    
+                    <!-- Imagen Paso 1 (Fondo siempre visible) -->
+                    <img src="images/kmeans1.png" alt="K-means Paso 1" 
+                        style="position: absolute; max-width: 90%; max-height: 90%; object-fit: contain; z-index: 1;">
+                    
+                    <!-- Imagen Paso 2 -->
+                    <img src="images/kmeans2.png" alt="K-means Paso 2" class="fragment" data-fragment-index="1"
+                        style="position: absolute; max-width: 90%; max-height: 90%; object-fit: contain; z-index: 2; background: white;">
+
+                    <!-- Imagen Paso 3 -->
+                    <img src="images/kmeans3.png" alt="K-means Paso 3" class="fragment" data-fragment-index="2"
+                        style="position: absolute; max-width: 90%; max-height: 90%; object-fit: contain; z-index: 3; background: white;">
+
+                    <!-- Imagen Paso 4 -->
+                    <img src="images/kmeans4.png" alt="K-means Paso 4" class="fragment" data-fragment-index="3"
+                        style="position: absolute; max-width: 90%; max-height: 90%; object-fit: contain; z-index: 4; background: white;">
+
+                    <!-- Imagen Paso 5 -->
+                    <img src="images/kmeans5.png" alt="K-means Paso 5" class="fragment" data-fragment-index="4"
+                        style="position: absolute; max-width: 90%; max-height: 90%; object-fit: contain; z-index: 5; background: white;">
+
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; font-family: 'Roboto Mono', monospace; text-align: center;">
+                    Usa las flechas de navegación para ver el ciclo evolutivo de K-means.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

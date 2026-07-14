@@ -1,0 +1,70 @@
+<!-- Slide 12: Función Objetivo -->
+<section class="slide" id="slide12">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Función Objetivo</h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left Column: Concepts -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary);">
+                    El clustering no es un proceso de emparejamiento simple; matemáticamente se define como un <strong>problema de búsqueda y optimización</strong>.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white; padding: var(--space-md);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🎯 Optimización de una Métrica</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        El algoritmo busca una asignación de partición que minimice una función de costo de distorsión (ej. la suma de distancias al cuadrado al centroide respectivo).
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid #F59E0B; background-color: white; padding: var(--space-md);">
+                    <h4 style="margin: 0 0 6px 0; color: #F59E0B; font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">⚠️ El Peligro de los Mínimos Locales</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Al ser un problema de optimización no convexo, la función objetivo suele poseer múltiples <strong>mínimos locales</strong>. Diferentes configuraciones de inicio aleatorio (semillas) pueden llevar a resultados finales de agrupación muy divergentes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Optimization Landscape SVG -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-lg); box-shadow: var(--shadow-md); width: 100%; display: flex; justify-content: center;">
+                    <svg viewBox="0 0 400 250" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Roboto Mono', monospace;">
+                        <!-- Axes -->
+                        <line x1="40" y1="20" x2="40" y2="220" stroke="#475569" stroke-width="2" />
+                        <line x1="40" y1="220" x2="380" y2="220" stroke="#475569" stroke-width="2" />
+                        
+                        <!-- Axis Labels -->
+                        <text x="300" y="240" font-size="11" fill="#475569" font-weight="600">Espacio de Particiones</text>
+                        <text x="15" y="15" font-size="11" fill="#475569" font-weight="600">Costo (J)</text>
+
+                        <!-- Objective Function Curve (Non-convex) -->
+                        <path d="M 50 50 C 90 60, 100 180, 130 180 C 160 180, 180 80, 220 80 C 260 80, 270 210, 300 210 C 330 210, 350 110, 370 70" 
+                            fill="none" stroke="var(--color-cta)" stroke-width="3" />
+
+                        <!-- Local Minimum 1 -->
+                        <circle cx="130" cy="180" r="6" fill="#F59E0B" />
+                        <text x="130" y="165" font-size="10" fill="#D97706" font-weight="bold" text-anchor="middle">Mínimo Local</text>
+                        
+                        <!-- Global Minimum -->
+                        <circle cx="300" cy="210" r="6" fill="#10B981" />
+                        <text x="300" y="195" font-size="10" fill="#059669" font-weight="bold" text-anchor="middle">Mínimo Global (Óptimo)</text>
+
+                        <!-- Starting point markers -->
+                        <circle cx="70" cy="53" r="5" fill="#EF4444" />
+                        <path d="M 70 53 Q 100 100, 130 180" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="3 3" />
+                        <text x="65" y="42" font-size="9" fill="#EF4444" font-weight="bold">Semilla A</text>
+
+                        <circle cx="240" cy="115" r="5" fill="#EF4444" />
+                        <path d="M 240 115 Q 270 170, 300 210" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="3 3" />
+                        <text x="245" y="105" font-size="9" fill="#EF4444" font-weight="bold">Semilla B</text>
+                    </svg>
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; text-align: center;">
+                    Ilustración del paisaje de optimización. Diferentes inicializaciones convergen a distintos mínimos.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

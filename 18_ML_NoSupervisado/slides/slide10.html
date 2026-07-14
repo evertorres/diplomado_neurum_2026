@@ -1,0 +1,78 @@
+<!-- Slide 10: Distancia Euclidiana -->
+<section class="slide" id="slide10">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Similitud Estadística: Distancia Euclidiana</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-md); align-items: center; width: 100%;">
+            
+            <!-- Left: Formula and Context -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary);">
+                    Es la métrica de distancia más intuitiva. Mide la longitud del segmento de recta que une directamente dos puntos en un espacio euclidiano multidimensional.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white; padding: var(--space-md);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">🧮 Ecuación Matemática</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin-bottom: 8px;">
+                        Para dos vectores $\vec{v}$ y $\vec{w}$ en un espacio de $n$ dimensiones:
+                    </p>
+                    <div class="equation-block" style="text-align: center; font-size: 1.3rem; padding: 12px; margin: 0;">
+                        $$d(\vec{v}, \vec{w}) = \sqrt{\sum_{i=1}^n (v_i - w_i)^2} = \|\vec{v} - \vec{w}\|$$
+                    </div>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-primary); background-color: white; padding: var(--space-md);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-primary); font-size: 1.1rem; font-weight: 700; font-family: 'Exo', sans-serif;">💡 Propiedad Clave</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Es altamente sensible a diferencias en las magnitudes absolutas de las características, por lo que exige un preprocesamiento cuidadoso (como la estandarización o normalización de vectores).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: SVG Geometry Diagram -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-sm);">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-lg); box-shadow: var(--shadow-md); width: 100%; display: flex; justify-content: center;">
+                    <svg viewBox="0 0 400 300" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Roboto Mono', monospace;">
+                        <!-- Grid Lines -->
+                        <line x1="50" y1="250" x2="350" y2="250" stroke="#CBD5E1" stroke-width="1.5" />
+                        <line x1="50" y1="50" x2="50" y2="250" stroke="#CBD5E1" stroke-width="1.5" />
+                        
+                        <!-- Axis Labels -->
+                        <text x="345" y="270" font-size="12" fill="#4B5563" font-weight="600">Eje X</text>
+                        <text x="25" y="60" font-size="12" fill="#4B5563" font-weight="600">Eje Y</text>
+
+                        <!-- Right Angle Triangle -->
+                        <!-- Points A(100, 200) and B(280, 80) -->
+                        <line x1="100" y1="200" x2="280" y2="200" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 4" />
+                        <line x1="280" y1="200" x2="280" y2="80" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 4" />
+                        
+                        <!-- Hypotenuse -->
+                        <line x1="100" y1="200" x2="280" y2="80" stroke="var(--color-cta)" stroke-width="3" />
+
+                        <!-- Right-angle marker -->
+                        <path d="M 270 200 L 270 190 L 280 190" fill="none" stroke="#94A3B8" stroke-width="1.5" />
+
+                        <!-- Points -->
+                        <circle cx="100" cy="200" r="6" fill="var(--color-primary)" />
+                        <circle cx="280" cy="80" r="6" fill="var(--color-primary)" />
+
+                        <!-- Labels -->
+                        <text x="80" y="225" font-size="13" font-weight="bold" fill="var(--color-primary)">P1 (x₁, y₁)</text>
+                        <text x="270" y="65" font-size="13" font-weight="bold" fill="var(--color-primary)">P2 (x₂, y₂)</text>
+
+                        <!-- Math indicators -->
+                        <text x="190" y="220" font-size="12" fill="#475569" text-anchor="middle" font-weight="600">x₂ - x₁</text>
+                        <text x="300" y="145" font-size="12" fill="#475569" font-weight="600">y₂ - y₁</text>
+                        
+                        <!-- Distance label along hypotenuse -->
+                        <text x="175" y="125" font-size="14" font-weight="bold" fill="var(--color-cta)" transform="rotate(-33 175 125)">d = √((x₂-x₁)² + (y₂-y₁)²)</text>
+                    </svg>
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; text-align: center;">
+                    Interpretación en 2D basada en el Teorema de Pitágoras.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

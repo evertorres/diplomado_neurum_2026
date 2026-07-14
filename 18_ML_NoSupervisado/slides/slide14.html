@@ -1,0 +1,49 @@
+<!-- Slide 14: Algoritmos de clústering -->
+<section class="slide" id="slide14">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Algoritmos de clústering</h2>
+        
+        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: var(--space-xl); max-width: 1000px;">
+            Los métodos para agrupar datos se pueden agrupar en dos grandes familias de diseño algorítmico:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); width: 100%;">
+            
+            <!-- Family 1: Partición -->
+            <div class="concept-card" style="border-top: 5px solid var(--color-cta); background-color: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="font-size: 2.2rem; color: var(--color-cta); font-weight: bold;">1. Algoritmos de Partición</div>
+                
+                <p style="font-size: 1rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    Estos algoritmos dividen directamente el conjunto de datos en un número prefijado $K$ de grupos individuales disjuntos.
+                </p>
+
+                <div style="background: #F8FAFC; border-radius: 8px; padding: var(--space-md); border: 1px dashed #E2E8F0;">
+                    <h4 style="margin: 0 0 6px 0; font-size: 1.05rem; color: var(--color-primary); font-family: 'Exo', sans-serif;">🔄 Flujo de Trabajo:</h4>
+                    <ul style="font-size: 0.95rem; color: var(--color-secondary); padding-left: 20px; line-height: 1.5; margin: 0;">
+                        <li>Comienzan con una asignación o inicialización aleatoria de clústeres.</li>
+                        <li>Refinan la partición de forma iterativa y heurística hasta converger.</li>
+                        <li><strong>Algoritmo destacado:</strong> K-means.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Family 2: Jerárquico -->
+            <div class="concept-card" style="border-top: 5px solid #10B981; background-color: white; padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md);">
+                <div style="font-size: 2.2rem; color: #10B981; font-weight: bold;">2. Algoritmos Jerárquicos</div>
+                
+                <p style="font-size: 1rem; color: var(--color-secondary); line-height: 1.6; margin: 0;">
+                    Construyen árboles estructurados (dendrogramas) uniendo elementos recursivamente o separándolos.
+                </p>
+
+                <div style="background: #F8FAFC; border-radius: 8px; padding: var(--space-md); border: 1px dashed #E2E8F0;">
+                    <h4 style="margin: 0 0 6px 0; font-size: 1.05rem; color: var(--color-primary); font-family: 'Exo', sans-serif;">↕️ Dos Direcciones Posibles:</h4>
+                    <ul style="font-size: 0.95rem; color: var(--color-secondary); padding-left: 20px; line-height: 1.5; margin: 0;">
+                        <li><strong>Aglomerativos (Bottom-up):</strong> Comienzan asumiendo que cada punto es su propio clúster individual y los van fusionando según similitud.</li>
+                        <li><strong>Divisivos (Top-down):</strong> Comienzan con un solo clúster que contiene toda la muestra y lo van partiendo sucesivamente.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

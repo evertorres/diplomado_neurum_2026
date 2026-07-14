@@ -1,0 +1,47 @@
+<!-- Slide 27: Paso 4 - Proyección -->
+<section class="slide" id="slide27">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Paso 4: Proyección</h2>
+        
+        <div style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-xl); margin-top: var(--space-xs); align-items: center; width: 100%;">
+            
+            <!-- Left: Projection math & Dimensionality reduction results -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <p style="font-size: 1rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                    El último paso consiste en proyectar matemáticamente los datos originales hacia el nuevo sistema de coordenadas.
+                </p>
+
+                <!-- Projecting -->
+                <div class="concept-card" style="border-left: 4px solid var(--color-cta); background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: var(--color-cta); font-size: 1.05rem; font-family: 'Exo', sans-serif;">🛠️ Transformación Lineal</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        Multiplicamos la matriz de datos estandarizados por los vectores propios seleccionados para rotar los ejes y descorrelacionar las variables.
+                    </p>
+                </div>
+
+                <!-- Reducing -->
+                <div class="concept-card" style="border-left: 4px solid #10B981; background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: #10B981; font-size: 1.05rem; font-family: 'Exo', sans-serif;">📉 Compresión Dimensional (2D $\rightarrow$ 1D)</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        Descartamos la dimensión del vector propio azul (PC2) por tener muy bajo valor propio ($0.1615$). Conservamos únicamente la proyección sobre el eje rojo (PC1).
+                    </p>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); font-weight: bold; margin-top: 6px; line-height: 1.4;">
+                        ¡Retenemos el 92.3% de la información (varianza total) usando la mitad de las variables!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Projected points plot -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-sm); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/intuicion5.png" alt="Proyección PCA" class="zoomable-image"
+                        style="max-width: 100%; max-height: 40vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.78rem; font-family: 'Roboto Mono', monospace; text-align: center;">
+                    Proyección de los puntos (morados) sobre PC1 (rojos, horizontal) y PC2 (azules, vertical).
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>

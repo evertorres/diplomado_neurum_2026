@@ -1,0 +1,49 @@
+<!-- Slide 11: Similitud Coseno -->
+<section class="slide" id="slide11">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">Similitud Estadística: Similitud Coseno</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-xl); margin-top: var(--space-xs); align-items: center; width: 100%;">
+            
+            <!-- Left: Formulas and details -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <p style="font-size: 0.98rem; line-height: 1.5; color: var(--color-secondary); margin: 0;">
+                    Mide el coseno del ángulo formado por dos vectores en un espacio multidimensional. Evalúa la <strong>orientación</strong> de los vectores, ignorando sus diferencias en magnitud absoluta.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: var(--color-cta); font-size: 1rem; font-family: 'Exo', sans-serif;">🧮 Ecuación del Producto Punto</h4>
+                    <div class="equation-block" style="text-align: center; font-size: 1.15rem; padding: 6px; margin: 0;">
+                        $$\vec{A} \cdot \vec{B} = \|\vec{A}\| \|\vec{B}\| \cos(\theta)$$
+                    </div>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid #10B981; background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: #10B981; font-size: 1rem; font-family: 'Exo', sans-serif;">⚙️ Métrica de Coseno</h4>
+                    <div class="equation-block" style="text-align: center; font-size: 1.1rem; padding: 6px; margin: 0;">
+                        $$\cos(\theta) = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\| \|\vec{B}\|} = \frac{\sum_{i=1}^n A_i B_i}{\sqrt{\sum_{i=1}^n A_i^2} \sqrt{\sum_{i=1}^n B_i^2}}$$
+                    </div>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid var(--color-primary); background-color: white; padding: 10px 16px;">
+                    <h4 style="margin: 0 0 4px 0; color: var(--color-primary); font-size: 1rem; font-family: 'Exo', sans-serif;">📝 Aplicación en Textos</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.4; margin: 0;">
+                        Es la métrica estándar para documentos de texto. Permite que un documento corto y un documento largo (que traten el mismo tema pero con frecuencias absolutas distintas) se consideren altamente similares.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Vector Angles Image -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-md); box-shadow: var(--shadow-md); width: 100%;">
+                    <img src="images/cosine_similarity_vectors.png" alt="Ángulos y Similitud Coseno" class="zoomable-image"
+                        style="max-width: 100%; max-height: 40vh; border-radius: 8px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+                <span class="text-muted" style="font-size: 0.8rem; font-family: 'Roboto Mono', monospace; text-align: center; display: block; width: 100%;">
+                    Comportamiento del Coseno según el ángulo $\theta$ entre los vectores.
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>
