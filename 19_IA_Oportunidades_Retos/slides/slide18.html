@@ -1,0 +1,60 @@
+<!-- Slide 18: Taxonomía de los LLMs -->
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">
+            Clasificación de Grandes Modelos (LLMs)
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            No todos los modelos de lenguaje de gran escala se diseñan de la misma manera. Dependiendo de las partes del Transformer original que utilicen, su aplicación médica difiere notablemente:
+        </p>
+
+        <!-- Executive Taxonomy Table -->
+        <table class="comparison-table" style="width: 100%; margin-top: var(--space-md);">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Tipo de Arquitectura</th>
+                    <th style="width: 45%;">Función Principal y Utilidad Clínica</th>
+                    <th style="width: 30%;">Modelos de Referencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <strong style="color: var(--color-cta); font-family: 'Exo', sans-serif; font-size: 1.1rem;">Codificadores</strong><br />
+                        <span style="font-size: 0.85rem; color: var(--color-secondary); font-family: 'Roboto Mono', monospace;">(Encoder-only)</span>
+                    </td>
+                    <td style="font-size: 0.95rem; line-height: 1.5;">
+                        Excelentes para comprender texto bidireccionalmente. Se usan en la <strong>clasificación de diagnósticos</strong>, extracción de entidades clínicas estructuradas (NER - Reconocimiento de Entidades Nombradas), y análisis de sentimientos en notas médicas.
+                    </td>
+                    <td style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem;">
+                        RoBERTa, DeBERTa, ALBERT, Clinical-BERT
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong style="color: #10B981; font-family: 'Exo', sans-serif; font-size: 1.1rem;">Decodificadores</strong><br />
+                        <span style="font-size: 0.85rem; color: var(--color-secondary); font-family: 'Roboto Mono', monospace;">(Decoder-only)</span>
+                    </td>
+                    <td style="font-size: 0.95rem; line-height: 1.5;">
+                        Especializados en la generación de texto autorregresiva (predicen la siguiente palabra de izquierda a derecha). Ideales para <strong>asistentes conversacionales (chatbots médicos)</strong>, redacción de informes médicos de alta y traducción de jerga médica a lenguaje paciente.
+                    </td>
+                    <td style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem;">
+                        GPT-3.5, GPT-4, LLaMA 3, Mistral, Meditron, Gemma
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong style="color: #8B5CF6; font-family: 'Exo', sans-serif; font-size: 1.1rem;">Híbridos</strong><br />
+                        <span style="font-size: 0.85rem; color: var(--color-secondary); font-family: 'Roboto Mono', monospace;">(Encoder-Decoder)</span>
+                    </td>
+                    <td style="font-size: 0.95rem; line-height: 1.5;">
+                        Combinan la codificación bidireccional del contexto y la decodificación generativa. Se emplean en la <strong>generación de resúmenes clínicos abstractivos</strong> complejos a partir de múltiples notas, traducción médica e interfaces de preguntas/respuestas interactivas.
+                    </td>
+                    <td style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem;">
+                        BART, T5, FLAN-T5, Clinical-T5
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

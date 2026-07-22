@@ -1,0 +1,87 @@
+<!-- Slide 08: Procesamiento de Lenguaje Natural (NLP) -->
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">
+            Procesamiento de Lenguaje Natural (NLP)
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            El Procesamiento del Lenguaje Natural (NLP) se sitúa en la intersección de la inteligencia artificial, el aprendizaje automático y la lingüística, abarcando tareas fundamentales de análisis y generación de texto.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            
+            <!-- Left Column: Tasks List -->
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                
+                <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #2563EB; border-radius: 8px; padding: 10px 16px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #2563EB; flex-shrink: 0;"></div>
+                    <span style="font-size: 1.05rem; font-weight: 600; color: var(--color-primary); font-family: 'Exo', sans-serif;">Clasificación de textos</span>
+                </div>
+
+                <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #06B6D4; border-radius: 8px; padding: 10px 16px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #06B6D4; flex-shrink: 0;"></div>
+                    <span style="font-size: 1.05rem; font-weight: 600; color: var(--color-primary); font-family: 'Exo', sans-serif;">Resúmenes de texto</span>
+                </div>
+
+                <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #10B981; border-radius: 8px; padding: 10px 16px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; flex-shrink: 0;"></div>
+                    <span style="font-size: 1.05rem; font-weight: 600; color: var(--color-primary); font-family: 'Exo', sans-serif;">Preguntas y Respuestas</span>
+                </div>
+
+                <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 10px 16px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #F59E0B; flex-shrink: 0;"></div>
+                    <span style="font-size: 1.05rem; font-weight: 600; color: var(--color-primary); font-family: 'Exo', sans-serif;">Reconocimiento de entidades nombradas (NER)</span>
+                </div>
+
+                <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #8B5CF6; border-radius: 8px; padding: 10px 16px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #8B5CF6; flex-shrink: 0;"></div>
+                    <span style="font-size: 1.05rem; font-weight: 600; color: var(--color-primary); font-family: 'Exo', sans-serif;">Similitud de frases</span>
+                </div>
+
+                <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #EC4899; border-radius: 8px; padding: 10px 16px; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #EC4899; flex-shrink: 0;"></div>
+                    <span style="font-size: 1.05rem; font-weight: 600; color: var(--color-primary); font-family: 'Exo', sans-serif;">Predicción - Autocorrección</span>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Venn Diagram in SVG -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: 16px; box-shadow: var(--shadow-sm); display: flex; justify-content: center; align-items: center; position: relative;">
+                <svg width="100%" height="380" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <style>
+                            .venn-circle {
+                                transition: transform 0.2s ease, opacity 0.2s ease;
+                                cursor: pointer;
+                            }
+                            .venn-circle:hover {
+                                opacity: 0.95;
+                            }
+                        </style>
+                    </defs>
+
+                    <!-- Outer Circle: AI -->
+                    <circle cx="230" cy="200" r="185" fill="#93C5FD" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5" class="venn-circle" />
+                    <text x="230" y="55" fill="#1E3A8A" font-size="16" font-family="'Exo', sans-serif" font-weight="800" text-anchor="middle">AI</text>
+
+                    <!-- Circle: ML -->
+                    <circle cx="205" cy="215" r="120" fill="#CBD5E1" fill-opacity="0.65" stroke="#94A3B8" stroke-width="1.5" class="venn-circle" />
+                    <text x="205" y="130" fill="#334155" font-size="14" font-family="'Exo', sans-serif" font-weight="800" text-anchor="middle">ML</text>
+
+                    <!-- Circle: DL -->
+                    <circle cx="230" cy="255" r="65" fill="#86EFAC" fill-opacity="0.7" stroke="#4ADE80" stroke-width="1.5" class="venn-circle" />
+                    <text x="230" y="220" fill="#14532D" font-size="13" font-family="'Exo', sans-serif" font-weight="800" text-anchor="middle">DL</text>
+
+                    <!-- Circle: NLP (Overlapping AI, ML, DL) -->
+                    <circle cx="325" cy="225" r="85" fill="#FDE047" fill-opacity="0.7" stroke="#EAB308" stroke-width="1.5" class="venn-circle" />
+                    <text x="325" y="185" fill="#713F12" font-size="15" font-family="'Exo', sans-serif" font-weight="800" text-anchor="middle">NLP</text>
+
+                    <!-- Circle: Lenguaje -->
+                    <circle cx="345" cy="285" r="60" fill="#FFEDD5" fill-opacity="0.3" stroke="#F97316" stroke-width="1.5" stroke-dasharray="3 3" class="venn-circle" />
+                    <text x="345" y="300" fill="#C2410C" font-size="12" font-family="'Exo', sans-serif" font-weight="600" text-anchor="middle">Lenguaje</text>
+                </svg>
+            </div>
+
+        </div>
+    </div>
+</section>

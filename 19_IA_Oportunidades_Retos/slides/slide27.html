@@ -1,0 +1,56 @@
+<!-- Slide 27: Privacidad de Datos Clínicos, OMOP CDM y Datos Sintéticos -->
+<section class="slide" id="slide27">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">
+            Privacidad de Datos: Aprendizaje Federado, OMOP CDM y Datos Sintéticos
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            <!-- Left Side: Explanation Cards -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                
+                <div class="concept-card" style="border-left: 5px solid #2563EB; padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 6px 0; color: #1E40AF; font-size: 1.15rem; font-weight: 700; font-family: 'Exo', sans-serif;">
+                        🌐 Aprendizaje Federado y Modelo OMOP CDM (OHDSI)
+                    </h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Estandariza historias clínicas heterogéneas en un modelo común de datos (OMOP). Permite ejecutar analítica avanzada y entrenar modelos mediante <strong>Aprendizaje Federado</strong> sin extraer ni exponer datos sensibles fuera de la institución médica.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 5px solid #10B981; padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 6px 0; color: #047857; font-size: 1.15rem; font-weight: 700; font-family: 'Exo', sans-serif;">
+                        🧬 Datos Sintéticos Realistas (Synthea)
+                    </h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Generadores de historias clínicas sintéticas como <em>Synthea</em> crean registros altamente realistas de pacientes virtuales con trayectorias médicas completas, garantizando cumplimiento estricto de regulaciones HIPAA/GDPR.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right Side: OMOP (Protagonist) + Synthea (Small badge) -->
+            <div style="display: flex; flex-direction: column; gap: 12px; width: 100%; height: 380px;">
+                
+                <!-- Main OMOP Image Container (Protagonist ~ 75% height) -->
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 10px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; overflow: hidden; position: relative;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #1E40AF; margin-bottom: 4px; font-family: 'Exo', sans-serif;">Aprendizaje Federado &amp; Modelo OMOP CDM</span>
+                    <img src="images/slide27_omop.jpg" alt="OMOP Common Data Model Architecture" class="zoomable-image" title="Haz clic para ampliar" style="max-width: 100%; max-height: 90%; object-fit: contain; display: block; border-radius: 6px; cursor: zoom-in;">
+                </div>
+
+                <!-- Secondary Synthea Container (Small ~ 25% height) -->
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 6px 14px; box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: space-between; height: 75px; overflow: hidden;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: #047857; font-family: 'Exo', sans-serif;">Datos Sintéticos</span>
+                    <img src="images/slide27_synthea.png" alt="Synthea Logo / Simulator" class="zoomable-image" title="Haz clic para ampliar" style="max-height: 55px; max-width: 180px; object-fit: contain; display: block; border-radius: 4px; cursor: zoom-in;">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Citation Reference Footnote -->
+        <div style="font-size: 0.78rem; color: var(--color-secondary); margin-top: var(--space-md); border-top: 1px solid #E2E8F0; padding-top: 6px; text-align: left;">
+            <em>Fuentes: OHDSI OMOP Common Data Model &amp; Synthea Synthetic Patient Population Simulator.</em>
+        </div>
+
+    </div>
+</section>

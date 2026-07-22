@@ -1,0 +1,48 @@
+<!-- Slide 15: Redes Neuronales Recurrentes (RNN) -->
+<section class="slide" id="slide15">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">
+            Redes Neuronales Recurrentes (RNN)
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Antes del advenimiento de los Transformers, las redes recurrentes procesaban el lenguaje paso a paso en el tiempo, enfrentando serias limitaciones estructurales.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            
+            <!-- Left Column: Key Limitations Text Cards -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+                
+                <!-- Limitation 1: Desvanecimiento de Memoria -->
+                <div class="concept-card" style="border-left: 5px solid #EF4444; padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 6px 0; color: #DC2626; font-size: 1.2rem; font-weight: 700; font-family: 'Exo', sans-serif; display: flex; align-items: center; gap: 8px;">
+                        <span>⚠️ Problemas desvanecimiento de memoria</span>
+                    </h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Fenómeno de <em>Vanishing Gradient</em>: A medida que la secuencia de texto se alarga, la señal del gradiente disminuye exponencialmente, perdiendo el contexto de las palabras iniciales.
+                    </p>
+                </div>
+
+                <!-- Limitation 2: No Paralelizable -->
+                <div class="concept-card" style="border-left: 5px solid #F59E0B; padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 6px 0; color: #D97706; font-size: 1.2rem; font-weight: 700; font-family: 'Exo', sans-serif; display: flex; align-items: center; gap: 8px;">
+                        <span>⚙️ Difícil de entrenar, no se puede paralelizar</span>
+                    </h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Dependencia temporal estricta ($t_1 \rightarrow t_2 \rightarrow t_3$). No es posible procesar las palabras simultáneamente, impidiendo aprovechar la potencia de cálculo en paralelo de las GPUs.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Prominent Animated GIF Container -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-md); box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center; height: 350px; overflow: hidden;">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-secondary); display: block; margin-bottom: 8px; font-family: 'Exo', sans-serif;">
+                    Procesamiento Secuencial Token por Token (RNN)
+                </span>
+                <img src="images/slide15_RNN.gif" alt="Animación Procesamiento RNN" class="zoomable-image" title="Haz clic para ampliar" style="max-width: 100%; max-height: 85%; object-fit: contain; display: block; border-radius: 8px; cursor: zoom-in;">
+            </div>
+
+        </div>
+    </div>
+</section>

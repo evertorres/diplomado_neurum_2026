@@ -1,0 +1,40 @@
+<!-- Slide 26: Seguridad y Envenenamiento de Datos -->
+<section class="slide" id="slide26">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">
+            Seguridad Clínica: Envenenamiento de Datos (Data Poisoning)
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            <!-- Left Side: Explanation Card -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary); margin: 0;">
+                    La vulnerabilidad de los LLMs ante la contaminación intencionada o accidental de sus conjuntos de datos de entrenamiento representa un riesgo de seguridad crítico.
+                </p>
+
+                <div class="concept-card" style="border-left: 5px solid #EF4444; padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 8px 0; color: #DC2626; font-size: 1.2rem; font-weight: 700; font-family: 'Exo', sans-serif;">
+                        🚨 Envenenamiento de Datos <a href="https://www.nature.com/articles/s41591-024-03445-1" target="_blank" rel="noopener" style="color: #DC2626; text-decoration: underline;">(Nature Medicine 2025)</a>
+                    </h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.6; margin: 0 0 10px 0;">
+                        Se demostró que inyectar apenas un <strong>0.1% de datos corruptos o maliciosos</strong> sobre inmunización en el set de entrenamiento destruye por completo la lógica de las recomendaciones clínicas del modelo.
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Documentos "envenenados" o modificados sutilmente pueden inducir alucinaciones diagnósticas o decisiones terapéuticas erróneas de alto impacto sin levantar sospechas a simple vista.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: Poisoned Files Image -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-md); box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center; height: 360px; overflow: hidden;">
+                <img src="images/slide26_poisonedfiles.png" alt="Envenenamiento de Archivos y Datos (Poisoned Files)" class="zoomable-image" title="Haz clic para ampliar" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; border-radius: 8px; cursor: zoom-in;">
+            </div>
+        </div>
+
+        <!-- Citation Reference Footnote -->
+        <div style="font-size: 0.78rem; color: var(--color-secondary); margin-top: var(--space-md); border-top: 1px solid #E2E8F0; padding-top: 6px; text-align: left;">
+            <em>Fuente: Alber, D. A., Yang, Z., Alyakin, A., Yang, E., Rai, S., Valliani, A. A., ... &amp; Oermann, E. K. (2025). Medical large language models are vulnerable to data-poisoning attacks. Nature Medicine, 31(2), 618-626. <a href="https://www.nature.com/articles/s41591-024-03445-1" target="_blank" rel="noopener" style="color: var(--color-cta); text-decoration: underline;">https://www.nature.com/articles/s41591-024-03445-1</a></em>
+        </div>
+
+    </div>
+</section>

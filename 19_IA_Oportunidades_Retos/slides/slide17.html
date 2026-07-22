@@ -1,0 +1,91 @@
+<!-- Slide 17: La Arquitectura Transformer -->
+<section class="slide" id="slide17">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">
+            El Poder de los Transformers
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--color-secondary); margin-bottom: var(--space-lg);">
+            En 2017, la publicación del artículo <a href="https://arxiv.org/abs/1706.03762" target="_blank" style="color: var(--color-cta); font-weight: 600; text-decoration: underline;"><em>"Attention is all you need"</em></a> marcó una revolución en NLP al reemplazar las redes recurrentes antiguas (RNN/LSTM) con tres innovaciones:
+        </p>
+
+        <div class="agenda-grid" style="grid-template-columns: repeat(3, 1fr); gap: var(--space-lg);">
+            <!-- Card 1: Paralelización -->
+            <div class="agenda-card" style="padding: var(--space-lg);">
+                <!-- Paralelización SVG Diagram -->
+                <svg width="100%" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: var(--space-md);">
+                    <!-- 3 parallel paths -->
+                    <line x1="20" y1="20" x2="180" y2="20" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" />
+                    <line x1="20" y1="40" x2="180" y2="40" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" />
+                    <line x1="20" y1="60" x2="180" y2="60" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" />
+                    <circle cx="50" cy="20" r="5" fill="white" stroke="#3B82F6" stroke-width="2" />
+                    <circle cx="90" cy="40" r="5" fill="white" stroke="#3B82F6" stroke-width="2" />
+                    <circle cx="130" cy="60" r="5" fill="white" stroke="#3B82F6" stroke-width="2" />
+                </svg>
+                <h3 style="font-size: 1.25rem; color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-xs); font-family: 'Exo', sans-serif;">
+                    1. Procesamiento en Paralelo
+                </h3>
+                <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.45; text-align: center;">
+                    Supera la secuencia temporal analizando oraciones completas a la vez. Esto optimiza radicalmente el entrenamiento con GPUs a escalas de trillones de palabras.
+                </p>
+            </div>
+
+            <!-- Card 2: Codificación Posicional -->
+            <div class="agenda-card" style="padding: var(--space-lg);">
+                <!-- Codificación Posicional SVG Diagram -->
+                <svg width="100%" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: var(--space-md);">
+                    <!-- Indexed sequence -->
+                    <rect x="20" y="25" width="30" height="30" rx="4" fill="#E6F4EA" stroke="#10B981" stroke-width="1.5" />
+                    <text x="35" y="44" fill="#047857" font-size="11" font-family="'Roboto Mono', monospace" font-weight="700" text-anchor="middle">t₁</text>
+
+                    <rect x="65" y="25" width="30" height="30" rx="4" fill="#E6F4EA" stroke="#10B981" stroke-width="1.5" />
+                    <text x="80" y="44" fill="#047857" font-size="11" font-family="'Roboto Mono', monospace" font-weight="700" text-anchor="middle">t₂</text>
+
+                    <rect x="110" y="25" width="30" height="30" rx="4" fill="#E6F4EA" stroke="#10B981" stroke-width="1.5" />
+                    <text x="125" y="44" fill="#047857" font-size="11" font-family="'Roboto Mono', monospace" font-weight="700" text-anchor="middle">t₃</text>
+
+                    <rect x="150" y="25" width="30" height="30" rx="4" fill="#E6F4EA" stroke="#10B981" stroke-width="1.5" />
+                    <text x="165" y="44" fill="#047857" font-size="11" font-family="'Roboto Mono', monospace" font-weight="700" text-anchor="middle">t_n</text>
+
+                    <!-- Addition arrow representation representing position vector -->
+                    <path d="M 35 10 L 35 20" stroke="#047857" stroke-width="1" />
+                    <path d="M 80 10 L 80 20" stroke="#047857" stroke-width="1" />
+                    <path d="M 125 10 L 125 20" stroke="#047857" stroke-width="1" />
+                    <path d="M 165 10 L 165 20" stroke="#047857" stroke-width="1" />
+                </svg>
+                <h3 style="font-size: 1.25rem; color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-xs); font-family: 'Exo', sans-serif;">
+                    2. Codificación Posicional
+                </h3>
+                <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.45; text-align: center;">
+                    Un "sello de tiempo matemático" que se suma al vector de cada palabra. Preserva el orden sintáctico dentro del texto, impidiendo que el modelo pierda la secuencia lógica del historial.
+                </p>
+            </div>
+
+            <!-- Card 3: Auto-Atención -->
+            <div class="agenda-card" style="padding: var(--space-lg);">
+                <!-- Auto-Atención SVG Diagram -->
+                <svg width="100%" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: var(--space-md);">
+                    <!-- Interconnected tokens -->
+                    <circle cx="30" cy="40" r="12" fill="#F3E8FF" stroke="#8B5CF6" stroke-width="1.5" />
+                    <text x="30" y="44" fill="#6B21A8" font-size="8" font-family="'Roboto Mono', monospace" text-anchor="middle">dolor</text>
+
+                    <circle cx="100" cy="40" r="12" fill="#F3E8FF" stroke="#8B5CF6" stroke-width="1.5" />
+                    <text x="100" y="44" fill="#6B21A8" font-size="8" font-family="'Roboto Mono', monospace" text-anchor="middle">pecho</text>
+
+                    <circle cx="170" cy="40" r="12" fill="#F3E8FF" stroke="#8B5CF6" stroke-width="1.5" />
+                    <text x="170" y="44" fill="#6B21A8" font-size="8" font-family="'Roboto Mono', monospace" text-anchor="middle">agudo</text>
+
+                    <!-- Interconnecting curves -->
+                    <path d="M 42 40 Q 65 25 88 40" stroke="#8B5CF6" stroke-width="1.5" fill="none" />
+                    <path d="M 42 40 Q 100 10 158 40" stroke="#8B5CF6" stroke-dasharray="2 2" stroke-width="1" fill="none" />
+                    <path d="M 112 40 Q 135 25 158 40" stroke="#8B5CF6" stroke-width="2" fill="none" />
+                </svg>
+                <h3 style="font-size: 1.25rem; color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-xs); font-family: 'Exo', sans-serif;">
+                    3. Auto-Atención (Self-Attention)
+                </h3>
+                <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.45; text-align: center;">
+                    Evalúa la importancia relativa de cada palabra respecto a todas las demás en la misma frase, permitiendo conectar síntomas separados en textos clínicos largos.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

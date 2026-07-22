@@ -1,0 +1,80 @@
+<!-- Slide 07: Datos Biomédicos -->
+<section class="slide" id="slide07">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">
+            El Reto del Big Data en Salud
+        </h2>
+        
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            
+            <!-- Left Side: Structured Explanations -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary); margin: 0;">
+                    La medicina moderna genera un volumen masivo de información. Sin embargo, su principal complejidad reside en la diversidad y falta de uniformidad de los formatos clínicos.
+                </p>
+
+                <!-- Concept Card 1: Estructurados -->
+                <div class="concept-card" style="border-left: 5px solid #10B981; padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 6px 0; color: #047857; font-size: 1.15rem; font-weight: 700; font-family: 'Exo', sans-serif;">
+                        🟢 Datos Estructurados (Fácilmente Procesables)
+                    </h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Información organizada en tablas y bases de datos relacionales: datos demográficos, códigos internacionales de enfermedades (CIE-10 / CIE-11), laboratorios numéricos estandarizados y dosis exactas de fármacos.
+                    </p>
+                </div>
+
+                <!-- Concept Card 2: No Estructurados -->
+                <div class="concept-card" style="border-left: 5px solid #F59E0B; padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 6px 0; color: #B45309; font-size: 1.15rem; font-weight: 700; font-family: 'Exo', sans-serif;">
+                        🟡 Datos No Estructurados (El 80% de la Medicina)
+                    </h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Narrativa médica en texto libre (evoluciones clínicas), audios de teleconsultas, señales continuas analógicas (ECG, EEG) e imágenes diagnósticas (Rayos X, RMN). Requieren algoritmos avanzados de NLP y visión artificial para extraer valor real.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: Image and Stats from Slide 04 of Presentation 1 -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm); width: 100%;">
+                <!-- EHR Narrative Image -->
+                <div style="position: relative; overflow: hidden; border-radius: 12px; background: white; display: flex; align-items: center; justify-content: center; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); padding: 8px; height: 240px;">
+                    <img src="images/slide04_ehr_narratives.png" alt="Historia Clínica Electrónica" class="zoomable-image" title="Haz clic para ampliar" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; border-radius: 8px; cursor: zoom-in;">
+                </div>
+
+                <!-- Combined Statistics -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm);">
+                    
+                    <!-- Card 82.15% -->
+                    <div class="card" style="padding: var(--space-sm) var(--space-md); text-align: center; background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%); color: white; border: none; display: flex; flex-direction: column; justify-content: center; min-height: 105px; box-shadow: var(--shadow-sm);">
+                        <div style="font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 4px; font-family: 'Exo', sans-serif;">
+                            82,15%
+                        </div>
+                        <p style="font-size: 0.75rem; margin: 0; opacity: 0.95; line-height: 1.3;">
+                            De las Historias Clínicas en Colombia son Electrónicas.
+                        </p>
+                    </div>
+
+                    <!-- Card 80% -->
+                    <div class="card" style="padding: var(--space-sm) var(--space-md); text-align: center; border-left: 5px solid var(--color-cta); display: flex; flex-direction: column; justify-content: center; min-height: 105px; box-shadow: var(--shadow-sm);">
+                        <div style="font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 4px; color: var(--color-primary); font-family: 'Exo', sans-serif;">
+                            80%
+                        </div>
+                        <p class="text-muted" style="font-size: 0.75rem; margin: 0; line-height: 1.3;">
+                            De los datos de salud están en narrativas clínicas.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Botón Desafío Clínico -->
+                <button class="btn-primary" data-modal-target="modal-weber" style="padding: 10px; font-size: 0.95rem; justify-content: center; width: 100%; box-shadow: var(--shadow-sm); height: 42px;">
+                    El Desafío Clínico
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left: 6px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</section>

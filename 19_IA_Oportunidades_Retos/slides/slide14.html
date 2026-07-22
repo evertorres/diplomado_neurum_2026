@@ -1,0 +1,42 @@
+<!-- Slide 14: Procesamiento del Lenguaje Natural -->
+<section class="slide" id="slide14">
+    <div class="slide-content left" style="max-width: 1400px; width: 100%;">
+        <h2 style="color: var(--color-primary); font-size: calc(1.8rem + 0.8vw); font-weight: 700; margin-bottom: var(--space-sm); border-bottom: 3px solid var(--color-cta); padding-bottom: 8px; width: 100%;">
+            Cómo la IA Comprende el Lenguaje
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-2xl); width: 100%; align-items: center; margin-top: var(--space-md);">
+            <!-- Left Side: Explanation -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-secondary); margin: 0;">
+                    Las computadoras no comprenden palabras ni caracteres directamente; requieren convertirlos en estructuras numéricas matemáticas que preserven su contexto y semántica.
+                </p>
+
+                <!-- Step 1: Tokenización -->
+                <div class="concept-card" style="border-left: 5px solid var(--color-cta); padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 6px 0; color: var(--color-cta); font-size: 1.15rem; font-weight: 700; font-family: 'Exo', sans-serif;">
+                        1. Preprocesamiento y Tokenización
+                    </h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Consiste en desglosar las frases clínicas complejas en fragmentos mínimos de significado denominados <strong>tokens</strong> (que pueden ser palabras completas o subpalabras), limpiando puntuaciones y estructurando dependencias sintácticas básicas.
+                    </p>
+                </div>
+
+                <!-- Step 2: Embeddings -->
+                <div class="concept-card" style="border-left: 5px solid #10B981; padding: var(--space-md) var(--space-lg);">
+                    <h4 style="margin: 0 0 6px 0; color: #047857; font-size: 1.15rem; font-weight: 700; font-family: 'Exo', sans-serif;">
+                        2. Word Embeddings (Espacio Vectorial)
+                    </h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                        Conversión de tokens en vectores numéricos densos de alta dimensión (e.g., 768 o 1536 dimensiones). A través del entrenamiento, palabras que comparten contextos y significados clínicos similares se posicionan a corta distancia geométrica en este espacio matemático.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: Word Embeddings Image -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: var(--space-md); box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center; height: 350px; overflow: hidden;">
+                <img src="images/slide14_wordembeddings.png" alt="Espacio Semántico y Word Embeddings" class="zoomable-image" title="Haz clic para ampliar" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; border-radius: 8px; cursor: zoom-in;">
+            </div>
+        </div>
+    </div>
+</section>
