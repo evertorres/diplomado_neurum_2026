@@ -1,0 +1,109 @@
+<!-- Slide 25: Calculadora Interactiva de VRAM -->
+<section class="slide" id="slide25">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
+            <span class="badge-tag emerald">Simulador Interactivo</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Pilar 9: Memoria y VRAM</span>
+        </div>
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Calculadora de Memoria Requerida (VRAM)
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Selecciona el tamaño del modelo y la cuantización para estimar cuánta memoria gráfica (VRAM) necesitas para ejecutarlo.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-lg);">
+            <!-- Controls Form -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">1. Tamaño del Modelo (Parámetros):</label>
+                        <select id="vram-params" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #CBD5E1; margin-top: 4px;" onchange="calcVramSim()">
+                            <option value="8">8 Billones (Llama 3 8B / Gemma 2 9B)</option>
+                            <option value="14">14 Billones (Qwen 2.5 14B)</option>
+                            <option value="32">32 Billones (Qwen 2.5 32B)</option>
+                            <option value="70" selected>70 Billones (Llama 3 70B)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">2. Nivel de Cuantización (Calidad):</label>
+                        <select id="vram-quant" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #CBD5E1; margin-top: 4px;" onchange="calcVramSim()">
+                            <option value="16">16-bit (FP16 / Sin compresión - Máxima)</option>
+                            <option value="8">8-bit (INT8 / Compresión Media)</option>
+                            <option value="4" selected>4-bit (INT4 / NF4 - Alta compresión)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">3. Ventana de Contexto (Historial):</label>
+                        <select id="vram-ctx" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #CBD5E1; margin-top: 4px;" onchange="calcVramSim()">
+                            <option value="4">4,000 Tokens (Chat corto)</option>
+                            <option value="32" selected>32,000 Tokens (Documento mediano)</option>
+                            <option value="128">128,000 Tokens (Libro o historial completo)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Panel -->
+            <div class="interactive-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg); display: flex; flex-direction: column; justify-content: center; text-align: center;">
+                <span style="font-size: 0.85rem; color: #64748B; font-weight: 600;">VRAM Mínima Estimada Requerida:</span>
+                <div id="vram-output-num" style="font-size: 3rem; font-weight: 800; color: var(--color-cta); margin: 8px 0;">
+                    42 GB
+                </div>
+
+                <div id="vram-hardware-suggestion" style="background: white; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; margin-top: 8px;">
+                    <span style="font-size: 0.82rem; color: #475569;">💻 <strong>Hardware Recomendado:</strong></span>
+                    <div id="vram-hw-text" style="font-size: 0.95rem; font-weight: 700; color: #1E293B; margin-top: 2px;">
+                        1x NVIDIA RTX 6000 Ada o Mac Studio M2/M3 Max (64GB)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function calcVramSim() {
+                const params = parseFloat(document.getElementById('vram-params').value);
+                const quant = parseFloat(document.getElementById('vram-quant').value);
+                const ctx = parseFloat(document.getElementById('vram-ctx').value);
+                const outNum = document.getElementById('vram-output-num');
+                const hwText = document.getElementById('vram-hw-text');
+
+                if (!outNum || !hwText) return;
+
+                // Base model weights memory = params * (bytes per param)
+                // 16-bit = 2 bytes, 8-bit = 1 byte, 4-bit = 0.5 bytes
+                const bytesPerParam = quant / 8;
+                const baseMemory = params * bytesPerParam;
+
+                // KV Cache memory approximation in GB based on context window
+                const kvMemory = (ctx / 32) * (params / 70) * 4;
+
+                // Overhead margin (20%)
+                const totalVram = Math.ceil((baseMemory + kvMemory) * 1.2);
+
+                outNum.textContent = totalVram + " GB";
+
+                if (totalVram <= 8) {
+                    hwText.textContent = "Tarjeta gráfica doméstica (NVIDIA RTX 3060 / 4060 o Mac con 16GB RAM)";
+                    outNum.style.color = "#059669";
+                } else if (totalVram <= 16) {
+                    hwText.textContent = "NVIDIA RTX 4080 / RTX 3090 o Mac M2/M3 Pro (32GB RAM)";
+                    outNum.style.color = "#2563EB";
+                } else if (totalVram <= 24) {
+                    hwText.textContent = "NVIDIA RTX 4090 (24GB VRAM) o Mac Studio (36GB RAM)";
+                    outNum.style.color = "#7C3AED";
+                } else if (totalVram <= 48) {
+                    hwText.textContent = "1x NVIDIA RTX 6000 Ada / A6000 (48GB) o Mac Studio (64GB RAM)";
+                    outNum.style.color = "#D97706";
+                } else {
+                    hwText.textContent = "Servidor con 2x o 4x GPUs Enterprise (A100 / H100 80GB)";
+                    outNum.style.color = "#DC2626";
+                }
+            }
+
+            calcVramSim();
+        </script>
+    </div>
+</section>

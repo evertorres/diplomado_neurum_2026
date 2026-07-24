@@ -1,0 +1,132 @@
+<!-- Slide 27: Tablero Interactivo de Benchmarks -->
+<section class="slide" id="slide27">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
+            <span class="badge-tag emerald">Simulador Interactivo</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Pilar 10: Benchmarks</span>
+        </div>
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Tablero de Evaluación de Modelos
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Explora qué mide cada prueba estandarizada y cuál es el rendimiento de los principales LLMs.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--space-lg);">
+            <!-- Benchmark Selector Buttons -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+                <label style="font-size: 0.85rem; font-weight: 700; color: #475569; display: block; margin-bottom: 12px;">
+                    Selecciona un Benchmark:
+                </label>
+
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <button class="btn-secondary" style="text-align: left; justify-content: flex-start; padding: 10px 14px; font-size: 0.88rem;" onclick="showBenchDetails('mmlu')">
+                        📚 <strong>MMLU</strong> — Cultura General y Medicina
+                    </button>
+                    <button class="btn-secondary" style="text-align: left; justify-content: flex-start; padding: 10px 14px; font-size: 0.88rem;" onclick="showBenchDetails('arena')">
+                        ⚔️ <strong>LMSYS Chatbot Arena</strong> — Votación Ciega
+                    </button>
+                    <button class="btn-secondary" style="text-align: left; justify-content: flex-start; padding: 10px 14px; font-size: 0.88rem;" onclick="showBenchDetails('humaneval')">
+                        💻 <strong>HumanEval</strong> — Capacidad de Código
+                    </button>
+                    <button class="btn-secondary" style="text-align: left; justify-content: flex-start; padding: 10px 14px; font-size: 0.88rem;" onclick="showBenchDetails('gsm8k')">
+                        📐 <strong>GSM8K</strong> — Razonamiento Matemático
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Ranking Card -->
+            <div class="interactive-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <h4 id="bench-title" style="margin: 0; color: var(--color-primary);">Examen: MMLU</h4>
+                    <span id="bench-tag" class="badge-tag">Conocimiento Multidisciplinario</span>
+                </div>
+                <p id="bench-desc" style="font-size: 0.88rem; color: var(--color-secondary); margin-bottom: 14px; line-height: 1.4;">
+                    Evaluación de 57 materias que van desde anatomía y derecho hasta filosofía.
+                </p>
+
+                <!-- Comparison Bars -->
+                <div id="bench-bars-container" style="display: flex; flex-direction: column; gap: 10px;">
+                    <!-- Bars inserted via JS -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const benchData = {
+                mmlu: {
+                    title: "MMLU (Massive Multitask Language Understanding)",
+                    desc: "Preguntas tipo opción múltiple en 57 disciplinas universitarias y profesionales (incluyendo diagnóstico médico).",
+                    tag: "Conocimiento General",
+                    models: [
+                        { name: "Claude 3.5 Sonnet", score: "88.7%", width: "88.7%", color: "#7C3AED" },
+                        { name: "GPT-4o", score: "88.6%", width: "88.6%", color: "#2563EB" },
+                        { name: "DeepSeek-V3", score: "88.5%", width: "88.5%", color: "#059669" },
+                        { name: "Llama 3 70B (Abierto)", score: "86.0%", width: "86.0%", color: "#D97706" }
+                    ]
+                },
+                arena: {
+                    title: "LMSYS Chatbot Arena (Elo Rating)",
+                    desc: "Evaluación a ciegas donde usuarios reales comparan 2 respuestas anónimas y votan la mejor.",
+                    tag: "Preferencia Humana Real",
+                    models: [
+                        { name: "Gemini 1.5 Pro / GPT-4o", score: "1286 Elo", width: "95%", color: "#2563EB" },
+                        { name: "Claude 3.5 Sonnet", score: "1282 Elo", width: "94%", color: "#7C3AED" },
+                        { name: "DeepSeek-V3", score: "1278 Elo", width: "93%", color: "#059669" },
+                        { name: "Llama 3.1 405B", score: "1268 Elo", width: "91%", color: "#D97706" }
+                    ]
+                },
+                humaneval: {
+                    title: "HumanEval (Generación de Código)",
+                    desc: "164 problemas de programación complejos donde el código generado es ejecutado y verificado.",
+                    tag: "Programación y Lógica",
+                    models: [
+                        { name: "Claude 3.5 Sonnet", score: "93.7%", width: "93.7%", color: "#7C3AED" },
+                        { name: "DeepSeek-V3", score: "92.6%", width: "92.6%", color: "#059669" },
+                        { name: "GPT-4o", score: "90.2%", width: "90.2%", color: "#2563EB" },
+                        { name: "Llama 3 70B", score: "81.7%", width: "81.7%", color: "#D97706" }
+                    ]
+                },
+                gsm8k: {
+                    title: "GSM8K (Matemáticas de Primaria/Secundaria)",
+                    desc: "Problemas razonados en lenguaje natural que requieren varios pasos de cálculo lógico.",
+                    tag: "Razonamiento Lógico",
+                    models: [
+                        { name: "DeepSeek-V3 / R1", score: "96.2%", width: "96.2%", color: "#059669" },
+                        { name: "GPT-4o", score: "95.8%", width: "95.8%", color: "#2563EB" },
+                        { name: "Claude 3.5 Sonnet", score: "96.0%", width: "96.0%", color: "#7C3AED" },
+                        { name: "Llama 3 70B", score: "93.0%", width: "93.0%", color: "#D97706" }
+                    ]
+                }
+            };
+
+            function showBenchDetails(key) {
+                const data = benchData[key];
+                if (!data) return;
+
+                document.getElementById('bench-title').textContent = data.title;
+                document.getElementById('bench-desc').textContent = data.desc;
+                document.getElementById('bench-tag').textContent = data.tag;
+
+                const container = document.getElementById('bench-bars-container');
+                container.innerHTML = '';
+
+                data.models.forEach(m => {
+                    const row = document.createElement('div');
+                    row.innerHTML = `
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; color: #1E293B; margin-bottom: 3px;">
+                            <span>${m.name}</span>
+                            <span style="color: ${m.color}; font-weight: 700;">${m.score}</span>
+                        </div>
+                        <div style="background: white; border: 1px solid #E2E8F0; height: 16px; border-radius: 8px; overflow: hidden;">
+                            <div style="width: ${m.width}; background: ${m.color}; height: 100%; transition: width 0.4s ease;"></div>
+                        </div>
+                    `;
+                    container.appendChild(row);
+                });
+            }
+
+            showBenchDetails('mmlu');
+        </script>
+    </div>
+</section>

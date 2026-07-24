@@ -1,0 +1,168 @@
+<!-- Slide 07: Visualizador Interactivo de Mapa Semántico -->
+<section class="slide" id="slide07">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
+            <span class="badge-tag emerald">Simulador Interactivo</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Pilar 2: Embeddings</span>
+        </div>
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Mapa de Significado (GPS Vectorial)
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Haz clic en dos conceptos para calcular su <strong>cercanía de significado (similitud semántica)</strong> en el mapa.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--space-lg);">
+            <!-- Controls & Selector -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+                <h4 style="color: var(--color-primary); margin-bottom: 12px;">Selecciona dos términos:</h4>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;">
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 600; color: #475569;">Palabra A:</label>
+                        <select id="emb-word-a" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #CBD5E1; margin-top: 4px;" onchange="updateEmbMap()">
+                            <option value="medico">👨‍⚕️ Médico</option>
+                            <option value="hospital">🏥 Hospital</option>
+                            <option value="receta">💊 Receta</option>
+                            <option value="manzana">🍎 Manzana</option>
+                            <option value="rey">👑 Rey</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 600; color: #475569;">Palabra B:</label>
+                        <select id="emb-word-b" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #CBD5E1; margin-top: 4px;" onchange="updateEmbMap()">
+                            <option value="hospital" selected>🏥 Hospital</option>
+                            <option value="medico">👨‍⚕️ Médico</option>
+                            <option value="receta">💊 Receta</option>
+                            <option value="manzana">🍎 Manzana</option>
+                            <option value="rey">👑 Rey</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Result Card -->
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; text-align: center;">
+                    <span style="font-size: 0.8rem; color: #64748B;">Afinidad Semántica Calculada:</span>
+                    <div id="emb-score" style="font-size: 1.8rem; font-weight: 800; color: var(--color-cta); margin: 4px 0;">
+                        92%
+                    </div>
+                    <span id="emb-status" style="font-size: 0.85rem; font-weight: 600; color: #059669;">
+                        ¡Muy cercanas en significado!
+                    </span>
+                </div>
+            </div>
+
+            <!-- Canvas/SVG Map -->
+            <div class="interactive-box" style="background: #FAF8FF; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-md); text-align: center; position: relative;">
+                <h4 style="color: var(--color-primary); margin-bottom: 8px;">Visualización del Espacio Vectorial 2D</h4>
+                <svg id="emb-svg" width="100%" height="240" viewBox="0 0 450 240" style="background: white; border-radius: 8px; border: 1px solid #E2E8F0;">
+                    <!-- Grid Lines -->
+                    <line x1="225" y1="0" x2="225" y2="240" stroke="#F1F5F9" stroke-width="1.5" />
+                    <line x1="0" y1="120" x2="450" y2="120" stroke="#F1F5F9" stroke-width="1.5" />
+
+                    <!-- Connecting Line -->
+                    <line id="emb-line" x1="80" y1="60" x2="140" y2="80" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 4" />
+
+                    <!-- Nodes -->
+                    <!-- Medico -->
+                    <g id="node-medico" transform="translate(80, 60)">
+                        <circle r="16" fill="#2563EB" opacity="0.9" />
+                        <text y="4" text-anchor="middle" fill="white" font-size="10">👨‍⚕️</text>
+                        <text y="28" text-anchor="middle" fill="#1E293B" font-size="11" font-weight="600">Médico</text>
+                    </g>
+
+                    <!-- Hospital -->
+                    <g id="node-hospital" transform="translate(140, 80)">
+                        <circle r="16" fill="#2563EB" opacity="0.9" />
+                        <text y="4" text-anchor="middle" fill="white" font-size="10">🏥</text>
+                        <text y="28" text-anchor="middle" fill="#1E293B" font-size="11" font-weight="600">Hospital</text>
+                    </g>
+
+                    <!-- Receta -->
+                    <g id="node-receta" transform="translate(120, 140)">
+                        <circle r="16" fill="#2563EB" opacity="0.9" />
+                        <text y="4" text-anchor="middle" fill="white" font-size="10">💊</text>
+                        <text y="28" text-anchor="middle" fill="#1E293B" font-size="11" font-weight="600">Receta</text>
+                    </g>
+
+                    <!-- Manzana -->
+                    <g id="node-manzana" transform="translate(360, 180)">
+                        <circle r="16" fill="#10B981" opacity="0.9" />
+                        <text y="4" text-anchor="middle" fill="white" font-size="10">🍎</text>
+                        <text y="28" text-anchor="middle" fill="#1E293B" font-size="11" font-weight="600">Manzana</text>
+                    </g>
+
+                    <!-- Rey -->
+                    <g id="node-rey" transform="translate(320, 50)">
+                        <circle r="16" fill="#F59E0B" opacity="0.9" />
+                        <text y="4" text-anchor="middle" fill="white" font-size="10">👑</text>
+                        <text y="28" text-anchor="middle" fill="#1E293B" font-size="11" font-weight="600">Rey</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <script>
+            const nodeCoords = {
+                medico: { x: 80, y: 60 },
+                hospital: { x: 140, y: 80 },
+                receta: { x: 120, y: 140 },
+                manzana: { x: 360, y: 180 },
+                rey: { x: 320, y: 50 }
+            };
+
+            const simMatrix = {
+                medico: { hospital: 92, receta: 88, manzana: 12, rey: 25 },
+                hospital: { medico: 92, receta: 85, manzana: 10, rey: 20 },
+                receta: { medico: 88, hospital: 85, manzana: 15, rey: 18 },
+                manzana: { medico: 12, hospital: 10, receta: 15, rey: 30 },
+                rey: { medico: 25, hospital: 20, receta: 18, manzana: 30 }
+            };
+
+            function updateEmbMap() {
+                const a = document.getElementById('emb-word-a').value;
+                const b = document.getElementById('emb-word-b').value;
+                const scoreEl = document.getElementById('emb-score');
+                const statusEl = document.getElementById('emb-status');
+                const line = document.getElementById('emb-line');
+
+                if (!line) return;
+
+                const posA = nodeCoords[a];
+                const posB = nodeCoords[b];
+
+                line.setAttribute('x1', posA.x);
+                line.setAttribute('y1', posA.y);
+                line.setAttribute('x2', posB.x);
+                line.setAttribute('y2', posB.y);
+
+                if (a === b) {
+                    scoreEl.textContent = '100%';
+                    statusEl.textContent = '¡Es la misma palabra!';
+                    statusEl.style.color = '#2563EB';
+                    return;
+                }
+
+                const score = simMatrix[a][b] || 50;
+                scoreEl.textContent = score + '%';
+
+                if (score > 75) {
+                    statusEl.textContent = '¡Muy cercanas en significado!';
+                    statusEl.style.color = '#059669';
+                    line.setAttribute('stroke', '#10B981');
+                } else if (score > 40) {
+                    statusEl.textContent = 'Afinidad moderada';
+                    statusEl.style.color = '#D97706';
+                    line.setAttribute('stroke', '#F59E0B');
+                } else {
+                    statusEl.textContent = 'Sin relación cercana';
+                    statusEl.style.color = '#DC2626';
+                    line.setAttribute('stroke', '#EF4444');
+                }
+            }
+
+            updateEmbMap();
+        </script>
+    </div>
+</section>

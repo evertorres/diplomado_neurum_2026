@@ -1,0 +1,59 @@
+<!-- Slide 14: RoPE Posicionamiento Concepto -->
+<section class="slide" id="slide14">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag amber">Pilar 5</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">RoPE (Rotary Position Embeddings)</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-md);">
+            ¿Por qué importa el orden de las palabras?
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text); margin-bottom: var(--space-md);">
+                    En castellano y en medicina, alterar el orden altera completamente el diagnóstico:
+                </p>
+
+                <div class="concept-card" style="margin-bottom: 12px; border-left: 4px solid #EF4444; background: #FEF2F2;">
+                    <strong style="color: #991B1B;">Frase 1:</strong> <em>"El perro mordió al hombre"</em>
+                </div>
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #F59E0B; background: #FFFBEB;">
+                    <strong style="color: #92400E;">Frase 2:</strong> <em>"El hombre mordió al perro"</em>
+                </div>
+
+                <p style="font-size: 0.95rem; color: var(--color-secondary); line-height: 1.5;">
+                    Las palabras son exactamente las mismas, pero la historia es opuesta. La IA necesita un <strong>reloj de posicionamiento</strong> para saber la ubicación exacta de cada término.
+                </p>
+            </div>
+
+            <!-- Visual Graphic -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; text-align: center; padding: var(--space-lg);">
+                <h4 style="color: var(--color-primary); margin-bottom: 12px;">Posicionamiento Relativo</h4>
+                <svg width="100%" height="180" viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Word 1 -->
+                    <circle cx="60" cy="80" r="30" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+                    <text x="60" y="76" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="700">Pos 1</text>
+                    <text x="60" y="92" text-anchor="middle" font-size="10" fill="#2563EB">"El"</text>
+
+                    <!-- Arrow + Angle -->
+                    <path d="M 95 80 L 155 80" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3 3"/>
+                    <text x="125" y="70" text-anchor="middle" font-size="10" fill="#D97706" font-weight="600">+1 Paso</text>
+
+                    <!-- Word 2 -->
+                    <circle cx="190" cy="80" r="30" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+                    <text x="190" y="76" text-anchor="middle" font-size="12" fill="#B45309" font-weight="700">Pos 2</text>
+                    <text x="190" y="92" text-anchor="middle" font-size="10" fill="#D97706">"perro"</text>
+
+                    <!-- Arrow + Angle -->
+                    <path d="M 225 80 L 285 80" stroke="#10B981" stroke-width="2" stroke-dasharray="3 3"/>
+                    <text x="255" y="70" text-anchor="middle" font-size="10" fill="#047857" font-weight="600">+1 Paso</text>
+
+                    <!-- Word 3 -->
+                    <circle cx="300" cy="80" r="24" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+                    <text x="300" y="84" text-anchor="middle" font-size="10" fill="#047857" font-weight="700">Pos 3</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

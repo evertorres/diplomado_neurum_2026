@@ -1,0 +1,51 @@
+<!-- Slide 10: Mecanismo de Atención Intro -->
+<section class="slide" id="slide10">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag purple">Pilar 4</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Mecanismo de Atención</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-md);">
+            Self-Attention: La Revolución del Resaltador
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text); margin-bottom: var(--space-md);">
+                    Antes de 2017, la IA leía palabra por palabra en orden estricto (como una cinta de cassette). Si la frase era muy larga, para cuando llegaba al final <strong>ya había olvidado el principio</strong>.
+                </p>
+
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #9333EA;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Mirar todo de un vistazo</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); margin: 0;">
+                        Self-Attention permite que el modelo procese <strong>toda la oración simultáneamente</strong> y dibuje líneas de conexión dinámicas entre palabras relacionadas sin importar la distancia.
+                    </p>
+                </div>
+
+                <button class="btn-secondary" data-modal-target="modal-attention" onclick="openModal('modal-attention')">
+                    🔍 Ver Ejemplo de Atención en una Frase
+                </button>
+            </div>
+
+            <!-- Conceptual Graphic -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; text-align: center; padding: var(--space-lg);">
+                <h4 style="color: var(--color-primary); margin-bottom: 12px;">Conexiones Dinámicas</h4>
+                <svg width="100%" height="200" viewBox="0 0 360 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tokens -->
+                    <rect x="20" y="120" width="80" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+                    <text x="60" y="145" text-anchor="middle" font-size="12" fill="#1D4ED8" font-family="'Exo', sans-serif" font-weight="600">"El paciente"</text>
+
+                    <rect x="140" y="120" width="80" height="40" rx="8" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5"/>
+                    <text x="180" y="145" text-anchor="middle" font-size="12" fill="#475569" font-family="'Exo', sans-serif">"recibió"</text>
+
+                    <rect x="260" y="120" width="80" height="40" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"/>
+                    <text x="300" y="145" text-anchor="middle" font-size="12" fill="#6D28D9" font-family="'Exo', sans-serif" font-weight="700">"su alta"</text>
+
+                    <!-- Curved Attention Arc -->
+                    <path d="M 60 120 Q 180 20 300 120" stroke="#7C3AED" stroke-width="3" fill="none" stroke-dasharray="4 2"/>
+                    <text x="180" y="55" text-anchor="middle" font-size="11" fill="#7C3AED" font-weight="600">Atención Fuerte (Poseedor)</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,61 @@
+<!-- Slide 06: Embeddings Vectoriales Concepto -->
+<section class="slide" id="slide06">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag">Pilar 2</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Embeddings Vectoriales</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-md);">
+            ¿Cómo entiende la IA el "Significado"?
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text); margin-bottom: var(--space-md);">
+                    Un número por sí solo (como <code style="background: #E2E8F0; padding: 2px 6px; border-radius: 4px;">ID: 4821</code>) no le dice a la IA qué significa una palabra. Los <strong>Embeddings</strong> convierten cada token en un punto en un espacio geométrico de cientos de dimensiones.
+                </p>
+
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #10B981;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Proximidad Semántica</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); margin: 0;">
+                        Palabras con significados similares (como <em>"doctor"</em>, <em>"médico"</em> y <em>"cirujano"</em>) se ubican físicamente cerca unas de otras en este mapa espacial.
+                    </p>
+                </div>
+
+                <button class="btn-secondary" data-modal-target="modal-embeddings" onclick="openModal('modal-embeddings')">
+                    🧭 Explorar la Analogía del GPS
+                </button>
+            </div>
+
+            <!-- Visual Vector Space Illustration -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; text-align: center;">
+                <h4 style="color: var(--color-primary); margin-bottom: var(--space-sm);">Espacio de Conceptos</h4>
+                <svg width="100%" height="220" viewBox="0 0 380 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Grid background -->
+                    <path d="M 40 20 L 40 180 M 120 20 L 120 180 M 200 20 L 200 180 M 280 20 L 280 180 M 360 20 L 360 180" stroke="#F1F5F9" stroke-width="1.5" />
+                    <path d="M 20 40 L 360 40 M 20 100 L 360 100 M 20 160 L 360 160" stroke="#F1F5F9" stroke-width="1.5" />
+
+                    <!-- Cluster 1: Salud -->
+                    <circle cx="90" cy="60" r="28" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <circle cx="80" cy="55" r="5" fill="#2563EB"/>
+                    <text x="80" y="45" font-size="10" fill="#1D4ED8" font-family="'Exo', sans-serif">Médico</text>
+
+                    <circle cx="105" cy="70" r="5" fill="#2563EB"/>
+                    <text x="110" y="82" font-size="10" fill="#1D4ED8" font-family="'Exo', sans-serif">Hospital</text>
+
+                    <!-- Cluster 2: Frutas -->
+                    <circle cx="280" cy="140" r="28" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <circle cx="270" cy="135" r="5" fill="#059669"/>
+                    <text x="250" y="125" font-size="10" fill="#047857" font-family="'Exo', sans-serif">Manzana</text>
+
+                    <circle cx="295" cy="148" r="5" fill="#059669"/>
+                    <text x="300" y="160" font-size="10" fill="#047857" font-family="'Exo', sans-serif">Fruta</text>
+
+                    <!-- Distance Vector Line -->
+                    <line x1="105" y1="70" x2="270" y2="135" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4 4"/>
+                    <text x="190" y="95" font-size="10" fill="#64748B" text-anchor="middle">Gran Distancia (No Afines)</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

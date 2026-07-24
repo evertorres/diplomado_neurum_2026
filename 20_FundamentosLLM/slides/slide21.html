@@ -1,0 +1,59 @@
+<!-- Slide 21: Mixture of Experts (MoE) Intro -->
+<section class="slide" id="slide21">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag">Pilar 8</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Mixture of Experts (MoE)</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-md);">
+            El Equipo de Especialistas (MoE)
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text); margin-bottom: var(--space-md);">
+                    En lugar de hacer que un solo cerebro gigante procese cada palabra, las arquitecturas <strong>Mixture of Experts (MoE)</strong> dividen la red en múltiples <strong>"redes especializadas"</strong>.
+                </p>
+
+                <div class="concept-card" style="margin-bottom: 12px; border-left: 4px solid #2563EB;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Analogía Médica</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        Cuando un paciente ingresa al hospital, la recepcionista (Router) no reúne a todos los 1,000 médicos. Deriva el caso únicamente al cardiólogo y al radiólogo.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #10B981;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Parámetros Totales vs Activos</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        Un modelo puede tener <strong>45 mil millones de parámetros en total</strong>, pero solo activar <strong>13 mil millones por token</strong>, ahorrando más del 70% de energía y cómputo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Conceptual MoE Graphic -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; text-align: center; padding: var(--space-lg);">
+                <h4 style="color: var(--color-primary); margin-bottom: 12px;">Enrutamiento de Especialistas</h4>
+                <svg width="100%" height="200" viewBox="0 0 340 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Router -->
+                    <rect x="20" y="70" width="80" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+                    <text x="60" y="95" text-anchor="middle" font-size="11" fill="#1D4ED8" font-family="'Exo', sans-serif" font-weight="700">Router</text>
+
+                    <!-- Connections to Top-2 Experts -->
+                    <path d="M 100 80 L 180 35" stroke="#10B981" stroke-width="2.5" />
+                    <path d="M 100 90 L 180 90" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <path d="M 100 100 L 180 145" stroke="#10B981" stroke-width="2.5" />
+
+                    <!-- Experts -->
+                    <rect x="180" y="15" width="120" height="38" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+                    <text x="240" y="38" text-anchor="middle" font-size="11" fill="#047857" font-weight="600">Experto 1 (Medicina)</text>
+
+                    <rect x="180" y="70" width="120" height="38" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+                    <text x="240" y="93" text-anchor="middle" font-size="11" fill="#94A3B8">Experto 2 (Leyes)</text>
+
+                    <rect x="180" y="125" width="120" height="38" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+                    <text x="240" y="148" text-anchor="middle" font-size="11" fill="#047857" font-weight="600">Experto 3 (Idiomas)</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

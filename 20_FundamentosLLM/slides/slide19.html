@@ -1,0 +1,47 @@
+<!-- Slide 19: Entrenamiento Fase 2 y 3 Alineacion -->
+<section class="slide" id="slide19">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag amber">Pilar 7</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Alineación (SFT & DPO)</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-sm);">
+            Fases 2 y 3: Educando al Asistente
+        </h2>
+        <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Para transformar un completador de texto en un tutor servicial y seguro, el modelo pasa por dos fases de refinamiento.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-top: var(--space-sm);">
+            <!-- Stage 2: SFT -->
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <span class="badge-tag" style="margin-bottom: 8px;">Fase 2: SFT</span>
+                <h4 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 8px;">Ajuste Fino Supervisado</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin-bottom: 10px;">
+                    Humanos expertos escriben miles de diálogos ideales de <strong>Pregunta $\rightarrow$ Respuesta</strong> estructurada.
+                </p>
+                <div style="background: #EFF6FF; padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; color: #1D4ED8;">
+                    <strong>Efecto:</strong> El modelo aprende el formato de asistente y responde de manera clara y directa.
+                </div>
+            </div>
+
+            <!-- Stage 3: RLHF / DPO -->
+            <div class="concept-card" style="border-top: 4px solid #10B981;">
+                <span class="badge-tag emerald" style="margin-bottom: 8px;">Fase 3: RLHF / DPO</span>
+                <h4 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 8px;">Preferencia y Seguridad</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5; margin-bottom: 10px;">
+                    El modelo genera dos respuestas y evaluadores eligen la más verídica, segura y amable.
+                </p>
+                <div style="background: #ECFDF5; padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; color: #047857;">
+                    <strong>Efecto:</strong> Reduce alucinaciones y rechaza solicitudes peligrosas o dañinas.
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: var(--space-lg); text-align: center;">
+            <button class="btn-secondary" data-modal-target="modal-training" onclick="openModal('modal-training')">
+                🎓 Ver Resumen del Pipeline Completo
+            </button>
+        </div>
+    </div>
+</section>

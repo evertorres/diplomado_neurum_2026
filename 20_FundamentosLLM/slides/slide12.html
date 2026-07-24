@@ -1,0 +1,57 @@
+<!-- Slide 12: Atención Multi-Cabeza (Multi-Head) -->
+<section class="slide" id="slide12">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag purple">Pilar 4</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Multi-Head Attention</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-sm);">
+            Múltiples Lentes de Atención en Paralelo
+        </h2>
+        <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Un solo par de ojos no basta. Los modelos usan decenas de <strong>"cabezas de atención"</strong> simultáneas, donde cada una se especializa en un aspecto distinto.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); margin-top: var(--space-sm);">
+            <!-- Head 1 -->
+            <div class="concept-card" style="border-top: 3px solid #2563EB; padding: 16px;">
+                <h5 style="color: #2563EB; font-size: 0.9rem; margin-bottom: 6px;">Cabeza 1: Gramática</h5>
+                <p style="font-size: 0.82rem; color: var(--color-secondary); margin: 0;">
+                    Conecta verbos con sus sujetos y objetos directos.
+                </p>
+            </div>
+
+            <!-- Head 2 -->
+            <div class="concept-card" style="border-top: 3px solid #10B981; padding: 16px;">
+                <h5 style="color: #059669; font-size: 0.9rem; margin-bottom: 6px;">Cabeza 2: Entidades</h5>
+                <p style="font-size: 0.82rem; color: var(--color-secondary); margin: 0;">
+                    Agrupa nombres propios, países, medicamentos y fechas.
+                </p>
+            </div>
+
+            <!-- Head 3 -->
+            <div class="concept-card" style="border-top: 3px solid #F59E0B; padding: 16px;">
+                <h5 style="color: #D97706; font-size: 0.9rem; margin-bottom: 6px;">Cabeza 3: Tono y Estilo</h5>
+                <p style="font-size: 0.82rem; color: var(--color-secondary); margin: 0;">
+                    Detecta si la oración es una pregunta, afirmación o duda.
+                </p>
+            </div>
+
+            <!-- Head 4 -->
+            <div class="concept-card" style="border-top: 3px solid #7C3AED; padding: 16px;">
+                <h5 style="color: #7C3AED; font-size: 0.9rem; margin-bottom: 6px;">Cabeza 4: Causalidad</h5>
+                <p style="font-size: 0.82rem; color: var(--color-secondary); margin: 0;">
+                    Relaciona causas y efectos (e.g. <em>"debido a"</em> $\rightarrow$ síntoma).
+                </p>
+            </div>
+        </div>
+
+        <div style="margin-top: var(--space-lg); background: white; border: 1px solid #E2E8F0; padding: var(--space-md); border-radius: 10px; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <strong style="color: var(--color-primary);">Optimizaciones modernas (GQA / MQA):</strong>
+                <span style="color: var(--color-secondary); font-size: 0.9rem;"> Agrupan las consultas para reducir drásticamente el uso de memoria en respuestas largas.</span>
+            </div>
+            <span class="badge-tag emerald">Más Eficiente y Rápido</span>
+        </div>
+    </div>
+</section>

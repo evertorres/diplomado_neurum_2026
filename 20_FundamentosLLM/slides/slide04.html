@@ -1,0 +1,61 @@
+<!-- Slide 04: Tokenización - Bloques LEGO -->
+<section class="slide" id="slide04">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag">Pilar 1</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Tokenización en Subpalabras</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-sm);">
+            La Metáfora de las Piezas LEGO
+        </h2>
+        <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Los algoritmos de tokenización modernos (como BPE) no guardan diccionarios de palabras enteras, sino un inventario inteligente de <strong>bloques reutilizables</strong>.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-top: var(--space-sm);">
+            <!-- Lego Block 1 -->
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <span class="badge-tag" style="margin-bottom: 8px;">Palabras Comunes</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 8px;">Bloques Enteros</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5;">
+                    Palabras habituales como <em>"el"</em>, <em>"hospital"</em> o <em>"médico"</em> son un único token directo.
+                </p>
+                <div style="margin-top: 12px; background: #EFF6FF; padding: 6px 12px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; color: #1D4ED8;">
+                    "hospital" → [3491]
+                </div>
+            </div>
+
+            <!-- Lego Block 2 -->
+            <div class="concept-card" style="border-top: 4px solid #10B981;">
+                <span class="badge-tag emerald" style="margin-bottom: 8px;">Términos Técnicos</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 8px;">Prefijos y Raíces</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5;">
+                    Palabras complejas se dividen en prefijos y terminaciones frecuentes.
+                </p>
+                <div style="margin-top: 12px; background: #ECFDF5; padding: 6px 12px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; color: #047857;">
+                    "neuro" + "logía" → [812, 9401]
+                </div>
+            </div>
+
+            <!-- Lego Block 3 -->
+            <div class="concept-card" style="border-top: 4px solid #F59E0B;">
+                <span class="badge-tag amber" style="margin-bottom: 8px;">Neologismos o Raros</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 8px;">Caracteres Individuales</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5;">
+                    Códigos o nombres extraños se arman letra a letra sin trabar el modelo.
+                </p>
+                <div style="margin-top: 12px; background: #FFFBEB; padding: 6px 12px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; color: #B45309;">
+                    "x" + "k" + "9" → [88, 75, 29]
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: var(--space-lg); background: #F8FAFC; border: 1px solid #E2E8F0; padding: var(--space-md); border-radius: 10px; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <strong style="color: var(--color-primary);">Regla general aproximada:</strong>
+                <span style="color: var(--color-secondary); font-size: 0.95rem;"> 100 palabras en español equivalen a unos 130 - 140 tokens.</span>
+            </div>
+            <span class="badge-tag purple">1 Token ≈ 0.75 Palabras</span>
+        </div>
+    </div>
+</section>

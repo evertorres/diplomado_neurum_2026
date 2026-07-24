@@ -1,0 +1,117 @@
+<!-- Slide 20: Stepper Interactivo del Pipeline de Entrenamiento -->
+<section class="slide" id="slide20">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
+            <span class="badge-tag emerald">Simulador Interactivo</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Pilar 7: Entrenamiento</span>
+        </div>
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Recorrido del Entrenamiento Paso a Paso
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Haz clic en cada fase de la línea de tiempo para ver la transformación del modelo y el tipo de respuestas que genera.
+        </p>
+
+        <!-- Stepper Timeline Bar -->
+        <div style="display: flex; justify-content: space-between; position: relative; margin-bottom: var(--space-lg); padding: 0 40px;">
+            <div style="position: absolute; top: 24px; left: 60px; right: 60px; height: 4px; background: #E2E8F0; z-index: 1;"></div>
+
+            <!-- Step 1 -->
+            <button type="button" id="step-btn-1" style="position: relative; z-index: 2; cursor: pointer; text-align: center; background: none; border: none; padding: 0; outline: none;" onclick="setTrainStep(1)" onmouseenter="setTrainStep(1)">
+                <div id="step-circle-1" style="width: 50px; height: 50px; border-radius: 50%; background: #2563EB; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: var(--shadow-md);">1</div>
+                <span style="font-size: 0.85rem; font-weight: 700; color: #1E293B; margin-top: 6px; display: block;">Preentrenamiento</span>
+            </button>
+
+            <!-- Step 2 -->
+            <button type="button" id="step-btn-2" style="position: relative; z-index: 2; cursor: pointer; text-align: center; background: none; border: none; padding: 0; outline: none;" onclick="setTrainStep(2)" onmouseenter="setTrainStep(2)">
+                <div id="step-circle-2" style="width: 50px; height: 50px; border-radius: 50%; background: white; border: 3px solid #CBD5E1; color: #64748B; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto;">2</div>
+                <span style="font-size: 0.85rem; font-weight: 600; color: #64748B; margin-top: 6px; display: block;">Ajuste Fino (SFT)</span>
+            </button>
+
+            <!-- Step 3 -->
+            <button type="button" id="step-btn-3" style="position: relative; z-index: 2; cursor: pointer; text-align: center; background: none; border: none; padding: 0; outline: none;" onclick="setTrainStep(3)" onmouseenter="setTrainStep(3)">
+                <div id="step-circle-3" style="width: 50px; height: 50px; border-radius: 50%; background: white; border: 3px solid #CBD5E1; color: #64748B; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto;">3</div>
+                <span style="font-size: 0.85rem; font-weight: 600; color: #64748B; margin-top: 6px; display: block;">Alineación (DPO/RLHF)</span>
+            </button>
+        </div>
+
+        <!-- Dynamic Content Card -->
+        <div id="train-step-card" class="interactive-box" style="background: white; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+            <!-- Content loaded via JS -->
+        </div>
+
+        <script>
+            const trainStepsData = {
+                1: {
+                    title: "Fase 1: Preentrenamiento Auto-Supervisado (Base)",
+                    desc: "El modelo procesa terabytes de texto web. Aprende patrones lingüísticos y conocimientos del mundo pero no sabe dialogar ni acatar instrucciones directas.",
+                    prompt: "¿Cuáles son los síntomas de la gripe?",
+                    response: "...es una pregunta común en foros médicos. La gripe estacional afecta las vías respiratorias y suele durar de 5 a 7 días. Ver más artículos relacionados abajo...",
+                    badge: "Modelo Base (Raw GPT)",
+                    badgeColor: "#2563EB",
+                    bg: "#EFF6FF"
+                },
+                2: {
+                    title: "Fase 2: Supervised Fine-Tuning (SFT / Instruct)",
+                    desc: "Entrenado con ejemplos de diálogo de alta calidad escritos por humanos. El modelo aprende la estructura de dar una respuesta servicial y concisa.",
+                    prompt: "¿Cuáles son los síntomas de la gripe?",
+                    response: "Los síntomas principales de la gripe incluyen:\n1. Fiebre alta repentina\n2. Dolor muscular y de cabeza\n3. Tos seca y fatiga intensa.",
+                    badge: "Modelo Instruido (Instruct)",
+                    badgeColor: "#F59E0B",
+                    bg: "#FFFBEB"
+                },
+                3: {
+                    title: "Fase 3: Alineación de Preferencia y Seguridad (RLHF / DPO)",
+                    desc: "Optimizado con preferencias humanas directas para evitar alucinaciones, tono inapropiado o consejos de riesgo sin advertencia clínica.",
+                    prompt: "¿Cuáles son los síntomas de la gripe?",
+                    response: "Los síntomas comunes de la gripe son fiebre, tos, dolor corporal y fatiga. Si presentas dificultad para respirar o fiebre persistente, se recomienda consultar a un profesional médico.",
+                    badge: "Modelo Alineado (Chat / Safe)",
+                    badgeColor: "#10B981",
+                    bg: "#ECFDF5"
+                }
+            };
+
+            function setTrainStep(stepNum) {
+                const data = trainStepsData[stepNum];
+                const card = document.getElementById('train-step-card');
+                if (!card) return;
+
+                // Update Stepper Circles
+                for (let i = 1; i <= 3; i++) {
+                    const circle = document.getElementById(`step-circle-${i}`);
+                    if (circle) {
+                        if (i === stepNum) {
+                            circle.style.background = '#2563EB';
+                            circle.style.color = 'white';
+                            circle.style.border = 'none';
+                            circle.style.boxShadow = 'var(--shadow-md)';
+                        } else {
+                            circle.style.background = 'white';
+                            circle.style.color = '#64748B';
+                            circle.style.border = '3px solid #CBD5E1';
+                            circle.style.boxShadow = 'none';
+                        }
+                    }
+                }
+
+                // Render Card
+                card.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                        <h4 style="margin: 0; color: var(--color-primary); font-size: 1.15rem;">${data.title}</h4>
+                        <span class="badge-tag" style="background: ${data.bg}; color: ${data.badgeColor}; border-color: ${data.badgeColor};">${data.badge}</span>
+                    </div>
+                    <p style="font-size: 0.92rem; color: var(--color-secondary); line-height: 1.5; margin-bottom: 16px;">${data.desc}</p>
+                    
+                    <div style="background: #F8FAFC; border-radius: 8px; padding: 14px; border: 1px solid #E2E8F0;">
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #475569; margin-bottom: 4px;">❓ Usuario: "${data.prompt}"</div>
+                        <div style="font-size: 0.9rem; color: #1E293B; font-family: 'Roboto Mono', monospace; line-height: 1.5; background: white; padding: 10px; border-radius: 6px; border-left: 4px solid ${data.badgeColor};">
+                            🤖 <strong>Respuesta:</strong><br>${data.response.replace(/\n/g, '<br>')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            setTrainStep(1);
+        </script>
+    </div>
+</section>

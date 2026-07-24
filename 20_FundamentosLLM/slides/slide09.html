@@ -1,0 +1,50 @@
+<!-- Slide 09: Transformación y Filtros de Información -->
+<section class="slide" id="slide09">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag">Pilar 3</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Filtros de Información</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-sm);">
+            Cómo la Red Filtra y Refina Ideas
+        </h2>
+        <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Dentro de cada capa de aprendizaje existe un <strong>mecanismo de compuerta (gate)</strong> que decide qué información es útil y cuál debe descartarse.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-top: var(--space-sm);">
+            <!-- Card 1 -->
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <span class="badge-tag" style="margin-bottom: 8px;">1. Capturar Contexto</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 8px;">Entrada Amplitud</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5;">
+                    El vector recibe múltiples posibles acepciones de una palabra (e.g. <em>"banco"</em> de dinero vs <em>"banco"</em> de sentarse).
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="concept-card" style="border-top: 4px solid #F59E0B;">
+                <span class="badge-tag amber" style="margin-bottom: 8px;">2. Compuerta Suave</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 8px;">Filtrado Gradual</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5;">
+                    En lugar de apagar drásticamente la información, funciones como <strong>SwiGLU</strong> atenúan gradualmente las señales irrelevantes.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="concept-card" style="border-top: 4px solid #10B981;">
+                <span class="badge-tag emerald" style="margin-bottom: 8px;">3. Salida Limpia</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 8px;">Significado Preciso</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5;">
+                    Sale únicamente el significado exacto correspondiente al contexto actual de la conversación.
+                </p>
+            </div>
+        </div>
+
+        <div class="interactive-box" style="margin-top: var(--space-lg); background: white; border: 1px solid #E2E8F0; padding: var(--space-md); text-align: center;">
+            <p style="font-size: 0.95rem; color: var(--color-primary); font-weight: 600; margin: 0;">
+                🧠 <em>Dato curioso:</em> Arquitecturas líderes como Llama 3 y Mistral utilizan compuertas <strong>SwiGLU</strong> porque permiten un flujo de información mucho más fluido y expresivo.
+            </p>
+        </div>
+    </div>
+</section>

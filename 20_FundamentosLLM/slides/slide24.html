@@ -1,0 +1,50 @@
+<!-- Slide 24: Formatos de Cuantización -->
+<section class="slide" id="slide24">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag">Pilar 9</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Formatos y Técnicas</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-sm);">
+            Analogía: De Foto Ultra HD a Imagen Comprimida
+        </h2>
+        <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Al igual que guardar una foto en formato JPG liviano sin notar píxeles a simple vista, la cuantización usa varios formatos optimizados.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-top: var(--space-sm);">
+            <!-- Format 1: GGUF -->
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <span class="badge-tag" style="margin-bottom: 8px;">Uso Local / CPU</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 6px;">Formatos GGUF / Ollama</h4>
+                <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5;">
+                    Diseñados para ejecutar LLMs directamente en computadoras personales (MacBook, laptops) combinando memoria RAM y procesador.
+                </p>
+            </div>
+
+            <!-- Format 2: AWQ / GPTQ -->
+            <div class="concept-card" style="border-top: 4px solid #F59E0B;">
+                <span class="badge-tag amber" style="margin-bottom: 8px;">Servidores / GPU</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 6px;">AWQ & GPTQ</h4>
+                <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5;">
+                    Protegen los pesos neuronales más importantes (salvaguardia de precisión) para que las respuestas clínicas y de código no fallen.
+                </p>
+            </div>
+
+            <!-- Format 3: NF4 / QLoRA -->
+            <div class="concept-card" style="border-top: 4px solid #10B981;">
+                <span class="badge-tag emerald" style="margin-bottom: 8px;">Ajuste Fino Eficiente</span>
+                <h4 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 6px;">NormalFloat4 (NF4)</h4>
+                <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5;">
+                    Formato de distribución normal optimizado para adaptar o personalizar modelos en tarjetas gráficas domésticas mediante QLoRA.
+                </p>
+            </div>
+        </div>
+
+        <div style="margin-top: var(--space-lg); background: white; border: 1px solid #E2E8F0; padding: var(--space-md); border-radius: 10px; text-align: center;">
+            <span style="font-size: 0.9rem; color: var(--color-primary); font-weight: 600;">
+                💡 <em>Recomendación práctica:</em> Para producción en salud, el estándar de oro suele ser <strong>INT8 o AWQ de 4 bits</strong>.
+            </span>
+        </div>
+    </div>
+</section>

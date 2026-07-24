@@ -1,0 +1,63 @@
+<!-- Slide 15: RoPE - Geometría del Reloj -->
+<section class="slide" id="slide15">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag amber">Pilar 5</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Rotación de Posición (RoPE)</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-sm);">
+            La Analogía de las Manecillas del Reloj
+        </h2>
+        <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            En lugar de sumar números estáticos, <strong>RoPE (Rotary Position Embedding)</strong> gira las palabras en un círculo como las manecillas de un reloj.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <div class="concept-card" style="margin-bottom: 12px; border-left: 4px solid #F59E0B;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Rotación según la Posición</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        La palabra en la posición 1 gira 30°, la palabra en la posición 2 gira 60°, y así sucesivamente.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #10B981;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Distancia Relativa Preservada</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        La diferencia de ángulo entre la palabra 1 y la 3 siempre será idéntica, sin importar si están al inicio o al final de un texto gigante de 128,000 palabras.
+                    </p>
+                </div>
+
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 10px 14px; border-radius: 8px; font-size: 0.85rem; color: var(--color-secondary);">
+                    🌟 <strong>Utilizado en:</strong> Llama 3, DeepSeek, Mistral, Qwen2.5 y GPT-4.
+                </div>
+            </div>
+
+            <!-- SVG Clock Dial Graphic -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; text-align: center; padding: var(--space-lg);">
+                <h4 style="color: var(--color-primary); margin-bottom: 8px;">Reloj de Ángulo Posicional</h4>
+                <svg width="220" height="220" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Circle Face -->
+                    <circle cx="100" cy="100" r="80" fill="#FAF5FF" stroke="#7C3AED" stroke-width="2"/>
+                    
+                    <!-- Center Dot -->
+                    <circle cx="100" cy="100" r="5" fill="#6D28D9"/>
+
+                    <!-- Hand 1 (Pos 1: 30 deg) -->
+                    <line x1="100" y1="100" x2="140" y2="30" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="140" cy="30" r="6" fill="#2563EB"/>
+                    <text x="155" y="32" font-size="10" fill="#1D4ED8" font-weight="700">Pos 1 (30°)</text>
+
+                    <!-- Hand 2 (Pos 2: 75 deg) -->
+                    <line x1="100" y1="100" x2="175" y2="80" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="175" cy="80" r="6" fill="#F59E0B"/>
+                    <text x="155" y="100" font-size="10" fill="#B45309" font-weight="700">Pos 2 (75°)</text>
+
+                    <!-- Angle Arc -->
+                    <path d="M 124 58 A 45 45 0 0 1 145 88" stroke="#7C3AED" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
+                    <text x="145" y="65" font-size="9" fill="#7C3AED" font-weight="600">Δ = 45°</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

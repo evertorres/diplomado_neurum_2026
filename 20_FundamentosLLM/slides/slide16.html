@@ -1,0 +1,71 @@
+<!-- Slide 16: Escalado (Scaling Laws) -->
+<section class="slide" id="slide16">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag">Pilar 6</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Leyes de Escalado (Scaling Laws)</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-md);">
+            ¿Más Grande Significa Siempre Más Inteligente?
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text); margin-bottom: var(--space-md);">
+                    La inteligencia de un LLM no depende solo de cuántos parámetros tiene (el tamaño de su cerebro), sino de la <strong>cantidad y calidad de datos con los que fue entrenado</strong>.
+                </p>
+
+                <div class="concept-card" style="margin-bottom: 12px; border-left: 4px solid #2563EB;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Regla de Chinchilla</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        Por cada parámetro del modelo, se necesitan al menos <strong>20 tokens de entrenamiento</strong> de alta calidad.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #10B981;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Tendencia Actual (Sobrentrenamiento)</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        Modelos pequeños de 8B parámetros (como Llama 3 8B) son entrenados con <strong>15 billones de tokens</strong> para hacerlos ultra-eficientes y rápidos en dispositivos locales.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visual Bar Comparison -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; padding: var(--space-lg); text-align: center;">
+                <h4 style="color: var(--color-primary); margin-bottom: 16px;">Evolución de Entrenamientos</h4>
+
+                <div style="display: flex; flex-direction: column; gap: 14px; text-align: left;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                            <strong>GPT-3 (2020)</strong>
+                            <span style="color: #64748B;">175B par. / 0.3 Trillón tokens</span>
+                        </div>
+                        <div style="background: #F1F5F9; height: 16px; border-radius: 8px; overflow: hidden;">
+                            <div style="width: 25%; background: #94A3B8; height: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                            <strong>Llama 2 (2023)</strong>
+                            <span style="color: #64748B;">70B par. / 2 Trillones tokens</span>
+                        </div>
+                        <div style="background: #F1F5F9; height: 16px; border-radius: 8px; overflow: hidden;">
+                            <div style="width: 55%; background: #3B82F6; height: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                            <strong>Llama 3 / DeepSeek-V3 (2024-2025)</strong>
+                            <span style="color: #059669; font-weight: 700;">8B-671B par. / 15+ Trillones tokens</span>
+                        </div>
+                        <div style="background: #F1F5F9; height: 16px; border-radius: 8px; overflow: hidden;">
+                            <div style="width: 95%; background: #10B981; height: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

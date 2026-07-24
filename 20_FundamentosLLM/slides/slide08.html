@@ -1,0 +1,58 @@
+<!-- Slide 08: Aprendizaje MLP y Capas Feed-Forward -->
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag">Pilar 3</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Redes Feed-Forward (MLP)</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-md);">
+            La Enciclopedia Interna del Modelo
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text); margin-bottom: var(--space-md);">
+                    Si el mecanismo de atención se encarga de "mirar alrededor" para conectar palabras en la oración, las capas <strong>MLP (Multilayer Perceptron)</strong> actúan como la <strong>memoria asociativa de conocimiento factual</strong>.
+                </p>
+
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #7C3AED;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">¿Dónde están los datos?</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-secondary); margin: 0;">
+                        Más de dos tercios de los parámetros (pesos neuronales) de un LLM se encuentran en las capas MLP. Aquí es donde se almacena que <em>"París es la capital de Francia"</em> o la dosis de un fármaco.
+                    </p>
+                </div>
+
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 12px; border-radius: 8px;">
+                    <span style="font-size: 0.85rem; color: var(--color-secondary);">
+                        💡 <strong>En resumen:</strong> Atención une las palabras; MLP recupera los datos aprendidos.
+                    </span>
+                </div>
+            </div>
+
+            <!-- Conceptual Graphic -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; text-align: center; padding: var(--space-lg);">
+                <h4 style="color: var(--color-primary); margin-bottom: 12px;">Procesador de Conocimiento</h4>
+                <svg width="100%" height="220" viewBox="0 0 360 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Layer 1 -->
+                    <rect x="20" y="70" width="70" height="60" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+                    <text x="55" y="105" text-anchor="middle" font-size="11" fill="#1D4ED8" font-family="'Exo', sans-serif" font-weight="600">Entrada</text>
+
+                    <!-- Arrow -->
+                    <path d="M 95 100 L 135 100" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+
+                    <!-- Expanded Knowledge Layer -->
+                    <rect x="140" y="30" width="80" height="140" rx="12" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"/>
+                    <text x="180" y="90" text-anchor="middle" font-size="12" fill="#6D28D9" font-family="'Exo', sans-serif" font-weight="700">Expansión</text>
+                    <text x="180" y="110" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="monospace">MLP (4x)</text>
+
+                    <!-- Arrow -->
+                    <path d="M 225 100 L 265 100" stroke="#94A3B8" stroke-width="2" />
+
+                    <!-- Layer 3 -->
+                    <rect x="270" y="70" width="70" height="60" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+                    <text x="305" y="105" text-anchor="middle" font-size="11" fill="#047857" font-family="'Exo', sans-serif" font-weight="600">Refinado</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

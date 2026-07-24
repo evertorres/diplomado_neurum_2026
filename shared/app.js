@@ -8,6 +8,26 @@ window.initApp = function () {
     let currentSlide = 0;
     const totalSlides = slides.length;
 
+    function goToSlide(slideNum) {
+        const num = parseInt(slideNum);
+        if (!isNaN(num) && num >= 1 && num <= totalSlides) {
+            currentSlide = num - 1;
+            updateSlides();
+        }
+    }
+    window.goToSlide = goToSlide;
+
+    // Listen for hash changes (e.g. clicking restart or agenda links)
+    window.addEventListener('hashchange', () => {
+        if (window.location.hash) {
+            const hashSlide = parseInt(window.location.hash.substring(1));
+            if (!isNaN(hashSlide) && hashSlide > 0 && hashSlide <= totalSlides) {
+                currentSlide = hashSlide - 1;
+                updateSlides();
+            }
+        }
+    });
+
     // Use URL hash for initial slide if present
     if (window.location.hash) {
         const hashSlide = parseInt(window.location.hash.substring(1));
@@ -118,7 +138,7 @@ window.initApp = function () {
             // Check if clicking on the slide container to advance presentation
             const slideContainer = e.target.closest('.presentation-container');
             // Don't advance if clicking on interactive elements
-            const isInteractive = e.target.closest('button, a, input, .modal, .zoomable-image, [data-modal-target], .slide-controls');
+            const isInteractive = e.target.closest('button, a, input, select, textarea, .modal, .zoomable-image, [data-modal-target], .slide-controls, .interactive-box, .agenda-card, [onclick], [onmouseenter], [onmouseover]');
             
             if (slideContainer && !isInteractive && currentSlideEl) {
                 if (!advanceFragments(currentSlideEl) && currentSlide < totalSlides - 1) {
@@ -188,6 +208,9 @@ window.initApp = function () {
             document.body.style.overflow = '';
         }
     }
+
+    window.openModal = openModal;
+    window.closeModal = closeModal;
 
     modalTriggers.forEach(trigger => {
         // Clone to remove old listeners

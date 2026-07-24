@@ -1,0 +1,47 @@
+<!-- Slide 11: Paradoja del Contexto -->
+<section class="slide" id="slide11">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag purple">Pilar 4</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Desambiguación Contextual</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-sm);">
+            Resolviendo Ambigüedades del Lenguaje
+        </h2>
+        <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Una misma palabra puede cambiar drásticamente de sentido según las palabras que la rodean.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin-top: var(--space-sm);">
+            <!-- Example 1 -->
+            <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                <span class="badge-tag" style="margin-bottom: 8px;">Caso A: Medicina</span>
+                <h4 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 8px;">"El tratamiento mostró excelente <u>respuesta</u>"</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5;">
+                    Al conectar <em>"respuesta"</em> con <em>"tratamiento"</em>, la atención entiende que se refiere a una <strong>evolución clínica o mejoría del paciente</strong>.
+                </p>
+            </div>
+
+            <!-- Example 2 -->
+            <div class="concept-card" style="border-left: 4px solid #F59E0B;">
+                <span class="badge-tag amber" style="margin-bottom: 8px;">Caso B: Comunicación</span>
+                <h4 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 8px;">"El usuario envió una <u>respuesta</u> al correo"</h4>
+                <p style="font-size: 0.9rem; color: var(--color-secondary); line-height: 1.5;">
+                    Al conectar <em>"respuesta"</em> con <em>"correo"</em> y <em>"usuario"</em>, la atención interpreta que se trata de un <strong>mensaje de texto escrito</strong>.
+                </p>
+            </div>
+        </div>
+
+        <div class="interactive-box" style="margin-top: var(--space-lg); background: #F8FAFC; border: 1px solid #E2E8F0; padding: var(--space-md);">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <strong style="color: var(--color-primary);">¿Cómo se calcula en el modelo?</strong>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin-top: 4px;">
+                        Cada palabra emite una "Pregunta" (Query) y busca coincidencias en las "Claves" (Keys) de las demás palabras para recopilar "Valores" (Values).
+                    </p>
+                </div>
+                <span class="badge-tag purple" style="font-family: monospace;">Fórmula: Query × Key → Softmax</span>
+            </div>
+        </div>
+    </div>
+</section>

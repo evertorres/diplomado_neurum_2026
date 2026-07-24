@@ -1,0 +1,103 @@
+<!-- Slide 22: Router MoE Interactivo -->
+<section class="slide" id="slide22">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
+            <span class="badge-tag emerald">Simulador Interactivo</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Pilar 8: MoE</span>
+        </div>
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Simulador de Enrutamiento de Especialistas (MoE)
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Elige una consulta y observa qué <strong>2 especialistas (Top-2)</strong> activa dinámicamente el Router del modelo.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-lg);">
+            <!-- Prompt Options -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+                <label style="font-size: 0.85rem; font-weight: 700; color: #475569; display: block; margin-bottom: 12px;">
+                    Selecciona una solicitud:
+                </label>
+
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <button class="btn-secondary" style="text-align: left; justify-content: flex-start; padding: 10px 14px; font-size: 0.88rem;" onclick="runMoeRouter('med')">
+                        🩺 <em>"¿Qué dosis de paracetamol se indica en adultos?"</em>
+                    </button>
+                    <button class="btn-secondary" style="text-align: left; justify-content: flex-start; padding: 10px 14px; font-size: 0.88rem;" onclick="runMoeRouter('code')">
+                        💻 <em>"Escribe una función en Python para calcular el promedio"</em>
+                    </button>
+                    <button class="btn-secondary" style="text-align: left; justify-content: flex-start; padding: 10px 14px; font-size: 0.88rem;" onclick="runMoeRouter('math')">
+                        📐 <em>"Resuelve la ecuación cuadrática x² + 5x + 6 = 0"</em>
+                    </button>
+                    <button class="btn-secondary" style="text-align: left; justify-content: flex-start; padding: 10px 14px; font-size: 0.88rem;" onclick="runMoeRouter('lang')">
+                        🌐 <em>"Traduce esta carta médica al francés"</em>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Visualization of Active Experts -->
+            <div class="interactive-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <h4 style="margin: 0; color: var(--color-primary);">Estado de la Red (8 Expertos)</h4>
+                    <span id="moe-active-tag" class="badge-tag emerald">Top-2 Activos</span>
+                </div>
+
+                <div id="moe-experts-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <!-- Expert cards rendered via JS -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const moeExpertsList = [
+                { id: "med", name: "🏥 Medicina y Salud", desc: "Farmacología, sintomatología" },
+                { id: "code", name: "💻 Código y Datos", desc: "Python, JavaScript, SQL" },
+                { id: "math", name: "📐 Matemáticas", desc: "Álgebra, cálculo, estadística" },
+                { id: "lang", name: "🌐 Idiomas y Traducción", desc: "Gramática multilingüe" },
+                { id: "logic", name: "🧩 Razonamiento Lógico", desc: "Análisis deductivo" },
+                { id: "writing", name: "✍️ Redacción Creativa", desc: "Estilo, resúmenes" },
+                { id: "science", name: "🔬 Ciencias Generales", desc: "Física, química, biología" },
+                { id: "chat", name: "💬 Conversación", desc: "Empatía, modales" }
+            ];
+
+            function runMoeRouter(typeKey) {
+                const grid = document.getElementById('moe-experts-grid');
+                if (!grid) return;
+
+                let activeIds = [];
+                if (typeKey === 'med') activeIds = ['med', 'science'];
+                else if (typeKey === 'code') activeIds = ['code', 'logic'];
+                else if (typeKey === 'math') activeIds = ['math', 'logic'];
+                else if (typeKey === 'lang') activeIds = ['lang', 'writing'];
+
+                grid.innerHTML = '';
+                moeExpertsList.forEach(exp => {
+                    const isActive = activeIds.includes(exp.id);
+                    const card = document.createElement('div');
+                    card.style.padding = '10px 12px';
+                    card.style.borderRadius = '8px';
+                    card.style.transition = 'all 0.3s ease';
+
+                    if (isActive) {
+                        card.style.background = '#ECFDF5';
+                        card.style.border = '2px solid #10B981';
+                        card.style.boxShadow = '0 2px 4px rgba(16, 185, 129, 0.15)';
+                    } else {
+                        card.style.background = 'white';
+                        card.style.border = '1px solid #E2E8F0';
+                        card.style.opacity = '0.45';
+                    }
+
+                    card.innerHTML = `
+                        <div style="font-size: 0.85rem; font-weight: 700; color: ${isActive ? '#047857' : '#64748B'};">${exp.name}</div>
+                        <div style="font-size: 0.72rem; color: #64748B; margin-top: 2px;">${exp.desc}</div>
+                        ${isActive ? '<span style="font-size: 0.65rem; background: #10B981; color: white; padding: 2px 6px; border-radius: 10px; margin-top: 4px; display: inline-block;">ACTIVADO ⚡</span>' : ''}
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+
+            runMoeRouter('med');
+        </script>
+    </div>
+</section>

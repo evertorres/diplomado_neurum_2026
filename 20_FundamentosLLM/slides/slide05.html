@@ -1,0 +1,128 @@
+<!-- Slide 05: Playground Interactivo de Tokenización -->
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
+            <span class="badge-tag emerald">Simulador Interactivo</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Pilar 1: Tokenización</span>
+        </div>
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Playground de Tokenización
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Prueba oraciones o escribe tu propio texto para ver cómo la IA lo divide en tokens numerados y coloreados.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-lg);">
+            <!-- Input & Controls -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+                <label style="font-size: 0.9rem; font-weight: 700; color: var(--color-primary); display: block; margin-bottom: 8px;">
+                    Oración de entrada:
+                </label>
+                <textarea id="tok-input" rows="3" style="width: 100%; border: 1px solid #CBD5E1; border-radius: 8px; padding: 10px; font-family: 'Roboto Mono', monospace; font-size: 0.95rem; resize: none; margin-bottom: 12px;" placeholder="Escribe algo aquí...">El neurocirujano realizó una resonancia magnética en el hospital.</textarea>
+
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                    <span style="font-size: 0.8rem; color: var(--color-secondary); align-self: center;">Ejemplos rápidos:</span>
+                    <button class="btn-secondary" style="padding: 4px 10px; font-size: 0.8rem;" onclick="setTokPreset('Diagnóstico de hipertensión arterial acelerada.')">Caso Clínico</button>
+                    <button class="btn-secondary" style="padding: 4px 10px; font-size: 0.8rem;" onclick="setTokPreset('Supercalifragilisticoespialidoso')">Palabra Rara</button>
+                    <button class="btn-secondary" style="padding: 4px 10px; font-size: 0.8rem;" onclick="setTokPreset('Inteligencia Artificial Generativa 2026')">Tecnología</button>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #F1F5F9; pt: 12px; margin-top: 8px;">
+                    <span style="font-size: 0.85rem; color: var(--color-secondary);">Total de Tokens: <strong id="tok-count" style="color: var(--color-cta); font-size: 1.1rem;">0</strong></span>
+                    <span style="font-size: 0.85rem; color: var(--color-secondary);">Caracteres: <strong id="char-count">0</strong></span>
+                </div>
+            </div>
+
+            <!-- Visualization Output -->
+            <div class="interactive-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg); display: flex; flex-direction: column;">
+                <label style="font-size: 0.9rem; font-weight: 700; color: var(--color-primary); display: block; margin-bottom: 10px;">
+                    Fragmentos Resultantes (Tokens):
+                </label>
+
+                <div id="tok-chips-container" style="display: flex; flex-wrap: wrap; gap: 8px; min-height: 120px; align-content: flex-start; background: white; padding: 12px; border-radius: 8px; border: 1px solid #E2E8F0;">
+                    <!-- Chips inserted via JS -->
+                </div>
+
+                <div style="margin-top: 12px; font-size: 0.8rem; color: var(--color-secondary); line-height: 1.4;">
+                    📌 <em>Nota: Cada color representa un token independiente con su respectivo código numérico asignado en el vocabulario del modelo.</em>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function runTokenizerSim() {
+                const text = document.getElementById('tok-input').value;
+                const chipsContainer = document.getElementById('tok-chips-container');
+                const tokCountEl = document.getElementById('tok-count');
+                const charCountEl = document.getElementById('char-count');
+
+                if (!chipsContainer) return;
+                chipsContainer.innerHTML = '';
+                charCountEl.textContent = text.length;
+
+                if (!text.trim()) {
+                    tokCountEl.textContent = '0';
+                    chipsContainer.innerHTML = '<span style="color: #94A3B8; font-size: 0.85rem;">Escribe texto arriba para ver los tokens...</span>';
+                    return;
+                }
+
+                // Simple simulated subword tokenizer logic for demo
+                const words = text.split(/(\s+)/);
+                const tokens = [];
+                const colors = ['#EFF6FF', '#ECFDF5', '#FFFBEB', '#F5F3FF', '#FEF2F2', '#F0F9FF'];
+                const borderColors = ['#2563EB', '#10B981', '#F59E0B', '#7C3AED', '#EF4444', '#0284C7'];
+
+                words.forEach(w => {
+                    if (!w) return;
+                    if (w.trim() === '') {
+                        tokens.push({ text: '␣', id: 220, space: true });
+                        return;
+                    }
+                    if (w.length > 7 && Math.random() > 0.2) {
+                        const mid = Math.floor(w.length / 2);
+                        tokens.push({ text: w.substring(0, mid), id: Math.floor(1000 + Math.random() * 8000) });
+                        tokens.push({ text: '##' + w.substring(mid), id: Math.floor(9000 + Math.random() * 20000) });
+                    } else {
+                        tokens.push({ text: w, id: Math.floor(100 + Math.random() * 50000) });
+                    }
+                });
+
+                tokCountEl.textContent = tokens.length;
+
+                tokens.forEach((t, idx) => {
+                    const colorIdx = idx % colors.length;
+                    const chip = document.createElement('div');
+                    chip.style.background = colors[colorIdx];
+                    chip.style.border = `1px solid ${borderColors[colorIdx]}`;
+                    chip.style.borderRadius = '6px';
+                    chip.style.padding = '4px 8px';
+                    chip.style.display = 'inline-flex';
+                    chip.style.flexDirection = 'column';
+                    chip.style.alignItems = 'center';
+                    chip.style.margin = '2px';
+                    chip.style.boxShadow = '0 1px 2px rgba(0,0,0,0.05)';
+
+                    chip.innerHTML = `
+                        <span style="font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 0.85rem; color: #1E293B;">${t.text}</span>
+                        <span style="font-size: 0.65rem; color: #64748B; font-family: monospace;">ID: ${t.id}</span>
+                    `;
+                    chipsContainer.appendChild(chip);
+                });
+            }
+
+            function setTokPreset(str) {
+                const input = document.getElementById('tok-input');
+                if (input) {
+                    input.value = str;
+                    runTokenizerSim();
+                }
+            }
+
+            const tokInput = document.getElementById('tok-input');
+            if (tokInput) {
+                tokInput.addEventListener('input', runTokenizerSim);
+                runTokenizerSim();
+            }
+        </script>
+    </div>
+</section>

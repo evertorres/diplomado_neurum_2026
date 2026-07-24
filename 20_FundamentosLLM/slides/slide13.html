@@ -1,0 +1,142 @@
+<!-- Slide 13: Visualizador Interactivo de Mapa de Atención -->
+<section class="slide" id="slide13">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
+            <span class="badge-tag emerald">Simulador Interactivo</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Pilar 4: Atención</span>
+        </div>
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Visualizador del Resaltador de Atención
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            Pasa el ratón sobre cualquier palabra para ver a qué otras palabras le presta atención el modelo y con qué intensidad.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+            <!-- Interactive Sentence Box -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg);">
+                <label style="font-size: 0.85rem; font-weight: 700; color: #475569; display: block; margin-bottom: 12px;">
+                    Selecciona una palabra en la oración:
+                </label>
+
+                <div id="att-words-container" style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 1.1rem; font-weight: 600; padding: 16px; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0;">
+                    <!-- Words rendered via JS -->
+                </div>
+
+                <div style="margin-top: 16px; font-size: 0.85rem; color: var(--color-secondary);">
+                    💡 <em>Instrucciones:</em> Al colocar el cursor sobre <strong>"ella"</strong>, notarás cómo se ilumina con fuerza la palabra <strong>"paciente"</strong>.
+                </div>
+            </div>
+
+            <!-- Heatmap / Weights Panel -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; margin: 0; padding: var(--space-lg); display: flex; flex-direction: column;">
+                <label style="font-size: 0.85rem; font-weight: 700; color: #475569; display: block; margin-bottom: 8px;">
+                    Pesos de Atención para: <strong id="att-active-word" style="color: var(--color-cta);">-</strong>
+                </label>
+
+                <div id="att-weights-list" style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
+                    <!-- Weight bars rendered via JS -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const sampleSentence = ["La", "paciente", "ingresó", "ayer", "porque", "ella", "presentaba", "fiebre"];
+
+            // Attention weight matrix simulation for each target word index
+            const attMatrix = {
+                1: [ { word: "paciente", weight: 95 }, { word: "ella", weight: 88 }, { word: "ingresó", weight: 40 }, { word: "fiebre", weight: 30 } ],
+                5: [ { word: "paciente", weight: 92 }, { word: "ella", weight: 95 }, { word: "presentaba", weight: 50 }, { word: "fiebre", weight: 45 } ],
+                6: [ { word: "fiebre", weight: 90 }, { word: "presentaba", weight: 95 }, { word: "paciente", weight: 40 }, { word: "ayer", weight: 20 } ],
+                7: [ { word: "fiebre", weight: 98 }, { word: "presentaba", weight: 75 }, { word: "paciente", weight: 35 }, { word: "ingresó", weight: 25 } ]
+            };
+
+            function renderAttSim() {
+                const container = document.getElementById('att-words-container');
+                if (!container) return;
+                container.innerHTML = '';
+
+                sampleSentence.forEach((w, idx) => {
+                    const span = document.createElement('span');
+                    span.textContent = w;
+                    span.style.padding = '4px 10px';
+                    span.style.borderRadius = '6px';
+                    span.style.cursor = 'pointer';
+                    span.style.transition = 'all 0.2s ease';
+                    span.style.background = '#FFFFFF';
+                    span.style.border = '1px solid #CBD5E1';
+                    span.style.color = '#1E293B';
+
+                    span.addEventListener('mouseenter', () => highlightAttWord(idx));
+                    container.appendChild(span);
+                });
+
+                highlightAttWord(5); // Default highlight "ella"
+            }
+
+            function highlightAttWord(targetIdx) {
+                const container = document.getElementById('att-words-container');
+                const activeWordEl = document.getElementById('att-active-word');
+                const weightsList = document.getElementById('att-weights-list');
+                if (!container || !weightsList) return;
+
+                const targetWord = sampleSentence[targetIdx];
+                activeWordEl.textContent = `"${targetWord}"`;
+
+                const spans = container.querySelectorAll('span');
+                const weights = attMatrix[targetIdx] || [
+                    { word: targetWord, weight: 90 },
+                    { word: sampleSentence[(targetIdx + 1) % sampleSentence.length], weight: 40 },
+                    { word: sampleSentence[(targetIdx + 2) % sampleSentence.length], weight: 25 }
+                ];
+
+                // Map of weights
+                const weightMap = {};
+                weights.forEach(item => { weightMap[item.word] = item.weight; });
+
+                spans.forEach((span, i) => {
+                    const wName = sampleSentence[i];
+                    const wVal = weightMap[wName] || 10;
+
+                    if (i === targetIdx) {
+                        span.style.background = '#2563EB';
+                        span.style.color = 'white';
+                        span.style.borderColor = '#1D4ED8';
+                    } else if (wVal > 50) {
+                        span.style.background = '#7C3AED';
+                        span.style.color = 'white';
+                        span.style.borderColor = '#6D28D9';
+                    } else if (wVal > 20) {
+                        span.style.background = '#DDD6FE';
+                        span.style.color = '#5B21B6';
+                        span.style.borderColor = '#C4B5FD';
+                    } else {
+                        span.style.background = '#F1F5F9';
+                        span.style.color = '#94A3B8';
+                        span.style.borderColor = '#E2E8F0';
+                    }
+                });
+
+                // Render list bars
+                weightsList.innerHTML = '';
+                weights.sort((a, b) => b.weight - a.weight).forEach(item => {
+                    const row = document.createElement('div');
+                    row.style.display = 'flex';
+                    row.style.alignItems = 'center';
+                    row.style.gap = '10px';
+
+                    row.innerHTML = `
+                        <span style="width: 90px; font-weight: 600; font-size: 0.9rem; color: #1E293B;">${item.word}</span>
+                        <div style="flex: 1; background: #F1F5F9; height: 16px; border-radius: 8px; overflow: hidden;">
+                            <div style="width: ${item.weight}%; background: ${item.weight > 80 ? '#7C3AED' : '#3B82F6'}; height: 100%; transition: width 0.3s ease;"></div>
+                        </div>
+                        <span style="font-size: 0.8rem; font-weight: 700; color: #64748B; width: 35px;">${item.weight}%</span>
+                    `;
+                    weightsList.appendChild(row);
+                });
+            }
+
+            renderAttSim();
+        </script>
+    </div>
+</section>

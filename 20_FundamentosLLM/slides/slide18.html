@@ -1,0 +1,47 @@
+<!-- Slide 18: Entrenamiento Fase 1 Preentrenamiento -->
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag amber">Pilar 7</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Entrenamiento de un LLM</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-sm);">
+            Fase 1: Preentrenamiento (La Biblioteca de Internet)
+        </h2>
+        <p style="font-size: 1rem; color: var(--color-secondary); margin-bottom: var(--space-md);">
+            El modelo aprende gramática, hechos y conceptos mediante una tarea engañosamente simple: <strong>predecir la siguiente palabra</strong>.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <div class="concept-card" style="margin-bottom: 12px; border-left: 4px solid #F59E0B;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Predicción Auto-supervisada</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        No requiere humanos etiquetando datos. La IA lee miles de millones de artículos web y libros tapando la palabra final e intentando adivinarla.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #EF4444;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">El Problema del Modelo Base</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        Un modelo solo preentrenado <strong>no es un útil asistente</strong>. Si le preguntas <em>"¿Cómo tratar la fiebre?"</em>, podría responder completando con: <em>"es una duda frecuente en foros..."</em> en lugar de darte una respuesta clara.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Conceptual Card Box -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; padding: var(--space-lg); text-align: center;">
+                <h4 style="color: var(--color-primary); margin-bottom: 12px;">Completado de Oraciones</h4>
+                
+                <div style="background: #FFFBEB; border: 1px solid #FDE68A; padding: 14px; border-radius: 8px; font-family: monospace; font-size: 0.95rem; color: #92400E; text-align: left; margin-bottom: 12px;">
+                    "El órgano principal del sistema circulatorio es el..."
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 8px; font-size: 0.85rem; color: var(--color-secondary);">
+                    <span class="badge-tag emerald">Probabilidad 94%: "corazón"</span>
+                    <span class="badge-tag amber">Probabilidad 3%: "pulmón"</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,57 @@
+<!-- Slide 23: Cuantización Concepto -->
+<section class="slide" id="slide23">
+    <div class="slide-content left" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag">Pilar 9</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Cuantización (Compresión)</span>
+        </div>
+        <h2 style="font-size: 2.2rem; margin-bottom: var(--space-md);">
+            ¿Cómo Hacer que un Gigante Quepa en tu Celular?
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-xl); align-items: center;">
+            <div>
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text); margin-bottom: var(--space-md);">
+                    Los modelos de lenguaje pesan decenas de gigabytes. Para ejecutarse en computadoras o servidores convencionales, requieren <strong>cuantización</strong>: una técnica de compresión que reduce el tamaño de los números internos.
+                </p>
+
+                <div class="concept-card" style="margin-bottom: 12px; border-left: 4px solid #2563EB;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Máxima Calidad (16-bit)</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        Cada parámetro se guarda como un número decimal ultra-preciso de 16 dígitos. Requiere súper-servidores con 140 GB de VRAM.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="margin-bottom: var(--space-md); border-left: 4px solid #10B981;">
+                    <h4 style="color: var(--color-primary); margin-bottom: 4px;">Compresión Inteligente (4-bit)</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-secondary); margin: 0;">
+                        Se redondean los parámetros a números enteros de 4 dígitos. Reduce la memoria en un <strong>75%</strong> perdiendo menos del 1% de exactitud.
+                    </p>
+                </div>
+
+                <button class="btn-secondary" data-modal-target="modal-quantization" onclick="openModal('modal-quantization')">
+                    💾 Ver Tabla de Consumo de VRAM
+                </button>
+            </div>
+
+            <!-- Conceptual Visual Box -->
+            <div class="interactive-box" style="background: white; border: 1px solid #E2E8F0; text-align: center; padding: var(--space-lg);">
+                <h4 style="color: var(--color-primary); margin-bottom: 12px;">Reducción de Precisión</h4>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="background: #EFF6FF; border: 1px solid #2563EB; padding: 12px; border-radius: 8px;">
+                        <span style="font-size: 0.8rem; color: #1D4ED8; font-weight: 700;">Sin Cuantizar (FP16)</span>
+                        <div style="font-family: monospace; font-size: 1rem; color: #1E293B; margin-top: 4px;">3.141592653589793 (16 bits)</div>
+                    </div>
+
+                    <div style="font-size: 1.2rem; color: #94A3B8;">⬇️ Cuantización 4-bit ⬇️</div>
+
+                    <div style="background: #ECFDF5; border: 1px solid #10B981; padding: 12px; border-radius: 8px;">
+                        <span style="font-size: 0.8rem; color: #047857; font-weight: 700;">Cuantizado (INT4 / NF4)</span>
+                        <div style="font-family: monospace; font-size: 1rem; color: #1E293B; margin-top: 4px;">3.14 (4 bits)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
