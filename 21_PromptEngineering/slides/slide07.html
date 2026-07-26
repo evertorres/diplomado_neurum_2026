@@ -1,0 +1,57 @@
+<!-- Slide 07: Diseño Efectivo de Ejemplos In-Context -->
+<section class="slide" id="slide07">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Técnicas Intermedias • In-Context Learning</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Diseño Efectivo de Ejemplos In-Context (Few-Shot)
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 07 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; margin-top: 10px;">
+            
+            <div class="concept-card" style="border-top: 4px solid #7C3AED;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">🌈</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    1. Diversidad Representativa
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Los ejemplos deben cubrir la variabilidad real del dominio (diferentes tipos de síntomas, formatos de entrada y casos límite), no solo casos sencillos.
+                </p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">📏</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    2. Consistencia Estricta
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    El esquema de entrada y salida en todos los ejemplos debe ser 100% idéntico entre sí y coincidir exactamente con el formato final solicitado.
+                </p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #D97706;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">⚖️</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    3. Mitigación de Sesgo de Reciente
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Los LLMs sufren de <i>Recency Bias</i> (tienden a sobreponderar el último ejemplo provisto). Balancea las clases y desordena aleatoriamente el orden de los ejemplos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="interactive-box" style="margin-top: var(--space-md); width: 100%; background: #F8FAFC; border-color: #CBD5E1;">
+            <h5 style="margin: 0 0 8px 0; font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B;">
+                💡 Regla de Oro: Pocos Ejemplos de Calidad > Muchos Ejemplos Ruidosos
+            </h5>
+            <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.5;">
+                Proporcionar entre 2 y 4 ejemplos curados de alta calidad ofrece el 95% del beneficio de Few-Shot sin consumir tokens innecesarios de la ventana de contexto.
+            </p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,51 @@
+<!-- Slide 08: System Prompts y Roles -->
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Directivas • System Level</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    System Prompts, Personas y Asignación de Roles
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 08 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        ¿Qué es el System Prompt?
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Es el canal de instrucciones primario del modelo. Define la personalidad, el alcance de conocimiento, las fronteras de seguridad y las restricciones globales de la sesión.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Efecto de la Asignación de Roles ("Personas")
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Instruir al modelo con <i>"Eres un epidemiólogo sénior con 20 años de experiencia"</i> sesga el espacio de probabilidades del modelo hacia vocabulario técnico especializado, rigurosidad académica y mejor calidad de respuesta.
+                    </p>
+                </div>
+            </div>
+
+            <div class="code-block" style="font-size: 0.8rem; line-height: 1.5;">
+                <span style="color: #94A3B8; font-size: 0.75rem;">// Ejemplo de System Prompt en API (Gemini/OpenAI)</span><br><br>
+                <span style="color: #C084FC; font-weight: 700;">system_instruction</span> = """<br>
+                <span style="color: #60A5FA;"># ROL:</span> Asistente de Investigación Biomédica.<br>
+                <span style="color: #60A5FA;"># AUDIENCIA:</span> Profesionales de la salud.<br>
+                <span style="color: #60A5FA;"># TONO:</span> Objetivo, técnico, basado en evidencia.<br>
+                <span style="color: #60A5FA;"># RESTRICCIONES:</span><br>
+                1. No emitas diagnósticos médicos a pacientes.<br>
+                2. Si la consulta involucra dosis de fármacos, cita siempre la fuente bibliográfica.<br>
+                3. Si la evidencia es insuficiente, indícalo expresamente.<br>
+                """
+            </div>
+
+        </div>
+    </div>
+</section>

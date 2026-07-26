@@ -1,0 +1,63 @@
+<!-- Slide 06: Zero-Shot vs Few-Shot -->
+<section class="slide" id="slide06">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Técnicas Intermedias • Aprendizaje en Contexto</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Zero-Shot vs. Few-Shot Prompting
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 06 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px;">
+            
+            <!-- Zero-Shot Card -->
+            <div class="concept-card" style="border-top: 4px solid #2563EB; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                        <h4 style="font-family: 'Exo', sans-serif; font-size: 1.15rem; font-weight: 700; color: #1E293B; margin: 0;">
+                            ⚡ Zero-Shot Prompting
+                        </h4>
+                        <span class="badge-tag" style="font-size: 0.75rem;">Sin Ejemplos</span>
+                    </div>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin-bottom: 12px;">
+                        Se le solicita al modelo realizar la tarea confiando únicamente en su conocimiento previo, sin darle ningún ejemplo de entrada/salida en el prompt.
+                    </p>
+                    <div class="code-block" style="font-size: 0.78rem; padding: 10px; background: #1E293B;">
+                        Clasifica el siguiente síntoma en [Leve, Moderado, Grave]:<br>
+                        "Cefalea intensa repentina con visión borrosa."
+                    </div>
+                </div>
+                <div style="margin-top: 10px; font-size: 0.8rem; color: #3B82F6; font-weight: 600;">
+                    Ideal para: Tareas genéricas, modelos de gran tamaño, prototipado rápido.
+                </div>
+            </div>
+
+            <!-- Few-Shot Card -->
+            <div class="concept-card" style="border-top: 4px solid #059669; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                        <h4 style="font-family: 'Exo', sans-serif; font-size: 1.15rem; font-weight: 700; color: #1E293B; margin: 0;">
+                            🎯 Few-Shot Prompting
+                        </h4>
+                        <span class="badge-tag emerald" style="font-size: 0.75rem;">Con Ejemplos (In-Context)</span>
+                    </div>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin-bottom: 12px;">
+                        Se proporcionan entre 2 y 5 ejemplos ilustrativos de pares (entrada → salida) antes de la consulta final. Modela el formato y el estilo exacto.
+                    </p>
+                    <div class="code-block" style="font-size: 0.75rem; padding: 10px; background: #064E3B;">
+                        Texto: "Fiebre 37.5C" -> Gravedad: Leve<br>
+                        Texto: "Presión 180/110" -> Gravedad: Grave<br>
+                        Texto: "Cefalea intensa con visión borrosa" -> Gravedad: ?
+                    </div>
+                </div>
+                <div style="margin-top: 10px; font-size: 0.8rem; color: #059669; font-weight: 600;">
+                    Ideal para: Formatos estrictos, lenguaje técnico de nicho, clasificación compleja.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

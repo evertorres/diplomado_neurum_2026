@@ -1,0 +1,72 @@
+<!-- Slide 12: Self-Consistency -->
+<section class="slide" id="slide12">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Razonamiento Avanzado • Voto Mayoritario</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Self-Consistency: Muestreo de Múltiples Rutas
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 12 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        ¿Cómo funciona Self-Consistency? (Wang et al., 2022)
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        En lugar de confiar en una sola cadena de razonamiento (que puede desviarse por un error aleatorio en un token), se generan <b>N rutas de razonamiento independientes</b> (con Temperatura > 0.5) y se aplica un <b>voto por mayoría</b> sobre la respuesta final.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #059669;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Intuición Clave
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Si un problema tiene un único resultado correcto, múltiples formas distintas de razonarlo deberían converger hacia la misma respuesta final.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SVG Diagram of Self-Consistency -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 16px; box-shadow: var(--shadow-sm); text-align: center;">
+                <svg width="100%" height="220" viewBox="0 0 380 220" fill="none">
+                    <!-- Prompt node -->
+                    <rect x="10" y="90" width="80" height="40" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="2"/>
+                    <text x="50" y="114" text-anchor="middle" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Prompt + CoT</text>
+
+                    <!-- Branches -->
+                    <line x1="90" y1="110" x2="160" y2="40" stroke="#7C3AED" stroke-width="2"/>
+                    <line x1="90" y1="110" x2="160" y2="110" stroke="#2563EB" stroke-width="2"/>
+                    <line x1="90" y1="110" x2="160" y2="180" stroke="#059669" stroke-width="2"/>
+
+                    <!-- CoT Paths -->
+                    <rect x="160" y="20" width="100" height="38" rx="6" fill="#F5F3FF" stroke="#7C3AED"/>
+                    <text x="210" y="44" text-anchor="middle" font-size="10" fill="#4C1D95">Ruta 1 -> Ans: A</text>
+
+                    <rect x="160" y="91" width="100" height="38" rx="6" fill="#EFF6FF" stroke="#2563EB"/>
+                    <text x="210" y="115" text-anchor="middle" font-size="10" fill="#1E40AF">Ruta 2 -> Ans: A</text>
+
+                    <rect x="160" y="161" width="100" height="38" rx="6" fill="#ECFDF5" stroke="#059669"/>
+                    <text x="210" y="185" text-anchor="middle" font-size="10" fill="#065F46">Ruta 3 -> Ans: B</text>
+
+                    <!-- Vote convergence -->
+                    <line x1="260" y1="39" x2="310" y2="110" stroke="#7C3AED" stroke-width="2"/>
+                    <line x1="260" y1="110" x2="310" y2="110" stroke="#2563EB" stroke-width="2"/>
+                    <line x1="260" y1="180" x2="310" y2="110" stroke="#059669" stroke-width="1" stroke-dasharray="3 3"/>
+
+                    <circle cx="335" cy="110" r="28" fill="#7C3AED"/>
+                    <text x="335" y="106" text-anchor="middle" fill="white" font-size="10" font-weight="700">Voto (2/3)</text>
+                    <text x="335" y="120" text-anchor="middle" fill="#A7F3D0" font-size="11" font-weight="800">Ans: A</text>
+                </svg>
+                <div style="font-size: 0.78rem; color: #64748B; margin-top: 4px;">Demostración gráfica de Voto por Mayoría sobre 3 rutas de pensamiento.</div>
+            </div>
+
+        </div>
+    </div>
+</section>

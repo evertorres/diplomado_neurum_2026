@@ -1,0 +1,64 @@
+<!-- Slide 04: Principios Fundamentales -->
+<section class="slide" id="slide04">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-md);">
+            <div>
+                <span class="badge-tag purple">Buenas Prácticas • Principios</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Principios de Claridad, Especificidad y Delimitación
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 04 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%;">
+            
+            <!-- Principle 1 & 2 -->
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div class="concept-card" style="border-top: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                        1. Evitar la Ambigüedad (Ser Ultra-Explícito)
+                    </h4>
+                    <p style="font-size: 0.88rem; color: #64748B; line-height: 1.5;">
+                        Los LLMs no pueden adivinar la intención imprecisa. En lugar de decir <i>"Resume esto brevemente"</i>, especifica los límites: <i>"Genera un resumen en máximo 3 viñetas, enfocándote únicamente en el diagnóstico primario"</i>.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                        2. Uso de Delimitadores Explícitos
+                    </h4>
+                    <p style="font-size: 0.88rem; color: #64748B; line-height: 1.5;">
+                        Utiliza comillas triples <code>"""</code>, comillas invertidas <code>```</code> o etiquetas XML <code>&lt;texto&gt;...&lt;/texto&gt;</code>. Esto evita ataques de inyección y separa claramente las instrucciones de los datos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bad vs Good Comparison Box -->
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="background: #FFF1F2; border: 1px solid #FECDD3; border-radius: 12px; padding: 14px 18px;">
+                    <div style="display: flex; align-items: center; gap: 8px; color: #E11D48; font-weight: 700; font-family: 'Exo', sans-serif; margin-bottom: 6px;">
+                        ❌ Prompt Débil (Ambiguo)
+                    </div>
+                    <code style="font-family: 'Roboto Mono', monospace; font-size: 0.82rem; color: #9F1239; display: block; background: rgba(255,255,255,0.7); padding: 8px; border-radius: 6px;">
+                        Extrae la información importante del texto clínico sobre el paciente.
+                    </code>
+                </div>
+
+                <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 12px; padding: 14px 18px;">
+                    <div style="display: flex; align-items: center; gap: 8px; color: #059669; font-weight: 700; font-family: 'Exo', sans-serif; margin-bottom: 6px;">
+                        ✅ Prompt Robusto (Específico y Delimitado)
+                    </div>
+                    <code style="font-family: 'Roboto Mono', monospace; font-size: 0.8rem; color: #065F46; display: block; background: rgba(255,255,255,0.7); padding: 8px; border-radius: 6px; white-space: pre-wrap;">
+Extrae (1) Edad, (2) Síntoma Principal y (3) Medicación Actual del texto encerrado en &lt;nota&gt;. Si un dato no aparece, escribe "No reportado".
+
+&lt;nota&gt;
+[Texto del reporte clínico aquí]
+&lt;/nota&gt;
+                    </code>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

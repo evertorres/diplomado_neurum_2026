@@ -1,0 +1,53 @@
+<!-- Slide 15: El Patrón ReAct -->
+<section class="slide" id="slide15">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Agentes • Razonamiento y Acción</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    El Patrón ReAct: Synergizing Reasoning & Acting
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 15 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-lg); width: 100%; margin-top: 10px; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        ¿Qué es ReAct? (Yao et al., ICLR 2023)
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Combina el razonamiento de lenguaje natural (<b>Thought</b>) con la ejecución de acciones externas (<b>Action</b>) y la recepción de realimentación del entorno (<b>Observation</b>).
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        El Bucle Infinito de ReAct
+                    </h4>
+                    <ul style="font-size: 0.84rem; color: #334155; margin: 0; padding-left: 16px; line-height: 1.5;">
+                        <li><b>Thought:</b> El LLM analiza qué datos le faltan.</li>
+                        <li><b>Action:</b> Invoca una herramienta (ej. <code>search_pubmed("interaccion_farmaco")</code>).</li>
+                        <li><b>Observation:</b> El entorno devuelve los datos al contexto.</li>
+                        <li><b>Final Answer:</b> Cuando tiene suficiente información, emite la respuesta.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ReAct Cycle Box -->
+            <div class="code-block" style="font-size: 0.78rem; line-height: 1.5; background: #0F172A; border-color: #334155; border-radius: 14px; padding: 18px;">
+                <span style="color: #FBBF24; font-weight: 700;">Question:</span> "¿Cuál es la dosis máxima de Paracetamol en falla hepática?"<br><br>
+
+                <span style="color: #C084FC; font-weight: 700;">Thought 1:</span> Necesito consultar la base de datos de guías farmacológicas para insuficiencia hepática.<br>
+                <span style="color: #60A5FA; font-weight: 700;">Action 1:</span> query_drug_db(drug="Paracetamol", condition="hepatic_failure")<br>
+                <span style="color: #34D399; font-weight: 700;">Observation 1:</span> "En insuficiencia hepática Child-Pugh A/B se recomienda máx 2g/día. Contraindicado en Child-Pugh C."<br><br>
+
+                <span style="color: #C084FC; font-weight: 700;">Thought 2:</span> Tengo la información exacta. Procedo a estructurar la respuesta con la advertencia de contraindicación.<br>
+                <span style="color: #F472B6; font-weight: 700;">Final Answer:</span> La dosis máxima en falla hepática leve/moderada es de 2 gramos al día. Está contraindicado en falla severa (Child-Pugh C).
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,57 @@
+<!-- Slide 09: Salidas Estructuradas (JSON & Pydantic) -->
+<section class="slide" id="slide09">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Formato Computable • Output Control</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Salida Estructurada: JSON Schema & Pydantic
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 09 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #059669;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        El Desafío del Texto Libre en Producción
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Procesar respuestas en lenguaje natural con expresiones regulares o cadenas de texto es frágil e inestable en sistemas reales.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Structured Outputs Nativos
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Las APIs modernas permiten pasar un esquema JSON o clase de Pydantic. El decodificador del modelo fuerza gramaticalmente a que los tokens generados cumplan con la sintaxis del esquema sin errores de sintaxis.
+                    </p>
+                </div>
+            </div>
+
+            <div class="code-block" style="font-size: 0.78rem; line-height: 1.45;">
+                <span style="color: #94A3B8;"># Definición del esquema con Pydantic en Python</span><br>
+                <span style="color: #F472B6;">from</span> pydantic <span style="color: #F472B6;">import</span> BaseModel, Field<br>
+                <span style="color: #F472B6;">from</span> typing <span style="color: #F472B6;">import</span> List, Optional<br><br>
+
+                <span style="color: #60A5FA;">class</span> <span style="color: #FBBF24;">DiagnosticoExtraido</span>(BaseModel):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;paciente_id: <span style="color: #34D399;">str</span> = Field(description="ID del paciente")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;sintomas_clave: List[<span style="color: #34D399;">str</span>]<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;severidad: <span style="color: #34D399;">str</span> = Field(description="Leve, Moderado o Grave")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;tratamiento_sugerido: Optional[<span style="color: #34D399;">str</span>]<br><br>
+
+                <span style="color: #94A3B8;"># Llamada al API forzando respuesta estructurada</span><br>
+                response = client.chat.completions.create(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;model=<span style="color: #A7F3D0;">"gemini-2.5-flash"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;response_format=DiagnosticoExtraido,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;messages=[...]<br>
+                )
+            </div>
+
+        </div>
+    </div>
+</section>

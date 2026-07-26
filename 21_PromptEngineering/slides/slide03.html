@@ -1,0 +1,79 @@
+<!-- Slide 03: Anatomía de un Prompt -->
+<section class="slide" id="slide03">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Fundamentos • Estructura</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Anatomía y Componentes de un Prompt
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 03 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); width: 100%; margin-top: 10px; align-items: center;">
+            
+            <!-- Left Side: 4 Core Building Blocks -->
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                
+                <div class="concept-card" style="border-left: 4px solid #7C3AED; padding: 12px 18px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin: 0;">1. Instrucción (Instruction)</h4>
+                        <span class="badge-tag purple" style="font-size: 0.75rem;">Obligatorio</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #64748B; margin: 4px 0 0 0;">La tarea concreta u orden explícita que debe ejecutar el LLM (ej. <i>"Extrae los síntomas clave"</i>).</p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #2563EB; padding: 12px 18px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin: 0;">2. Contexto (Context)</h4>
+                        <span class="badge-tag" style="font-size: 0.75rem;">Recomendado</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #64748B; margin: 4px 0 0 0;">Información de fondo, restricciones de dominio o rol asignado para dirigir la respuesta.</p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #059669; padding: 12px 18px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin: 0;">3. Datos de Entrada (Input Data)</h4>
+                        <span class="badge-tag emerald" style="font-size: 0.75rem;">Variable</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #64748B; margin: 4px 0 0 0;">El texto, documento o datos que el modelo debe procesar o transformar.</p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #D97706; padding: 12px 18px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin: 0;">4. Indicador de Salida (Output Schema)</h4>
+                        <span class="badge-tag amber" style="font-size: 0.75rem;">Formato</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #64748B; margin: 4px 0 0 0;">El formato deseado (JSON, Markdown, tabla) e instrucciones de estilo.</p>
+                </div>
+
+            </div>
+
+            <!-- Right Side: Practical Anatomy Example -->
+            <div class="code-block" style="font-size: 0.82rem; line-height: 1.5; border-radius: 12px;">
+                <div style="color: #94A3B8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Ejemplo Estructurado:</div>
+                <span style="color: #C084FC; font-weight: 700;">&lt;system_role&gt;</span><br>
+                Eres un asistente de investigación clínica especializado en neurología.<br>
+                <span style="color: #C084FC; font-weight: 700;">&lt;/system_role&gt;</span><br><br>
+
+                <span style="color: #60A5FA; font-weight: 700;">&lt;context&gt;</span><br>
+                Analizas notas de evolución de pacientes con migraña crónica.<br>
+                <span style="color: #60A5FA; font-weight: 700;">&lt;/context&gt;</span><br><br>
+
+                <span style="color: #34D399; font-weight: 700;">&lt;instruction&gt;</span><br>
+                Identifica el tratamiento prescrito y la frecuencia de las crisis.<br>
+                <span style="color: #34D399; font-weight: 700;">&lt;/instruction&gt;</span><br><br>
+
+                <span style="color: #FBBF24; font-weight: 700;">&lt;input_data&gt;</span><br>
+                "Paciente refiere 4 episodios por semana, trata con triptanes sin mejoría completa..."<br>
+                <span style="color: #FBBF24; font-weight: 700;">&lt;/input_data&gt;</span><br><br>
+
+                <span style="color: #F472B6; font-weight: 700;">&lt;output_format&gt;</span><br>
+                Responde únicamente en un objeto JSON con las claves: ["tratamiento", "frecuencia_semanal"].<br>
+                <span style="color: #F472B6; font-weight: 700;">&lt;/output_format&gt;</span>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,59 @@
+<!-- Slide 20: Evaluación y Benchmarking -->
+<section class="slide" id="slide20">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Medición & Métricas • Evals</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Evaluación & Benchmarking de Prompts (Evals)
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 20 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; margin-top: 10px;">
+            
+            <div class="concept-card" style="border-top: 4px solid #7C3AED;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">🧪</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    1. Conjuntos de Prueba (Eval Sets)
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Crear un conjunto representativo de 50-100 casos reales con sus respuestas esperadas (Ground Truth) para auditar cambios en los prompts.
+                </p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">⚖️</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    2. Pattern LLM-as-a-Judge
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Utilizar un modelo superior (ej. Gemini 1.5 Pro / GPT-4o) con rúbricas de evaluación rigurosas para calificar automáticamente la respuesta del prompt en producción.
+                </p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #059669;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">📊</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    3. Métricas Principales
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    <b>Exactitud de JSON:</b> % de respuestas parseables.<br>
+                    <b>Fidelidad (Faithfulness):</b> Ausencia de alucinación.<br>
+                    <b>Relevancia de Respuesta:</b> Ajuste a la consulta.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="interactive-box" style="margin-top: var(--space-md); width: 100%; background: #F8FAFC; border-color: #CBD5E1;">
+            <h5 style="margin: 0 0 6px 0; font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B;">
+                📈 Regla de Desarrollo: "Prompt Engineering is Software Engineering"
+            </h5>
+            <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.4;">
+                Cualquier modificación a un prompt debe pasar por integración continua (CI/CD) evaluando el Eval Set para garantizar que las mejoras en una tarea no generen regresiones en otras.
+            </p>
+        </div>
+    </div>
+</section>

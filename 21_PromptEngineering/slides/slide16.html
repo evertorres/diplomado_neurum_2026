@@ -1,0 +1,53 @@
+<!-- Slide 16: Mitigación de Alucinaciones y Grounding -->
+<section class="slide" id="slide16">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Seguridad & Calidad • Grounding</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Mitigación de Alucinaciones & Grounding
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 16 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; margin-top: 10px;">
+            
+            <div class="concept-card" style="border-top: 4px solid #059669;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">📍</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    1. Grounding en Contexto
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Instruye expresamente al modelo a responder <b>únicamente</b> utilizando la información suministrada en la ventana de contexto.
+                </p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">🚫</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    2. Válvula de Escape (Fallback)
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Incluye siempre la cláusula: <i>"Si el contexto no contiene suficiente evidencia para responder, responde exactamente: 'No dispongo de esa información'"</i>.
+                </p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #7C3AED;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">📜</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    3. Exigencia de Citas Textuales
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Obliga al modelo a acompañar cada afirmación o recomendación médica con una cita textual entre comillas extraída del documento fuente.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="code-block" style="margin-top: var(--space-md); font-size: 0.8rem; line-height: 1.45; background: #064E3B; border-color: #059669;">
+            <span style="color: #A7F3D0; font-weight: 700;">// Ejemplo de Cláusula Anti-Alucinación:</span><br>
+            "Responde a la pregunta del usuario utilizando EXCLUSIVAMENTE los datos presentes en &lt;evidencia&gt;. No utilices conocimientos externos ni realices inferencias no respaldadas. Si la evidencia no responde directamente la pregunta, di 'Información no disponible en la fuente'."
+        </div>
+    </div>
+</section>

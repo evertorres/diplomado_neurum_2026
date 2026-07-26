@@ -1,0 +1,59 @@
+<!-- Slide 14: Least-to-Most Prompting -->
+<section class="slide" id="slide14">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Razonamiento Avanzado • Descomposición</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Least-to-Most Prompting: De lo Simple a lo Complejo
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 14 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        ¿En qué consiste? (Zhou et al., 2022)
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Consiste en descomponer un problema masivo en una lista ordenada de <b>sub-problemas más pequeños</b>. Luego se resuelven de forma secuencial, alimentando la respuesta del sub-problema anterior como contexto para el siguiente.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #059669;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Las 2 Etapas Fundamentales
+                    </h4>
+                    <ol style="font-size: 0.84rem; color: #475569; margin: 0; padding-left: 18px; line-height: 1.5;">
+                        <li><b>Etapa 1 (Descomposición):</b> <i>"¿Qué preguntas intermedias necesito responder para resolver X?"</i></li>
+                        <li><b>Etapa 2 (Resolución Secuencial):</b> Resolver cada sub-pregunta acumulando los resultados.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Workflow Example -->
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 18px;">
+                <h5 style="margin: 0 0 10px 0; font-family: 'Exo', sans-serif; color: #1E293B; font-weight: 700;">
+                    ⚙️ Flujo de Ejecución Secuencial
+                </h5>
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.82rem;">
+                    <div style="background: white; border: 1px solid #CBD5E1; padding: 10px; border-radius: 8px; border-left: 4px solid #7C3AED;">
+                        <b>Sub-problema 1:</b> Extraer valores de creatinina y filtrado glomerular.
+                    </div>
+                    <div style="text-align: center; color: #94A3B8; font-weight: 700;">↓ (Pasa resultado 1)</div>
+                    <div style="background: white; border: 1px solid #CBD5E1; padding: 10px; border-radius: 8px; border-left: 4px solid #2563EB;">
+                        <b>Sub-problema 2:</b> Clasificar el estadio de Enfermedad Renal Crónica (ERC).
+                    </div>
+                    <div style="text-align: center; color: #94A3B8; font-weight: 700;">↓ (Pasa resultado 1 + 2)</div>
+                    <div style="background: white; border: 1px solid #CBD5E1; padding: 10px; border-radius: 8px; border-left: 4px solid #059669;">
+                        <b>Problema Final:</b> Recomendar ajuste de dosis de fármacos nefrotoxiocida.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

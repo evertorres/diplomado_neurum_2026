@@ -1,0 +1,66 @@
+<!-- Slide 24: Arquitecturas Agénticas y RAG Integrado -->
+<section class="slide" id="slide24">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Agentes & RAG • Sistema Completo</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Arquitecturas Agénticas & RAG Integrado
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 24 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Integración de Context Engineering en Agentes
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        En lugar de un solo prompt monolítico, el orquestador construye dinámicamente el paquete de contexto para cada sub-agente:
+                    </p>
+                    <ul style="font-size: 0.82rem; color: #334155; margin: 6px 0 0 16px; padding: 0;">
+                        <li>System Prompt especializado del sub-agente.</li>
+                        <li>Herramientas (tools) relevantes al paso actual.</li>
+                        <li>Recuperación vectorial RAG de la base de datos médica.</li>
+                        <li>Estado filtrado del Scratchpad.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Agent Diagram -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: 18px; text-align: center; box-shadow: var(--shadow-sm);">
+                <h5 style="margin: 0 0 10px 0; font-family: 'Exo', sans-serif; color: #1E293B;">🤖 Orquestador de Sub-Agentes Especializados</h5>
+                <svg width="100%" height="210" viewBox="0 0 340 210" fill="none">
+                    <!-- Orchestrator -->
+                    <rect x="110" y="15" width="120" height="38" rx="8" fill="#7C3AED" />
+                    <text x="170" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">Orquestador Principal</text>
+
+                    <line x1="170" y1="53" x2="60" y2="110" stroke="#94A3B8" stroke-width="2"/>
+                    <line x1="170" y1="53" x2="170" y2="110" stroke="#94A3B8" stroke-width="2"/>
+                    <line x1="170" y1="53" x2="280" y2="110" stroke="#94A3B8" stroke-width="2"/>
+
+                    <!-- Sub-agents -->
+                    <rect x="10" y="110" width="100" height="42" rx="8" fill="#F5F3FF" stroke="#7C3AED"/>
+                    <text x="60" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#4C1D95">Sub-Agente RAG</text>
+                    <text x="60" y="144" text-anchor="middle" font-size="9" fill="#6B21A8">(Documentos)</text>
+
+                    <rect x="120" y="110" width="100" height="42" rx="8" fill="#EFF6FF" stroke="#2563EB"/>
+                    <text x="170" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#1E40AF">Sub-Agente Code</text>
+                    <text x="170" y="144" text-anchor="middle" font-size="9" fill="#1E3A8A">(Análisis Python)</text>
+
+                    <rect x="230" y="110" width="100" height="42" rx="8" fill="#ECFDF5" stroke="#059669"/>
+                    <text x="280" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#065F46">Sub-Agente Eval</text>
+                    <text x="280" y="144" text-anchor="middle" font-size="9" fill="#047857">(Guardrails / Evals)</text>
+
+                    <line x1="170" y1="152" x2="170" y2="185" stroke="#059669" stroke-width="2.5"/>
+                    <rect x="100" y="175" width="140" height="30" rx="6" fill="#10B981"/>
+                    <text x="170" y="195" text-anchor="middle" fill="white" font-size="10" font-weight="700">Respuesta Consolidada</text>
+                </svg>
+            </div>
+
+        </div>
+    </div>
+</section>

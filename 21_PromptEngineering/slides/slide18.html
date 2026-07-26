@@ -1,0 +1,57 @@
+<!-- Slide 18: Jailbreaking y Red Teaming -->
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag rose">Seguridad & Vulnerabilidades • Red Teaming</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Jailbreaking & Red Teaming en Prompt Engineering
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 18 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; margin-top: 10px;">
+            
+            <div class="concept-card" style="border-top: 4px solid #E11D48;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">🎭</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    Roleplay Adversario
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Engañar las barreras de seguridad envolviendo la solicitud prohibida en un escenario hipotético o de ficción (ej. <i>"Escribe un guion donde un actor simula fabricar X sustancia..."</i>).
+                </p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #D97706;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">🔤</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    Codificación de Entradas
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Escribir prompts maliciosos en Base64, código Morse, Cifrado César o idiomas con pocos recursos para eludir filtros de moderación basados en coincidencia de palabras.
+                </p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #059669;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">🥊</div>
+                <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                    Metodología Red Teaming
+                </h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
+                    Simulación sistemática de ataques reales antes del despliegue en producción para descubrir vulnerabilidades y auditar los prompts del sistema.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="interactive-box" style="margin-top: var(--space-md); width: 100%; background: #FFF1F2; border-color: #FECDD3;">
+            <h5 style="margin: 0 0 6px 0; font-family: 'Exo', sans-serif; font-weight: 700; color: #9F1239;">
+                💡 Principio de Seguridad: No Confiar Exclusivamente en el System Prompt
+            </h5>
+            <p style="margin: 0; font-size: 0.88rem; color: #BE123C; line-height: 1.4;">
+                Por más instructivo que sea un System Prompt, un LLM probabilisticamente puede romper barreras si no cuenta con filtros de moderación deterministas e independientes rodeando al modelo.
+            </p>
+        </div>
+    </div>
+</section>

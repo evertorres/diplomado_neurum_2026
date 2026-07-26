@@ -1,0 +1,53 @@
+<!-- Slide 11: Chain-of-Thought (CoT) Reasoning -->
+<section class="slide" id="slide11">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Razonamiento Avanzado • CoT</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Chain-of-Thought (CoT) Reasoning
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 11 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        ¿Por qué falla el cálculo directo?
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Los LLMs generan tokens secuenciales uno a uno. Si obligas al modelo a dar la respuesta numérica o diagnóstica final de inmediato en el token #1, no tiene capacidad de computar los pasos intermedios.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #059669;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Zero-Shot CoT: "Pensemos paso a paso"
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Descubierto por Kojima et al. (2022): la simple adición de la frase <code>"Let's think step by step"</code> hace que el modelo utilice tokens intermedios como memoria de trabajo ("borrador"), elevando drásticamente el desempeño en matemáticas y lógica médica.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Comparison Box -->
+            <div class="code-block" style="font-size: 0.78rem; line-height: 1.45;">
+                <span style="color: #EF4444; font-weight: 700;">❌ Sin CoT (Respuesta Directa Errónea):</span><br>
+                Prompt: "Un paciente recibe 50mg a las 8am, 25mg a las 2pm y 50mg a las 8pm durante 7 días. ¿Cuántas tabletas de 25mg necesita?"<br>
+                Respuesta directa: "Necesita 21 tabletas." (Incorrecto)<br><br>
+
+                <span style="color: #10B981; font-weight: 700;">✅ Con Chain-of-Thought (Pasos Desplegados):</span><br>
+                Prompt: "[Mismo problema] + <span style="color: #FBBF24;">Razona paso a paso antes de dar la respuesta final.</span>"<br>
+                Respuesta CoT:<br>
+                1. Dosis diaria: 50mg (8am) + 25mg (2pm) + 50mg (8pm) = 125mg/día.<br>
+                2. Cada tableta es de 25mg, así que 125mg / 25mg = 5 tabletas al día.<br>
+                3. Durante 7 días: 5 tabletas/día * 7 días = 35 tabletas.<br>
+                <span style="color: #34D399; font-weight: 700;">Respuesta final: 35 tabletas.</span> (Correcto)
+            </div>
+
+        </div>
+    </div>
+</section>

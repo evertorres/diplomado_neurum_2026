@@ -1,0 +1,94 @@
+<!-- Slide 22: Las 4 Estrategias Principales de Context Engineering -->
+<section class="slide" id="slide22">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Arquitectura de Sistemas • Estrategias Clave</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Las 4 Estrategias Principales de Context Engineering
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 22 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; width: 100%; margin-top: 12px;">
+            
+            <!-- Strategy 1: Escribir -->
+            <div class="concept-card" style="border-top: 4px solid #7C3AED; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                        <span style="font-size: 1.4rem;">✍️</span>
+                        <span class="badge-tag purple" style="font-size: 0.7rem;">Memoria</span>
+                    </div>
+                    <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                        1. Escribir (Write)
+                    </h4>
+                    <p style="font-size: 0.83rem; color: #64748B; line-height: 1.4;">
+                        Guardar memoria intermedia a corto o largo plazo utilizando <b>Scratchpads</b>, notas de trabajo o almacenes de estado de la sesión.
+                    </p>
+                </div>
+                <div style="background: #F5F3FF; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; color: #6D28D9; font-weight: 600; margin-top: 8px;">
+                    Ejemplo: Notas del Agente en ejecución
+                </div>
+            </div>
+
+            <!-- Strategy 2: Seleccionar -->
+            <div class="concept-card" style="border-top: 4px solid #2563EB; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                        <span style="font-size: 1.4rem;">🔍</span>
+                        <span class="badge-tag" style="font-size: 0.7rem;">RAG</span>
+                    </div>
+                    <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                        2. Seleccionar (Select)
+                    </h4>
+                    <p style="font-size: 0.83rem; color: #64748B; line-height: 1.4;">
+                        Recuperar únicamente los datos relevantes del dominio mediante <b>Búsqueda Vectorial (RAG)</b> o bases de conocimiento externas.
+                    </p>
+                </div>
+                <div style="background: #EFF6FF; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; color: #1D4ED8; font-weight: 600; margin-top: 8px;">
+                    Ejemplo: Chunks relevantes de PubMed
+                </div>
+            </div>
+
+            <!-- Strategy 3: Comprimir -->
+            <div class="concept-card" style="border-top: 4px solid #059669; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                        <span style="font-size: 1.4rem;">📦</span>
+                        <span class="badge-tag emerald" style="font-size: 0.7rem;">Eficiencia</span>
+                    </div>
+                    <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                        3. Comprimir (Compress)
+                    </h4>
+                    <p style="font-size: 0.83rem; color: #64748B; line-height: 1.4;">
+                        Resumir historiales conversacionales largos o condensar contextos para mantener baja la latencia y ahorrar tokens.
+                    </p>
+                </div>
+                <div style="background: #ECFDF5; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; color: #047857; font-weight: 600; margin-top: 8px;">
+                    Ejemplo: Resumen acumulado de chat
+                </div>
+            </div>
+
+            <!-- Strategy 4: Aislar -->
+            <div class="concept-card" style="border-top: 4px solid #D97706; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                        <span style="font-size: 1.4rem;">🧩</span>
+                        <span class="badge-tag amber" style="font-size: 0.7rem;">Sub-Agentes</span>
+                    </div>
+                    <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
+                        4. Aislar (Isolate)
+                    </h4>
+                    <p style="font-size: 0.83rem; color: #64748B; line-height: 1.4;">
+                        Dividir tareas complejas entre múltiples <b>sub-Agentes especializados</b> con contextos limpios e independientes.
+                    </p>
+                </div>
+                <div style="background: #FFFBEB; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; color: #B45309; font-weight: 600; margin-top: 8px;">
+                    Ejemplo: Agente Med + Agente Code
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

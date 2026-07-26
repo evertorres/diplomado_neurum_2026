@@ -1,0 +1,75 @@
+<!-- Slide 13: Tree-of-Thoughts (ToT) -->
+<section class="slide" id="slide13">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Razonamiento Avanzado • Búsqueda en Grafo</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Tree-of-Thoughts (ToT): Exploración & Backtracking
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 13 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        ¿Qué es Tree-of-Thoughts? (Yao et al., 2023)
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Generaliza Chain-of-Thought permitiendo al LLM explorar múltiples ramas de solución simultáneamente como un árbol de decisión. El modelo evalúa estados intermedios y puede hacer <b>backtracking</b> si una rama es inviable.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #D97706;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Componentes Fundamentales de ToT
+                    </h4>
+                    <ul style="font-size: 0.83rem; color: #475569; margin: 0; padding-left: 16px; line-height: 1.5;">
+                        <li><b>Decomposición de Pensamientos:</b> Generar varias hipótesis o pasos independientes.</li>
+                        <li><b>Evaluador de Estados:</b> El LLM puntúa cada rama (ej. <i>"Seguro", "Posible", "Imposible"</i>).</li>
+                        <li><b>Algoritmo de Búsqueda:</b> BFS (Breadth-First Search) o DFS (Depth-First Search).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SVG Tree Diagram -->
+            <div style="background: #0F172A; border-radius: 14px; padding: 18px; color: white; text-align: center;">
+                <h5 style="margin: 0 0 10px 0; font-family: 'Exo', sans-serif; color: #A7F3D0;">🌳 Grafo de Búsqueda de Tree-of-Thoughts</h5>
+                <svg width="100%" height="200" viewBox="0 0 360 200" fill="none">
+                    <!-- Root -->
+                    <circle cx="180" cy="25" r="16" fill="#7C3AED" stroke="white" stroke-width="2"/>
+                    <text x="180" y="29" text-anchor="middle" fill="white" font-size="10" font-weight="700">Inicio</text>
+
+                    <!-- Level 1 Branches -->
+                    <line x1="180" y1="41" x2="80" y2="85" stroke="#94A3B8" stroke-width="2"/>
+                    <line x1="180" y1="41" x2="180" y2="85" stroke="#94A3B8" stroke-width="2"/>
+                    <line x1="180" y1="41" x2="280" y2="85" stroke="#94A3B8" stroke-width="2"/>
+
+                    <circle cx="80" cy="85" r="14" fill="#3B82F6"/>
+                    <text x="80" y="89" text-anchor="middle" fill="white" font-size="9">Idea A</text>
+
+                    <circle cx="180" cy="85" r="14" fill="#EF4444"/>
+                    <text x="180" y="89" text-anchor="middle" fill="white" font-size="9">Idea B</text>
+
+                    <circle cx="280" cy="85" r="14" fill="#3B82F6"/>
+                    <text x="280" y="89" text-anchor="middle" fill="white" font-size="9">Idea C</text>
+
+                    <!-- Level 2 Branches from A and C -->
+                    <line x1="80" y1="99" x2="40" y2="150" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="2 2"/>
+                    <line x1="80" y1="99" x2="120" y2="150" stroke="#10B981" stroke-width="2.5"/>
+
+                    <circle cx="40" cy="150" r="12" fill="#94A3B8"/>
+                    <text x="40" y="154" text-anchor="middle" fill="white" font-size="8">❌ Pruned</text>
+
+                    <circle cx="120" cy="150" r="16" fill="#10B981" stroke="white" stroke-width="2"/>
+                    <text x="120" y="154" text-anchor="middle" fill="white" font-size="9" font-weight="700">🏆 Éxito</text>
+                </svg>
+                <div style="font-size: 0.76rem; color: #94A3B8;">Poda (Pruning) de ramas descartadas y selección de la solución óptima.</div>
+            </div>
+
+        </div>
+    </div>
+</section>

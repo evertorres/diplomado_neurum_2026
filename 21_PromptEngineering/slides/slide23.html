@@ -1,0 +1,55 @@
+<!-- Slide 23: Gestión de Memoria y Ventana de Contexto -->
+<section class="slide" id="slide23">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Memoria & Ventana de Contexto</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Gestión de Memoria y Ventana de Contexto
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 23 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #E11D48;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        El Problema: "Lost in the Middle"
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Estudios demuestran que aunque la ventana de contexto sea de 1 o 2 millones de tokens, la capacidad de recuperación de los LLMs disminuye en el centro del documento. Saturalo degradará la calidad del razonamiento.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #059669;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Técnica del Scratchpad en Context Engineering
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Mantener un archivo/estado persistente donde el agente anota hipótesis, tareas pendientes (TODOs) y hallazgos intermedios. En cada llamada, se inyecta el Scratchpad actualizado al inicio del contexto.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visual comparison of Context window strategy -->
+            <div class="interactive-box" style="background: #0F172A; border-color: #334155; color: white; border-radius: 16px; padding: 20px;">
+                <h5 style="margin: 0 0 12px 0; font-family: 'Exo', sans-serif; color: #A7F3D0; font-size: 1.05rem;">
+                    🧠 Arquitectura de Memoria a 2 Niveles
+                </h5>
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.82rem;">
+                    <div style="background: #1E293B; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #7C3AED;">
+                        <b style="color: #C084FC;">1. Memoria a Corto Plazo (RAM del LLM):</b><br>
+                        Scratchpad activo + Historial reciente + Prompt del sistema.
+                    </div>
+                    <div style="background: #1E293B; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #2563EB;">
+                        <b style="color: #60A5FA;">2. Memoria a Largo Plazo (Disco / Vector DB):</b><br>
+                        Historias clínicas completas, guías médicas y embeddings indexados.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

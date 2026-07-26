@@ -1,0 +1,62 @@
+<!-- Slide 05: Formateo y Estructuración de Entradas -->
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Estructura • Semántica</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Formateo de Entradas: Markdown y Etiquetas XML
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 05 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px;">
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        ¿Por qué etiquetas XML y Markdown?
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Los LLMs de última generación (Claude 3.5, Gemini 1.5/2.0, GPT-4o) han sido entrenados extensivamente con etiquetas XML (<code>&lt;context&gt;</code>, <code>&lt;examples&gt;</code>) y código Markdown. Las reconocen de forma nativa para segmentar la atención.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #059669;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        Beneficios Principales
+                    </h4>
+                    <ul style="font-size: 0.85rem; color: #475569; margin: 0; padding-left: 18px; line-height: 1.5;">
+                        <li>Separa estrictamente instrucciones, datos y restricciones.</li>
+                        <li>Permite referenciar secciones (ej. <i>"Analiza únicamente el contenido dentro de &lt;historial&gt;"</i>).</li>
+                        <li>Previene confusiones en textos largos con múltiples párrafos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="code-block" style="font-size: 0.8rem; line-height: 1.45;">
+                <span style="color: #94A3B8; font-size: 0.75rem;">// Ejemplo de plantilla de prompt con XML tags</span><br><br>
+                <span style="color: #C084FC;">&lt;system_instructions&gt;</span><br>
+                # Rol y Objetivo<br>
+                Eres un asistente de triage de urgencias. Clasifica la gravedad del paciente.<br>
+                <span style="color: #C084FC;">&lt;/system_instructions&gt;</span><br><br>
+
+                <span style="color: #60A5FA;">&lt;rules&gt;</span><br>
+                - Nivel 1: Emergencia vital inmediata.<br>
+                - Nivel 2: Muy urgente.<br>
+                - Nivel 3: Urgencia relativa.<br>
+                <span style="color: #60A5FA;">&lt;/rules&gt;</span><br><br>
+
+                <span style="color: #34D399;">&lt;patient_report&gt;</span><br>
+                Dolor torácico opresivo de 30 minutos de evolución, diaforesis, PA 150/90.<br>
+                <span style="color: #34D399;">&lt;/patient_report&gt;</span><br><br>
+
+                <span style="color: #FBBF24;">&lt;output_format&gt;</span><br>
+                Devuelve únicamente: Nivel | Criterio de Selección.<br>
+                <span style="color: #FBBF24;">&lt;/output_format&gt;</span>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,80 @@
+<!-- Slide 10: Control de Parámetros de Inferencia -->
+<section class="slide" id="slide10">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <div>
+                <span class="badge-tag purple">Parámetros • Sampling</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Control de Parámetros: Temperature & Top-P
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 10 / 25</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); width: 100%; margin-top: 10px; align-items: center;">
+            
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        🔥 Temperatura (Temperature: 0.0 a 1.0+)
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Modifica la distribución de probabilidad Logits sobre el vocabulario antes de la selección del siguiente token.
+                    </p>
+                    <ul style="font-size: 0.82rem; color: #334155; margin: 6px 0 0 16px; padding: 0;">
+                        <li><b>Temp = 0.0 (Greedy Decoding):</b> Determinista. Selecciona siempre el token más probable. Ideal para extracción de datos y JSON.</li>
+                        <li><b>Temp = 0.7 - 1.0:</b> Creativo, variado. Ideal para lluvia de ideas o redacción conversacional.</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #059669;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 4px;">
+                        🎯 Nucleus Sampling (Top-P: 0.0 a 1.0)
+                    </h4>
+                    <p style="font-size: 0.86rem; color: #64748B; line-height: 1.5; margin: 0;">
+                        Restringe la selección al menor conjunto de tokens cuya probabilidad acumulada alcanza el valor <i>P</i> (ej. Top-P = 0.9 evalúa solo el 90% superior del catálogo).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Interactive Visualization of Sampling -->
+            <div class="interactive-box" style="background: #0F172A; color: white; border-color: #334155; border-radius: 14px; padding: 20px;">
+                <h5 style="margin: 0 0 12px 0; font-family: 'Exo', sans-serif; color: #A7F3D0; font-size: 1.05rem;">
+                    📊 Matriz de Configuración por Caso de Uso
+                </h5>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #334155; color: #94A3B8;">
+                            <th style="padding: 8px;">Caso de Uso</th>
+                            <th style="padding: 8px;">Temp</th>
+                            <th style="padding: 8px;">Top-P</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #1E293B;">
+                            <td style="padding: 8px; color: #F8FAFC;">Extracción JSON / RAG</td>
+                            <td style="padding: 8px; color: #34D399; font-weight: 700;">0.0</td>
+                            <td style="padding: 8px; color: #94A3B8;">0.1</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #1E293B;">
+                            <td style="padding: 8px; color: #F8FAFC;">Resumen Clínico</td>
+                            <td style="padding: 8px; color: #60A5FA; font-weight: 700;">0.2</td>
+                            <td style="padding: 8px; color: #94A3B8;">0.5</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #1E293B;">
+                            <td style="padding: 8px; color: #F8FAFC;">Razonamiento CoT / Math</td>
+                            <td style="padding: 8px; color: #FBBF24; font-weight: 700;">0.0 - 0.2</td>
+                            <td style="padding: 8px; color: #94A3B8;">0.8</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; color: #F8FAFC;">Generación Creativa</td>
+                            <td style="padding: 8px; color: #F472B6; font-weight: 700;">0.8</td>
+                            <td style="padding: 8px; color: #94A3B8;">0.95</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>
