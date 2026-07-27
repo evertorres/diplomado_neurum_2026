@@ -8,7 +8,7 @@
                     Evaluación & Benchmarking de Prompts (Evals)
                 </h2>
             </div>
-            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 20 / 25</span>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 20 / 26</span>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; margin-top: 10px;">
@@ -36,24 +36,30 @@
             <div class="concept-card" style="border-top: 4px solid #059669;">
                 <div style="font-size: 1.5rem; margin-bottom: 6px;">📊</div>
                 <h4 style="font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B; margin-bottom: 6px;">
-                    3. Métricas Principales
+                    3. Métricas RAGAS
                 </h4>
                 <p style="font-size: 0.85rem; color: #64748B; line-height: 1.4;">
-                    <b>Exactitud de JSON:</b> % de respuestas parseables.<br>
+                    <b>Exactitud JSON:</b> % de respuestas parseables.<br>
                     <b>Fidelidad (Faithfulness):</b> Ausencia de alucinación.<br>
-                    <b>Relevancia de Respuesta:</b> Ajuste a la consulta.
+                    <b>Relevancia de Respuesta:</b> Ajuste a la consulta.<br>
+                    <a href="https://docs.ragas.io/" target="_blank" rel="noopener noreferrer" style="color: #059669; font-weight: 700; text-decoration: underline; display: inline-block; margin-top: 4px;">🔗 RAGAS Framework</a>
                 </p>
             </div>
 
         </div>
 
-        <div class="interactive-box" style="margin-top: var(--space-md); width: 100%; background: #F8FAFC; border-color: #CBD5E1;">
-            <h5 style="margin: 0 0 6px 0; font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B;">
-                📈 Regla de Desarrollo: "Prompt Engineering is Software Engineering"
-            </h5>
-            <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.4;">
-                Cualquier modificación a un prompt debe pasar por integración continua (CI/CD) evaluando el Eval Set para garantizar que las mejoras en una tarea no generen regresiones en otras.
-            </p>
+        <div class="interactive-box" style="margin-top: var(--space-md); width: 100%; background: #F8FAFC; border-color: #CBD5E1; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+            <div>
+                <h5 style="margin: 0 0 4px 0; font-family: 'Exo', sans-serif; font-weight: 700; color: #1E293B;">
+                    📈 Regla de Desarrollo: "Prompt Engineering is Software Engineering"
+                </h5>
+                <p style="margin: 0; font-size: 0.86rem; color: #475569; line-height: 1.4;">
+                    Cualquier modificación a un prompt debe pasar por integración continua (CI/CD) evaluando el Eval Set para evitar regresiones.
+                </p>
+            </div>
+            <a href="https://revistabiomedica.org/index.php/biomedica/article/view/7902" target="_blank" rel="noopener noreferrer" class="badge-tag purple" style="text-decoration: underline; font-size: 0.82rem; padding: 8px 14px; white-space: nowrap; flex-shrink: 0;">
+                📄 Artículo de Referencia (Biomédica)
+            </a>
         </div>
     </div>
 </section>
