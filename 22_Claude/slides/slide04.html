@@ -1,0 +1,43 @@
+<!-- Slide 04: Claude Code - Qué es y Cómo trabaja -->
+<section class="slide" id="slide04">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-md);">
+            <div>
+                <span class="badge-tag purple">Módulo 22 • Claude Code</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.2rem; font-weight: 800; margin-top: 6px;">
+                    Claude Code: CLI Agéntico en Terminal
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 04 / 10</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%; margin-top: 10px;">
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.1rem; color: #1E293B; margin-bottom: 6px;">¿Qué es Claude Code?</h4>
+                    <p style="font-size: 0.9rem; color: #64748B; line-height: 1.5;">Una herramienta CLI (Command Line Interface) agéntica creada por Anthropic que vive directamente en tu terminal de comandos (Terminal / PowerShell / Bash).</p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                    <h4 style="font-family: 'Exo', sans-serif; font-size: 1.1rem; color: #1E293B; margin-bottom: 6px;">¿Cómo trabaja Claude Code?</h4>
+                    <ol style="font-size: 0.85rem; color: #64748B; margin: 0; padding-left: 18px; line-height: 1.6;">
+                        <li><strong>Lee el repositorio:</strong> Entiende automáticamente la arquitectura de archivos.</li>
+                        <li><strong>Edita directamente:</strong> Aplica parches y cambios precisos en código.</li>
+                        <li><strong>Ejecuta comandos:</strong> Corre pruebas, linters, git y scripts.</li>
+                        <li><strong>Auto-corrección:</strong> Lee logs de error de compilación y reintenta.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="code-block" style="font-size: 0.85rem;">
+                <span style="color: #94A3B8;"># Iniciar Claude Code en cualquier directorio</span><br>
+                <span style="color: #FDE68A;">$ claude</span><br><br>
+                <span style="color: #94A3B8;"># Prompt de instrucción agéntica</span><br>
+                <span style="color: #A7F3D0;">> Analiza los tests unitarios fallidos, refactoriza el módulo de autenticación y ejecuta npm test</span><br><br>
+                <span style="color: #93C5FD;">[Tool Call]</span> Reading src/auth.js...<br>
+                <span style="color: #93C5FD;">[Tool Call]</span> Running 'npm test'...<br>
+                <span style="color: #A7F3D0;">✔ 14 tests passing. Refactor completed.</span>
+            </div>
+        </div>
+    </div>
+</section>

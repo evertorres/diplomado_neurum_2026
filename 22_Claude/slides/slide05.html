@@ -1,0 +1,95 @@
+<!-- Slide 05: Artefactos vs Claude Code -->
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs);">
+            <div>
+                <span class="badge-tag purple">Módulo 22 • Cuándo uno y cuándo el otro</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.1rem; font-weight: 800; margin-top: 4px;">
+                    Para probar o para construir: Artefactos vs. Claude Code
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 05 / 10</span>
+        </div>
+
+        <p style="font-size: 0.92rem; color: #64748B; margin-top: 0; margin-bottom: 14px;">
+            Los <strong>artefactos</strong> son perfectos para ideas rápidas y MVPs. <strong>Claude Code</strong> es el salto a productos de verdad.
+        </p>
+
+        <!-- Tabla Comparativa -->
+        <div style="background: white; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); overflow: hidden; width: 100%;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+                <thead>
+                    <tr style="background: #F8FAFC; border-bottom: 2px solid #E2E8F0;">
+                        <th style="padding: 10px 16px; font-family: 'Exo', sans-serif; font-weight: 700; color: #475569; width: 32%;">CAPACIDAD</th>
+                        <th style="padding: 10px 16px; font-family: 'Exo', sans-serif; font-weight: 700; color: #EA580C; background: #FFF7ED; width: 34%; text-align: center;">
+                            🟧 ARTEFACTO (Web / App)
+                        </th>
+                        <th style="padding: 10px 16px; font-family: 'Exo', sans-serif; font-weight: 700; color: #6D28D9; background: #F5F3FF; width: 34%; text-align: center;">
+                            💻 CLAUDE CODE (CLI / Agente)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody style="color: #334155;">
+                    <tr style="border-bottom: 1px solid #F1F5F9;">
+                        <td style="padding: 8px 16px; font-weight: 600;">Un archivo o varios</td>
+                        <td style="padding: 8px 16px; text-align: center; color: #64748B;">Un solo archivo (HTML/SVG)</td>
+                        <td style="padding: 8px 16px; text-align: center; font-weight: 600; color: #1E293B;">Carpetas y subcarpetas complejas</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                        <td style="padding: 8px 16px; font-weight: 600;">Acceso a archivos locales (Disco)</td>
+                        <td style="padding: 8px 16px; text-align: center; color: #EF4444; font-weight: 700;">❌ No (Sandbox)</td>
+                        <td style="padding: 8px 16px; text-align: center; color: #10B981; font-weight: 700;">✓ Sí (Lectura y edición directa)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #F1F5F9;">
+                        <td style="padding: 8px 16px; font-weight: 600;">Ejecuta comandos (git, npm, python)</td>
+                        <td style="padding: 8px 16px; text-align: center; color: #EF4444; font-weight: 700;">❌ No</td>
+                        <td style="padding: 8px 16px; text-align: center; color: #10B981; font-weight: 700;">✓ Sí (Terminal agéntica)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                        <td style="padding: 8px 16px; font-weight: 600;">Backend con base de datos</td>
+                        <td style="padding: 8px 16px; text-align: center; color: #EF4444; font-weight: 700;">❌ No</td>
+                        <td style="padding: 8px 16px; text-align: center; color: #10B981; font-weight: 700;">✓ Sí (APIs, DBs, Microservicios)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #F1F5F9;">
+                        <td style="padding: 8px 16px; font-weight: 600;">Instalar librerías / paquetes</td>
+                        <td style="padding: 8px 16px; text-align: center; color: #64748B;">Set limitado (CDNs)</td>
+                        <td style="padding: 8px 16px; text-align: center; font-weight: 600; color: #1E293B;">Cualquier paquete (npm, pip, cargo)</td>
+                    </tr>
+                    <tr style="background: #FAFAFA;">
+                        <td style="padding: 8px 16px; font-weight: 700; color: #0F172A;">Ideal para</td>
+                        <td style="padding: 8px 16px; text-align: center; font-weight: 700; color: #C2410C; background: #FFEDD5;">Prototipos · MVPs rápidos</td>
+                        <td style="padding: 8px 16px; text-align: center; font-weight: 700; color: #5B21B6; background: #DDD6FE;">Producto real en producción</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tarjetas inferiores de resumen -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%; margin-top: 14px;">
+            <div style="background: #FFF7ED; border-left: 4px solid #F97316; border-radius: 8px; padding: 10px 14px;">
+                <div style="font-family: 'Exo', sans-serif; font-size: 0.85rem; font-weight: 700; color: #C2410C; margin-bottom: 2px;">
+                    🟧 ARTEFACTO
+                </div>
+                <p style="margin: 0; font-size: 0.82rem; color: #9A3412; line-height: 1.4;">
+                    Prueba una idea en 2 minutos, comparte el link y valida antes de invertir. <strong>Probar barato.</strong>
+                </p>
+            </div>
+
+            <div style="background: #F5F3FF; border-left: 4px solid #7C3AED; border-radius: 8px; padding: 10px 14px;">
+                <div style="font-family: 'Exo', sans-serif; font-size: 0.85rem; font-weight: 700; color: #6D28D9; margin-bottom: 2px;">
+                    💻 CLAUDE CODE
+                </div>
+                <p style="margin: 0; font-size: 0.82rem; color: #5B21B6; line-height: 1.4;">
+                    Proyecto con jerarquía, backend, git y librerías completas. <strong>Construir en serio.</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- Nota al pie -->
+        <div style="margin-top: 10px; width: 100%; text-align: center;">
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.78rem; color: #64748B; font-style: italic;">
+                💬 "Este diplomado y sus 22 módulos, por ejemplo, serían imposibles como artefacto — viven en Code."
+            </span>
+        </div>
+    </div>
+</section>

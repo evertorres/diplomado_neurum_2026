@@ -1,0 +1,44 @@
+<!-- Slide 08: Conectores (MCP) -->
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-md);">
+            <div>
+                <span class="badge-tag purple">Módulo 22 • Conectores MCP</span>
+                <h2 style="color: var(--color-primary); font-family: 'Exo', sans-serif; font-size: 2.2rem; font-weight: 800; margin-top: 6px;">
+                    Conectores en el Ecosistema Claude
+                </h2>
+            </div>
+            <span style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--color-secondary);">Diapositiva 08 / 10</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; width: 100%; margin-top: 10px;">
+            
+            <div class="concept-card" style="border-top: 4px solid #7C3AED;">
+                <h4 style="font-family: 'Exo', sans-serif; font-size: 1.1rem; color: #1E293B; margin-bottom: 6px;">¿Qué son los Conectores?</h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.5;">Puentes de comunicación basados en <strong>Model Context Protocol (MCP)</strong> que permiten a Claude conectarse a bases de datos, APIs y herramientas externas de manera segura.</p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <h4 style="font-family: 'Exo', sans-serif; font-size: 1.1rem; color: #1E293B; margin-bottom: 6px;">Instalación & Uso</h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.5;">Se instalan mediante <code>npx</code> o paquetes de la comunidad y se declaran en el archivo de configuración <code>claude_desktop_config.json</code>.</p>
+            </div>
+
+            <div class="concept-card" style="border-top: 4px solid #059669;">
+                <h4 style="font-family: 'Exo', sans-serif; font-size: 1.1rem; color: #1E293B; margin-bottom: 6px;">Múltiples Conectores</h4>
+                <p style="font-size: 0.85rem; color: #64748B; line-height: 1.5;">Claude puede invocar <strong>múltiples conectores a la vez</strong> (ej: leer datos de Postgres + buscar en Google Drive + enviar notificación a Slack en un solo turno).</p>
+            </div>
+
+        </div>
+
+        <div class="code-block" style="margin-top: var(--space-md); font-size: 0.8rem;">
+            <span style="color: #94A3B8;">// Ejemplo de configuración con múltiples conectores</span><br>
+            {<br>
+            &nbsp;&nbsp;<span style="color: #FDE68A;">"mcpServers"</span>: {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #93C5FD;">"database"</span>: { <span style="color: #A7F3D0;">"command"</span>: <span style="color: #FDE68A;">"npx"</span>, <span style="color: #A7F3D0;">"args"</span>: [<span style="color: #FDE68A;">"-y"</span>, <span style="color: #FDE68A;">"@modelcontextprotocol/server-postgres"</span>] },<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #93C5FD;">"gdrive"</span>: { <span style="color: #A7F3D0;">"command"</span>: <span style="color: #FDE68A;">"npx"</span>, <span style="color: #A7F3D0;">"args"</span>: [<span style="color: #FDE68A;">"-y"</span>, <span style="color: #FDE68A;">"@modelcontextprotocol/server-gdrive"</span>] },<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #93C5FD;">"slack"</span>: { <span style="color: #A7F3D0;">"command"</span>: <span style="color: #FDE68A;">"npx"</span>, <span style="color: #A7F3D0;">"args"</span>: [<span style="color: #FDE68A;">"-y"</span>, <span style="color: #FDE68A;">"@modelcontextprotocol/server-slack"</span>] }<br>
+            &nbsp;&nbsp;}<br>
+            }
+        </div>
+    </div>
+</section>

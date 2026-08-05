@@ -1,0 +1,140 @@
+═══════════════════════════════════════════
+BRAND IDENTITY · NEURUM IPS (Centro de Especialistas)
+Versión 2.0 · agosto 2026
+═══════════════════════════════════════════
+
+
+## PROPÓSITO
+
+Transformar la experiencia de atención médica especializada, brindando programas integrales de salud de alta calidad con calidez humana para pacientes con condiciones médicas complejas.
+
+
+## PROMESA
+
+"¡Estás en un lugar seguro!"
+Atención médica personalizada y multidisciplinaria · programas integrales (Hemofilia, Diabetes, Autoinmunes) · aplicación de medicamentos Home Care · equipo experto y acompañamiento continuo 24/7.
+
+
+## VALORES Y PILARES DE MARCA
+
+· Fe — Faro de esperanza y motivación que sostiene y guía en los momentos más difíciles de salud.
+· Coraje — Tenacidad y resiliencia para actuar a pesar del miedo y superar situaciones desafiantes.
+· Disciplina — Enfoque constante en metas de salud, excelencia médica y rigor clínico.
+
+
+## PERSONALIDAD
+
+· Empática y humana — unimos la excelencia médica con la máxima calidez y cercanía en el trato.
+· Especializada y rigurosa — más de 10 años de trayectoria (Medellín, Cali, Pereira) siendo referentes en hematología y patologías complejas.
+· Tranquilizadora y acogedora — creamos un entorno seguro y confiable para el paciente y su familia.
+· Innovadora y proactiva — investigación continua, vanguardia tecnológica y modelo de atención domiciliaria (Home Care).
+· Incluyente y accesible — atención bilingüe (español/inglés) para residentes locales y extranjeros.
+
+
+## VOZ · SIEMPRE
+
+· Tono empático, respetuoso, cálido y altamente profesional.
+· Cercanía humana ("tú" o "usted" según el contexto del paciente, priorizando siempre la empatía).
+· Lenguaje claro, transparente y tranquilizador sin restar rigor científico.
+· Enfoque multidisciplinario: destacar el trabajo en equipo (médicos, nutricionistas, psicólogos, trabajo social, fisioterapia).
+· Beneficio integral y calidad de vida primero, procedimiento clínico después.
+
+
+## VOZ · NUNCA
+
+· Frialdad corporativa, burocrática o distanciada del sistema de salud tradicional.
+· Lenguaje alarmista, fatalista o deshumanizado sobre patologías crónicas.
+· Tecnicismos médicos complejos sin traducir o explicar de forma clara al paciente.
+· Frases vacías tipo "su llamada es muy importante para nosotros".
+· Hacer sentir al paciente solo o desatendido en su proceso de tratamiento.
+
+
+## VOCABULARIO PREFERIDO
+
+preferimos                en lugar de
+─────────────────────────────────────────────────
+programa integral         tratamiento estándar
+acompañamiento continuo   atención puntual de cita
+paciente / persona        caso clínico / usuario
+atención en casa (home care) servicio domiciliario genérico
+calidad de vida           manejo de síntomas
+equipo especialista       personal administrativo
+lugar seguro              instalaciones médicas
+
+
+## PALETA VISUAL
+
+· Morado Neurum (Principal) #7D2D86 → Títulos (H1-H5), acentos de marca y botones
+· Morado Profundo           #601A68 → Estados de contraste, hover activos y sombras
+· Lavanda / Lila            #C390C9 → Fondos interactivos, bordes y acentos secundarios
+· Púrpura Medio             #9F59A7 → Bordes de campos y separadores
+· Melocotón / Cálido        #FFBC7D → Destacados cálidos y acentos de atención
+· Gris Antracita            #3E3D47 → Texto principal de cuerpo y lectura
+· Gris Texto Suave          #7F7F90 → Subtítulos, metadatos y leyendas
+· Gris Fondo                #F3F3F4 → Fondos de sección y tarjetas secundarias
+· Gris Borde                #DCDCDE → Divisores y bordes sutiles
+· Blanco Puro               #FFFFFF → Texto sobre fondo oscuro y tarjetas principales
+
+EVITAR:
+· Azul médico genérico o verde menta sanitaria (no corresponden a la identidad morada/púrpura de la marca).
+
+
+## TIPOGRAFÍA
+
+· Títulos Principales (H1, H2, H3, H5) → Belleza-Regular (weight 600-700)
+· Subtítulos / H4                       → Glacial Indifference (weight 400, 25px)
+· Cuerpo / Texto General               → Glacial Indifference (weight 400, 17px, line-height 1.4em)
+· Botones / Accentos                   → Glacial Indifference (uppercase, weight 500-600, 14-15px)
+· Jerarquía: H1 48px, H2 39px, H3 31px, H4 25px, H5 20px, Cuerpo 17px, Labels 13-14px
+
+
+## PROGRAMAS DESTACADOS Y ECOSISTEMA
+
+1. Programa Integral de Hemofilia y Trastornos de la Coagulación (Líderes y referentes)
+2. Programa Integral de Diabetes (Control metabólico, educación y coaching nutricional)
+3. Programa Integral de Enfermedades Autoinmunes (Reumatología y seguimiento continuo)
+4. Aplicación de Medicamentos HOME CARE (Atención y administración asistida en casa)
+5. Consultas Bilingües (Atención médica en inglés para residentes extranjeros en Medellín)
+
+
+## EJEMPLOS DE COPY
+
+✓ BUENO
+"Sabemos lo exigente que es tu diagnóstico. Por eso, nuestro equipo de hematólogos, psicólogos y nutricionistas te acompaña paso a paso para que vivas tranquilo."
+
+✗ MALO
+"La IPS brinda consultas médicas para el tratamiento de trastornos de la coagulación según asignación de agenda."
+
+✓ BUENO
+"¡Estás en un lugar seguro! Administra tus medicamentos desde casa con el apoyo experto de nuestro equipo Home Care."
+
+✗ MALO
+"El servicio domiciliario aplicará los medicamentos de acuerdo con la disponibilidad del personal de turnos."
+
+✓ BUENO
+"Un enfoque integral para la diabetes que te da las herramientas, educación y soporte para retomar el control de tu vida."
+
+✗ MALO
+"Manejo farmacológico y chequeo de niveles metabólicos en pacientes diabéticos."
+
+
+## TONE POR CANAL
+
+· Web oficial          → Profesional, cálido, explicativo e inspirador
+· WhatsApp / Asesoría  → Cercano, directo, resolutivo y altamente tranquilizador (24/7)
+· Redes Sociales       → Educativo, humano, testimonios de vida y empatía comunitaria
+· Atención Home Care   → Atento, respetuoso, dedicado y profundamente humano
+· Urgencias 24/7       → Agil, claro, enfocado y directo sin dilaciones
+
+
+## FIRMA
+
+· "Equipo Neurum IPS"    → Comunicados generales y orientación al usuario
+· "Tu Equipo Médico"     → Seguimiento a programas integrales y pacientes
+· NUNCA                  → "La Dirección Administrativa" ni códigos fríos de IPS
+
+
+## PRINCIPIO QUE CIERRA TODO
+
+Si un texto suena a formulario burocrático de EPS o trámite hospitalario frío, reescríbelo.
+Si suena a un equipo de especialistas de excelencia que cuidan la vida con empatía, fe, coraje y disciplina, es la identidad de Neurum IPS.

@@ -1,0 +1,103 @@
+<!-- Slide 01: Portada -->
+<section class="slide active" id="slide01">
+    <div class="slide-content center" style="max-width: 1200px; width: 100%; display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-2xl); align-items: center;">
+        
+        <!-- Left Side: Title & Description -->
+        <div style="text-align: left; display: flex; flex-direction: column; gap: var(--space-lg);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span class="badge-tag purple">Módulo 22</span>
+                <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-secondary);">Diplomado Neurum 2026</span>
+            </div>
+            <h1 style="color: var(--color-primary); font-size: calc(2.4rem + 0.8vw); line-height: 1.15; font-weight: 800; font-family: 'Exo', sans-serif; margin: 0;">
+                Ecosistema Claude: Code, Cowork, Conectores & Skills
+            </h1>
+            <h3 style="color: var(--color-secondary); font-size: 1.3rem; font-weight: 400; margin: 0; font-family: 'Exo', sans-serif; line-height: 1.4;">
+                Proyectos, Desarrollo Agéntico, Automatización de PC y Conectores de IA.
+            </h3>
+            <p class="text-muted" style="font-size: 1rem; line-height: 1.6; color: var(--color-secondary); margin-top: var(--space-xs);">
+                Una guía práctica e integral para dominar Claude Code en terminal, la automatización con Claude Cowork, la integración de conectores MCP y la extensión de capacidades con Skills.
+            </p>
+            
+            <div style="display: flex; gap: var(--space-md); margin-top: var(--space-md);">
+                <button class="btn-primary" style="padding: 14px 28px; font-size: 1.1rem;"
+                    onclick="document.dispatchEvent(new KeyboardEvent('keydown', {key: 'ArrowRight'}))">
+                    Iniciar Presentación
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <a href="../index.html" class="btn-secondary" style="border: 2px solid var(--color-primary); padding: 12px 24px; border-radius: 8px; font-family: 'Exo', sans-serif; font-weight: 600; background: white; display: inline-flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.05rem;">
+                    Volver al Índice
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: Graphic -->
+        <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+            <svg width="100%" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 460px;">
+                <defs>
+                    <linearGradient id="claude-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#D97706" />
+                        <stop offset="100%" stop-color="#7C3AED" />
+                    </linearGradient>
+                    <linearGradient id="claude-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#7C3AED" />
+                        <stop offset="100%" stop-color="#2563EB" />
+                    </linearGradient>
+                    <filter id="claude-glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#7C3AED" flood-opacity="0.25" />
+                    </filter>
+                    <style>
+                        .pulse-flow-c {
+                            stroke-dasharray: 6 6;
+                            animation: flowAnimationC 20s linear infinite;
+                        }
+                        @keyframes flowAnimationC {
+                            to { stroke-dashoffset: -1000; }
+                        }
+                    </style>
+                </defs>
+
+                <!-- Connection Paths -->
+                <path d="M 80 80 Q 250 50 250 200" stroke="url(#claude-grad1)" stroke-width="2.5" class="pulse-flow-c" />
+                <path d="M 80 160 Q 180 160 250 200" stroke="url(#claude-grad1)" stroke-width="2.5" class="pulse-flow-c" />
+                <path d="M 80 240 Q 180 240 250 200" stroke="url(#claude-grad2)" stroke-width="2.5" class="pulse-flow-c" />
+                <path d="M 80 320 Q 250 350 250 200" stroke="url(#claude-grad2)" stroke-width="2.5" class="pulse-flow-c" />
+                <path d="M 250 200 L 420 200" stroke="url(#claude-grad2)" stroke-width="3" class="pulse-flow-c" />
+
+                <!-- Nodes -->
+                <g>
+                    <rect x="20" y="60" width="110" height="40" rx="8" fill="white" stroke="#D97706" stroke-width="2" filter="url(#claude-glow)" />
+                    <text x="75" y="85" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Proyectos</text>
+                </g>
+                <g>
+                    <rect x="20" y="140" width="110" height="40" rx="8" fill="white" stroke="#7C3AED" stroke-width="2" filter="url(#claude-glow)" />
+                    <text x="75" y="165" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Claude Code</text>
+                </g>
+                <g>
+                    <rect x="20" y="220" width="110" height="40" rx="8" fill="white" stroke="#2563EB" stroke-width="2" filter="url(#claude-glow)" />
+                    <text x="75" y="245" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Claude Cowork</text>
+                </g>
+                <g>
+                    <rect x="20" y="300" width="110" height="40" rx="8" fill="white" stroke="#059669" stroke-width="2" filter="url(#claude-glow)" />
+                    <text x="75" y="325" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Conectores & Skills</text>
+                </g>
+
+                <!-- Core Engine -->
+                <g>
+                    <rect x="185" y="145" width="130" height="110" rx="18" fill="#0F172A" stroke="#7C3AED" stroke-width="3" filter="url(#claude-glow)" />
+                    <text x="250" y="185" text-anchor="middle" fill="#F8FAFC" font-family="'Exo', sans-serif" font-size="14" font-weight="700">Anthropic</text>
+                    <text x="250" y="205" text-anchor="middle" fill="#FDE68A" font-family="'Exo', sans-serif" font-size="14" font-weight="700">Claude Suite</text>
+                    <text x="250" y="232" text-anchor="middle" fill="#94A3B8" font-family="'Roboto Mono', monospace" font-size="10">IA Agéntica</text>
+                </g>
+
+                <!-- Output Node -->
+                <g>
+                    <circle cx="420" cy="200" r="42" fill="white" stroke="#D97706" stroke-width="3" filter="url(#claude-glow)" />
+                    <text x="420" y="196" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Flujos</text>
+                    <text x="420" y="212" text-anchor="middle" fill="#D97706" font-family="'Roboto Mono', monospace" font-size="11" font-weight="700">Automatizados</text>
+                </g>
+            </svg>
+        </div>
+    </div>
+</section>
