@@ -1,0 +1,137 @@
+<section class="slide" id="slide-4">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-md);">
+            <h2 style="margin-bottom: 0;">Anatomía y Fórmulas Magistrales de Prompts en Salud</h2>
+            <span class="badge-tag purple">Ingeniería de Prompts 2026</span>
+        </div>
+        
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-lg); font-size: 0.95rem;">
+            Existen 3 fórmulas fundamentales según la tarea: <strong>Generación desde cero</strong>, <strong>Edición localizada (Inpainting)</strong> o <strong>Composición con referencias</strong>.
+        </p>
+
+        <!-- Selector Interactivo de Fórmulas -->
+        <div style="background: white; border: 1px solid #CBD5E1; border-radius: 14px; padding: 18px 24px; margin-bottom: var(--space-lg); box-shadow: var(--shadow-sm); width: 100%;">
+            <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 14px;">
+                <button id="btnFormula1" class="element-chip selected" style="font-size: 0.88rem; padding: 8px 18px;" onclick="showFormulaTab(1)">
+                    ⚡ 1. Generación desde Cero
+                </button>
+                <button id="btnFormula2" class="element-chip" style="font-size: 0.88rem; padding: 8px 18px;" onclick="showFormulaTab(2)">
+                    ✏️ 2. Edición Localizada (Inpainting)
+                </button>
+                <button id="btnFormula3" class="element-chip" style="font-size: 0.88rem; padding: 8px 18px;" onclick="showFormulaTab(3)">
+                    🎨 3. Composición con Referencias
+                </button>
+            </div>
+
+            <!-- Tab 1: Generación desde Cero -->
+            <div id="tabFormula1" class="formula-tab" style="text-align: center;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: #0F172A; margin-bottom: 6px;">1. Fórmula para Generación desde Cero:</div>
+                <div style="font-size: 0.95rem; color: var(--color-health-cyan); width: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden; padding: 6px 0;">
+                    $$\text{Prompt} = \underbrace{\text{[Sujeto]}}_{\text{Bloque 1}} + \underbrace{\text{[Contexto]}}_{\text{Bloque 2}} + \underbrace{\text{[Estilo Gráfico]}}_{\text{Bloque 3}} + \underbrace{\text{[Cámara/Luz]}}_{\text{Bloque 4}} + \underbrace{\text{[Emoción/Color]}}_{\text{Bloque 5}}$$
+                </div>
+                <div style="font-size: 0.85rem; color: #475569; margin-top: 6px;">Ideal para: GPT Image 2, FLUX.2, Midjourney v6.1 y DaVinci AI.</div>
+            </div>
+
+            <!-- Tab 2: Edición Localizada -->
+            <div id="tabFormula2" class="formula-tab" style="text-align: center; display: none;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: #0F172A; margin-bottom: 6px;">2. Fórmula para Edición Localizada (Inpainting / MAI-Image-2.5):</div>
+                <div style="font-size: 0.95rem; color: var(--color-health-teal); width: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden; padding: 6px 0;">
+                    $$\text{Prompt Edición} = \underbrace{\text{[Acción/Cambio]}}_{\text{Reemplazar/Agregar}} + \underbrace{\text{[Elemento a Cambiar]}}_{\text{Objeto/Fondo}} + \underbrace{\text{[Elemento Nuevo/Estilo]}}_{\text{Nuevo Objeto}} + \underbrace{\text{[Detalles]}}_{\text{Iluminación/Color}}$$
+                </div>
+                <div style="font-size: 0.85rem; color: #0D9488; background: #F0FDFA; padding: 6px 16px; border-radius: 8px; font-family: monospace; display: inline-block; border: 1px solid #99F6E4; margin-top: 6px;">
+                    Ejemplo: "Reemplazar el fondo de laboratorio antiguo por un laboratorio genómico moderno de luz blanca, manteniendo intacta a la investigadora."
+                </div>
+            </div>
+
+            <!-- Tab 3: Composición con Referencias -->
+            <div id="tabFormula3" class="formula-tab" style="text-align: center; display: none;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: #0F172A; margin-bottom: 6px;">3. Fórmula para Composición con Imágenes de Referencia (Google Flow / Ingredients):</div>
+                <div style="font-size: 0.95rem; color: var(--color-accent-purple); width: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden; padding: 6px 0;">
+                    $$\text{Prompt Composición} = \underbrace{\text{[Tipo Imagen]}}_{\text{Fotografía/3D}} + \underbrace{\text{[Descripción a Generar]}}_{\text{Acción del Sujeto}} + \underbrace{\text{[Imágenes Referencia]}}_{\text{Ingredients/Refs}} + \underbrace{\text{[Detalles]}}_{\text{Color/Luz}}$$
+                </div>
+                <div style="font-size: 0.85rem; color: #6B21A8; background: #F3E8FF; padding: 6px 16px; border-radius: 8px; font-family: monospace; display: inline-block; border: 1px solid #DDD6FE; margin-top: 6px;">
+                    Ejemplo: "Fotografía editorial de la pediatra de la [Imagen Ref 1] en el consultorio de la [Imagen Ref 2] manteniendo su rostro y la luz natural."
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejemplos Pobre vs Profesional -->
+        <div class="grid-2" style="gap: var(--space-lg); width: 100%;">
+            <div class="concept-card" style="border-left: 4px solid #EF4444; background: #FEF2F2; padding: var(--space-md) var(--space-lg);">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                    <span class="badge-tag rose" style="font-size: 0.82rem;">Prompt Pobre (Vago)</span>
+                    <span style="font-size: 0.8rem; color: #991B1B; font-weight: 600;">❌ Mala Práctica</span>
+                </div>
+                <div class="prompt-preview-box" style="background: #450A0A; border-color: #991B1B; font-size: 0.88rem; color: #FECDD3; padding: 12px 16px; margin-bottom: 12px;">
+                    "un médico hablando de salud en un hospital"
+                </div>
+                <div style="font-size: 0.85rem; font-weight: 600; color: #991B1B; margin-bottom: 6px;">Consecuencias Frecuentes:</div>
+                <ul style="font-size: 0.85rem; color: #991B1B; padding-left: 20px; line-height: 1.5;">
+                    <li>Genera rostros genéricos, inexpresivos o distorsionados.</li>
+                    <li>Ambiente hospitalario oscuro, frío o atemorizante para el paciente.</li>
+                    <li>Deformidades en manos (más de 5 dedos) e instrumental médico erróneo.</li>
+                    <li>Ausencia de diversidad étnica o demográfica representativa.</li>
+                </ul>
+            </div>
+
+            <div class="concept-card" style="border-left: 4px solid #10B981; background: #ECFDF5; padding: var(--space-md) var(--space-lg);">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                    <span class="badge-tag emerald" style="font-size: 0.82rem;">Prompt Profesional (Estructurado)</span>
+                    <span style="font-size: 0.8rem; color: #065F46; font-weight: 600;">✔️ Buena Práctica</span>
+                </div>
+                <div class="prompt-preview-box" style="background: #064E3B; border-color: #047857; font-size: 0.88rem; color: #A7F3D0; padding: 12px 16px; margin-bottom: 12px;">
+                    "Fotografía editorial de una médica pediatra sonriendo amablemente a un niño en consultorio luminoso. Luz natural cálida, plano medio, paleta azul y blanco, atmósfera de confianza."
+                </div>
+                <div style="font-size: 0.85rem; font-weight: 600; color: #065F46; margin-bottom: 6px;">Ventajas del Enfoque Estructurado:</div>
+                <ul style="font-size: 0.85rem; color: #065F46; padding-left: 20px; line-height: 1.5;">
+                    <li>Sujeto, rol y acción claramente delimitados para la IA.</li>
+                    <li>Iluminación cálida que transmite empatía, calma y seguridad profesional.</li>
+                    <li>Encuadre técnico (Plano Medio) que guía la atención del usuario.</li>
+                    <li>Garantiza calidad anatómica y control de paleta cromática.</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            function showFormulaTab(num) {
+                const b1 = document.getElementById('btnFormula1');
+                const b2 = document.getElementById('btnFormula2');
+                const b3 = document.getElementById('btnFormula3');
+
+                const t1 = document.getElementById('tabFormula1');
+                const t2 = document.getElementById('tabFormula2');
+                const t3 = document.getElementById('tabFormula3');
+
+                if (b1) b1.className = num === 1 ? 'element-chip selected' : 'element-chip';
+                if (b2) b2.className = num === 2 ? 'element-chip selected' : 'element-chip';
+                if (b3) b3.className = num === 3 ? 'element-chip selected' : 'element-chip';
+
+                if (t1) t1.style.display = num === 1 ? 'block' : 'none';
+                if (t2) t2.style.display = num === 2 ? 'block' : 'none';
+                if (t3) t3.style.display = num === 3 ? 'block' : 'none';
+            }
+
+            // Ensure KaTeX renders all tabs before hiding
+            document.addEventListener('DOMContentLoaded', () => {
+                const t2 = document.getElementById('tabFormula2');
+                const t3 = document.getElementById('tabFormula3');
+                if (t2) t2.style.display = 'block';
+                if (t3) t3.style.display = 'block';
+
+                setTimeout(() => {
+                    if (typeof renderMathInElement === 'function') {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                { left: '$$', right: '$$', display: true },
+                                { left: '$', right: '$', display: false }
+                            ],
+                            throwOnError: false
+                        });
+                    }
+                    if (t2) t2.style.display = 'none';
+                    if (t3) t3.style.display = 'none';
+                }, 150);
+            });
+        </script>
+    </div>
+</section>

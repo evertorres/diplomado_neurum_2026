@@ -1,0 +1,42 @@
+<!-- Keyboard Shortcuts Help Modal -->
+<div class="modal-overlay" id="shortcuts-modal">
+    <div class="modal">
+        <button class="modal-close" onclick="document.getElementById('shortcuts-modal').classList.remove('active')">&times;</button>
+        <h3 style="margin-bottom: var(--space-md);">Teclas de Navegación Rápida</h3>
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: var(--space-sm) var(--space-md); text-align: left; font-size: 0.9rem;">
+            <kbd style="background: #E2E8F0; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Flecha Derecha / Espacio</kbd>
+            <span>Siguiente Diapositiva</span>
+
+            <kbd style="background: #E2E8F0; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Flecha Izquierda</kbd>
+            <span>Diapositiva Anterior</span>
+
+            <kbd style="background: #E2E8F0; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Esc</kbd>
+            <span>Cerrar Modales de Zoom / Ayuda</span>
+        </div>
+    </div>
+</div>
+
+<!-- Image Viewer Modal -->
+<div class="modal-overlay" id="image-viewer-modal" onclick="closeImageModal(event)">
+    <div class="modal" style="max-width: 90vw; max-height: 90vh; width: auto; padding: 12px; background: #0F172A; text-align: center; border-radius: 12px;">
+        <button class="modal-close" style="color: white; font-size: 1.5rem;" onclick="document.getElementById('image-viewer-modal').classList.remove('active')">&times;</button>
+        <img id="modal-image-src" src="" alt="Vista previa de iluminación" style="max-width: 100%; max-height: 82vh; border-radius: 8px; object-fit: contain;">
+        <div style="color: #94A3B8; font-size: 0.8rem; margin-top: 6px;">Presiona ESC o clic fuera para cerrar</div>
+    </div>
+</div>
+
+<script>
+    function openImageModal(src) {
+        const modal = document.getElementById('image-viewer-modal');
+        const img = document.getElementById('modal-image-src');
+        if (modal && img) {
+            img.src = src;
+            modal.classList.add('active');
+        }
+    }
+    function closeImageModal(e) {
+        if (e.target.id === 'image-viewer-modal') {
+            e.target.classList.remove('active');
+        }
+    }
+</script>

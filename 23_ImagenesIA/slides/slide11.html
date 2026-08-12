@@ -1,0 +1,224 @@
+<section class="slide" id="slide-11">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs);">
+            <h2>PROMPT LAB INTERACTIVO: Laboratorio de Modelos 2026</h2>
+            <span class="badge-tag emerald">Herramienta Interactiva 2026</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-xs); font-size: 0.86rem;">
+            Ajuste los parámetros para construir y evaluar su prompt en vivo. Soporta los mejores modelos de 2026 y la sintaxis de <strong>Google Flow Studio (Veo 3.1 & Nano Banana 2)</strong>.
+        </p>
+
+        <div class="prompt-builder-grid" style="gap: var(--space-md);">
+            <!-- Form Parameters Panel -->
+            <div class="concept-card" style="background: white; border-top: 4px solid var(--color-health-cyan); padding: 10px 14px;">
+                <h4 style="font-size: 0.92rem; margin-bottom: 6px; color: #0F172A; display: flex; justify-content: space-between; align-items: center;">
+                    <span>⚙️ Parámetros del Prompt</span>
+                    <span id="labModeLabel" class="badge-tag" style="font-size: 0.7rem;">Modelo 2026</span>
+                </h4>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 6px;">
+                    <div>
+                        <label style="font-size: 0.76rem; font-weight: 600; color: #475569;">1. Modelo Objetivo (2026):</label>
+                        <select id="labTool" class="interactive-selector" style="font-size: 0.8rem; padding: 3px 6px;" onchange="renderLivePrompt()">
+                            <option value="GPT Image 2">GPT Image 2 (OpenAI 4K)</option>
+                            <option value="Reve 2.1">Reve 2.1 (Layout AI & Tipografía)</option>
+                            <option value="Nano Banana 2">Nano Banana 2 (Google AI Fast)</option>
+                            <option value="Google Flow Studio">Google Flow Studio (Veo 3.1 & Nano Banana 2)</option>
+                            <option value="Seedream 5.0 Pro">Seedream 5.0 Pro (ByteDance Infografía)</option>
+                            <option value="MAI-Image-2.5">MAI-Image-2.5 (Microsoft AI Edición)</option>
+                            <option value="FLUX.2">FLUX.2 (Black Forest Ultra Fidelidad)</option>
+                            <option value="Grok Image">Grok Image (xAI Expresivo)</option>
+                            <option value="Midjourney v6.1">Midjourney v6.1 (Tradición Estética)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="font-size: 0.76rem; font-weight: 600; color: #475569;">2. Estilo Gráfico:</label>
+                        <select id="labStyle" class="interactive-selector" style="font-size: 0.8rem; padding: 3px 6px;" onchange="renderLivePrompt()">
+                            <option value="Fotografía Editorial Médica">Fotografía Editorial Médica</option>
+                            <option value="3D Render Pixar / Blender">3D Render Pixar / Blender</option>
+                            <option value="Ilustración Vectorial Flat">Ilustración Vectorial Flat</option>
+                            <option value="Ilustración Científica Clásica">Ilustración Científica Clásica</option>
+                            <option value="Cómic Educativo">Cómic Educativo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 6px;">
+                    <label style="font-size: 0.76rem; font-weight: 600; color: #475569;">3. Sujeto u Objeto Principal (Subject Ingredient):</label>
+                    <input type="text" id="labSubject" class="interactive-selector" style="font-size: 0.8rem; padding: 3px 6px;" 
+                           value="Médica pediatra hispana sonriendo amablemente a un niño durante una revisión" oninput="renderLivePrompt()">
+                </div>
+
+                <div style="margin-bottom: 6px;">
+                    <label style="font-size: 0.76rem; font-weight: 600; color: #475569;">4. Contexto / Entorno (Scene Ingredient):</label>
+                    <input type="text" id="labContext" class="interactive-selector" style="font-size: 0.8rem; padding: 3px 6px;" 
+                           value="Consultorio médico moderno, luminoso y acogedor con paredes de tonos suaves" oninput="renderLivePrompt()">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 6px;">
+                    <div>
+                        <label style="font-size: 0.76rem; font-weight: 600; color: #475569;">5. Cámara / Movimiento Veo 3.1:</label>
+                        <select id="labCamera" class="interactive-selector" style="font-size: 0.8rem; padding: 3px 6px;" onchange="renderLivePrompt()">
+                            <option value="Plano Medio">Plano Medio (Medium Shot)</option>
+                            <option value="Órbita Lenta de Cámara [00:00-00:04]">Órbita Lenta Veo 3.1 [00:00-00:04]</option>
+                            <option value="Zoom Suave de Acercamiento [00:00-00:02]">Zoom Suave Veo 3.1 [00:00-00:02]</option>
+                            <option value="Close-up Macro">Close-up Macro (Detalle)</option>
+                            <option value="Gran Angular / Vista Cenital">Gran Angular / Top-down</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="font-size: 0.76rem; font-weight: 600; color: #475569;">6. Iluminación:</label>
+                        <select id="labLighting" class="interactive-selector" style="font-size: 0.8rem; padding: 3px 6px;" onchange="renderLivePrompt()">
+                            <option value="Luz Natural Cálida">Luz Natural Cálida (Warm Daylight)</option>
+                            <option value="Luz Clínica Suave">Luz Clínica Suave (Soft Studio)</option>
+                            <option value="Luz Cinematográfica Volumétrica">Luz Cinematográfica (Rim Light)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label style="font-size: 0.76rem; font-weight: 600; color: #475569;">7. Paleta de Colores & Mood:</label>
+                    <select id="labColor" class="interactive-selector" style="font-size: 0.8rem; padding: 3px 6px;" onchange="renderLivePrompt()">
+                        <option value="Azul pastel y verde menta">Azul pastel y verde menta (Confianza)</option>
+                        <option value="Naranja suave y amarillo cálido">Naranja suave y amarillo (Empatía/Nutrición)</option>
+                        <option value="Blanco puro e higiénico">Blanco puro e higiénico (Sanidad)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Output Preview Panel -->
+            <div class="concept-card" style="background: #F8FAFC; border-top: 4px solid var(--color-health-green); padding: 10px 14px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <h4 style="font-size: 0.92rem; margin: 0; color: #0F172A;">✨ Resultado Generado en Vivo</h4>
+                        <span id="labToolBadge" class="badge-tag emerald" style="font-size: 0.75rem;">GPT Image 2</span>
+                    </div>
+
+                    <div style="font-size: 0.76rem; font-weight: 600; color: #334155; margin-bottom: 2px;">Prompt Completo (Español):</div>
+                    <div class="prompt-preview-box" style="margin-bottom: 6px; font-size: 0.76rem; padding: 6px 8px; max-height: 90px; overflow-y: auto;">
+                        <span id="outputPromptEs">Cargando prompt...</span>
+                        <button class="copy-btn" style="padding: 2px 6px; font-size: 0.68rem;" onclick="copyPrompt('outputPromptEs', this)">Copiar</button>
+                    </div>
+
+                    <div style="font-size: 0.76rem; font-weight: 600; color: #334155; margin-bottom: 2px;">Technical English Prompt (Para GPT Image 2 / FLUX.2 / Reve 2.1 / Google Flow):</div>
+                    <div class="prompt-preview-box" style="margin-bottom: 6px; font-size: 0.76rem; padding: 6px 8px; max-height: 95px; overflow-y: auto; background: #022C22; color: #6EE7B7; border-color: #065F46;">
+                        <span id="outputPromptEn">Loading prompt...</span>
+                        <button class="copy-btn" style="padding: 2px 6px; font-size: 0.68rem;" onclick="copyPrompt('outputPromptEn', this)">Copiar</button>
+                    </div>
+
+                    <div style="font-size: 0.76rem; font-weight: 600; color: #991B1B; margin-bottom: 2px;">Negative Prompt Inyectado:</div>
+                    <div style="font-family: monospace; font-size: 0.7rem; color: #881337; background: #FFF1F2; border: 1px solid #FECDD3; padding: 3px 6px; border-radius: 6px;">
+                        --no deformities, blurry text, frightening aspect, excess blood, hospital mess, extra fingers, distorted faces
+                    </div>
+                </div>
+
+                <div style="margin-top: 6px; padding-top: 6px; border-top: 1px solid #E2E8F0; display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 0.75rem; color: #64748B;">Listo para copiar en la plataforma 2026.</span>
+                    <button class="btn-primary" style="padding: 5px 10px; font-size: 0.78rem;" onclick="copyPrompt('outputPromptEs', this)">
+                        📋 Copiar Prompt Final
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function renderLivePrompt() {
+                const tool = document.getElementById('labTool')?.value || 'GPT Image 2';
+                const style = document.getElementById('labStyle')?.value || 'Fotografía Editorial Médica';
+                const subject = document.getElementById('labSubject')?.value || 'Sujeto médico';
+                const context = document.getElementById('labContext')?.value || 'Entorno médico';
+                const camera = document.getElementById('labCamera')?.value || 'Plano Medio';
+                const lighting = document.getElementById('labLighting')?.value || 'Luz Natural Cálida';
+                const color = document.getElementById('labColor')?.value || 'Azul pastel';
+
+                const badge = document.getElementById('labToolBadge');
+                if (badge) badge.textContent = tool;
+
+                const modeLabel = document.getElementById('labModeLabel');
+                if (modeLabel) {
+                    if (tool.includes('Google Flow')) {
+                        modeLabel.textContent = 'Modo Google Flow (Veo 3.1 & Nano Banana 2)';
+                        modeLabel.className = 'badge-tag purple';
+                    } else if (tool.includes('Reve 2.1')) {
+                        modeLabel.textContent = 'Modo Reve 2.1 (Layout & Tipografía)';
+                        modeLabel.className = 'badge-tag emerald';
+                    } else if (tool.includes('Seedream')) {
+                        modeLabel.textContent = 'Modo Seedream 5.0 (Infografía Densidad)';
+                        modeLabel.className = 'badge-tag amber';
+                    } else {
+                        modeLabel.textContent = `Modelo 2026: ${tool}`;
+                        modeLabel.className = 'badge-tag';
+                    }
+                }
+
+                let promptEs = `${style} de ${subject}. Entorno de ${context}. ${lighting}, ${camera}, paleta de ${color}, atmósfera de confianza visual en salud.`;
+
+                // Technical English translation map helper
+                let styleEn = "Professional editorial healthcare photography";
+                if (style.includes("3D Render")) styleEn = "Friendly 3D Pixar animation style render";
+                else if (style.includes("Vectorial")) styleEn = "Clean flat vector illustration";
+                else if (style.includes("Científica")) styleEn = "Detailed vintage scientific medical illustration";
+                else if (style.includes("Cómic")) styleEn = "Educational graphic novel comic style, crisp ink lineart";
+
+                let cameraEn = "medium shot, eye-level angle";
+                if (camera.includes("Macro")) cameraEn = "macro close-up shot, 85mm lens";
+                else if (camera.includes("Gran Angular")) cameraEn = "wide-angle top-down flat lay view";
+                else if (camera.includes("Órbita")) cameraEn = "[00:00-00:04] slow camera orbit video movement, Veo 3.1 cinematic motion";
+                else if (camera.includes("Zoom")) cameraEn = "[00:00-00:02] smooth camera zoom in, Veo 3.1 focus transition";
+
+                let lightEn = "warm natural daylight glow";
+                if (lighting.includes("Clínica")) lightEn = "soft diffused clinical lighting, clean studio setup";
+                else if (lighting.includes("Cinematográfica")) lightEn = "dramatic volumetric rim lighting";
+
+                let promptEn = "";
+                if (tool.includes('Google Flow')) {
+                    promptEn = `[00:00-00:04] ${styleEn} of ${subject}. Setting: ${context}. ${lightEn}, ${cameraEn}, ${color} color palette. [Ingredients: Subject=Ref_01, Scene=Ref_02] --no deformities, blurry text, distorted faces`;
+                    promptEs = `[Google Flow Veo 3.1 & Nano Banana 2] ${style} de ${subject}. Escenario: ${context}. ${lighting}, ${camera}, paleta ${color}. [Ingredients: Subject=Sujeto_Sintetico, Scene=Entorno_Clinico]`;
+                } else if (tool.includes('Reve 2.1')) {
+                    promptEn = `Reve 2.1 layout-first design of ${subject}. Setting: ${context}. Clean typography hierarchy, ${styleEn}, ${lightEn}, ${cameraEn}, ${color} palette --no deformities, blurry text`;
+                    promptEs = `[Reve 2.1 Layout AI] Diagramación tipográfica de ${style} de ${subject}. Entorno: ${context}. Título legible integrado, ${lighting}, ${camera}, paleta ${color}.`;
+                } else if (tool.includes('Seedream')) {
+                    promptEn = `Seedream 5.0 Pro data-rich infographic composition of ${subject}. Setting: ${context}. Region-based details, ${styleEn}, ${lightEn}, ${color} palette --no deformities, blurry text`;
+                    promptEs = `[Seedream 5.0 Pro] Infografía multiregión de alta densidad de ${subject}. Entorno: ${context}. ${style}, ${lighting}, paleta ${color}.`;
+                } else {
+                    promptEn = `${styleEn} of ${subject}. Setting: ${context}. ${lightEn}, ${cameraEn}, ${color} color palette, highly detailed 4K rendering --no deformities, blurry text, distorted faces, blood`;
+                }
+
+                const elEs = document.getElementById('outputPromptEs');
+                const elEn = document.getElementById('outputPromptEn');
+                if (elEs) elEs.textContent = promptEs;
+                if (elEn) elEn.textContent = promptEn;
+            }
+
+            function copyPrompt(elementId, btn) {
+                const el = document.getElementById(elementId);
+                if (!el) return;
+                navigator.clipboard.writeText(el.textContent).then(() => {
+                    const origText = btn.textContent;
+                    btn.textContent = '¡Copiado!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        btn.textContent = origText;
+                        btn.classList.remove('copied');
+                    }, 2000);
+                });
+            }
+
+            function loadPromptToLab(subject, context, style, camera, lighting, color, tool) {
+                if (document.getElementById('labSubject')) document.getElementById('labSubject').value = subject;
+                if (document.getElementById('labContext')) document.getElementById('labContext').value = context;
+                if (document.getElementById('labStyle')) document.getElementById('labStyle').value = style;
+                if (document.getElementById('labCamera')) document.getElementById('labCamera').value = camera;
+                if (document.getElementById('labLighting')) document.getElementById('labLighting').value = lighting;
+                if (document.getElementById('labColor')) document.getElementById('labColor').value = color;
+                if (document.getElementById('labTool')) document.getElementById('labTool').value = tool;
+                renderLivePrompt();
+                goToSlide(11);
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(renderLivePrompt, 300);
+            });
+        </script>
+    </div>
+</section>

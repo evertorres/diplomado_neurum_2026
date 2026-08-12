@@ -1,0 +1,152 @@
+<section class="slide" id="slide-10">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <h2>Fase Práctica 1: Matriz de Decisiones de Prompts 2026</h2>
+            <span class="badge-tag emerald">Modelos 2026</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-md); font-size: 0.92rem;">
+            Selecciona un objetivo de comunicación en salud para ver la combinación recomendada de modelo (2026), estilo, cámara e iluminación:
+        </p>
+
+        <div style="margin-bottom: var(--space-md);">
+            <label style="font-weight: 600; font-size: 0.9rem; color: #0F172A; margin-bottom: 6px; display: block;">
+                Objetivo de Divulgación Sanitaria:
+            </label>
+            <select id="caseStudySelect" class="interactive-selector" onchange="updateCaseStudyView()">
+                <option value="pediatria">1. Fotografía Pedriática Empática 4K (GPT Image 2 / FLUX.2)</option>
+                <option value="cartel">2. Cartel Educativo de Prevención con Tipografía (Reve 2.1 / Layout AI)</option>
+                <option value="infantil">3. Personaje 3D Didáctico para Salud Oral (Nano Banana 2 / Grok Image)</option>
+                <option value="nutricion">4. Infografía Nutricional Multiregión (Seedream 5.0 Pro / MAI-Image-2.5)</option>
+                <option value="video">5. Secuencia Animada de Salud Cardiovascular (Google Flow Studio / Veo 3.1)</option>
+            </select>
+        </div>
+
+        <div id="caseStudyResultBox" class="concept-card" style="border-left: 4px solid var(--color-health-cyan); background: white;">
+            <!-- Dynamically injected via script below -->
+        </div>
+
+        <script>
+            function updateCaseStudyView() {
+                const select = document.getElementById('caseStudySelect');
+                const resultBox = document.getElementById('caseStudyResultBox');
+                if (!select || !resultBox) return;
+
+                const val = select.value;
+                let html = '';
+
+                if (val === 'pediatria') {
+                    html = `
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <div>
+                                <span class="badge-tag emerald">Modelo: GPT Image 2 / FLUX.2</span>
+                                <h3 style="font-size: 1.15rem; margin: 4px 0 0 0; color: #0F172A;">Atención Pedriática Empática 4K</h3>
+                            </div>
+                            <span class="badge-tag">Fotografía Editorial</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #475569; margin-bottom: 10px;">
+                            Muestra la calidez de la relación médico-paciente reduciendo el miedo infantil con hiperrealismo cutáneo y luces naturales.
+                        </p>
+                        <div class="prompt-preview-box" style="margin-bottom: 10px;">
+                            "Fotografía editorial de una médica pediatra hispana sonriendo amablemente a un niño durante una revisión de rutina. Entorno de consultorio médico moderno, luminoso y acogedor con paredes de tonos suaves. Luz natural cálida que entra por la ventana, plano medio, enfoque nítido en las expresiones faciales, atmósfera de confianza y empatía."
+                        </div>
+                        <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                            <button class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem;" onclick="loadPromptToLab('Fotografía editorial de una médica pediatra hispana sonriendo amablemente a un niño durante una revisión de rutina', 'Consultorio médico moderno, luminoso y acogedor', 'Fotografía Editorial Médica', 'Plano Medio', 'Luz Natural Cálida', 'Azul pastel y verde menta', 'GPT Image 2')">
+                                🚀 Cargar en PROMPT LAB (Slide 11)
+                            </button>
+                        </div>
+                    `;
+                } else if (val === 'cartel') {
+                    html = `
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <div>
+                                <span class="badge-tag emerald">Modelo: Reve 2.1 (Layout AI)</span>
+                                <h3 style="font-size: 1.15rem; margin: 4px 0 0 0; color: #0F172A;">Cartel Educativo con Tipografía & Diagramación</h3>
+                            </div>
+                            <span class="badge-tag purple">Ilustración Vector + Layout</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #475569; margin-bottom: 10px;">
+                            Garantiza que la diagramación y el texto del título sean perfectamente legibles e integrados en el afiche.
+                        </p>
+                        <div class="prompt-preview-box" style="margin-bottom: 10px;">
+                            "Un cartel educativo de salud pública sobre la importancia del lavado de manos. Estilo de ilustración vectorial limpia y moderna. En la parte superior, el texto tipográfico claro y legible 'LAVADO DE MANOS: PREVENCIÓN'. Ilustración central de dos manos lavándose con agua y jabón formando burbujas. Paleta azul turquesa y blanco sobre fondo neutro."
+                        </div>
+                        <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                            <button class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem;" onclick="loadPromptToLab('Manos lavándose con agua y jabón formando burbujas con texto LAVADO DE MANOS', 'Fondo neutro limpio', 'Ilustración Vectorial Flat', 'Plano Medio', 'Luz Clínica Suave', 'Azul turquesa y blanco', 'Reve 2.1')">
+                                🚀 Cargar en PROMPT LAB (Slide 11)
+                            </button>
+                        </div>
+                    `;
+                } else if (val === 'infantil') {
+                    html = `
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <div>
+                                <span class="badge-tag emerald">Modelo: Nano Banana 2 / Grok Image</span>
+                                <h3 style="font-size: 1.15rem; margin: 4px 0 0 0; color: #0F172A;">Personaje Didáctico Diente Superhéroe</h3>
+                            </div>
+                            <span class="badge-tag amber">Render 3D Animación</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #475569; margin-bottom: 10px;">
+                            Renderizado 3D rápido y expresivo para guías escolares de cepillado y nutrición oral.
+                        </p>
+                        <div class="prompt-preview-box" style="margin-bottom: 10px;">
+                            "3D render amigable de un diente saludable y sonriente usando una capa de superhéroe, sosteniendo un cepillo de dientes gigante. Estilo de animación 3D al estilo Pixar, iluminación suave y brillante, colores vivos y alegres, fondo blanco limpio, diseño infantil y simpático."
+                        </div>
+                        <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                            <button class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem;" onclick="loadPromptToLab('Diente saludable sonriente usando capa de superhéroe y cepillo gigante', 'Fondo blanco limpio e iluminado', '3D Render Pixar / Blender', 'Plano Entero', 'Luz Suave y Brillante', 'Blanco, azul y rojo alegre', 'Nano Banana 2')">
+                                🚀 Cargar en PROMPT LAB (Slide 11)
+                            </button>
+                        </div>
+                    `;
+                } else if (val === 'nutricion') {
+                    html = `
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <div>
+                                <span class="badge-tag emerald">Modelo: Seedream 5.0 Pro / MAI-Image-2.5</span>
+                                <h3 style="font-size: 1.15rem; margin: 4px 0 0 0; color: #0F172A;">Infografía Nutricional Multiregión</h3>
+                            </div>
+                            <span class="badge-tag">Flat Vector Minimalista</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #475569; margin-bottom: 10px;">
+                            Generación de alta densidad informativa y edición por regiones para guías alimentarias.
+                        </p>
+                        <div class="prompt-preview-box" style="margin-bottom: 10px;">
+                            "Ilustración vectorial flat de una mesa con variedad de alimentos saludables: frutas frescas, verduras, frutos secos y un vaso de agua. Estilo gráfico minimalista para folleto educativo, líneas finas, colores frescos, fondo blanco puro, vista desde arriba (top-down view)."
+                        </div>
+                        <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                            <button class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem;" onclick="loadPromptToLab('Mesa con variedad de alimentos saludables: frutas frescas, verduras, frutos secos y agua', 'Fondo blanco puro', 'Ilustración Vectorial Flat', 'Vista desde Arriba (Top-down)', 'Luz Clínica Suave', 'Verde, naranja y blanco', 'Seedream 5.0 Pro')">
+                                🚀 Cargar en PROMPT LAB (Slide 11)
+                            </button>
+                        </div>
+                    `;
+                } else if (val === 'video') {
+                    html = `
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <div>
+                                <span class="badge-tag emerald">Modelo: Google Flow Studio (Veo 3.1 & Nano Banana 2)</span>
+                                <h3 style="font-size: 1.15rem; margin: 4px 0 0 0; color: #0F172A;">Micro-documental Animado de Salud Cardiovascular</h3>
+                            </div>
+                            <span class="badge-tag rose">Secuencia Cinematográfica</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #475569; margin-bottom: 10px;">
+                            Producción agéntica multimedia con movimiento de cámara, timestamps e ingredients.
+                        </p>
+                        <div class="prompt-preview-box" style="margin-bottom: 10px;">
+                            "[00:00-00:04] Cinematic video clip of 3D animated human heart with glowing pulse. Veo 3.1 slow camera orbit, warm volumetric rim light, educational medical background. [Ingredients: Subject=Heart_3D_Ref, Scene=Medical_Bg]"
+                        </div>
+                        <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                            <button class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem;" onclick="loadPromptToLab('Corazón humano 3D animado con pulso brillante y dinámica de fluido sanguíneo', 'Fondo educacional médico abstracto', '3D Render Pixar / Blender', 'Órbita Lenta de Cámara', 'Luz Cinematográfica Volumétrica', 'Rojo carmesí y azul eléctrico', 'Google Flow (Veo 3.1)')">
+                                🚀 Cargar en PROMPT LAB (Slide 11)
+                            </button>
+                        </div>
+                    `;
+                }
+
+                resultBox.innerHTML = html;
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(updateCaseStudyView, 200);
+            });
+        </script>
+    </div>
+</section>

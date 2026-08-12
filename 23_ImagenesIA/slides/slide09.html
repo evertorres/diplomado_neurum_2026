@@ -1,0 +1,63 @@
+<section class="slide" id="slide-9">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm);">
+            <h2 style="margin-bottom: 0;">Estudio Agéntico Google Flow: Prompts de Imagen vs Video</h2>
+            <span class="badge-tag" style="background: #E8F0FE; color: #1967D2;">Google Labs Studio</span>
+        </div>
+        
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-md); font-size: 0.92rem;">
+            Google Flow aplica reglas distintas para generar <strong>imágenes fijas (Imagen 4)</strong> vs <strong>secuencias de video (Veo 3.1)</strong>.
+        </p>
+
+        <div class="grid-2" style="gap: 16px; margin-bottom: var(--space-md);">
+            <!-- Panel Imágenes -->
+            <div class="concept-card" style="border-top: 4px solid #4285F4; background: white; padding: 16px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <strong style="font-size: 1rem; color: #1967D2;">📸 1. Prompts para IMÁGENES (Imagen 4)</strong>
+                        <span class="badge-tag" style="font-size: 0.75rem;">Base / Ingredients</span>
+                    </div>
+
+                    <ul style="font-size: 0.85rem; color: #334155; padding-left: 18px; margin-bottom: 12px; line-height: 1.5;">
+                        <li style="margin-bottom: 6px;"><strong>Sujeto Específico:</strong> Evitar la vaguedad ("un médico"). Definir etnia, edad, postura y vestir exacto.</li>
+                        <li style="margin-bottom: 6px;"><strong>Entorno Detallado:</strong> Especificar arquitectura, elementos de fondo y profundidad de campo (<em>shallow depth of field</em>).</li>
+                        <li style="margin-bottom: 6px;"><strong>Tokens de Render:</strong> <code>editorial photography, 85mm lens, Pixar 3D render, flat vector</code>.</li>
+                        <li style="margin-bottom: 6px;"><strong>Character Locking:</strong> Generar personaje en fondo blanco neutro y guardarlo como <code>Subject Ingredient 1</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="prompt-preview-box" style="font-size: 0.8rem; padding: 10px 14px; background: #0F172A; color: #E2E8F0; margin-top: 8px;">
+                    "Editorial healthcare photography of a Hispanic female pediatrician warmly smiling at a child patient in bright modern office, 85mm lens."
+                </div>
+            </div>
+
+            <!-- Panel Videos -->
+            <div class="concept-card" style="border-top: 4px solid #EA4335; background: white; padding: 16px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <strong style="font-size: 1rem; color: #C5221F;">🎥 2. Prompts para VIDEO (Veo 3.1)</strong>
+                        <span class="badge-tag rose" style="font-size: 0.75rem;">Cinematográfico</span>
+                    </div>
+
+                    <ul style="font-size: 0.85rem; color: #334155; padding-left: 18px; margin-bottom: 12px; line-height: 1.5;">
+                        <li style="margin-bottom: 6px;"><strong>Capa 1 (Cámara):</strong> Definir trayectoria (<code>slow camera panning, 360-degree orbit, zoom in</code>).</li>
+                        <li style="margin-bottom: 6px;"><strong>Capa 2 (Acción):</strong> Especificar el movimiento dinámico del sujeto u órgano en tiempo real.</li>
+                        <li style="margin-bottom: 6px;"><strong>Timestamp Syntax:</strong> Dividir en bloques <code>[00:00-00:02]</code> cámara y <code>[00:02-00:05]</code> acción.</li>
+                        <li style="margin-bottom: 6px;"><strong>Start & End Frames:</strong> Usar dos cuadros clave para interpolación fluida sin alucinaciones.</li>
+                    </ul>
+                </div>
+
+                <div class="prompt-preview-box" style="font-size: 0.8rem; padding: 10px 14px; background: #4C0519; color: #FECDD3; border-color: #9F1239; margin-top: 8px;">
+                    "[00:00-00:02] Slow camera orbit around 3D heart. [00:02-00:05] Blood flow dynamics illuminated. [Ingredients: Subject=Heart_Ref]"
+                </div>
+            </div>
+        </div>
+
+        <!-- Copiloto Agéntico -->
+        <div class="interactive-box" style="background: #F8FAFC; border: 1px solid #CBD5E1; padding: 14px 18px; border-radius: 12px; margin-bottom: 0; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 0.88rem; color: #0F172A; line-height: 1.5;">
+                💡 <strong>Agent Mode (Gemini):</strong> Puedes pedirle al agente en lenguaje natural: <em>"Refina este prompt para Veo 3.1 agregando movimiento de cámara cinemático y paleta azul pastel sin alterar Ingredient 1"</em>.
+            </div>
+        </div>
+    </div>
+</section>
