@@ -1,0 +1,102 @@
+<!-- Modal 1: RPA vs APA Deep Dive -->
+<div class="modal-overlay" id="modal-rpa-vs-apa">
+    <div class="modal" style="max-width: 700px;">
+        <button class="modal-close" onclick="closeModal('modal-rpa-vs-apa')">&times;</button>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="badge-tag purple">Estudio de Caso</span>
+            <h3 style="margin: 0; font-size: 1.4rem;">Procesamiento de Autorización Médica</h3>
+        </div>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: 16px;">
+            Comparativa directa de cómo reaccionan un Bot de RPA tradicional y un Agente de APA ante una variación operacional en un sistema de salud:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div style="background: #FFF1F2; border: 1px solid #FECDD3; border-radius: 10px; padding: 14px;">
+                <h4 style="color: #E11D48; margin-bottom: 8px; font-size: 1rem;">🤖 Bot de RPA (Determinista)</h4>
+                <ul style="font-size: 0.85rem; color: #475569; padding-left: 18px; line-height: 1.5;">
+                    <li><strong>Acción:</strong> Busca el botón "Adjuntar Historia" en la coord (X:450, Y:300).</li>
+                    <li><strong>Incidente:</strong> El software del hospital actualizó la interfaz y movió el botón.</li>
+                    <li><strong>Resultado:</strong> <span style="color: #E11D48; font-weight: bold;">Falla crítica (Timeout Exception)</span>. El flujo se detiene y requiere programador.</li>
+                </ul>
+            </div>
+            <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 10px; padding: 14px;">
+                <h4 style="color: #059669; margin-bottom: 8px; font-size: 1rem;">🧠 Agente APA (Adaptativo)</h4>
+                <ul style="font-size: 0.85rem; color: #475569; padding-left: 18px; line-height: 1.5;">
+                    <li><strong>Acción:</strong> Comprende el objetivo semántico: <em>"Cargar resumen de historia clínica"</em>.</li>
+                    <li><strong>Incidente:</strong> Inspecciona el DOM / API de la nueva pantalla.</li>
+                    <li><strong>Resultado:</strong> <span style="color: #059669; font-weight: bold;">Autocorrección exitosa</span>. Identifica el nuevo control y completa el envío sin interrupción.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2: ReAct Traza Interna -->
+<div class="modal-overlay" id="modal-react-cycle">
+    <div class="modal" style="max-width: 750px;">
+        <button class="modal-close" onclick="closeModal('modal-react-cycle')">&times;</button>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="badge-tag emerald">Traza de Ejecución</span>
+            <h3 style="margin: 0; font-size: 1.4rem;">Ciclo ReAct (Reasoning + Acting)</h3>
+        </div>
+        <p style="font-size: 0.9rem; color: var(--color-secondary); margin-bottom: 12px;">
+            Ejemplo de cómo un agente analiza un resumen de alta médica para derivar una alerta domiciliaria:
+        </p>
+        <div class="code-block" style="font-size: 0.82rem; max-height: 320px; overflow-y: auto;">
+<span style="color: #FDE68A;">[Thought 1]</span> El usuario solicita verificar si el paciente Juan Pérez requiere oxigenoterapia domiciliaria.
+<span style="color: #6EE7B7;">[Action 1]</span> call_tool: consultar_historia_clinica({"paciente_id": "84920"})
+<span style="color: #93C5FD;">[Observation 1]</span> Historia clínica recuperada: "Paciente masculino de 68 años con EPOC descompensado. Saturación al alta: 88% aire ambiente."
+
+<span style="color: #FDE68A;">[Thought 2]</span> La saturación es de 88%, por debajo del umbral estándar del 90%. Debo validar el protocolo de neumología para oxigenoterapia.
+<span style="color: #6EE7B7;">[Action 2]</span> call_tool: buscar_protocolo_guia({"diagnostico": "EPOC", "sat_o2": 88})
+<span style="color: #93C5FD;">[Observation 2]</span> Guía clínica: Pacientes con SatO2 &lt; 89% en aire ambiente califican para concentrador de O2 a 2L/min.
+
+<span style="color: #FDE68A;">[Thought 3]</span> Se cumple el criterio. Debo preparar la solicitud de concentrador de oxígeno y notificar a la EPS.
+<span style="color: #6EE7B7;">[Action 3]</span> call_tool: crear_orden_insumo({"insumo": "Concentrador O2", "prioridad": "Alta"})
+<span style="color: #93C5FD;">[Observation 3]</span> Orden #ORD-9921 enviada exitosamente con aprobación directa.
+
+<span style="color: #FDE68A;">[Final Answer]</span> Se ha validado la indicación médica y se emitió la orden #ORD-9921 para concentrador de oxígeno domiciliario a 2L/min.
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3: Protocolo MCP -->
+<div class="modal-overlay" id="modal-mcp">
+    <div class="modal" style="max-width: 650px;">
+        <button class="modal-close" onclick="closeModal('modal-mcp')">&times;</button>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="badge-tag cyan">Estándar Abierto</span>
+            <h3 style="margin: 0; font-size: 1.4rem;">Model Context Protocol (MCP)</h3>
+        </div>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: 14px;">
+            El <strong>Model Context Protocol (MCP)</strong> propuesto por Anthropic en 2024 y adoptado globalmente actúa como el "USB-C para agentes de IA".
+        </p>
+        <ul style="font-size: 0.9rem; color: var(--color-text); padding-left: 20px; line-height: 1.7;">
+            <li><strong>Servidores MCP:</strong> Exponen recursos, herramientas y prompts estandarizados (ej: conector Postgres, FHIR Server, GitHub).</li>
+            <li><strong>Clientes MCP:</strong> Los agentes o LLMs (Claude Code, n8n, LangChain) consumen las herramientas sin necesidad de conectores propietarios a medida.</li>
+            <li><strong>Seguridad:</strong> Autenticación centralizada y control explícito de permisos por herramienta invocada.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal 4: Antesala a n8n -->
+<div class="modal-overlay" id="modal-n8n-prep">
+    <div class="modal" style="max-width: 650px;">
+        <button class="modal-close" onclick="closeModal('modal-n8n-prep')">&times;</button>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="badge-tag amber">Conexión Práctica</span>
+            <h3 style="margin: 0; font-size: 1.4rem;">¿Por qué n8n para Automatización Agéntica?</h3>
+        </div>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-bottom: 14px;">
+            n8n trasciende la automatización de workflows tradicional al incorporar nodos de <strong>AI Agents, Memory, Tools y Vector Stores</strong> nativos.
+        </p>
+        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 14px;">
+            <h4 style="color: var(--color-cta); margin-bottom: 8px;">Ventajas Clave de n8n:</h4>
+            <ol style="font-size: 0.88rem; color: var(--color-secondary); padding-left: 18px; line-height: 1.6;">
+                <li><strong>Visual & Low-Code:</strong> Permite diseñar y auditar flujos agénticos complejos de forma gráfica.</li>
+                <li><strong>Flexibilidad de LLMs:</strong> Intercambia modelos entre OpenAI, Anthropic, Ollama (local) o Google Gemini con 1 clic.</li>
+                <li><strong>Self-Hosted & Privado:</strong> Crucial para sector salud cumpliendo regulaciones HIPAA / GDPR sobre datos de pacientes.</li>
+            </ol>
+        </div>
+    </div>
+</div>

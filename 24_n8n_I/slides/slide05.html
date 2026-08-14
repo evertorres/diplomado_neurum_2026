@@ -1,0 +1,84 @@
+<!-- Slide 05: El Ciclo Cognitivo y Autocorrección -->
+<section class="slide" id="slide05">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag emerald">Diapositiva 04 / Módulo 24</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">El Ciclo Cognitivo</span>
+        </div>
+
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Razonamiento, Planificación y Autocorrección
+        </h2>
+        <p class="text-muted" style="font-size: 1rem; margin-bottom: var(--space-md);">
+            El patrón ReAct (Reasoning + Acting) y la autorreflexión autónoma ante errores.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-xl); align-items: center;">
+            
+            <!-- Left Side: Explanation & Patterns -->
+            <div>
+                <div class="concept-card" style="margin-bottom: 12px; border-left: 4px solid #059669;">
+                    <h4 style="color: #059669; margin-bottom: 4px;">1. El Ciclo ReAct</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin: 0; line-height: 1.5;">
+                        Alterna iterativamente <strong>Razonamiento</strong> (Thought) ➔ <strong>Acción</strong> (Tool Call) ➔ <strong>Observación</strong> (Result). Evalúa en tiempo real el impacto de cada paso.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="margin-bottom: 12px; border-left: 4px solid #7C3AED;">
+                    <h4 style="color: #7C3AED; margin-bottom: 4px;">2. Metodologías de Planificación</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin: 0; line-height: 1.5;">
+                        <strong>Chain-of-Thought (CoT):</strong> Desglose secuencial paso a paso.<br>
+                        <strong>Tree-of-Thoughts (ToT):</strong> Exploración de múltiples rutas de solución alternativas.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #D97706;">
+                    <h4 style="color: #D97706; margin-bottom: 4px;">3. Marco de Autorreflexión (Reflexion)</h4>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); margin: 0; line-height: 1.5;">
+                        Al detectar un fallo externo (ej: API caída o formato inesperado), analiza la causa raíz, reformula las entradas y reintenta autónomamente.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: SVG Diagram of ReAct Loop -->
+            <div class="interactive-box" style="background: white; text-align: center; border: 1px solid #E2E8F0; padding: var(--space-md);">
+                <h4 style="color: var(--color-primary); margin-bottom: 10px;">Bucle Interactivo ReAct + Reflexion</h4>
+                
+                <svg width="100%" height="240" viewBox="0 0 380 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Circle path -->
+                    <circle cx="190" cy="120" r="80" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4" />
+                    
+                    <!-- Node 1: Thought -->
+                    <g>
+                        <rect x="140" y="20" width="100" height="34" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2" />
+                        <text x="190" y="42" text-anchor="middle" fill="#7C3AED" font-family="'Exo', sans-serif" font-size="11" font-weight="700">1. THOUGHT</text>
+                    </g>
+                    
+                    <!-- Node 2: Action -->
+                    <g>
+                        <rect x="260" y="103" width="100" height="34" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="2" />
+                        <text x="310" y="125" text-anchor="middle" fill="#059669" font-family="'Exo', sans-serif" font-size="11" font-weight="700">2. ACTION</text>
+                    </g>
+
+                    <!-- Node 3: Observation -->
+                    <g>
+                        <rect x="140" y="186" width="100" height="34" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+                        <text x="190" y="208" text-anchor="middle" fill="#2563EB" font-family="'Exo', sans-serif" font-size="11" font-weight="700">3. OBSERVE</text>
+                    </g>
+
+                    <!-- Node 4: Reflexion -->
+                    <g>
+                        <rect x="20" y="103" width="100" height="34" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="2" />
+                        <text x="70" y="125" text-anchor="middle" fill="#D97706" font-family="'Exo', sans-serif" font-size="11" font-weight="700">4. REFLEXION</text>
+                    </g>
+                </svg>
+
+                <p style="font-size: 0.8rem; color: var(--color-secondary); margin-top: 4px;">
+                    El agente itera hasta alcanzar la respuesta validada sin requerir intervención humana.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>

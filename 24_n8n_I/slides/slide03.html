@@ -1,0 +1,65 @@
+<!-- Slide 03: RPA & La Brecha Operativa -->
+<section class="slide" id="slide03">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag amber">Diapositiva 02 / Módulo 24</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Límites del Determinismo</span>
+        </div>
+
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Fundamentos de RPA y el Colapso Determinista
+        </h2>
+        <p class="text-muted" style="font-size: 1rem; margin-bottom: var(--space-md);">
+            ¿Por qué la automatización tradicional por reglas ya no es suficiente en el entorno enterprise actual?
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: stretch;">
+            
+            <!-- Left Card: Fundamentos RPA -->
+            <div class="concept-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                        <span style="font-size: 1.4rem;">🤖</span>
+                        <h3 style="font-size: 1.3rem; margin: 0;">Mecanismo de RPA</h3>
+                    </div>
+                    <ul style="font-size: 0.9rem; color: var(--color-secondary); padding-left: 18px; line-height: 1.6;">
+                        <li><strong>Imitación UI:</strong> Simula clics, ingresos de datos y navegación en pantallas.</li>
+                        <li><strong>Lógica Determinista:</strong> Reglas estrictas <code style="background:#E2E8F0; padding:2px 4px; border-radius:4px;">IF-THEN</code> prefijadas.</li>
+                        <li><strong>Ejecución Apátrida (Stateless):</strong> No retiene memoria ni aprende de fallas pasadas.</li>
+                        <li><strong>Requisito Indispensable:</strong> Entradas de datos 100% estructuradas.</li>
+                    </ul>
+                </div>
+
+                <div style="background: #F1F5F9; border-radius: 8px; padding: 10px 14px; margin-top: 14px;">
+                    <span style="font-size: 0.82rem; font-weight: 700; color: #475569;">ÓPTIMO PARA:</span>
+                    <p style="font-size: 0.85rem; color: var(--color-secondary); margin: 0;">
+                        Tareas repetitivas de gran volumen en sistemas altamente estables.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Card: La Brecha Operativa -->
+            <div class="concept-card" style="border-left: 4px solid #E11D48; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                        <span style="font-size: 1.4rem;">💥</span>
+                        <h3 style="font-size: 1.3rem; margin: 0; color: #E11D48;">La Brecha Operativa</h3>
+                    </div>
+                    <ul style="font-size: 0.9rem; color: var(--color-secondary); padding-left: 18px; line-height: 1.6;">
+                        <li><strong>Datos No Estructurados:</strong> Historias clínicas, PDFs, correos y chats representan más del 80% de la información real.</li>
+                        <li><strong>Fragilidad ante Cambios:</strong> Una pequeña actualización de pantalla o API rompe el proceso de RPA.</li>
+                        <li><strong>Explosión de Excepciones:</strong> Acumulación de casos no resueltos que saturan a operadores humanos.</li>
+                        <li><strong>TCO Elevado:</strong> Mantenimiento correctivo continuo de bots descompuestos.</li>
+                    </ul>
+                </div>
+
+                <button class="btn-secondary" style="margin-top: 14px; width: 100%; font-size: 0.9rem;"
+                    onclick="openModal('modal-rpa-vs-apa')">
+                    🔍 Ver Ejemplo Real: Autorización Médica
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>

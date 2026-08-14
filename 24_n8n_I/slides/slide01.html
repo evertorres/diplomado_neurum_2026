@@ -1,0 +1,105 @@
+<!-- Slide 01: Portada -->
+<section class="slide active" id="slide01">
+    <div class="slide-content center" style="max-width: 1200px; width: 100%; display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-2xl); align-items: center;">
+        
+        <!-- Left Side: Title & Description -->
+        <div style="text-align: left; display: flex; flex-direction: column; gap: var(--space-md);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span class="badge-tag purple">Módulo 24</span>
+                <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-secondary);">Diplomado Neurum 2026</span>
+            </div>
+            <h1 style="color: var(--color-primary); font-size: calc(2.2rem + 0.8vw); line-height: 1.15; font-weight: 800; font-family: 'Exo', sans-serif; margin: 0;">
+                De RPA a la Automatización Agéntica (APA)
+            </h1>
+            <h3 style="color: var(--color-secondary); font-size: 1.25rem; font-weight: 400; margin: 0; font-family: 'Exo', sans-serif; line-height: 1.4;">
+                Evolución paradigmática, arquitecturas autónomas y la antesala a n8n.
+            </h3>
+            <p class="text-muted" style="font-size: 0.95rem; line-height: 1.6; color: var(--color-secondary); margin-top: var(--space-xs);">
+                Una introducción concisa e integral para comprender la transición desde la ejecución determinista basada en reglas (RPA) hacia sistemas cognitivos con capacidad de razonamiento, planificación y autocorrección (APA).
+            </p>
+            
+            <div style="display: flex; gap: var(--space-md); margin-top: var(--space-sm);">
+                <button class="btn-primary" style="padding: 12px 26px; font-size: 1.05rem;"
+                    onclick="document.dispatchEvent(new KeyboardEvent('keydown', {key: 'ArrowRight'}))">
+                    Iniciar Presentación
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <a href="../index.html" class="btn-secondary" style="border: 2px solid var(--color-primary); padding: 10px 22px; border-radius: 8px; font-family: 'Exo', sans-serif; font-weight: 600; background: white; display: inline-flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1rem;">
+                    Volver al Índice
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: Interactive SVG Graphic -->
+        <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+            <svg width="100%" height="380" viewBox="0 0 480 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 450px;">
+                <defs>
+                    <linearGradient id="apa-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#2563EB" />
+                        <stop offset="100%" stop-color="#7C3AED" />
+                    </linearGradient>
+                    <linearGradient id="apa-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#7C3AED" />
+                        <stop offset="100%" stop-color="#059669" />
+                    </linearGradient>
+                    <filter id="apa-glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#2563EB" flood-opacity="0.2" />
+                    </filter>
+                    <style>
+                        .pulse-line {
+                            stroke-dasharray: 6 6;
+                            animation: flowLine 15s linear infinite;
+                        }
+                        @keyframes flowLine {
+                            to { stroke-dashoffset: -300; }
+                        }
+                    </style>
+                </defs>
+
+                <!-- Flow Paths -->
+                <path d="M 90 75 Q 240 50 240 190" stroke="url(#apa-grad1)" stroke-width="2.5" class="pulse-line" />
+                <path d="M 90 190 L 240 190" stroke="url(#apa-grad1)" stroke-width="2.5" class="pulse-line" />
+                <path d="M 90 305 Q 240 330 240 190" stroke="url(#apa-grad2)" stroke-width="2.5" class="pulse-line" />
+                <path d="M 240 190 L 400 190" stroke="url(#apa-grad2)" stroke-width="3" class="pulse-line" />
+
+                <!-- Node 1: RPA -->
+                <g>
+                    <rect x="20" y="55" width="130" height="42" rx="10" fill="white" stroke="#64748B" stroke-width="2" filter="url(#apa-glow)" />
+                    <text x="85" y="78" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="12" font-weight="700">1. RPA</text>
+                    <text x="85" y="91" text-anchor="middle" fill="#64748B" font-family="'Roboto Mono', monospace" font-size="9">Reglas Fijas (UI)</text>
+                </g>
+
+                <!-- Node 2: IA Asistida -->
+                <g>
+                    <rect x="20" y="169" width="130" height="42" rx="10" fill="white" stroke="#2563EB" stroke-width="2" filter="url(#apa-glow)" />
+                    <text x="85" y="192" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="12" font-weight="700">2. IA Asistida</text>
+                    <text x="85" y="205" text-anchor="middle" fill="#2563EB" font-family="'Roboto Mono', monospace" font-size="9">OCR / Clasificación</text>
+                </g>
+
+                <!-- Node 3: APA -->
+                <g>
+                    <rect x="20" y="284" width="130" height="42" rx="10" fill="white" stroke="#7C3AED" stroke-width="2" filter="url(#apa-glow)" />
+                    <text x="85" y="307" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="12" font-weight="700">3. APA Agéntico</text>
+                    <text x="85" y="320" text-anchor="middle" fill="#7C3AED" font-family="'Roboto Mono', monospace" font-size="9">Razonamiento & Autonomía</text>
+                </g>
+
+                <!-- Core Hub: Agentic Engine -->
+                <g>
+                    <rect x="180" y="135" width="120" height="110" rx="16" fill="#0F172A" stroke="#7C3AED" stroke-width="3" filter="url(#apa-glow)" />
+                    <text x="240" y="172" text-anchor="middle" fill="#F8FAFC" font-family="'Exo', sans-serif" font-size="13" font-weight="700">Motor APA</text>
+                    <text x="240" y="192" text-anchor="middle" fill="#FDE68A" font-family="'Exo', sans-serif" font-size="12" font-weight="700">LLM Core</text>
+                    <text x="240" y="215" text-anchor="middle" fill="#94A3B8" font-family="'Roboto Mono', monospace" font-size="10">ReAct / Memoria</text>
+                </g>
+
+                <!-- Output Node: n8n Platform -->
+                <g>
+                    <circle cx="400" cy="190" r="42" fill="white" stroke="#059669" stroke-width="3" filter="url(#apa-glow)" />
+                    <text x="400" y="186" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="13" font-weight="700">n8n</text>
+                    <text x="400" y="202" text-anchor="middle" fill="#059669" font-family="'Roboto Mono', monospace" font-size="10" font-weight="700">Orquestador</text>
+                </g>
+            </svg>
+        </div>
+    </div>
+</section>
