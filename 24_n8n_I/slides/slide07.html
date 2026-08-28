@@ -1,0 +1,65 @@
+<!-- Slide 07: Topologías Multi-Agente & Protocolo MCP -->
+<section class="slide" id="slide07">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag purple">Diapositiva 06 / Módulo 24</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Orquestación & Estándares</span>
+        </div>
+
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Sistemas Multi-Agente (MAS) y Conectividad MCP
+        </h2>
+        <p class="text-muted" style="font-size: 1rem; margin-bottom: var(--space-md);">
+            Cómo escalan los agentes en empresas complejas a través de orquestación y protocolos abiertos.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: stretch;">
+            
+            <!-- Left: Topologías Multi-Agente -->
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                        <h4 style="color: #2563EB; margin: 0; font-size: 1.05rem;">Topología Jerárquica (Supervisor)</h4>
+                        <span class="badge-tag" style="font-size: 0.75rem;">Recomendada</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--color-secondary); margin: 0; line-height: 1.5;">
+                        Un <strong>Agente Supervisor</strong> coordina la tarea global, distribuyendo subtareas a agentes subordinados especializados (ej: Agente Clínico, Agente de Facturación, Agente Normativo).
+                    </p>
+                </div>
+
+                <div class="concept-card" style="border-left: 4px solid #7C3AED;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                        <h4 style="color: #7C3AED; margin: 0; font-size: 1.05rem;">Topología Descentralizada (P2P)</h4>
+                        <span class="badge-tag purple" style="font-size: 0.75rem;">Autónoma</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--color-secondary); margin: 0; line-height: 1.5;">
+                        Agentes independientes colaboran mediante repositorios de memoria compartida o protocolos de negociación entre pares sin un punto único de falla.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: MCP Protocol Card -->
+            <div class="concept-card" style="background: #F8FAFC; border: 1px solid #CBD5E1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <span class="badge-tag cyan">Estándar Abierto</span>
+                        <h3 style="font-size: 1.2rem; margin: 0;">Model Context Protocol (MCP)</h3>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--color-secondary); line-height: 1.5; margin-bottom: 12px;">
+                        Actúa como el <strong>"USB-C para agentes de IA"</strong>. Elimina la necesidad de escribir conectores propietarios entre cada modelo y cada fuente de datos.
+                    </p>
+                    <div style="background: white; border-radius: 8px; padding: 10px 14px; border: 1px solid #E2E8F0; font-size: 0.82rem; color: #334155;">
+                        🔹 <strong>Servidores MCP:</strong> Exponen datos/servicios (BBDD, APIs, FHIR).<br>
+                        🔹 <strong>Clientes MCP:</strong> Agentes (n8n, Claude, LangChain) consumen herramientas de forma homogénea.
+                    </div>
+                </div>
+
+                <button class="btn-secondary" style="margin-top: 14px; width: 100%; font-size: 0.9rem;" onclick="openModal('modal-mcp')">
+                    🔌 Profundizar en MCP
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>

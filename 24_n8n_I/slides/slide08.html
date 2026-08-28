@@ -1,0 +1,64 @@
+<!-- Slide 08: Infraestructura, Tejido de Datos y Gobernanza -->
+<section class="slide" id="slide08">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag amber">Diapositiva 07 / Módulo 24</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Gobernanza & Datos</span>
+        </div>
+
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Tejido de Datos (Data Fabric) y Control Humano (HITL)
+        </h2>
+        <p class="text-muted" style="font-size: 1rem; margin-bottom: var(--space-md);">
+            Garantizando visibilidad de datos corporativos y seguridad operacional con supervisión explícita.
+        </p>
+
+        <!-- 3 Pillars -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-bottom: var(--space-lg);">
+            
+            <!-- Data Fabric -->
+            <div class="concept-card" style="border-top: 4px solid #2563EB;">
+                <div style="font-size: 1.5rem; margin-bottom: 4px;">🌐</div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Tejido de Datos (Data Fabric)</h3>
+                <p style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    El <strong>61% de las empresas</strong> enfrenta silos de información. Data Fabric unifica ERP, CRM, HIS y servidores FHIR sin duplicar datos.
+                </p>
+            </div>
+
+            <!-- RBAC & Security -->
+            <div class="concept-card" style="border-top: 4px solid #7C3AED;">
+                <div style="font-size: 1.5rem; margin-bottom: 4px;">🔒</div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Seguridad & RBAC</h3>
+                <p style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Control de Acceso Basado en Roles. Cada herramienta que ejecuta el agente opera con credenciales restringidas y trazabilidad de auditoría.
+                </p>
+            </div>
+
+            <!-- HITL -->
+            <div class="concept-card" style="border-top: 4px solid #059669; background: #ECFDF5;">
+                <div style="font-size: 1.5rem; margin-bottom: 4px;">👤</div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 6px; color: #059669;">Human-in-the-Loop (HITL)</h3>
+                <p style="font-size: 0.85rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Autonomía total para tareas operativas de bajo riesgo; <strong>firma/aprobación humana obligatoria</strong> en decisiones financieras o clínicas sensibles.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Autonomy Threshold Box -->
+        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: var(--space-md);">
+            <h4 style="margin-bottom: 8px; color: var(--color-primary); font-size: 1rem;">
+                ⚖️ Umbral de Autonomía Progresiva
+            </h4>
+            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 16px; font-size: 0.85rem;">
+                <div style="background: white; border-radius: 8px; padding: 10px 14px; border-left: 4px solid #059669;">
+                    <strong>Bajo Riesgo (100% Autónomo):</strong> Clasificación de correos, extracción de datos de recetas, consultas a bases de conocimiento.
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 10px 14px; border-left: 4px solid #E11D48;">
+                    <strong>Alto Riesgo (Requiere HITL):</strong> Desembolsos financieros, autorizaciones de cirugías, emisión de recetas controladas.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

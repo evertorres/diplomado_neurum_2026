@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24. De RPA a la Automatización Agéntica (APA) | Antesala a n8n</title>
+    <meta name="description"
+        content="Módulo 24 del Diplomado Neurum 2026: Introducción a la Automatización Agéntica. Evolución de RPA, IA y APA, arquitectura de agentes, ciclo ReAct, MCP y la antesala para n8n.">
+    <!-- Relative path to global styles -->
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <style>
+        .slide-image {
+            max-width: 100%;
+            max-height: 55vh;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            margin: var(--space-md) auto;
+            border: 1px solid #E2E8F0;
+            display: block;
+        }
+
+        /* Loading indicator */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-size: 1.5rem;
+            color: var(--color-cta);
+            font-family: 'Exo', sans-serif;
+            font-weight: 600;
+            transition: opacity 0.5s;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Custom presentation extensions */
+        .agenda-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: var(--space-md);
+            width: 100%;
+            margin-top: var(--space-lg);
+        }
+
+        .agenda-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 14px;
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .agenda-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-cta);
+            background: #F8FAFC;
+        }
+
+        .concept-card {
+            background: white;
+            padding: var(--space-md) var(--space-lg);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #E2E8F0;
+            transition: all 200ms ease;
+        }
+
+        .concept-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-cta);
+        }
+
+        .interactive-box {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: var(--space-lg);
+            margin: var(--space-md) 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .badge-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: #EFF6FF;
+            color: var(--color-cta);
+            border: 1px solid #BFDBFE;
+        }
+
+        .badge-tag.emerald {
+            background: #ECFDF5;
+            color: #059669;
+            border-color: #A7F3D0;
+        }
+
+        .badge-tag.amber {
+            background: #FFFBEB;
+            color: #D97706;
+            border-color: #FDE68A;
+        }
+
+        .badge-tag.purple {
+            background: #F5F3FF;
+            color: #7C3AED;
+            border-color: #DDD6FE;
+        }
+
+        .badge-tag.rose {
+            background: #FFF1F2;
+            color: #E11D48;
+            border-color: #FECDD3;
+        }
+
+        .badge-tag.cyan {
+            background: #ECFEFF;
+            color: #0891B2;
+            border-color: #A5F3FC;
+        }
+
+        /* Slide content layout helpers */
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .slide-content.left {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .slide-content.center {
+            align-items: center;
+            text-align: center;
+        }
+
+        .code-block {
+            background: #0F172A;
+            color: #F8FAFC;
+            padding: 16px;
+            border-radius: 10px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.88rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            text-align: left;
+            border: 1px solid #334155;
+        }
+
+        /* Custom styled table for comparisons */
+        .comp-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            font-size: 0.9rem;
+        }
+
+        .comp-table th {
+            background: #0F172A;
+            color: white;
+            padding: 12px 16px;
+            font-family: 'Exo', sans-serif;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .comp-table td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #E2E8F0;
+            background: white;
+            color: var(--color-text);
+        }
+
+        .comp-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comp-table tr:nth-child(even) td {
+            background: #F8FAFC;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader" id="loader">Cargando presentación de Automatización Agéntica (APA) & Antesala n8n...</div>
+
+    <div class="presentation-container">
+
+        <div id="slide-container" style="width: 100%; height: 100%; display: flex; flex-direction: column;">
+            <!-- Slides dynamically injected -->
+        </div>
+
+        <div class="slide-controls">
+            <button class="control-btn" id="prevSlide" disabled title="Anterior">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <span class="slide-counter" id="slideCounter">1 / 10</span>
+            <button class="control-btn" id="nextSlide" title="Siguiente">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <div id="modals-container">
+        <!-- Modals dynamically injected -->
+    </div>
+
+    <div class="modal-overlay" id="global-image-modal">
+        <div class="modal modal-image-wrapper">
+            <button class="modal-close modal-image-close" title="Cerrar Imagen">&times;</button>
+            <img src="" id="global-image-content" class="modal-image-content" alt="Vista ampliada">
+        </div>
+    </div>
+
+    <script src="../shared/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const container = document.getElementById('slide-container');
+            const modalsContainer = document.getElementById('modals-container');
+            const loader = document.getElementById('loader');
+
+            try {
+                const totalSlides = 10;
+
+                const slidePromises = [];
+                for (let i = 1; i <= totalSlides; i++) {
+                    const slideNum = i.toString().padStart(2, '0');
+                    slidePromises.push(
+                        fetch('slides/slide' + slideNum + '.html')
+                            .then(res => {
+                                if (!res.ok) throw new Error(`HTTP error! status: ${res.status} for slide ${slideNum}`);
+                                return res.arrayBuffer();
+                            })
+                            .then(buf => new TextDecoder('utf-8').decode(buf))
+                    );
+                }
+
+                const slideTexts = await Promise.all(slidePromises);
+                container.innerHTML = slideTexts.join('\n');
+
+                // Execute scripts in injected slides
+                container.querySelectorAll('script').forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                    newScript.textContent = oldScript.textContent;
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
+
+                const modalResponse = await fetch('slides/modals.html');
+                if (modalResponse.ok) {
+                    const modalBuf = await modalResponse.arrayBuffer();
+                    const modalText = new TextDecoder('utf-8').decode(modalBuf);
+                    modalsContainer.innerHTML = modalText;
+                }
+
+                loader.classList.add('hidden');
+
+                if (window.initApp) {
+                    window.initApp();
+                }
+
+                // Render LaTeX math using KaTeX if present
+                if (typeof renderMathInElement === 'function') {
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            { left: '$$', right: '$$', display: true },
+                            { left: '$', right: '$', display: false }
+                        ],
+                        throwOnError: false
+                    });
+                }
+            } catch (error) {
+                console.error("Error loading presentation content:", error);
+                loader.textContent = "Error al cargar la presentación. Verifica la consola.";
+            }
+        });
+    </script>
+</body>
+
+</html>

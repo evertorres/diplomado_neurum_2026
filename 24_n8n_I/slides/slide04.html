@@ -1,0 +1,72 @@
+<!-- Slide 04: Definición y Arquitectura APA -->
+<section class="slide" id="slide04">
+    <div class="slide-content left" style="max-width: 1150px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-sm);">
+            <span class="badge-tag purple">Diapositiva 03 / Módulo 24</span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-cta);">Arquitectura Agéntica</span>
+        </div>
+
+        <h2 style="font-size: 2.1rem; margin-bottom: var(--space-xs);">
+            Definición y Módulos Core de APA
+        </h2>
+        <p class="text-muted" style="font-size: 1rem; margin-bottom: var(--space-md);">
+            Mientras que a RPA le dices <em>"cómo"</em> ejecutar cada paso, a APA le entregas el <strong>objetivo final</strong>.
+        </p>
+
+        <!-- 4 Modules Grid -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); margin-bottom: var(--space-md);">
+            
+            <!-- Module 1: Core -->
+            <div class="concept-card" style="border-left: 4px solid #7C3AED; background: #FAF5FF;">
+                <div style="font-size: 1.5rem; margin-bottom: 4px;">🧠</div>
+                <h4 style="color: #7C3AED; margin-bottom: 6px; font-size: 1.05rem;">1. Agent Core</h4>
+                <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    El LLM principal que actúa como controlador cognitivo, procesando intenciones y lógica contextual.
+                </p>
+            </div>
+
+            <!-- Module 2: Memory -->
+            <div class="concept-card" style="border-left: 4px solid #2563EB;">
+                <div style="font-size: 1.5rem; margin-bottom: 4px;">💾</div>
+                <h4 style="color: #2563EB; margin-bottom: 6px; font-size: 1.05rem;">2. Memoria</h4>
+                <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    <strong>Corto plazo:</strong> Contexto en el prompt.<br>
+                    <strong>Largo plazo:</strong> Almacenamiento vectorial (MIPS/RAG) de guías y antecedentes.
+                </p>
+            </div>
+
+            <!-- Module 3: Planning -->
+            <div class="concept-card" style="border-left: 4px solid #D97706;">
+                <div style="font-size: 1.5rem; margin-bottom: 4px;">🧭</div>
+                <h4 style="color: #D97706; margin-bottom: 6px; font-size: 1.05rem;">3. Planificación</h4>
+                <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Descomposición de metas complejas en sub-tareas operativas y evaluación crítica de avance.
+                </p>
+            </div>
+
+            <!-- Module 4: Tools -->
+            <div class="concept-card" style="border-left: 4px solid #059669;">
+                <div style="font-size: 1.5rem; margin-bottom: 4px;">🛠️</div>
+                <h4 style="color: #059669; margin-bottom: 6px; font-size: 1.05rem;">4. Tool Use</h4>
+                <p style="font-size: 0.82rem; color: var(--color-secondary); line-height: 1.5; margin: 0;">
+                    Invocación estructurada de APIs, SQL, ejecutores de código, servidores FHIR o bots de RPA existentes.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- System Schema Banner -->
+        <div class="interactive-box" style="display: flex; align-items: center; justify-content: space-between; background: #0F172A; color: white; margin: 0; padding: 14px 20px;">
+            <div>
+                <span style="color: #6EE7B7; font-weight: bold; font-size: 0.85rem; font-family: 'Roboto Mono', monospace;">PATRÓN DE CONTROL COGNITIVO</span>
+                <p style="font-size: 0.9rem; color: #CBD5E1; margin: 4px 0 0 0;">
+                    Objetivo ➔ [Planificación] ➔ [Evaluación de Memoria] ➔ [Llamada a Herramientas] ➔ Respuesta Validada
+                </p>
+            </div>
+            <button class="btn-primary" style="background: #7C3AED; font-size: 0.85rem; padding: 8px 16px;" onclick="openModal('modal-react-cycle')">
+                Ver Ciclo en Acción
+            </button>
+        </div>
+
+    </div>
+</section>
