@@ -1,0 +1,286 @@
+<!-- Slide 18: Timeline Interactivo del Marco Normativo y Orientador de la IA en Colombia -->
+<section class="slide" id="slide18">
+    <div class="slide-content left" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        
+        <!-- Header -->
+        <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+                <div>
+                    <span class="badge-tag" style="background: #FEF3C7; color: #B45309; border-color: #FDE68A; margin-right: 8px;">Línea de Tiempo Interactiva • Colombia</span>
+                    <span class="badge-tag indigo">Módulo 24 • Diapositiva 18</span>
+                </div>
+                <span class="badge-tag emerald">Revista Hospitalaria (ACHC) & Legislación Nacional</span>
+            </div>
+
+            <h2 style="margin-bottom: 2px; font-size: 1.55rem; color: var(--color-primary);">
+                Evolución del Marco Normativo y Orientador de la IA en Colombia
+            </h2>
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-xs); font-size: 0.86rem; line-height: 1.35;">
+                Haz clic en cada año o utiliza los controles para explorar la transición desde las bases del <em>Hard Law</em> de datos sensibles hasta la futura Ley Integral de IA:
+            </p>
+        </div>
+
+        <!-- Interactive Timeline Bar -->
+        <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 8px 12px; box-shadow: var(--shadow-sm); width: 100%;">
+            <div id="col-timeline-bar" style="display: flex; justify-content: space-between; align-items: center; position: relative; gap: 4px;">
+                <!-- Timeline track line -->
+                <div style="position: absolute; top: 50%; left: 20px; right: 20px; height: 3px; background: #E2E8F0; z-index: 1; transform: translateY(-50%);"></div>
+                <div id="col-timeline-progress" style="position: absolute; top: 50%; left: 20px; width: 0%; height: 3px; background: var(--color-ethics-teal); z-index: 1; transform: translateY(-50%); transition: width 0.3s ease;"></div>
+
+                <!-- 8 Interactive Milestones -->
+                <button class="col-timeline-node active" onclick="selectColMilestone(0)" data-index="0" style="z-index: 2; border: 2px solid var(--color-ethics-teal); background: white; color: var(--color-ethics-teal); width: 38px; height: 38px; border-radius: 50%; font-weight: 700; font-size: 0.72rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: var(--shadow-sm);">
+                    99
+                </button>
+
+                <button class="col-timeline-node" onclick="selectColMilestone(1)" data-index="1" style="z-index: 2; border: 2px solid #CBD5E1; background: white; color: #64748B; width: 38px; height: 38px; border-radius: 50%; font-weight: 700; font-size: 0.72rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: var(--shadow-sm);">
+                    '12
+                </button>
+
+                <button class="col-timeline-node" onclick="selectColMilestone(2)" data-index="2" style="z-index: 2; border: 2px solid #CBD5E1; background: white; color: #64748B; width: 38px; height: 38px; border-radius: 50%; font-weight: 700; font-size: 0.72rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: var(--shadow-sm);">
+                    '19
+                </button>
+
+                <button class="col-timeline-node" onclick="selectColMilestone(3)" data-index="3" style="z-index: 2; border: 2px solid #CBD5E1; background: white; color: #64748B; width: 38px; height: 38px; border-radius: 50%; font-weight: 700; font-size: 0.72rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: var(--shadow-sm);">
+                    '21
+                </button>
+
+                <button class="col-timeline-node" onclick="selectColMilestone(4)" data-index="4" style="z-index: 2; border: 2px solid #CBD5E1; background: white; color: #64748B; width: 38px; height: 38px; border-radius: 50%; font-weight: 700; font-size: 0.72rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: var(--shadow-sm);">
+                    '22
+                </button>
+
+                <button class="col-timeline-node" onclick="selectColMilestone(5)" data-index="5" style="z-index: 2; border: 2px solid #CBD5E1; background: white; color: #64748B; width: 38px; height: 38px; border-radius: 50%; font-weight: 700; font-size: 0.72rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: var(--shadow-sm);">
+                    '24
+                </button>
+
+                <button class="col-timeline-node" onclick="selectColMilestone(6)" data-index="6" style="z-index: 2; border: 2px solid #CBD5E1; background: white; color: #64748B; width: 38px; height: 38px; border-radius: 50%; font-weight: 700; font-size: 0.72rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: var(--shadow-sm);">
+                    '25
+                </button>
+
+                <button class="col-timeline-node" onclick="selectColMilestone(7)" data-index="7" style="z-index: 2; border: 2px solid #CBD5E1; background: white; color: #64748B; width: 38px; height: 38px; border-radius: 50%; font-weight: 700; font-size: 0.72rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: var(--shadow-sm);">
+                    '26
+                </button>
+            </div>
+        </div>
+
+        <!-- Dynamic Detail Display Container -->
+        <div id="col-detail-card" style="background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 14px 18px; box-shadow: var(--shadow-md); transition: all 0.3s ease; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between;">
+            <!-- Injected dynamically by JavaScript below -->
+        </div>
+
+        <!-- Footer Timeline Controls + Hospital Governance Link -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 10px; padding: 6px 14px; flex-wrap: wrap; gap: 8px;">
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <button class="btn-secondary" id="col-prev-btn" onclick="prevColMilestone()" style="padding: 5px 12px; font-size: 0.75rem;">
+                    &larr; Año Anterior
+                </button>
+                <span id="col-step-indicator" style="font-size: 0.75rem; font-weight: 600; color: #475569;">
+                    Hito 1 de 8 (1999)
+                </span>
+                <button class="btn-secondary" id="col-next-btn" onclick="nextColMilestone()" style="padding: 5px 12px; font-size: 0.75rem;">
+                    Siguiente Año &rarr;
+                </button>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 0.74rem; color: #64748B;">
+                    <strong>Regla de oro ACHC:</strong> La IA clínica debe anclarse en la Ley 1581 y la Res. 1995.
+                </span>
+                <button class="btn-secondary" style="padding: 5px 12px; font-size: 0.75rem; border-color: var(--color-ethics-teal); color: var(--color-ethics-teal);" onclick="goToSlide(19)">
+                    Regulación Global &rarr;
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        const colMilestones = [
+            {
+                year: "1999",
+                type: "Hard Law Sectorial (Salud)",
+                badgeColor: "#0891B2",
+                badgeBg: "#ECFEFF",
+                title: "Resolución 1995 de 1999 — Ministerio de Salud",
+                subtitle: "Custodia, reserva, acceso y confidencialidad de la Historia Clínica (HC)",
+                details: "Establece las reglas obligatorias para el manejo de la Historia Clínica en Colombia. Al ser la HC la principal fuente de datos clínicos para entrenar, calibrar y validar algoritmos de IA, esta norma define los límites estrictos de custodia institucional, secreto médico y acceso exclusivo para fines asistenciales e investigación autorizada.",
+                clinicalImpact: "Impacto en IA: Prohíbe la extracción no consentida o comercialización de historias clínicas para entrenamiento algorítmico sin debidos protocolos bioéticos."
+            },
+            {
+                year: "2012 — 2013",
+                type: "Hard Law Nacional (Datos)",
+                badgeColor: "#0D9488",
+                badgeBg: "#CCFBF1",
+                title: "Ley 1581 de 2012 & Decreto 1377 de 2013",
+                subtitle: "Régimen General de Protección de Datos Personales (Datos Sensibles de Salud)",
+                details: "Marco legal vinculante que clasifica los datos de salud, biométricos y genéticos como **DATOS SENSIBLES**. Exige consentimiento previo, expreso e informado del paciente, implementando el principio de finalidad y estrictas medidas de seguridad técnica frente a fugas o accesos no autorizados.",
+                clinicalImpact: "Impacto en IA: Obliga a que cualquier plataforma de IA médica cuente con mecanismos de anonimización/seudonimización y consentimiento explícito calificado."
+            },
+            {
+                year: "2019",
+                type: "Política de Estado & Telesalud",
+                badgeColor: "#4F46E5",
+                badgeBg: "#EEF2FF",
+                title: "CONPES 3975 de 2019 & Resolución 2654 de 2019",
+                subtitle: "Política Nacional de Transformación Digital e IA (4RI) y Marco de Telesalud",
+                details: "El CONPES 3975 formuló la estrategia para aprovechar las oportunidades de la Cuarta Revolución Industrial e impulsar la IA en los sectores productivo y público. Paralelamente, la Resolución 2654 del MinSalud reglamentó la Telesalud y Telemedicina, abriendo el camino para la integración de herramientas digitales en la atención remota.",
+                clinicalImpact: "Impacto en IA: Sentó los habilitadores habilitantes para la telemonitorización e interoperabilidad de consultas asistidas por tecnología."
+            },
+            {
+                year: "2021",
+                type: "Hard Law Técnico (Salud)",
+                badgeColor: "#059669",
+                badgeBg: "#DCFCE7",
+                title: "Resolución 866 de 2021 — Ministerio de Salud",
+                subtitle: "Lineamientos de Interoperabilidad de la Información en Salud",
+                details: "Establece los estándares obligatorios para el intercambio electrónico de datos clínicos entre aseguradores, prestadores (IPS) y el Estado. La interoperabilidad homogénea es el requisito estructural indispensable para alimentar modelos predictivos de Machine Learning y evitar silos fragmentados.",
+                clinicalImpact: "Impacto en IA: Permite la integración de ontologías clínicas (FHIR, HL7, OMOP) necesarias para entrenar modelos con representatividad multicéntrica."
+            },
+            {
+                year: "2022",
+                type: "Soft Law / Marco Ético",
+                badgeColor: "#7C3AED",
+                badgeBg: "#FAF5FF",
+                title: "Lineamientos de Ética para la IA en Colombia (MinTIC 2022)",
+                subtitle: "Principios Rectores para el Diseño y Uso de Sistemas de IA",
+                details: "Documento técnico formulado por el Ministerio de Tecnologías de la Información y las Comunicaciones. Define los 5 principios éticos rectores para IA en el país: (1) Transparencia y Explicabilidad, (2) Justicia y No discriminación, (3) Responsabilidad y Rendición de Cuentas, (4) Privacidad, y (5) Control y Supervisión Humana.",
+                clinicalImpact: "Impacto en IA: Primera guía gubernamental que exige explicabilidad clínica y auditoría de cajas negras en el sector público y privado."
+            },
+            {
+                year: "2024",
+                type: "Estrategia Nacional MinCiencias",
+                badgeColor: "#D97706",
+                badgeBg: "#FEF3C7",
+                title: "Hoja de Ruta para la Aplicación de la IA en Colombia (MinCiencias 2024)",
+                subtitle: "Cinco Entornos Estratégicos de Gobernanza, I+D y Talento",
+                details: "Presentada en febrero de 2024, posicionó a Colombia entre los primeros 5 países de América Latina con una hoja de ruta oficial de IA. Abarca 5 entornos de trabajo: (1) Ética y gobernanza, (2) Educación e investigación, (3) Industrias emergentes, (4) Datos y organizaciones, y (5) Privacidad, ciberseguridad y defensa.",
+                clinicalImpact: "Impacto en IA: Fomenta la investigación traslacional en salud y la soberanía de datos locales frente al colonialismo algorítmico."
+            },
+            {
+                year: "2025",
+                type: "Hard Law Penal & CONPES IA",
+                badgeColor: "#E11D48",
+                badgeBg: "#FFE4E6",
+                title: "Ley 2502 de 2025 (Código Penal) & CONPES 4144 de 2025",
+                subtitle: "Política Nacional de IA y Tipificación Penal de Delitos con IA",
+                details: "El **CONPES 4144** establece la Política Nacional de IA con 6 ejes de acción y financiamiento. Por su parte, la **Ley 2502 de 2025** modificó el art. 296 del Código Penal para tipificar como agravante penal el delito de falsedad personal cometido mediante IA (como *deepfakes*, clones de voz o suplantación de identidad), aumentando las penas y sanciones.",
+                clinicalImpact: "Impacto en IA: Primera sanción legal penal expresa en Colombia por el uso abusivo de IA generativa y manipulación biométrica."
+            },
+            {
+                year: "2025 — 2026",
+                type: "Hard Law en Trámite (Congreso)",
+                badgeColor: "#0D9488",
+                badgeBg: "#CCFBF1",
+                title: "Proyectos de Ley 043 y 042 de 2025 (Senado de la República)",
+                subtitle: "Hacia la Ley Integral de Regulación Ética e Innovadora de la IA",
+                details: "El **Proyecto de Ley 043 de 2025** unificó 13 iniciativas legislativas previas y cuenta con **mensaje de urgencia** del Gobierno nacional. Inspirado en el *EU AI Act*, la OCDE y la UNESCO, propone clasificar los sistemas de IA por niveles de riesgo, exigir evaluaciones de impacto algorítmico y garantizar supervisión médica humana (*Human-in-the-loop*).",
+                clinicalImpact: "Impacto en IA: Establecerá el marco legal definitivo para la certificación y auditoría de software médico de IA en instituciones de salud."
+            }
+        ];
+
+        let currentColIndex = 0;
+
+        function renderColMilestone(index) {
+            const m = colMilestones[index];
+            const detailContainer = document.getElementById('col-detail-card');
+            const nodes = document.querySelectorAll('.col-timeline-node');
+            const progressBar = document.getElementById('col-timeline-progress');
+            const stepIndicator = document.getElementById('col-step-indicator');
+            const prevBtn = document.getElementById('col-prev-btn');
+            const nextBtn = document.getElementById('col-next-btn');
+
+            if (!detailContainer) return;
+
+            // Update Nodes Active State
+            nodes.forEach((n, i) => {
+                if (i === index) {
+                    n.style.borderColor = m.badgeColor;
+                    n.style.background = m.badgeColor;
+                    n.style.color = "white";
+                    n.style.transform = "scale(1.15)";
+                } else if (i < index) {
+                    n.style.borderColor = "var(--color-ethics-teal)";
+                    n.style.background = "#F0FDFA";
+                    n.style.color = "var(--color-ethics-teal)";
+                    n.style.transform = "scale(1)";
+                } else {
+                    n.style.borderColor = "#CBD5E1";
+                    n.style.background = "white";
+                    n.style.color = "#64748B";
+                    n.style.transform = "scale(1)";
+                }
+            });
+
+            // Update progress bar width
+            const pct = (index / (colMilestones.length - 1)) * 100;
+            if (progressBar) {
+                progressBar.style.width = `calc(${pct}% - 40px)`;
+            }
+
+            // Update details HTML
+            detailContainer.innerHTML = `
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 1.15rem; font-weight: 800; font-family: 'Exo', sans-serif; color: ${m.badgeColor}; background: ${m.badgeBg}; padding: 3px 10px; border-radius: 8px; border: 1px solid ${m.badgeColor}40;">
+                                📅 ${m.year}
+                            </span>
+                            <span style="font-size: 0.74rem; font-weight: 700; color: ${m.badgeColor}; text-transform: uppercase;">
+                                ${m.type}
+                            </span>
+                        </div>
+                        <span style="font-size: 0.72rem; color: #64748B; background: #F1F5F9; padding: 2px 8px; border-radius: 12px; font-weight: 600;">
+                            Hito ${index + 1} de ${colMilestones.length}
+                        </span>
+                    </div>
+
+                    <h3 style="font-size: 1.08rem; color: #0F172A; margin: 0 0 2px 0; font-family: 'Exo', sans-serif;">
+                        ${m.title}
+                    </h3>
+                    <div style="font-size: 0.82rem; color: #0891B2; font-weight: 600; margin-bottom: 8px;">
+                        ${m.subtitle}
+                    </div>
+
+                    <p style="font-size: 0.79rem; color: #334155; line-height: 1.4; margin: 0 0 8px 0;">
+                        ${m.details}
+                    </p>
+                </div>
+
+                <div style="background: #F0FDFA; border-left: 4px solid var(--color-ethics-teal); padding: 8px 12px; border-radius: 6px; font-size: 0.76rem; color: #0F766E; line-height: 1.35;">
+                    <strong>🩺 ${m.clinicalImpact}</strong>
+                </div>
+            `;
+
+            if (stepIndicator) {
+                stepIndicator.textContent = `Hito ${index + 1} de ${colMilestones.length} (${m.year})`;
+            }
+
+            if (prevBtn) prevBtn.disabled = (index === 0);
+            if (nextBtn) nextBtn.disabled = (index === colMilestones.length - 1);
+        }
+
+        function selectColMilestone(idx) {
+            currentColIndex = idx;
+            renderColMilestone(currentColIndex);
+        }
+
+        function prevColMilestone() {
+            if (currentColIndex > 0) {
+                currentColIndex--;
+                renderColMilestone(currentColIndex);
+            }
+        }
+
+        function nextColMilestone() {
+            if (currentColIndex < colMilestones.length - 1) {
+                currentColIndex++;
+                renderColMilestone(currentColIndex);
+            }
+        }
+
+        // Initialize on load
+        setTimeout(() => {
+            renderColMilestone(0);
+        }, 100);
+    </script>
+</section>

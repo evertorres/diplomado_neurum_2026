@@ -1,0 +1,85 @@
+<!-- Slide 07: Principios FAIR -->
+<section class="slide" id="slide07">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: 8px;">
+            <h2>Gobernanza de Datos Biomédicos: Principios FAIR</h2>
+            <span class="badge-tag cyan">Nature Scientific Data • Wilkinson et al.</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-md); font-size: 0.95rem;">
+            Los datos son el cimiento de la IA en salud. Los principios FAIR garantizan que los datos clínicos y experimentales sean útiles tanto para investigadores humanos como para agentes computacionales:
+        </p>
+
+        <div class="grid-4" style="margin-bottom: var(--space-md);">
+            <div class="concept-card" style="border-left: 4px solid #0891B2;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h3 style="color: #0891B2; font-size: 1.25rem; font-weight: 700; margin: 0;">F</h3>
+                    <span class="badge-tag cyan" style="font-size: 0.75rem;">Findable</span>
+                </div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: #1E293B;">Encontrable</h4>
+                <ul style="font-size: 0.8rem; color: #475569; padding-left: 16px; line-height: 1.4;">
+                    <li><strong>F1:</strong> Identificador persistente global (PID/DOI).</li>
+                    <li><strong>F2:</strong> Metadatos clínicos ricos y contextuales.</li>
+                    <li><strong>F3:</strong> Metadatos vinculan explícitamente al dato.</li>
+                    <li><strong>F4:</strong> Indexado en repositorios buscables.</li>
+                </ul>
+            </div>
+
+            <div class="concept-card" style="border-left: 4px solid #0D9488;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h3 style="color: #0D9488; font-size: 1.25rem; font-weight: 700; margin: 0;">A</h3>
+                    <span class="badge-tag" style="font-size: 0.75rem;">Accessible</span>
+                </div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: #1E293B;">Accesible</h4>
+                <ul style="font-size: 0.8rem; color: #475569; padding-left: 16px; line-height: 1.4;">
+                    <li><strong>A1:</strong> Protocolo de comunicación estándar y abierto (HTTP/REST/FHIR).</li>
+                    <li><strong>A1.2:</strong> Mecanismos de autenticación y DUA éticos (Data Use Agreement).</li>
+                    <li><strong>A2:</strong> Metadatos persisten incluso si los datos se archivan.</li>
+                </ul>
+            </div>
+
+            <div class="concept-card" style="border-left: 4px solid #4F46E5;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h3 style="color: #4F46E5; font-size: 1.25rem; font-weight: 700; margin: 0;">I</h3>
+                    <span class="badge-tag indigo" style="font-size: 0.75rem;">Interoperable</span>
+                </div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: #1E293B;">Interoperable</h4>
+                <ul style="font-size: 0.8rem; color: #475569; padding-left: 16px; line-height: 1.4;">
+                    <li><strong>I1:</strong> Uso de ontologías médicas formales (SNOMED-CT, LOINC, RxNorm).</li>
+                    <li><strong>I2:</strong> Estándares de modelos comunes (OMOP CDM, HL7 FHIR).</li>
+                    <li><strong>I3:</strong> Referencias cruzadas a otros conjuntos de datos.</li>
+                </ul>
+            </div>
+
+            <div class="concept-card" style="border-left: 4px solid #059669;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h3 style="color: #059669; font-size: 1.25rem; font-weight: 700; margin: 0;">R</h3>
+                    <span class="badge-tag emerald" style="font-size: 0.75rem;">Reusable</span>
+                </div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: #1E293B;">Reutilizable</h4>
+                <ul style="font-size: 0.8rem; color: #475569; padding-left: 16px; line-height: 1.4;">
+                    <li><strong>R1.1:</strong> Licencia de uso clara (ej. PhysioNet Credentialed).</li>
+                    <li><strong>R1.2:</strong> Procedencia y linaje detallado (*Data Provenance*).</li>
+                    <li><strong>R1.3:</strong> Cumplimiento de estándares de la comunidad biomédica.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Real Clinical Application: MIMIC Case -->
+        <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: var(--space-md); box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); align-items: center;">
+            <div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                    <span class="badge-tag slate">Caso de Éxito Paradigmático</span>
+                    <strong style="color: var(--color-primary); font-family: 'Exo', sans-serif;">MIMIC-III / MIMIC-IV & PhysioNet</strong>
+                </div>
+                <p style="font-size: 0.84rem; color: #475569; line-height: 1.45; margin: 0;">
+                    Demostró al mundo cómo miles de registros de UCI pueden compartirse globalmente bajo principios FAIR: anonimización certificada (HIPAA Safe Harbor), entrenamiento ético CITI, acuerdos DUA transparentes y conversión nativa a <strong>OMOP CDM</strong> y <strong>FHIR</strong> para reproducibilidad algorítmica.
+                </p>
+            </div>
+            <div style="background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 8px; padding: 12px; font-size: 0.8rem; color: #334155; line-height: 1.4;">
+                <div style="font-weight: 700; color: #0891B2; margin-bottom: 4px;">Anonimización y Privacidad en Salud:</div>
+                <div>✓ <strong>HIPAA Safe Harbor:</strong> Eliminación de 18 identificadores directos (nombres, fechas exactas, números de historia).</div>
+                <div>✓ <strong>Expert Determination:</strong> Métodos estadísticos para asegurar riesgo ínfimo de reidentificación.</div>
+            </div>
+        </div>
+    </div>
+</section>

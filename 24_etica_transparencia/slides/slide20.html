@@ -1,0 +1,52 @@
+<!-- Slide 20: Diapositiva de Cierre y Despedida -->
+<section class="slide" id="slide20">
+    <div class="slide-content center" style="text-align: center; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; height: 100vh;">
+        
+        <div style="background: white; padding: 36px 32px; border-radius: 20px; box-shadow: var(--shadow-2xl); border-top: 10px solid var(--color-ethics-teal); position: relative; overflow: hidden; width: 100%;">
+            
+            <!-- Deco Elements -->
+            <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(13, 148, 136, 0.1); border-radius: 50%;"></div>
+            <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(15, 23, 42, 0.05); border-radius: 50%;"></div>
+
+            <div style="font-size: 3.5rem; margin-bottom: 6px;">🎓</div>
+            
+            <h1 style="color: var(--color-primary); font-size: 2.6rem; font-weight: 900; margin-bottom: 4px; letter-spacing: -1px; font-family: 'Exo', sans-serif;">¡Muchas Gracias!</h1>
+            
+            <p style="color: var(--color-secondary); font-size: 1.1rem; line-height: 1.35; margin-bottom: 16px;">
+                Hemos finalizado el <strong>Módulo 24</strong> (Inicio del <strong>Módulo 4: Gobernanza, Ética y Regulación</strong>):<br>
+                <strong style="color: var(--color-ethics-teal); font-size: 1.2rem;">Ética, Transparencia, XAI & Directrices de Reporte en Salud</strong>
+            </p>
+            
+            <!-- 5 Gold Rules Card -->
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; text-align: left; padding: 14px 18px; margin-bottom: 20px;">
+                <div style="color: var(--color-primary); margin-bottom: 8px; font-size: 0.92rem; font-weight: 700; text-align: center; font-family: 'Exo', sans-serif;">
+                    🌟 5 Pilares de Oro para Recordar:
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; font-size: 0.78rem; color: #334155; line-height: 1.35;">
+                    <div><strong>1. Datos FAIR & Privacidad:</strong> F1-F4, A1-A2, I1-I3, R1-R2, anonimización y ontologías OMOP/FHIR.</div>
+                    <div><strong>2. Explicabilidad XAI:</strong> SHAP, LIME y Grad-CAM para auditar la caja negra y erradicar el sesgo <em>Clever Hans</em>.</div>
+                    <div><strong>3. Riesgo de Sesgo (PROBAST/CHARMS):</strong> 4 dominios de calidad (Participantes, Predictores, Desenlace y Análisis).</div>
+                    <div><strong>4. TRIPOD+AI (BMJ 2024):</strong> 27 ítems de rigor para modelos predictivos multivariables y Machine Learning.</div>
+                    <div style="grid-column: span 2; text-align: center; margin-top: 2px;">
+                        <strong>5. TRIPOD-LLM & Gobernanza CLIAS:</strong> Auditoría de prompts, RAG, evaluación médica y supervisión humana continua.
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: var(--space-md); justify-content: center; align-items: center; flex-wrap: wrap;">
+                <button onclick="window.location.href='../index.html'" 
+                        style="background: linear-gradient(135deg, var(--color-ethics-teal), #0f766e); color: white; border: none; padding: 12px 30px; font-size: 1.05rem; font-weight: 700; border-radius: 50px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 10px 25px rgba(13, 148, 136, 0.4); display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Exo', sans-serif;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    Volver al Directorio Principal
+                </button>
+                <button class="btn-secondary" onclick="goToSlide(1); window.location.hash='#1';" style="border: 2px solid #0D9488; color: #0D9488; padding: 10px 20px; font-size: 0.95rem; border-radius: 50px;">
+                    ↺ Reiniciar Presentación
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,112 @@
+<!-- Slide 08: Taxonomía XAI -->
+<section class="slide" id="slide08">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: 8px;">
+            <h2>El Dilema de la Caja Negra & Taxonomía de XAI</h2>
+            <span class="badge-tag amber">ACM Computing Surveys • Dwivedi et al.</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-md); font-size: 0.95rem;">
+            En medicina, un modelo con 99% de precisión es inútil e inseguro si no podemos auditar <em>por qué</em> emite una recomendación. La Inteligencia Artificial Explicable (XAI) se clasifica en tres dimensiones fundamentales:
+        </p>
+
+        <div class="grid-3" style="margin-bottom: var(--space-md);">
+            <!-- Dimensión 1: Tiempo/Naturaleza -->
+            <div class="concept-card">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                    <span class="badge-tag emerald" style="padding: 2px 8px; font-size: 0.75rem;">Dimensión 1</span>
+                    <h4 style="margin: 0; font-size: 0.98rem; color: #1E293B;">Intrínseca vs Post-Hoc</h4>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <div style="font-size: 0.84rem; font-weight: 700; color: #059669;">• Intrínseca (Transparente por diseño):</div>
+                    <p style="font-size: 0.78rem; color: #475569; margin: 2px 0 6px 10px; line-height: 1.35;">
+                        Modelos comprensibles en sí mismos (Regresión Lineal/Logística, Árboles de Decisión someros, GAMs, EBMs).
+                    </p>
+                </div>
+                <div>
+                    <div style="font-size: 0.84rem; font-weight: 700; color: #D97706;">• Post-Hoc (Explicación a posteriori):</div>
+                    <p style="font-size: 0.78rem; color: #475569; margin: 2px 0 0 10px; line-height: 1.35;">
+                        Técnicas aplicadas tras entrenar redes neuronales profundas o ensambles (SHAP, LIME, Grad-CAM).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dimensión 2: Alcance -->
+            <div class="concept-card">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                    <span class="badge-tag indigo" style="padding: 2px 8px; font-size: 0.75rem;">Dimensión 2</span>
+                    <h4 style="margin: 0; font-size: 0.98rem; color: #1E293B;">Local vs Global</h4>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <div style="font-size: 0.84rem; font-weight: 700; color: #4F46E5;">• Explicación Local (Paciente Único):</div>
+                    <p style="font-size: 0.78rem; color: #475569; margin: 2px 0 6px 10px; line-height: 1.35;">
+                        ¿Por qué este paciente de 62 años recibió 88% de probabilidad de infarto? (Fuerzas de variables individuales).
+                    </p>
+                </div>
+                <div>
+                    <div style="font-size: 0.84rem; font-weight: 700; color: #0891B2;">• Explicación Global (Poblacional):</div>
+                    <p style="font-size: 0.78rem; color: #475569; margin: 2px 0 0 10px; line-height: 1.35;">
+                        ¿Cómo jerarquiza el modelo los biomarcadores a nivel de toda la cohorte clínica?
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dimensión 3: Dependencia -->
+            <div class="concept-card">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                    <span class="badge-tag purple" style="padding: 2px 8px; font-size: 0.75rem;">Dimensión 3</span>
+                    <h4 style="margin: 0; font-size: 0.98rem; color: #1E293B;">Agnóstica vs Específica</h4>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <div style="font-size: 0.84rem; font-weight: 700; color: #7C3AED;">• Agnóstica al Modelo (Model-Agnostic):</div>
+                    <p style="font-size: 0.78rem; color: #475569; margin: 2px 0 6px 10px; line-height: 1.35;">
+                        Trata al modelo como caja negra y mide cambios ante perturbaciones en las entradas (LIME, KernelSHAP).
+                    </p>
+                </div>
+                <div>
+                    <div style="font-size: 0.84rem; font-weight: 700; color: #BE185D;">• Específica del Modelo (Model-Specific):</div>
+                    <p style="font-size: 0.78rem; color: #475569; margin: 2px 0 0 10px; line-height: 1.35;">
+                        Aprovecha gradientes o estructuras internas (TreeSHAP en XGBoost, Grad-CAM en CNNs).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matrix table of trade-off -->
+        <table class="table-custom">
+            <thead>
+                <tr>
+                    <th>Familia de Modelos</th>
+                    <th>Nivel de Interpretabilidad</th>
+                    <th>Capacidad Predictiva Compleja</th>
+                    <th>Método XAI Primario Recomendado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Regresión Logística / Lineal</strong></td>
+                    <td><span class="badge-tag emerald" style="padding: 2px 6px; font-size: 0.75rem;">Total (Intrínseca)</span></td>
+                    <td>Baja / Media (Lineal)</td>
+                    <td>Odds Ratios (OR), Coeficientes $\beta$ estandarizados</td>
+                </tr>
+                <tr>
+                    <td><strong>Árboles & Ensambles (XGBoost, RF)</strong></td>
+                    <td><span class="badge-tag amber" style="padding: 2px 6px; font-size: 0.75rem;">Media (Post-Hoc)</span></td>
+                    <td>Muy Alta (Datos Tabulares)</td>
+                    <td><strong>TreeSHAP</strong> (Rápido y matemáticamente exacto)</td>
+                </tr>
+                <tr>
+                    <td><strong>Redes Neuronales / Deep Learning</strong></td>
+                    <td><span class="badge-tag rose" style="padding: 2px 6px; font-size: 0.75rem;">Opaca (Caja Negra)</span></td>
+                    <td>Excelente (Imágenes, ECG, Señales)</td>
+                    <td><strong>Grad-CAM</strong>, Integrated Gradients, DeepSHAP</td>
+                </tr>
+                <tr>
+                    <td><strong>Grandes Modelos de Lenguaje (LLMs)</strong></td>
+                    <td><span class="badge-tag purple" style="padding: 2px 6px; font-size: 0.75rem;">Emergente / Compleja</span></td>
+                    <td>Excepcional (Texto Clínico / Razonamiento)</td>
+                    <td>Chain-of-Thought (CoT), Citas RAG, Attention Rollout</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

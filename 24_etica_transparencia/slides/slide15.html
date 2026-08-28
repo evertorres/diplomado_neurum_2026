@@ -1,0 +1,272 @@
+<!-- Slide 15: Laboratorio Interactivo de Auditoría TRIPOD & PROBAST -->
+<section class="slide" id="slide15">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <h2>Laboratorio Interactivo: Auditoría TRIPOD & PROBAST</h2>
+            <span class="badge-tag emerald">Simulador de Cumplimiento Científico</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-xs); font-size: 0.86rem;">
+            Evalúa interactivamente si tu estudio o modelo clínico cumple los estándares internacionales de reporte y riesgo de sesgo:
+        </p>
+
+        <!-- Mode Selector Tabs -->
+        <div style="display: flex; gap: 8px; margin-bottom: var(--space-xs); flex-wrap: wrap;">
+            <button class="tab-button active" id="tab-ml" onclick="switchLabTab('ml')">
+                TRIPOD+AI (Modelos ML)
+            </button>
+            <button class="tab-button" id="tab-llm" onclick="switchLabTab('llm')">
+                TRIPOD-LLM (Generativos)
+            </button>
+            <button class="tab-button" id="tab-probast" onclick="switchLabTab('probast')">
+                PROBAST (Riesgo de Sesgo)
+            </button>
+        </div>
+
+        <div class="grid-2" style="gap: var(--space-md); align-items: stretch;">
+            <!-- Left: Interactive Checklist -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px 14px; box-shadow: var(--shadow-sm); max-height: 48vh; overflow-y: auto;">
+                
+                <!-- ML Checklist Items -->
+                <div id="checklist-ml-container">
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Contexto & Población:</strong> Racional clínico claro, ámbito asistencial y declaración de desigualdades basales (Ítems 3a-c).
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Datos & Manejo de Faltantes:</strong> Diagrama de flujo de inclusión, elegibilidad y método de imputación múltiple justificado (Ítems 5, 8).
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Pipeline & Hiperparámetros:</strong> Documentación íntegra de partición (train/test), preprocesamiento y ajuste de parámetros (Ítem 10).
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Calibración & DCA:</strong> Curva de calibración con reporte de pendiente/intercepto y Decision Curve Analysis (Ítems 11, 14).
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Validación Externa & Subgrupos:</strong> Evaluación en hospital externo y desagregación por variables demográficas (Ítems 13, 16).
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Ciencia Abierta & Ética:</strong> Repositorio público de código, pesos, aprobación IRB y declaración de COI (Ítems 17, 18).
+                        </span>
+                    </label>
+                </div>
+
+                <!-- LLM Checklist Items -->
+                <div id="checklist-llm-container" style="display: none;">
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-llm" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Versionado Exacto:</strong> Nombre del modelo, proveedor, checkpoint de fecha y parámetros ($T$, top_p, top_k).
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-llm" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Ingeniería de Prompts:</strong> Transcripción íntegra de instrucciones de sistema, Few-Shot y Chain-of-Thought.
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-llm" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Arquitectura RAG:</strong> Detalle del modelo de embeddings, base vectorial, número $k$ de fragmentos y citas.
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-llm" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Evaluación Médica Experta:</strong> Panel de clínicos independientes con métricas de concordancia ($\kappa$ inter-observador).
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-llm" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Auditoría de Alucinaciones:</strong> Tasa cuantitativa de datos erróneos, contraindicaciones omitidas y toxicidad.
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-llm" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Privacidad PHI & Gobernanza:</strong> Anonimización de datos de salud y mitigación de fuga de datos sensibles.
+                        </span>
+                    </label>
+                </div>
+
+                <!-- PROBAST Checklist Items -->
+                <div id="checklist-probast-container" style="display: none;">
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-probast" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Dominio 1 (Participantes):</strong> Cohorte prospectiva o registros representativos sin exclusiones inapropiadas.
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-probast" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Dominio 2 (Predictores):</strong> Definición consistente y medición cegada al conocimiento del desenlace.
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-probast" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Dominio 3 (Desenlace):</strong> Criterio objetivo sin sesgo de verificación diagnóstica.
+                        </span>
+                    </label>
+
+                    <label class="interactive-checklist-item">
+                        <input type="checkbox" class="audit-item-probast" onchange="calculateAuditScore()">
+                        <span style="font-size: 0.78rem; color: #334155;">
+                            <strong>Dominio 4 (Análisis):</strong> $EPV \ge 20$, continuas sin categorización forzada y reporte de calibración.
+                        </span>
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Right: Dynamic Score & Audit Result -->
+            <div style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 12px; padding: var(--space-md); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: #0F172A; margin-bottom: 6px; font-size: 0.95rem;">Índice de Transparencia & Cumplimiento</h4>
+                    
+                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+                        <span id="audit-score-number" style="font-size: 2.2rem; font-weight: 800; color: #0D9488; font-family: 'Exo', sans-serif;">0%</span>
+                        <span id="audit-badge" class="badge-tag slate" style="font-size: 0.78rem;">Sin Evaluar</span>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div style="width: 100%; height: 10px; background: #E2E8F0; border-radius: 6px; overflow: hidden; margin-bottom: 12px;">
+                        <div id="audit-progress-bar" style="width: 0%; height: 100%; background: #0D9488; transition: width 0.3s ease;"></div>
+                    </div>
+
+                    <div id="audit-feedback-text" style="font-size: 0.8rem; color: #475569; line-height: 1.4; background: white; padding: 8px 10px; border-radius: 8px; border: 1px solid #E2E8F0;">
+                        Selecciona los ítems metodológicos verificados para iniciar la auditoría de calidad científica.
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                    <button class="btn-secondary" style="font-size: 0.78rem; padding: 6px 12px;" onclick="resetChecklist()">
+                        Reiniciar
+                    </button>
+                    <button class="btn-primary" style="font-size: 0.78rem; padding: 6px 14px; background: #0D9488;" onclick="autoCompleteChecklist()">
+                        Simular 100%
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentTabMode = 'ml';
+
+        function switchLabTab(mode) {
+            currentTabMode = mode;
+            const tabML = document.getElementById('tab-ml');
+            const tabLLM = document.getElementById('tab-llm');
+            const tabPRO = document.getElementById('tab-probast');
+            const contML = document.getElementById('checklist-ml-container');
+            const contLLM = document.getElementById('checklist-llm-container');
+            const contPRO = document.getElementById('checklist-probast-container');
+
+            [tabML, tabLLM, tabPRO].forEach(t => t.classList.remove('active'));
+            [contML, contLLM, contPRO].forEach(c => c.style.display = 'none');
+
+            if (mode === 'ml') {
+                tabML.classList.add('active');
+                contML.style.display = 'block';
+            } else if (mode === 'llm') {
+                tabLLM.classList.add('active');
+                contLLM.style.display = 'block';
+            } else {
+                tabPRO.classList.add('active');
+                contPRO.style.display = 'block';
+            }
+            calculateAuditScore();
+        }
+
+        function calculateAuditScore() {
+            let selector = '.audit-item';
+            if (currentTabMode === 'llm') selector = '.audit-item-llm';
+            if (currentTabMode === 'probast') selector = '.audit-item-probast';
+
+            const items = document.querySelectorAll(selector);
+            let checked = 0;
+            items.forEach(it => { if (it.checked) checked++; });
+            const pct = Math.round((checked / items.length) * 100);
+
+            const scoreEl = document.getElementById('audit-score-number');
+            const barEl = document.getElementById('audit-progress-bar');
+            const badgeEl = document.getElementById('audit-badge');
+            const feedbackEl = document.getElementById('audit-feedback-text');
+
+            if (scoreEl) scoreEl.textContent = pct + '%';
+            if (barEl) {
+                barEl.style.width = pct + '%';
+                if (pct < 50) barEl.style.background = '#E11D48';
+                else if (pct < 85) barEl.style.background = '#D97706';
+                else barEl.style.background = '#059669';
+            }
+
+            if (badgeEl && feedbackEl) {
+                if (pct === 0) {
+                    badgeEl.className = 'badge-tag slate';
+                    badgeEl.textContent = 'Sin Evaluar';
+                    feedbackEl.innerHTML = 'Marca los ítems metodológicos verificados para iniciar la auditoría de calidad científica.';
+                } else if (pct < 50) {
+                    badgeEl.className = 'badge-tag rose';
+                    badgeEl.textContent = 'Alto Riesgo de Sesgo';
+                    feedbackEl.innerHTML = '<strong style="color:#E11D48;">Deficiente:</strong> Falta documentación crítica en participantes, análisis o validación externa.';
+                } else if (pct < 85) {
+                    badgeEl.className = 'badge-tag amber';
+                    badgeEl.textContent = 'Parcialmente Conforme';
+                    feedbackEl.innerHTML = '<strong style="color:#D97706;">Aceptable con salvedades:</strong> Se recomienda agregar reporte explícito de calibración y equidad demográfica.';
+                } else {
+                    badgeEl.className = 'badge-tag emerald';
+                    badgeEl.textContent = 'Bajo Riesgo / Conforme';
+                    feedbackEl.innerHTML = '<strong style="color:#059669;">Cumplimiento Sobresaliente:</strong> Máxima transparencia metodológica según estándares TRIPOD y PROBAST.';
+                }
+            }
+        }
+
+        function resetChecklist() {
+            let selector = '.audit-item';
+            if (currentTabMode === 'llm') selector = '.audit-item-llm';
+            if (currentTabMode === 'probast') selector = '.audit-item-probast';
+            document.querySelectorAll(selector).forEach(it => it.checked = false);
+            calculateAuditScore();
+        }
+
+        function autoCompleteChecklist() {
+            let selector = '.audit-item';
+            if (currentTabMode === 'llm') selector = '.audit-item-llm';
+            if (currentTabMode === 'probast') selector = '.audit-item-probast';
+            document.querySelectorAll(selector).forEach(it => it.checked = true);
+            calculateAuditScore();
+        }
+    </script>
+</section>

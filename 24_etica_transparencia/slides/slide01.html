@@ -1,0 +1,113 @@
+<!-- Slide 01: Portada -->
+<section class="slide active" id="slide01">
+    <div class="slide-content center" style="max-width: 1200px; width: 100%; display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-2xl); align-items: center;">
+        
+        <!-- Left Side: Title & Description -->
+        <div style="text-align: left; display: flex; flex-direction: column; gap: var(--space-lg);">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <span class="badge-tag" style="background: #CCFBF1; color: var(--color-ethics-teal); border-color: #99F6E4;">Módulo 24</span>
+                <span class="badge-tag indigo">Módulo 4: Ética, Gobernanza y Despliegue</span>
+                <span class="badge-tag emerald">Diplomado Neurum 2026</span>
+            </div>
+            
+            <h1 style="color: var(--color-primary); font-size: calc(2.3rem + 0.8vw); line-height: 1.15; font-weight: 800; font-family: 'Exo', sans-serif; margin: 0; background: linear-gradient(135deg, #0F172A 0%, #0D9488 60%, #0891B2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Ética, Transparencia, XAI & Directrices de Reporte en Salud
+            </h1>
+            
+            <h3 style="color: var(--color-secondary); font-size: 1.25rem; font-weight: 400; margin: 0; font-family: 'Exo', sans-serif; line-height: 1.4;">
+                Gobernanza de Datos (FAIR), Explicabilidad Clínica y los Estándares TRIPOD+AI & TRIPOD-LLM.
+            </h3>
+            
+            <p class="text-muted" style="font-size: 0.98rem; line-height: 1.6; color: var(--color-secondary); margin-top: var(--space-xs);">
+                Un recorrido riguroso por los pilares bioéticos, la desmitificación de la caja negra mediante XAI (SHAP, LIME, Grad-CAM), los principios FAIR de datos y las pautas metodológicas que rigen la publicación y adopción de IA en medicina.
+            </p>
+            
+            <div style="display: flex; gap: var(--space-md); margin-top: var(--space-md); flex-wrap: wrap;">
+                <button class="btn-primary" style="padding: 13px 26px; font-size: 1.05rem; background: var(--color-ethics-teal);"
+                    onclick="document.dispatchEvent(new KeyboardEvent('keydown', {key: 'ArrowRight'}))">
+                    Iniciar Presentación
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <a href="../index.html" class="btn-secondary" style="border: 2px solid var(--color-ethics-teal); padding: 11px 22px; border-radius: 8px; font-family: 'Exo', sans-serif; font-weight: 600; background: white; display: inline-flex; align-items: center; justify-content: center; color: var(--color-ethics-teal); font-size: 1rem;">
+                    Volver al Índice
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: Animated SVG Graphic -->
+        <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+            <svg width="100%" height="420" viewBox="0 0 500 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 480px;">
+                <defs>
+                    <linearGradient id="eth-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#0D9488" />
+                        <stop offset="100%" stop-color="#0891B2" />
+                    </linearGradient>
+                    <linearGradient id="eth-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#0891B2" />
+                        <stop offset="100%" stop-color="#4F46E5" />
+                    </linearGradient>
+                    <linearGradient id="eth-grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#4F46E5" />
+                        <stop offset="100%" stop-color="#059669" />
+                    </linearGradient>
+                    <filter id="eth-glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0D9488" flood-opacity="0.25" />
+                    </filter>
+                    <style>
+                        .pulse-flow-eth {
+                            stroke-dasharray: 6 6;
+                            animation: flowAnimationEth 22s linear infinite;
+                        }
+                        @keyframes flowAnimationEth {
+                            to { stroke-dashoffset: -1000; }
+                        }
+                    </style>
+                </defs>
+
+                <!-- Connection Paths -->
+                <path d="M 80 80 Q 240 60 240 210" stroke="url(#eth-grad1)" stroke-width="2.5" class="pulse-flow-eth" />
+                <path d="M 80 165 Q 170 165 240 210" stroke="url(#eth-grad1)" stroke-width="2.5" class="pulse-flow-eth" />
+                <path d="M 80 255 Q 170 255 240 210" stroke="url(#eth-grad2)" stroke-width="2.5" class="pulse-flow-eth" />
+                <path d="M 80 340 Q 240 360 240 210" stroke="url(#eth-grad2)" stroke-width="2.5" class="pulse-flow-eth" />
+                <path d="M 240 210 L 420 210" stroke="url(#eth-grad3)" stroke-width="3.5" class="pulse-flow-eth" />
+
+                <!-- Nodes: 4 Pillars -->
+                <g>
+                    <rect x="15" y="60" width="125" height="42" rx="10" fill="white" stroke="#0D9488" stroke-width="2" filter="url(#eth-glow)" />
+                    <text x="77" y="86" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Principios FAIR</text>
+                </g>
+                <g>
+                    <rect x="15" y="145" width="125" height="42" rx="10" fill="white" stroke="#0891B2" stroke-width="2" filter="url(#eth-glow)" />
+                    <text x="77" y="171" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Explicabilidad XAI</text>
+                </g>
+                <g>
+                    <rect x="15" y="235" width="125" height="42" rx="10" fill="white" stroke="#4F46E5" stroke-width="2" filter="url(#eth-glow)" />
+                    <text x="77" y="261" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">TRIPOD+AI (BMJ)</text>
+                </g>
+                <g>
+                    <rect x="15" y="320" width="125" height="42" rx="10" fill="white" stroke="#7C3AED" stroke-width="2" filter="url(#eth-glow)" />
+                    <text x="77" y="346" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">TRIPOD-LLM (NatMed)</text>
+                </g>
+
+                <!-- Core Governance & Trust Engine -->
+                <g>
+                    <rect x="175" y="150" width="135" height="120" rx="18" fill="#0F172A" stroke="#0D9488" stroke-width="3" filter="url(#eth-glow)" />
+                    <text x="242" y="190" text-anchor="middle" fill="#CCFBF1" font-family="'Exo', sans-serif" font-size="13" font-weight="700">GOBERNANZA</text>
+                    <text x="242" y="210" text-anchor="middle" fill="#5EEAD4" font-family="'Exo', sans-serif" font-size="13" font-weight="700">& ÉTICA CLÍNICA</text>
+                    <text x="242" y="238" text-anchor="middle" fill="#94A3B8" font-family="'Roboto Mono', monospace" font-size="9.5">Auditoría & Rigor</text>
+                    <circle cx="242" cy="254" r="3" fill="#10B981" />
+                </g>
+
+                <!-- Output: Clinical Trust Node -->
+                <g>
+                    <circle cx="420" cy="210" r="46" fill="white" stroke="#059669" stroke-width="3.5" filter="url(#eth-glow)" />
+                    <text x="420" y="202" text-anchor="middle" fill="#1E293B" font-family="'Exo', sans-serif" font-size="11" font-weight="700">Confianza</text>
+                    <text x="420" y="218" text-anchor="middle" fill="#059669" font-family="'Roboto Mono', monospace" font-size="10.5" font-weight="700">y Seguridad</text>
+                    <text x="420" y="232" text-anchor="middle" fill="#64748B" font-family="'Exo', sans-serif" font-size="9">del Paciente</text>
+                </g>
+            </svg>
+        </div>
+    </div>
+</section>

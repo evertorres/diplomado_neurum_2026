@@ -1,0 +1,255 @@
+<!-- Modals Container for Presentation 24 -->
+<div id="modals-wrapper">
+
+    <!-- Modal 1: Marco CLIAS Latinoamérica -->
+    <div class="modal-overlay" id="modal-clias">
+        <div class="modal" style="max-width: 760px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-clias')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag emerald">CLIAS</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">Principios del Centro de IA en Salud para América Latina y el Caribe (CLIAS)</h3>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                <div style="background: #F0FDFA; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #0D9488;">
+                    <strong>1. Selección del Problema:</strong>
+                    <div>Evaluación rigurosa de beneficios vs riesgos; balance de datos abiertos vs privacidad; consideraciones de viabilidad e impacto en salud pública.</div>
+                </div>
+                <div style="background: #ECFEFF; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #0891B2;">
+                    <strong>2. Planificación y Diseño:</strong>
+                    <div>Adopción tecnológica con adaptación a la realidad regional; establecimiento de gobernanza institucional y mecanismos de escrutinio público.</div>
+                </div>
+                <div style="background: #EEF2FF; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #4F46E5;">
+                    <strong>3. Desarrollo y Validación:</strong>
+                    <div>Detección y mitigación activa de sesgos algorítmicos; protección de datos sensibles; fomento de la confianza en los usuarios y profesionales de la salud.</div>
+                </div>
+                <div style="background: #FAF5FF; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #7C3AED;">
+                    <strong>4. Despliegue e Implementación:</strong>
+                    <div>Garantizar la interpretabilidad clínica de los resultados y la integración fluida en los flujos de trabajo asistenciales.</div>
+                </div>
+                <div style="background: #FFFBEB; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #D97706;">
+                    <strong>5. Operación y Monitoreo:</strong>
+                    <div>Evaluación del desempeño y del impacto clínico a lo largo del tiempo para evitar degradación ante cambios poblacionales (*drift*).</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: PROBAST Deepdive -->
+    <div class="modal-overlay" id="modal-probast">
+        <div class="modal" style="max-width: 800px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-probast')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag indigo">Annals of Internal Medicine</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">Preguntas de Señalización PROBAST (Wolff, Moons et al.)</h3>
+            </div>
+
+            <table class="table-custom" style="font-size: 0.82rem;">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Dominio</th>
+                        <th>Preguntas Clave de Riesgo de Sesgo (*Signalling Questions*)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Participantes</strong></td>
+                        <td>
+                            • ¿Se usaron fuentes de datos apropiadas?<br>
+                            • ¿Fueron todos los criterios de inclusión/exclusión adecuados?<br>
+                            • ¿Se evitó el diseño de casos y controles anidado inapropiado?
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Predictores</strong></td>
+                        <td>
+                            • ¿Se definieron y evaluaron los predictores de la misma forma en todos?<br>
+                            • ¿Fueron evaluados sin conocer el desenlace?<br>
+                            • ¿Todos los predictores están disponibles en el momento en que se pretende usar el modelo?
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Desenlace</strong></td>
+                        <td>
+                            • ¿Se usó una definición pre-especificada y estándar del desenlace?<br>
+                            • ¿La determinación del desenlace se realizó a ciegas respecto a los predictores?<br>
+                            • ¿Fue el intervalo temporal entre la medición de predictores y el desenlace adecuado?
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Análisis</strong></td>
+                        <td>
+                            • ¿Hubo un número razonable de eventos por variable ($EPV \ge 20$ o $n \ge 100$ eventos)?<br>
+                            • ¿Se manejaron las variables continuas sin categorización simplista?<br>
+                            • ¿Se evitaron exclusiones arbitrarias de pacientes con datos faltantes mediante imputación múltiple?<br>
+                            • ¿Se reportaron tanto la discriminación como la calibración?
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal 3: Marco Ético de la OMS -->
+    <div class="modal-overlay" id="modal-who-ethics">
+        <div class="modal" style="max-width: 700px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-who-ethics')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag emerald">WHO Guidance 2024</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">6 Principios Éticos de la OMS para IA en Salud</h3>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #334155;">
+                <div style="background: #F0FDFA; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #0D9488;">
+                    <strong>1. Proteger la autonomía humana:</strong> Los pacientes deben mantener el control de sus decisiones médicas y la privacidad de sus historias clínicas.
+                </div>
+                <div style="background: #F8FAFC; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #0891B2;">
+                    <strong>2. Promover el bienestar y la seguridad humana:</strong> Exigir estándares de calidad regulatoria y seguridad operacional continua.
+                </div>
+                <div style="background: #F0FDFA; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #059669;">
+                    <strong>3. Garantizar la transparencia y explicabilidad:</strong> Los datos y algoritmos deben ser auditables antes y durante su despliegue clínico.
+                </div>
+                <div style="background: #F8FAFC; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #4F46E5;">
+                    <strong>4. Fomentar la responsabilidad y rendición de cuentas:</strong> Claridad jurídica sobre quién asume consecuencias ante errores algorítmicos.
+                </div>
+                <div style="background: #F0FDFA; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #7C3AED;">
+                    <strong>5. Garantizar la inclusión y equidad:</strong> Los modelos deben entrenarse con datos diversos y ser accesibles universalmente sin distinción socioeconómica.
+                </div>
+                <div style="background: #F8FAFC; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #D97706;">
+                    <strong>6. Capacidad de respuesta y sostenibilidad:</strong> Monitorizar el impacto ecológico de grandes modelos y garantizar su actualización periódica.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Guía Profunda XAI -->
+    <div class="modal-overlay" id="modal-xai-deepdive">
+        <div class="modal" style="max-width: 750px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-xai-deepdive')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag cyan">ACM Computing Surveys</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">Glosario Técnico de Explicabilidad (XAI) en Salud</h3>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                <div style="border: 1px solid #E2E8F0; padding: 10px 14px; border-radius: 8px;">
+                    <strong style="color: #0891B2;">TreeSHAP (Lundberg et al.):</strong>
+                    <p style="margin: 4px 0 0 0;">Variante de tiempo polinomial $O(TLD^2)$ para modelos de árboles (XGBoost, LightGBM, Random Forest). Permite calcular valores Shapley exactos en milisegundos para historias clínicas electrónicas con cientos de variables.</p>
+                </div>
+                <div style="border: 1px solid #E2E8F0; padding: 10px 14px; border-radius: 8px;">
+                    <strong style="color: #0D9488;">Integrated Gradients (Sundararajan et al.):</strong>
+                    <p style="margin: 4px 0 0 0;">Método axiomático para redes profundas que integra los gradientes a lo largo de la trayectoria rectilínea desde una línea base neutra (ej. imagen en negro) hasta la entrada del paciente.</p>
+                </div>
+                <div style="border: 1px solid #E2E8F0; padding: 10px 14px; border-radius: 8px;">
+                    <strong style="color: #7C3AED;">Contrastive Explanations (¿Por qué $P$ y no $Q$?):</strong>
+                    <p style="margin: 4px 0 0 0;">Explicaciones contrafácticas: "¿Qué valor mínimo de hemoglobina o creatinina habría evitado que el algoritmo clasificara al paciente como alto riesgo quirúrgico?". Muy apreciadas por médicos tratantes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Checklist Completo TRIPOD+AI -->
+    <div class="modal-overlay" id="modal-tripod-ai">
+        <div class="modal" style="max-width: 800px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-tripod-ai')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag indigo">The BMJ 2024</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">Checklist Esencial TRIPOD+AI (Collins et al.)</h3>
+            </div>
+
+            <table class="table-custom" style="font-size: 0.82rem;">
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">Sección</th>
+                        <th style="width: 10%;">Ítem</th>
+                        <th>Requisito Metodológico TRIPOD+AI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Título</strong></td>
+                        <td>1</td>
+                        <td>Identificar si el estudio desarrolla (D), valida externamente (E) o ambos, indicando población y desenlace.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Introducción</strong></td>
+                        <td>3a-c</td>
+                        <td>Contexto asistencial, justificación frente a modelos previos y declaración de desigualdades en salud.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Datos</strong></td>
+                        <td>5a-c</td>
+                        <td>Fuentes separadas para desarrollo y validación, fechas de reclutamiento y flujo de inclusión.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desenlace</strong></td>
+                        <td>6a-b</td>
+                        <td>Definición clínica no ambigua del desenlace y cegamiento de los evaluadores respecto a los predictores.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Faltantes</strong></td>
+                        <td>8</td>
+                        <td>Número y patrón de valores perdidos; detalles del método de imputación múltiple.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Modelado</strong></td>
+                        <td>10a-e</td>
+                        <td>Preprocesamiento, selección de variables, hiperparámetros y estrategia para evitar *data leakage*.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Métricas</strong></td>
+                        <td>11a-c</td>
+                        <td>Reporte conjunto de discriminación (C-index), calibración (slope/intercept) y análisis de decisión (DCA).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Equidad</strong></td>
+                        <td>16</td>
+                        <td>Diferencias y evaluación de sesgos entre desarrollo y evaluación en subgrupos sociodemográficos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Open Science</strong></td>
+                        <td>18a-d</td>
+                        <td>Código reproducible, repositorio de pesos, financiación y declaración de conflictos de interés.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal 6: TRIPOD-LLM -->
+    <div class="modal-overlay" id="modal-tripod-llm">
+        <div class="modal" style="max-width: 780px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-tripod-llm')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag purple">Nature Medicine 2025</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">Puntos Críticos de Reporte en TRIPOD-LLM</h3>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.84rem; color: #334155; line-height: 1.45;">
+                <div style="background: #FAF5FF; padding: 10px 14px; border-radius: 8px; border: 1px solid #E9D5FF;">
+                    <strong style="color: #7C3AED;">1. Documentación Exacta de Prompts:</strong>
+                    <div>No basta decir "le pedimos al modelo que analizara la nota médica". Se debe publicar el archivo exacto de prompts, variables insertadas y delimitadores (Markdown, JSON, XML).</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #4F46E5;">
+                    <strong style="color: #4F46E5;">2. Estrategia de Mitigación de Alucinaciones:</strong>
+                    <div>Declarar si se utilizó RAG (Retrieval-Augmented Generation), verificación cruzada multi-agente o umbrales de auto-consistencia (*Self-Consistency sampling*).</div>
+                </div>
+                <div style="background: #F0FDF4; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #059669;">
+                    <strong style="color: #059669;">3. Validación Humana en el Bucle (Human-in-the-Loop):</strong>
+                    <div>Especialidad de los revisores médicos, número de casos evaluados por cada uno, anonimización de la autoría del texto (médico vs LLM) y cálculo de acuerdo inter-juez.</div>
+                </div>
+                <div style="background: #FFF1F2; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #E11D48;">
+                    <strong style="color: #E11D48;">4. Auditoría de Seguridad & PHI:</strong>
+                    <div>Protocolo de desidentificación de historias clínicas antes de enviarlas a APIs externas de modelos de lenguaje.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

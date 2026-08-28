@@ -1,0 +1,79 @@
+<!-- Slide 09: Métodos XAI Clínicos -->
+<section class="slide" id="slide09">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: 8px;">
+            <h2>Métodos Clave de Explicabilidad: SHAP, LIME & Grad-CAM</h2>
+            <span class="badge-tag indigo">Herramientas Estándar de la Industria</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-md); font-size: 0.95rem;">
+            Principales algoritmos para desvelar los mecanismos internos de modelos en datos tabulares e imágenes diagnósticas:
+        </p>
+
+        <div class="grid-3" style="margin-bottom: var(--space-md);">
+            <!-- SHAP Card -->
+            <div class="concept-card" style="border-top: 4px solid #4F46E5;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h4 style="color: #4F46E5; margin: 0; font-size: 1.05rem;">SHAP (Shapley Values)</h4>
+                    <span class="badge-tag indigo" style="font-size: 0.72rem; padding: 2px 6px;">Teoría de Juegos</span>
+                </div>
+                <p style="font-size: 0.82rem; color: #475569; line-height: 1.4; margin-bottom: 8px;">
+                    Distribuye el aporte de cada predictor clínico respecto al valor base poblacional mediante la formulación axiomática de Shapley:
+                </p>
+                <div style="background: #F8FAFC; padding: 6px; border-radius: 6px; border: 1px solid #E2E8F0; font-size: 0.75rem; text-align: center; margin-bottom: 8px;">
+                    $$\phi_i = \sum_{S \subseteq F \setminus \{i\}} \frac{|S|!(|F| - |S| - 1)!}{|F|!} [f(S \cup \{i\}) - f(S)]$$
+                </div>
+                <div style="font-size: 0.78rem; color: #334155;">
+                    ✓ <strong>Uso clínico:</strong> <em>Waterfall plots</em> (por paciente) y <em>Beeswarm plots</em> (impacto de biomarcadores en toda la cohorte).
+                </div>
+            </div>
+
+            <!-- LIME Card -->
+            <div class="concept-card" style="border-top: 4px solid #0891B2;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h4 style="color: #0891B2; margin: 0; font-size: 1.05rem;">LIME (Aproximación Local)</h4>
+                    <span class="badge-tag cyan" style="font-size: 0.72rem; padding: 2px 6px;">Agnóstico</span>
+                </div>
+                <p style="font-size: 0.82rem; color: #475569; line-height: 1.4; margin-bottom: 8px;">
+                    Ajusta un modelo lineal subrogado simple alrededor de la vecindad del paciente específico mediante perturbaciones ponderadas por distancia:
+                </p>
+                <div style="background: #ECFEFF; padding: 6px 10px; border-radius: 6px; font-size: 0.78rem; color: #0E7490; margin-bottom: 8px; line-height: 1.35;">
+                    $$\xi(x) = \arg\min_{g \in G} \mathcal{L}(f, g, \pi_x) + \Omega(g)$$
+                </div>
+                <div style="font-size: 0.78rem; color: #334155;">
+                    ✓ <strong>Ventaja:</strong> Extremadamente intuitivo y rápido para explicar decisiones clínicas individuales en cualquier arquitectura.
+                </div>
+            </div>
+
+            <!-- Grad-CAM Card -->
+            <div class="concept-card" style="border-top: 4px solid #059669;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h4 style="color: #059669; margin: 0; font-size: 1.05rem;">Grad-CAM (Visión Médica)</h4>
+                    <span class="badge-tag emerald" style="font-size: 0.72rem; padding: 2px 6px;">Gradientes CNN</span>
+                </div>
+                <p style="font-size: 0.82rem; color: #475569; line-height: 1.4; margin-bottom: 8px;">
+                    Utiliza los gradientes de la última capa convolucional para proyectar un mapa de calor sobre la región anatómica relevante:
+                </p>
+                <div style="background: #F0FDF4; padding: 6px 10px; border-radius: 6px; font-size: 0.78rem; color: #166534; margin-bottom: 8px; line-height: 1.35;">
+                    $$L_{\text{Grad-CAM}}^c = \text{ReLU}\left(\sum_k \alpha_k^c A^k\right)$$
+                </div>
+                <div style="font-size: 0.78rem; color: #334155;">
+                    ✓ <strong>Auditoría crítica:</strong> Detecta si el modelo clasifica neumonía por la consolidación pulmonar o por la etiqueta del equipo de rayos X.
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Case Box -->
+        <div style="background: white; border: 1px solid #E2E8F0; border-radius: 10px; padding: var(--space-md); box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+                <span class="badge-tag rose" style="font-size: 0.75rem;">Alerta Metodológica: El Fenómeno del Caballo Inteligente (Clever Hans)</span>
+                <p style="font-size: 0.82rem; color: #475569; margin: 4px 0 0 0; max-width: 820px; line-height: 1.4;">
+                    Sin Grad-CAM o SHAP, modelos con 98% de exactitud han sido descubiertos basando su diagnóstico de COVID-19 en la fuente de la tipografía del hospital o en la postura del paciente, en lugar de la patología pulmonar.
+                </p>
+            </div>
+            <button class="btn-secondary" style="font-size: 0.82rem; padding: 8px 14px; white-space: nowrap;"
+                data-modal-target="modal-xai-deepdive">
+                Ver Guía de Interpretación XAI &rarr;
+            </button>
+        </div>
+    </div>
+</section>

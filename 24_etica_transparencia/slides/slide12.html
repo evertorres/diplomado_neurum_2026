@@ -1,0 +1,55 @@
+<!-- Slide 12: TRIPOD+AI BMJ -->
+<section class="slide" id="slide12">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: 8px;">
+            <h2>Estándar TRIPOD+AI (BMJ 2024): Directriz de Reporte</h2>
+            <span class="badge-tag indigo">The BMJ • Collins, Moons et al.</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-md); font-size: 0.95rem;">
+            Evolución desde TRIPOD (2015) hacia <strong>TRIPOD+AI</strong> (2024), el estándar metodológico obligatorio para modelos predictivos y de Machine Learning en salud:
+        </p>
+
+        <div class="grid-2" style="gap: var(--space-md); margin-bottom: var(--space-md);">
+            <!-- Left: Core Structure -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: var(--space-md); box-shadow: var(--shadow-sm);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                    <span class="badge-tag indigo">Estructura del Checklist</span>
+                    <strong style="color: #1E293B; font-family: 'Exo', sans-serif;">27 Ítems de Rigor Metodológico</strong>
+                </div>
+                <div style="font-size: 0.83rem; color: #475569; line-height: 1.5;">
+                    <div><strong>1. Título & Abstract:</strong> Especificar explícitamente si es desarrollo (D), validación externa (E) o ambos.</div>
+                    <div style="margin-top: 4px;"><strong>2. Contexto & Desigualdades:</strong> Describir el entorno asistencial y posibles disparidades sociodemográficas basales.</div>
+                    <div style="margin-top: 4px;"><strong>3. Datos & Manejo de Faltantes:</strong> Especificar criterios de elegibilidad, flujo de pacientes e imputación múltiple.</div>
+                    <div style="margin-top: 4px;"><strong>4. Preprocesamiento & Algoritmo:</strong> Documentar hiperparámetros, partición y prevención de fuga (*leakage*).</div>
+                    <div style="margin-top: 4px;"><strong>5. Validación Externa:</strong> Evaluar en cohortes independientes temporal o geográficamente.</div>
+                </div>
+            </div>
+
+            <!-- Right: New in +AI -->
+            <div style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 12px; padding: var(--space-md); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <span class="badge-tag emerald">Novedades Críticas en +AI</span>
+                        <strong style="color: #0F766E; font-family: 'Exo', sans-serif;">Exigencias para Machine Learning</strong>
+                    </div>
+                    <ul style="font-size: 0.82rem; color: #334155; padding-left: 18px; line-height: 1.45;">
+                        <li><strong>Auditoría de Subgrupos:</strong> Reporte explícito del desempeño en poblaciones minoritarias o vulnerables.</li>
+                        <li><strong>Deriva de Datos (Data Shift):</strong> Evaluación de estabilidad temporal en la práctica real.</li>
+                        <li><strong>Ciencia Abierta:</strong> Publicación obligatoria del código fuente, entorno de software y pesos del modelo.</li>
+                        <li><strong>Aprobación Ética / DUA:</strong> Declaración del comité de ética institucional (IRB) y manejo de consentimiento.</li>
+                    </ul>
+                </div>
+
+                <button class="btn-secondary" style="font-size: 0.82rem; padding: 8px 14px; align-self: flex-start; margin-top: 8px;"
+                    data-modal-target="modal-tripod-ai">
+                    Ver Checklist Completo TRIPOD+AI &rarr;
+                </button>
+            </div>
+        </div>
+
+        <!-- Citation Quote -->
+        <div class="quote-box" style="padding: 10px 14px; font-size: 0.82rem; margin: 0;">
+            <em>"El reporte incompleto o inexacto enmascara fallas metodológicas críticas, impide la reproducción científica y erosiona la confianza clínica en los algoritmos predictivos."</em> — <strong>TRIPOD+AI Statement, BMJ 2024</strong>.
+        </div>
+    </div>
+</section>

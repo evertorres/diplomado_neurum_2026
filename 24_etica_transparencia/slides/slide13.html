@@ -1,0 +1,58 @@
+<!-- Slide 13: TRIPOD-LLM Nature Medicine -->
+<section class="slide" id="slide13">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: 8px;">
+            <h2>Estándar TRIPOD-LLM (Nature Medicine 2025)</h2>
+            <span class="badge-tag purple">Nature Medicine • Gallifant et al.</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-md); font-size: 0.95rem;">
+            Los Modelos de Lenguaje Grande (LLMs) presentan desafíos únicos como alucinaciones, estocasticidad y sesgos de prompt. <strong>TRIPOD-LLM</strong> establece las directrices de reporte para la era generativa:
+        </p>
+
+        <div class="grid-3" style="margin-bottom: var(--space-md);">
+            <!-- Dimensión 1 & 2 -->
+            <div class="concept-card" style="border-top: 4px solid #7C3AED;">
+                <h4 style="color: #7C3AED; margin-bottom: 6px; font-size: 1rem;">1. Modelo & Hiperparámetros</h4>
+                <ul style="font-size: 0.8rem; color: #475569; padding-left: 16px; line-height: 1.45;">
+                    <li><strong>Checkpoint exacto:</strong> No basta "GPT-4" o "Llama 3"; se exige el versionado exacto (ej. <code>gpt-4o-2024-08-06</code>).</li>
+                    <li><strong>Parámetros de muestreo:</strong> Temperatura ($T$), top_p, top_k, penalizaciones y límite de tokens.</li>
+                    <li><strong>Rol de Sistema:</strong> Texto íntegro del *System Prompt*.</li>
+                </ul>
+            </div>
+
+            <!-- Dimensión 3 & 4 -->
+            <div class="concept-card" style="border-top: 4px solid #4F46E5;">
+                <h4 style="color: #4F46E5; margin-bottom: 6px; font-size: 1rem;">2. Prompts, CoT & RAG</h4>
+                <ul style="font-size: 0.8rem; color: #475569; padding-left: 16px; line-height: 1.45;">
+                    <li><strong>Plantillas de Prompt:</strong> Transcripción textual de las instrucciones y ejemplos *Few-Shot*.</li>
+                    <li><strong>Razonamiento:</strong> Documentar si se usó *Chain-of-Thought* o *ReAct*.</li>
+                    <li><strong>Arquitectura RAG:</strong> Modelo de *embeddings*, base vectorial, top-$k$ fragmentos y citas bibliográficas.</li>
+                </ul>
+            </div>
+
+            <!-- Dimensión 5 & 6 -->
+            <div class="concept-card" style="border-top: 4px solid #059669;">
+                <h4 style="color: #059669; margin-bottom: 6px; font-size: 1rem;">3. Evaluación Médica & Seguridad</h4>
+                <ul style="font-size: 0.8rem; color: #475569; padding-left: 16px; line-height: 1.45;">
+                    <li><strong>Panel Clínico:</strong> Evaluación por médicos especialistas independientes con concordancia ($\kappa$ de Cohen).</li>
+                    <li><strong>Alucinaciones & Omisiones:</strong> Tasa cuantitativa de datos falsos o contraindicaciones ignoradas.</li>
+                    <li><strong>Privacidad PHI:</strong> Sanitización de datos de pacientes (HIPAA/GDPR).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Comparative Box -->
+        <div style="background: white; border: 1px solid #E2E8F0; border-radius: 10px; padding: var(--space-md); box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+                <span class="badge-tag purple" style="font-size: 0.75rem;">¿Por qué TRIPOD-LLM es revolucionario?</span>
+                <p style="font-size: 0.82rem; color: #475569; margin: 4px 0 0 0; max-width: 820px; line-height: 1.4;">
+                    Reemplaza las evaluaciones anecdóticas de "chatbots" por protocolos de reproducibilidad científica rigurosa, exigiendo el depósito de prompts, matrices de evaluación de expertos y pruebas de robustez adversarial.
+                </p>
+            </div>
+            <button class="btn-secondary" style="font-size: 0.82rem; padding: 8px 14px; white-space: nowrap;"
+                data-modal-target="modal-tripod-llm">
+                Ver Guía TRIPOD-LLM &rarr;
+            </button>
+        </div>
+    </div>
+</section>

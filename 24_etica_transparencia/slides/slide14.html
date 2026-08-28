@@ -1,0 +1,55 @@
+<!-- Slide 14: Sesgos en ML & Top Riesgos Tecnológicos -->
+<section class="slide" id="slide14">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <h2>Sesgos en ML, Equidad (*Fairness*) & Riesgos Tecnológicos</h2>
+            <span class="badge-tag rose">Tecnovigilancia & Auditoría Ética</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-xs); font-size: 0.88rem;">
+            Los sesgos en modelos de salud provienen de múltiples orígenes y se conectan directamente con los principales riesgos de seguridad del paciente:
+        </p>
+
+        <div class="grid-2" style="gap: var(--space-md); margin-bottom: var(--space-xs);">
+            <!-- Mecanismos de Sesgo en ML -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px 14px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                    <span class="badge-tag rose" style="font-size: 0.72rem; padding: 1px 6px;">Causas de Sesgo en ML</span>
+                    <strong style="color: #1E293B; font-family: 'Exo', sans-serif; font-size: 0.9rem;">Mecanismos de Distorsión</strong>
+                </div>
+                <ul style="font-size: 0.78rem; color: #475569; padding-left: 16px; line-height: 1.4;">
+                    <li><strong>Desbalance de Datos:</strong> Subrepresentación severa de patologías raras o grupos étnicos minoritarios.</li>
+                    <li><strong>Perpetuación de Patrones:</strong> Reproducción automática de prácticas clínicas históricamente desiguales.</li>
+                    <li><strong>Correlación Espuria:</strong> Atribución errónea a variables asociadas (ej. código postal en lugar de biología).</li>
+                    <li><strong>Omisión de Datos:</strong> Pacientes que no acceden a pruebas costosas son catalogados falsamente como "sanos".</li>
+                    <li><strong>Compensación Manual Inadecuada:</strong> Ajustes arbitrarios de umbrales que dañan la calibración.</li>
+                </ul>
+            </div>
+
+            <!-- Top Riesgos Tecnológicos ECRI -->
+            <div style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 12px; padding: 12px 14px;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                    <span class="badge-tag amber" style="font-size: 0.72rem; padding: 1px 6px;">Tecnovigilancia ECRI</span>
+                    <strong style="color: #0F172A; font-family: 'Exo', sans-serif; font-size: 0.9rem;">Riesgos Críticos en Salud</strong>
+                </div>
+                <ul style="font-size: 0.78rem; color: #334155; padding-left: 16px; line-height: 1.4;">
+                    <li><strong>Ciberseguridad en la Nube:</strong> Brechas de privacidad y pérdida de disponibilidad de servicios críticos.</li>
+                    <li><strong>Carga Cognitiva & Fatiga de Alarmas:</strong> Sobrecarga en telemetría que induce omisión de eventos adversos graves.</li>
+                    <li><strong>Automatización Inapropiada:</strong> Salto de controles en gabinetes de dispensación y algoritmos clínicos.</li>
+                    <li><strong>Subregistro de Incidentes:</strong> La falta de reporte de fallas tecnológicas permite la recurrencia del daño.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Fairness Metric & Mitigation -->
+        <div style="background: #F0FDFA; border: 1px solid #99F6E4; border-radius: 10px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div style="font-size: 0.8rem; color: #115E59; line-height: 1.35; max-width: 840px;">
+                <strong>Regla de Mitigación de Equidad (Equal Opportunity):</strong><br>
+                Garantizar que la sensibilidad del modelo sea idéntica en todos los subgrupos demográficos:
+                <span style="font-family: monospace; font-size: 0.75rem;">$P(\hat{Y}=1 \mid A=0, Y=1) = P(\hat{Y}=1 \mid A=1, Y=1)$</span>.
+            </div>
+            <button class="btn-secondary" style="font-size: 0.75rem; padding: 6px 12px; border-color: #0D9488; color: #0D9488;" onclick="goToSlide(15)">
+                Auditar en el Laboratorio &rarr;
+            </button>
+        </div>
+    </div>
+</section>

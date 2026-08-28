@@ -1,0 +1,75 @@
+<!-- Slide 10: Validación Clínica Rigurosa -->
+<section class="slide" id="slide10">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: 8px;">
+            <h2>Evaluación y Validación Clínica: Más Allá del AUROC</h2>
+            <span class="badge-tag rose">Trilogía de Desempeño Clínico</span>
+        </div>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-md); font-size: 0.95rem;">
+            En medicina, un modelo no puede evaluarse únicamente con exactitud (*accuracy*) o sensibilidad. TRIPOD+AI exige reportar tres dimensiones complementarias:
+        </p>
+
+        <div class="grid-3" style="margin-bottom: var(--space-md);">
+            <!-- 1. Discriminación -->
+            <div class="concept-card" style="border-top: 4px solid #0891B2;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h4 style="color: #0891B2; margin: 0; font-size: 1.05rem;">1. Discriminación</h4>
+                    <span class="badge-tag cyan" style="font-size: 0.72rem; padding: 2px 6px;">Ranking</span>
+                </div>
+                <p style="font-size: 0.82rem; color: #475569; line-height: 1.4; margin-bottom: 8px;">
+                    ¿Puede el modelo distinguir quién tendrá el desenlace versus quién no?
+                </p>
+                <div style="background: #ECFEFF; padding: 6px 10px; border-radius: 6px; font-size: 0.8rem; color: #0E7490; margin-bottom: 8px;">
+                    $$\text{AUROC} \quad / \quad C\text{-index} = P(\hat{Y}_i > \hat{Y}_j \mid Y_i = 1, Y_j = 0)$$
+                </div>
+                <div style="font-size: 0.78rem; color: #334155; line-height: 1.35;">
+                    • <strong>Valor de referencia:</strong> 0.50 (azar) a 1.00 (perfecto).<br>
+                    • <strong>Limitación:</strong> No evalúa si el porcentaje predicho es numéricamente realista.
+                </div>
+            </div>
+
+            <!-- 2. Calibración -->
+            <div class="concept-card" style="border-top: 4px solid #059669;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h4 style="color: #059669; margin: 0; font-size: 1.05rem;">2. Calibración</h4>
+                    <span class="badge-tag emerald" style="font-size: 0.72rem; padding: 2px 6px;">Probabilidad Real</span>
+                </div>
+                <p style="font-size: 0.82rem; color: #475569; line-height: 1.4; margin-bottom: 8px;">
+                    Si el modelo predice 30% de riesgo a 100 pacientes, ¿exactamente 30 presentan el evento?
+                </p>
+                <div style="background: #F0FDF4; padding: 6px 10px; border-radius: 6px; font-size: 0.8rem; color: #166534; margin-bottom: 8px;">
+                    $$\text{Slope} \approx 1.0 \quad \mid \quad \text{Intercept (CITL)} \approx 0.0$$
+                </div>
+                <div style="font-size: 0.78rem; color: #334155; line-height: 1.35;">
+                    • <strong>Curva de Calibración:</strong> Mide sobreestimación o subestimación sistemática.<br>
+                    • <strong>Brier Score:</strong> Error cuadrático medio de las probabilidades.
+                </div>
+            </div>
+
+            <!-- 3. Utilidad Clínica (DCA) -->
+            <div class="concept-card" style="border-top: 4px solid #7C3AED;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                    <h4 style="color: #7C3AED; margin: 0; font-size: 1.05rem;">3. Utilidad (DCA)</h4>
+                    <span class="badge-tag purple" style="font-size: 0.72rem; padding: 2px 6px;">Beneficio Neto</span>
+                </div>
+                <p style="font-size: 0.82rem; color: #475569; line-height: 1.4; margin-bottom: 8px;">
+                    ¿Mejora las decisiones médicas frente a tratar a todos o no tratar a nadie?
+                </p>
+                <div style="background: #FAF5FF; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; color: #581C87; margin-bottom: 8px;">
+                    $$\text{Net Benefit} = \frac{\text{TP}}{N} - \frac{\text{FP}}{N} \left(\frac{p_t}{1 - p_t}\right)$$
+                </div>
+                <div style="font-size: 0.78rem; color: #334155; line-height: 1.35;">
+                    • <strong>Decision Curve Analysis (DCA):</strong> Pondera el costo relativo de falsos positivos frente a falsos negativos según el umbral $p_t$.
+                </div>
+            </div>
+        </div>
+
+        <!-- Practical Insight Callout -->
+        <div style="background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 12px 16px; display: flex; align-items: center; gap: 14px;">
+            <div style="color: #D97706; font-size: 1.5rem;">⚠️</div>
+            <div style="font-size: 0.84rem; color: #92400E; line-height: 1.4;">
+                <strong>Peligro clínico:</strong> Un modelo puede tener un AUROC excelente ($0.88$) pero sobreestimar el riesgo de cáncer 3 veces (mala calibración), llevando a biopsias y procedimientos invasivos innecesarios. <strong>Nunca confíes en un modelo sin curva de calibración reportada.</strong>
+            </div>
+        </div>
+    </div>
+</section>
