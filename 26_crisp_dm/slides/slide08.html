@@ -1,0 +1,105 @@
+<!-- Slide 08: Fase 3 - Preparación de los Datos -->
+<section class="slide" id="slide08">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag purple" style="margin-right: 8px;">Fase 3 de 6</span>
+                <span class="badge-tag indigo">Data Preparation</span>
+            </div>
+            <span class="badge-tag rose">70% - 80% del Esfuerzo Total</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.6rem; color: var(--color-primary);">
+            Fase 3: Preparación de Datos e Ingeniería de Variables Clínicas
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-sm); font-size: 0.88rem; line-height: 1.35;">
+            Construye el conjunto de datos tabular final para alimentar los algoritmos. En salud, requiere un manejo estricto de la <strong>línea temporal del paciente</strong> para evitar fuga de información.
+        </p>
+
+        <!-- Main 2-Column Grid -->
+        <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--space-md); width: 100%; align-items: start;">
+            
+            <!-- Left: The 4 Core Preparation Steps -->
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <div style="font-size: 0.82rem; font-weight: 700; color: #0F172A; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--color-crisp-purple);"></span>
+                    Flujo de Transformación de Datos en Salud
+                </div>
+
+                <div class="concept-card" style="padding: 7px 10px; border-left: 4px solid var(--color-crisp-purple);">
+                    <strong style="color: #6D28D9; font-size: 0.82rem; font-family: 'Exo', sans-serif;">1. Selección de Cohorte y Filtros</strong>
+                    <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                        Aplicar criterios de inclusión/exclusión: adultos $\ge 18$ años, estancia en urgencias $\ge 4$ horas, excluir traslados externos.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="padding: 7px 10px; border-left: 4px solid var(--color-crisp-cyan);">
+                    <strong style="color: #0E7490; font-size: 0.82rem; font-family: 'Exo', sans-serif;">2. Limpieza e Imputación Fisiológica</strong>
+                    <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                        Imputación con sentido médico: *Carry-Forward* (último valor observado), imputación por mediana condicional a comorbilidad o indicadores explícitos de ausencia.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="padding: 7px 10px; border-left: 4px solid var(--color-crisp-amber);">
+                    <strong style="color: #B45309; font-size: 0.82rem; font-family: 'Exo', sans-serif;">3. Feature Engineering Clínico</strong>
+                    <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                        Crear variables compuestas de alto valor: Índice de Comorbilidad de Charlson, escala SOFA/qSOFA, variabilidad de frecuencia cardíaca ($\Delta FC$).
+                    </p>
+                </div>
+
+                <div class="concept-card" style="padding: 7px 10px; border-left: 4px solid var(--color-crisp-emerald);">
+                    <strong style="color: #047857; font-size: 0.82rem; font-family: 'Exo', sans-serif;">4. Integración y Resampleo Temporal</strong>
+                    <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                        Unión de tablas EHR + LIS + Farmacia indexadas por <code>patient_id</code> y <code>timestamp</code> relativo al momento de admisión.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Clinical Timeline Diagram SVG -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                
+                <div style="background: #0F172A; border-radius: 12px; padding: 12px; color: white; box-shadow: var(--shadow-sm);">
+                    <div style="font-size: 0.78rem; font-weight: 700; color: #93C5FD; text-transform: uppercase; margin-bottom: 8px; font-family: 'Exo', sans-serif;">
+                        ⏱️ Estructura Temporal Rigurosa (Cero Leakage)
+                    </div>
+
+                    <!-- SVG Timeline -->
+                    <svg width="100%" height="110" viewBox="0 0 320 110" fill="none">
+                        <!-- Timeline base line -->
+                        <line x1="20" y1="50" x2="300" y2="50" stroke="#475569" stroke-width="3" />
+                        
+                        <!-- Observation Window -->
+                        <rect x="25" y="30" width="110" height="40" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.5" opacity="0.8" />
+                        <text x="80" y="48" text-anchor="middle" fill="#93C5FD" font-size="8.5" font-family="'Exo', sans-serif" font-weight="700">Ventana Observación</text>
+                        <text x="80" y="60" text-anchor="middle" fill="#DBEAFE" font-size="7.5" font-family="'Roboto Mono', monospace">0h a 6h (Features $X$)</text>
+
+                        <!-- Prediction Time Point -->
+                        <circle cx="135" cy="50" r="5" fill="#F59E0B" />
+                        <text x="135" y="20" text-anchor="middle" fill="#FDE68A" font-size="7.5" font-weight="700">Momento $t_0$</text>
+
+                        <!-- Gap / Buffer Window -->
+                        <rect x="135" y="38" width="40" height="24" rx="4" fill="#334155" stroke="#64748B" stroke-dasharray="2 2" />
+                        <text x="155" y="53" text-anchor="middle" fill="#94A3B8" font-size="6.5">Buffer 2h</text>
+
+                        <!-- Prediction Outcome Window -->
+                        <rect x="175" y="30" width="120" height="40" rx="6" fill="#881337" stroke="#F43F5E" stroke-width="1.5" opacity="0.8" />
+                        <text x="235" y="48" text-anchor="middle" fill="#FECDD3" font-size="8.5" font-family="'Exo', sans-serif" font-weight="700">Ventana Desenlace</text>
+                        <text x="235" y="60" text-anchor="middle" fill="#FFE4E6" font-size="7.5" font-family="'Roboto Mono', monospace">Sepsis en 8h - 24h ($Y$)</text>
+
+                        <!-- Prohibited data indicator -->
+                        <text x="235" y="90" text-anchor="middle" fill="#FDA4AF" font-size="7" font-weight="600">🚫 PROHIBIDO usar datos de esta ventana en $X$</text>
+                    </svg>
+                </div>
+
+                <!-- Next Phase Button -->
+                <div style="display: flex; justify-content: flex-end; margin-top: 4px;">
+                    <button class="btn-primary" onclick="goToSlide(9)" style="padding: 6px 14px; font-size: 0.78rem; background: var(--color-crisp-amber);">
+                        Ir a Fase 4: Modelado &rarr;
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

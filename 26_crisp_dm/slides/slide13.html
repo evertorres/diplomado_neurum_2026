@@ -1,0 +1,95 @@
+<!-- Slide 13: Caso de Estudio Clínico End-to-End: Sepsis en Urgencias -->
+<section class="slide" id="slide13">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag emerald" style="margin-right: 8px;">Caso Clínico Integral</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 13</span>
+            </div>
+            <span class="badge-tag cyan">CRISP-DM Aplicado Paso a Paso</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.55rem; color: var(--color-primary);">
+            Caso Práctico End-to-End: Detección Temprana de Sepsis en Urgencias
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-sm); font-size: 0.86rem; line-height: 1.35;">
+            Recorrido guiado de las 6 fases de CRISP-DM aplicadas a un problema de alta criticidad médica: reducir el tiempo de inicio de terapia antimicrobiana en urgencias.
+        </p>
+
+        <!-- 6 Phases Step-by-Step Grid -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%;">
+            
+            <!-- Step 1 -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #2563EB; border-radius: 8px; padding: 8px 10px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #1E40AF; font-family: 'Exo', sans-serif; margin-bottom: 2px;">
+                    1. Comprensión Clínica
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; margin: 0; line-height: 1.25;">
+                    <strong>Problema:</strong> Cada hora de retraso en sepsis eleva mortalidad un 7.6%. Meta: predecir choque séptico con $\ge 4$ horas de antelación.
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #06B6D4; border-radius: 8px; padding: 8px 10px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #0E7490; font-family: 'Exo', sans-serif; margin-bottom: 2px;">
+                    2. Comprensión Datos
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; margin: 0; line-height: 1.25;">
+                    Extracción de 45,000 admisiones (EHR + LIS). Detección de lactato y leucocitos con muestreo irregular. Prevalencia de sepsis: 4.2%.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #8B5CF6; border-radius: 8px; padding: 8px 10px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #6D28D9; font-family: 'Exo', sans-serif; margin-bottom: 2px;">
+                    3. Preparación Datos
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; margin: 0; line-height: 1.25;">
+                    Ventana observación: primeras 6h en triage. Imputación MICE + Forward-fill. Creación de variables dinámicas: $\Delta FC / \Delta PAS$ y escala qSOFA.
+                </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 8px 10px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #B45309; font-family: 'Exo', sans-serif; margin-bottom: 2px;">
+                    4. Modelado
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; margin: 0; line-height: 1.25;">
+                    Entrenamiento con LightGBM y Regresión Logística penalizada (ElasticNet). Partición estratificada por paciente (80/20) + Calibración Isotonica.
+                </p>
+            </div>
+
+            <!-- Step 5 -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #10B981; border-radius: 8px; padding: 8px 10px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #047857; font-family: 'Exo', sans-serif; margin-bottom: 2px;">
+                    5. Evaluación
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; margin: 0; line-height: 1.25;">
+                    AUC-ROC: 0.88, Sensibilidad: 87% fijando especificidad en 85%. DCA confirma beneficio neto positivo sin saturar de falsos positivos al servicio.
+                </p>
+            </div>
+
+            <!-- Step 6 -->
+            <div style="background: white; border: 1px solid #E2E8F0; border-left: 4px solid #E11D48; border-radius: 8px; padding: 8px 10px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #BE123C; font-family: 'Exo', sans-serif; margin-bottom: 2px;">
+                    6. Despliegue
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; margin: 0; line-height: 1.25;">
+                    API en contenedor Docker conectada vía CDS Hooks al EHR. Tarjeta visual interactiva de alerta con explicación de factores SHAP para el médico.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Takeaway Banner -->
+        <div style="background: linear-gradient(135deg, #0F172A 0%, #065F46 100%); border-radius: 10px; padding: 10px 14px; margin-top: var(--space-xs); color: white; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 0.76rem; line-height: 1.3;">
+                <strong style="color: #6EE7B7;">Impacto Asistencial Demostrado:</strong> El seguimiento riguroso del ciclo permitió reducir en <strong>58 minutos</strong> el inicio de antibióticos y recortó 1.8 días de estancia promedio.
+            </div>
+            <button class="btn-secondary" onclick="goToSlide(14)" style="padding: 6px 12px; font-size: 0.75rem; border-color: #6EE7B7; color: #065F46; background: #ECFDF5; font-weight: 700; white-space: nowrap; margin-left: 10px;">
+                Ver Mapa de Roles &rarr;
+            </button>
+        </div>
+
+    </div>
+</section>

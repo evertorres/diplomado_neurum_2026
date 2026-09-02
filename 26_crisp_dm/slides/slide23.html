@@ -1,0 +1,110 @@
+<!-- Slide 23: Tablero Interactivo / Canvas CRISP-DM con Post-its Virtuales -->
+<section class="slide" id="slide23">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag purple" style="margin-right: 8px;">Taller • Paso 3</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 23</span>
+            </div>
+            <span class="badge-tag" style="background: #F5F3FF; color: var(--color-crisp-purple);">Canvas de Formulación</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.55rem; color: var(--color-primary);">
+            El Canvas CRISP-DM: Estructura tu Proyecto con Post-its
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-xs); font-size: 0.85rem; line-height: 1.35;">
+            Cada equipo pega su <strong>Problema Seleccionado</strong> en la cabecera y responde las preguntas gatillo en los 6 cuadrantes de color correspondientes:
+        </p>
+
+        <!-- 6-Quadrant Post-it Canvas Grid -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%;">
+            
+            <!-- Quadrant 1: Business (Blue) -->
+            <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-top: 4px solid #2563EB; border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 3px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #1E40AF; font-family: 'Exo', sans-serif;">
+                    🟦 1. Comprensión Clínica
+                </div>
+                <div style="font-size: 0.7rem; color: #1E3A8A; line-height: 1.25;">
+                    • ¿Qué dolor clínico/institucional resuelve?<br>
+                    • ¿Quién es el médico sponsor?<br>
+                    • ¿Qué decisión cambiará con la predicción?<br>
+                    • ¿Cuál es la meta clínica (ej. $\downarrow 15\%$ estancia)?
+                </div>
+            </div>
+
+            <!-- Quadrant 2: Data (Yellow) -->
+            <div style="background: #FEF9C3; border: 1px solid #FDE047; border-top: 4px solid #CA8A04; border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 3px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #854D0E; font-family: 'Exo', sans-serif;">
+                    🟨 2. Comprensión de Datos
+                </div>
+                <div style="font-size: 0.7rem; color: #713F12; line-height: 1.25;">
+                    • ¿Dónde residen los datos (EHR, LIS, RIPS)?<br>
+                    • ¿Qué variables clave requerimos?<br>
+                    • ¿Qué sesgos o datos nulos (MNAR) hay?<br>
+                    • ¿Se cuenta con volumen histórico suficiente?
+                </div>
+            </div>
+
+            <!-- Quadrant 3: Data Prep (Purple) -->
+            <div style="background: #F3E8FF; border: 1px solid #D8B4FE; border-top: 4px solid #9333EA; border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 3px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #6B21A8; font-family: 'Exo', sans-serif;">
+                    🟪 3. Preparación de Datos
+                </div>
+                <div style="font-size: 0.7rem; color: #581C87; line-height: 1.25;">
+                    • ¿Cuál es la ventana de observación ($X$)?<br>
+                    • ¿Cuál es la ventana de desenlace ($Y$)?<br>
+                    • ¿Criterios de inclusión/exclusión de cohorte?<br>
+                    • ¿Qué *features* compuestas (Charlson, SOFA)?
+                </div>
+            </div>
+
+            <!-- Quadrant 4: Modeling (Orange) -->
+            <div style="background: #FFEDD5; border: 1px solid #FDBA74; border-top: 4px solid #EA580C; border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 3px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #9A3412; font-family: 'Exo', sans-serif;">
+                    🟧 4. Modelado & Partición
+                </div>
+                <div style="font-size: 0.7rem; color: #7C2D12; line-height: 1.25;">
+                    • ¿Qué tipo de tarea (clasificación, regresión)?<br>
+                    • ¿Cómo asegurar el *Split por Paciente*?<br>
+                    • ¿Qué algoritmos probar (RLo vs XGBoost)?<br>
+                    • ¿Cómo calibrar probabilidades (Brier Score)?
+                </div>
+            </div>
+
+            <!-- Quadrant 5: Evaluation (Green) -->
+            <div style="background: #DCFCE7; border: 1px solid #86EFAC; border-top: 4px solid #16A34A; border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 3px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #166534; font-family: 'Exo', sans-serif;">
+                    🟩 5. Evaluación Clínica
+                </div>
+                <div style="font-size: 0.7rem; color: #14532D; line-height: 1.25;">
+                    • ¿Qué métrica técnica manda (Sensibilidad/VPP)?<br>
+                    • ¿Cómo evaluar beneficio neto (Curva DCA)?<br>
+                    • ¿Cómo auditar sesgo (Fairness) poblacional?<br>
+                    • ¿Cuál es el criterio de parada o reajuste?
+                </div>
+            </div>
+
+            <!-- Quadrant 6: Deployment (Pink/Rose) -->
+            <div style="background: #FFE4E6; border: 1px solid #FDA4AF; border-top: 4px solid #E11D48; border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 3px; box-shadow: var(--shadow-sm);">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #9F1239; font-family: 'Exo', sans-serif;">
+                    🟥 6. Despliegue en Flujo EHR
+                </div>
+                <div style="font-size: 0.7rem; color: #881337; line-height: 1.25;">
+                    • ¿Integración Batch o Tiempo Real (CDS Hooks)?<br>
+                    • ¿Cómo prevenir fatiga de alarmas médicas?<br>
+                    • ¿Cómo se monitoreará el *Data Drift*?<br>
+                    • ¿Cada cuánto tiempo se reentrenará?
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Forward button -->
+        <div style="display: flex; justify-content: flex-end; margin-top: var(--space-xs);">
+            <button class="btn-primary" onclick="goToSlide(24)" style="padding: 6px 12px; font-size: 0.76rem; background: var(--color-crisp-blue);">
+                Paso 4: Pitch y Rúbrica de Cierre &rarr;
+            </button>
+        </div>
+
+    </div>
+</section>

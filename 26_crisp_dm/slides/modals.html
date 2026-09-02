@@ -1,0 +1,110 @@
+<!-- Modals Container for Presentation 26: CRISP-DM -->
+<div id="modals-wrapper">
+
+    <!-- Modal 1: Glosario de Conceptos Clave -->
+    <div class="modal-overlay" id="modal-glossary">
+        <div class="modal" style="max-width: 760px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-glossary')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag" style="background: #DBEAFE; color: var(--color-crisp-blue);">Glosario</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">Glosario Técnico de CRISP-DM en Salud</h3>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                <div style="background: #EFF6FF; padding: 10px 14px; border-radius: 8px; border-left: 4px solid var(--color-crisp-blue);">
+                    <strong>Data Leakage (Fuga de Información):</strong>
+                    <div>Inclusión inadvertida de información en el conjunto de entrenamiento que proviene de variables posteriores al evento clínico predecible o de la partición de prueba, inflando artificialmente el rendimiento del modelo.</div>
+                </div>
+                <div style="background: #ECFEFF; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #06B6D4;">
+                    <strong>MNAR (Missing Not At Random):</strong>
+                    <div>Patrón de datos faltantes donde la probabilidad de que un valor falte depende del valor no observado. En medicina: los exámenes diagnósticos solo se ordenan a pacientes con sospecha clínica, por lo que la ausencia de registro suele indicar normalidad.</div>
+                </div>
+                <div style="background: #EDE9FE; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #8B5CF6;">
+                    <strong>Patient-Level Split:</strong>
+                    <div>Estrategia de partición de datos donde todos los episodios, consultas o registros de un mismo paciente se asignan exclusivamente al conjunto de entrenamiento o al de prueba, evitando que el modelo memorice características individuales del sujeto.</div>
+                </div>
+                <div style="background: #FFFBEB; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #F59E0B;">
+                    <strong>Decision Curve Analysis (DCA):</strong>
+                    <div>Método para evaluar el beneficio clínico neto de un modelo predictivo frente a estrategias de "tratar a todos" o "no tratar a nadie", ponderando las consecuencias relativas de falsos positivos y falsos negativos en distintos umbrales de decisión.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Métricas de Calibración y Evaluación Clínica -->
+    <div class="modal-overlay" id="modal-calibration">
+        <div class="modal" style="max-width: 800px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-calibration')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag emerald">Métricas Médicas</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">Calibración Probabilística y Brier Score</h3>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #334155; line-height: 1.4;">
+                En salud, una predicción precisa de probabilidad es crucial para el consentimiento informado y la toma de decisiones clínicas compartidas.
+            </p>
+
+            <table class="table-custom" style="font-size: 0.82rem;">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Métrica / Concepto</th>
+                        <th>Definición y Relevancia Clínica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Brier Score</strong></td>
+                        <td>
+                            $$\text{BS} = \frac{1}{N} \sum_{i=1}^N (p_i - y_i)^2$$
+                            Mide el error cuadrático medio de las probabilidades pronosticadas $p_i$ respecto a los desenlaces reales binarios $y_i \in \{0, 1\}$. Varía de 0 (calibración perfecta) a 1.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Platt Scaling</strong></td>
+                        <td>
+                            Ajuste de una regresión logística univariada sobre las salidas del modelo para transformar puntuaciones brutas (logits o distancias al margen en SVM) en verdaderas probabilidades clínicas bien calibradas.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Isotonic Regression</strong></td>
+                        <td>
+                            Método no paramétrico que ajusta una función monótona creciente para calibrar probabilidades cuando el modelo presenta patrones de error no sigmoideos.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal 3: Integración SMART on FHIR y CDS Hooks -->
+    <div class="modal-overlay" id="modal-fhir-integration">
+        <div class="modal" style="max-width: 780px; width: 90%; max-height: 85vh; overflow-y: auto; background: white; border-radius: 16px; padding: var(--space-xl); position: relative;">
+            <button class="modal-close" onclick="closeModal('modal-fhir-integration')" style="position: absolute; top: 16px; right: 16px; font-size: 1.5rem; background: none; border: none; cursor: pointer;">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                <span class="badge-tag rose">Interoperabilidad</span>
+                <h3 style="color: #0F172A; margin: 0; font-family: 'Exo', sans-serif;">Despliegue con CDS Hooks y SMART on FHIR</h3>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                <div style="background: #FFF1F2; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #E11D48;">
+                    <strong>¿Qué es CDS Hooks?</strong>
+                    <div>Es una especificación estándar de HL7 que permite que los sistemas de Historia Clínica Electrónica (EHR) disparen llamadas automáticas (Hooks) a servicios analíticos externos en momentos clave del flujo médico (ej. <code>patient-view</code>, <code>order-select</code>, <code>order-sign</code>).</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 10px 14px; border-radius: 8px; border-left: 4px solid #2563EB;">
+                    <strong>Tarjetas de Respuesta (CDS Cards):</strong>
+                    <div>El servicio de inferencia de IA devuelve una tarjeta visual en JSON con:
+                        <ul style="margin: 4px 0 0 0; padding-left: 16px;">
+                            <li><strong>Information Card:</strong> Recomendación textual con probabilidad y factores de riesgo.</li>
+                            <li><strong>Suggestion Card:</strong> Sugerencia de orden (ej. solicitar lactato o iniciar antibiótico).</li>
+                            <li><strong>App Link:</strong> Enlace para abrir una app SMART on FHIR con el visor detallado.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

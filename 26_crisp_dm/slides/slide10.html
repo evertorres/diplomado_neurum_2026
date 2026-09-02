@@ -1,0 +1,83 @@
+<!-- Slide 10: Fase 5 - Evaluación -->
+<section class="slide" id="slide10">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag emerald" style="margin-right: 8px;">Fase 5 de 6</span>
+                <span class="badge-tag indigo">Evaluation</span>
+            </div>
+            <span class="badge-tag" style="background: #ECFDF5; color: #047857;">Validación Clínica & Decisión</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.6rem; color: var(--color-primary);">
+            Fase 5: Evaluación Clínica, Equidad y la Decisión de Despliegue
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-sm); font-size: 0.88rem; line-height: 1.35;">
+            Evalúa si el modelo <strong>realmente resuelve el objetivo clínico de la Fase 1</strong> y si cumple con los estándares éticos, de seguridad y explicabilidad antes de considerar su despliegue asistencial.
+        </p>
+
+        <!-- Main 2-Column Grid -->
+        <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--space-md); width: 100%; align-items: start;">
+            
+            <!-- Left: Clinical Metrics & Fairness -->
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <div style="font-size: 0.82rem; font-weight: 700; color: #0F172A; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--color-crisp-emerald);"></span>
+                    Dimensiones Críticas de la Evaluación
+                </div>
+
+                <div class="concept-card" style="padding: 7px 10px; border-left: 4px solid var(--color-crisp-emerald);">
+                    <strong style="color: #047857; font-size: 0.82rem; font-family: 'Exo', sans-serif;">1. Métricas Clínicas Más Allá del Accuracy</strong>
+                    <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                        Priorizar <strong>Sensibilidad / Recall</strong> (no omitir casos graves) y <strong>VPP / Precision</strong> (reducir falsas alarmas que saturan a médicos y enfermería).
+                    </p>
+                </div>
+
+                <div class="concept-card" style="padding: 7px 10px; border-left: 4px solid var(--color-crisp-blue);">
+                    <strong style="color: #1E40AF; font-size: 0.82rem; font-family: 'Exo', sans-serif;">2. Análisis de Curvas de Decisión (DCA)</strong>
+                    <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                        Evalúa el <em>beneficio neto clínico</em> ponderando el costo de un falso positivo frente al beneficio de un verdadero positivo en varios umbrales de decisión.
+                    </p>
+                </div>
+
+                <div class="concept-card" style="padding: 7px 10px; border-left: 4px solid var(--color-crisp-purple);">
+                    <strong style="color: #6D28D9; font-size: 0.82rem; font-family: 'Exo', sans-serif;">3. Auditoría de Equidad (Algorithmic Fairness)</strong>
+                    <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                        Verificar que el rendimiento no se degrade en subgrupos vulnerables (adultos mayores, mujeres, régimen subsidiado o minorías étnicas).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: The 3 Possible Decisions -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                
+                <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px; box-shadow: var(--shadow-sm);">
+                    <div style="font-size: 0.8rem; font-weight: 700; color: #0F172A; text-transform: uppercase; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                        <span>⚖️</span> La Decisión Metodológica (Paso Siguiente)
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 6px; padding: 6px 10px; font-size: 0.74rem; color: #065F46;">
+                            <strong>A. Aprobar para Despliegue:</strong> El modelo supera los criterios de la Fase 1 y no presenta riesgos éticos críticos.
+                        </div>
+                        <div style="background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 6px; padding: 6px 10px; font-size: 0.74rem; color: #92400E;">
+                            <strong>B. Iterar a Fases Anteriores:</strong> Reajustar features (Fase 3), calibración (Fase 4) o redefinir el corte temporal.
+                        </div>
+                        <div style="background: #FFF1F2; border: 1px solid #FECDD3; border-radius: 6px; padding: 6px 10px; font-size: 0.74rem; color: #9F1239;">
+                            <strong>C. Cancelar / Abortar:</strong> El dato no tiene señal suficiente o el riesgo clínico supera ampliamente el beneficio.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Phase Button -->
+                <div style="display: flex; justify-content: flex-end;">
+                    <button class="btn-primary" onclick="goToSlide(11)" style="padding: 6px 14px; font-size: 0.78rem; background: var(--color-crisp-rose);">
+                        Ir a Fase 6: Despliegue &rarr;
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

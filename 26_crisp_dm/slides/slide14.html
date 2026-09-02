@@ -1,0 +1,73 @@
+<!-- Slide 14: Mapa de Roles Multidisciplinarios en CRISP-DM en Salud -->
+<section class="slide" id="slide14">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag indigo" style="margin-right: 8px;">Gobernanza y Equipos</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 14</span>
+            </div>
+            <span class="badge-tag" style="background: #EFF6FF; color: var(--color-crisp-blue);">Sinergia Clínica y Técnica</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.6rem; color: var(--color-primary);">
+            Mapa de Roles Multidisciplinarios en el Ciclo CRISP-DM
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-sm); font-size: 0.88rem; line-height: 1.35;">
+            Un proyecto de ciencia de datos en salud no puede ser ejecutado por un único perfil. Requiere la articulación de roles clínicos, analíticos, de ingeniería y gobernanza.
+        </p>
+
+        <!-- RACI Matrix / Roles Table -->
+        <div style="width: 100%;">
+            <table class="table-custom">
+                <thead>
+                    <tr>
+                        <th style="width: 22%;">Rol del Equipo</th>
+                        <th style="width: 38%;">Responsabilidad Principal en CRISP-DM</th>
+                        <th style="width: 20%;">Fases Clave</th>
+                        <th style="width: 20%;">Perfil / Profesión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong style="color: #1E40AF;">Sponsor Clínico / Médico Experto</strong></td>
+                        <td style="font-size: 0.78rem;">Define la necesidad médica, valida la plausibilidad biológica de variables y evalúa el beneficio asistencial.</td>
+                        <td><span class="badge-tag" style="font-size: 0.68rem; padding: 2px 6px;">Fase 1, 5 y 6</span></td>
+                        <td style="font-size: 0.76rem; color: #475569;">Médico Especialista / Epidemiólogo</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #0E7490;">Ingeniero de Datos / Biomédico</strong></td>
+                        <td style="font-size: 0.78rem;">Extracción segura de EHR, mapeo a terminologías (SNOMED, LOINC, OMOP), pipelines ETL y curaduría.</td>
+                        <td><span class="badge-tag cyan" style="font-size: 0.68rem; padding: 2px 6px;">Fase 2 y 3</span></td>
+                        <td style="font-size: 0.76rem; color: #475569;">Ingeniero Biomédico / Data Engineer</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #6D28D9;">Científico de Datos (Data Scientist)</strong></td>
+                        <td style="font-size: 0.78rem;">Diseño de experimentos, feature engineering clínico, entrenamiento algorítmico, calibración y métricas.</td>
+                        <td><span class="badge-tag purple" style="font-size: 0.68rem; padding: 2px 6px;">Fase 3, 4 y 5</span></td>
+                        <td style="font-size: 0.76rem; color: #475569;">Científico de Datos / Estadístico</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #B45309;">Ingeniero MLOps / Infraestructura</strong></td>
+                        <td style="font-size: 0.78rem;">Despliegue en contenedores, integración con APIs/FHIR, pipelines CI/CD y monitoreo de drift.</td>
+                        <td><span class="badge-tag amber" style="font-size: 0.68rem; padding: 2px 6px;">Fase 6</span></td>
+                        <td style="font-size: 0.76rem; color: #475569;">Ingeniero MLOps / DevOps Cloud</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #BE123C;">Oficial de Ética, Legal y Privacidad</strong></td>
+                        <td style="font-size: 0.78rem;">Aprobación de comités de ética, cumplimiento de anonimización (HIPAA/Habeas Data) y auditoría de sesgos.</td>
+                        <td><span class="badge-tag rose" style="font-size: 0.68rem; padding: 2px 6px;">Transversal</span></td>
+                        <td style="font-size: 0.76rem; color: #475569;">Abogado en Salud / Bioeticista</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Forward button -->
+        <div style="display: flex; justify-content: flex-end; margin-top: var(--space-xs);">
+            <button class="btn-primary" onclick="goToSlide(15)" style="padding: 6px 14px; font-size: 0.78rem; background: var(--color-crisp-rose);">
+                Ver Errores Fatales &rarr;
+            </button>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,72 @@
+<!-- Slide 19: Tabla Síntesis del Ciclo de Vida CRISP-DM -->
+<section class="slide" id="slide19">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag indigo" style="margin-right: 8px;">Resumen Ejecutivo</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 19</span>
+            </div>
+            <span class="badge-tag" style="background: #EFF6FF; color: var(--color-crisp-blue);">Matriz Maestra de Fases</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.55rem; color: var(--color-primary);">
+            Matriz Consolidada: Fases, Tareas Clave y Entregables en Salud
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-xs); font-size: 0.85rem; line-height: 1.35;">
+            Guía rápida de referencia para la gestión integral de proyectos de ciencia de datos e IA en instituciones sanitarias.
+        </p>
+
+        <!-- Master Table -->
+        <div style="width: 100%;">
+            <table class="table-custom">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Fase CRISP-DM</th>
+                        <th style="width: 45%;">Actividades Nucleares en Salud</th>
+                        <th style="width: 35%;">Entregable Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong style="color: #1E40AF;">1. Comprensión Negocio</strong></td>
+                        <td style="font-size: 0.76rem;">Definir dolor clínico, traducir a tarea ML, evaluar viabilidad y definir criterios de éxito asistencial.</td>
+                        <td style="font-size: 0.76rem; color: #1E40AF; font-weight: 600;">Project Charter & Definición de Outcome</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #0E7490;">2. Comprensión Datos</strong></td>
+                        <td style="font-size: 0.76rem;">Extracción de EHR/LIS/RIPS, análisis exploratorio de calidad, valores faltantes y sesgos de selección.</td>
+                        <td style="font-size: 0.76rem; color: #0E7490; font-weight: 600;">Informe EDA & Diccionario de Datos</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #6D28D9;">3. Preparación Datos</strong></td>
+                        <td style="font-size: 0.76rem;">Definir ventanas temporales, imputación clínica, cálculo de scores (Charlson, SOFA) y filtrado de cohorte.</td>
+                        <td style="font-size: 0.76rem; color: #6D28D9; font-weight: 600;">Dataset Analítico Tabular Limpio</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #B45309;">4. Modelado</strong></td>
+                        <td style="font-size: 0.76rem;">Partición por paciente (Split temporal), entrenamiento de modelos supervisados y calibración de probabilidades.</td>
+                        <td style="font-size: 0.76rem; color: #B45309; font-weight: 600;">Modelos Calibrados & Reporte Técnico</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #047857;">5. Evaluación</strong></td>
+                        <td style="font-size: 0.76rem;">Curvas DCA, Sensibilidad/VPP, auditoría de sesgos (Fairness) y validación de impacto con el equipo médico.</td>
+                        <td style="font-size: 0.76rem; color: #047857; font-weight: 600;">Dictamen Clínico de Aprobación</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: #BE123C;">6. Despliegue</strong></td>
+                        <td style="font-size: 0.76rem;">Integración vía CDS Hooks / SMART on FHIR en EHR, capacitación asistencial y monitoreo de drift continuo.</td>
+                        <td style="font-size: 0.76rem; color: #BE123C; font-weight: 600;">Solución en Producción & Plan MLOps</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Forward button -->
+        <div style="display: flex; justify-content: flex-end; margin-top: var(--space-xs);">
+            <button class="btn-primary" onclick="goToSlide(20)" style="padding: 6px 14px; font-size: 0.78rem; background: var(--color-crisp-blue);">
+                Conclusiones y Recursos &rarr;
+            </button>
+        </div>
+
+    </div>
+</section>

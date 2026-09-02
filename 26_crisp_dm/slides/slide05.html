@@ -1,0 +1,97 @@
+<!-- Slide 05: La Naturaleza Cíclica e Iterativa de CRISP-DM -->
+<section class="slide" id="slide05">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag" style="background: #EFF6FF; color: var(--color-crisp-blue); margin-right: 8px;">El Motor Metodológico</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 5</span>
+            </div>
+            <span class="badge-tag emerald">Proceso Adaptativo</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.6rem; color: var(--color-primary);">
+            La Naturaleza Cíclica: Los 3 Bucles de Retroalimentación Esenciales
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-sm); font-size: 0.88rem; line-height: 1.35;">
+            CRISP-DM <strong>no es un proceso lineal en cascada</strong>. La secuencia de fases no es rígida; los descubrimientos en una etapa frecuentemente disparan ajustes en etapas anteriores.
+        </p>
+
+        <!-- 3 Core Feedback Loops in Cards -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); width: 100%; margin-top: 4px;">
+            
+            <!-- Loop 1 -->
+            <div style="background: white; border: 1px solid #BFDBFE; border-top: 5px solid var(--color-crisp-blue); border-radius: 12px; padding: 12px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+                    <span style="font-size: 1.1rem;">🔁</span>
+                    <strong style="color: #1E3A8A; font-size: 0.88rem; font-family: 'Exo', sans-serif;">
+                        Bucle 1: Negocio ↔ Datos
+                    </strong>
+                </div>
+                <div style="font-size: 0.76rem; color: #1E40AF; background: #DBEAFE; padding: 4px 8px; border-radius: 6px; font-weight: 600; margin-bottom: 6px;">
+                    Fase 1 (Negocio) ↔ Fase 2 (Datos)
+                </div>
+                <p style="font-size: 0.77rem; color: #334155; line-height: 1.35; margin: 0;">
+                    Al explorar los datos reales en el EHR, se descubren vacíos de registro o inconsistencias que obligan a redefinir la pregunta clínica o acotar la cohorte del proyecto.
+                </p>
+                <div style="margin-top: auto; padding-top: 8px; font-size: 0.72rem; color: #64748B; font-style: italic;">
+                    Ejemplo: El laboratorio de troponina solo se digitalizó desde 2023.
+                </div>
+            </div>
+
+            <!-- Loop 2 -->
+            <div style="background: white; border: 1px solid #DDD6FE; border-top: 5px solid var(--color-crisp-purple); border-radius: 12px; padding: 12px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+                    <span style="font-size: 1.1rem;">⚙️</span>
+                    <strong style="color: #5B21B6; font-size: 0.88rem; font-family: 'Exo', sans-serif;">
+                        Bucle 2: Preparación ↔ Modelado
+                    </strong>
+                </div>
+                <div style="font-size: 0.76rem; color: #6D28D9; background: #EDE9FE; padding: 4px 8px; border-radius: 6px; font-weight: 600; margin-bottom: 6px;">
+                    Fase 3 (Prep) ↔ Fase 4 (Modelado)
+                </div>
+                <p style="font-size: 0.77rem; color: #334155; line-height: 1.35; margin: 0;">
+                    Durante el entrenamiento de modelos surgen necesidades de nuevas transformaciones: escalado no lineal, imputaciones específicas por comorbilidad o codificación de variables clínicas.
+                </p>
+                <div style="margin-top: auto; padding-top: 8px; font-size: 0.72rem; color: #64748B; font-style: italic;">
+                    Ejemplo: Crear un índice de shock ($FC / PAS$) para mejorar el clasificador.
+                </div>
+            </div>
+
+            <!-- Loop 3 -->
+            <div style="background: white; border: 1px solid #A7F3D0; border-top: 5px solid var(--color-crisp-emerald); border-radius: 12px; padding: 12px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+                    <span style="font-size: 1.1rem;">🩺</span>
+                    <strong style="color: #065F46; font-size: 0.88rem; font-family: 'Exo', sans-serif;">
+                        Bucle 3: Evaluación ↔ Negocio
+                    </strong>
+                </div>
+                <div style="font-size: 0.76rem; color: #047857; background: #D1FAE5; padding: 4px 8px; border-radius: 6px; font-weight: 600; margin-bottom: 6px;">
+                    Fase 5 (Eval) ↔ Fase 1 (Negocio)
+                </div>
+                <p style="font-size: 0.77rem; color: #334155; line-height: 1.35; margin: 0;">
+                    Al evaluar con el comité clínico, el modelo puede tener alta sensibilidad pero generar demasiadas falsas alarmas que saturan a enfermería. Se decide ajustar el umbral o la definición del desenlace.
+                </p>
+                <div style="margin-top: auto; padding-top: 8px; font-size: 0.72rem; color: #64748B; font-style: italic;">
+                    Ejemplo: Redefinir la ventana de alerta de 2h a 6h antes del shock.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Interactive Phase Navigation Bar -->
+        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 10px 14px; margin-top: var(--space-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-size: 0.82rem; font-weight: 700; color: #0F172A; font-family: 'Exo', sans-serif;">
+                Explora las 6 Fases en Detalle:
+            </span>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                <button class="phase-step-pill" style="border-color: #2563EB; color: #1E40AF;" onclick="goToSlide(6)">1. Negocio</button>
+                <button class="phase-step-pill" style="border-color: #06B6D4; color: #0E7490;" onclick="goToSlide(7)">2. Datos</button>
+                <button class="phase-step-pill" style="border-color: #8B5CF6; color: #6D28D9;" onclick="goToSlide(8)">3. Preparación</button>
+                <button class="phase-step-pill" style="border-color: #F59E0B; color: #B45309;" onclick="goToSlide(9)">4. Modelado</button>
+                <button class="phase-step-pill" style="border-color: #10B981; color: #047857;" onclick="goToSlide(10)">5. Evaluación</button>
+                <button class="phase-step-pill" style="border-color: #E11D48; color: #BE123C;" onclick="goToSlide(11)">6. Despliegue</button>
+            </div>
+        </div>
+
+    </div>
+</section>

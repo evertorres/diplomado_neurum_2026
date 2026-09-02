@@ -1,0 +1,87 @@
+<!-- Slide 16: Evolución a CRISP-ML(Q) -->
+<section class="slide" id="slide16">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag" style="background: #EFF6FF; color: var(--color-crisp-blue); margin-right: 8px;">Evolución Metodológica</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 16</span>
+            </div>
+            <span class="badge-tag emerald">Garantía de Calidad (QA)</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.6rem; color: var(--color-primary);">
+            De CRISP-DM a CRISP-ML(Q): Calidad de Grado Médico
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-sm); font-size: 0.88rem; line-height: 1.35;">
+            Propuesta por investigadores de la industria y la academia (Studer et al., 2021), <strong>CRISP-ML(Q)</strong> expande el proceso clásico integrando un marco explícito de <em>Aseguramiento de la Calidad (Quality Assurance)</em> en cada etapa.
+        </p>
+
+        <!-- 4 QA Stages Grid -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; width: 100%;">
+            
+            <!-- Stage 1 -->
+            <div style="background: white; border: 1px solid #BFDBFE; border-top: 4px solid #2563EB; border-radius: 10px; padding: 10px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #1E40AF; font-family: 'Exo', sans-serif; margin-bottom: 4px;">
+                    1. Requisitos de Calidad
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; line-height: 1.3; margin: 0;">
+                    Definición de KPIs clínicos, robustez ante ruido, explicabilidad mínima requerida y restricciones regulatorias (SaMD / FDA / CE).
+                </p>
+                <div style="margin-top: auto; padding-top: 6px; font-size: 0.68rem; color: #1E40AF; font-weight: 600;">
+                    QA: Auditoría de Viabilidad
+                </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div style="background: white; border: 1px solid #A5F3FC; border-top: 4px solid #06B6D4; border-radius: 10px; padding: 10px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #0E7490; font-family: 'Exo', sans-serif; margin-bottom: 4px;">
+                    2. Calidad de Datos
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; line-height: 1.3; margin: 0;">
+                    Monitoreo de completitud, validez de tipos, detección de sesgos demográficos e integridad referencial de historias clínicas.
+                </p>
+                <div style="margin-top: auto; padding-top: 6px; font-size: 0.68rem; color: #0E7490; font-weight: 600;">
+                    QA: Tests Unitarios de Datos
+                </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div style="background: white; border: 1px solid #DDD6FE; border-top: 4px solid #8B5CF6; border-radius: 10px; padding: 10px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #6D28D9; font-family: 'Exo', sans-serif; margin-bottom: 4px;">
+                    3. Calidad de Modelos
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; line-height: 1.3; margin: 0;">
+                    Verificación de sobreajuste, pruebas de robustez adversaria, auditoría de sesgo algorítmico y reproducibilidad con semillas fijas.
+                </p>
+                <div style="margin-top: auto; padding-top: 6px; font-size: 0.68rem; color: #6D28D9; font-weight: 600;">
+                    QA: Benchmarks & Fairness
+                </div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div style="background: white; border: 1px solid #FECDD3; border-top: 4px solid #E11D48; border-radius: 10px; padding: 10px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #9F1239; font-family: 'Exo', sans-serif; margin-bottom: 4px;">
+                    4. Calidad en Producción
+                </div>
+                <p style="font-size: 0.72rem; color: #334155; line-height: 1.3; margin: 0;">
+                    Garantía de latencia de inferencia (&lt; 200 ms), pipelines de reentrenamiento continuo automatizado y monitoreo de deriva.
+                </p>
+                <div style="margin-top: auto; padding-top: 6px; font-size: 0.68rem; color: #9F1239; font-weight: 600;">
+                    QA: Monitor de Drift Activo
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Connection to MLOps -->
+        <div style="display: flex; gap: var(--space-md); margin-top: var(--space-xs); align-items: center;">
+            <div class="quote-box" style="margin: 0; padding: 8px 12px; font-size: 0.78rem; flex: 1;">
+                <strong>Por qué es vital en Salud:</strong> CRISP-ML(Q) transforma el desarrollo artesanal en una práctica de ingeniería médica certificable bajo normas de calidad ISO/IEC y marcos regulatorios de IA en Salud.
+            </div>
+            <button class="btn-primary" onclick="goToSlide(17)" style="padding: 7px 14px; font-size: 0.8rem; background: var(--color-crisp-blue); white-space: nowrap;">
+                Ver Ecosistema MLOps &rarr;
+            </button>
+        </div>
+
+    </div>
+</section>

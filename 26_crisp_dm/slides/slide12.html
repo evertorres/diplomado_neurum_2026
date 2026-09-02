@@ -1,0 +1,75 @@
+<!-- Slide 12: Mantenimiento y Monitoreo Continuo: Drift en Salud -->
+<section class="slide" id="slide12">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag amber" style="margin-right: 8px;">Vida en Producción</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 12</span>
+            </div>
+            <span class="badge-tag rose">Vigilancia Post-Despliegue</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.6rem; color: var(--color-primary);">
+            Mantenimiento y Monitoreo Continuo: Data Drift y Concept Drift en Salud
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-sm); font-size: 0.88rem; line-height: 1.35;">
+            Los modelos clínicos en producción se degradan inevitablemente con el tiempo debido a cambios en la población, protocolos asistenciales o tecnologías de diagnóstico.
+        </p>
+
+        <!-- 2-Column Comparison Grid: Data Drift vs Concept Drift -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); width: 100%; align-items: start;">
+            
+            <!-- Data Drift Card (Covariate Shift) -->
+            <div style="background: white; border: 1px solid #BFDBFE; border-top: 5px solid var(--color-crisp-blue); border-radius: 12px; padding: 12px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                    <strong style="color: #1E40AF; font-size: 0.88rem; font-family: 'Exo', sans-serif;">
+                        1. Deriva de Datos (Data Drift / Covariate Shift)
+                    </strong>
+                    <span style="font-size: 0.7rem; font-family: 'Roboto Mono', monospace; background: #DBEAFE; color: #1E40AF; padding: 2px 6px; border-radius: 4px;">$P(X) \neq P'(X)$</span>
+                </div>
+                <p style="font-size: 0.76rem; color: #334155; line-height: 1.35; margin: 0 0 6px 0;">
+                    Cambia la distribución de las variables de entrada ($X$), aunque la relación patológica se mantenga.
+                </p>
+                <div style="background: #F8FAFC; border-left: 3px solid var(--color-crisp-blue); padding: 6px 10px; border-radius: 0 6px 6px 0; font-size: 0.74rem; color: #1E3A8A;">
+                    <strong>Ejemplos en Salud:</strong>
+                    <ul style="margin: 2px 0 0 0; padding-left: 14px;">
+                        <li>Cambio de proveedor de reactivos de troponina (nuevos rangos de corte).</li>
+                        <li>Envejecimiento demográfico en la población atendida por la IPS.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Concept Drift Card -->
+            <div style="background: white; border: 1px solid #FECDD3; border-top: 5px solid var(--color-crisp-rose); border-radius: 12px; padding: 12px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                    <strong style="color: #9F1239; font-size: 0.88rem; font-family: 'Exo', sans-serif;">
+                        2. Deriva de Concepto (Concept Drift)
+                    </strong>
+                    <span style="font-size: 0.7rem; font-family: 'Roboto Mono', monospace; background: #FFE4E6; color: #9F1239; padding: 2px 6px; border-radius: 4px;">$P(Y|X) \neq P'(Y|X)$</span>
+                </div>
+                <p style="font-size: 0.76rem; color: #334155; line-height: 1.35; margin: 0 0 6px 0;">
+                    Cambia la relación entre las características ($X$) y el desenlace clínico ($Y$).
+                </p>
+                <div style="background: #FFF1F2; border-left: 3px solid var(--color-crisp-rose); padding: 6px 10px; border-radius: 0 6px 6px 0; font-size: 0.74rem; color: #881337;">
+                    <strong>Ejemplos en Salud:</strong>
+                    <ul style="margin: 2px 0 0 0; padding-left: 14px;">
+                        <li>Nueva guía de manejo clínico que administra antibiótico profiláctico masivo.</li>
+                        <li>Aparición de una nueva cepa o variante viral con menor tasa de UCI.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Monitoring Strategy Bar -->
+        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 10px 14px; margin-top: var(--space-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <div style="font-size: 0.78rem; color: #334155;">
+                <strong style="color: var(--color-crisp-blue);">Métricas de Alerta de Reentrenamiento:</strong> Test de Kolmogorov-Smirnov, Population Stability Index (PSI) &gt; 0.2, o caída &gt; 5% en Sensibilidad clínica.
+            </div>
+            <button class="btn-primary" onclick="goToSlide(13)" style="padding: 6px 14px; font-size: 0.78rem; background: var(--color-crisp-blue); white-space: nowrap;">
+                Ver Caso Clínico End-to-End &rarr;
+            </button>
+        </div>
+
+    </div>
+</section>

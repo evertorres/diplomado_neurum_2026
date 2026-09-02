@@ -1,0 +1,92 @@
+<!-- Slide 15: Los 5 Errores Fatales al Implementar CRISP-DM en Salud -->
+<section class="slide" id="slide15">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag rose" style="margin-right: 8px;">Lecciones Aprendidas</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 15</span>
+            </div>
+            <span class="badge-tag amber">Antipatrones en Salud</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.6rem; color: var(--color-primary);">
+            Los 5 Errores Fatales al Aplicar CRISP-DM en Salud (y Cómo Prevenirlos)
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-sm); font-size: 0.88rem; line-height: 1.35;">
+            Evitar estos antipatrones comunes ahorra meses de trabajo estéril y previene riesgos de daño asistencial involuntario.
+        </p>
+
+        <!-- 5 Mistakes Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); width: 100%;">
+            
+            <!-- Mistake 1 -->
+            <div style="background: white; border: 1px solid #FECDD3; border-left: 4px solid #E11D48; border-radius: 8px; padding: 8px 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #9F1239; font-size: 0.82rem;">1. Fuga de Datos Temporal (Data Leakage)</strong>
+                    <span style="font-size: 0.68rem; background: #FFE4E6; color: #BE123C; padding: 1px 6px; border-radius: 4px; font-weight: 700;">Fase 3</span>
+                </div>
+                <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                    <em>Error:</em> Incluir un medicamento prescrito <em>después</em> del choque séptico como predictor.<br>
+                    <strong style="color: #059669;">Prevención:</strong> Congelar estrictamente la ventana temporal al momento $t_0$.
+                </p>
+            </div>
+
+            <!-- Mistake 2 -->
+            <div style="background: white; border: 1px solid #FECDD3; border-left: 4px solid #E11D48; border-radius: 8px; padding: 8px 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #9F1239; font-size: 0.82rem;">2. Split Aleatorio sin Agrupar por Paciente</strong>
+                    <span style="font-size: 0.68rem; background: #FFE4E6; color: #BE123C; padding: 1px 6px; border-radius: 4px; font-weight: 700;">Fase 4</span>
+                </div>
+                <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                    <em>Error:</em> Si un paciente crónico tiene 10 ingresos, 8 quedan en Train y 2 en Test (memorización).<br>
+                    <strong style="color: #059669;">Prevención:</strong> Aplicar <code>GroupKFold</code> o partición estricta a nivel de paciente.
+                </p>
+            </div>
+
+            <!-- Mistake 3 -->
+            <div style="background: white; border: 1px solid #FECDD3; border-left: 4px solid #E11D48; border-radius: 8px; padding: 8px 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #9F1239; font-size: 0.82rem;">3. Ignorar los Valores Faltantes Informativos</strong>
+                    <span style="font-size: 0.68rem; background: #FFE4E6; color: #BE123C; padding: 1px 6px; border-radius: 4px; font-weight: 700;">Fase 2 / 3</span>
+                </div>
+                <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                    <em>Error:</em> Imputar lactato faltante con la media poblacional distorsiona la fisiología.<br>
+                    <strong style="color: #059669;">Prevención:</strong> Crear indicadores booleanos de "laboratorio no ordenado".
+                </p>
+            </div>
+
+            <!-- Mistake 4 -->
+            <div style="background: white; border: 1px solid #FECDD3; border-left: 4px solid #E11D48; border-radius: 8px; padding: 8px 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #9F1239; font-size: 0.82rem;">4. Desplegar sin Explicabilidad Médica</strong>
+                    <span style="font-size: 0.68rem; background: #FFE4E6; color: #BE123C; padding: 1px 6px; border-radius: 4px; font-weight: 700;">Fase 5 / 6</span>
+                </div>
+                <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                    <em>Error:</em> Enviar solo una probabilidad ($P=0.91$) sin decir qué variables motivaron la alerta.<br>
+                    <strong style="color: #059669;">Prevención:</strong> Acompañar cada inferencia con explicaciones locales SHAP / LIME.
+                </p>
+            </div>
+
+            <!-- Mistake 5 (Full Width Span) -->
+            <div style="grid-column: span 2; background: white; border: 1px solid #FECDD3; border-left: 4px solid #E11D48; border-radius: 8px; padding: 8px 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #9F1239; font-size: 0.82rem;">5. "Lanzar y Olvidar" (No Diseñar Monitoreo de Data Drift)</strong>
+                    <span style="font-size: 0.68rem; background: #FFE4E6; color: #BE123C; padding: 1px 6px; border-radius: 4px; font-weight: 700;">Fase 6</span>
+                </div>
+                <p style="font-size: 0.74rem; color: #334155; margin: 2px 0 0 0; line-height: 1.25;">
+                    <em>Error:</em> Asumir que el modelo entrenado en 2024 funcionará indefinidamente en 2026 sin supervisar cambios de reactivos o protocolos.<br>
+                    <strong style="color: #059669;">Prevención:</strong> Configurar dashboards automatizados de deriva y auditorías clínicas periódicas.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Forward button -->
+        <div style="display: flex; justify-content: flex-end; margin-top: var(--space-xs);">
+            <button class="btn-primary" onclick="goToSlide(16)" style="padding: 6px 14px; font-size: 0.78rem; background: var(--color-crisp-blue);">
+                Ver Evolución a CRISP-ML(Q) &rarr;
+            </button>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,70 @@
+<!-- Slide 18: Checklist Interactivo de Auditoría y Puertas de Calidad -->
+<section class="slide" id="slide18">
+    <div class="slide-content left">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: var(--space-xs); flex-wrap: wrap; gap: 8px;">
+            <div>
+                <span class="badge-tag emerald" style="margin-right: 8px;">Herramienta Práctica</span>
+                <span class="badge-tag indigo">Módulo 26 • Diapositiva 18</span>
+            </div>
+            <span class="badge-tag" style="background: #EFF6FF; color: var(--color-crisp-blue);">Puertas de Calidad (Quality Gates)</span>
+        </div>
+
+        <h2 style="margin-bottom: 2px; font-size: 1.55rem; color: var(--color-primary);">
+            Checklist de Auditoría: Puertas de Calidad por Fase
+        </h2>
+        <p style="color: var(--color-secondary); margin-bottom: var(--space-xs); font-size: 0.85rem; line-height: 1.35;">
+            Ningún equipo debe avanzar a la siguiente fase sin verificar el cumplimiento de estos criterios de control de calidad clínico y técnico:
+        </p>
+
+        <!-- Interactive Checklist Items in 2 Columns -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); width: 100%;">
+            
+            <!-- Phase 1 & 2 -->
+            <div>
+                <div style="font-size: 0.78rem; font-weight: 700; color: #1E40AF; text-transform: uppercase; margin-bottom: 4px; font-family: 'Exo', sans-serif;">
+                    Fase 1: Negocio &bull; Fase 2: Datos
+                </div>
+                <label class="interactive-checklist-item">
+                    <input type="checkbox" checked>
+                    <span style="font-size: 0.74rem; color: #334155;">¿El problema clínico tiene un *sponsor* médico activo asignado?</span>
+                </label>
+                <label class="interactive-checklist-item">
+                    <input type="checkbox" checked>
+                    <span style="font-size: 0.74rem; color: #334155;">¿Se definieron métricas clínicas de éxito antes de modelar?</span>
+                </label>
+                <label class="interactive-checklist-item">
+                    <input type="checkbox" checked>
+                    <span style="font-size: 0.74rem; color: #334155;">¿Se auditó la tasa de datos faltantes y su naturaleza MNAR?</span>
+                </label>
+            </div>
+
+            <!-- Phase 3, 4 & 5 -->
+            <div>
+                <div style="font-size: 0.78rem; font-weight: 700; color: #047857; text-transform: uppercase; margin-bottom: 4px; font-family: 'Exo', sans-serif;">
+                    Fase 3: Prep &bull; Fase 4: Modelo &bull; Fase 5: Eval & Despliegue
+                </div>
+                <label class="interactive-checklist-item">
+                    <input type="checkbox" checked>
+                    <span style="font-size: 0.74rem; color: #334155;">¿Se garantizó que la partición Train/Test fue a nivel de <strong>paciente</strong>?</span>
+                </label>
+                <label class="interactive-checklist-item">
+                    <input type="checkbox" checked>
+                    <span style="font-size: 0.74rem; color: #334155;">¿Se verificó la calibración de probabilidades (Brier Score)?</span>
+                </label>
+                <label class="interactive-checklist-item">
+                    <input type="checkbox" checked>
+                    <span style="font-size: 0.74rem; color: #334155;">¿Existe un plan de monitoreo activo de *Data Drift* en producción?</span>
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Forward button -->
+        <div style="display: flex; justify-content: flex-end; margin-top: var(--space-xs);">
+            <button class="btn-primary" onclick="goToSlide(19)" style="padding: 6px 14px; font-size: 0.78rem; background: var(--color-crisp-blue);">
+                Ver Tabla Síntesis del Ciclo &rarr;
+            </button>
+        </div>
+
+    </div>
+</section>
