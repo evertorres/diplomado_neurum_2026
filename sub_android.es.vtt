@@ -1,0 +1,1151 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.280 --> 00:00:06.520 align:start position:19%
+si tú quieres desarrollar un producto de
+software óptimo este video te interesa
+
+00:00:04.480 --> 00:00:10.240 align:start position:19%
+ya que te explicaré paso por paso el
+modelo de desarrollo estándar que
+
+00:00:08.040 --> 00:00:14.000 align:start position:19%
+utilizan los expertos en ia en la
+industria del desarrollo del Software es
+
+00:00:12.240 --> 00:00:17.600 align:start position:19%
+común seguir alguna metodología o
+estándar al desarrollar un producto
+
+00:00:16.199 --> 00:00:22.199 align:start position:19%
+estos protocolos recomiendan la
+ejecución de ciertas tareas para obtener
+
+00:00:19.560 --> 00:00:25.920 align:start position:19%
+un producto de software óptimo además al
+identificar claramente las etapas del
+
+00:00:24.160 --> 00:00:29.240 align:start position:19%
+ciclo de desarrollo puedes reducir
+cuellos de botella y facilitar la
+
+00:00:27.920 --> 00:00:32.520 align:start position:19%
+coordinación entre diferentes
+colaboradores o grupos que se encuentran
+
+00:00:31.160 --> 00:00:36.520 align:start position:19%
+trabajando en el desarrollo de una
+aplicación el framework de desarrollo
+
+00:00:34.399 --> 00:00:40.920 align:start position:19%
+que veremos a continuación se le conoce
+como crisp DM y es un modelo estándar
+
+00:00:39.360 --> 00:00:46.000 align:start position:19%
+que fue desarrollado por expertos en
+minería de datos en los años 90 Este
+
+00:00:43.399 --> 00:00:50.800 align:start position:19%
+modelo consta de seis etapas comprensión
+del negocio comprensión de los datos
+
+00:00:48.280 --> 00:00:56.280 align:start position:19%
+preparación de los datos fase de
+modelado evaluación y despliegue Como se
+
+00:00:54.000 --> 00:01:00.320 align:start position:19%
+muestra en la figura estas etapas forman
+un ciclo y para obtener una mejora
+
+00:00:58.320 --> 00:01:04.400 align:start position:19%
+continua es necesario iterar entre las
+diferentes etapas desde el planteamiento
+
+00:01:02.399 --> 00:01:09.360 align:start position:19%
+del problema y extracción de datos hasta
+la
+
+00:01:05.439 --> 00:01:13.720 align:start position:19%
+evaluación etapa uno comprensión del
+negocio la primera etapa es definir
+
+00:01:12.159 --> 00:01:18.200 align:start position:19%
+claramente el problema que quieres
+resolver para esto debes realizar cinco
+
+00:01:15.600 --> 00:01:22.280 align:start position:19%
+pasos paso uno identificar El dominio de
+aplicación cuando implementas una
+
+00:01:19.720 --> 00:01:25.799 align:start position:19%
+solución con ia es indispensable que
+cuentes con un experto que te asesore
+
+00:01:24.079 --> 00:01:29.880 align:start position:19%
+sobre las particularidades del problema
+y del área de aplicación Por ejemplo si
+
+00:01:28.119 --> 00:01:33.399 align:start position:19%
+trabajas con imágenes médicas deber
+deberías trabajar de la mano con médicos
+
+00:01:31.640 --> 00:01:36.880 align:start position:19%
+de la misma forma si trabajas en una
+aplicación para generar contratos
+
+00:01:34.840 --> 00:01:40.720 align:start position:19%
+legales mediante ia es necesario que
+tengas asesoría de un abogado trabajar
+
+00:01:38.920 --> 00:01:44.320 align:start position:19%
+de la mano con un experto del dominio de
+aplicación te permitirá conocer las
+
+00:01:42.840 --> 00:01:47.759 align:start position:19%
+particularidades del problema que solo
+Los profesionales con años de
+
+00:01:45.560 --> 00:01:51.719 align:start position:19%
+experiencia conocen además te
+compartirán los puntos débiles de las
+
+00:01:49.560 --> 00:01:55.719 align:start position:19%
+soluciones tradicionales paso dos
+identificar el área computacional El
+
+00:01:53.880 --> 00:01:59.360 align:start position:19%
+segundo paso es identificar el área
+computacional a la que pertenece el
+
+00:01:57.320 --> 00:02:03.159 align:start position:19%
+problema Por ejemplo si trabajarás con
+imagen esos videos tienes un problema de
+
+00:02:01.680 --> 00:02:07.640 align:start position:19%
+visión por computadora si quieres
+implementar un chatbot generar libros o
+
+00:02:05.399 --> 00:02:11.120 align:start position:19%
+guiones de películas utilizando ia o
+hacer un sistema de reconocimiento de
+
+00:02:09.319 --> 00:02:14.319 align:start position:19%
+voz tu problema cae en el área de
+procesamiento del lenguaje natural si lo
+
+00:02:13.000 --> 00:02:18.040 align:start position:19%
+que tú quieres es incrementar las
+ganancias de tu negocio utilizando ia
+
+00:02:16.599 --> 00:02:21.519 align:start position:19%
+estás en el área de inteligencia de
+negocios si quieres utilizar algoritmos
+
+00:02:19.920 --> 00:02:25.959 align:start position:19%
+de ia para predecir o modelar un
+fenómeno natural Entonces tu área es el
+
+00:02:23.879 --> 00:02:30.080 align:start position:19%
+cómputo científico una vez identificada
+el área debes estudiar un poco sobre
+
+00:02:27.920 --> 00:02:33.480 align:start position:19%
+ella para familiarizarte con conceptos
+técnicas y soluciones clásicas al
+
+00:02:31.800 --> 00:02:36.640 align:start position:19%
+problema en el que estás trabajando el
+hacer esto te ayudará a resolver el
+
+00:02:34.959 --> 00:02:39.959 align:start position:19%
+problema más rápidamente Ya que en vez
+de quebrarte la cabeza intentando crear
+
+00:02:38.360 --> 00:02:44.720 align:start position:19%
+un nuevo algoritmo para resolver el
+problema puedes adaptar un algoritmo
+
+00:02:41.720 --> 00:02:48.599 align:start position:19%
+existente paso tres enunciar el objetivo
+el tercer paso es enunciar claramente el
+
+00:02:46.720 --> 00:02:52.840 align:start position:19%
+objetivo de tu aplicación para definir
+el objetivo hay tres partes que debes
+
+00:02:50.480 --> 00:02:57.440 align:start position:19%
+incluir en el enunciado la primera es
+comenzar la oración con un verbo en
+
+00:02:54.920 --> 00:03:01.480 align:start position:19%
+infinitivo la segunda es mencionar las
+variables de entrada explícita o
+
+00:02:59.080 --> 00:03:05.480 align:start position:19%
+implícitamente y finalmente mencionar la
+variable de salida a continuación te
+
+00:03:03.120 --> 00:03:09.920 align:start position:19%
+muestro algunos ejemplos calcular la
+tasa de interés de un préstamo
+
+00:03:07.120 --> 00:03:14.680 align:start position:19%
+dependiendo del monto y perfil de una
+persona segmentar una imagen médica
+
+00:03:12.599 --> 00:03:18.959 align:start position:19%
+delimitando los píxeles que contienen
+células cancerígenas y células sanas
+
+00:03:17.120 --> 00:03:22.560 align:start position:19%
+paso cuatro definir el problema
+computacional una vez que hemos escrito
+
+00:03:20.879 --> 00:03:26.159 align:start position:19%
+el objetivo el siguiente paso es
+convertirlo en un problema computacional
+
+00:03:24.400 --> 00:03:29.640 align:start position:19%
+para esto debes identificar Cuáles son
+las variables de entrada y salida Por
+
+00:03:27.920 --> 00:03:33.280 align:start position:19%
+ejemplo si quieres predecir el precio de
+la acciones de una compañía tus datos de
+
+00:03:31.560 --> 00:03:37.080 align:start position:19%
+entrada son fechas de las acciones en el
+pasado y tu dato de salida será el
+
+00:03:35.400 --> 00:03:40.360 align:start position:19%
+precio de la acción para calcular la
+tasa de interés de un préstamo tus datos
+
+00:03:38.920 --> 00:03:45.000 align:start position:19%
+de entrada son los perfiles de las
+personas y el monto del préstamo y tu
+
+00:03:43.080 --> 00:03:49.360 align:start position:19%
+variable de salida es la tasa de interés
+paso cinco identificar el tipo de
+
+00:03:47.080 --> 00:03:53.760 align:start position:19%
+problema el último paso es identificar
+el tipo de problema puede ser de
+
+00:03:51.000 --> 00:03:56.840 align:start position:19%
+clasificación regresión o generativo si
+tienes dudas sobre los tipos de
+
+00:03:55.040 --> 00:04:01.879 align:start position:19%
+problemas te invito a que revises mis
+videos
+
+00:03:57.920 --> 00:04:07.360 align:start position:19%
+anteriores etapa dos comprensión de los
+datos los datos son el oro del siglo XXI
+
+00:04:05.400 --> 00:04:11.200 align:start position:19%
+Si analizas a las compañías tecnológicas
+más grandes del mundo verás que todas
+
+00:04:09.239 --> 00:04:15.040 align:start position:19%
+recopilan datos de los usuarios de una y
+otra forma incluso esa pequeña
+
+00:04:13.319 --> 00:04:19.560 align:start position:19%
+aplicación que utilizas para retocar tus
+fotos o videos recopila información de
+
+00:04:17.400 --> 00:04:22.880 align:start position:19%
+tu celular en esta etapa tienes que
+seleccionar los datos con los que
+
+00:04:20.759 --> 00:04:27.600 align:start position:19%
+entrenarás y probarás tu algoritmo de ia
+para esto Existen dos opciones
+
+00:04:24.720 --> 00:04:30.960 align:start position:19%
+recopilarlas o usar un datas estándar la
+recopilación ocurre cuando la aplicación
+
+00:04:29.320 --> 00:04:35.520 align:start position:19%
+que está estás desarrollando es tan
+novedosa que no existen datas que puedas
+
+00:04:33.240 --> 00:04:38.800 align:start position:19%
+utilizar en este caso debes implementar
+un sistema automatizado de recopilación
+
+00:04:37.280 --> 00:04:41.600 align:start position:19%
+de datos teniendo en cuenta las
+variables de entrada y salida que
+
+00:04:40.080 --> 00:04:45.080 align:start position:19%
+definiste en la etapa anterior esta
+opción también puede ocurrir cuando
+
+00:04:43.080 --> 00:04:49.280 align:start position:19%
+trabajas para una empresa y esta desea
+que le resuelvas un problema específico
+
+00:04:46.919 --> 00:04:52.440 align:start position:19%
+sin embargo en estos casos Puede ocurrir
+que la empresa ya tenga datos
+
+00:04:50.440 --> 00:04:56.520 align:start position:19%
+recopilados sobre el problema pero estos
+solamente se encuentran disponibles en
+
+00:04:54.120 --> 00:05:01.639 align:start position:19%
+forma física pueden ser facturas órdenes
+de compra datos de clientes encuestas
+
+00:04:58.960 --> 00:05:05.240 align:start position:19%
+entre otros en este caso tu trabajo será
+capturar toda la información para
+
+00:05:03.199 --> 00:05:08.680 align:start position:19%
+convertirla en datos estructurados este
+proceso es tedioso y laborioso y
+
+00:05:07.199 --> 00:05:12.080 align:start position:19%
+normalmente es uno de los cuellos de
+botella cuando se implementan
+
+00:05:09.880 --> 00:05:16.039 align:start position:19%
+aplicaciones de ia la segunda opción es
+el uso de un dataset estándar la
+
+00:05:13.800 --> 00:05:19.680 align:start position:19%
+disponibilidad de datasets es una de las
+cosas que más ha ayudado a avanzar el
+
+00:05:18.199 --> 00:05:23.440 align:start position:19%
+estado del arte en Inteligencia
+artificial ya que muchos grupos de
+
+00:05:21.520 --> 00:05:27.120 align:start position:19%
+investigación se han dado a la tarea de
+elaborar datasets para problemas
+
+00:05:25.120 --> 00:05:30.960 align:start position:19%
+específicos y ponerlos a disponibilidad
+de toda la comunidad esto ha permitido
+
+00:05:29.160 --> 00:05:35.639 align:start position:19%
+comparar el desempeño de diferentes
+algoritmos utilizando los mismos datos
+
+00:05:33.600 --> 00:05:39.319 align:start position:19%
+de esta forma si uno propone un nuevo
+modelo modificaciones o nuevos
+
+00:05:37.440 --> 00:05:43.639 align:start position:19%
+componentes uno puede comparar
+fácilmente y saber si las modificaciones
+
+00:05:41.400 --> 00:05:46.759 align:start position:19%
+propuestas tuvieron un efecto positivo
+en la solución de un problema hay tres
+
+00:05:45.680 --> 00:05:50.600 align:start position:19%
+casos en los que puedes utilizar
+datasets estándar caso uno si el
+
+00:05:49.120 --> 00:05:54.720 align:start position:19%
+proyecto que estás desarrollando está
+orientado al diseño de un nuevo modelo o
+
+00:05:52.520 --> 00:05:59.319 align:start position:19%
+algoritmo esto te permitirá comparar
+fácilmente entre diferentes métodos caso
+
+00:05:57.199 --> 00:06:03.960 align:start position:19%
+dos cuando estás interesado en hacer un
+demo o un prototipo de una aplicación
+
+00:06:01.360 --> 00:06:07.639 align:start position:19%
+quizá deseas crear un startup y no estás
+interesado en invertir tanto tiempo en
+
+00:06:05.639 --> 00:06:11.599 align:start position:19%
+la recolección de datos más bien en
+estudiar Si los algoritmos de ia pueden
+
+00:06:09.599 --> 00:06:15.960 align:start position:19%
+resolver el problema que te interesa con
+un porcentaje de fiabilidad alto en este
+
+00:06:13.880 --> 00:06:19.360 align:start position:19%
+caso puedes empezar utilizando un
+dataset del problema en el que estás
+
+00:06:17.560 --> 00:06:23.919 align:start position:19%
+trabajando y cuando tengas un demo
+funcional enfocarte en la recolección de
+
+00:06:21.400 --> 00:06:28.319 align:start position:19%
+datos específicos y hacer un ajuste fino
+de los parámetros del algoritmo de ia
+
+00:06:26.039 --> 00:06:31.800 align:start position:19%
+caso tres si eres estudiante y apenas
+comienzas en el mundo de la
+
+00:06:30.160 --> 00:06:35.720 align:start position:19%
+puedes utilizar los datasets para
+familiarizarte en el manejo de los datos
+
+00:06:33.759 --> 00:06:38.759 align:start position:19%
+en el funcionamiento de los algoritmos y
+de las librerías una vez que hemos
+
+00:06:37.319 --> 00:06:43.720 align:start position:19%
+capturados los datos obtendremos
+vectores de características esto es cada
+
+00:06:41.680 --> 00:06:47.720 align:start position:19%
+vector es una muestra y el valor que
+contiene cada elemento del vector es una
+
+00:06:45.759 --> 00:06:51.440 align:start position:19%
+característica de la muestra por ejemplo
+en esta figura vemos el dataset Iris
+
+00:06:50.039 --> 00:06:56.280 align:start position:19%
+proporcionado por la universidad de
+California efine este dataset contiene
+
+00:06:53.840 --> 00:06:59.800 align:start position:19%
+25 muestras pertenecientes a tres tipos
+de flores diferentes cada muestra
+
+00:06:58.000 --> 00:07:02.400 align:start position:19%
+contiene cuatro características la
+longitud del
+
+00:07:29.560 --> 00:07:35.160 align:start position:19%
+analizas y visualiza los datos para
+extraer información que permita saber
+
+00:07:33.400 --> 00:07:39.120 align:start position:19%
+qué tipo de preprocesamiento debes
+aplicar a los datos las cosas básicas
+
+00:07:36.919 --> 00:07:43.680 align:start position:19%
+que debes identificar son las siguientes
+el número de muestras que contiene el
+
+00:07:41.080 --> 00:07:48.240 align:start position:19%
+dataset el número de variables también
+llamadas características el tipo de dato
+
+00:07:46.120 --> 00:07:53.759 align:start position:19%
+de cada variable si es una cadena de
+texto un número decimal un número entero
+
+00:07:51.000 --> 00:07:58.520 align:start position:19%
+bullano etcétera identificar si las
+variables son discretas o continuas Y si
+
+00:07:55.919 --> 00:08:02.960 align:start position:19%
+son categóricas o nominales identificar
+si existen muestras que contengan Campos
+
+00:08:00.479 --> 00:08:07.599 align:start position:19%
+vacíos y agregarles una palabra clave
+por ejemplo nul en el caso de variables
+
+00:08:05.599 --> 00:08:11.599 align:start position:19%
+cuantitativas puedes ejecutar un
+análisis estadístico descriptivo básico
+
+00:08:09.800 --> 00:08:16.080 align:start position:19%
+por ejemplo para calcular el centro de
+los datos utilizamos la media mediana o
+
+00:08:13.960 --> 00:08:19.960 align:start position:19%
+la moda para calcular la dispersión de
+los datos utilizamos el rango la
+
+00:08:18.039 --> 00:08:23.120 align:start position:19%
+varianza o la desviación estándar si
+Queremos saber la forma de la
+
+00:08:21.120 --> 00:08:27.680 align:start position:19%
+distribución utilizamos la simetría o
+asimetría y la curtosis incluso puedes
+
+00:08:25.879 --> 00:08:31.159 align:start position:19%
+aplicar pruebas estadísticas para saber
+la distribución de probabilidad que
+
+00:08:29.080 --> 00:08:34.719 align:start position:19%
+sigue los datos finalmente una imagen
+vale más que 1000 palabras y para
+
+00:08:32.719 --> 00:08:39.120 align:start position:19%
+mostrar la información es común utilizar
+histogramas diagramas de caja gráficas
+
+00:08:37.000 --> 00:08:43.560 align:start position:19%
+de distribución de probabilidad gráficos
+de dispersión entre otros métodos de
+
+00:08:41.000 --> 00:08:48.600 align:start position:19%
+visualización paso dos preprocesamiento
+el siguiente paso es el preprocesamiento
+
+00:08:45.920 --> 00:08:52.160 align:start position:19%
+de los datos este variará dependiendo
+del tipo de problema en el que estés
+
+00:08:50.120 --> 00:08:56.360 align:start position:19%
+trabajando por ejemplo no es lo mismo si
+trabajas con imágenes que con señales de
+
+00:08:53.920 --> 00:08:59.959 align:start position:19%
+audio a continuación vemos algunos casos
+Si trabajas con imágenes los algoritmos
+
+00:08:58.480 --> 00:09:03.680 align:start position:19%
+de preprocesamiento se enfocan
+principalmente en Modificar el color la
+
+00:09:01.959 --> 00:09:07.680 align:start position:19%
+geometría de la imagen o eliminar el
+ruido Por ejemplo si tus imágenes son en
+
+00:09:06.000 --> 00:09:11.440 align:start position:19%
+blanco y negro puedes transformar la
+imagen rgb a escala de grises con lo
+
+00:09:09.880 --> 00:09:15.880 align:start position:19%
+cual disminuirá su tamaño de tres
+canales a uno solo así tendrás la misma
+
+00:09:14.200 --> 00:09:19.160 align:start position:19%
+información pero utilizando solo un
+tercio del espacio en memoria si te
+
+00:09:17.600 --> 00:09:22.720 align:start position:19%
+interesa contar el número de objetos en
+una imagen puedes binarizar la imagen y
+
+00:09:21.240 --> 00:09:26.600 align:start position:19%
+aplicar filtros morfológicos que
+resalten información de interés si por
+
+00:09:24.680 --> 00:09:30.480 align:start position:19%
+el contrario trabajas con imágenes a
+color Calcula histogramas para
+
+00:09:28.360 --> 00:09:34.160 align:start position:19%
+visualizar la ución de la luz y el color
+en la imagen y aplica algoritmos de
+
+00:09:32.120 --> 00:09:37.480 align:start position:19%
+ecualización que mejoren su calidad
+también puedes aplicar transformaciones
+
+00:09:35.720 --> 00:09:41.399 align:start position:19%
+geométricas sobre la imagen rotar
+objetos escalarlos o calcular
+
+00:09:39.560 --> 00:09:45.680 align:start position:19%
+proyecciones de la imagen a otros planos
+o puntos de vista en el caso de señales
+
+00:09:43.360 --> 00:09:48.959 align:start position:19%
+provenientes de sensores determ el rango
+de frecuencias de trabajo y aplica
+
+00:09:47.320 --> 00:09:52.600 align:start position:19%
+filtros pasabanda o filtros para
+suavizar la señal esto te permitirá
+
+00:09:51.079 --> 00:09:55.920 align:start position:19%
+tener una señal limpia con la cual
+trabajar esto también puedes aplicarlo
+
+00:09:54.399 --> 00:09:59.959 align:start position:19%
+en el caso de señales de audio o
+procesamiento de voz además si trabajas
+
+00:09:58.320 --> 00:10:03.959 align:start position:19%
+con señales capturadas en ambientes
+ruidosos aplica un preprocesamiento que
+
+00:10:01.959 --> 00:10:07.959 align:start position:19%
+deje la señal de voz lo más limpia
+posible una forma simple de hacer esto
+
+00:10:06.040 --> 00:10:12.839 align:start position:19%
+es capturar el audio del medio ambiente
+y restarlo a la señal principal paso
+
+00:10:10.120 --> 00:10:16.640 align:start position:19%
+tres selección de características el
+siguiente paso es la selección de
+
+00:10:14.200 --> 00:10:20.600 align:start position:19%
+características con el auge del big Data
+cada vez es más común usar técnicas de
+
+00:10:18.560 --> 00:10:24.839 align:start position:19%
+Inteligencia artificial o aprendizaje de
+máquina para resolver problemas en el
+
+00:10:22.760 --> 00:10:28.480 align:start position:19%
+que las muestras que se utilizan constan
+de cientos o miles de atributos Entonces
+
+00:10:27.000 --> 00:10:32.200 align:start position:19%
+se requiere el uso de algoritmos que
+detecten Cuáles cues de estos atributos
+
+00:10:30.120 --> 00:10:35.639 align:start position:19%
+son relevantes y cuáles son redundantes
+esto permitirá reducir el costo
+
+00:10:33.720 --> 00:10:39.320 align:start position:19%
+computacional utilizado al implementar
+la aplicación así como evitar sesgos en
+
+00:10:37.720 --> 00:10:42.800 align:start position:19%
+el entrenamiento de los algoritmos los
+atributos irrelevantes son aquellos que
+
+00:10:41.360 --> 00:10:46.279 align:start position:19%
+no tienen efecto en las variables de
+salida Por ejemplo si estamos
+
+00:10:44.519 --> 00:10:50.240 align:start position:19%
+implementando un sistema que clasifi
+imágenes de perros en sus diferentes
+
+00:10:47.839 --> 00:10:54.880 align:start position:19%
+razas el color de sus ojos tendrá poca
+relevancia pero sí lo tendrá el color o
+
+00:10:52.279 --> 00:10:59.360 align:start position:19%
+textura de su pelaje por otro lado un
+atributo redundante es aquel que se
+
+00:10:57.040 --> 00:11:02.760 align:start position:19%
+puede obtener a partir de otro u otro
+atributos por ejemplo edad se puede
+
+00:11:01.480 --> 00:11:06.639 align:start position:19%
+obtener a partir de la fecha de
+nacimiento por lo que no tiene sentido
+
+00:11:04.839 --> 00:11:10.480 align:start position:19%
+almacenar y procesar los dos atributos
+cuando puedes utilizar solo un una de
+
+00:11:08.720 --> 00:11:13.639 align:start position:19%
+las formas de filtrar atributos es
+calculando un índice que cuantifique la
+
+00:11:12.240 --> 00:11:18.160 align:start position:19%
+información contenida por cada
+característica algunos métodos populares
+
+00:11:16.000 --> 00:11:22.240 align:start position:19%
+son el uso de la entropía para calcular
+la ganancia de la información o el uso
+
+00:11:20.480 --> 00:11:25.720 align:start position:19%
+del peso de la evidencia para calcular
+el valor de la información sin embargo
+
+00:11:24.040 --> 00:11:29.560 align:start position:19%
+estos enfoques consideran los atributos
+de forma independiente y no las
+
+00:11:27.399 --> 00:11:32.959 align:start position:19%
+relaciones entre ellos otro método
+conocido como rapper consiste en
+
+00:11:31.519 --> 00:11:36.360 align:start position:19%
+seleccionar subconjuntos de
+características entrenar y probar el
+
+00:11:34.839 --> 00:11:39.880 align:start position:19%
+algoritmo de ia con los diferentes
+subconjuntos y al final seleccionar el
+
+00:11:38.399 --> 00:11:43.680 align:start position:19%
+subconjunto de características que
+obtuvo mejores resultados sin embargo
+
+00:11:42.320 --> 00:11:46.639 align:start position:19%
+este enfoque es prohibitivo
+computacionalmente para problemas que
+
+00:11:45.320 --> 00:11:50.800 align:start position:19%
+tienen un tiempo de entrenamiento
+elevado finalmente para datos que
+
+00:11:48.720 --> 00:11:54.880 align:start position:19%
+utilizan números reales se utiliza el
+análisis de componentes principales para
+
+00:11:52.920 --> 00:11:58.800 align:start position:19%
+conocer la dirección y componentes que
+contienen mayor información y en caso de
+
+00:11:56.920 --> 00:12:02.279 align:start position:19%
+que alguna componente aporte información
+mínima se aplica un algoritmo de
+
+00:12:00.519 --> 00:12:05.920 align:start position:19%
+reducción de la dimensionalidad todos
+estos son ejemplos de procesos que se
+
+00:12:03.880 --> 00:12:09.839 align:start position:19%
+utilizan comúnmente pero el determinar
+Cuáles de ellos debes utilizar dependerá
+
+00:12:08.000 --> 00:12:13.399 align:start position:19%
+del problema y de los datos que tengas a
+tu disposición el último paso de esta
+
+00:12:11.600 --> 00:12:16.800 align:start position:19%
+etapa tiene que ver con crear los
+datasets que se utilizarán para entrenar
+
+00:12:15.320 --> 00:12:20.240 align:start position:19%
+y probar el algoritmo si estás
+trabajando en un problema de
+
+00:12:18.160 --> 00:12:24.320 align:start position:19%
+clasificación lo primero que tienes que
+revisar es si las clases a las que
+
+00:12:21.880 --> 00:12:28.639 align:start position:19%
+pertenecen tus datos están balanceadas o
+no balanceadas esto es si tienes el
+
+00:12:26.760 --> 00:12:32.399 align:start position:19%
+mismo número de datos para cada clase o
+hay clase que contienen mucho más datos
+
+00:12:30.519 --> 00:12:36.639 align:start position:19%
+que otras si un mayor porcentaje de tus
+datos pertenecen a una clase tus datos
+
+00:12:34.600 --> 00:12:40.480 align:start position:19%
+no estarán balanceados y esto provocará
+que se presenten sesgos al entrenar el
+
+00:12:38.480 --> 00:12:44.600 align:start position:19%
+algoritmo de ia o que este presente un
+menor desempeño en el caso de tener un
+
+00:12:42.600 --> 00:12:48.000 align:start position:19%
+conjunto de datos no balanceados existen
+algoritmos que pueden generar
+
+00:12:45.839 --> 00:12:52.199 align:start position:19%
+artificialmente nuevas muestras Esta es
+una lista de algunos métodos que podrías
+
+00:12:49.680 --> 00:12:56.720 align:start position:19%
+utilizar en este caso debes considerar
+Qué algoritmo es el más adecuado
+
+00:12:54.480 --> 00:13:00.320 align:start position:19%
+dependiendo del área computacional y de
+la aplicación en la que estás trabajando
+
+00:12:58.240 --> 00:13:04.839 align:start position:19%
+una vez que has lanceado las clases
+tenemos cuatro técnicas de remuestreo
+
+00:13:02.240 --> 00:13:09.360 align:start position:19%
+para formar los datasets técnica uno la
+más simple es conocida como train test
+
+00:13:07.160 --> 00:13:12.680 align:start position:19%
+split en este método las muestras se
+seleccionan de forma aleatoria y sin
+
+00:13:10.959 --> 00:13:16.360 align:start position:19%
+reemplazo para formar un conjunto de
+entrenamiento y un conjunto de prueba
+
+00:13:14.360 --> 00:13:20.440 align:start position:19%
+una ar regla utilizada comúnmente es
+utilizar dos tercios de las muestras
+
+00:13:18.000 --> 00:13:24.000 align:start position:19%
+como datos de entrenamiento y un tercio
+como datos de prueba el proceso se
+
+00:13:22.240 --> 00:13:28.600 align:start position:19%
+repite hasta tener varios datasets
+independientes y diferentes técnica dos
+
+00:13:26.560 --> 00:13:31.720 align:start position:19%
+el segundo método es similar al anterior
+pero en este en este caso las muestras
+
+00:13:30.000 --> 00:13:36.040 align:start position:19%
+se seleccionan de forma aleatoria y con
+reemplazo a este método se le conoce
+
+00:13:33.639 --> 00:13:40.600 align:start position:19%
+como bootstrap técnica tres el tercer
+método es la validación Cruzada dejando
+
+00:13:38.360 --> 00:13:44.959 align:start position:19%
+uno fuera Esta técnica es útil Cuando
+tenemos pocas muestras En este caso se
+
+00:13:43.320 --> 00:13:48.920 align:start position:19%
+selecciona aleatoriamente una muestra
+para utilizarla en la etapa de prueba y
+
+00:13:47.399 --> 00:13:53.240 align:start position:19%
+el resto de las muestras forman el
+conjunto de entrenamiento si tenemos n
+
+00:13:51.560 --> 00:13:57.800 align:start position:19%
+muestras se debe repetir el
+procedimiento para formar n datasets
+
+00:13:55.279 --> 00:14:01.720 align:start position:19%
+independientes es decir cada muestra se
+utiliza como dato de prueba una sola vez
+
+00:14:00.240 --> 00:14:05.839 align:start position:19%
+este método es computacionalmente
+costoso por lo que si el número de
+
+00:14:03.480 --> 00:14:09.639 align:start position:19%
+muestras es lo suficientemente grande es
+preferible utilizar otro método conocido
+
+00:14:07.920 --> 00:14:14.279 align:start position:19%
+como validación Cruzada con k
+subconjuntos este método consta de dos
+
+00:14:11.920 --> 00:14:19.000 align:start position:19%
+pasos primero se dividen las muestras en
+K subconjuntos del mismo tamaño cada
+
+00:14:16.800 --> 00:14:22.680 align:start position:19%
+subconjunto se llama partición
+posteriormente seleccionamos una de las
+
+00:14:21.240 --> 00:14:27.440 align:start position:19%
+particiones como conjunto de
+entrenamiento y el resto como conjunto
+
+00:14:24.959 --> 00:14:31.600 align:start position:19%
+de prueba el proceso se repite hasta
+formar k datasets independient
+
+00:14:29.759 --> 00:14:35.160 align:start position:19%
+una vez que tenemos los datasets
+procedemos a definir el modelo o
+
+00:14:33.199 --> 00:14:38.680 align:start position:19%
+algoritmo de ia con el que procesaremos
+los
+
+00:14:36.240 --> 00:14:43.199 align:start position:19%
+datos las etapas cuatro y cco
+corresponden a construir y evaluar el
+
+00:14:40.480 --> 00:14:47.040 align:start position:19%
+modelo un modelo es una abstracción que
+representa algún aspecto de la realidad
+
+00:14:45.360 --> 00:14:50.920 align:start position:19%
+en nuestro caso el modelo es un
+algoritmo de ia que mapea las variables
+
+00:14:49.000 --> 00:14:54.240 align:start position:19%
+de entrada en las salidas deseadas
+dependiendo del tipo de problema podemos
+
+00:14:52.720 --> 00:14:58.759 align:start position:19%
+utilizar algoritmos como bosques
+aleatorios redes neuronales cedias
+
+00:14:56.399 --> 00:15:03.600 align:start position:19%
+etcétera las etapas cuatro y cco van de
+la mano y se Ejecutan iterativamente el
+
+00:15:01.519 --> 00:15:07.560 align:start position:19%
+procedimiento es el siguiente en primer
+lugar se propone un modelo o algoritmo
+
+00:15:05.639 --> 00:15:11.440 align:start position:19%
+de ia el cual Se entrena usando el
+dataset de entrenamiento posteriormente
+
+00:15:09.880 --> 00:15:15.279 align:start position:19%
+el modelo se evalúa utilizando el
+dataset de prueba existen diferentes
+
+00:15:13.279 --> 00:15:19.160 align:start position:19%
+métricas para evaluar el desempeño una
+vez que conocemos el desempeño del
+
+00:15:16.800 --> 00:15:23.000 align:start position:19%
+modelo se iteran estas dos etapas
+construcción y evaluación ya sea
+
+00:15:21.279 --> 00:15:27.240 align:start position:19%
+variando los parámetros del modelo
+variando el método de entrenamiento o
+
+00:15:25.279 --> 00:15:30.720 align:start position:19%
+probando diferentes algoritmos de ia
+finalmente después de iterar varias
+
+00:15:29.240 --> 00:15:34.959 align:start position:19%
+veces las etapas de construcción y
+evaluación seleccionamos el algoritmo
+
+00:15:32.920 --> 00:15:40.639 align:start position:19%
+que obtenga el mejor desempeño este será
+nuestro modelo final a
+
+00:15:37.480 --> 00:15:44.440 align:start position:19%
+desplegar etapa seis
+despliegue el despliegue es la etapa en
+
+00:15:43.040 --> 00:15:49.519 align:start position:19%
+la cual el modelo está listo para
+funcionar in fibo para esto es común
+
+00:15:47.959 --> 00:15:53.360 align:start position:19%
+integrarlo con otras aplicaciones de
+software o aplicaciones web para
+
+00:15:51.639 --> 00:15:57.519 align:start position:19%
+completar esta etapa debes considerar
+cinco puntos el primero es la
+
+00:15:54.959 --> 00:16:01.519 align:start position:19%
+preparación para producción aquí debes
+determinar las cualidades requeridas
+
+00:15:59.759 --> 00:16:05.639 align:start position:19%
+para cumplir el objetivo de despliegue
+veamos un par de ejemplos para nuestro
+
+00:16:03.319 --> 00:16:09.360 align:start position:19%
+primer caso de uso empresarial se desea
+determinar si un consumidor califica
+
+00:16:07.560 --> 00:16:13.160 align:start position:19%
+para obtener un préstamo el proceso de
+aprobación funcionará de la siguiente
+
+00:16:11.079 --> 00:16:17.319 align:start position:19%
+forma el consumidor proporcionará sus
+datos e información relevante en un
+
+00:16:15.079 --> 00:16:20.920 align:start position:19%
+sitio web o aplicación de su celular la
+aplicación recolectará la información
+
+00:16:18.800 --> 00:16:25.120 align:start position:19%
+del cliente la integrará con datos
+proporcionados por terceros como puede
+
+00:16:23.120 --> 00:16:29.079 align:start position:19%
+ser el historial crediticio y la misma
+aplicación devolverá un mensaje con la
+
+00:16:26.800 --> 00:16:32.880 align:start position:19%
+decisión en cuestión de segundos por lo
+tanto Además de que la decisión que
+
+00:16:30.959 --> 00:16:36.319 align:start position:19%
+proporcione debe ser precisa una
+cualidad crítica del despliegue del
+
+00:16:34.480 --> 00:16:40.399 align:start position:19%
+modelo es que realice la predicción en
+tiempo real en el segundo caso de uso se
+
+00:16:38.600 --> 00:16:44.920 align:start position:19%
+desea segmentar a los clientes de una
+empresa por función de marketing para
+
+00:16:42.759 --> 00:16:49.360 align:start position:19%
+esto se recolecta la información de las
+interacciones de los clientes pudiendo
+
+00:16:47.079 --> 00:16:53.680 align:start position:19%
+provenir de redes sociales datos de
+compras anteriores o sus listas de
+
+00:16:51.440 --> 00:16:57.639 align:start position:19%
+artículos deseados basándose en estos
+patrones los clientes similares son
+
+00:16:55.560 --> 00:17:01.160 align:start position:19%
+agrupados y se diseñan estrategias de
+campaña para traer mejor al cliente para
+
+00:16:59.759 --> 00:17:05.079 align:start position:19%
+esta aplicación es suficiente con
+almacenar y procesar los datos por
+
+00:17:02.920 --> 00:17:09.799 align:start position:19%
+bloques ya que el tiempo de respuesta
+del modelo no es una cualidad crítica la
+
+00:17:07.559 --> 00:17:13.559 align:start position:19%
+cualidad crítica aquí es la habilidad de
+encontrar patrones únicos entre los
+
+00:17:11.679 --> 00:17:17.720 align:start position:19%
+clientes esto nos lleva al segundo punto
+que debes considerar en el etapa de
+
+00:17:15.360 --> 00:17:22.039 align:start position:19%
+despliegue este es el tiempo de
+respuesta el tiempo de entrenamiento y
+
+00:17:19.760 --> 00:17:25.959 align:start position:19%
+prueba varía para cada algoritmo por lo
+tanto te recomiendo llevar un registro
+
+00:17:24.240 --> 00:17:30.200 align:start position:19%
+de estos tiempos cuando ejecutes las
+etapas de construcción y prueba del
+
+00:17:27.640 --> 00:17:33.840 align:start position:19%
+modelo de esta forma sabrás si tu modelo
+cumple con el tiempo de respuesta
+
+00:17:31.679 --> 00:17:38.160 align:start position:19%
+crítico en producción el tercer punto de
+la etapa de despliegue es la integración
+
+00:17:35.799 --> 00:17:42.320 align:start position:19%
+técnica al implementar aplicaciones es
+común utilizar lenguajes como r y python
+
+00:17:40.640 --> 00:17:46.240 align:start position:19%
+utilizar estas herramientas reduce el
+tiempo de desarrollo ya que incluyen
+
+00:17:44.320 --> 00:17:51.240 align:start position:19%
+librerías con algoritmos implementados
+Para aportar tu modelo entre diferentes
+
+00:17:47.960 --> 00:17:55.559 align:start position:19%
+plataformas te recomiendo utilizar pmml
+Este es un estándar basado en xml que
+
+00:17:53.840 --> 00:17:59.799 align:start position:19%
+permite desarrollar tu modelo en algún
+software o aplicación específica y
+
+00:17:57.440 --> 00:18:03.240 align:start position:19%
+desplegarlo con otra de esta forma
+podrás incorporar tu modelo en
+
+00:18:01.320 --> 00:18:07.120 align:start position:19%
+aplicaciones de negocios o sistemas de
+inteligencia de negocios fácilmente el
+
+00:18:05.440 --> 00:18:11.159 align:start position:19%
+siguiente punto a considerar es el
+mantenimiento del modelo un criterio
+
+00:18:09.159 --> 00:18:16.039 align:start position:19%
+clave para que el modelo no se vuelva
+obsoleto es que el conjunto de datos que
+
+00:18:13.679 --> 00:18:19.400 align:start position:19%
+procesa sea representativo del problema
+el mundo está en constante cambio y es
+
+00:18:17.799 --> 00:18:23.600 align:start position:19%
+normal que cambien las condiciones en
+las que desarrolló el modelo después de
+
+00:18:21.200 --> 00:18:27.600 align:start position:19%
+que este fue desplegado por ejemplo las
+condiciones macroeconómicas pueden hacer
+
+00:18:25.919 --> 00:18:32.039 align:start position:19%
+que cambie la relación entre la
+calificación de crédito y la tasa de
+
+00:18:29.600 --> 00:18:35.480 align:start position:19%
+interés las dinámicas sociales pueden
+hacer que cambie la relación entre las
+
+00:18:33.640 --> 00:18:40.200 align:start position:19%
+características de los clientes y sus
+hábitos de consumo por lo tanto para que
+
+00:18:37.880 --> 00:18:44.080 align:start position:19%
+un modelo desplegado siga vigente debe
+estar en constante mantenimiento una
+
+00:18:42.320 --> 00:18:47.960 align:start position:19%
+forma de hacer esto es probar la
+vigencia del modelo de forma rutinaria
+
+00:18:46.120 --> 00:18:52.159 align:start position:19%
+utilizando el nuevo conjunto de datos de
+prueba y calculando la tasa de error de
+
+00:18:49.960 --> 00:18:56.440 align:start position:19%
+predicción si la tasa de error excede un
+valor umbral Entonces el modelo debe
+
+00:18:54.320 --> 00:19:00.559 align:start position:19%
+actualizarse y volverse a desplegar
+crear un plan de mantenimiento es una
+
+00:18:58.320 --> 00:19:05.039 align:start position:19%
+parte clave de la etapa de despliegue y
+hará que tu aplicación continúe siendo
+
+00:19:02.320 --> 00:19:08.360 align:start position:19%
+relevante como mencionamos al principio
+estos pasos forman un ciclo y su
+
+00:19:06.840 --> 00:19:12.080 align:start position:19%
+iteración constante mantendrá la
+aplicación funcionando de forma adecuada
+
+00:19:10.240 --> 00:19:16.039 align:start position:19%
+con el paso del tiempo hasta este
+momento hemos revisado los pasos que se
+
+00:19:14.360 --> 00:19:19.600 align:start position:19%
+siguen al implementar una aplicación de
+ia con esto ya tienes una idea general
+
+00:19:18.000 --> 00:19:23.520 align:start position:19%
+del camino a seguir durante el ciclo de
+desarrollo Ahora toca ponerlo en
+
+00:19:21.240 --> 00:19:27.720 align:start position:19%
+práctica Si estás interesado en el tema
+deja un comentario y suscríbete al Canal
+
+00:19:25.600 --> 00:19:30.720 align:start position:19%
+para recibir las notificaciones hasta la
+próxima
+
+00:19:32.200 --> 00:19:35.200 align:start position:19%
+ah
+

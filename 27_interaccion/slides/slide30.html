@@ -1,0 +1,57 @@
+<section class="slide" id="slide30">
+    <div class="slide-content left" style="max-width: 1200px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-cta); margin-bottom: var(--space-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            Dinámica Práctica
+        </div>
+        <h2 style="margin-bottom: var(--space-sm);">Experimento: Envergadura de la Memoria</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md); font-size: 0.95rem;">
+            Prueba inspirada en Miller. Lea cada línea, cierre los ojos y repita los dígitos. Si falla en dos seguidas, su envergadura es la última línea correcta.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); width: 100%; align-items: start;">
+            <!-- Digits Grid -->
+            <div class="card" style="padding: var(--space-md); font-family: 'Roboto Mono', monospace; font-size: 1rem; line-height: 1.7; background: #F8FAFC;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <div>
+                        <div><strong>4 dígitos:</strong> 8704</div>
+                        <div><strong>4 dígitos:</strong> 2193</div>
+                        <div><strong>4 dígitos:</strong> 3172</div>
+                        <div><strong>5 dígitos:</strong> 57301</div>
+                        <div><strong>5 dígitos:</strong> 02943</div>
+                        <div><strong>5 dígitos:</strong> 73619</div>
+                        <div><strong>6 dígitos:</strong> 659420</div>
+                        <div><strong>6 dígitos:</strong> 402586</div>
+                        <div><strong>6 dígitos:</strong> 542173</div>
+                    </div>
+                    <div>
+                        <div><strong>7 dígitos:</strong> 6849173</div>
+                        <div><strong>7 dígitos:</strong> 7931684</div>
+                        <div><strong>7 dígitos:</strong> 3617458</div>
+                        <div><strong>7 dígitos:</strong> 2761508</div>
+                        <div><strong>8 dígitos:</strong> 81042963</div>
+                        <div><strong>8 dígitos:</strong> 07239861</div>
+                        <div><strong>9 dígitos:</strong> 578149306</div>
+                        <div><strong>9 dígitos:</strong> 293486701</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chunking tip -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="card" style="border-left: 5px solid var(--color-cta); padding: var(--space-md);">
+                    <h3 style="font-size: 1.1rem; color: var(--color-primary); margin-bottom: 6px;">Prueba del Agrupamiento (Chunking):</h3>
+                    <p style="font-size: 0.95rem; color: var(--color-text); line-height: 1.5; margin: 0;">
+                        En lugar de memorizar 4 dígitos sueltos: <em>8 - 7 - 0 - 4</em> (ocho, siete, cero, cuatro), pruébelo agrupando como pares: <strong>87 - 04</strong> (ochenta y siete, cero cuatro).
+                    </p>
+                </div>
+
+                <div class="card" style="background: #F0FDF4; border: 1px solid #BBF7D0; padding: var(--space-md);">
+                    <strong style="color: #166534; font-size: 0.95rem;">Aplicación en Sistemas Clínicos:</strong>
+                    <p style="font-size: 0.9rem; color: #14532D; margin: 4px 0 0 0; line-height: 1.4;">
+                        Los números de historia clínica, códigos de muestra y teléfonos deben formatearse con guiones y espacios (ej: <code>123-456-789</code> en vez de <code>123456789</code>) para facilitar el procesamiento mental del clínico.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
