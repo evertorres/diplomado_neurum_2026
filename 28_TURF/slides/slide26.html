@@ -1,0 +1,55 @@
+<section class="slide" id="slide26">
+    <div class="slide-content left" style="max-width: 1150px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-cta); margin-bottom: var(--space-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            TURF &bull; Análisis Funcional
+        </div>
+        <h2 style="margin-bottom: var(--space-sm);">Tipos de Limitantes y Dependencias Ontológicas</h2>
+        <p class="text-muted" style="font-size: 0.95rem; margin-bottom: var(--space-md);">
+            Las limitantes definen las reglas que vinculan operaciones y objetos en la práctica médica real.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: var(--space-md); width: 100%;">
+            <!-- 1. Operación - Objeto -->
+            <div class="card" style="border-left: 5px solid var(--color-cta); padding: var(--space-md);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0;">1. Dependencia entre Operación y Objeto</h3>
+                    <span class="badge badge-blue">Operación &harr; Objeto</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.88rem; line-height: 1.45; margin-bottom: 4px;">
+                    Una operación solo tiene validez o sentido clínico cuando se ejecuta sobre ciertos tipos o subtipos específicos de objetos.
+                </p>
+                <div style="background: #F8FAFC; padding: 8px 12px; border-radius: 6px; border: 1px solid #E2E8F0; font-size: 0.84rem;">
+                    <strong>Ejemplo Clínico:</strong> La operación <em>"Escribir prescripción farmacológica"</em> exige seleccionar obligatoriamente un objeto fármaco activo del vademécum (ej: Metformina), ya que no es aplicable sobre órdenes dietarias o de enfermería general.
+                </div>
+            </div>
+
+            <!-- 2. Objeto - Objeto -->
+            <div class="card" style="border-left: 5px solid #10B981; padding: var(--space-md);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0;">2. Dependencia entre Objetos</h3>
+                    <span class="badge badge-green">Objeto &harr; Objeto</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.88rem; line-height: 1.45; margin-bottom: 4px;">
+                    El valor, estado o magnitud de una entidad clínica condiciona directamente las propiedades admisibles de otra entidad.
+                </p>
+                <div style="background: #F8FAFC; padding: 8px 12px; border-radius: 6px; border: 1px solid #E2E8F0; font-size: 0.84rem;">
+                    <strong>Ejemplo Clínico:</strong> El cálculo de la dosis del fármaco Metformina o de un antibiótico depende directamente de la cifra de creatinina / tasa de filtrado glomerular (TFG) y del peso corporal del paciente.
+                </div>
+            </div>
+
+            <!-- 3. Operación - Operación -->
+            <div class="card" style="border-left: 5px solid #8B5CF6; padding: var(--space-md);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0;">3. Dependencia entre Operaciones</h3>
+                    <span class="badge badge-purple">Operación &harr; Operación</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.88rem; line-height: 1.45; margin-bottom: 4px;">
+                    La ejecución o habilitación de una acción clínica está supeditada al cumplimiento previo de otra operación en el flujo de trabajo.
+                </p>
+                <div style="background: #F8FAFC; padding: 8px 12px; border-radius: 6px; border: 1px solid #E2E8F0; font-size: 0.84rem;">
+                    <strong>Ejemplo Clínico:</strong> El sistema solo permite habilitar la operación <em>"Formular un medicamento restringido"</em> si previamente se ha ejecutado la operación <em>"Registrar justificación clínica en la lista de diagnósticos o problemas del paciente"</em>.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

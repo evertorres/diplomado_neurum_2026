@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28. Marco TURF: Análisis de Usuarios y Funcionalidades</title>
+    <meta name="description"
+        content="Presentación #28 del Diplomado Neurum 2026: Marco TURF para Usabilidad en Salud - Teoría y Fundamentos de Análisis de Usuarios y Análisis de Funcionalidades según Better EHR y Zhang & Walji.">
+    <!-- Relative path to global styles -->
+    <link rel="stylesheet" href="../shared/styles.css">
+    <style>
+        :root {
+            --color-turf-blue: #2563EB;
+            --color-turf-indigo: #4F46E5;
+            --color-turf-purple: #7C3AED;
+            --color-turf-emerald: #059669;
+            --color-turf-amber: #D97706;
+            --color-turf-rose: #E11D48;
+            --color-turf-slate: #334155;
+            --color-turf-dark: #0F172A;
+        }
+
+        .slide-image {
+            max-width: 100%;
+            max-height: 54vh;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            margin: var(--space-md) auto;
+            border: 1px solid #E2E8F0;
+            display: block;
+        }
+
+        /* Loading indicator */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #FAFAFA;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-size: 1.35rem;
+            color: var(--color-primary);
+            font-family: 'Exo', sans-serif;
+            font-weight: 600;
+            transition: opacity 0.4s ease;
+            gap: 16px;
+        }
+
+        .loader-spinner {
+            width: 44px;
+            height: 44px;
+            border: 4px solid #E2E8F0;
+            border-top: 4px solid var(--color-cta);
+            border-radius: 50%;
+            animation: spin 0.9s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Custom Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-blue { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+        .badge-purple { background: #F5F3FF; color: #6D28D9; border: 1px solid #DDD6FE; }
+        .badge-green { background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
+        .badge-amber { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+        /* Unified Badge-Tags */
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            background: #EFF6FF;
+            color: var(--color-cta);
+            border: 1px solid #BFDBFE;
+        }
+
+        .badge-tag.indigo { background: #EEF2FF; color: #4F46E5; border-color: #C7D2FE; }
+        .badge-tag.emerald { background: #ECFDF5; color: #059669; border-color: #A7F3D0; }
+        .badge-tag.cyan { background: #ECFEFF; color: #0891B2; border-color: #A5F3FC; }
+        .badge-tag.purple { background: #F5F3FF; color: #7C3AED; border-color: #DDD6FE; }
+        .badge-tag.amber { background: #FFFBEB; color: #D97706; border-color: #FDE68A; }
+        .badge-tag.rose { background: #FFF1F2; color: #E11D48; border-color: #FECDD3; }
+        .badge-tag.slate { background: #F8FAFC; color: #475569; border-color: #CBD5E1; }
+
+        /* Tables */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--space-sm);
+            font-size: 0.92rem;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #E2E8F0;
+        }
+
+        .custom-table th {
+            background: var(--color-primary);
+            color: white;
+            padding: 10px 14px;
+            text-align: left;
+            font-family: 'Exo', sans-serif;
+            font-weight: 600;
+            font-size: 0.88rem;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #E2E8F0;
+            color: var(--color-text);
+            line-height: 1.45;
+            vertical-align: middle;
+        }
+
+        .custom-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .custom-table tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+
+        /* Matrix Table for Slide 28 */
+        .matrix-container {
+            width: 100%;
+            max-height: 60vh;
+            overflow: auto;
+            border-radius: 10px;
+            border: 1px solid #E2E8F0;
+            box-shadow: var(--shadow-sm);
+            background: white;
+        }
+
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.78rem;
+            text-align: center;
+        }
+
+        .matrix-table th {
+            position: sticky;
+            top: 0;
+            background: var(--color-primary);
+            color: white;
+            padding: 8px 6px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            z-index: 2;
+            border-right: 1px solid #3F3F46;
+            white-space: nowrap;
+        }
+
+        .matrix-table th.role-header {
+            position: sticky;
+            left: 0;
+            z-index: 3;
+            background: #09090B;
+            text-align: left;
+            padding-left: 12px;
+            min-width: 190px;
+        }
+
+        .matrix-table td.role-cell {
+            position: sticky;
+            left: 0;
+            background: #F8FAFC;
+            font-weight: 600;
+            text-align: left;
+            padding: 8px 12px;
+            border-right: 2px solid #CBD5E1;
+            z-index: 1;
+            white-space: nowrap;
+            color: var(--color-primary);
+        }
+
+        .matrix-table td {
+            padding: 6px 4px;
+            border-bottom: 1px solid #E2E8F0;
+            border-right: 1px solid #F1F5F9;
+        }
+
+        .matrix-table tr:nth-child(even) td:not(.role-cell) {
+            background-color: #FAFAFA;
+        }
+
+        .matrix-cell-active {
+            background-color: #FEE2E2 !important;
+            color: #DC2626;
+            font-weight: 700;
+        }
+
+        .matrix-dot {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            background: #DC2626;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        /* Callout Box */
+        .callout {
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-top: var(--space-md);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .callout-info {
+            background: #EFF6FF;
+            border-left: 4px solid var(--color-cta);
+            color: #1E3A8A;
+        }
+
+        .callout-warning {
+            background: #FFFBEB;
+            border-left: 4px solid #F59E0B;
+            color: #78350F;
+        }
+
+        .callout-success {
+            background: #ECFDF5;
+            border-left: 4px solid #10B981;
+            color: #064E3B;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+        <span>Cargando Presentación #28: Marco TURF...</span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="presentation-container">
+
+        <div id="slide-container" style="width: 100%; height: 100%; display: flex; flex-direction: column;">
+            <!-- Slides 01 to 28 will be injected here -->
+        </div>
+
+        <!-- Navigation UI -->
+        <div class="slide-controls">
+            <button class="control-btn" id="prevSlide" disabled title="Anterior (Flecha izquierda)">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <span class="slide-counter" id="slideCounter">1 / 29</span>
+            <button class="control-btn" id="nextSlide" title="Siguiente (Flecha derecha o Espacio)">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Global Image Modal for Zoomable Images -->
+    <div class="modal-overlay" id="global-image-modal">
+        <div class="modal modal-image-wrapper">
+            <button class="modal-close modal-image-close" title="Cerrar Imagen">&times;</button>
+            <img src="" id="global-image-content" class="modal-image-content" alt="Imagen ampliada">
+        </div>
+    </div>
+
+    <!-- Global App Logic -->
+    <script src="../shared/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const container = document.getElementById('slide-container');
+            const loader = document.getElementById('loader');
+
+            try {
+                // 29 slides total (28 content slides + 1 closing slide)
+                const totalSlides = 29;
+
+                // Fetch all slides in parallel for maximum speed
+                const slidePromises = [];
+                for (let i = 1; i <= totalSlides; i++) {
+                    const slideNum = i.toString().padStart(2, '0');
+                    slidePromises.push(fetch(`slides/slide${slideNum}.html`).then(res => {
+                        if (!res.ok) throw new Error(`HTTP ${res.status} al cargar slide${slideNum}.html`);
+                        return res.text();
+                    }));
+                }
+
+                const slideTexts = await Promise.all(slidePromises);
+                container.innerHTML = slideTexts.join('\n');
+
+                // Hide loader
+                loader.classList.add('hidden');
+
+                // Initialize Application Navigation and Zoom Logic
+                if (window.initApp) {
+                    window.initApp();
+                }
+            } catch (error) {
+                console.error("Error loading presentation content:", error);
+                loader.innerHTML = `<div style="color: #EF4444; text-align: center; max-width: 600px; padding: 20px;">
+                    <h3>Error al cargar las diapositivas</h3>
+                    <p style="font-size: 0.95rem; margin-top: 8px;">${error.message}</p>
+                    <p style="font-size: 0.85rem; color: #6B7280; margin-top: 8px;">Si estás abriendo el archivo localmente con file://, usa un servidor local como Live Server o python -m http.server</p>
+                </div>`;
+            }
+        });
+    </script>
+</body>
+
+</html>

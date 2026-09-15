@@ -1,0 +1,65 @@
+<section class="slide" id="slide25">
+    <div class="slide-content left" style="max-width: 1150px; width: 100%;">
+        <div style="font-size: 0.9rem; color: var(--color-cta); margin-bottom: var(--space-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            TURF &bull; Análisis Funcional
+        </div>
+        <h2 style="margin-bottom: var(--space-sm);">Ejemplo Clínico: Caso "Admitir un Paciente"</h2>
+        <p class="text-muted" style="font-size: 0.95rem; margin-bottom: var(--space-md);">
+            Desglose ontológico de los 4 componentes para un proceso asistencial y administrativo básico.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); width: 100%;">
+            <!-- Meta & Objetos -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="card" style="border-left: 5px solid #10B981; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <strong style="color: #10B981; font-size: 1.05rem;">Meta (Goal)</strong>
+                        <span class="badge badge-green">Objetivo</span>
+                    </div>
+                    <p style="font-size: 0.92rem; color: var(--color-primary); font-weight: 600;">
+                        "Admitir y habilitar legalmente a un paciente en la institución hospitalaria"
+                    </p>
+                </div>
+
+                <div class="card" style="border-left: 5px solid var(--color-cta); padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <strong style="color: var(--color-cta); font-size: 1.05rem;">Objetos Involucrados</strong>
+                        <span class="badge badge-blue">Datos / Entidades</span>
+                    </div>
+                    <ul style="font-size: 0.85rem; line-height: 1.5; padding-left: 18px; color: var(--color-text);">
+                        <li><strong>Identificación:</strong> Tipo y número de documento único.</li>
+                        <li><strong>Fecha de nacimiento:</strong> Parámetro temporal del paciente.</li>
+                        <li><strong>Fecha actual:</strong> Marca de tiempo del evento de admisión.</li>
+                        <li><strong>Género / Sexo biológico:</strong> Relevante para asignación de sala y factores clínicos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Limitantes & Operaciones -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <div class="card" style="border-left: 5px solid #F59E0B; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <strong style="color: #F59E0B; font-size: 1.05rem;">Limitantes (Constraints)</strong>
+                        <span class="badge badge-amber">Reglas de Negocio</span>
+                    </div>
+                    <ul style="font-size: 0.85rem; line-height: 1.5; padding-left: 18px; color: var(--color-text);">
+                        <li><strong>Consistencia temporal:</strong> La fecha actual puede ser igual, pero <em>nunca menor</em> a la fecha de nacimiento.</li>
+                        <li><strong>Unicidad del registro:</strong> Solo se permite una historia clínica activa para un mismo documento de identidad en la base de datos institucional.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="border-left: 5px solid #8B5CF6; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <strong style="color: #8B5CF6; font-size: 1.05rem;">Operaciones (Operations)</strong>
+                        <span class="badge badge-purple">Acciones Concretas</span>
+                    </div>
+                    <ul style="font-size: 0.85rem; line-height: 1.5; padding-left: 18px; color: var(--color-text);">
+                        <li><strong>Validación de fecha:</strong> Algoritmo de comprobación de formato y coherencia temporal.</li>
+                        <li><strong>Validación de identidad:</strong> Verificación de longitud, dígito de verificación y estructura.</li>
+                        <li><strong>Consulta de existencia:</strong> Búsqueda previa en el repositorio maestro de pacientes para evitar duplicados.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
